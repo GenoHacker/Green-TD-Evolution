@@ -242,6 +242,7 @@ udg_Unit_AuraTower = {}
 udg_Real_Array_CritAuraChances = __jarray(0.0)
 udg_Real_Array_CritAuraDamage = __jarray(0.0)
 udg_Real_Array_BonusCritDamage = __jarray(0.0)
+udg_Real_OrkColour = 0.0
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -343,6 +344,7 @@ gg_trg_Lose_Life = nil
 gg_trg_Lose_Life_Animation_Effect = nil
 gg_trg_WinGame = nil
 gg_trg_Tabaho = nil
+gg_trg_Alpharius_Omegon = nil
 gg_trg_Creep_Boosting = nil
 gg_trg_Hero_XP = nil
 gg_trg_Hero_Level_Up_Point = nil
@@ -505,10 +507,16 @@ gg_trg_Damage_Aura = nil
 gg_trg_Armor_Aura = nil
 gg_trg_Crippling_Aura = nil
 gg_trg_Speed_Aura = nil
+gg_trg_Critical_Aura = nil
 gg_unit_n00C_0019 = nil
 gg_unit_n015_0010 = nil
 gg_unit_n00D_0042 = nil
-gg_trg_Critical_Aura = nil
+gg_unit_z000_0120 = nil
+gg_unit_z000_0121 = nil
+gg_unit_z001_0122 = nil
+gg_unit_z001_0123 = nil
+gg_unit_o00I_0124 = nil
+gg_trg_Ork = nil
 function InitGlobals()
     local i = 0
     i = 0
@@ -1004,6 +1012,7 @@ function InitGlobals()
         udg_Real_Array_BonusCritDamage[i] = 0.0
         i = i + 1
     end
+    udg_Real_OrkColour = 100.00
 end
 
 -- Arcing Text Tag v1.0.0.3 by Maker encoded to Lua
@@ -2188,6 +2197,11 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("nchp"), 5818.1, -6135.5, 246.879, FourCC("nchp"))
     u = BlzCreateUnitWithSkin(p, FourCC("hhes"), 4184.3, -6478.4, 229.246, FourCC("hhes"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 4978.7, -2919.5, 171.711, FourCC("n01D"))
+    gg_unit_z000_0120 = BlzCreateUnitWithSkin(p, FourCC("z000"), -8863.9, -6327.9, 40.167, FourCC("z000"))
+    gg_unit_z000_0121 = BlzCreateUnitWithSkin(p, FourCC("z000"), -8387.5, -6315.6, 148.860, FourCC("z000"))
+    gg_unit_z001_0122 = BlzCreateUnitWithSkin(p, FourCC("z001"), -8659.6, -6389.8, 94.479, FourCC("z001"))
+    gg_unit_z001_0123 = BlzCreateUnitWithSkin(p, FourCC("z001"), -8312.6, -6139.0, 188.742, FourCC("z001"))
+    gg_unit_o00I_0124 = BlzCreateUnitWithSkin(p, FourCC("o00I"), -8064.2, 1974.8, 209.483, FourCC("o00I"))
 end
 
 function CreatePlayerBuildings()
@@ -4027,6 +4041,119 @@ function InitTrig_Tabaho()
     TriggerRegisterPlayerSelectionEventBJ(gg_trg_Tabaho, Player(8), true)
     TriggerAddCondition(gg_trg_Tabaho, Condition(Trig_Tabaho_Conditions))
     TriggerAddAction(gg_trg_Tabaho, Trig_Tabaho_Actions)
+end
+
+function Trig_Alpharius_Omegon_Func001Func001C()
+    if (not (GetUnitName(GetTriggerUnit()) == "Alpharius")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Alpharius_Omegon_Func001Func002C()
+    if (GetTriggerUnit() == gg_unit_z000_0120) then
+        return true
+    end
+    if (GetTriggerUnit() == gg_unit_z001_0122) then
+        return true
+    end
+    if (GetTriggerUnit() == gg_unit_z000_0121) then
+        return true
+    end
+    if (GetTriggerUnit() == gg_unit_z001_0123) then
+        return true
+    end
+    return false
+end
+
+function Trig_Alpharius_Omegon_Func001C()
+    if (not Trig_Alpharius_Omegon_Func001Func002C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Alpharius_Omegon_Actions()
+    if (Trig_Alpharius_Omegon_Func001C()) then
+        if (Trig_Alpharius_Omegon_Func001Func001C()) then
+            BlzSetUnitName(GetTriggerUnit(), "Omegon")
+            CreateTextTagUnitBJ("TRIGSTR_2655", GetTriggerUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
+            SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
+            SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
+            SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
+            SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
+        else
+            BlzSetUnitName(GetTriggerUnit(), "Alpharius")
+            CreateTextTagUnitBJ("TRIGSTR_2658", GetTriggerUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
+            SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
+            SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
+            SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
+            SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
+        end
+    else
+    end
+end
+
+function InitTrig_Alpharius_Omegon()
+    gg_trg_Alpharius_Omegon = CreateTrigger()
+    TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(0), true)
+    TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(1), true)
+    TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(2), true)
+    TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(3), true)
+    TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(4), true)
+    TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(5), true)
+    TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(6), true)
+    TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(7), true)
+    TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(8), true)
+    TriggerAddAction(gg_trg_Alpharius_Omegon, Trig_Alpharius_Omegon_Actions)
+end
+
+function Trig_Ork_Func001Func004C()
+    if (not (GetUnitMoveSpeed(gg_unit_o00I_0124) >= 500.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Ork_Func001C()
+    if (not (GetTriggerUnit() == gg_unit_o00I_0124)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Ork_Actions()
+    if (Trig_Ork_Func001C()) then
+        udg_Real_OrkColour = (udg_Real_OrkColour - 5.00)
+        SetUnitMoveSpeed(gg_unit_o00I_0124, (GetUnitMoveSpeed(gg_unit_o00I_0124) + 20.00))
+        SetUnitVertexColorBJ(gg_unit_o00I_0124, 100, udg_Real_OrkColour, udg_Real_OrkColour, 0)
+        if (Trig_Ork_Func001Func004C()) then
+            SetUnitVertexColorBJ(gg_unit_o00I_0124, 100, 100.00, 100.00, 0)
+            SetUnitMoveSpeed(gg_unit_o00I_0124, 100.00)
+            udg_Real_OrkColour = 100.00
+            CreateTextTagUnitBJ("TRIGSTR_2205", gg_unit_o00I_0124, 0, 10.00, 0.00, 100, 0.00, 0)
+            SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
+            SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
+            SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
+            SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
+        else
+        end
+    else
+    end
+end
+
+function InitTrig_Ork()
+    gg_trg_Ork = CreateTrigger()
+    TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(0), true)
+    TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(1), true)
+    TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(2), true)
+    TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(3), true)
+    TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(4), true)
+    TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(5), true)
+    TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(6), true)
+    TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(7), true)
+    TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(8), true)
+    TriggerAddAction(gg_trg_Ork, Trig_Ork_Actions)
 end
 
 function Trig_Creep_Boosting_Func009C()
@@ -16191,6 +16318,8 @@ function InitCustomTriggers()
     InitTrig_Lose_Life_Animation_Effect()
     InitTrig_WinGame()
     InitTrig_Tabaho()
+    InitTrig_Alpharius_Omegon()
+    InitTrig_Ork()
     InitTrig_Creep_Boosting()
     InitTrig_Hero_XP()
     InitTrig_Hero_Level_Up_Point()

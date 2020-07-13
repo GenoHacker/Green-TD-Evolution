@@ -14663,6 +14663,11 @@ STRING 2204
 |c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
 }
 
+STRING 2205
+{
+Stop poking me Oomie
+}
+
 STRING 2206
 {
 No more Upgrades
@@ -17804,6 +17809,23 @@ STRING 2643
 |c0000ff00Level 4: |c0077ff776000
 }
 
+STRING 2644
+// Units: z000 (Alpharius), Name (Name)
+{
+Alpharius
+}
+
+STRING 2645
+// Units: z001 (Omegon), Name (Name)
+{
+Omegon
+}
+
+STRING 2655
+{
+I am Omegon
+}
+
 STRING 2656
 // Abilities: A026 (Immune Waves), Hotkey (Hotkey - Normal)
 {
@@ -17814,6 +17836,17 @@ STRING 2657
 // Abilities: A00H (Upgrade Armor Aura), Hotkey (Hotkey - Normal)
 {
 E
+}
+
+STRING 2658
+{
+I am Alpharius
+}
+
+STRING 2660
+// Units: o00I (Ork), Name (Name)
+{
+Ork
 }
 
 STRING 2899
