@@ -2032,22 +2032,6 @@ function CreateBuildingsForPlayer0()
     gg_unit_n00C_0019 = BlzCreateUnitWithSkin(p, FourCC("n00C"), -1792.0, 3392.0, 270.000, FourCC("n00C"))
 end
 
-function CreateNeutralHostile()
-    local p = Player(PLAYER_NEUTRAL_AGGRESSIVE)
-    local u
-    local unitID
-    local t
-    local life
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2181.7, 1850.7, 273.403, FourCC("h01H"))
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2188.8, 1658.2, 29.115, FourCC("h01H"))
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2199.4, 1458.1, 325.051, FourCC("h01H"))
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2200.0, 1274.5, 33.432, FourCC("h01H"))
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1378.1, 1812.9, 132.884, FourCC("h01H"))
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1389.2, 1569.5, 12.679, FourCC("h01H"))
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1396.6, 1291.1, 191.937, FourCC("h01H"))
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1418.5, 1025.3, 286.323, FourCC("h01H"))
-end
-
 function CreateNeutralPassiveBuildings()
     local p = Player(PLAYER_NEUTRAL_PASSIVE)
     local u
@@ -2216,7 +2200,6 @@ end
 function CreateAllUnits()
     CreateNeutralPassiveBuildings()
     CreatePlayerBuildings()
-    CreateNeutralHostile()
     CreateNeutralPassive()
     CreatePlayerUnits()
 end
@@ -16135,7 +16118,7 @@ function Trig_Critical_Aura_Conditions()
 end
 
 function Trig_Critical_Aura_Func003Func001C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A00D"), GetTriggerUnit()) >= 5)) then
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A00Q"), GetTriggerUnit()) >= 5)) then
         return false
     end
     return true

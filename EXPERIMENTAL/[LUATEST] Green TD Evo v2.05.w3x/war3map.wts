@@ -14784,24 +14784,6 @@ STRING 2223
 |c0000ff00Critical Aura 4
 }
 
-STRING 2224
-// Abilities: A00Q (Critical Aura), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Additively increases Tower Crit Chance by 2.5% and Damage Multipler by 25%
-}
-
-STRING 2225
-// Abilities: A00Q (Critical Aura), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Additively increases Tower Crit Chance by 5% and Damage Multipler by 50%
-}
-
-STRING 2226
-// Abilities: A00Q (Critical Aura), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Additively increases Tower Crit Chance by 7.5% and Damage Multipler by 75%
-}
-
 STRING 2227
 // Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
@@ -17801,6 +17783,24 @@ STRING 2638
 |c0000ff00125% |c0077ff77vs Light.
 |c0000ff0075% |c0077ff77vs Other.
 |c0000ff00Unable to attack Divine.
+}
+
+STRING 2639
+// Abilities: A00Q (Critical Aura), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Additively increases Tower Crit Chance by 2.5% and Crit Damage by 25%
+}
+
+STRING 2640
+// Abilities: A00Q (Critical Aura), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Additively increases Tower Crit Chance by 5% and Crit Damage by 50%
+}
+
+STRING 2641
+// Abilities: A00Q (Critical Aura), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Additively increases Tower Crit Chance by 7.5% and Crit Damage by 75%
 }
 
 STRING 2656
