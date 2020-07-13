@@ -238,6 +238,10 @@ udg_Real_Array_BonusCritChance = __jarray(0.0)
 udg_Real_Array_MeleeCritDamage = __jarray(0.0)
 udg_Real_Array_RangedCritDamage = __jarray(0.0)
 udg_Real_Array_SpellCritDamage = __jarray(0.0)
+udg_Unit_AuraTower = {}
+udg_Real_Array_CritAuraChances = __jarray(0.0)
+udg_Real_Array_CritAuraDamage = __jarray(0.0)
+udg_Real_Array_BonusCritDamage = __jarray(0.0)
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -320,6 +324,7 @@ gg_snd_HeroLichPissed8 = nil
 gg_trg_Damage_Tag = nil
 gg_trg_Damage_Engine_Config = nil
 gg_trg_Crit_System = nil
+gg_trg_Crit_Aura = nil
 gg_trg_Set_Variables = nil
 gg_trg_Set_Random_Wave_Variables = nil
 gg_trg_Map_Start = nil
@@ -503,6 +508,7 @@ gg_trg_Speed_Aura = nil
 gg_unit_n00C_0019 = nil
 gg_unit_n015_0010 = nil
 gg_unit_n00D_0042 = nil
+gg_trg_Critical_Aura = nil
 function InitGlobals()
     local i = 0
     i = 0
@@ -978,6 +984,24 @@ function InitGlobals()
     while (true) do
         if ((i > 1)) then break end
         udg_Real_Array_SpellCritDamage[i] = 3.00
+        i = i + 1
+    end
+    i = 0
+    while (true) do
+        if ((i > 1)) then break end
+        udg_Real_Array_CritAuraChances[i] = 0.0
+        i = i + 1
+    end
+    i = 0
+    while (true) do
+        if ((i > 1)) then break end
+        udg_Real_Array_CritAuraDamage[i] = 0.0
+        i = i + 1
+    end
+    i = 0
+    while (true) do
+        if ((i > 1)) then break end
+        udg_Real_Array_BonusCritDamage[i] = 0.0
         i = i + 1
     end
 end
@@ -2008,6 +2032,22 @@ function CreateBuildingsForPlayer0()
     gg_unit_n00C_0019 = BlzCreateUnitWithSkin(p, FourCC("n00C"), -1792.0, 3392.0, 270.000, FourCC("n00C"))
 end
 
+function CreateNeutralHostile()
+    local p = Player(PLAYER_NEUTRAL_AGGRESSIVE)
+    local u
+    local unitID
+    local t
+    local life
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2181.7, 1850.7, 273.403, FourCC("h01H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2188.8, 1658.2, 29.115, FourCC("h01H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2199.4, 1458.1, 325.051, FourCC("h01H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2200.0, 1274.5, 33.432, FourCC("h01H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1378.1, 1812.9, 132.884, FourCC("h01H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1389.2, 1569.5, 12.679, FourCC("h01H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1396.6, 1291.1, 191.937, FourCC("h01H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1418.5, 1025.3, 286.323, FourCC("h01H"))
+end
+
 function CreateNeutralPassiveBuildings()
     local p = Player(PLAYER_NEUTRAL_PASSIVE)
     local u
@@ -2176,6 +2216,7 @@ end
 function CreateAllUnits()
     CreateNeutralPassiveBuildings()
     CreatePlayerBuildings()
+    CreateNeutralHostile()
     CreateNeutralPassive()
     CreatePlayerUnits()
 end
@@ -2426,7 +2467,7 @@ function Trig_Crit_System_Func004C()
 end
 
 function Trig_Crit_System_Func008Func003C()
-    if (not (udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (90.00 + udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))]))) then
+    if (not (udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (50.00 + udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))]))) then
         return false
     end
     return true
@@ -2455,28 +2496,31 @@ end
 
 function Trig_Crit_System_Actions()
     if (Trig_Crit_System_Func004C()) then
-        udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = I2R(GetUnitUserData(udg_DamageEventSource))
+        udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + udg_Real_Array_CritAuraChances[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)])
         udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (GetRandomReal(0, 100.00) + udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
         if (Trig_Crit_System_Func004Func003C()) then
-            udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_RangedCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
+            udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_RangedCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (0.00 + 0.00)))
+            udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
         else
         end
     else
     end
     if (Trig_Crit_System_Func008C()) then
-        udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = I2R(GetUnitUserData(udg_DamageEventSource))
+        udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + udg_Real_Array_CritAuraChances[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)])
         udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (GetRandomReal(0, 100.00) + udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
         if (Trig_Crit_System_Func008Func003C()) then
-            udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_MeleeCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
+            udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_MeleeCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (0.00 + 0.00)))
+            udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
         else
         end
     else
     end
     if (Trig_Crit_System_Func012C()) then
-        udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = I2R(GetUnitUserData(udg_DamageEventSource))
+        udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + udg_Real_Array_CritAuraChances[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)])
         udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (GetRandomReal(0, 100.00) + udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
         if (Trig_Crit_System_Func012Func003C()) then
-            udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_SpellCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
+            udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_SpellCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (0.00 + 0.00)))
+            udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
         else
         end
     else
@@ -2489,53 +2533,142 @@ function InitTrig_Crit_System()
     TriggerAddAction(gg_trg_Crit_System, Trig_Crit_System_Actions)
 end
 
-function Trig_Set_Variables_Func166001()
+function Trig_Crit_Aura_Func001Func001Func002Func002Func002C()
+    if (not (UnitHasBuffBJ(GetAttacker(), FourCC("BOac")) == true)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A00Q"), udg_Unit_AuraTower[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))]) == 5)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Crit_Aura_Func001Func001Func002Func002C()
+    if (not (UnitHasBuffBJ(GetAttacker(), FourCC("BOac")) == true)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A00Q"), udg_Unit_AuraTower[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))]) == 4)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Crit_Aura_Func001Func001Func002C()
+    if (not (UnitHasBuffBJ(GetAttacker(), FourCC("BOac")) == true)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A00Q"), udg_Unit_AuraTower[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))]) == 3)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Crit_Aura_Func001Func001C()
+    if (not (UnitHasBuffBJ(GetAttacker(), FourCC("BOac")) == true)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A00Q"), udg_Unit_AuraTower[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))]) == 2)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Crit_Aura_Func001Func004C()
+    if (GetUnitAbilityLevelSwapped(FourCC("A00Q"), udg_Unit_AuraTower[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))]) == 0) then
+        return true
+    end
+    if (GetUnitAbilityLevelSwapped(FourCC("A00Q"), udg_Unit_AuraTower[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))]) == 1) then
+        return true
+    end
+    return false
+end
+
+function Trig_Crit_Aura_Func001C()
+    if (not (UnitHasBuffBJ(GetAttacker(), FourCC("BOac")) == false)) then
+        return false
+    end
+    if (not Trig_Crit_Aura_Func001Func004C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Crit_Aura_Actions()
+    if (Trig_Crit_Aura_Func001C()) then
+        SetUnitAbilityLevelSwapped(FourCC("A004"), GetAttacker(), 1)
+    else
+        if (Trig_Crit_Aura_Func001Func001C()) then
+            SetUnitAbilityLevelSwapped(FourCC("A004"), GetAttacker(), 2)
+        else
+            if (Trig_Crit_Aura_Func001Func001Func002C()) then
+                SetUnitAbilityLevelSwapped(FourCC("A004"), GetAttacker(), 3)
+            else
+                if (Trig_Crit_Aura_Func001Func001Func002Func002C()) then
+                    SetUnitAbilityLevelSwapped(FourCC("A004"), GetAttacker(), 4)
+                else
+                    if (Trig_Crit_Aura_Func001Func001Func002Func002Func002C()) then
+                        SetUnitAbilityLevelSwapped(FourCC("A004"), GetAttacker(), 5)
+                    else
+                    end
+                end
+            end
+        end
+    end
+end
+
+function InitTrig_Crit_Aura()
+    gg_trg_Crit_Aura = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Crit_Aura, EVENT_PLAYER_UNIT_ATTACKED)
+    TriggerAddAction(gg_trg_Crit_Aura, Trig_Crit_Aura_Actions)
+end
+
+function Trig_Set_Variables_Func178001()
     return (GetPlayerSlotState(Player(0)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func167001()
+function Trig_Set_Variables_Func179001()
     return (GetPlayerSlotState(Player(1)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func168001()
+function Trig_Set_Variables_Func180001()
     return (GetPlayerSlotState(Player(2)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func169001()
+function Trig_Set_Variables_Func181001()
     return (GetPlayerSlotState(Player(3)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func170001()
+function Trig_Set_Variables_Func182001()
     return (GetPlayerSlotState(Player(4)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func171001()
+function Trig_Set_Variables_Func183001()
     return (GetPlayerSlotState(Player(5)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func172001()
+function Trig_Set_Variables_Func184001()
     return (GetPlayerSlotState(Player(6)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func173001()
+function Trig_Set_Variables_Func185001()
     return (GetPlayerSlotState(Player(7)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func174001()
+function Trig_Set_Variables_Func186001()
     return (GetPlayerSlotState(Player(8)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func175Func003C()
+function Trig_Set_Variables_Func187Func003C()
     if (not (GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_LEFT)) then
         return false
     end
     return true
 end
 
-function Trig_Set_Variables_Func175A()
+function Trig_Set_Variables_Func187A()
     udg_String_Array_PlayerNames[GetConvertedPlayerId(GetEnumPlayer())] = (udg_String_Array_MultiBoardColours[GetConvertedPlayerId(GetEnumPlayer())] .. (GetPlayerName(GetEnumPlayer()) .. "|r"))
     udg_Real_Array_CameraDistance[GetConvertedPlayerId(GetEnumPlayer())] = 2500.00
-    if (Trig_Set_Variables_Func175Func003C()) then
+    if (Trig_Set_Variables_Func187Func003C()) then
         ForceRemovePlayerSimple(GetEnumPlayer(), udg_PlayerGroup_PlyGrpArray[1])
     else
         udg_Integer_Players = (udg_Integer_Players + 1)
@@ -2545,11 +2678,21 @@ function Trig_Set_Variables_Func175A()
 end
 
 function Trig_Set_Variables_Actions()
+    udg_Real_Array_CritAuraDamage[1] = 0.00
+    udg_Real_Array_CritAuraDamage[2] = 0.25
+    udg_Real_Array_CritAuraDamage[3] = 0.50
+    udg_Real_Array_CritAuraDamage[4] = 0.75
+    udg_Real_Array_CritAuraDamage[5] = 1.00
+    udg_Real_Array_CritAuraChances[1] = 0.00
+    udg_Real_Array_CritAuraChances[2] = 2.50
+    udg_Real_Array_CritAuraChances[3] = 5.00
+    udg_Real_Array_CritAuraChances[4] = 7.50
+    udg_Real_Array_CritAuraChances[5] = 10.00
     bj_forLoopAIndex = 1
     bj_forLoopAIndexEnd = 9
     while (true) do
         if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
-        udg_Real_Array_MeleeCritDamage[GetForLoopIndexA()] = 100.00
+        udg_Real_Array_MeleeCritDamage[GetForLoopIndexA()] = 5.00
         udg_Real_Array_RangedCritDamage[GetForLoopIndexA()] = 1.50
         udg_Real_Array_SpellCritDamage[GetForLoopIndexA()] = 3.00
         bj_forLoopAIndex = bj_forLoopAIndex + 1
@@ -2706,52 +2849,52 @@ function Trig_Set_Variables_Actions()
         udg_Integer_Array_TowerOption[GetForLoopIndexA()] = 1
         bj_forLoopAIndex = bj_forLoopAIndex + 1
     end
-    if (Trig_Set_Variables_Func166001()) then
+    if (Trig_Set_Variables_Func178001()) then
         ForceAddPlayerSimple(Player(0), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    if (Trig_Set_Variables_Func167001()) then
+    if (Trig_Set_Variables_Func179001()) then
         ForceAddPlayerSimple(Player(1), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    if (Trig_Set_Variables_Func168001()) then
+    if (Trig_Set_Variables_Func180001()) then
         ForceAddPlayerSimple(Player(2), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    if (Trig_Set_Variables_Func169001()) then
+    if (Trig_Set_Variables_Func181001()) then
         ForceAddPlayerSimple(Player(3), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    if (Trig_Set_Variables_Func170001()) then
+    if (Trig_Set_Variables_Func182001()) then
         ForceAddPlayerSimple(Player(4), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    if (Trig_Set_Variables_Func171001()) then
+    if (Trig_Set_Variables_Func183001()) then
         ForceAddPlayerSimple(Player(5), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    if (Trig_Set_Variables_Func172001()) then
+    if (Trig_Set_Variables_Func184001()) then
         ForceAddPlayerSimple(Player(6), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    if (Trig_Set_Variables_Func173001()) then
+    if (Trig_Set_Variables_Func185001()) then
         ForceAddPlayerSimple(Player(7), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    if (Trig_Set_Variables_Func174001()) then
+    if (Trig_Set_Variables_Func186001()) then
         ForceAddPlayerSimple(Player(8), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Set_Variables_Func175A)
+    ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Set_Variables_Func187A)
     udg_Real_Array_MessageTime[1] = 60.00
 end
 
@@ -3323,7 +3466,14 @@ function InitTrig_Remove_Hero()
     TriggerAddAction(gg_trg_Remove_Hero, Trig_Remove_Hero_Actions)
 end
 
-function Trig_Selling_Towers_Func001Func001Func003C()
+function Trig_Selling_Towers_Func001Func001Func001C()
+    if (not (GetUnitTypeId(GetSpellAbilityUnit()) == FourCC("h00G"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Selling_Towers_Func001Func001Func004C()
     if (GetUnitTypeId(GetSpellAbilityUnit()) == FourCC("n01H")) then
         return true
     end
@@ -3357,7 +3507,7 @@ function Trig_Selling_Towers_Func001Func001Func003C()
     return false
 end
 
-function Trig_Selling_Towers_Func001Func001Func004C()
+function Trig_Selling_Towers_Func001Func001Func005C()
     if (not (udg_Integer_AuraTowerSell[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] == 1)) then
         return false
     end
@@ -3365,7 +3515,7 @@ function Trig_Selling_Towers_Func001Func001Func004C()
 end
 
 function Trig_Selling_Towers_Func001Func001C()
-    if (not Trig_Selling_Towers_Func001Func001Func003C()) then
+    if (not Trig_Selling_Towers_Func001Func001Func004C()) then
         return false
     end
     return true
@@ -3391,7 +3541,11 @@ end
 function Trig_Selling_Towers_Actions()
     if (Trig_Selling_Towers_Func001C()) then
         if (Trig_Selling_Towers_Func001Func001C()) then
-            if (Trig_Selling_Towers_Func001Func001Func004C()) then
+            if (Trig_Selling_Towers_Func001Func001Func001C()) then
+                udg_Unit_AuraTower[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = nil
+            else
+            end
+            if (Trig_Selling_Towers_Func001Func001Func005C()) then
                 udg_Integer_AuraTowerSell[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = 0
                 AdjustPlayerStateBJ(((udg_Integer_SellPercent * GetUnitPointValue(GetSpellAbilityUnit())) // 100), GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_GOLD)
                 CreateTextTagUnitBJ(("Tower Sold For " .. (I2S(((udg_Integer_SellPercent * GetUnitPointValue(GetSpellAbilityUnit())) // 100)) .. " Gold.")), GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
@@ -4291,10 +4445,21 @@ function InitTrig_Hero_Abilities()
     TriggerAddAction(gg_trg_Hero_Abilities, Trig_Hero_Abilities_Actions)
 end
 
+function Trig_Finish_Build_Func004C()
+    if (not (GetUnitTypeId(GetConstructingStructure()) == FourCC("h00G"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Finish_Build_Actions()
     TriggerSleepAction(0.00)
     BlzUnitHideAbility(GetTriggerUnit(), FourCC("Amim"), true)
     UnitSetConstructionProgress(GetConstructingStructure(), 99)
+    if (Trig_Finish_Build_Func004C()) then
+        udg_Unit_AuraTower[GetConvertedPlayerId(GetOwningPlayer(GetConstructingStructure()))] = GetConstructingStructure()
+    else
+    end
 end
 
 function InitTrig_Finish_Build()
@@ -4603,18 +4768,26 @@ function Trig_Choose_Mode_Gamemodes_Actions()
     DisableTrigger(gg_trg_Default_Gamemode)
     if (Trig_Choose_Mode_Gamemodes_Func008C()) then
         udg_Integer_Difficulty = 1
+        udg_Integer_ChaosModeOn = 0
+        udg_Integer_ChaosMode = 0
     else
     end
     if (Trig_Choose_Mode_Gamemodes_Func012C()) then
         udg_Integer_Difficulty = 2
+        udg_Integer_ChaosModeOn = 0
+        udg_Integer_ChaosMode = 0
     else
     end
     if (Trig_Choose_Mode_Gamemodes_Func016C()) then
         udg_Integer_Difficulty = 3
+        udg_Integer_ChaosModeOn = 0
+        udg_Integer_ChaosMode = 0
     else
     end
     if (Trig_Choose_Mode_Gamemodes_Func020C()) then
         udg_Integer_Difficulty = 4
+        udg_Integer_ChaosModeOn = 0
+        udg_Integer_ChaosMode = 0
     else
     end
     if (Trig_Choose_Mode_Gamemodes_Func024C()) then
@@ -15954,10 +16127,61 @@ function InitTrig_Speed_Aura()
     TriggerAddAction(gg_trg_Speed_Aura, Trig_Speed_Aura_Actions)
 end
 
+function Trig_Critical_Aura_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A00R"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Critical_Aura_Func003Func001C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A00D"), GetTriggerUnit()) >= 5)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Critical_Aura_Func003C()
+    if (not (GetPlayerState(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD) < GetUnitUserData(GetTriggerUnit()))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Critical_Aura_Actions()
+    SetUnitUserData(GetTriggerUnit(), udg_Integer_Array_AuraGoldCost[GetUnitAbilityLevelSwapped(FourCC("A00Q"), GetTriggerUnit())])
+    if (Trig_Critical_Aura_Func003C()) then
+        CreateTextTagUnitBJ(("You Need " .. (I2S(GetUnitUserData(GetTriggerUnit())) .. " To Upgrade")), GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
+    else
+        if (Trig_Critical_Aura_Func003Func001C()) then
+            CreateTextTagUnitBJ("TRIGSTR_2206", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
+        else
+            IncUnitAbilityLevelSwapped(FourCC("A00Q"), GetTriggerUnit())
+            SetPlayerStateBJ(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD, (GetPlayerState(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD) - GetUnitUserData(GetTriggerUnit())))
+            SetUnitUserData(GetTriggerUnit(), udg_Integer_Array_AuraGoldCost[GetUnitAbilityLevelSwapped(FourCC("A00Q"), GetTriggerUnit())])
+            CreateTextTagUnitBJ("TRIGSTR_2413", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
+        end
+    end
+    SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
+    SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
+    SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
+    SetTextTagLifespanBJ(GetLastCreatedTextTag(), 3.00)
+    ShowTextTagForceBJ(false, GetLastCreatedTextTag(), GetPlayersAll())
+    ShowTextTagForceBJ(true, GetLastCreatedTextTag(), GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())))
+end
+
+function InitTrig_Critical_Aura()
+    gg_trg_Critical_Aura = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Critical_Aura, EVENT_PLAYER_UNIT_SPELL_CAST)
+    TriggerAddCondition(gg_trg_Critical_Aura, Condition(Trig_Critical_Aura_Conditions))
+    TriggerAddAction(gg_trg_Critical_Aura, Trig_Critical_Aura_Actions)
+end
+
 function InitCustomTriggers()
     InitTrig_Damage_Tag()
     InitTrig_Damage_Engine_Config()
     InitTrig_Crit_System()
+    InitTrig_Crit_Aura()
     InitTrig_Set_Variables()
     InitTrig_Set_Random_Wave_Variables()
     InitTrig_Map_Start()
@@ -16138,6 +16362,7 @@ function InitCustomTriggers()
     InitTrig_Armor_Aura()
     InitTrig_Crippling_Aura()
     InitTrig_Speed_Aura()
+    InitTrig_Critical_Aura()
 end
 
 function RunInitializationTriggers()

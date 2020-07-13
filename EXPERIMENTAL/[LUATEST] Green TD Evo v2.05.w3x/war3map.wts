@@ -14664,15 +14664,8 @@ STRING 2204
 }
 
 STRING 2206
-// Abilities: A004 (Critical Strike), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff77Every instance of damage has a chance to critically hit, the |c0000ff00Chance to Hit|r |c0077ff77and |c0000ff00Damage Multiplier |c0077ff77are dependent on the damage type, these are |c0000ff00Ranged Damage|r|c0077ff77, |c0000ff00Melee Damage|r |c0077ff77and |c0000ff00Spell Damage.
-
-|c0000ff00Ranged: |c0077ff77Crit Chance = |cffff000010%|r|c0077ff77, Multiplier = |cffff00001.50|r
-|c0000ff00Melee: |c0077ff77Crit Chance = |cffff000090%|r|c0077ff77, Multiplier = |cffff0000100|r
-|c0000ff00Spell: |c0077ff77Crit Chance = |cffff00005%|r|c0077ff77, Multiplier = |cffff00003.00|r
-
-|c0000ff00Crit Chance|r |c0077ff77and |c0000ff00Multiplier|r |c0077ff77are not static, both values can be increased by temporary or permanent effects.
+No more Upgrades
 }
 
 STRING 2207
@@ -14905,6 +14898,30 @@ STRING 2238
 // Abilities: A002 (Aura Upgrades), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Click this to bring up several abilities that can be used to upgrade the auras used by your aura tower.
+}
+
+STRING 2239
+// Abilities: A004 (Critical Strike), Tip (Tooltip - Normal)
+{
+|c0000ff00Critical Strike|r
+}
+
+STRING 2240
+// Abilities: A004 (Critical Strike), Tip (Tooltip - Normal)
+{
+|c0000ff00Critical Strike|r
+}
+
+STRING 2241
+// Abilities: A004 (Critical Strike), Tip (Tooltip - Normal)
+{
+|c0000ff00Critical Strike|r
+}
+
+STRING 2242
+// Abilities: A004 (Critical Strike), Tip (Tooltip - Normal)
+{
+|c0000ff00Critical Strike|r
 }
 
 STRING 2244
@@ -16016,6 +16033,11 @@ STRING 2412
 Z
 }
 
+STRING 2413
+{
+Aura Upgraded
+}
+
 STRING 2414
 {
 -- Fixed an issue causing a second immolation trap to spawn.
@@ -16331,6 +16353,18 @@ STRING 2458
 Gagoo Gamblegoblin
 }
 
+STRING 2459
+// Abilities: A004 (Critical Strike), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Every instance of damage has a chance to critically hit, the |c0000ff00Chance to Hit|r |c0077ff77and |c0000ff00Crit Damage |c0077ff77are dependent on the damage type, these are |c0000ff00Ranged Damage|r|c0077ff77, |c0000ff00Melee Damage|r |c0077ff77and |c0000ff00Spell Damage.
+
+|c0000ff00Ranged: |c0077ff77Crit Chance = |cffff000010%|r|c0077ff77, Crit Damage = |cffff0000150%|r
+|c0000ff00Melee: |c0077ff77Crit Chance = |cffff000050%|r|c0077ff77, Crit Damage = |cffff0000500%|r
+|c0000ff00Spell: |c0077ff77Crit Chance = |cffff00005%|r|c0077ff77, Crit Damage = |cffff0000300%|r
+
+|c0000ff00Crit Chance|r |c0077ff77and |c0000ff00Crit Damage|r |c0077ff77are not static, both values can be increased by temporary or permanent effects.
+}
+
 STRING 2460
 // Units: n00L (Frost Tower 7: Frost Revenant), Hotkey (Hotkey)
 {
@@ -16385,6 +16419,18 @@ STRING 2467
 |c0000ff00Ability (2):|r |c0077ff77Servitude; upon killing an enemy this tower gains 1 mana, upon reaching 15 mana it can summon 3 random units that deal a random attack type.|r
 }
 
+STRING 2468
+// Abilities: A004 (Critical Strike), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Every instance of damage has a chance to critically hit, the |c0000ff00Chance to Hit|r |c0077ff77and |c0000ff00Crit Damage |c0077ff77are dependent on the damage type, these are |c0000ff00Ranged Damage|r|c0077ff77, |c0000ff00Melee Damage|r |c0077ff77and |c0000ff00Spell Damage.
+
+|c0000ff00Ranged: |c0077ff77Crit Chance = |cffff000010%|r|c0077ff77, Crit Damage = |cffff0000150%|r
+|c0000ff00Melee: |c0077ff77Crit Chance = |cffff000050%|r|c0077ff77, Crit Damage = |cffff0000500%|r
+|c0000ff00Spell: |c0077ff77Crit Chance = |cffff00005%|r|c0077ff77, Crit Damage = |cffff0000300%|r
+
+|c0000ff00Crit Chance|r |c0077ff77and |c0000ff00Crit Damage|r |c0077ff77are not static, both values can be increased by temporary or permanent effects.
+}
+
 STRING 2469
 // Units: h02M (Soul Tower 7: Runic Crystal), Ubertip (Tooltip - Extended)
 {
@@ -16395,6 +16441,18 @@ STRING 2469
 |c0000ff00Efficiency:|r |c0077ff770.33 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Multishot; can attack up to 6 enemy units.|r
 |c0000ff00Ability (2):|r |c0077ff77Servitude; upon killing an enemy this tower gains 1 mana, upon reaching 15 mana it can summon 9 random units that deal a random attack type.|r
+}
+
+STRING 2470
+// Abilities: A004 (Critical Strike), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Every instance of damage has a chance to critically hit, the |c0000ff00Chance to Hit|r |c0077ff77and |c0000ff00Crit Damage |c0077ff77are dependent on the damage type, these are |c0000ff00Ranged Damage|r|c0077ff77, |c0000ff00Melee Damage|r |c0077ff77and |c0000ff00Spell Damage.
+
+|c0000ff00Ranged: |c0077ff77Crit Chance = |cffff000010%|r|c0077ff77, Crit Damage = |cffff0000150%|r
+|c0000ff00Melee: |c0077ff77Crit Chance = |cffff000050%|r|c0077ff77, Crit Damage = |cffff0000500%|r
+|c0000ff00Spell: |c0077ff77Crit Chance = |cffff00005%|r|c0077ff77, Crit Damage = |cffff0000300%|r
+
+|c0000ff00Crit Chance|r |c0077ff77and |c0000ff00Crit Damage|r |c0077ff77are not static, both values can be increased by temporary or permanent effects.
 }
 
 STRING 2471
@@ -16421,6 +16479,18 @@ STRING 2473
 |c0000ff00Ability (2):|r |c0077ff77Servitude; upon killing an enemy this tower gains 1 mana, upon reaching 15 mana it can summon 7 random units that deal a random attack type.|r
 }
 
+STRING 2474
+// Abilities: A004 (Critical Strike), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Every instance of damage has a chance to critically hit, the |c0000ff00Chance to Hit|r |c0077ff77and |c0000ff00Crit Damage |c0077ff77are dependent on the damage type, these are |c0000ff00Ranged Damage|r|c0077ff77, |c0000ff00Melee Damage|r |c0077ff77and |c0000ff00Spell Damage.
+
+|c0000ff00Ranged: |c0077ff77Crit Chance = |cffff000010%|r|c0077ff77, Crit Damage = |cffff0000150%|r
+|c0000ff00Melee: |c0077ff77Crit Chance = |cffff000050%|r|c0077ff77, Crit Damage = |cffff0000500%|r
+|c0000ff00Spell: |c0077ff77Crit Chance = |cffff00005%|r|c0077ff77, Crit Damage = |cffff0000300%|r
+
+|c0000ff00Crit Chance|r |c0077ff77and |c0000ff00Crit Damage|r |c0077ff77are not static, both values can be increased by temporary or permanent effects.
+}
+
 STRING 2475
 // Units: h046 (Soul Tower 9: Runic Crystal), Name (Name)
 {
@@ -16437,6 +16507,18 @@ STRING 2476
 |c0000ff00Efficiency:|r |c0077ff770.26 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Multishot; can attack up to 6 enemy units.|r
 |c0000ff00Ability (2):|r |c0077ff77Servitude; upon killing an enemy this tower gains 1 mana, upon reaching 15 mana it can summon 5 random units that deal a random attack type.|r
+}
+
+STRING 2477
+// Abilities: A004 (Critical Strike), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Every instance of damage has a chance to critically hit, the |c0000ff00Chance to Hit|r |c0077ff77and |c0000ff00Crit Damage |c0077ff77are dependent on the damage type, these are |c0000ff00Ranged Damage|r|c0077ff77, |c0000ff00Melee Damage|r |c0077ff77and |c0000ff00Spell Damage.
+
+|c0000ff00Ranged: |c0077ff77Crit Chance = |cffff000010%|r|c0077ff77, Crit Damage = |cffff0000150%|r
+|c0000ff00Melee: |c0077ff77Crit Chance = |cffff000050%|r|c0077ff77, Crit Damage = |cffff0000500%|r
+|c0000ff00Spell: |c0077ff77Crit Chance = |cffff00005%|r|c0077ff77, Crit Damage = |cffff0000300%|r
+
+|c0000ff00Crit Chance|r |c0077ff77and |c0000ff00Crit Damage|r |c0077ff77are not static, both values can be increased by temporary or permanent effects.
 }
 
 STRING 2478
