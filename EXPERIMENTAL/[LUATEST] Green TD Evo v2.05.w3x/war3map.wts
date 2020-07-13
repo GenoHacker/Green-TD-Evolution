@@ -14663,6 +14663,18 @@ STRING 2204
 |c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
 }
 
+STRING 2205
+// Abilities: A004 (Critical Strike), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Every instance of damage has a chance to critically hit, the chance to hit and damage multiplier are depend on the damage type, these are Ranged Damage, Melee Damage and Spell Damage
+
+Ranged: Crit Chance = |cffff000010%|r|c0077ff77, Multiplier = |cffff00001.50|r
+|c0077ff77Melee: Crit Chance = |cffff000090%|r|c0077ff77, Multiplier = |cffff0000100|r
+|c0077ff77Spell: Crit Chance = |cffff00005%|r|c0077ff77, Multiplier = |cffff00003.00|r
+
+|c0077ff77Crit Chance and Multiplier are not static, both values can be increased by temporary or permanent effects.
+}
+
 STRING 2207
 // Units: h02Q (Chaos Tower 7: Chaos Heretic), Ubertip (Tooltip - Extended)
 {
@@ -18233,12 +18245,6 @@ STRING 3551
 W
 }
 
-STRING 3798
-// Abilities: A004 (Critical Strike), EditorSuffix (Editor Suffix)
-{
-1.5
-}
-
 STRING 3799
 // Abilities: A00Q (Critical Strike), EditorSuffix (Editor Suffix)
 {
@@ -19014,12 +19020,6 @@ STRING 5691
 // Abilities: A00E (Blink), Tip (Tooltip - Normal)
 {
 |cAAAAFFAA[W]|r |c0000ff00Blink|r
-}
-
-STRING 5704
-// Abilities: A004 (Critical Strike), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Gives a 25% chance to do 1.5 times normal damage on an attack.
 }
 
 STRING 5762

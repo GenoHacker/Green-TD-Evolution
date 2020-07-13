@@ -124,7 +124,6 @@ udg_CONVERTED_DAMAGE_TYPE = {}
 udg_DamageEventArmorPierced = 0.0
 udg_AfterDamageEvent = 0.0
 udg_DamageEventOverride = false
-udg_DamageModifierEvent = 0.0
 udg_DamageEventAmount = 0.0
 udg_DamageEventSource = nil
 udg_DamageEventTarget = nil
@@ -234,6 +233,11 @@ udg_DamageEventWeaponT = 0
 udg_Timestamp = nil
 udg_DmgStr = ""
 udg_ReportLife = 0.0
+udg_Real_Array_CritChance = __jarray(0.0)
+udg_Real_Array_BonusCritChance = __jarray(0.0)
+udg_Real_Array_MeleeCritDamage = __jarray(0.0)
+udg_Real_Array_RangedCritDamage = __jarray(0.0)
+udg_Real_Array_SpellCritDamage = __jarray(0.0)
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -313,6 +317,8 @@ gg_snd_Wave_Normal = nil
 gg_snd_Wave_Hero = nil
 gg_snd_Wave_Boss = nil
 gg_snd_HeroLichPissed8 = nil
+gg_trg_Damage_Tag = nil
+gg_trg_Damage_Engine_Config = nil
 gg_trg_Set_Variables = nil
 gg_trg_Set_Random_Wave_Variables = nil
 gg_trg_Map_Start = nil
@@ -496,8 +502,7 @@ gg_trg_Speed_Aura = nil
 gg_unit_n00C_0019 = nil
 gg_unit_n015_0010 = nil
 gg_unit_n00D_0042 = nil
-gg_trg_Damage_Engine_Config = nil
-gg_trg_Damage_Tag = nil
+gg_trg_Crit_System = nil
 function InitGlobals()
     local i = 0
     i = 0
@@ -815,7 +820,7 @@ function InitGlobals()
     udg_AfterDamageEvent = 0.0
     udg_DamageEventOverride = false
     globals.udg_DamageEvent = 0.0
-    udg_DamageModifierEvent = 0.0
+    globals.udg_DamageModifierEvent = 0.0
     udg_DamageEventAmount = 0.0
     udg_DamageEventPrevAmt = 0.0
     udg_LethalDamageEvent = 0.0
@@ -945,23 +950,53 @@ function InitGlobals()
     udg_Timestamp = CreateTimer()
     udg_DmgStr = ""
     udg_ReportLife = 0.0
+    i = 0
+    while (true) do
+        if ((i > 1)) then break end
+        udg_Real_Array_CritChance[i] = 0.0
+        i = i + 1
+    end
+    i = 0
+    while (true) do
+        if ((i > 1)) then break end
+        udg_Real_Array_BonusCritChance[i] = 0.0
+        i = i + 1
+    end
+    i = 0
+    while (true) do
+        if ((i > 1)) then break end
+        udg_Real_Array_MeleeCritDamage[i] = 100.00
+        i = i + 1
+    end
+    i = 0
+    while (true) do
+        if ((i > 1)) then break end
+        udg_Real_Array_RangedCritDamage[i] = 1.50
+        i = i + 1
+    end
+    i = 0
+    while (true) do
+        if ((i > 1)) then break end
+        udg_Real_Array_SpellCritDamage[i] = 3.00
+        i = i + 1
+    end
 end
 
 -- Arcing Text Tag v1.0.0.3 by Maker encoded to Lua
 
 DEFINITION      = 1.0/60.0
-SIZE_MIN        = 0.018         -- Minimum size of text
-SIZE_BONUS      = 0.012         -- Text size increase
+SIZE_MIN        = 0.024         -- Minimum size of text
+SIZE_BONUS      = 0.00         -- Text size increase
 TIME_LIFE       = 1.0           -- How long the text lasts
 TIME_FADE       = 0.8           -- When does the text start to fade
-Z_OFFSET        = 50            -- Height above unit
+Z_OFFSET        = 70            -- Height above unit
 Z_OFFSET_BON    = 50            -- How much extra height the text gains
-VELOCITY        = 2.0           -- How fast the text move in x/y plane
+VELOCITY        = 4.0           -- How fast the text move in x/y plane
 TMR             = CreateTimer()
 
 ANGLE_RND       = true          -- Is the angle random or fixed
 if not ANGLE_RND then
-    ANGLE       = bj_PI/2.0     -- If fixed, specify the Movement angle of the text.
+    ANGLE       = bj_PI/1.0     -- If fixed, specify the Movement angle of the text.
 end
 
 tt   = {}
@@ -2236,34 +2271,6 @@ function Trig_Damage_Tag_Func004Func001C()
     return true
 end
 
-function Trig_Damage_Tag_Func004Func002Func001Func001Func001Func001Func002C()
-    if (not (udg_IsDamageRanged == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Damage_Tag_Func004Func002Func001Func001Func001Func001C()
-    if (not (udg_IsDamageSpell == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Damage_Tag_Func004Func002Func001Func001Func001C()
-    if (not (udg_DamageScalingUser < 0.60)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Damage_Tag_Func004Func002Func001Func001C()
-    if (not (udg_DamageEventAmount > 0.99)) then
-        return false
-    end
-    return true
-end
-
 function Trig_Damage_Tag_Func004Func002Func001C()
     if (not (udg_DamageScalingUser >= 1.50)) then
         return false
@@ -2308,22 +2315,6 @@ function Trig_Damage_Tag_Actions()
                 udg_DmgStr = ("|cffff0000" .. (I2S(R2I(udg_DamageEventAmount)) .. "!|r"))
                                 ArcingTextTag(udg_DmgStr, udg_DamageEventTarget)
             else
-                if (Trig_Damage_Tag_Func004Func002Func001Func001C()) then
-                    if (Trig_Damage_Tag_Func004Func002Func001Func001Func001C()) then
-                        udg_DmgStr = "|cff808000"
-                    else
-                        if (Trig_Damage_Tag_Func004Func002Func001Func001Func001Func001C()) then
-                            udg_DmgStr = "|cff3264c8"
-                        else
-                            if (Trig_Damage_Tag_Func004Func002Func001Func001Func001Func001Func002C()) then
-                                udg_DmgStr = "|cffffff00"
-                            else
-                            end
-                        end
-                    end
-                                        ArcingTextTag(udg_DmgStr .. R2I(udg_DamageEventAmount) .. "|r", udg_DamageEventTarget)
-                else
-                end
             end
         end
     end
@@ -2420,53 +2411,131 @@ function InitTrig_Damage_Engine_Config()
     TriggerAddAction(gg_trg_Damage_Engine_Config, Trig_Damage_Engine_Config_Actions)
 end
 
-function Trig_Set_Variables_Func164001()
-    return (GetPlayerSlotState(Player(0)) == PLAYER_SLOT_STATE_PLAYING)
+function Trig_Crit_System_Func004Func003C()
+    if (not (udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (10.00 + udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))]))) then
+        return false
+    end
+    return true
 end
 
-function Trig_Set_Variables_Func165001()
-    return (GetPlayerSlotState(Player(1)) == PLAYER_SLOT_STATE_PLAYING)
+function Trig_Crit_System_Func004C()
+    if (not (udg_IsDamageRanged == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Crit_System_Func008Func003C()
+    if (not (udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (90.00 + udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))]))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Crit_System_Func008C()
+    if (not (udg_IsDamageMelee == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Crit_System_Func012Func003C()
+    if (not (udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (5.00 + udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))]))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Crit_System_Func012C()
+    if (not (udg_IsDamageSpell == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Crit_System_Actions()
+    if (Trig_Crit_System_Func004C()) then
+        udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = I2R(GetUnitUserData(udg_DamageEventSource))
+        udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (GetRandomReal(0, 100.00) + udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
+        if (Trig_Crit_System_Func004Func003C()) then
+            udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_RangedCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
+        else
+        end
+    else
+    end
+    if (Trig_Crit_System_Func008C()) then
+        udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = I2R(GetUnitUserData(udg_DamageEventSource))
+        udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (GetRandomReal(0, 100.00) + udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
+        if (Trig_Crit_System_Func008Func003C()) then
+            udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_MeleeCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
+        else
+        end
+    else
+    end
+    if (Trig_Crit_System_Func012C()) then
+        udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = I2R(GetUnitUserData(udg_DamageEventSource))
+        udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (GetRandomReal(0, 100.00) + udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
+        if (Trig_Crit_System_Func012Func003C()) then
+            udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_SpellCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
+        else
+        end
+    else
+    end
+end
+
+function InitTrig_Crit_System()
+    gg_trg_Crit_System = CreateTrigger()
+    TriggerRegisterVariableEvent(gg_trg_Crit_System, "udg_DamageModifierEvent", EQUAL, 1.00)
+    TriggerAddAction(gg_trg_Crit_System, Trig_Crit_System_Actions)
 end
 
 function Trig_Set_Variables_Func166001()
-    return (GetPlayerSlotState(Player(2)) == PLAYER_SLOT_STATE_PLAYING)
+    return (GetPlayerSlotState(Player(0)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
 function Trig_Set_Variables_Func167001()
-    return (GetPlayerSlotState(Player(3)) == PLAYER_SLOT_STATE_PLAYING)
+    return (GetPlayerSlotState(Player(1)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
 function Trig_Set_Variables_Func168001()
-    return (GetPlayerSlotState(Player(4)) == PLAYER_SLOT_STATE_PLAYING)
+    return (GetPlayerSlotState(Player(2)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
 function Trig_Set_Variables_Func169001()
-    return (GetPlayerSlotState(Player(5)) == PLAYER_SLOT_STATE_PLAYING)
+    return (GetPlayerSlotState(Player(3)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
 function Trig_Set_Variables_Func170001()
-    return (GetPlayerSlotState(Player(6)) == PLAYER_SLOT_STATE_PLAYING)
+    return (GetPlayerSlotState(Player(4)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
 function Trig_Set_Variables_Func171001()
-    return (GetPlayerSlotState(Player(7)) == PLAYER_SLOT_STATE_PLAYING)
+    return (GetPlayerSlotState(Player(5)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
 function Trig_Set_Variables_Func172001()
+    return (GetPlayerSlotState(Player(6)) == PLAYER_SLOT_STATE_PLAYING)
+end
+
+function Trig_Set_Variables_Func173001()
+    return (GetPlayerSlotState(Player(7)) == PLAYER_SLOT_STATE_PLAYING)
+end
+
+function Trig_Set_Variables_Func174001()
     return (GetPlayerSlotState(Player(8)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func173Func003C()
+function Trig_Set_Variables_Func175Func003C()
     if (not (GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_LEFT)) then
         return false
     end
     return true
 end
 
-function Trig_Set_Variables_Func173A()
+function Trig_Set_Variables_Func175A()
     udg_String_Array_PlayerNames[GetConvertedPlayerId(GetEnumPlayer())] = (udg_String_Array_MultiBoardColours[GetConvertedPlayerId(GetEnumPlayer())] .. (GetPlayerName(GetEnumPlayer()) .. "|r"))
     udg_Real_Array_CameraDistance[GetConvertedPlayerId(GetEnumPlayer())] = 2500.00
-    if (Trig_Set_Variables_Func173Func003C()) then
+    if (Trig_Set_Variables_Func175Func003C()) then
         ForceRemovePlayerSimple(GetEnumPlayer(), udg_PlayerGroup_PlyGrpArray[1])
     else
         udg_Integer_Players = (udg_Integer_Players + 1)
@@ -2476,6 +2545,15 @@ function Trig_Set_Variables_Func173A()
 end
 
 function Trig_Set_Variables_Actions()
+    bj_forLoopAIndex = 1
+    bj_forLoopAIndexEnd = 9
+    while (true) do
+        if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
+        udg_Real_Array_MeleeCritDamage[GetForLoopIndexA()] = 100.00
+        udg_Real_Array_RangedCritDamage[GetForLoopIndexA()] = 1.50
+        udg_Real_Array_SpellCritDamage[GetForLoopIndexA()] = 3.00
+        bj_forLoopAIndex = bj_forLoopAIndex + 1
+    end
     udg_UnitType_Array_SoulTowerUnits[1] = FourCC("n00G")
     udg_UnitType_Array_SoulTowerUnits[2] = FourCC("n016")
     udg_UnitType_Array_SoulTowerUnits[3] = FourCC("n00F")
@@ -2628,52 +2706,52 @@ function Trig_Set_Variables_Actions()
         udg_Integer_Array_TowerOption[GetForLoopIndexA()] = 1
         bj_forLoopAIndex = bj_forLoopAIndex + 1
     end
-    if (Trig_Set_Variables_Func164001()) then
+    if (Trig_Set_Variables_Func166001()) then
         ForceAddPlayerSimple(Player(0), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    if (Trig_Set_Variables_Func165001()) then
+    if (Trig_Set_Variables_Func167001()) then
         ForceAddPlayerSimple(Player(1), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    if (Trig_Set_Variables_Func166001()) then
+    if (Trig_Set_Variables_Func168001()) then
         ForceAddPlayerSimple(Player(2), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    if (Trig_Set_Variables_Func167001()) then
+    if (Trig_Set_Variables_Func169001()) then
         ForceAddPlayerSimple(Player(3), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    if (Trig_Set_Variables_Func168001()) then
+    if (Trig_Set_Variables_Func170001()) then
         ForceAddPlayerSimple(Player(4), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    if (Trig_Set_Variables_Func169001()) then
+    if (Trig_Set_Variables_Func171001()) then
         ForceAddPlayerSimple(Player(5), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    if (Trig_Set_Variables_Func170001()) then
+    if (Trig_Set_Variables_Func172001()) then
         ForceAddPlayerSimple(Player(6), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    if (Trig_Set_Variables_Func171001()) then
+    if (Trig_Set_Variables_Func173001()) then
         ForceAddPlayerSimple(Player(7), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    if (Trig_Set_Variables_Func172001()) then
+    if (Trig_Set_Variables_Func174001()) then
         ForceAddPlayerSimple(Player(8), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Set_Variables_Func173A)
+    ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Set_Variables_Func175A)
     udg_Real_Array_MessageTime[1] = 60.00
 end
 
@@ -15879,6 +15957,7 @@ end
 function InitCustomTriggers()
     InitTrig_Damage_Tag()
     InitTrig_Damage_Engine_Config()
+    InitTrig_Crit_System()
     InitTrig_Set_Variables()
     InitTrig_Set_Random_Wave_Variables()
     InitTrig_Map_Start()
@@ -16266,5 +16345,6 @@ end
 
 globals(function(_ENV)
     udg_DamageEvent = 0.0
+    udg_DamageModifierEvent = 0.0
 end)
 
