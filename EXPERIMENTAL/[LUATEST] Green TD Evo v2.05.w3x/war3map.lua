@@ -345,6 +345,7 @@ gg_trg_Lose_Life_Animation_Effect = nil
 gg_trg_WinGame = nil
 gg_trg_Tabaho = nil
 gg_trg_Alpharius_Omegon = nil
+gg_trg_Ork = nil
 gg_trg_Creep_Boosting = nil
 gg_trg_Hero_XP = nil
 gg_trg_Hero_Level_Up_Point = nil
@@ -516,7 +517,6 @@ gg_unit_z000_0121 = nil
 gg_unit_z001_0122 = nil
 gg_unit_z001_0123 = nil
 gg_unit_o00I_0124 = nil
-gg_trg_Ork = nil
 function InitGlobals()
     local i = 0
     i = 0
@@ -4262,11 +4262,35 @@ function Trig_Hero_Abilities_Func004Func001Func002C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A01U"), GetSpellAbilityUnit()) >= 1)) then
         return false
     end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A01V"), GetSpellAbilityUnit()) >= 1)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A01W"), GetSpellAbilityUnit()) >= 1)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A01Y"), GetSpellAbilityUnit()) >= 1)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A01X"), GetSpellAbilityUnit()) >= 1)) then
+        return false
+    end
     return true
 end
 
 function Trig_Hero_Abilities_Func004Func001C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A01U"), GetSpellAbilityUnit()) == 5)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A01V"), GetSpellAbilityUnit()) == 5)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A01W"), GetSpellAbilityUnit()) == 5)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A01Y"), GetSpellAbilityUnit()) == 5)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A01X"), GetSpellAbilityUnit()) == 5)) then
         return false
     end
     return true
@@ -4280,146 +4304,62 @@ function Trig_Hero_Abilities_Func004C()
 end
 
 function Trig_Hero_Abilities_Func006Func001Func002C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A01V"), GetSpellAbilityUnit()) >= 1)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Hero_Abilities_Func006Func001C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A01V"), GetSpellAbilityUnit()) == 5)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Hero_Abilities_Func006C()
-    if (not (GetSpellAbilityId() == FourCC("A03U"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Hero_Abilities_Func008Func001Func002C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A01W"), GetSpellAbilityUnit()) >= 1)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Hero_Abilities_Func008Func001C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A01W"), GetSpellAbilityUnit()) == 5)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Hero_Abilities_Func008C()
-    if (not (GetSpellAbilityId() == FourCC("A03Q"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Hero_Abilities_Func010Func001Func002C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A01X"), GetSpellAbilityUnit()) >= 1)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Hero_Abilities_Func010Func001C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A01X"), GetSpellAbilityUnit()) == 5)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Hero_Abilities_Func010C()
-    if (not (GetSpellAbilityId() == FourCC("A03N"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Hero_Abilities_Func012Func001Func002C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A01Y"), GetSpellAbilityUnit()) >= 1)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Hero_Abilities_Func012Func001C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A01Y"), GetSpellAbilityUnit()) == 5)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Hero_Abilities_Func012C()
-    if (not (GetSpellAbilityId() == FourCC("A03P"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Hero_Abilities_Func014Func001Func002C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A03I"), GetSpellAbilityUnit()) >= 1)) then
         return false
     end
     return true
 end
 
-function Trig_Hero_Abilities_Func014Func001C()
+function Trig_Hero_Abilities_Func006Func001C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A03I"), GetSpellAbilityUnit()) == 5)) then
         return false
     end
     return true
 end
 
-function Trig_Hero_Abilities_Func014C()
+function Trig_Hero_Abilities_Func006C()
     if (not (GetSpellAbilityId() == FourCC("A03O"))) then
         return false
     end
     return true
 end
 
-function Trig_Hero_Abilities_Func016Func001Func002C()
+function Trig_Hero_Abilities_Func008Func001Func002C()
     if (not (udg_Integer_Array_IncomeLevel[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] <= 4)) then
         return false
     end
     return true
 end
 
-function Trig_Hero_Abilities_Func016Func001C()
+function Trig_Hero_Abilities_Func008Func001C()
     if (not (udg_Integer_Array_IncomeLevel[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] == 5)) then
         return false
     end
     return true
 end
 
-function Trig_Hero_Abilities_Func016C()
+function Trig_Hero_Abilities_Func008C()
     if (not (GetSpellAbilityId() == FourCC("A03R"))) then
         return false
     end
     return true
 end
 
-function Trig_Hero_Abilities_Func018Func001Func002C()
+function Trig_Hero_Abilities_Func010Func001Func002C()
     if (not (udg_Integer_Array_FoodBonus[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] <= 4)) then
         return false
     end
     return true
 end
 
-function Trig_Hero_Abilities_Func018Func001C()
+function Trig_Hero_Abilities_Func010Func001C()
     if (not (udg_Integer_Array_FoodBonus[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] == 5)) then
         return false
     end
     return true
 end
 
-function Trig_Hero_Abilities_Func018C()
+function Trig_Hero_Abilities_Func010C()
     if (not (GetSpellAbilityId() == FourCC("A034"))) then
         return false
     end
@@ -4434,9 +4374,17 @@ function Trig_Hero_Abilities_Actions()
         else
             if (Trig_Hero_Abilities_Func004Func001Func002C()) then
                 IncUnitAbilityLevelSwapped(FourCC("A01U"), GetSpellAbilityUnit())
+                IncUnitAbilityLevelSwapped(FourCC("A01V"), GetSpellAbilityUnit())
+                IncUnitAbilityLevelSwapped(FourCC("A01W"), GetSpellAbilityUnit())
+                IncUnitAbilityLevelSwapped(FourCC("A01Y"), GetSpellAbilityUnit())
+                IncUnitAbilityLevelSwapped(FourCC("A01X"), GetSpellAbilityUnit())
                 AdjustPlayerStateBJ(-1, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_LUMBER)
             else
                 UnitAddAbilityBJ(FourCC("A01U"), GetSpellAbilityUnit())
+                UnitAddAbilityBJ(FourCC("A01V"), GetSpellAbilityUnit())
+                UnitAddAbilityBJ(FourCC("A01W"), GetSpellAbilityUnit())
+                UnitAddAbilityBJ(FourCC("A01X"), GetSpellAbilityUnit())
+                UnitAddAbilityBJ(FourCC("A01Y"), GetSpellAbilityUnit())
                 AdjustPlayerStateBJ(-1, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_LUMBER)
             end
         end
@@ -4444,65 +4392,9 @@ function Trig_Hero_Abilities_Actions()
     end
     if (Trig_Hero_Abilities_Func006C()) then
         if (Trig_Hero_Abilities_Func006Func001C()) then
-            CreateTextTagUnitBJ("TRIGSTR_767", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
-        else
-            if (Trig_Hero_Abilities_Func006Func001Func002C()) then
-                IncUnitAbilityLevelSwapped(FourCC("A01V"), GetSpellAbilityUnit())
-                AdjustPlayerStateBJ(-1, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_LUMBER)
-            else
-                UnitAddAbilityBJ(FourCC("A01V"), GetSpellAbilityUnit())
-                AdjustPlayerStateBJ(-1, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_LUMBER)
-            end
-        end
-    else
-    end
-    if (Trig_Hero_Abilities_Func008C()) then
-        if (Trig_Hero_Abilities_Func008Func001C()) then
-            CreateTextTagUnitBJ("TRIGSTR_1026", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
-        else
-            if (Trig_Hero_Abilities_Func008Func001Func002C()) then
-                IncUnitAbilityLevelSwapped(FourCC("A01W"), GetSpellAbilityUnit())
-                AdjustPlayerStateBJ(-1, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_LUMBER)
-            else
-                UnitAddAbilityBJ(FourCC("A01W"), GetSpellAbilityUnit())
-                AdjustPlayerStateBJ(-1, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_LUMBER)
-            end
-        end
-    else
-    end
-    if (Trig_Hero_Abilities_Func010C()) then
-        if (Trig_Hero_Abilities_Func010Func001C()) then
-            CreateTextTagUnitBJ("TRIGSTR_1046", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
-        else
-            if (Trig_Hero_Abilities_Func010Func001Func002C()) then
-                IncUnitAbilityLevelSwapped(FourCC("A01X"), GetSpellAbilityUnit())
-                AdjustPlayerStateBJ(-1, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_LUMBER)
-            else
-                UnitAddAbilityBJ(FourCC("A01X"), GetSpellAbilityUnit())
-                AdjustPlayerStateBJ(-1, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_LUMBER)
-            end
-        end
-    else
-    end
-    if (Trig_Hero_Abilities_Func012C()) then
-        if (Trig_Hero_Abilities_Func012Func001C()) then
-            CreateTextTagUnitBJ("TRIGSTR_1047", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
-        else
-            if (Trig_Hero_Abilities_Func012Func001Func002C()) then
-                IncUnitAbilityLevelSwapped(FourCC("A01Y"), GetSpellAbilityUnit())
-                AdjustPlayerStateBJ(-1, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_LUMBER)
-            else
-                UnitAddAbilityBJ(FourCC("A01Y"), GetSpellAbilityUnit())
-                AdjustPlayerStateBJ(-1, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_LUMBER)
-            end
-        end
-    else
-    end
-    if (Trig_Hero_Abilities_Func014C()) then
-        if (Trig_Hero_Abilities_Func014Func001C()) then
             CreateTextTagUnitBJ("TRIGSTR_1049", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
         else
-            if (Trig_Hero_Abilities_Func014Func001Func002C()) then
+            if (Trig_Hero_Abilities_Func006Func001Func002C()) then
                 IncUnitAbilityLevelSwapped(FourCC("A03I"), GetSpellAbilityUnit())
                 AdjustPlayerStateBJ(-1, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_LUMBER)
             else
@@ -4512,11 +4404,11 @@ function Trig_Hero_Abilities_Actions()
         end
     else
     end
-    if (Trig_Hero_Abilities_Func016C()) then
-        if (Trig_Hero_Abilities_Func016Func001C()) then
+    if (Trig_Hero_Abilities_Func008C()) then
+        if (Trig_Hero_Abilities_Func008Func001C()) then
             CreateTextTagUnitBJ("TRIGSTR_1048", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
         else
-            if (Trig_Hero_Abilities_Func016Func001Func002C()) then
+            if (Trig_Hero_Abilities_Func008Func001Func002C()) then
                 udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 1)
                 udg_Integer_Array_IncomeLevel[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = (udg_Integer_Array_IncomeLevel[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] + 1)
                 DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] .. (" |c0000ff00has increased income by 1. Total income is now |cffFDD017" .. (I2S(udg_Integer_IncomeGold) .. " Gold."))))
@@ -4526,11 +4418,11 @@ function Trig_Hero_Abilities_Actions()
         end
     else
     end
-    if (Trig_Hero_Abilities_Func018C()) then
-        if (Trig_Hero_Abilities_Func018Func001C()) then
+    if (Trig_Hero_Abilities_Func010C()) then
+        if (Trig_Hero_Abilities_Func010Func001C()) then
             CreateTextTagUnitBJ("TRIGSTR_2187", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
         else
-            if (Trig_Hero_Abilities_Func018Func001Func002C()) then
+            if (Trig_Hero_Abilities_Func010Func001Func002C()) then
                 AdjustPlayerStateBJ(1, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_FOOD_CAP)
                 udg_Integer_Array_FoodBonus[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = (udg_Integer_Array_FoodBonus[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] + 1)
                 DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], "TRIGSTR_160")

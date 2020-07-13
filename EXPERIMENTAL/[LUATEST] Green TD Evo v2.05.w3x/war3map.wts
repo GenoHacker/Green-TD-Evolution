@@ -4954,11 +4954,6 @@ STRING 766
 |c0077ff77[X] |c0000ff00Upgrade To Shaman.|r |cAAAAFFAAPoison Tower 5.|r
 }
 
-STRING 767
-{
-Max Level Reached
-}
-
 STRING 768
 // Abilities: A03C (HH Dispel Magic Active), Name (Name)
 {
@@ -6825,11 +6820,6 @@ STRING 1025
 |c0000ff00Slow Amount:|r |c0077ff7720%
 }
 
-STRING 1026
-{
-Max Level Reached
-}
-
 STRING 1027
 // Abilities: A03O (Intelligence Bonus), Name (Name)
 {
@@ -6967,16 +6957,6 @@ STRING 1045
 // Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
 |c0077ff77[Q]|r |c0000ff00Sell - 20% Gold Return
-}
-
-STRING 1046
-{
-Max Level Reached
-}
-
-STRING 1047
-{
-Max Level Reached
 }
 
 STRING 1048
@@ -7596,12 +7576,6 @@ STRING 1120
 Z
 }
 
-STRING 1121
-// Abilities: A03N (Emergency Frost Tower), Tip (Tooltip - Normal)
-{
-|c0077ff77[A]|r |c0000ff00Emergency Frost Tower
-}
-
 STRING 1122
 // Abilities: A02F (Hard Mode), Hotkey (Hotkey - Normal)
 {
@@ -7609,7 +7583,7 @@ A
 }
 
 STRING 1123
-// Abilities: A03N (Emergency Frost Tower), EditorSuffix (Editor Suffix)
+// Abilities: A03O (Intelligence Bonus), EditorSuffix (Editor Suffix)
 {
 [Learn]
 }
@@ -7638,7 +7612,7 @@ STRING 1127
 }
 
 STRING 1128
-// Abilities: A03O (Intelligence Bonus), EditorSuffix (Editor Suffix)
+// Abilities: A03R (Income Bonus), EditorSuffix (Editor Suffix)
 {
 [Learn]
 }
@@ -7989,12 +7963,6 @@ STRING 1177
 |c0077ff77[X]|r |c0000ff00Emergency Siege Tower - [|cffffcc00Level 5|r|c0000ff00]
 }
 
-STRING 1178
-// Abilities: A03P (Emergency Siege Tower), Tip (Tooltip - Normal)
-{
-|c0077ff77[Q]|r |c0000ff00Emergency Siege Tower
-}
-
 STRING 1179
 // Abilities: A013 (Multishot), Ubertip (Tooltip - Normal - Extended)
 {
@@ -8002,7 +7970,7 @@ STRING 1179
 }
 
 STRING 1180
-// Abilities: A03P (Emergency Siege Tower), EditorSuffix (Editor Suffix)
+// Abilities: A03T (Emergency Towers), EditorSuffix (Editor Suffix)
 {
 [Learn]
 }
@@ -8043,22 +8011,10 @@ STRING 1186
 |c0077ff77[F] |c0000ff00Demonic Research.|r |cAAAAFFAALevel 4/4.|r
 }
 
-STRING 1187
-// Abilities: A03Q (Emergency Chaos Tower), Tip (Tooltip - Normal)
-{
-|c0077ff77[R]|r |c0000ff00Emergency Chaos Tower
-}
-
 STRING 1188
 // Units: h043 (Soul Tower 6: Runic Crystal), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Runic Crystal.|r |cAAAAFFAASoul Tower 6.|r
-}
-
-STRING 1189
-// Abilities: A03Q (Emergency Chaos Tower), EditorSuffix (Editor Suffix)
-{
-[Learn]
 }
 
 STRING 1190
@@ -13440,12 +13396,6 @@ STRING 2073
 |c0000ff00Ability: |c0077ff77Splash; the area of effect is 400
 }
 
-STRING 2074
-// Abilities: A03R (Income Bonus), EditorSuffix (Editor Suffix)
-{
-[Learn]
-}
-
 STRING 2075
 // Upgrades: R006 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
@@ -13475,18 +13425,6 @@ STRING 2077
 STRING 2078
 {
 |c0000ff00Blitz Mode: |c0077ff77Active
-}
-
-STRING 2079
-// Abilities: A03T (Emergency Air Tower), Tip (Tooltip - Normal)
-{
-|c0077ff77[W]|r |c0000ff00Emergency Air Tower
-}
-
-STRING 2080
-// Abilities: A03T (Emergency Air Tower), EditorSuffix (Editor Suffix)
-{
-[Learn]
 }
 
 STRING 2081
@@ -13520,12 +13458,6 @@ STRING 2084
 // Doodads: D00G (Dalaran Violet Citadel Custom), Name (Name)
 {
 Dalaran Violet Citadel Custom
-}
-
-STRING 2085
-// Abilities: A03U (Emergency Bouncing Tower), Tip (Tooltip - Normal)
-{
-|c0077ff77[E]|r |c0000ff00Emergency Bouncing Tower
 }
 
 STRING 2086
@@ -13759,12 +13691,6 @@ STRING 2101
 |c0000ff00Duration: |c0077ff7715 Seconds
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300
 |c0000ff00Ability (2):|r |c0077ff77Freezing Attack|r
-}
-
-STRING 2102
-// Abilities: A03U (Emergency Bouncing Tower), EditorSuffix (Editor Suffix)
-{
-[Learn]
 }
 
 STRING 2103
@@ -14184,7 +14110,7 @@ A
 }
 
 STRING 2149
-// Abilities: A03N (Emergency Frost Tower), Hotkey (Hotkey - Normal)
+// Abilities: A00R (Upgrade Critical Aura), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -14789,6 +14715,18 @@ STRING 2223
 |c0000ff00Critical Aura 4
 }
 
+STRING 2224
+// Abilities: A03T (Emergency Towers), Name (Name)
+{
+Emergency Towers
+}
+
+STRING 2226
+// Abilities: A03T (Emergency Towers), Tip (Tooltip - Normal)
+{
+|c0077ff77[Q]|r |c0000ff00Emergency Towers
+}
+
 STRING 2227
 // Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
@@ -14859,12 +14797,6 @@ STRING 2235
 |c0077ff77[A]|r |c0000ff00Upgrade Critical Aura
 }
 
-STRING 2236
-// Abilities: A00R (Upgrade Critical Aura), Hotkey (Hotkey - Normal)
-{
-A
-}
-
 STRING 2238
 // Abilities: A002 (Aura Upgrades), Ubertip (Tooltip - Normal - Extended)
 {
@@ -14893,6 +14825,19 @@ STRING 2242
 // Abilities: A004 (Critical Strike), Tip (Tooltip - Normal)
 {
 |c0000ff00Critical Strike|r
+}
+
+STRING 2243
+// Abilities: A03T (Emergency Towers), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Initially unlocks |c0000ff005 |c0077ff77different |c0000ff00Emergency Towers|c0077ff77. Subsequent points spent into this will increases the level of the |c0000ff00Emergency Towers|c0077ff77, this will increase the attributes of them, |c0000ff00Maximum Level |c0077ff77is |c0000ff005 |c0077ff77and they can be placed onto the path.
+
+|c0000ff00Towers Unlocked: 
+Emergency Siege Tower
+Emergency Air Tower
+Emergency Frost Tower
+Emergency Chaos Tower
+Emergency Bouncing Tower
 }
 
 STRING 2244
@@ -16997,60 +16942,6 @@ STRING 2545
 |c0000ff00Mana Cost: |c0077ff77+20
 }
 
-STRING 2546
-// Abilities: A03N (Emergency Frost Tower), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Creates a Emergency Frost Tower at a point of your choosing, Attributes of the tower increases each level, maximum level is 5 and it doesnt need to be placed on grass to function.
-
-|c0000ff00Damage; |c0077ff77+2000
-|c0000ff00Range: |c0077ff77+50
-|c0000ff00Attack Cooldown: |c0077ff77-0.05
-|c0000ff00Mana Cost: |c0077ff77+20
-}
-
-STRING 2547
-// Abilities: A03P (Emergency Siege Tower), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Creates a Emergency Siege Tower at a point of your choosing, Attributes of the tower increases each level and it doesnt need to be placed on grass to function.
-
-|c0000ff00Damage; |c0077ff77+4000
-|c0000ff00Range: |c0077ff77+50
-|c0000ff00Attack Cooldown: |c0077ff77-0.05
-|c0000ff00Mana Cost: |c0077ff77+20
-}
-
-STRING 2548
-// Abilities: A03Q (Emergency Chaos Tower), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Creates a Emergency Chaos Tower at a point of your choosing, Attributes of the tower increases each level, maximum level is 5 and it doesnt need to be placed on grass to function.
-
-|c0000ff00Damage; |c0077ff77Doubles
-|c0000ff00Range: |c0077ff77+50
-|c0000ff00Mana Cost: |c0077ff77+20
-}
-
-STRING 2549
-// Abilities: A03T (Emergency Air Tower), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Creates a Emergency Air Tower at a point of your choosing, Attributes of the tower increases each level, maximum level is 5 and it doesnt need to be placed on grass to function.
-
-|c0000ff00Damage; |c0077ff77+3000
-|c0000ff00Range: |c0077ff77+100
-|c0000ff00Attack Cooldown: |c0077ff77-0.05
-|c0000ff00Mana Cost: |c0077ff77+20
-}
-
-STRING 2550
-// Abilities: A03U (Emergency Bouncing Tower), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Creates a Emergency Bouncing Tower at a point of your choosing, Attributes of the tower increases each level, maximum level is 5 and it doesnt need to be placed on grass to function.
-
-|c0000ff00Damage; |c0077ff77+2500
-|c0000ff00Range: |c0077ff77+50
-|c0000ff00Attack Cooldown: |c0077ff77-0.05
-|c0000ff00Mana Cost: |c0077ff77+20
-}
-
 STRING 2551
 // Units: u001 ([Wave 35] - Fel Stalker), Name (Name)
 {
@@ -17892,7 +17783,7 @@ Q
 }
 
 STRING 2926
-// Abilities: A03P (Emergency Siege Tower), Hotkey (Hotkey - Normal)
+// Abilities: A03T (Emergency Towers), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -17970,7 +17861,7 @@ W
 }
 
 STRING 3028
-// Abilities: A03T (Emergency Air Tower), Hotkey (Hotkey - Normal)
+// Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 W
 }
@@ -18060,7 +17951,7 @@ V
 }
 
 STRING 3323
-// Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Upgrades: R006 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 W
 }
@@ -18471,12 +18362,6 @@ STRING 3510
 // Units: h014 ([Endless Wave] - Captain), Name (Name)
 {
 [Endless Wave] - Captain
-}
-
-STRING 3551
-// Upgrades: R006 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
-{
-W
 }
 
 STRING 4139
@@ -21604,22 +21489,10 @@ STRING 8247
 R
 }
 
-STRING 8253
-// Abilities: A03T (Emergency Air Tower), Name (Name)
-{
-Emergency Air Tower
-}
-
 STRING 8259
 // Abilities: A01X (Emergency Frost Tower), EditorSuffix (Editor Suffix)
 {
 [Hero]
-}
-
-STRING 8267
-// Abilities: A03U (Emergency Bouncing Tower), Name (Name)
-{
-Emergency Bouncing Tower
 }
 
 STRING 8273
@@ -21628,34 +21501,16 @@ STRING 8273
 [Hero]
 }
 
-STRING 8282
-// Abilities: A03Q (Emergency Chaos Tower), Name (Name)
-{
-Emergency Chaos Tower
-}
-
 STRING 8288
 // Abilities: A03I (Attribute Bonus), EditorSuffix (Editor Suffix)
 {
 [Hero]
 }
 
-STRING 8296
-// Abilities: A03N (Emergency Frost Tower), Name (Name)
-{
-Emergency Frost Tower
-}
-
 STRING 8305
 // Upgrades: R005 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 D
-}
-
-STRING 8311
-// Abilities: A03P (Emergency Siege Tower), Name (Name)
-{
-Emergency Siege Tower
 }
 
 STRING 8322
@@ -21778,12 +21633,6 @@ R
 
 STRING 8743
 // Abilities: A030 (Random Waves), Hotkey (Hotkey - Normal)
-{
-R
-}
-
-STRING 8747
-// Abilities: A03Q (Emergency Chaos Tower), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -22195,12 +22044,6 @@ STRING 9836
 // Abilities: A026 (Immune Waves), Name (Name)
 {
 Immune Waves
-}
-
-STRING 9841
-// Abilities: A03U (Emergency Bouncing Tower), Hotkey (Hotkey - Normal)
-{
-E
 }
 
 STRING 9845
