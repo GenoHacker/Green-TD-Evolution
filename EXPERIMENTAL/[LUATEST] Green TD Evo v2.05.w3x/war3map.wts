@@ -14663,16 +14663,16 @@ STRING 2204
 |c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
 }
 
-STRING 2205
+STRING 2206
 // Abilities: A004 (Critical Strike), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff77Every instance of damage has a chance to critically hit, the chance to hit and damage multiplier are depend on the damage type, these are Ranged Damage, Melee Damage and Spell Damage
+|c0077ff77Every instance of damage has a chance to critically hit, the |c0000ff00Chance to Hit|r |c0077ff77and |c0000ff00Damage Multiplier |c0077ff77are dependent on the damage type, these are |c0000ff00Ranged Damage|r|c0077ff77, |c0000ff00Melee Damage|r |c0077ff77and |c0000ff00Spell Damage.
 
-Ranged: Crit Chance = |cffff000010%|r|c0077ff77, Multiplier = |cffff00001.50|r
-|c0077ff77Melee: Crit Chance = |cffff000090%|r|c0077ff77, Multiplier = |cffff0000100|r
-|c0077ff77Spell: Crit Chance = |cffff00005%|r|c0077ff77, Multiplier = |cffff00003.00|r
+|c0000ff00Ranged: |c0077ff77Crit Chance = |cffff000010%|r|c0077ff77, Multiplier = |cffff00001.50|r
+|c0000ff00Melee: |c0077ff77Crit Chance = |cffff000090%|r|c0077ff77, Multiplier = |cffff0000100|r
+|c0000ff00Spell: |c0077ff77Crit Chance = |cffff00005%|r|c0077ff77, Multiplier = |cffff00003.00|r
 
-|c0077ff77Crit Chance and Multiplier are not static, both values can be increased by temporary or permanent effects.
+|c0000ff00Crit Chance|r |c0077ff77and |c0000ff00Multiplier|r |c0077ff77are not static, both values can be increased by temporary or permanent effects.
 }
 
 STRING 2207
@@ -14711,10 +14711,40 @@ STRING 2209
 |c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
 }
 
+STRING 2210
+// Abilities: A00Q (Critical Aura), Tip (Tooltip - Normal)
+{
+|c00FF0000Inactive |c0000ff00Critical Aura
+}
+
+STRING 2211
+// Abilities: A00Q (Critical Aura), Name (Name)
+{
+Critical Aura
+}
+
+STRING 2212
+// Abilities: A00Q (Critical Aura), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Critical Aura is currently |c00FF0000Inactive
+}
+
+STRING 2213
+// Abilities: A00Q (Critical Aura), Tip (Tooltip - Normal)
+{
+|c0000ff00Critical Aura 1
+}
+
 STRING 2214
 // Abilities: A013 (Multishot), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77The Research Tower is able to attack 5 Enemies in one Attack.|r
+}
+
+STRING 2215
+// Abilities: A00Q (Critical Aura), Tip (Tooltip - Normal)
+{
+|c0000ff00Critical Aura 2
 }
 
 STRING 2216
@@ -14747,6 +14777,36 @@ STRING 2220
 STRING 2221
 {
 |c0000ff00Random Waves: |c00FF0000Inactive
+}
+
+STRING 2222
+// Abilities: A00Q (Critical Aura), Tip (Tooltip - Normal)
+{
+|c0000ff00Critical Aura 3
+}
+
+STRING 2223
+// Abilities: A00Q (Critical Aura), Tip (Tooltip - Normal)
+{
+|c0000ff00Critical Aura 4
+}
+
+STRING 2224
+// Abilities: A00Q (Critical Aura), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Additively increases Tower Crit Chance by 2.5% and Damage Multipler by 25%
+}
+
+STRING 2225
+// Abilities: A00Q (Critical Aura), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Additively increases Tower Crit Chance by 5% and Damage Multipler by 50%
+}
+
+STRING 2226
+// Abilities: A00Q (Critical Aura), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Additively increases Tower Crit Chance by 7.5% and Damage Multipler by 75%
 }
 
 STRING 2227
@@ -14787,6 +14847,64 @@ STRING 2230
 |c0000ff00Damage: |c0077ff77+125
 |c0000ff00Speed: |c0077ff77+5%
 |c0000ff00Range: |c0077ff77+25
+}
+
+STRING 2231
+// Abilities: A00Q (Critical Aura), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Additively increases Tower Crit Chance by 10% and Damage Multipler by 100%
+}
+
+STRING 2232
+// Buffs/Effects: BOac (), Bufftip (Tooltip)
+{
+Critical Aura
+}
+
+STRING 2233
+// Buffs/Effects: BOac (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Critical Aura; it has a increased crit chance and damage multiplier.
+}
+
+STRING 2234
+// Abilities: A00R (Upgrade Critical Aura), Name (Name)
+{
+Upgrade Critical Aura
+}
+
+STRING 2235
+// Abilities: A00R (Upgrade Critical Aura), Tip (Tooltip - Normal)
+{
+|c0077ff77[A]|r |c0000ff00Upgrade Critical Aura
+}
+
+STRING 2236
+// Abilities: A00R (Upgrade Critical Aura), Hotkey (Hotkey - Normal)
+{
+A
+}
+
+STRING 2237
+// Abilities: A00R (Upgrade Critical Aura), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Upgrades the Critical Aura.
+
+|c0077ff77Crit Chance %, Damage Multiplier %
+
+|c0077ff77L1: 2.5%, 25% / L2: 5%, 50% / L3: 7.5%, 75% / L4: 10%, 100%
+
+|c0000ff00Gold Cost:
+|c0000ff00Level 1: |c0077ff77500
+|c0000ff00Level 2: |c0077ff772000
+|c0000ff00Level 3: |c0077ff773500
+|c0000ff00Level 4: |c0077ff776000
+}
+
+STRING 2238
+// Abilities: A002 (Aura Upgrades), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Click this to bring up several abilities that can be used to upgrade the auras used by your aura tower.
 }
 
 STRING 2244
@@ -18245,36 +18363,6 @@ STRING 3551
 W
 }
 
-STRING 3799
-// Abilities: A00Q (Critical Strike), EditorSuffix (Editor Suffix)
-{
-1.75
-}
-
-STRING 3801
-// Abilities: A00R (Critical Strike), EditorSuffix (Editor Suffix)
-{
-2
-}
-
-STRING 3803
-// Abilities: A00S (Critical Strike), EditorSuffix (Editor Suffix)
-{
-2.25
-}
-
-STRING 3805
-// Abilities: A00T (Critical Strike), EditorSuffix (Editor Suffix)
-{
-2.5
-}
-
-STRING 3807
-// Abilities: A00Z (Critical Strike), EditorSuffix (Editor Suffix)
-{
-3
-}
-
 STRING 4139
 // Abilities: A046 (Multishot), Name (Name)
 {
@@ -19022,36 +19110,6 @@ STRING 5691
 |cAAAAFFAA[W]|r |c0000ff00Blink|r
 }
 
-STRING 5762
-// Abilities: A00Q (Critical Strike), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Gives a 25% chance to do 1.75 times normal damage on an attack.
-}
-
-STRING 5764
-// Abilities: A00R (Critical Strike), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Gives a 25% chance to do 2 times normal damage on an attack.
-}
-
-STRING 5766
-// Abilities: A00S (Critical Strike), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Gives a 25% chance to do 2.25 times normal damage on an attack.
-}
-
-STRING 5768
-// Abilities: A00T (Critical Strike), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Gives a 25% chance to do 2.5 times normal damage on an attack.
-}
-
-STRING 5770
-// Abilities: A00Z (Critical Strike), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Gives a 25% chance to do 3 times normal damage on an attack.
-}
-
 STRING 5791
 // Upgrades: R005 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
@@ -19344,36 +19402,6 @@ STRING 6092
 
 STRING 6094
 // Abilities: A004 (Critical Strike), Tip (Tooltip - Normal)
-{
-|c0000ff00Critical Strike|r
-}
-
-STRING 6102
-// Abilities: A00Q (Critical Strike), Tip (Tooltip - Normal)
-{
-|c0000ff00Critical Strike|r
-}
-
-STRING 6103
-// Abilities: A00R (Critical Strike), Tip (Tooltip - Normal)
-{
-|c0000ff00Critical Strike|r
-}
-
-STRING 6104
-// Abilities: A00S (Critical Strike), Tip (Tooltip - Normal)
-{
-|c0000ff00Critical Strike|r
-}
-
-STRING 6105
-// Abilities: A00T (Critical Strike), Tip (Tooltip - Normal)
-{
-|c0000ff00Critical Strike|r
-}
-
-STRING 6106
-// Abilities: A00Z (Critical Strike), Tip (Tooltip - Normal)
 {
 |c0000ff00Critical Strike|r
 }
@@ -22344,12 +22372,6 @@ STRING 9957
 // Abilities: A002 (Aura Upgrades), Name (Name)
 {
 Aura Upgrades
-}
-
-STRING 9959
-// Abilities: A002 (Aura Upgrades), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Click this to bring up several abilitys that can be used to upgrade the auras used by your aura tower.
 }
 
 STRING 9975

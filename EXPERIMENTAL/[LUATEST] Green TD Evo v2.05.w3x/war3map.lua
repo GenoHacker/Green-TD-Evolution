@@ -319,6 +319,7 @@ gg_snd_Wave_Boss = nil
 gg_snd_HeroLichPissed8 = nil
 gg_trg_Damage_Tag = nil
 gg_trg_Damage_Engine_Config = nil
+gg_trg_Crit_System = nil
 gg_trg_Set_Variables = nil
 gg_trg_Set_Random_Wave_Variables = nil
 gg_trg_Map_Start = nil
@@ -502,7 +503,6 @@ gg_trg_Speed_Aura = nil
 gg_unit_n00C_0019 = nil
 gg_unit_n015_0010 = nil
 gg_unit_n00D_0042 = nil
-gg_trg_Crit_System = nil
 function InitGlobals()
     local i = 0
     i = 0
