@@ -14860,22 +14860,6 @@ STRING 2236
 A
 }
 
-STRING 2237
-// Abilities: A00R (Upgrade Critical Aura), Ubertip (Tooltip - Normal - Extended)
-{
-|c0000ff00Upgrades the Critical Aura.
-
-|c0077ff77Crit Chance %, Damage Multiplier %
-
-|c0077ff77L1: 2.5%, 25% / L2: 5%, 50% / L3: 7.5%, 75% / L4: 10%, 100%
-
-|c0000ff00Gold Cost:
-|c0000ff00Level 1: |c0077ff77500
-|c0000ff00Level 2: |c0077ff772000
-|c0000ff00Level 3: |c0077ff773500
-|c0000ff00Level 4: |c0077ff776000
-}
-
 STRING 2238
 // Abilities: A002 (Aura Upgrades), Ubertip (Tooltip - Normal - Extended)
 {
@@ -17803,6 +17787,21 @@ STRING 2642
 |c0000ff00-restart |c0077ff77- Use when reaching 0 lives to restart the game.
 |c0000ff00-waves |c0077ff77- Require random waves to be active, displays the next 5 random waves.
 
+}
+
+STRING 2643
+// Abilities: A00R (Upgrade Critical Aura), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Upgrades the Critical Aura.
+
+|c0077ff77Crit Chance %, Damage Multiplier %
+|c0077ff77L1: 2.5%, 25% / L2: 5%, 50% / L3: 7.5%, 75% / L4: 10%, 100%
+
+|c0000ff00Gold Cost:
+|c0000ff00Level 1: |c0077ff77500
+|c0000ff00Level 2: |c0077ff772000
+|c0000ff00Level 3: |c0077ff773500
+|c0000ff00Level 4: |c0077ff776000
 }
 
 STRING 2656
