@@ -17301,26 +17301,6 @@ STRING 2589
 |c0000ff00If the owner of the |c0077ff77Game Setup|r |c0000ff00unit leaves the game, then any player may select it to become the new owner.|r
 }
 
-STRING 2590
-// Abilities: A007 (Command Book), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Click this to bring up several abilities that can be used to activate commands.
-
-|c0000ff00-air / -immune / -boss / -hero
-|c0000ff00-zoom |c0077ff77- Default is 2500.
-|c0000ff00-autocam |c0077ff77- Enable or Disable Auto-cam.
-|c0000ff00-clear |c0077ff77- Clear game messages
-|c0000ff00-jackpot |c0077ff77- Shows you current jackpot.
-|c0000ff00-debug |c0077ff77--- Use if a wave doesnt spawn.
-|c0000ff00-dinfo |c0077ff77- Shows damage values vs armour
-|c0000ff00-gm |c0077ff77- Shows what modes are being used.
-|c0000ff00-greed [PlyNum] |c0077ff77- Shows gambling stats of a player.
-|c0000ff00-gmd [Num] |c0077ff77- Sets duration of game messages.
-|c0000ff00-autoclear |c0077ff77- Automatically clears game messages.
-|c0000ff00-income |c0077ff77- Displays current income amount.
-|c0000ff00-restart |c0077ff77- Use when reaching 0 lives to restart the game.
-}
-
 STRING 2591
 {
 Credits
@@ -17801,6 +17781,28 @@ STRING 2641
 // Abilities: A00Q (Critical Aura), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Additively increases Tower Crit Chance by 7.5% and Crit Damage by 75%
+}
+
+STRING 2642
+// Abilities: A007 (Command Book), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Click this to bring up several abilities that can be used to activate commands.
+
+|c0000ff00-air / -immune / -boss / -hero
+|c0000ff00-zoom |c0077ff77- Default is 2500.
+|c0000ff00-autocam |c0077ff77- Enable or Disable Auto-cam.
+|c0000ff00-clear |c0077ff77- Clear game messages
+|c0000ff00-jackpot |c0077ff77- Shows you current jackpot.
+|c0000ff00-debug |c0077ff77--- Use if a wave doesnt spawn.
+|c0000ff00-dinfo |c0077ff77- Shows damage values vs armour
+|c0000ff00-gm |c0077ff77- Shows what modes are being used.
+|c0000ff00-greed [PlyNum] |c0077ff77- Shows gambling stats of a player.
+|c0000ff00-gmd [Num] |c0077ff77- Sets duration of game messages.
+|c0000ff00-autoclear |c0077ff77- Automatically clears game messages.
+|c0000ff00-income |c0077ff77- Displays current income amount.
+|c0000ff00-restart |c0077ff77- Use when reaching 0 lives to restart the game.
+|c0000ff00-waves |c0077ff77- Require random waves to be active, displays the next 5 random waves.
+
 }
 
 STRING 2656
@@ -19522,6 +19524,7 @@ STRING 6418
 |c0000ff00-autoclear |c0077ff77- Automatically clears game messages.
 |c0000ff00-income |c0077ff77- Displays current income amount.
 |c0000ff00-restart |c0077ff77- Use when reaching 0 lives to restart the game.
+|c0000ff00-waves |c0077ff77- Require random waves to be active, displays the next 5 random waves.
 |c0077ff77-------------------------------------------------------------|r
 }
 

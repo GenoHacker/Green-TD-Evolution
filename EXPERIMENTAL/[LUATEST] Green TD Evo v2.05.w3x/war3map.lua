@@ -13470,6 +13470,14 @@ end
 function InitTrig_Wave_Command()
     gg_trg_Wave_Command = CreateTrigger()
     TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(0), "-waves", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(1), "-waves", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(2), "-waves", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(3), "-waves", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(4), "-waves", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(5), "-waves", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(6), "-waves", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(7), "-waves", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(8), "-waves", true)
     TriggerAddAction(gg_trg_Wave_Command, Trig_Wave_Command_Actions)
 end
 
