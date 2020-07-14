@@ -1198,12 +1198,6 @@ STRING 162
 |c0000ff00Game Mode Descriptions
 }
 
-STRING 163
-// Abilities: A034 (Food Bonus), Tip (Tooltip - Normal)
-{
-|c0077ff77[F]|r |c0000ff00Food Bonus
-}
-
 STRING 164
 {
 |c0000ff00Hero Waves --|r |c0077ff7739, 40, 41, 42, 43, 44, 45, 46, 47, 49, 50, 51, 52, 54, 55, 56. |c0000ff00The |c0077ff77Research Tower|r |c0000ff00deals the most damage to Heroes and is highly recommended to get one before the hero waves start, just dont get it too early though.|r
@@ -4755,12 +4749,6 @@ STRING 736
 [Spellbook]
 }
 
-STRING 737
-// Abilities: A03R (Income Bonus), Tip (Tooltip - Normal)
-{
-|c0077ff77[D]|r |c0000ff00Income Bonus
-}
-
 STRING 738
 // Units: e000 (Naisha, Ultimate Bouncing Tower), Hotkey (Hotkey)
 {
@@ -4952,6 +4940,12 @@ STRING 766
 // Units: h00C (Poison Tower 5: Shaman), Tip (Tooltip - Basic)
 {
 |c0077ff77[X] |c0000ff00Upgrade To Shaman.|r |cAAAAFFAAPoison Tower 5.|r
+}
+
+STRING 767
+// Abilities: A034 (Food Bonus), Tip (Tooltip - Normal)
+{
+|c0077ff77[R]|r |c0000ff00Food Bonus
 }
 
 STRING 768
@@ -6820,6 +6814,14 @@ STRING 1025
 |c0000ff00Slow Amount:|r |c0077ff7720%
 }
 
+STRING 1026
+// Abilities: A034 (Food Bonus), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Increases |cff008000Food |c0077ff77cap by |cffFDD0171.
+
+|c0077ff77Up to |cffFDD0175 |cff008000Food|r |c0077ff77can be gained from this.
+}
+
 STRING 1027
 // Abilities: A03O (Intelligence Bonus), Name (Name)
 {
@@ -6957,6 +6959,18 @@ STRING 1045
 // Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
 |c0077ff77[Q]|r |c0000ff00Sell - 20% Gold Return
+}
+
+STRING 1046
+// Abilities: A034 (Food Bonus), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 1047
+// Abilities: A03O (Intelligence Bonus), Tip (Tooltip - Normal)
+{
+|c0077ff77[E|r |c0000ff00Intelligence Bonus
 }
 
 STRING 1048
@@ -7576,6 +7590,12 @@ STRING 1120
 Z
 }
 
+STRING 1121
+// Abilities: A03O (Intelligence Bonus), Hotkey (Hotkey - Normal)
+{
+E
+}
+
 STRING 1122
 // Abilities: A02F (Hard Mode), Hotkey (Hotkey - Normal)
 {
@@ -7598,12 +7618,6 @@ STRING 1125
 // Upgrades: R006 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
 {
 Advanced Combat Research
-}
-
-STRING 1126
-// Abilities: A03O (Intelligence Bonus), Tip (Tooltip - Normal)
-{
-|c0077ff77[S]|r |c0000ff00Intelligence Bonus
 }
 
 STRING 1127
@@ -7963,6 +7977,12 @@ STRING 1177
 |c0077ff77[X]|r |c0000ff00Emergency Siege Tower - [|cffffcc00Level 5|r|c0000ff00]
 }
 
+STRING 1178
+// Abilities: A03R (Income Bonus), Tip (Tooltip - Normal)
+{
+|c0077ff77[W]|r |c0000ff00Income Bonus
+}
+
 STRING 1179
 // Abilities: A013 (Multishot), Ubertip (Tooltip - Normal - Extended)
 {
@@ -8011,10 +8031,22 @@ STRING 1186
 |c0077ff77[F] |c0000ff00Demonic Research.|r |cAAAAFFAALevel 4/4.|r
 }
 
+STRING 1187
+// Abilities: A00S (Crit Bonus [Learn]), Name (Name)
+{
+Crit Bonus [Learn]
+}
+
 STRING 1188
 // Units: h043 (Soul Tower 6: Runic Crystal), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Runic Crystal.|r |cAAAAFFAASoul Tower 6.|r
+}
+
+STRING 1189
+// Abilities: A00S (Crit Bonus [Learn]), Hotkey (Hotkey - Normal)
+{
+A
 }
 
 STRING 1190
@@ -13396,6 +13428,12 @@ STRING 2073
 |c0000ff00Ability: |c0077ff77Splash; the area of effect is 400
 }
 
+STRING 2074
+// Abilities: A00S (Crit Bonus [Learn]), Tip (Tooltip - Normal)
+{
+|c0077ff77[A]|r |c0000ff00Crit Bonus
+}
+
 STRING 2075
 // Upgrades: R006 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
@@ -13425,6 +13463,20 @@ STRING 2077
 STRING 2078
 {
 |c0000ff00Blitz Mode: |c0077ff77Active
+}
+
+STRING 2079
+// Abilities: A00S (Crit Bonus [Learn]), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Increases|r |cffff0000Crit Chance|r |c0077ff77by |cffFDD0172% |c0077ff77and |cffff0000Crit Damage |c0077ff77by |cffFDD01720%|c0077ff77.
+
+|c0077ff77Up to |cffFDD01710% |cffff0000Crit Chance |c0077ff77and |cffFDD017100% |cffff0000Crit Damage |c0077ff77can be gained from this ability.
+}
+
+STRING 2080
+// Upgrades: R006 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+W
 }
 
 STRING 2081
@@ -13458,6 +13510,19 @@ STRING 2084
 // Doodads: D00G (Dalaran Violet Citadel Custom), Name (Name)
 {
 Dalaran Violet Citadel Custom
+}
+
+STRING 2085
+// Abilities: A03T (Emergency Towers), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Initially unlocks |c0000ff005 |c0077ff77different |c0000ff00Emergency Towers|c0077ff77. Subsequent points spent into this will increases the level of the |c0000ff00Emergency Towers|c0077ff77, this will increase the attributes of them, |c0000ff00Maximum Level |c0077ff77is |c0000ff005 |c0077ff77and they can be placed onto the path.
+
+|c0000ff00Towers Unlocked: 
+|c0077ff77Emergency Siege Tower
+Emergency Air Tower
+Emergency Frost Tower
+Emergency Chaos Tower
+Emergency Bouncing Tower
 }
 
 STRING 2086
@@ -14827,19 +14892,6 @@ STRING 2242
 |c0000ff00Critical Strike|r
 }
 
-STRING 2243
-// Abilities: A03T (Emergency Towers), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Initially unlocks |c0000ff005 |c0077ff77different |c0000ff00Emergency Towers|c0077ff77. Subsequent points spent into this will increases the level of the |c0000ff00Emergency Towers|c0077ff77, this will increase the attributes of them, |c0000ff00Maximum Level |c0077ff77is |c0000ff005 |c0077ff77and they can be placed onto the path.
-
-|c0000ff00Towers Unlocked: 
-Emergency Siege Tower
-Emergency Air Tower
-Emergency Frost Tower
-Emergency Chaos Tower
-Emergency Bouncing Tower
-}
-
 STRING 2244
 // Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
 {
@@ -14988,14 +15040,6 @@ STRING 2267
 |c0077ff77Decreases Creep Armour by 75
 }
 
-STRING 2268
-// Abilities: A034 (Food Bonus), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Increases |c00FF0000Food |c0077ff77cap by |cffFDD0171.
-
-|c0077ff77Up to |cffFDD0175 |c00FF0000Food |c0077ff77can be gained from this.
-}
-
 STRING 2270
 // Abilities: A017 (Armour Aura), Ubertip (Tooltip - Normal - Extended)
 {
@@ -15024,58 +15068,6 @@ STRING 2274
 // Abilities: A02C (Crippling Aura), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Reduces Creep Move Speed by 32%
-}
-
-STRING 2275
-// Abilities: A00F (Upgrade Speed Aura), Ubertip (Tooltip - Normal - Extended)
-{
-|c0000ff00Upgrades the Speed Aura.
-|c0077ff77L1: 10% / L2: 20% / L3: 40% / L4: 60%
-
-|c0000ff00Gold Cost:
-|c0000ff00Level 1: |c0077ff77500
-|c0000ff00Level 2: |c0077ff772000
-|c0000ff00Level 3: |c0077ff773500
-|c0000ff00Level 4: |c0077ff776000
-}
-
-STRING 2276
-// Abilities: A005 (Upgrade Crippling Aura), Ubertip (Tooltip - Normal - Extended)
-{
-|c0000ff00Upgrades the Crippling Aura.
-|c0077ff77L1: 8% / L2: 16% / L3: 24% / L4: 32%
-
-|c0000ff00Gold Cost:
-|c0000ff00Level 1: |c0077ff77500
-|c0000ff00Level 2: |c0077ff772000
-|c0000ff00Level 3: |c0077ff773500
-|c0000ff00Level 4: |c0077ff776000
-}
-
-STRING 2277
-// Abilities: A00H (Upgrade Armor Aura), Ubertip (Tooltip - Normal - Extended)
-{
-|c0000ff00Upgrades the Armor Aura.
-|c0077ff77L1: -10 / L2: -25 / L3: -75 / L4: -150
-
-|c0000ff00Gold Cost:
-|c0000ff00Level 1: |c0077ff77500
-|c0000ff00Level 2: |c0077ff772000
-|c0000ff00Level 3: |c0077ff773500
-|c0000ff00Level 4: |c0077ff776000
-}
-
-STRING 2278
-// Abilities: A00I (Upgrade Damage Aura), Ubertip (Tooltip - Normal - Extended)
-{
-|c0000ff00Upgrades the Damage Aura.
-|c0077ff77L1: 10% / L2: 20% / L3: 40% / L4: 60%
-
-|c0000ff00Gold Cost:
-|c0000ff00Level 1: |c0077ff77500
-|c0000ff00Level 2: |c0077ff772000
-|c0000ff00Level 3: |c0077ff773500
-|c0000ff00Level 4: |c0077ff776000
 }
 
 STRING 2279
@@ -16942,6 +16934,42 @@ STRING 2545
 |c0000ff00Mana Cost: |c0077ff77+20
 }
 
+STRING 2548
+// Abilities: A00F (Upgrade Speed Aura), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Upgrades the Speed Aura.
+
+|c0000ff00Gold Cost / Attack Speed Increase
+|c0000ff00Level 1: |c0077ff77500 / 10%
+|c0000ff00Level 2: |c0077ff772000 / 20%
+|c0000ff00Level 3: |c0077ff773500 / 40%
+|c0000ff00Level 4: |c0077ff776000 / 60%
+}
+
+STRING 2549
+// Abilities: A005 (Upgrade Crippling Aura), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Upgrades the Crippling Aura.
+
+|c0000ff00Gold Cost / Movespeed Decrease
+|c0000ff00Level 1: |c0077ff77500 / 8%
+|c0000ff00Level 2: |c0077ff772000 / 16%
+|c0000ff00Level 3: |c0077ff773500 / 24%
+|c0000ff00Level 4: |c0077ff776000 / 32%
+}
+
+STRING 2550
+// Abilities: A00H (Upgrade Armor Aura), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Upgrades the Armor Aura.
+
+|c0000ff00Gold Cost / Armor Decrease
+|c0000ff00Level 1: |c0077ff77500 / -10
+|c0000ff00Level 2: |c0077ff772000 / -25
+|c0000ff00Level 3: |c0077ff773500 / -75
+|c0000ff00Level 4: |c0077ff776000 / -150
+}
+
 STRING 2551
 // Units: u001 ([Wave 35] - Fel Stalker), Name (Name)
 {
@@ -17119,7 +17147,7 @@ STRING 2580
 }
 
 STRING 2581
-// Abilities: A034 (Food Bonus), Hotkey (Hotkey - Normal)
+// Abilities: A00J (Hero Abilities), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -17179,6 +17207,18 @@ v2.04d Release Date - 23/01/20
 STRING 2589
 {
 |c0000ff00If the owner of the |c0077ff77Game Setup|r |c0000ff00unit leaves the game, then any player may select it to become the new owner.|r
+}
+
+STRING 2590
+// Abilities: A00I (Upgrade Damage Aura), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Upgrades the Damage Aura.
+
+|c0000ff00Gold Cost / Damage Increase
+|c0000ff00Level 1: |c0077ff77500 / 10%
+|c0000ff00Level 2: |c0077ff772000 / 20%
+|c0000ff00Level 3: |c0077ff773500 / 40%
+|c0000ff00Level 4: |c0077ff776000 / 60%
 }
 
 STRING 2591
@@ -17685,21 +17725,6 @@ STRING 2642
 
 }
 
-STRING 2643
-// Abilities: A00R (Upgrade Critical Aura), Ubertip (Tooltip - Normal - Extended)
-{
-|c0000ff00Upgrades the Critical Aura.
-
-|c0077ff77Crit Chance %, Damage Multiplier %
-|c0077ff77L1: 2.5%, 25% / L2: 5%, 50% / L3: 7.5%, 75% / L4: 10%, 100%
-
-|c0000ff00Gold Cost:
-|c0000ff00Level 1: |c0077ff77500
-|c0000ff00Level 2: |c0077ff772000
-|c0000ff00Level 3: |c0077ff773500
-|c0000ff00Level 4: |c0077ff776000
-}
-
 STRING 2644
 // Units: z000 (Alpharius), Name (Name)
 {
@@ -17710,6 +17735,18 @@ STRING 2645
 // Units: z001 (Omegon), Name (Name)
 {
 Omegon
+}
+
+STRING 2646
+// Abilities: A00R (Upgrade Critical Aura), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Upgrades the Critical Aura.
+
+|c0000ff00Gold Cost / Crit Chance / Crit Damage
+|c0000ff00Level 1: |c0077ff77500 / 2.5% / 25%
+|c0000ff00Level 2: |c0077ff772000 / 5% / 50%
+|c0000ff00Level 3: |c0077ff773500 / 7.5% / 75%
+|c0000ff00Level 4: |c0077ff776000 / 10% / 100%
 }
 
 STRING 2655
@@ -17861,7 +17898,7 @@ W
 }
 
 STRING 3028
-// Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A03R (Income Bonus), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -17885,7 +17922,7 @@ Bash Tower 1: Storm Panda
 }
 
 STRING 3135
-// Abilities: A03R (Income Bonus), Hotkey (Hotkey - Normal)
+// Abilities: A00Y (Blitz Mode), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -17927,7 +17964,7 @@ R
 }
 
 STRING 3265
-// Abilities: A00Y (Blitz Mode), Hotkey (Hotkey - Normal)
+// Upgrades: R005 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 D
 }
@@ -17951,7 +17988,7 @@ V
 }
 
 STRING 3323
-// Upgrades: R006 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 W
 }
@@ -19046,7 +19083,7 @@ S
 }
 
 STRING 5602
-// Abilities: A00J (Hero Abilities), Hotkey (Hotkey - Normal)
+// Upgrades: R007 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 F
 }
@@ -21436,7 +21473,7 @@ STRING 8238
 }
 
 STRING 8239
-// Abilities: A03O (Intelligence Bonus), Hotkey (Hotkey - Normal)
+// Upgrades: R006 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 S
 }
@@ -21799,12 +21836,6 @@ STRING 9065
 D
 }
 
-STRING 9068
-// Upgrades: R006 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
-{
-S
-}
-
 STRING 9070
 // Units: n01K (Void Trap), EditorSuffix (Name - Editor Suffix)
 {
@@ -22052,22 +22083,10 @@ STRING 9845
 Clear
 }
 
-STRING 9846
-// Upgrades: R005 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
-{
-D
-}
-
 STRING 9851
 // Abilities: A027 (Jackpot), Name (Name)
 {
 Jackpot
-}
-
-STRING 9852
-// Upgrades: R007 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
-{
-F
 }
 
 STRING 9855
