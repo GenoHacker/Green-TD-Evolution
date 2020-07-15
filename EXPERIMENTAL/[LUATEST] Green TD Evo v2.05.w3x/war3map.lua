@@ -245,6 +245,7 @@ udg_Real_Array_BonusCritDamage = __jarray(0.0)
 udg_Real_OrkColour = 0.0
 udg_Real_Array_SkillCritChance = __jarray(0.0)
 udg_Real_Array_SkillCritDamage = __jarray(0.0)
+udg_Integer_Array_HeroCritLevel = __jarray(0)
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -1025,6 +1026,12 @@ function InitGlobals()
     while (true) do
         if ((i > 1)) then break end
         udg_Real_Array_SkillCritDamage[i] = 0.0
+        i = i + 1
+    end
+    i = 0
+    while (true) do
+        if ((i > 1)) then break end
+        udg_Integer_Array_HeroCritLevel[i] = 0
         i = i + 1
     end
 end
@@ -2463,7 +2470,7 @@ function InitTrig_Damage_Engine_Config()
     TriggerAddAction(gg_trg_Damage_Engine_Config, Trig_Damage_Engine_Config_Actions)
 end
 
-function Trig_Crit_System_Func004Func004C()
+function Trig_Crit_System_Func004Func003C()
     if (not (udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (10.00 + udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))]))) then
         return false
     end
@@ -2509,19 +2516,19 @@ function Trig_Crit_System_Actions()
     if (Trig_Crit_System_Func004C()) then
         udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_SkillCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + udg_Real_Array_CritAuraChances[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)])
         udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
-        DisplayTimedTextToForce(GetPlayersAll(), 3.00, (R2S(udg_Real_Array_BonusCritChance[1]) .. ""))
-        if (Trig_Crit_System_Func004Func004C()) then
-            udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_RangedCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (0.00 + 0.00)))
+        if (Trig_Crit_System_Func004Func003C()) then
+            udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_RangedCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (udg_Real_Array_SkillCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + 0.00)))
             udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
         else
         end
+        DisplayTimedTextToForce(GetPlayersAll(), 3.00, (R2S(udg_Real_Array_BonusCritDamage[1]) .. ""))
     else
     end
     if (Trig_Crit_System_Func008C()) then
         udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_SkillCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + udg_Real_Array_CritAuraChances[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)])
         udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
         if (Trig_Crit_System_Func008Func003C()) then
-            udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_MeleeCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (0.00 + 0.00)))
+            udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_MeleeCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (udg_Real_Array_SkillCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + 0.00)))
             udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
         else
         end
@@ -2531,7 +2538,7 @@ function Trig_Crit_System_Actions()
         udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_SkillCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + udg_Real_Array_CritAuraChances[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)])
         udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
         if (Trig_Crit_System_Func012Func003C()) then
-            udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_SpellCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (0.00 + 0.00)))
+            udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_SpellCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (udg_Real_Array_SkillCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + 0.00)))
             udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
         else
         end
@@ -4381,6 +4388,27 @@ function Trig_Hero_Abilities_Func010C()
     return true
 end
 
+function Trig_Hero_Abilities_Func012Func001Func002C()
+    if (not (udg_Integer_Array_FoodBonus[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] <= 4)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hero_Abilities_Func012Func001C()
+    if (not (udg_Integer_Array_HeroCritLevel[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] == 5)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hero_Abilities_Func012C()
+    if (not (GetSpellAbilityId() == FourCC("A00S"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Hero_Abilities_Actions()
     udg_PlayerGroup_PlyGrpArray[16] = GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit()))
     if (Trig_Hero_Abilities_Func004C()) then
@@ -4435,11 +4463,26 @@ function Trig_Hero_Abilities_Actions()
     end
     if (Trig_Hero_Abilities_Func010C()) then
         if (Trig_Hero_Abilities_Func010Func001C()) then
-            CreateTextTagUnitBJ("TRIGSTR_2187", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
+            CreateTextTagUnitBJ("TRIGSTR_163", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
         else
             if (Trig_Hero_Abilities_Func010Func001Func002C()) then
                 AdjustPlayerStateBJ(1, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_FOOD_CAP)
                 udg_Integer_Array_FoodBonus[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = (udg_Integer_Array_FoodBonus[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] + 1)
+                DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], "TRIGSTR_737")
+                AdjustPlayerStateBJ(-1, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_LUMBER)
+            else
+            end
+        end
+    else
+    end
+    if (Trig_Hero_Abilities_Func012C()) then
+        if (Trig_Hero_Abilities_Func012Func001C()) then
+            CreateTextTagUnitBJ("TRIGSTR_2187", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
+        else
+            if (Trig_Hero_Abilities_Func012Func001Func002C()) then
+                udg_Real_Array_SkillCritChance[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = (udg_Real_Array_SkillCritChance[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] + 2.00)
+                udg_Real_Array_SkillCritDamage[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = (udg_Real_Array_SkillCritDamage[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] + 0.20)
+                udg_Integer_Array_HeroCritLevel[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = (udg_Integer_Array_HeroCritLevel[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] + 1)
                 DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], "TRIGSTR_160")
                 AdjustPlayerStateBJ(-1, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_LUMBER)
             else

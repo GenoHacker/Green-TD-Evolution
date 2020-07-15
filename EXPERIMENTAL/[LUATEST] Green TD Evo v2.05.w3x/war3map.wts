@@ -1183,7 +1183,7 @@ No more Upgrades
 
 STRING 160
 {
-|c0000ff00Food Increased by 1.
+|c0000ff00Crit Chance Increased by 2% and Crit Damage Increase by 20%.
 }
 
 STRING 161
@@ -1196,6 +1196,11 @@ STRING 162
 // Abilities: A03K (Game Mode Descriptions), Tip (Tooltip - Normal)
 {
 |c0000ff00Game Mode Descriptions
+}
+
+STRING 163
+{
+Max Level Reached
 }
 
 STRING 164
@@ -4749,6 +4754,11 @@ STRING 736
 [Spellbook]
 }
 
+STRING 737
+{
+|c0000ff00Food Increased by 1.
+}
+
 STRING 738
 // Units: e000 (Naisha, Ultimate Bouncing Tower), Hotkey (Hotkey)
 {
@@ -6962,7 +6972,7 @@ STRING 1045
 }
 
 STRING 1046
-// Abilities: A034 (Food Bonus), Hotkey (Hotkey - Normal)
+// Abilities: A007 (Command Book), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -7591,7 +7601,7 @@ Z
 }
 
 STRING 1121
-// Abilities: A03O (Intelligence Bonus), Hotkey (Hotkey - Normal)
+// Units: h037 (Jaina, Ultimate Spell Tower), Hotkey (Hotkey)
 {
 E
 }
@@ -8044,7 +8054,7 @@ STRING 1188
 }
 
 STRING 1189
-// Abilities: A00S (Crit Bonus [Learn]), Hotkey (Hotkey - Normal)
+// Abilities: A02Y (Disable Frost Tower), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -10534,13 +10544,13 @@ STRING 1603
 }
 
 STRING 1604
-// Units: h037 (Jaina, Ultimate Spell Tower), Hotkey (Hotkey)
+// Abilities: A00W (Finger of Death), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 1605
-// Abilities: A00W (Finger of Death), Hotkey (Hotkey - Normal)
+// Abilities: A015 (Emergency Frost Tower), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -10582,7 +10592,7 @@ STRING 1611
 }
 
 STRING 1612
-// Abilities: A015 (Emergency Frost Tower), Researchhotkey (Hotkey - Learn)
+// Abilities: A01V (Emergency Bouncing Tower), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -13474,7 +13484,7 @@ STRING 2079
 }
 
 STRING 2080
-// Upgrades: R006 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A022 (Air Waves), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -13526,7 +13536,7 @@ Emergency Bouncing Tower
 }
 
 STRING 2086
-// Abilities: A01V (Emergency Bouncing Tower), Researchhotkey (Hotkey - Learn)
+// Abilities: A026 (Immune Waves), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -14031,7 +14041,7 @@ S
 }
 
 STRING 2129
-// Abilities: A022 (Air Waves), Hotkey (Hotkey - Normal)
+// Abilities: A00F (Upgrade Speed Aura), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -14163,19 +14173,19 @@ STRING 2146
 }
 
 STRING 2147
-// Abilities: A02Y (Disable Frost Tower), Hotkey (Hotkey - Normal)
-{
-A
-}
-
-STRING 2148
 // Abilities: A031 (Headhunter Mode), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2149
+STRING 2148
 // Abilities: A00R (Upgrade Critical Aura), Hotkey (Hotkey - Normal)
+{
+A
+}
+
+STRING 2149
+// Abilities: A00S (Crit Bonus [Learn]), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -14917,25 +14927,25 @@ STRING 2247
 }
 
 STRING 2248
-// Abilities: A00F (Upgrade Speed Aura), Hotkey (Hotkey - Normal)
-{
-W
-}
-
-STRING 2249
 // Abilities: A02B (Difficulty Options), Hotkey (Hotkey - Normal)
 {
 W
 }
 
-STRING 2250
+STRING 2249
 // Abilities: A02L (Easy - Chaos Mode), Hotkey (Hotkey - Normal)
 {
 W
 }
 
-STRING 2251
+STRING 2250
 // Abilities: A02W (Disable Air Tower), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 2251
+// Abilities: A02Z (Gold Rush Mode), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -17755,13 +17765,13 @@ I am Omegon
 }
 
 STRING 2656
-// Abilities: A026 (Immune Waves), Hotkey (Hotkey - Normal)
+// Abilities: A00H (Upgrade Armor Aura), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 2657
-// Abilities: A00H (Upgrade Armor Aura), Hotkey (Hotkey - Normal)
+// Abilities: A00U (Swap Towers), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -17892,13 +17902,13 @@ Frost Tower 6: Frosty Elemental
 }
 
 STRING 3026
-// Abilities: A02Z (Gold Rush Mode), Hotkey (Hotkey - Normal)
+// Abilities: A03R (Income Bonus), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 3028
-// Abilities: A03R (Income Bonus), Hotkey (Hotkey - Normal)
+// Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 W
 }
@@ -17928,13 +17938,13 @@ D
 }
 
 STRING 3148
-// Abilities: A00U (Swap Towers), Hotkey (Hotkey - Normal)
+// Abilities: A00V (Tower Options), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 3188
-// Abilities: A007 (Command Book), Hotkey (Hotkey - Normal)
+// Abilities: A024 (Hero Waves), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -17952,13 +17962,13 @@ Z
 }
 
 STRING 3253
-// Abilities: A00V (Tower Options), Hotkey (Hotkey - Normal)
+// Abilities: A02K (Normal Mode), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 3262
-// Abilities: A024 (Hero Waves), Hotkey (Hotkey - Normal)
+// Abilities: A002 (Aura Upgrades), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -17988,7 +17998,7 @@ V
 }
 
 STRING 3323
-// Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Upgrades: R006 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 W
 }
@@ -19445,7 +19455,7 @@ STRING 6094
 }
 
 STRING 6364
-// Abilities: A002 (Aura Upgrades), Hotkey (Hotkey - Normal)
+// Abilities: A005 (Upgrade Crippling Aura), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -21137,7 +21147,7 @@ Emergency Frost Tower
 }
 
 STRING 8152
-// Abilities: A02K (Normal Mode), Hotkey (Hotkey - Normal)
+// Abilities: A02V (Disable Bouncing Tower), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -21233,7 +21243,7 @@ Emergency Air Tower
 }
 
 STRING 8190
-// Abilities: A005 (Upgrade Crippling Aura), Hotkey (Hotkey - Normal)
+// Abilities: A02G (Normal - Chaos Mode), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -21521,7 +21531,7 @@ STRING 8246
 }
 
 STRING 8247
-// Abilities: A02G (Normal - Chaos Mode), Hotkey (Hotkey - Normal)
+// Abilities: A02S (Disable Chaos Tower), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -21557,7 +21567,7 @@ S
 }
 
 STRING 8325
-// Abilities: A02V (Disable Bouncing Tower), Hotkey (Hotkey - Normal)
+// Abilities: A035 (Swarm Mode), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -21663,13 +21673,13 @@ STRING 8717
 }
 
 STRING 8739
-// Abilities: A02S (Disable Chaos Tower), Hotkey (Hotkey - Normal)
+// Abilities: A030 (Random Waves), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 8743
-// Abilities: A030 (Random Waves), Hotkey (Hotkey - Normal)
+// Abilities: A034 (Food Bonus), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -21843,7 +21853,7 @@ STRING 9070
 }
 
 STRING 9074
-// Abilities: A035 (Swarm Mode), Hotkey (Hotkey - Normal)
+// Abilities: A03O (Intelligence Bonus), Hotkey (Hotkey - Normal)
 {
 E
 }
