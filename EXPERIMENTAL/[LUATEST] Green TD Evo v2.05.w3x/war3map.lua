@@ -520,6 +520,7 @@ gg_unit_z000_0121 = nil
 gg_unit_z001_0122 = nil
 gg_unit_z001_0123 = nil
 gg_unit_o00I_0124 = nil
+gg_trg_Damage_Event = nil
 function InitGlobals()
     local i = 0
     i = 0
@@ -2470,42 +2471,49 @@ function InitTrig_Damage_Engine_Config()
     TriggerAddAction(gg_trg_Damage_Engine_Config, Trig_Damage_Engine_Config_Actions)
 end
 
-function Trig_Crit_System_Func004Func003C()
+function Trig_Crit_System_Func001C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A00T"), udg_DamageEventSource) <= 19)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Crit_System_Func005Func005C()
     if (not (udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (10.00 + udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))]))) then
         return false
     end
     return true
 end
 
-function Trig_Crit_System_Func004C()
+function Trig_Crit_System_Func005C()
     if (not (udg_IsDamageRanged == true)) then
         return false
     end
     return true
 end
 
-function Trig_Crit_System_Func008Func003C()
+function Trig_Crit_System_Func009Func004C()
     if (not (udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (50.00 + udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))]))) then
         return false
     end
     return true
 end
 
-function Trig_Crit_System_Func008C()
+function Trig_Crit_System_Func009C()
     if (not (udg_IsDamageMelee == true)) then
         return false
     end
     return true
 end
 
-function Trig_Crit_System_Func012Func003C()
+function Trig_Crit_System_Func013Func004C()
     if (not (udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (5.00 + udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))]))) then
         return false
     end
     return true
 end
 
-function Trig_Crit_System_Func012C()
+function Trig_Crit_System_Func013C()
     if (not (udg_IsDamageSpell == true)) then
         return false
     end
@@ -2513,32 +2521,37 @@ function Trig_Crit_System_Func012C()
 end
 
 function Trig_Crit_System_Actions()
-    if (Trig_Crit_System_Func004C()) then
-        udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_SkillCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + udg_Real_Array_CritAuraChances[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)])
+    if (Trig_Crit_System_Func001C()) then
+        IncUnitAbilityLevelSwapped(FourCC("A00T"), udg_DamageEventSource)
+    else
+    end
+    if (Trig_Crit_System_Func005C()) then
+        udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_SkillCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraChances[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + I2R(GetUnitAbilityLevelSwapped(FourCC("A00T"), udg_DamageEventSource))))
+        udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_RangedCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (udg_Real_Array_SkillCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (I2R(GetUnitAbilityLevelSwapped(FourCC("A00T"), udg_DamageEventSource)) + 0.00))))
         udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
-        if (Trig_Crit_System_Func004Func003C()) then
-            udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_RangedCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (udg_Real_Array_SkillCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + 0.00)))
-            udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
-        else
-        end
         DisplayTimedTextToForce(GetPlayersAll(), 3.00, (R2S(udg_Real_Array_BonusCritDamage[1]) .. ""))
+        if (Trig_Crit_System_Func005Func005C()) then
+            udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
+            SetUnitAbilityLevelSwapped(FourCC("A00T"), udg_DamageEventSource, 1)
+        else
+        end
     else
     end
-    if (Trig_Crit_System_Func008C()) then
+    if (Trig_Crit_System_Func009C()) then
         udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_SkillCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + udg_Real_Array_CritAuraChances[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)])
+        udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_MeleeCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (udg_Real_Array_SkillCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + 0.00)))
         udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
-        if (Trig_Crit_System_Func008Func003C()) then
-            udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_MeleeCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (udg_Real_Array_SkillCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + 0.00)))
+        if (Trig_Crit_System_Func009Func004C()) then
             udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
         else
         end
     else
     end
-    if (Trig_Crit_System_Func012C()) then
+    if (Trig_Crit_System_Func013C()) then
         udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_SkillCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + udg_Real_Array_CritAuraChances[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)])
+        udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_SpellCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (udg_Real_Array_SkillCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + 0.00)))
         udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
-        if (Trig_Crit_System_Func012Func003C()) then
-            udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_SpellCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (udg_Real_Array_SkillCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + 0.00)))
+        if (Trig_Crit_System_Func013Func004C()) then
             udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
         else
         end
