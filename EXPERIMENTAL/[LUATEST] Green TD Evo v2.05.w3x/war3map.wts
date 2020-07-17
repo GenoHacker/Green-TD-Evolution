@@ -7631,7 +7631,7 @@ Advanced Combat Research
 }
 
 STRING 1126
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
@@ -7849,6 +7849,12 @@ STRING 1154
 |c0000ff00Damage:|r |c0077ff7725000
 |c0000ff00Area of Effect:|r |c0077ff77300
 |c0000ff00Cooldown:|r |c0077ff775 Seconds
+}
+
+STRING 1155
+// Abilities: A00Z (Random Attack), Name (Name)
+{
+Random Attack
 }
 
 STRING 1156
@@ -13765,7 +13771,7 @@ STRING 2101
 }
 
 STRING 2102
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
@@ -14799,7 +14805,7 @@ Emergency Towers
 }
 
 STRING 2225
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
@@ -14881,13 +14887,13 @@ STRING 2235
 }
 
 STRING 2236
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2237
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
@@ -14923,7 +14929,7 @@ STRING 2242
 }
 
 STRING 2243
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
@@ -14977,7 +14983,7 @@ W
 }
 
 STRING 2252
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
@@ -14989,7 +14995,7 @@ STRING 2253
 }
 
 STRING 2254
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
@@ -15089,13 +15095,13 @@ STRING 2267
 }
 
 STRING 2268
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2269
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
@@ -15131,25 +15137,25 @@ STRING 2274
 }
 
 STRING 2275
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2276
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2277
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2278
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
@@ -15480,6 +15486,40 @@ STRING 2335
 |c0077ff77[Z] |c0000ff00Upgrade To Warlock.|r |cAAAAFFAAFel Tower 6.|r
 }
 
+STRING 2336
+// Abilities: A00Z (Random Attack), EditorSuffix (Editor Suffix)
+{
+[Venom Tower]
+}
+
+STRING 2337
+// Abilities: A00Z (Random Attack), Tip (Tooltip - Normal)
+{
+This ability is used in the random attack trigger for venom towers
+}
+
+STRING 2338
+// Units: h013 (Venom Tower 4: Lizard), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff770.25
+|c0000ff00Damage:|r |c0077ff77250
+|c0000ff00Range:|r |c0077ff77400
+|c0000ff00Efficiency:|r |c0077ff770.13 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Venomous: Deals 500 damage per second, stacks with other Venom Towers, also causes the tower to attack randomly.
+}
+
+STRING 2339
+// Units: h017 (Venom Tower 5: Lizard), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff770.25
+|c0000ff00Damage:|r |c0077ff77625
+|c0000ff00Range:|r |c0077ff77400
+|c0000ff00Efficiency:|r |c0077ff770.19 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Venomous: Deals 1250 damage per second, stacks with other Venom Towers, also causes the tower to attack randomly.
+}
+
 STRING 2340
 // Units: h00V (Flak Tower 4), Ubertip (Tooltip - Extended)
 {
@@ -15497,6 +15537,28 @@ STRING 2341
 // Units: h00V (Flak Tower 4), Tip (Tooltip - Basic)
 {
 |c0077ff77[C] |c0000ff00Upgrade To Mortar Team.|r |cAAAAFFAAFlak Tower 4.|r
+}
+
+STRING 2342
+// Units: h01M (Venom Tower 6: Lizard), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff770.25
+|c0000ff00Damage:|r |c0077ff771250
+|c0000ff00Range:|r |c0077ff77400
+|c0000ff00Efficiency:|r |c0077ff770.26 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Venomous: Deals 2500 damage per second, stacks with other Venom Towers, also causes the tower to attack randomly.
+}
+
+STRING 2343
+// Units: h01P (Venom Tower 7: Lizard), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff770.25
+|c0000ff00Damage:|r |c0077ff772750
+|c0000ff00Range:|r |c0077ff77400
+|c0000ff00Efficiency:|r |c0077ff770.41 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Venomous: Deals 5500 damage per second, stacks with other Venom Towers, also causes the tower to attack randomly.
 }
 
 STRING 2344
@@ -15685,14 +15747,6 @@ STRING 2374
 // Units: n00U (Frost Tower 6: Frosty Elemental), Hotkey (Hotkey)
 {
 Z
-}
-
-STRING 2375
-// Abilities: A03W (Venom 1), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A venoumous attack that deals 500 damage per second for 15 seconds.|r
-
-|c0077ff77Stacks with other Venom towers and is capable of killing.|r
 }
 
 STRING 2376
@@ -16009,72 +16063,6 @@ STRING 2419
 maps.w3reforged.com
 }
 
-STRING 2420
-// Units: h013 (Venom Tower 4: Lizard), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff770.25
-|c0000ff00Damage:|r |c0077ff77250
-|c0000ff00Range:|r |c0077ff77400
-|c0000ff00Efficiency:|r |c0077ff770.13 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Venomous: Deals 500 damage per second, stacks with other Venom Towers
-}
-
-STRING 2421
-// Units: h017 (Venom Tower 5: Lizard), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff770.25
-|c0000ff00Damage:|r |c0077ff77625
-|c0000ff00Range:|r |c0077ff77400
-|c0000ff00Efficiency:|r |c0077ff770.19 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Venomous: Deals 1250 damage per second, stacks with other Venom Towers
-}
-
-STRING 2422
-// Units: h01M (Venom Tower 6: Lizard), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff770.25
-|c0000ff00Damage:|r |c0077ff771250
-|c0000ff00Range:|r |c0077ff77400
-|c0000ff00Efficiency:|r |c0077ff770.26 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Venomous: Deals 2500 damage per second, stacks with other Venom Towers
-}
-
-STRING 2423
-// Units: h01P (Venom Tower 7: Lizard), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff770.25
-|c0000ff00Damage:|r |c0077ff772750
-|c0000ff00Range:|r |c0077ff77400
-|c0000ff00Efficiency:|r |c0077ff770.41 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Venomous: Deals 5500 damage per second, stacks with other Venom Towers
-}
-
-STRING 2424
-// Units: h01Q (Venom Tower 8: Lizard), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff770.25
-|c0000ff00Damage:|r |c0077ff774500
-|c0000ff00Range:|r |c0077ff77400
-|c0000ff00Efficiency:|r |c0077ff770.47 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Venomous: Deals 9000 damage per second, stacks with other Venom Towers
-}
-
-STRING 2425
-// Units: h01R (Venom Tower 9: Lizard), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff770.25
-|c0000ff00Damage:|r |c0077ff776500
-|c0000ff00Range:|r |c0077ff77400
-|c0000ff00Efficiency:|r |c0077ff770.50 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Venomous: Deals 13000 damage per second, stacks with other Venom Towers
-}
-
 STRING 2426
 // Abilities: A01E (Bash Tower 1), Name (Name)
 {
@@ -16084,14 +16072,6 @@ Bash Tower 1
 STRING 2427
 {
 Vimp Gaming
-}
-
-STRING 2428
-// Abilities: A01L (Venom 3), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A venoumous attack that deals 2500 damage per second for 15 seconds.|r
-
-|c0077ff77Stacks with other Venom towers and is capable of killing.|r
 }
 
 STRING 2429
@@ -16104,14 +16084,6 @@ STRING 2430
 // Abilities: A01G (Bash Tower 4), Name (Name)
 {
 Bash Tower 4
-}
-
-STRING 2431
-// Abilities: A01R (Venom 4), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A venoumous attack that deals 5500 damage per second for 15 seconds.|r
-
-|c0077ff77Stacks with other Venom towers and is capable of killing.|r
 }
 
 STRING 2432
@@ -16132,14 +16104,6 @@ STRING 2434
 Bash Tower 3
 }
 
-STRING 2435
-// Abilities: A03S (Venom 5), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A venoumous attack that deals 9000 damage per second for 15 seconds.|r
-
-|c0077ff77Stacks with other Venom towers and is capable of killing.|r
-}
-
 STRING 2436
 // Abilities: A03S (Venom 5), Tip (Tooltip - Normal)
 {
@@ -16156,14 +16120,6 @@ STRING 2438
 // Abilities: A01D (Bash Tower 2), Name (Name)
 {
 Bash Tower 2
-}
-
-STRING 2439
-// Abilities: A03V (Venom 6), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A venoumous attack that deals 13000 damage per second for 15 seconds.|r
-
-|c0077ff77Stacks with other Venom towers and is capable of killing.|r
 }
 
 STRING 2440
@@ -16190,14 +16146,6 @@ STRING 2443
 Venom 1
 }
 
-STRING 2444
-// Abilities: A03X (Venom 2), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A venoumous attack that deals 1250 damage per second for 15 seconds.|r
-
-|c0077ff77Stacks with other Venom towers and is capable of killing.|r
-}
-
 STRING 2445
 // Abilities: A03X (Venom 2), Tip (Tooltip - Normal)
 {
@@ -16208,14 +16156,6 @@ STRING 2446
 // Abilities: A03X (Venom 2), Name (Name)
 {
 Venom 2
-}
-
-STRING 2447
-// Abilities: A03Y (Venom 7), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A venoumous attack that deals 20000 damage per second for 15 seconds.|r
-
-|c0077ff77Stacks with other Venom towers and is capable of killing.|r
 }
 
 STRING 2448
@@ -16645,17 +16585,6 @@ STRING 2500
 Hellfire 1
 }
 
-STRING 2501
-// Units: h01S (Ultimate Venom Tower), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff770.25
-|c0000ff00Damage:|r |c0077ff7710000
-|c0000ff00Range:|r |c0077ff77400
-|c0000ff00Efficiency:|r |c0077ff770.56 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Venomous: Deals 20000 damage per second, stacks with other Venom Towers
-}
-
 STRING 2502
 // Abilities: A042 (Hellfire 1), Tip (Tooltip - Normal)
 {
@@ -16959,13 +16888,13 @@ STRING 2545
 }
 
 STRING 2546
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2547
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
@@ -17762,7 +17691,7 @@ STRING 2642
 }
 
 STRING 2643
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
@@ -17792,49 +17721,49 @@ STRING 2646
 }
 
 STRING 2647
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2648
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2649
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2650
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2651
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2652
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2653
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2654
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
@@ -17862,7 +17791,7 @@ I am Alpharius
 }
 
 STRING 2659
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
@@ -17874,937 +17803,1040 @@ Ork
 }
 
 STRING 2661
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2662
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2663
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2664
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2665
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2666
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2667
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2668
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2669
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2670
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2671
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2672
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2673
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2674
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2675
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2676
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2677
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2678
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2679
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2680
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2681
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2682
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2683
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2684
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2685
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2686
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2687
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2688
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2689
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2690
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2691
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2692
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2693
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2694
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2695
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2696
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2697
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2698
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2699
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2700
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2701
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2702
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2703
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2704
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2705
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2706
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2707
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2708
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2709
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2710
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2711
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2712
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2713
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
 STRING 2714
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
 Fel Power
 }
 
+STRING 2715
+// Units: h01Q (Venom Tower 8: Lizard), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff770.25
+|c0000ff00Damage:|r |c0077ff774500
+|c0000ff00Range:|r |c0077ff77400
+|c0000ff00Efficiency:|r |c0077ff770.47 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Venomous: Deals 9000 damage per second, stacks with other Venom Towers, also causes the tower to attack randomly.
+}
+
+STRING 2716
+// Units: h01R (Venom Tower 9: Lizard), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff770.25
+|c0000ff00Damage:|r |c0077ff776500
+|c0000ff00Range:|r |c0077ff77400
+|c0000ff00Efficiency:|r |c0077ff770.50 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Venomous: Deals 13000 damage per second, stacks with other Venom Towers, also causes the tower to attack randomly.
+}
+
+STRING 2717
+// Units: h01S (Ultimate Venom Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff770.25
+|c0000ff00Damage:|r |c0077ff7710000
+|c0000ff00Range:|r |c0077ff77400
+|c0000ff00Efficiency:|r |c0077ff770.56 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Venomous: Deals 20000 damage per second, stacks with other Venom Towers, also causes the tower to attack randomly.
+}
+
+STRING 2718
+// Abilities: A01L (Venom 3), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A venoumous attack that deals 2500 damage per second for 15 seconds.|r
+
+|c0077ff77Stacks with other Venom towers and is capable of killing.|r
+
+|c0077ff77Causes the tower to attack randomly.|r
+}
+
+STRING 2719
+// Abilities: A01R (Venom 4), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A venoumous attack that deals 5500 damage per second for 15 seconds.|r
+
+|c0077ff77Stacks with other Venom towers and is capable of killing.|r
+
+|c0077ff77Causes the tower to attack randomly.|r
+}
+
+STRING 2720
+// Abilities: A03S (Venom 5), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A venoumous attack that deals 9000 damage per second for 15 seconds.|r
+
+|c0077ff77Stacks with other Venom towers and is capable of killing.|r
+
+|c0077ff77Causes the tower to attack randomly.|r
+}
+
+STRING 2721
+// Abilities: A03V (Venom 6), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A venoumous attack that deals 13000 damage per second for 15 seconds.|r
+
+|c0077ff77Stacks with other Venom towers and is capable of killing.|r
+
+|c0077ff77Causes the tower to attack randomly.|r
+}
+
+STRING 2722
+// Abilities: A03W (Venom 1), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A venoumous attack that deals 500 damage per second for 15 seconds.|r
+
+|c0077ff77Stacks with other Venom towers and is capable of killing.|r
+
+|c0077ff77Causes the tower to attack randomly.|r
+}
+
+STRING 2723
+// Abilities: A03X (Venom 2), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A venoumous attack that deals 1250 damage per second for 15 seconds.|r
+
+|c0077ff77Stacks with other Venom towers and is capable of killing.|r
+
+|c0077ff77Causes the tower to attack randomly.|r
+}
+
+STRING 2724
+// Abilities: A03Y (Venom 7), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A venoumous attack that deals 20000 damage per second for 15 seconds.|r
+
+|c0077ff77Stacks with other Venom towers and is capable of killing.|r
+
+|c0077ff77Causes the tower to attack randomly.|r
+}
+
+STRING 2725
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff771 Stack
+}
+
+STRING 2726
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff772 Stack
+}
+
+STRING 2727
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff773 Stack
+}
+
+STRING 2728
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff774 Stack
+}
+
+STRING 2729
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff775 Stack
+}
+
+STRING 2730
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff776 Stack
+}
+
+STRING 2731
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff777 Stack
+}
+
+STRING 2732
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff778 Stack
+}
+
+STRING 2733
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff779 Stack
+}
+
+STRING 2734
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff7710 Stack
+}
+
 STRING 2735
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2736
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2737
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2738
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2739
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2740
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2741
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2742
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2743
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2744
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2745
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2746
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2747
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2748
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2749
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2750
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2751
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2752
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2753
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2754
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2755
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2756
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2757
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2758
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2759
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2760
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2761
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2762
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2763
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2764
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2765
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2766
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2767
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2768
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2769
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2770
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2771
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2772
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2773
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2774
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2775
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2776
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2777
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2778
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2779
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2780
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2781
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2782
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2783
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2784
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2785
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2786
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2787
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2788
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2789
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2790
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2791
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2792
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2793
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2794
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2795
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2796
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2797
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2798
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2799
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2800
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2801
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2802
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2803
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2804
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2805
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2806
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2807
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2808
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2809
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2810
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2811
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2812
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2813
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
 STRING 2814
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
-STRING 2835
-// Abilities: A00T (Chaotic Energies), Name (Name)
+STRING 2815
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
-Chaotic Energies
+|c0000ff00Chaos Energies - |c0077ff7711 Stack
 }
 
-STRING 2836
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+STRING 2816
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
-|c0000ff00Fel Power - |c0077ff771 Stack
+|c0000ff00Chaos Energies - |c0077ff7712 Stack
 }
 
-STRING 2837
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+STRING 2817
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
-|c0000ff00Fel Power - |c0077ff772 Stacks
+|c0000ff00Chaos Energies - |c0077ff7713 Stack
 }
 
-STRING 2838
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+STRING 2818
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
-|c0000ff00Fel Power - |c0077ff773 Stacks
+|c0000ff00Chaos Energies - |c0077ff7714 Stack
 }
 
-STRING 2839
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+STRING 2819
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
-|c0000ff00Fel Power - |c0077ff774 Stacks
+|c0000ff00Chaos Energies - |c0077ff7715 Stack
 }
 
-STRING 2840
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+STRING 2820
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
-|c0000ff00Fel Power - |c0077ff775 Stacks
+|c0000ff00Chaos Energies - |c0077ff7716 Stack
 }
 
-STRING 2841
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+STRING 2821
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
-|c0000ff00Fel Power - |c0077ff776 Stacks
+|c0000ff00Chaos Energies - |c0077ff7717 Stack
 }
 
-STRING 2842
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+STRING 2822
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
-|c0000ff00Fel Power - |c0077ff777 Stacks
+|c0000ff00Chaos Energies - |c0077ff7718 Stack
 }
 
-STRING 2843
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+STRING 2823
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
-|c0000ff00Fel Power - |c0077ff778 Stacks
+|c0000ff00Chaos Energies - |c0077ff7719 Stack
 }
 
-STRING 2844
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+STRING 2824
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
 {
-|c0000ff00Fel Power - |c0077ff779 Stacks
+|c0000ff00Chaos Energies - |c0077ff7720 Stack
 }
 
-STRING 2845
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
+STRING 2825
+// Abilities: A00T (Chaos Energies), Name (Name)
 {
-|c0000ff00Fel Power - |c0077ff7710 Stacks
-}
-
-STRING 2846
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Fel Power - |c0077ff7711 Stacks
-}
-
-STRING 2847
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Fel Power - |c0077ff7712 Stacks
-}
-
-STRING 2848
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Fel Power - |c0077ff7713 Stacks
-}
-
-STRING 2849
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Fel Power - |c0077ff7714 Stacks
-}
-
-STRING 2850
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Fel Power - |c0077ff7715 Stacks
-}
-
-STRING 2851
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Fel Power - |c0077ff7716 Stacks
-}
-
-STRING 2852
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Fel Power - |c0077ff7717 Stacks
-}
-
-STRING 2853
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Fel Power - |c0077ff7718 Stacks
-}
-
-STRING 2854
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Fel Power - |c0077ff7719 Stacks
-}
-
-STRING 2855
-// Abilities: A00T (Chaotic Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Fel Power - |c0077ff7720 Stacks
+Chaos Energies
 }
 
 STRING 2876
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Attacks increases the towers crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits.
 
@@ -18812,7 +18844,7 @@ Maximum of 20 Stacks.
 }
 
 STRING 2877
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Attacks increases the towers crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits.
 
@@ -18820,7 +18852,7 @@ Maximum of 20 Stacks.
 }
 
 STRING 2878
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Attacks increases the towers crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits.
 
@@ -18828,7 +18860,7 @@ Maximum of 20 Stacks.
 }
 
 STRING 2879
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Attacks increases the towers crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits.
 
@@ -18836,7 +18868,7 @@ Maximum of 20 Stacks.
 }
 
 STRING 2880
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Attacks increases the towers crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits.
 
@@ -18844,7 +18876,7 @@ Maximum of 20 Stacks.
 }
 
 STRING 2881
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Attacks increases the towers crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits.
 
@@ -18852,7 +18884,7 @@ Maximum of 20 Stacks.
 }
 
 STRING 2882
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Attacks increases the towers crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits.
 
@@ -18860,7 +18892,7 @@ Maximum of 20 Stacks.
 }
 
 STRING 2883
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Attacks increases the towers crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits.
 
@@ -18868,7 +18900,7 @@ Maximum of 20 Stacks.
 }
 
 STRING 2884
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Attacks increases the towers crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits.
 
@@ -18876,7 +18908,7 @@ Maximum of 20 Stacks.
 }
 
 STRING 2885
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Attacks increases the towers crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits.
 
@@ -18884,7 +18916,7 @@ Maximum of 20 Stacks.
 }
 
 STRING 2886
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Attacks increases the towers crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits.
 
@@ -18892,7 +18924,7 @@ Maximum of 20 Stacks.
 }
 
 STRING 2887
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Attacks increases the towers crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits.
 
@@ -18900,7 +18932,7 @@ Maximum of 20 Stacks.
 }
 
 STRING 2888
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Attacks increases the towers crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits.
 
@@ -18908,7 +18940,7 @@ Maximum of 20 Stacks.
 }
 
 STRING 2889
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Attacks increases the towers crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits.
 
@@ -18916,7 +18948,7 @@ Maximum of 20 Stacks.
 }
 
 STRING 2890
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Attacks increases the towers crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits.
 
@@ -18924,7 +18956,7 @@ Maximum of 20 Stacks.
 }
 
 STRING 2891
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Attacks increases the towers crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits.
 
@@ -18932,7 +18964,7 @@ Maximum of 20 Stacks.
 }
 
 STRING 2892
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Attacks increases the towers crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits.
 
@@ -18940,7 +18972,7 @@ Maximum of 20 Stacks.
 }
 
 STRING 2893
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Attacks increases the towers crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits.
 
@@ -18948,7 +18980,7 @@ Maximum of 20 Stacks.
 }
 
 STRING 2894
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Attacks increases the towers crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits.
 
@@ -18956,7 +18988,7 @@ Maximum of 20 Stacks.
 }
 
 STRING 2895
-// Abilities: A00T (Chaotic Energies), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Attacks increases the towers crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits.
 

@@ -246,6 +246,8 @@ udg_Real_OrkColour = 0.0
 udg_Real_Array_SkillCritChance = __jarray(0.0)
 udg_Real_Array_SkillCritDamage = __jarray(0.0)
 udg_Integer_Array_HeroCritLevel = __jarray(0)
+udg_UnitGroup_VenomGroup = nil
+udg_UnitGroup_VenomRandomUnit = nil
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -329,6 +331,7 @@ gg_trg_Damage_Tag = nil
 gg_trg_Damage_Engine_Config = nil
 gg_trg_Crit_System = nil
 gg_trg_Crit_Aura = nil
+gg_trg_Damage_Event = nil
 gg_trg_Set_Variables = nil
 gg_trg_Set_Random_Wave_Variables = nil
 gg_trg_Map_Start = nil
@@ -520,7 +523,7 @@ gg_unit_z000_0121 = nil
 gg_unit_z001_0122 = nil
 gg_unit_z001_0123 = nil
 gg_unit_o00I_0124 = nil
-gg_trg_Damage_Event = nil
+gg_trg_Venom_Tower_Random_Target = nil
 function InitGlobals()
     local i = 0
     i = 0
@@ -1035,6 +1038,8 @@ function InitGlobals()
         udg_Integer_Array_HeroCritLevel[i] = 0
         i = i + 1
     end
+    udg_UnitGroup_VenomGroup = CreateGroup()
+    udg_UnitGroup_VenomRandomUnit = CreateGroup()
 end
 
 -- Arcing Text Tag v1.0.0.3 by Maker encoded to Lua
@@ -2652,6 +2657,30 @@ function InitTrig_Crit_Aura()
     gg_trg_Crit_Aura = CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Crit_Aura, EVENT_PLAYER_UNIT_ATTACKED)
     TriggerAddAction(gg_trg_Crit_Aura, Trig_Crit_Aura_Actions)
+end
+
+function Trig_Venom_Tower_Random_Target_Func001002002()
+    return (GetUnitAbilityLevelSwapped(FourCC("A00Z"), GetFilterUnit()) == 1)
+end
+
+function Trig_Venom_Tower_Random_Target_Func002Func001002003()
+    return (IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(GetEnumUnit())) == true)
+end
+
+function Trig_Venom_Tower_Random_Target_Func002A()
+    udg_UnitGroup_VenomRandomUnit = GetUnitsInRangeOfLocMatching(400.00, GetUnitLoc(GetEnumUnit()), Condition(Trig_Venom_Tower_Random_Target_Func002Func001002003))
+    IssueTargetOrderBJ(GetEnumUnit(), "attack", GroupPickRandomUnit(udg_UnitGroup_VenomRandomUnit))
+end
+
+function Trig_Venom_Tower_Random_Target_Actions()
+    udg_UnitGroup_VenomGroup = GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Venom_Tower_Random_Target_Func001002002))
+    ForGroupBJ(udg_UnitGroup_VenomGroup, Trig_Venom_Tower_Random_Target_Func002A)
+end
+
+function InitTrig_Venom_Tower_Random_Target()
+    gg_trg_Venom_Tower_Random_Target = CreateTrigger()
+    TriggerRegisterTimerEventPeriodic(gg_trg_Venom_Tower_Random_Target, 0.25)
+    TriggerAddAction(gg_trg_Venom_Tower_Random_Target, Trig_Venom_Tower_Random_Target_Actions)
 end
 
 function Trig_Set_Variables_Func178001()
@@ -16263,6 +16292,7 @@ function InitCustomTriggers()
     InitTrig_Damage_Engine_Config()
     InitTrig_Crit_System()
     InitTrig_Crit_Aura()
+    InitTrig_Venom_Tower_Random_Target()
     InitTrig_Set_Variables()
     InitTrig_Set_Random_Wave_Variables()
     InitTrig_Map_Start()
