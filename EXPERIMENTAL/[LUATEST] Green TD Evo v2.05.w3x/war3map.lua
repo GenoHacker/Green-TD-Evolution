@@ -2525,7 +2525,7 @@ function Trig_Crit_System_Func009C()
     return true
 end
 
-function Trig_Crit_System_Func013Func004C()
+function Trig_Crit_System_Func013Func005C()
     if (not (udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (5.00 + udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))]))) then
         return false
     end
@@ -2548,7 +2548,6 @@ function Trig_Crit_System_Actions()
         udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_SkillCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraChances[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + I2R(GetUnitAbilityLevelSwapped(FourCC("A00T"), udg_DamageEventSource))))
         udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_RangedCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (udg_Real_Array_SkillCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (I2R(GetUnitAbilityLevelSwapped(FourCC("A00T"), udg_DamageEventSource)) + 0.00))))
         udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
-        DisplayTimedTextToForce(GetPlayersAll(), 3.00, (R2S(udg_Real_Array_BonusCritDamage[1]) .. ""))
         if (Trig_Crit_System_Func005Func005C()) then
             udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
             SetUnitAbilityLevelSwapped(FourCC("A00T"), udg_DamageEventSource, 1)
@@ -2570,8 +2569,10 @@ function Trig_Crit_System_Actions()
         udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_SkillCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + udg_Real_Array_CritAuraChances[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)])
         udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_SpellCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (udg_Real_Array_SkillCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + 0.00)))
         udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
-        if (Trig_Crit_System_Func013Func004C()) then
+        DisplayTimedTextToForce(GetPlayersAll(), 3.00, (R2S(udg_Real_Array_BonusCritDamage[1]) .. ""))
+        if (Trig_Crit_System_Func013Func005C()) then
             udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
+            DisplayTimedTextToForce(GetPlayersAll(), 3.00, R2S(udg_DamageEventAmount))
         else
         end
     else
@@ -2715,7 +2716,7 @@ function Trig_Ballista_Tower_Enchanted_Bolts_Actions()
     udg_Real_Array_EnchantedBoltChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
     if (Trig_Ballista_Tower_Enchanted_Bolts_Func003C()) then
         udg_Real_Array_BallistaDistance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = DistanceBetweenPoints(GetUnitLoc(udg_DamageEventSource), GetUnitLoc(udg_DamageEventTarget))
-        UnitDamageTargetBJ(udg_DamageEventSource, udg_DamageEventTarget, (udg_Real_Array_BallistaDistance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] * 2.00), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+        UnitDamageTargetBJ(udg_DamageEventSource, udg_DamageEventTarget, (udg_Real_Array_BallistaDistance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] * I2R(udg_Integer_WaveNumber)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
     else
     end
 end
