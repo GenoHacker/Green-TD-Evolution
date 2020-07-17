@@ -6245,18 +6245,6 @@ STRING 957
 |c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
 }
 
-STRING 958
-// Units: h00I (Ultimate Ballista Tower), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.50
-|c0000ff00Damage:|r |c0077ff7743000
-|c0000ff00Range:|r |c0077ff771000 (ground only)
-|c0000ff00Efficiency:|r |c0077ff771.73 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
-}
-
 STRING 959
 // Abilities: A03K (Game Mode Descriptions), Ubertip (Tooltip - Normal - Extended)
 {
@@ -6273,18 +6261,6 @@ STRING 959
 |c0000ff00Speed Mode: |c0077ff77Movement speed for all enemy units is set to 500 and wave spawn timer is reduced by 5 seconds.
 
 |c0000ff00Blitz Mode: |c0077ff77Waves will spawn after the timer reaches 0 instead of waiting for the current wave to be killed.
-}
-
-STRING 960
-// Units: h00L (Ballista Tower 7), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.50
-|c0000ff00Damage:|r |c0077ff7717000
-|c0000ff00Range:|r |c0077ff771000 (ground only)
-|c0000ff00Efficiency:|r |c0077ff771.50 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
 }
 
 STRING 961
@@ -6886,35 +6862,11 @@ STRING 1034
 Increases Attack Damage By 500
 }
 
-STRING 1035
-// Units: h00O (Ballista Tower 6), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.50
-|c0000ff00Damage:|r |c0077ff7711000
-|c0000ff00Range:|r |c0077ff771000 (ground only)
-|c0000ff00Efficiency:|r |c0077ff771.41 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
-}
-
 STRING 1036
 {
 Up to 3 towers can be disabled, each disabled tower increases Income by 2 Gold
 
 Different towers have different attack types, these attack types deal more damage to certain armour types.
-}
-
-STRING 1037
-// Units: h00P (Ballista Tower 5), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.50
-|c0000ff00Damage:|r |c0077ff777000
-|c0000ff00Range:|r |c0077ff771000 (ground only)
-|c0000ff00Efficiency:|r |c0077ff771.32 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
 }
 
 STRING 1038
@@ -7079,30 +7031,6 @@ STRING 1063
 STRING 1064
 {
 Below is a description of what towers do
-}
-
-STRING 1065
-// Units: h00Q (Ballista Tower 4), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.50
-|c0000ff00Damage:|r |c0077ff774000
-|c0000ff00Range:|r |c0077ff771000 (ground only)
-|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
-}
-
-STRING 1066
-// Units: h00R (Ballista Tower 8), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.50
-|c0000ff00Damage:|r |c0077ff7724500
-|c0000ff00Range:|r |c0077ff771000 (ground only)
-|c0000ff00Efficiency:|r |c0077ff771.60 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
 }
 
 STRING 1067
@@ -7402,18 +7330,6 @@ STRING 1098
 |c0000ff00Damage per second:|r |c0077ff7720000
 |c0000ff00Cooldown:|r |c0077ff774 Seconds
 |c0000ff00Duration:|r |c0077ff775 Seconds
-}
-
-STRING 1099
-// Units: h00S (Ballista Tower 9), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.50
-|c0000ff00Damage:|r |c0077ff7733000
-|c0000ff00Range:|r |c0077ff771000 (ground only)
-|c0000ff00Efficiency:|r |c0077ff771.67 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
 }
 
 STRING 1100
@@ -15749,6 +15665,12 @@ STRING 2374
 Z
 }
 
+STRING 2375
+// Abilities: A03N (Enchanted Bolts), Name (Name)
+{
+Enchanted Bolts
+}
+
 STRING 2376
 // Units: h00V (Flak Tower 4), Name (Name)
 {
@@ -15896,19 +15818,6 @@ STRING 2394
 // Units: h011 (Ultimate Flak Tower), Name (Name)
 {
 Ultimate Flak Tower
-}
-
-STRING 2395
-// Units: h011 (Ultimate Flak Tower), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff771.25 (ground)
-|c0000ff00Cooldown:|r |c0077ff770.50 (air)
-|c0000ff00Damage:|r |c0077ff7721500 (both)
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (both)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
 }
 
 STRING 2396
@@ -16063,6 +15972,66 @@ STRING 2419
 maps.w3reforged.com
 }
 
+STRING 2420
+// Abilities: A03N (Enchanted Bolts), Tip (Tooltip - Normal)
+{
+|c0000ff00Enchanted Bolts
+}
+
+STRING 2421
+// Abilities: A03N (Enchanted Bolts), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff7735% Chance on hit to deal damage equal to 200% of the distance between the tower and the target as spell damage.
+}
+
+STRING 2422
+// Units: h00I (Ultimate Ballista Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff7743000
+|c0000ff00Range:|r |c0077ff771000 (ground only)
+|c0000ff00Efficiency:|r |c0077ff771.73 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (ground only)|r
+|c0000ff00Ability (2):|r |c0077ff77Enchanted Bolts: 35% Chance on hit to deal damage equal to 200% of the distance between the tower and the target as spell damage.
+}
+
+STRING 2423
+// Units: h00L (Ballista Tower 7), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff7717000
+|c0000ff00Range:|r |c0077ff771000 (ground only)
+|c0000ff00Efficiency:|r |c0077ff771.50 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
+|c0000ff00Ability (2):|r |c0077ff77Enchanted Bolts: 35% Chance on hit to deal damage equal to 200% of the distance between the tower and the target as spell damage.
+}
+
+STRING 2424
+// Units: h00O (Ballista Tower 6), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff7711000
+|c0000ff00Range:|r |c0077ff771000 (ground only)
+|c0000ff00Efficiency:|r |c0077ff771.41 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
+|c0000ff00Ability (2):|r |c0077ff77Enchanted Bolts: 35% Chance on hit to deal damage equal to 200% of the distance between the tower and the target as spell damage.
+}
+
+STRING 2425
+// Units: h00P (Ballista Tower 5), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff777000
+|c0000ff00Range:|r |c0077ff771000 (ground only)
+|c0000ff00Efficiency:|r |c0077ff771.32 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
+|c0000ff00Ability (2):|r |c0077ff77Enchanted Bolts: 35% Chance on hit to deal damage equal to 200% of the distance between the tower and the target as spell damage.
+}
+
 STRING 2426
 // Abilities: A01E (Bash Tower 1), Name (Name)
 {
@@ -16072,6 +16041,18 @@ Bash Tower 1
 STRING 2427
 {
 Vimp Gaming
+}
+
+STRING 2428
+// Units: h00Q (Ballista Tower 4), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff774000
+|c0000ff00Range:|r |c0077ff771000 (ground only)
+|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200 (ground only)|r
+|c0000ff00Ability (2):|r |c0077ff77Enchanted Bolts: 35% Chance on hit to deal damage equal to 200% of the distance between the tower and the target as spell damage.
 }
 
 STRING 2429
@@ -16084,6 +16065,18 @@ STRING 2430
 // Abilities: A01G (Bash Tower 4), Name (Name)
 {
 Bash Tower 4
+}
+
+STRING 2431
+// Units: h00R (Ballista Tower 8), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff7724500
+|c0000ff00Range:|r |c0077ff771000 (ground only)
+|c0000ff00Efficiency:|r |c0077ff771.60 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
+|c0000ff00Ability (2):|r |c0077ff77Enchanted Bolts: 35% Chance on hit to deal damage equal to 200% of the distance between the tower and the target as spell damage.
 }
 
 STRING 2432
@@ -16104,6 +16097,18 @@ STRING 2434
 Bash Tower 3
 }
 
+STRING 2435
+// Units: h00S (Ballista Tower 9), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff7733000
+|c0000ff00Range:|r |c0077ff771000 (ground only)
+|c0000ff00Efficiency:|r |c0077ff771.67 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
+|c0000ff00Ability (2):|r |c0077ff77Enchanted Bolts: 35% Chance on hit to deal damage equal to 200% of the distance between the tower and the target as spell damage.
+}
+
 STRING 2436
 // Abilities: A03S (Venom 5), Tip (Tooltip - Normal)
 {
@@ -16120,6 +16125,18 @@ STRING 2438
 // Abilities: A01D (Bash Tower 2), Name (Name)
 {
 Bash Tower 2
+}
+
+STRING 2439
+// Units: h011 (Ultimate Flak Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff771.25 (ground)
+|c0000ff00Cooldown:|r |c0077ff770.50 (air)
+|c0000ff00Damage:|r |c0077ff7721500 (both)
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (both)|r
 }
 
 STRING 2440

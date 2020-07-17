@@ -248,6 +248,8 @@ udg_Real_Array_SkillCritDamage = __jarray(0.0)
 udg_Integer_Array_HeroCritLevel = __jarray(0)
 udg_UnitGroup_VenomGroup = nil
 udg_UnitGroup_VenomRandomUnit = nil
+udg_Real_Array_BallistaDistance = __jarray(0.0)
+udg_Real_Array_EnchantedBoltChance = __jarray(0.0)
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -331,7 +333,7 @@ gg_trg_Damage_Tag = nil
 gg_trg_Damage_Engine_Config = nil
 gg_trg_Crit_System = nil
 gg_trg_Crit_Aura = nil
-gg_trg_Damage_Event = nil
+gg_trg_Venom_Tower_Random_Target = nil
 gg_trg_Set_Variables = nil
 gg_trg_Set_Random_Wave_Variables = nil
 gg_trg_Map_Start = nil
@@ -523,7 +525,7 @@ gg_unit_z000_0121 = nil
 gg_unit_z001_0122 = nil
 gg_unit_z001_0123 = nil
 gg_unit_o00I_0124 = nil
-gg_trg_Venom_Tower_Random_Target = nil
+gg_trg_Ballista_Tower_Enchanted_Bolts = nil
 function InitGlobals()
     local i = 0
     i = 0
@@ -1040,6 +1042,18 @@ function InitGlobals()
     end
     udg_UnitGroup_VenomGroup = CreateGroup()
     udg_UnitGroup_VenomRandomUnit = CreateGroup()
+    i = 0
+    while (true) do
+        if ((i > 1)) then break end
+        udg_Real_Array_BallistaDistance[i] = 0.0
+        i = i + 1
+    end
+    i = 0
+    while (true) do
+        if ((i > 1)) then break end
+        udg_Real_Array_EnchantedBoltChance[i] = 0.0
+        i = i + 1
+    end
 end
 
 -- Arcing Text Tag v1.0.0.3 by Maker encoded to Lua
@@ -2681,6 +2695,36 @@ function InitTrig_Venom_Tower_Random_Target()
     gg_trg_Venom_Tower_Random_Target = CreateTrigger()
     TriggerRegisterTimerEventPeriodic(gg_trg_Venom_Tower_Random_Target, 0.25)
     TriggerAddAction(gg_trg_Venom_Tower_Random_Target, Trig_Venom_Tower_Random_Target_Actions)
+end
+
+function Trig_Ballista_Tower_Enchanted_Bolts_Conditions()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A03N"), udg_DamageEventSource) == 1)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Ballista_Tower_Enchanted_Bolts_Func003C()
+    if (not (udg_Real_Array_EnchantedBoltChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= 35.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Ballista_Tower_Enchanted_Bolts_Actions()
+    udg_Real_Array_EnchantedBoltChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
+    if (Trig_Ballista_Tower_Enchanted_Bolts_Func003C()) then
+        udg_Real_Array_BallistaDistance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = DistanceBetweenPoints(GetUnitLoc(udg_DamageEventSource), GetUnitLoc(udg_DamageEventTarget))
+        UnitDamageTargetBJ(udg_DamageEventSource, udg_DamageEventTarget, (udg_Real_Array_BallistaDistance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] * 2.00), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+    else
+    end
+end
+
+function InitTrig_Ballista_Tower_Enchanted_Bolts()
+    gg_trg_Ballista_Tower_Enchanted_Bolts = CreateTrigger()
+    TriggerRegisterVariableEvent(gg_trg_Ballista_Tower_Enchanted_Bolts, "udg_DamageEvent", EQUAL, 1.00)
+    TriggerAddCondition(gg_trg_Ballista_Tower_Enchanted_Bolts, Condition(Trig_Ballista_Tower_Enchanted_Bolts_Conditions))
+    TriggerAddAction(gg_trg_Ballista_Tower_Enchanted_Bolts, Trig_Ballista_Tower_Enchanted_Bolts_Actions)
 end
 
 function Trig_Set_Variables_Func178001()
@@ -16293,6 +16337,7 @@ function InitCustomTriggers()
     InitTrig_Crit_System()
     InitTrig_Crit_Aura()
     InitTrig_Venom_Tower_Random_Target()
+    InitTrig_Ballista_Tower_Enchanted_Bolts()
     InitTrig_Set_Variables()
     InitTrig_Set_Random_Wave_Variables()
     InitTrig_Map_Start()
