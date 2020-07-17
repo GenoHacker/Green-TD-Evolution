@@ -374,7 +374,7 @@ STRING 58
 |c0000ff00Range:|r |c0077ff771200 (air only)
 |c0000ff00Efficiency:|r |c0077ff771.17 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (air only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 59
@@ -1391,7 +1391,7 @@ STRING 192
 |c0000ff00Range:|r |c0077ff77800 (ground only)
 |c0000ff00Efficiency:|r |c0077ff771.06 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 193
@@ -1946,7 +1946,7 @@ STRING 278
 |c0000ff00Range:|r |c0077ff77800 (ground only)
 |c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 279
@@ -4168,7 +4168,7 @@ STRING 645
 |c0000ff00Range:|r |c0077ff77800 (ground only)
 |c0000ff00Efficiency:|r |c0077ff771.41 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 646
@@ -4550,7 +4550,7 @@ STRING 706
 |c0000ff00Range:|r |c0077ff771200 (air only)
 |c0000ff00Efficiency:|r |c0077ff771.23 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (air only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 707
@@ -4562,7 +4562,7 @@ STRING 707
 |c0000ff00Range:|r |c0077ff771200 (air only)
 |c0000ff00Efficiency:|r |c0077ff771.29 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (air only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 708
@@ -4590,7 +4590,7 @@ STRING 710
 |c0000ff00Range:|r |c0077ff77800 (ground only)
 |c0000ff00Efficiency:|r |c0077ff771.50 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 711
@@ -5841,7 +5841,7 @@ STRING 918
 |c0000ff00Range:|r |c0077ff77800 (ground only)
 |c0000ff00Efficiency:|r |c0077ff771.73 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 500 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 919
@@ -5853,7 +5853,7 @@ STRING 919
 |c0000ff00Range:|r |c0077ff77800 (ground only)
 |c0000ff00Efficiency:|r |c0077ff771.67 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 920
@@ -5865,7 +5865,7 @@ STRING 920
 |c0000ff00Range:|r |c0077ff77800 (ground only)
 |c0000ff00Efficiency:|r |c0077ff771.60 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 921
@@ -5877,7 +5877,7 @@ STRING 921
 |c0000ff00Range:|r |c0077ff771200 (air only)
 |c0000ff00Efficiency:|r |c0077ff771.33 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (air only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 922
@@ -6230,7 +6230,7 @@ STRING 956
 |c0000ff00Range:|r |c0077ff771200 (air only)
 |c0000ff00Efficiency:|r |c0077ff771.46 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (air only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 957
@@ -6242,7 +6242,7 @@ STRING 957
 |c0000ff00Range:|r |c0077ff771200 (air only)
 |c0000ff00Efficiency:|r |c0077ff771.39 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (air only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 959
@@ -6413,7 +6413,7 @@ STRING 979
 |c0000ff00Range:|r |c0077ff77800 (ground only)
 |c0000ff00Efficiency:|r |c0077ff771.73 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 500 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 
 |c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
 }
@@ -6433,7 +6433,7 @@ STRING 981
 |c0000ff00Range:|r |c0077ff77800 (ground only)
 |c0000ff00Efficiency:|r |c0077ff771.32 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 982
@@ -6452,7 +6452,7 @@ STRING 983
 |c0000ff00Range:|r |c0077ff77800 (ground only)
 |c0000ff00Efficiency:|r |c0077ff771.32 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 
 |c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
 }
@@ -7343,7 +7343,7 @@ STRING 1100
 |c0000ff00Range:|r |c0077ff77800 (ground only)
 |c0000ff00Efficiency:|r |c0077ff771.11 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 1101
@@ -7391,7 +7391,7 @@ STRING 1107
 |c0000ff00Range:|r |c0077ff77600
 |c0000ff00Efficiency:|r |c0077ff771.10 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 500|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 1108
@@ -13997,7 +13997,7 @@ STRING 2132
 |c0000ff00Range:|r |c0077ff771200 (air only)
 |c0000ff00Efficiency:|r |c0077ff771.50 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (air only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 2133
@@ -14009,7 +14009,7 @@ STRING 2133
 |c0000ff00Range:|r |c0077ff771200 (air only)
 |c0000ff00Efficiency:|r |c0077ff771.56 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (air only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 2134
@@ -14027,7 +14027,7 @@ STRING 2135
 |c0000ff00Range:|r |c0077ff771200 (air only)
 |c0000ff00Efficiency:|r |c0077ff771.59 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (air only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 2136
@@ -14132,7 +14132,7 @@ STRING 2151
 |c0000ff00Range:|r |c0077ff771200 (air only)
 |c0000ff00Efficiency:|r |c0077ff771.33 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (air only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 
 |c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
 }
@@ -14147,7 +14147,7 @@ STRING 2152
 |c0000ff00Range:|r |c0077ff771200 (air only)
 |c0000ff00Efficiency:|r |c0077ff771.59 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (air only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 
 |c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
 }
@@ -14470,7 +14470,7 @@ STRING 2194
 |c0000ff00Range:|r |c0077ff77600
 |c0000ff00Efficency:|r |c0077ff771.13 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 500|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 
 |c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
 }
@@ -14484,7 +14484,7 @@ STRING 2195
 |c0000ff00Range:|r |c0077ff77600
 |c0000ff00Efficency:|r |c0077ff771.31 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 500|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 
 |c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
 }
@@ -14530,7 +14530,7 @@ STRING 2199
 |c0000ff00Range:|r |c0077ff77600
 |c0000ff00Efficiency:|r |c0077ff771.03 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 500|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 2200
@@ -14561,7 +14561,7 @@ STRING 2202
 |c0000ff00Range:|r |c0077ff77600
 |c0000ff00Efficiency:|r |c0077ff771.31 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 500|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 2203
@@ -14573,7 +14573,7 @@ STRING 2203
 |c0000ff00Range:|r |c0077ff77600
 |c0000ff00Efficiency:|r |c0077ff771.29 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 500|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 2204
@@ -14585,7 +14585,7 @@ STRING 2204
 |c0000ff00Range:|r |c0077ff77600
 |c0000ff00Efficiency:|r |c0077ff771.20 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 500|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 2205
@@ -14607,7 +14607,7 @@ STRING 2207
 |c0000ff00Range:|r |c0077ff77600
 |c0000ff00Efficiency:|r |c0077ff771.24 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 500|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 2208
@@ -14619,7 +14619,7 @@ STRING 2208
 |c0000ff00Range:|r |c0077ff77600
 |c0000ff00Efficiency:|r |c0077ff771.28 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 500|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 2209
@@ -14631,7 +14631,7 @@ STRING 2209
 |c0000ff00Range:|r |c0077ff77600
 |c0000ff00Efficiency:|r |c0077ff771.13 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 500|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 2210
@@ -15446,7 +15446,7 @@ STRING 2340
 |c0000ff00Range:|r |c0077ff77600
 |c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200 (both)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 2341
@@ -15711,7 +15711,7 @@ STRING 2381
 |c0000ff00Range:|r |c0077ff77600
 |c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (both)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 2382
@@ -15730,7 +15730,7 @@ STRING 2383
 |c0000ff00Range:|r |c0077ff77600
 |c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (both)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 2384
@@ -15755,7 +15755,7 @@ STRING 2386
 |c0000ff00Range:|r |c0077ff77600
 |c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (both)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 2387
@@ -15780,7 +15780,7 @@ STRING 2389
 |c0000ff00Range:|r |c0077ff77600
 |c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (both)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 2390
@@ -15805,7 +15805,7 @@ STRING 2392
 |c0000ff00Range:|r |c0077ff77600
 |c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (both)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 2393
@@ -16806,7 +16806,7 @@ STRING 2533
 |c0000ff00Range:|r |c0077ff77600
 |c0000ff00Efficiency:|r |c0077ff771.07 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 500|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 }
 
 STRING 2534
@@ -17514,7 +17514,7 @@ STRING 2630
 |c0000ff00Range:|r |c0077ff77800 (ground only)
 |c0000ff00Efficiency:|r |c0077ff771 Damage per Gold (Total Gold Value)
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 
 |c0000ff00200% |c0077ff77vs Fortified Armour.
 |c0000ff00125% |c0077ff77vs Other Armours.
@@ -17570,7 +17570,7 @@ STRING 2633
 |c0000ff00Range:|r |c0077ff771200 (air only)
 |c0000ff00Efficiency:|r |c0077ff771 Damage per Gold (Total Gold Value)
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (air only)|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 
 |c0000ff00200% |c0077ff77vs Fortified Armour.
 |c0000ff0025% |c0077ff77vs Divine Armour.
@@ -17606,7 +17606,7 @@ STRING 2635
 |c0000ff00Range:|r |c0077ff77600
 |c0000ff00Efficiency:|r |c0077ff771 Damage per Gold (Total Gold Value)
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 500|r
-|c0000ff00Ability (2):|r |c0077ff77Critical Strike; 25% to deal extra damage|r
+
 
 |c0000ff00200% |c0077ff77vs Divine Armour.
 |c0000ff0050% |c0077ff77vs Other Armours.

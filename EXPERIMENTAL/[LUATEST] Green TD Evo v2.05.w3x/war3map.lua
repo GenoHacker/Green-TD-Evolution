@@ -334,6 +334,7 @@ gg_trg_Damage_Engine_Config = nil
 gg_trg_Crit_System = nil
 gg_trg_Crit_Aura = nil
 gg_trg_Venom_Tower_Random_Target = nil
+gg_trg_Ballista_Tower_Enchanted_Bolts = nil
 gg_trg_Set_Variables = nil
 gg_trg_Set_Random_Wave_Variables = nil
 gg_trg_Map_Start = nil
@@ -525,7 +526,6 @@ gg_unit_z000_0121 = nil
 gg_unit_z001_0122 = nil
 gg_unit_z001_0123 = nil
 gg_unit_o00I_0124 = nil
-gg_trg_Ballista_Tower_Enchanted_Bolts = nil
 function InitGlobals()
     local i = 0
     i = 0
