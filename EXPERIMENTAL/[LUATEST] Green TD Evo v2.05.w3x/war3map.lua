@@ -250,6 +250,8 @@ udg_UnitGroup_VenomGroup = nil
 udg_UnitGroup_VenomRandomUnit = nil
 udg_Real_Array_BallistaDistance = __jarray(0.0)
 udg_Real_Array_EnchantedBoltChance = __jarray(0.0)
+udg_Real_Array_SoulTowerChance = __jarray(0.0)
+udg_Real_Array_SoulTowerDamage = __jarray(0.0)
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -479,9 +481,6 @@ gg_trg_Autoclear_Command = nil
 gg_trg_Autoclear_Trigger = nil
 gg_trg_Clear_Command = nil
 gg_trg_Clear_Ability = nil
-gg_trg_Soul_Tower_Autocast = nil
-gg_trg_Soul_Tower_Mana = nil
-gg_trg_Soul_Tower_Servitude = nil
 gg_trg_Tower_Swapping = nil
 gg_trg_Emergency_Towers = nil
 gg_trg_Auto_Blink = nil
@@ -526,6 +525,7 @@ gg_unit_z000_0121 = nil
 gg_unit_z001_0122 = nil
 gg_unit_z001_0123 = nil
 gg_unit_o00I_0124 = nil
+gg_trg_Soul_Tower_Soul_Extraction = nil
 function InitGlobals()
     local i = 0
     i = 0
@@ -1052,6 +1052,18 @@ function InitGlobals()
     while (true) do
         if ((i > 1)) then break end
         udg_Real_Array_EnchantedBoltChance[i] = 0.0
+        i = i + 1
+    end
+    i = 0
+    while (true) do
+        if ((i > 1)) then break end
+        udg_Real_Array_SoulTowerChance[i] = 0.0
+        i = i + 1
+    end
+    i = 0
+    while (true) do
+        if ((i > 1)) then break end
+        udg_Real_Array_SoulTowerDamage[i] = 0.0
         i = i + 1
     end
 end
@@ -2726,6 +2738,58 @@ function InitTrig_Ballista_Tower_Enchanted_Bolts()
     TriggerRegisterVariableEvent(gg_trg_Ballista_Tower_Enchanted_Bolts, "udg_DamageEvent", EQUAL, 1.00)
     TriggerAddCondition(gg_trg_Ballista_Tower_Enchanted_Bolts, Condition(Trig_Ballista_Tower_Enchanted_Bolts_Conditions))
     TriggerAddAction(gg_trg_Ballista_Tower_Enchanted_Bolts, Trig_Ballista_Tower_Enchanted_Bolts_Actions)
+end
+
+function Trig_Soul_Tower_Soul_Extraction_Conditions()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A04C"), udg_DamageEventSource) == 1)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Soul_Tower_Soul_Extraction_Func002Func004C()
+    if (not (GetUnitManaPercent(udg_DamageEventSource) >= 75.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Soul_Tower_Soul_Extraction_Func002C()
+    if (not (udg_Real_Array_SoulTowerChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= 10)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Soul_Tower_Soul_Extraction_Actions()
+    udg_Real_Array_SoulTowerChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
+    if (Trig_Soul_Tower_Soul_Extraction_Func002C()) then
+        udg_Real_Array_SoulTowerDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (GetUnitStateSwap(UNIT_STATE_LIFE, udg_DamageEventTarget) * 0.05)
+        UnitDamageTargetBJ(udg_DamageEventSource, udg_DamageEventTarget, udg_Real_Array_SoulTowerDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))], ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL)
+        SetUnitManaBJ(udg_DamageEventSource, ((GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + 5.00) + udg_Real_Array_SoulTowerDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))]))
+        if (Trig_Soul_Tower_Soul_Extraction_Func002Func004C()) then
+            bj_forLoopAIndex = 1
+            bj_forLoopAIndexEnd = 5
+            while (true) do
+                if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
+                udg_Point_PntArray[GetForLoopIndexA()] = OffsetLocation(GetUnitLoc(udg_DamageEventSource), GetRandomReal(-300.00, 300.00), GetRandomReal(-300.00, 300.00))
+                CreateNUnitsAtLoc(1, udg_UnitType_Array_SoulTowerUnits[GetRandomInt(1, 6)], GetOwningPlayer(udg_DamageEventSource), udg_Point_PntArray[GetForLoopIndexA()], bj_UNIT_FACING)
+                BlzSetUnitBaseDamage(GetLastCreatedUnit(), (BlzGetUnitBaseDamage(GetLastCreatedUnit(), 0) + R2I(GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource))), 0)
+                UnitApplyTimedLifeBJ(10.00, FourCC("BTLF"), GetLastCreatedUnit())
+                bj_forLoopAIndex = bj_forLoopAIndex + 1
+            end
+            SetUnitManaBJ(udg_DamageEventSource, 0.00)
+        else
+        end
+    else
+    end
+end
+
+function InitTrig_Soul_Tower_Soul_Extraction()
+    gg_trg_Soul_Tower_Soul_Extraction = CreateTrigger()
+    TriggerRegisterVariableEvent(gg_trg_Soul_Tower_Soul_Extraction, "udg_DamageEvent", EQUAL, 1.00)
+    TriggerAddCondition(gg_trg_Soul_Tower_Soul_Extraction, Condition(Trig_Soul_Tower_Soul_Extraction_Conditions))
+    TriggerAddAction(gg_trg_Soul_Tower_Soul_Extraction, Trig_Soul_Tower_Soul_Extraction_Actions)
 end
 
 function Trig_Set_Variables_Func178001()
@@ -14046,242 +14110,6 @@ function InitTrig_Clear_Ability()
     TriggerAddAction(gg_trg_Clear_Ability, Trig_Clear_Ability_Actions)
 end
 
-function Trig_Soul_Tower_Autocast_Func002C()
-    if (GetUnitTypeId(GetAttacker()) == FourCC("h01X")) then
-        return true
-    end
-    if (GetUnitTypeId(GetAttacker()) == FourCC("h044")) then
-        return true
-    end
-    if (GetUnitTypeId(GetAttacker()) == FourCC("h043")) then
-        return true
-    end
-    if (GetUnitTypeId(GetAttacker()) == FourCC("h02M")) then
-        return true
-    end
-    if (GetUnitTypeId(GetAttacker()) == FourCC("h045")) then
-        return true
-    end
-    if (GetUnitTypeId(GetAttacker()) == FourCC("h046")) then
-        return true
-    end
-    if (GetUnitTypeId(GetAttacker()) == FourCC("h047")) then
-        return true
-    end
-    return false
-end
-
-function Trig_Soul_Tower_Autocast_Conditions()
-    if (not Trig_Soul_Tower_Autocast_Func002C()) then
-        return false
-    end
-    return true
-end
-
-function Trig_Soul_Tower_Autocast_Actions()
-    IssueImmediateOrderBJ(GetAttacker(), "windwalk")
-end
-
-function InitTrig_Soul_Tower_Autocast()
-    gg_trg_Soul_Tower_Autocast = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Soul_Tower_Autocast, EVENT_PLAYER_UNIT_ATTACKED)
-    TriggerAddCondition(gg_trg_Soul_Tower_Autocast, Condition(Trig_Soul_Tower_Autocast_Conditions))
-    TriggerAddAction(gg_trg_Soul_Tower_Autocast, Trig_Soul_Tower_Autocast_Actions)
-end
-
-function Trig_Soul_Tower_Mana_Func002C()
-    if (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("h01X")) then
-        return true
-    end
-    if (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("h044")) then
-        return true
-    end
-    if (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("h043")) then
-        return true
-    end
-    if (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("h02M")) then
-        return true
-    end
-    if (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("h045")) then
-        return true
-    end
-    if (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("h046")) then
-        return true
-    end
-    if (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("h047")) then
-        return true
-    end
-    return false
-end
-
-function Trig_Soul_Tower_Mana_Conditions()
-    if (not Trig_Soul_Tower_Mana_Func002C()) then
-        return false
-    end
-    return true
-end
-
-function Trig_Soul_Tower_Mana_Actions()
-    SetUnitManaBJ(GetKillingUnitBJ(), (GetUnitStateSwap(UNIT_STATE_MANA, GetKillingUnitBJ()) + 1))
-end
-
-function InitTrig_Soul_Tower_Mana()
-    gg_trg_Soul_Tower_Mana = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Soul_Tower_Mana, EVENT_PLAYER_UNIT_DEATH)
-    TriggerAddCondition(gg_trg_Soul_Tower_Mana, Condition(Trig_Soul_Tower_Mana_Conditions))
-    TriggerAddAction(gg_trg_Soul_Tower_Mana, Trig_Soul_Tower_Mana_Actions)
-end
-
-function Trig_Soul_Tower_Servitude_Conditions()
-    if (not (GetSpellAbilityId() == FourCC("A02I"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Soul_Tower_Servitude_Func002C()
-    if (not (GetUnitTypeId(GetSpellAbilityUnit()) == FourCC("h01X"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Soul_Tower_Servitude_Func003C()
-    if (not (GetUnitTypeId(GetSpellAbilityUnit()) == FourCC("h044"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Soul_Tower_Servitude_Func004C()
-    if (not (GetUnitTypeId(GetSpellAbilityUnit()) == FourCC("h043"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Soul_Tower_Servitude_Func005C()
-    if (not (GetUnitTypeId(GetSpellAbilityUnit()) == FourCC("h02M"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Soul_Tower_Servitude_Func006C()
-    if (not (GetUnitTypeId(GetSpellAbilityUnit()) == FourCC("h045"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Soul_Tower_Servitude_Func007C()
-    if (not (GetUnitTypeId(GetSpellAbilityUnit()) == FourCC("h046"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Soul_Tower_Servitude_Func008C()
-    if (not (GetUnitTypeId(GetSpellAbilityUnit()) == FourCC("h047"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Soul_Tower_Servitude_Actions()
-    if (Trig_Soul_Tower_Servitude_Func002C()) then
-        bj_forLoopAIndex = 1
-        bj_forLoopAIndexEnd = 3
-        while (true) do
-            if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
-            udg_Point_PntArray[GetForLoopIndexA()] = OffsetLocation(GetUnitLoc(GetSpellAbilityUnit()), GetRandomReal(-300.00, 300.00), GetRandomReal(-300.00, 300.00))
-            CreateNUnitsAtLoc(1, udg_UnitType_Array_SoulTowerUnits[GetRandomInt(1, 6)], GetOwningPlayer(GetSpellAbilityUnit()), udg_Point_PntArray[GetForLoopIndexA()], bj_UNIT_FACING)
-            UnitApplyTimedLifeBJ(10.00, FourCC("BTLF"), GetLastCreatedUnit())
-            bj_forLoopAIndex = bj_forLoopAIndex + 1
-        end
-    else
-    end
-    if (Trig_Soul_Tower_Servitude_Func003C()) then
-        bj_forLoopAIndex = 1
-        bj_forLoopAIndexEnd = 5
-        while (true) do
-            if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
-            udg_Point_PntArray[GetForLoopIndexA()] = OffsetLocation(GetUnitLoc(GetSpellAbilityUnit()), GetRandomReal(-300.00, 300.00), GetRandomReal(-300.00, 300.00))
-            CreateNUnitsAtLoc(1, udg_UnitType_Array_SoulTowerUnits[GetRandomInt(1, 6)], GetOwningPlayer(GetSpellAbilityUnit()), udg_Point_PntArray[GetForLoopIndexA()], bj_UNIT_FACING)
-            UnitApplyTimedLifeBJ(10.00, FourCC("BTLF"), GetLastCreatedUnit())
-            bj_forLoopAIndex = bj_forLoopAIndex + 1
-        end
-    else
-    end
-    if (Trig_Soul_Tower_Servitude_Func004C()) then
-        bj_forLoopAIndex = 1
-        bj_forLoopAIndexEnd = 7
-        while (true) do
-            if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
-            udg_Point_PntArray[GetForLoopIndexA()] = OffsetLocation(GetUnitLoc(GetSpellAbilityUnit()), GetRandomReal(-300.00, 300.00), GetRandomReal(-300.00, 300.00))
-            CreateNUnitsAtLoc(1, udg_UnitType_Array_SoulTowerUnits[GetRandomInt(1, 6)], GetOwningPlayer(GetSpellAbilityUnit()), udg_Point_PntArray[GetForLoopIndexA()], bj_UNIT_FACING)
-            UnitApplyTimedLifeBJ(10.00, FourCC("BTLF"), GetLastCreatedUnit())
-            bj_forLoopAIndex = bj_forLoopAIndex + 1
-        end
-    else
-    end
-    if (Trig_Soul_Tower_Servitude_Func005C()) then
-        bj_forLoopAIndex = 1
-        bj_forLoopAIndexEnd = 9
-        while (true) do
-            if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
-            udg_Point_PntArray[GetForLoopIndexA()] = OffsetLocation(GetUnitLoc(GetSpellAbilityUnit()), GetRandomReal(-300.00, 300.00), GetRandomReal(-300.00, 300.00))
-            CreateNUnitsAtLoc(1, udg_UnitType_Array_SoulTowerUnits[GetRandomInt(1, 6)], GetOwningPlayer(GetSpellAbilityUnit()), udg_Point_PntArray[GetForLoopIndexA()], bj_UNIT_FACING)
-            UnitApplyTimedLifeBJ(10.00, FourCC("BTLF"), GetLastCreatedUnit())
-            bj_forLoopAIndex = bj_forLoopAIndex + 1
-        end
-    else
-    end
-    if (Trig_Soul_Tower_Servitude_Func006C()) then
-        bj_forLoopAIndex = 1
-        bj_forLoopAIndexEnd = 11
-        while (true) do
-            if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
-            udg_Point_PntArray[GetForLoopIndexA()] = OffsetLocation(GetUnitLoc(GetSpellAbilityUnit()), GetRandomReal(-300.00, 300.00), GetRandomReal(-300.00, 300.00))
-            CreateNUnitsAtLoc(1, udg_UnitType_Array_SoulTowerUnits[GetRandomInt(1, 6)], GetOwningPlayer(GetSpellAbilityUnit()), udg_Point_PntArray[GetForLoopIndexA()], bj_UNIT_FACING)
-            UnitApplyTimedLifeBJ(10.00, FourCC("BTLF"), GetLastCreatedUnit())
-            bj_forLoopAIndex = bj_forLoopAIndex + 1
-        end
-    else
-    end
-    if (Trig_Soul_Tower_Servitude_Func007C()) then
-        bj_forLoopAIndex = 1
-        bj_forLoopAIndexEnd = 13
-        while (true) do
-            if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
-            udg_Point_PntArray[GetForLoopIndexA()] = OffsetLocation(GetUnitLoc(GetSpellAbilityUnit()), GetRandomReal(-300.00, 300.00), GetRandomReal(-300.00, 300.00))
-            CreateNUnitsAtLoc(1, udg_UnitType_Array_SoulTowerUnits[GetRandomInt(1, 6)], GetOwningPlayer(GetSpellAbilityUnit()), udg_Point_PntArray[GetForLoopIndexA()], bj_UNIT_FACING)
-            UnitApplyTimedLifeBJ(10.00, FourCC("BTLF"), GetLastCreatedUnit())
-            bj_forLoopAIndex = bj_forLoopAIndex + 1
-        end
-    else
-    end
-    if (Trig_Soul_Tower_Servitude_Func008C()) then
-        bj_forLoopAIndex = 1
-        bj_forLoopAIndexEnd = 15
-        while (true) do
-            if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
-            udg_Point_PntArray[GetForLoopIndexA()] = OffsetLocation(GetUnitLoc(GetSpellAbilityUnit()), GetRandomReal(-300.00, 300.00), GetRandomReal(-300.00, 300.00))
-            CreateNUnitsAtLoc(1, udg_UnitType_Array_SoulTowerUnits[GetRandomInt(1, 6)], GetOwningPlayer(GetSpellAbilityUnit()), udg_Point_PntArray[GetForLoopIndexA()], bj_UNIT_FACING)
-            UnitApplyTimedLifeBJ(10.00, FourCC("BTLF"), GetLastCreatedUnit())
-            bj_forLoopAIndex = bj_forLoopAIndex + 1
-        end
-    else
-    end
-end
-
-function InitTrig_Soul_Tower_Servitude()
-    gg_trg_Soul_Tower_Servitude = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Soul_Tower_Servitude, EVENT_PLAYER_UNIT_SPELL_CAST)
-    TriggerAddCondition(gg_trg_Soul_Tower_Servitude, Condition(Trig_Soul_Tower_Servitude_Conditions))
-    TriggerAddAction(gg_trg_Soul_Tower_Servitude, Trig_Soul_Tower_Servitude_Actions)
-end
-
 function Trig_Tower_Swapping_Conditions()
     if (not (GetSpellAbilityId() == FourCC("A00U"))) then
         return false
@@ -16339,6 +16167,7 @@ function InitCustomTriggers()
     InitTrig_Crit_Aura()
     InitTrig_Venom_Tower_Random_Target()
     InitTrig_Ballista_Tower_Enchanted_Bolts()
+    InitTrig_Soul_Tower_Soul_Extraction()
     InitTrig_Set_Variables()
     InitTrig_Set_Random_Wave_Variables()
     InitTrig_Map_Start()
@@ -16483,9 +16312,6 @@ function InitCustomTriggers()
     InitTrig_Autoclear_Trigger()
     InitTrig_Clear_Command()
     InitTrig_Clear_Ability()
-    InitTrig_Soul_Tower_Autocast()
-    InitTrig_Soul_Tower_Mana()
-    InitTrig_Soul_Tower_Servitude()
     InitTrig_Tower_Swapping()
     InitTrig_Emergency_Towers()
     InitTrig_Auto_Blink()
