@@ -252,6 +252,7 @@ udg_Real_Array_BallistaDistance = __jarray(0.0)
 udg_Real_Array_EnchantedBoltChance = __jarray(0.0)
 udg_Real_Array_SoulTowerChance = __jarray(0.0)
 udg_Real_Array_SoulTowerDamage = __jarray(0.0)
+udg_UnitGroup_Array_SoulTowerUnits = {}
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -526,6 +527,7 @@ gg_unit_z001_0122 = nil
 gg_unit_z001_0123 = nil
 gg_unit_o00I_0124 = nil
 gg_trg_Soul_Tower_Soul_Extraction = nil
+gg_trg_Soul_Tower_Minion_Remove_From_Group = nil
 function InitGlobals()
     local i = 0
     i = 0
@@ -1064,6 +1066,12 @@ function InitGlobals()
     while (true) do
         if ((i > 1)) then break end
         udg_Real_Array_SoulTowerDamage[i] = 0.0
+        i = i + 1
+    end
+    i = 0
+    while (true) do
+        if ((i > 1)) then break end
+        udg_UnitGroup_Array_SoulTowerUnits[i] = CreateGroup()
         i = i + 1
     end
 end
@@ -2747,6 +2755,18 @@ function Trig_Soul_Tower_Soul_Extraction_Conditions()
     return true
 end
 
+function Trig_Soul_Tower_Soul_Extraction_Func002Func004Func001Func002A()
+    BlzSetUnitBaseDamage(GetEnumUnit(), (BlzGetUnitBaseDamage(GetEnumUnit(), 0) + R2I(GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource))), 0)
+    SetUnitLifeBJ(GetEnumUnit(), (GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) + (GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) / 0.50)))
+end
+
+function Trig_Soul_Tower_Soul_Extraction_Func002Func004Func001C()
+    if (not (CountUnitsInGroup(udg_UnitGroup_Array_SoulTowerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))]) == 5)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Soul_Tower_Soul_Extraction_Func002Func004C()
     if (not (GetUnitManaPercent(udg_DamageEventSource) >= 75.00)) then
         return false
@@ -2768,15 +2788,19 @@ function Trig_Soul_Tower_Soul_Extraction_Actions()
         UnitDamageTargetBJ(udg_DamageEventSource, udg_DamageEventTarget, udg_Real_Array_SoulTowerDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))], ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL)
         SetUnitManaBJ(udg_DamageEventSource, ((GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + 5.00) + udg_Real_Array_SoulTowerDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))]))
         if (Trig_Soul_Tower_Soul_Extraction_Func002Func004C()) then
-            bj_forLoopAIndex = 1
-            bj_forLoopAIndexEnd = 5
-            while (true) do
-                if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
-                udg_Point_PntArray[GetForLoopIndexA()] = OffsetLocation(GetUnitLoc(udg_DamageEventSource), GetRandomReal(-300.00, 300.00), GetRandomReal(-300.00, 300.00))
-                CreateNUnitsAtLoc(1, udg_UnitType_Array_SoulTowerUnits[GetRandomInt(1, 6)], GetOwningPlayer(udg_DamageEventSource), udg_Point_PntArray[GetForLoopIndexA()], bj_UNIT_FACING)
-                BlzSetUnitBaseDamage(GetLastCreatedUnit(), (BlzGetUnitBaseDamage(GetLastCreatedUnit(), 0) + R2I(GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource))), 0)
-                UnitApplyTimedLifeBJ(10.00, FourCC("BTLF"), GetLastCreatedUnit())
-                bj_forLoopAIndex = bj_forLoopAIndex + 1
+            if (Trig_Soul_Tower_Soul_Extraction_Func002Func004Func001C()) then
+                ForGroupBJ(udg_UnitGroup_Array_SoulTowerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))], Trig_Soul_Tower_Soul_Extraction_Func002Func004Func001Func002A)
+            else
+                bj_forLoopAIndex = 1
+                bj_forLoopAIndexEnd = 5
+                while (true) do
+                    if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
+                    udg_Point_PntArray[GetForLoopIndexA()] = OffsetLocation(GetUnitLoc(udg_DamageEventSource), GetRandomReal(-300.00, 300.00), GetRandomReal(-300.00, 300.00))
+                    CreateNUnitsAtLoc(1, udg_UnitType_Array_SoulTowerUnits[GetRandomInt(1, 6)], GetOwningPlayer(udg_DamageEventSource), udg_Point_PntArray[GetForLoopIndexA()], bj_UNIT_FACING)
+                    GroupAddUnitSimple(GetLastCreatedUnit(), udg_UnitGroup_Array_SoulTowerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
+                    BlzSetUnitBaseDamage(GetLastCreatedUnit(), (BlzGetUnitBaseDamage(GetLastCreatedUnit(), 0) + R2I(GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource))), 0)
+                    bj_forLoopAIndex = bj_forLoopAIndex + 1
+                end
             end
             SetUnitManaBJ(udg_DamageEventSource, 0.00)
         else
@@ -2790,6 +2814,46 @@ function InitTrig_Soul_Tower_Soul_Extraction()
     TriggerRegisterVariableEvent(gg_trg_Soul_Tower_Soul_Extraction, "udg_DamageEvent", EQUAL, 1.00)
     TriggerAddCondition(gg_trg_Soul_Tower_Soul_Extraction, Condition(Trig_Soul_Tower_Soul_Extraction_Conditions))
     TriggerAddAction(gg_trg_Soul_Tower_Soul_Extraction, Trig_Soul_Tower_Soul_Extraction_Actions)
+end
+
+function Trig_Soul_Tower_Minion_Remove_From_Group_Func003C()
+    if (GetUnitTypeId(GetEnumUnit()) == FourCC("n00G")) then
+        return true
+    end
+    if (GetUnitTypeId(GetEnumUnit()) == FourCC("n016")) then
+        return true
+    end
+    if (GetUnitTypeId(GetEnumUnit()) == FourCC("n00F")) then
+        return true
+    end
+    if (GetUnitTypeId(GetEnumUnit()) == FourCC("n00T")) then
+        return true
+    end
+    if (GetUnitTypeId(GetEnumUnit()) == FourCC("n00W")) then
+        return true
+    end
+    if (GetUnitTypeId(GetEnumUnit()) == FourCC("n00H")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Soul_Tower_Minion_Remove_From_Group_Conditions()
+    if (not Trig_Soul_Tower_Minion_Remove_From_Group_Func003C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Soul_Tower_Minion_Remove_From_Group_Actions()
+    GroupRemoveUnitSimple(GetTriggerUnit(), udg_UnitGroup_Array_SoulTowerUnits[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
+end
+
+function InitTrig_Soul_Tower_Minion_Remove_From_Group()
+    gg_trg_Soul_Tower_Minion_Remove_From_Group = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Soul_Tower_Minion_Remove_From_Group, EVENT_PLAYER_UNIT_DEATH)
+    TriggerAddCondition(gg_trg_Soul_Tower_Minion_Remove_From_Group, Condition(Trig_Soul_Tower_Minion_Remove_From_Group_Conditions))
+    TriggerAddAction(gg_trg_Soul_Tower_Minion_Remove_From_Group, Trig_Soul_Tower_Minion_Remove_From_Group_Actions)
 end
 
 function Trig_Set_Variables_Func178001()
@@ -4393,23 +4457,72 @@ function InitTrig_Creep_Boosting()
     TriggerAddAction(gg_trg_Creep_Boosting, Trig_Creep_Boosting_Actions)
 end
 
+function Trig_Hero_XP_Func001Func001C()
+    if (GetOwningPlayer(GetKillingUnitBJ()) == Player(0)) then
+        return true
+    end
+    if (GetOwningPlayer(GetKillingUnitBJ()) == Player(1)) then
+        return true
+    end
+    if (GetOwningPlayer(GetKillingUnitBJ()) == Player(2)) then
+        return true
+    end
+    if (GetOwningPlayer(GetKillingUnitBJ()) == Player(3)) then
+        return true
+    end
+    if (GetOwningPlayer(GetKillingUnitBJ()) == Player(4)) then
+        return true
+    end
+    if (GetOwningPlayer(GetKillingUnitBJ()) == Player(5)) then
+        return true
+    end
+    if (GetOwningPlayer(GetKillingUnitBJ()) == Player(6)) then
+        return true
+    end
+    if (GetOwningPlayer(GetKillingUnitBJ()) == Player(7)) then
+        return true
+    end
+    if (GetOwningPlayer(GetKillingUnitBJ()) == Player(8)) then
+        return true
+    end
+    return false
+end
+
+function Trig_Hero_XP_Func001Func002C()
+    if (GetOwningPlayer(GetDyingUnit()) == Player(10)) then
+        return true
+    end
+    if (GetOwningPlayer(GetDyingUnit()) == Player(11)) then
+        return true
+    end
+    return false
+end
+
 function Trig_Hero_XP_Func001C()
-    if (not (GetOwningPlayer(GetDyingUnit()) == GetOwningPlayer(GetKillingUnitBJ()))) then
+    if (not Trig_Hero_XP_Func001Func001C()) then
+        return false
+    end
+    if (not Trig_Hero_XP_Func001Func002C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hero_XP_Conditions()
+    if (not Trig_Hero_XP_Func001C()) then
         return false
     end
     return true
 end
 
 function Trig_Hero_XP_Actions()
-    if (Trig_Hero_XP_Func001C()) then
-    else
-        SetHeroXP(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))], (udg_Integer_Array_Kills[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))] * 10), true)
-    end
+    AddHeroXPSwapped(10, udg_Unit_Array_Heroes[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))], true)
 end
 
 function InitTrig_Hero_XP()
     gg_trg_Hero_XP = CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Hero_XP, EVENT_PLAYER_UNIT_DEATH)
+    TriggerAddCondition(gg_trg_Hero_XP, Condition(Trig_Hero_XP_Conditions))
     TriggerAddAction(gg_trg_Hero_XP, Trig_Hero_XP_Actions)
 end
 
@@ -16168,6 +16281,7 @@ function InitCustomTriggers()
     InitTrig_Venom_Tower_Random_Target()
     InitTrig_Ballista_Tower_Enchanted_Bolts()
     InitTrig_Soul_Tower_Soul_Extraction()
+    InitTrig_Soul_Tower_Minion_Remove_From_Group()
     InitTrig_Set_Variables()
     InitTrig_Set_Random_Wave_Variables()
     InitTrig_Map_Start()

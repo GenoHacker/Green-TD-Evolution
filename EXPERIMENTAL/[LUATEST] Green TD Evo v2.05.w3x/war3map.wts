@@ -16342,14 +16342,6 @@ STRING 2468
 [Custom]
 }
 
-STRING 2470
-// Abilities: A04C (Soul Extraction), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Attacks have a 10% chance to deal 5% of units current health as chaos damage, the tower gains mana equal to [5 + Damage Dealt].
-
-Whilst above 75% mana this tower has a 10% chance to use all the accumulated mana to summon 5 minions with random attack types whose damage is equal to [500 + Mana Spent].
-}
-
 STRING 2471
 // Abilities: A018 (Bash Tower 7), Name (Name)
 {
@@ -18880,6 +18872,16 @@ STRING 2830
 |c0000ff00Efficiency:|r |c0077ff770.37 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Multishot; can attack up to 6 enemy units.|r
 |c0000ff00Ability (2):|r |c0077ff77Soul Extraction; attacks have a 10% chance to deal 5% of an enemy units current health as chaos damage, the tower gains mana equal to the damage dealt. When above 75% mana tower has a 10% chance to use all mana to summon 5 minions.|r
+}
+
+STRING 2831
+// Abilities: A04C (Soul Extraction), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Attacks have a 10% chance to deal 5% of units current health as chaos damage, the tower gains mana equal to [5 + Damage Dealt].
+
+Whilst above 75% mana this tower has a 10% chance to use all the accumulated mana to summon 5 minions with random attack types whose damage is equal to [500 + Mana Spent].
+
+If this activates whilst minions are still alive then their damage will be increased and their health will be increased by 50% of their current health.
 }
 
 STRING 2876
