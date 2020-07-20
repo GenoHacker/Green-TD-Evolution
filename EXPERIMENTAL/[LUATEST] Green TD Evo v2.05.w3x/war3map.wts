@@ -15354,12 +15354,6 @@ STRING 2314
 |c0077ff77[Z] |c0000ff00Upgrade To Warlock, Ultimate Fel Tower.|r |cAAAAFFAAFel Tower 10.|r
 }
 
-STRING 2315
-// Abilities: A02I (Frostbite), Name (Name)
-{
-Frostbite
-}
-
 STRING 2316
 // Units: h02E (Hellfire Tower 5: Hell Shrine), Tip (Tooltip - Basic)
 {
@@ -15585,12 +15579,6 @@ STRING 2348
 |c0077ff77[Z] |c0000ff00Upgrade To Lizard.|r |cAAAAFFAAVenom Tower 5.|r
 }
 
-STRING 2349
-// Abilities: A04D (Ice Shard), Name (Name)
-{
-Ice Shard
-}
-
 STRING 2350
 // Units: h00P (Ballista Tower 5), Name (Name)
 {
@@ -15652,7 +15640,7 @@ Ballista Tower 9
 }
 
 STRING 2360
-// Abilities: A04E (Multishot), Name (Name)
+// Abilities: A013 (Multishot), Name (Name)
 {
 Multishot
 }
@@ -15974,6 +15962,12 @@ STRING 2406
 |c0077ff77[Z] |c0000ff00Upgrade To Lizard.|r |cAAAAFFAAVenom Tower 8.|r
 }
 
+STRING 2407
+// Units: n00X (Shard Tower 4: Frozen Obelisk), Name (Name)
+{
+Shard Tower 4: Frozen Obelisk
+}
+
 STRING 2408
 // Units: h01R (Venom Tower 9: Lizard), Name (Name)
 {
@@ -15984,6 +15978,12 @@ STRING 2409
 // Units: h01R (Venom Tower 9: Lizard), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Lizard.|r |cAAAAFFAAVenom Tower 9.|r
+}
+
+STRING 2410
+// Units: n00X (Shard Tower 4: Frozen Obelisk), Tip (Tooltip - Basic)
+{
+|c0077ff77[X] |c0000ff00Upgrade To Frozen Obelisk.|r |cAAAAFFAAShard Tower 4.|r
 }
 
 STRING 2412
@@ -16295,7 +16295,7 @@ Gagoo Gamblegoblin
 }
 
 STRING 2459
-// Abilities: A04E (Multishot), Tip (Tooltip - Normal)
+// Abilities: A046 (Multishot), Tip (Tooltip - Normal)
 {
 |c0000ff00Multishot - |c0077ff77[Level 2]|r
 }
@@ -16343,7 +16343,7 @@ Soul Tower 6: Runic Crystal
 }
 
 STRING 2467
-// Abilities: A04E (Multishot), Tip (Tooltip - Normal)
+// Abilities: A046 (Multishot), Tip (Tooltip - Normal)
 {
 |c0000ff00Multishot - |c0077ff77[Level 3]|r
 }
@@ -16361,7 +16361,7 @@ STRING 2469
 }
 
 STRING 2470
-// Abilities: A04E (Multishot), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A046 (Multishot), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77The Research Tower is able to attack 6 Enemies in one Attack.|r
 }
@@ -16379,7 +16379,7 @@ Soul Tower 8: Runic Crystal
 }
 
 STRING 2473
-// Abilities: A04E (Multishot), Tip (Tooltip - Normal)
+// Abilities: A046 (Multishot), Tip (Tooltip - Normal)
 {
 |c0000ff00Multishot - |c0077ff77[Level 4]|r
 }
@@ -16403,7 +16403,7 @@ Soul Tower 9: Runic Crystal
 }
 
 STRING 2476
-// Abilities: A04E (Multishot), Tip (Tooltip - Normal)
+// Abilities: A046 (Multishot), Tip (Tooltip - Normal)
 {
 |c0000ff00Multishot - |c0077ff77[Level 5]|r
 }
@@ -16427,7 +16427,7 @@ Ultimate Soul Tower
 }
 
 STRING 2479
-// Abilities: A04E (Multishot), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A046 (Multishot), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77The Research Tower is able to attack 7 Enemies in one Attack.|r
 }
@@ -16469,7 +16469,7 @@ Z
 }
 
 STRING 2486
-// Abilities: A04E (Multishot), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A046 (Multishot), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77The Research Tower is able to attack 8 Enemies in one Attack.|r
 }
@@ -16721,7 +16721,7 @@ STRING 2519
 }
 
 STRING 2520
-// Abilities: A013 (Multishot), Name (Name)
+// Abilities: A046 (Multishot), Name (Name)
 {
 Multishot
 }
@@ -16739,13 +16739,13 @@ STRING 2522
 }
 
 STRING 2523
-// Abilities: A046 (Multishot), Tip (Tooltip - Normal)
+// Abilities: A04E (Multishot), Tip (Tooltip - Normal)
 {
 |c0000ff00Multishot - |c0077ff77[Level 2]|r
 }
 
 STRING 2524
-// Abilities: A046 (Multishot), Tip (Tooltip - Normal)
+// Abilities: A04E (Multishot), Tip (Tooltip - Normal)
 {
 |c0000ff00Multishot - |c0077ff77[Level 3]|r
 }
@@ -16757,31 +16757,31 @@ STRING 2525
 }
 
 STRING 2526
-// Abilities: A046 (Multishot), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04E (Multishot), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77The Research Tower is able to attack 6 Enemies in one Attack.|r
 }
 
 STRING 2527
-// Abilities: A046 (Multishot), Tip (Tooltip - Normal)
+// Abilities: A04E (Multishot), Tip (Tooltip - Normal)
 {
 |c0000ff00Multishot - |c0077ff77[Level 4]|r
 }
 
 STRING 2528
-// Abilities: A046 (Multishot), Tip (Tooltip - Normal)
+// Abilities: A04E (Multishot), Tip (Tooltip - Normal)
 {
 |c0000ff00Multishot - |c0077ff77[Level 5]|r
 }
 
 STRING 2529
-// Abilities: A046 (Multishot), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04E (Multishot), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77The Research Tower is able to attack 7 Enemies in one Attack.|r
 }
 
 STRING 2530
-// Abilities: A046 (Multishot), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04E (Multishot), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77The Research Tower is able to attack 8 Enemies in one Attack.|r
 }
@@ -18944,46 +18944,29 @@ STRING 2833
 |c0000ff00Multishot - |c0077ff77[Level 1]|r
 }
 
-STRING 2834
-// Units: n00X (Shard Tower 3: Frozen Obelisk), Ubertip (Tooltip - Extended)
+STRING 2839
+// Units: h013 (Venom Tower 4: Lizard), Hotkey (Hotkey)
+{
+X
+}
+
+STRING 2841
+// Units: n00X (Shard Tower 4: Frozen Obelisk), Ubertip (Tooltip - Extended)
 {
 |c0000ff00Attack:|r |c0077ff77Magic
 |c0000ff00Cooldown:|r |c0077ff771.50
 |c0000ff00Damage:|r |c0077ff771700
 |c0000ff00Range:|r |c0077ff77600
 |c0000ff00Efficiency:|r |c0077ff771.13 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300
-|c0000ff00Ability (2):|r |c0077ff77Freezing Attack|r
+|c0000ff00Ability:|r |c0077ff77Freezing Attack|r
+|c0000ff00Ability (2):|r |c0077ff77Multishot: attacks 3 targets at once
+|c0000ff00Ability (3):|r |c0077ff77Frostbite: Nearby units affected by this have a 10% chance to be hit by an Ice Shard, dealing 25% of the towers damage as spell damage, Frostbite and Ice Shards generate mana, whilst at full mana the towers multishot is temporarily improved and it deals 200% damage to units slowed by any frost tower.|r
 }
 
-STRING 2835
-// Abilities: A02I (Frostbite), Ubertip (Tooltip - Normal - Extended)
+STRING 2843
+// Abilities: A04D (Frost Nova), EditorSuffix (Editor Suffix)
 {
-Deals 25 damage to nearby enemies every second
-}
-
-STRING 2836
-// Abilities: A02I (Frostbite), Tip (Tooltip - Normal)
-{
-Frostbite
-}
-
-STRING 2837
-// Units: n00X (Shard Tower 3: Frozen Obelisk), Name (Name)
-{
-Shard Tower 3: Frozen Obelisk
-}
-
-STRING 2838
-// Units: n00X (Shard Tower 3: Frozen Obelisk), Tip (Tooltip - Basic)
-{
-|c0077ff77[X] |c0000ff00Upgrade To Frozen Obelisk.|r |cAAAAFFAAShard Tower 3.|r
-}
-
-STRING 2839
-// Abilities: A049 (Random Game Modes + Difficulty), Hotkey (Hotkey - Normal)
-{
-X
+[Shard Tower]
 }
 
 STRING 2876
@@ -19848,7 +19831,7 @@ STRING 3510
 }
 
 STRING 4139
-// Abilities: A046 (Multishot), Name (Name)
+// Abilities: A04E (Multishot), Name (Name)
 {
 Multishot
 }
@@ -20004,7 +19987,7 @@ S
 }
 
 STRING 4338
-// Units: h013 (Venom Tower 4: Lizard), Hotkey (Hotkey)
+// Units: h02L (Hellfire Tower 4: Hell Shrine), Hotkey (Hotkey)
 {
 X
 }
@@ -20099,31 +20082,31 @@ This unit is under the effect of a Damage Aura, It has Increased Attack Damage.
 }
 
 STRING 4480
-// Units: h02L (Hellfire Tower 4: Hell Shrine), Hotkey (Hotkey)
+// Units: n00X (Shard Tower 4: Frozen Obelisk), Hotkey (Hotkey)
 {
 X
 }
 
 STRING 4481
-// Units: n00X (Shard Tower 3: Frozen Obelisk), Hotkey (Hotkey)
-{
-X
-}
-
-STRING 4484
 // Abilities: A01B (Stasis Trap), Hotkey (Hotkey - Normal)
 {
 X
 }
 
-STRING 4487
+STRING 4484
 // Abilities: A012 (Emergency Siege Tower), Hotkey (Hotkey - Normal)
 {
 X
 }
 
-STRING 4490
+STRING 4487
 // Abilities: A01Y (Emergency Siege Tower), Hotkey (Hotkey - Normal)
+{
+X
+}
+
+STRING 4490
+// Abilities: A028 (Debug), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -21905,19 +21888,19 @@ Z
 }
 
 STRING 7108
-// Abilities: A028 (Debug), Hotkey (Hotkey - Normal)
-{
-X
-}
-
-STRING 7112
 // Abilities: A02P (Disable Traps), Hotkey (Hotkey - Normal)
 {
 X
 }
 
-STRING 7114
+STRING 7112
 // Abilities: A047 (Game Modes), Hotkey (Hotkey - Normal)
+{
+X
+}
+
+STRING 7114
+// Abilities: A049 (Random Game Modes + Difficulty), Hotkey (Hotkey - Normal)
 {
 X
 }

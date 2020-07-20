@@ -341,6 +341,7 @@ gg_trg_Venom_Tower_Random_Target = nil
 gg_trg_Ballista_Tower_Enchanted_Bolts = nil
 gg_trg_Soul_Tower_Soul_Extraction = nil
 gg_trg_Soul_Tower_Minion_Remove_From_Group = nil
+gg_trg_Shard_Tower_Abilities = nil
 gg_trg_Set_Variables = nil
 gg_trg_Set_Random_Wave_Variables = nil
 gg_trg_Map_Start = nil
@@ -529,7 +530,6 @@ gg_unit_z000_0121 = nil
 gg_unit_z001_0122 = nil
 gg_unit_z001_0123 = nil
 gg_unit_o00I_0124 = nil
-gg_trg_Shard_Tower_Abilities = nil
 function InitGlobals()
     local i = 0
     i = 0
@@ -2110,6 +2110,15 @@ function CreateBuildingsForPlayer0()
     gg_unit_n00C_0019 = BlzCreateUnitWithSkin(p, FourCC("n00C"), -1792.0, 3392.0, 270.000, FourCC("n00C"))
 end
 
+function CreateNeutralHostile()
+    local p = Player(PLAYER_NEUTRAL_AGGRESSIVE)
+    local u
+    local unitID
+    local t
+    local life
+    u = BlzCreateUnitWithSkin(p, FourCC("n013"), -1794.5, 3141.5, 257.934, FourCC("n013"))
+end
+
 function CreateNeutralPassiveBuildings()
     local p = Player(PLAYER_NEUTRAL_PASSIVE)
     local u
@@ -2135,7 +2144,6 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("n013"), -6140.9, 7180.5, 320.162, FourCC("n013"))
     u = BlzCreateUnitWithSkin(p, FourCC("n013"), -6394.9, 3343.3, 51.813, FourCC("n013"))
     u = BlzCreateUnitWithSkin(p, FourCC("n013"), -6130.3, -1541.8, 66.524, FourCC("n013"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n013"), -1794.5, 3141.5, 257.934, FourCC("n013"))
     u = BlzCreateUnitWithSkin(p, FourCC("n013"), -2113.5, -3121.5, 70.282, FourCC("n013"))
     u = BlzCreateUnitWithSkin(p, FourCC("n013"), -1471.5, -3125.2, 89.124, FourCC("n013"))
     u = BlzCreateUnitWithSkin(p, FourCC("n013"), 2566.6, -1537.0, 51.813, FourCC("n013"))
@@ -2283,6 +2291,7 @@ end
 function CreateAllUnits()
     CreateNeutralPassiveBuildings()
     CreatePlayerBuildings()
+    CreateNeutralHostile()
     CreateNeutralPassive()
     CreatePlayerUnits()
 end
@@ -2597,10 +2606,8 @@ function Trig_Crit_System_Actions()
         udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_SkillCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + udg_Real_Array_CritAuraChances[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)])
         udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_SpellCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (udg_Real_Array_SkillCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + 0.00)))
         udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
-        DisplayTimedTextToForce(GetPlayersAll(), 3.00, (R2S(udg_Real_Array_BonusCritDamage[1]) .. ""))
         if (Trig_Crit_System_Func013Func005C()) then
             udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
-            DisplayTimedTextToForce(GetPlayersAll(), 3.00, R2S(udg_DamageEventAmount))
         else
         end
     else
@@ -2864,23 +2871,7 @@ function InitTrig_Soul_Tower_Minion_Remove_From_Group()
     TriggerAddAction(gg_trg_Soul_Tower_Minion_Remove_From_Group, Trig_Soul_Tower_Minion_Remove_From_Group_Actions)
 end
 
-function Trig_Shard_Tower_Abilities_Func001Func002Func001C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A04E"), udg_DamageEventSource) == 2)) then
-        return false
-    end
-    if (not (GetUnitManaPercent(udg_DamageEventSource) <= 20.00)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Shard_Tower_Abilities_Func001Func002C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A04E"), udg_DamageEventSource) == 2)) then
-        return false
-    end
-    if (not (udg_IsDamageRanged == true)) then
-        return false
-    end
+function Trig_Shard_Tower_Abilities_Func001Func003C()
     if (not (UnitHasBuffBJ(udg_DamageEventTarget, FourCC("Bfro")) == true)) then
         return false
     end
@@ -2888,6 +2879,16 @@ function Trig_Shard_Tower_Abilities_Func001Func002C()
 end
 
 function Trig_Shard_Tower_Abilities_Func001C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A04E"), udg_DamageEventSource) == 2)) then
+        return false
+    end
+    if (not (GetUnitManaPercent(udg_DamageEventSource) >= 10.01)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Shard_Tower_Abilities_Func002C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A04E"), udg_DamageEventSource) == 1)) then
         return false
     end
@@ -2897,35 +2898,25 @@ function Trig_Shard_Tower_Abilities_Func001C()
     return true
 end
 
-function Trig_Shard_Tower_Abilities_Func002Func005Func008C()
+function Trig_Shard_Tower_Abilities_Func003Func003C()
     if (not (udg_Real_Array_ShardTowerChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= 25.00)) then
         return false
     end
     return true
 end
 
-function Trig_Shard_Tower_Abilities_Func002Func005C()
-    if (not (udg_Real_Array_ShardTowerChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= 40.00)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Shard_Tower_Abilities_Func002C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A02I"), udg_DamageEventSource) == 1)) then
-        return false
-    end
-    if (not (udg_IsDamageSpell == true)) then
-        return false
-    end
-    return true
-end
-
 function Trig_Shard_Tower_Abilities_Func003C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A04D"), udg_DamageEventSource) == 1)) then
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A04E"), udg_DamageEventSource) == 1)) then
         return false
     end
+    return true
+end
+
+function Trig_Shard_Tower_Abilities_Func004C()
     if (not (udg_IsDamageSpell == true)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A04D"), udg_DamageEventSource) == 1)) then
         return false
     end
     return true
@@ -2933,38 +2924,32 @@ end
 
 function Trig_Shard_Tower_Abilities_Actions()
     if (Trig_Shard_Tower_Abilities_Func001C()) then
-        SetUnitAbilityLevelSwapped(FourCC("A04E"), udg_DamageEventSource, 2)
-        if (Trig_Shard_Tower_Abilities_Func001Func002C()) then
-            SetUnitManaBJ(udg_DamageEventSource, (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) - (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) * 0.04)))
+        SetUnitManaBJ(udg_DamageEventSource, (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) - (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) * 0.05)))
+        if (Trig_Shard_Tower_Abilities_Func001Func003C()) then
             udg_DamageEventAmount = (udg_DamageEventAmount * 2.00)
         else
-            if (Trig_Shard_Tower_Abilities_Func001Func002Func001C()) then
-                SetUnitAbilityLevelSwapped(FourCC("A04E"), udg_DamageEventSource, 1)
-            else
-            end
         end
     else
+        SetUnitAbilityLevelSwapped(FourCC("A04E"), udg_DamageEventSource, 1)
     end
     if (Trig_Shard_Tower_Abilities_Func002C()) then
-        SetUnitManaBJ(udg_DamageEventSource, (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + udg_DamageEventAmount))
-        udg_Real_Array_ShardTowerChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
-        if (Trig_Shard_Tower_Abilities_Func002Func005C()) then
-            CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
-            BlzSetUnitRealFieldBJ(GetTriggerUnit(), UNIT_RF_PRIORITY, (I2R(BlzGetUnitBaseDamage(udg_DamageEventSource, 0)) * 0.25))
-            UnitAddAbilityBJ(FourCC("A003"), GetLastCreatedUnit())
-            UnitAddAbilityBJ(FourCC("A04D"), GetLastCreatedUnit())
-            IssueTargetOrderBJ(GetLastCreatedUnit(), "attack", udg_DamageEventTarget)
-            IssueTargetOrderBJ(GetLastCreatedUnit(), "deathcoil", udg_DamageEventTarget)
-            udg_Real_Array_ShardTowerChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
-            if (Trig_Shard_Tower_Abilities_Func002Func005Func008C()) then
-                SetUnitManaBJ(udg_DamageEventSource, (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + (GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_DamageEventSource) * 0.10)))
-            else
-            end
-        else
-        end
+        SetUnitAbilityLevelSwapped(FourCC("A04E"), udg_DamageEventSource, 2)
     else
     end
     if (Trig_Shard_Tower_Abilities_Func003C()) then
+        udg_Real_Array_ShardTowerChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
+        if (Trig_Shard_Tower_Abilities_Func003Func003C()) then
+            SetUnitManaBJ(udg_DamageEventSource, (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + GetRandomReal(10.00, 100.00)))
+            CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventTarget), bj_UNIT_FACING)
+            BlzSetUnitRealFieldBJ(GetLastCreatedUnit(), UNIT_RF_PRIORITY, (I2R(BlzGetUnitWeaponIntegerField(udg_DamageEventSource, UNIT_WEAPON_IF_ATTACK_DAMAGE_BASE, 0)) * 0.25))
+            UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
+            UnitAddAbilityBJ(FourCC("A04D"), GetLastCreatedUnit())
+            IssueTargetOrderBJ(GetLastCreatedUnit(), "frostnova", udg_DamageEventTarget)
+        else
+        end
+    else
+    end
+    if (Trig_Shard_Tower_Abilities_Func004C()) then
         UnitDamageTargetBJ(udg_DamageEventSource, udg_DamageEventTarget, BlzGetUnitRealField(udg_DamageEventSource, UNIT_RF_PRIORITY), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
     else
     end
@@ -2972,7 +2957,7 @@ end
 
 function InitTrig_Shard_Tower_Abilities()
     gg_trg_Shard_Tower_Abilities = CreateTrigger()
-    TriggerRegisterVariableEvent(gg_trg_Shard_Tower_Abilities, "udg_DamageEvent", EQUAL, 1.00)
+    TriggerRegisterVariableEvent(gg_trg_Shard_Tower_Abilities, "udg_DamageModifierEvent", EQUAL, 1.00)
     TriggerAddAction(gg_trg_Shard_Tower_Abilities, Trig_Shard_Tower_Abilities_Actions)
 end
 
