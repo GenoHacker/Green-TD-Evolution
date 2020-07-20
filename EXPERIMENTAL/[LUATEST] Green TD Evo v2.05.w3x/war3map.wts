@@ -15354,6 +15354,12 @@ STRING 2314
 |c0077ff77[Z] |c0000ff00Upgrade To Warlock, Ultimate Fel Tower.|r |cAAAAFFAAFel Tower 10.|r
 }
 
+STRING 2315
+// Abilities: A02I (Frostbite), Name (Name)
+{
+Frostbite
+}
+
 STRING 2316
 // Units: h02E (Hellfire Tower 5: Hell Shrine), Tip (Tooltip - Basic)
 {
@@ -15579,6 +15585,12 @@ STRING 2348
 |c0077ff77[Z] |c0000ff00Upgrade To Lizard.|r |cAAAAFFAAVenom Tower 5.|r
 }
 
+STRING 2349
+// Abilities: A04D (Ice Shard), Name (Name)
+{
+Ice Shard
+}
+
 STRING 2350
 // Units: h00P (Ballista Tower 5), Name (Name)
 {
@@ -15637,6 +15649,12 @@ STRING 2359
 // Units: h00S (Ballista Tower 9), Name (Name)
 {
 Ballista Tower 9
+}
+
+STRING 2360
+// Abilities: A04E (Multishot), Name (Name)
+{
+Multishot
 }
 
 STRING 2361
@@ -15956,12 +15974,6 @@ STRING 2406
 |c0077ff77[Z] |c0000ff00Upgrade To Lizard.|r |cAAAAFFAAVenom Tower 8.|r
 }
 
-STRING 2407
-// Units: n00X (Shard Tower 3), Name (Name)
-{
-Shard Tower 3
-}
-
 STRING 2408
 // Units: h01R (Venom Tower 9: Lizard), Name (Name)
 {
@@ -15972,24 +15984,6 @@ STRING 2409
 // Units: h01R (Venom Tower 9: Lizard), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Lizard.|r |cAAAAFFAAVenom Tower 9.|r
-}
-
-STRING 2410
-// Units: n00X (Shard Tower 3), Tip (Tooltip - Basic)
-{
-|c0077ff77[Z] |c0000ff00Upgrade To Hydromancer.|r |cAAAAFFAAFrost Tower 3.|r
-}
-
-STRING 2411
-// Units: n00X (Shard Tower 3), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Magic
-|c0000ff00Cooldown:|r |c0077ff770.75
-|c0000ff00Damage:|r |c0077ff771700
-|c0000ff00Range:|r |c0077ff77900
-|c0000ff00Efficiency:|r |c0077ff771.13 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300
-|c0000ff00Ability (2):|r |c0077ff77Freezing Attack|r
 }
 
 STRING 2412
@@ -16046,6 +16040,12 @@ STRING 2420
 // Abilities: A03N (Enchanted Bolts), Tip (Tooltip - Normal)
 {
 |c0000ff00Enchanted Bolts
+}
+
+STRING 2421
+// Abilities: A04E (Multishot), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77The Shard Tower is able to attack 3 Enemies in one Attack.|r
 }
 
 STRING 2422
@@ -16294,6 +16294,12 @@ STRING 2458
 Gagoo Gamblegoblin
 }
 
+STRING 2459
+// Abilities: A04E (Multishot), Tip (Tooltip - Normal)
+{
+|c0000ff00Multishot - |c0077ff77[Level 2]|r
+}
+
 STRING 2460
 // Units: n00L (Frost Tower 7: Frost Revenant), Hotkey (Hotkey)
 {
@@ -16336,10 +16342,28 @@ STRING 2466
 Soul Tower 6: Runic Crystal
 }
 
+STRING 2467
+// Abilities: A04E (Multishot), Tip (Tooltip - Normal)
+{
+|c0000ff00Multishot - |c0077ff77[Level 3]|r
+}
+
 STRING 2468
 // Abilities: A004 (Critical Strike), EditorSuffix (Editor Suffix)
 {
 [Custom]
+}
+
+STRING 2469
+// Abilities: A04E (Multishot), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77The Shard Tower is able to attack 10 Enemies in one Attack.|r
+}
+
+STRING 2470
+// Abilities: A04E (Multishot), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77The Research Tower is able to attack 6 Enemies in one Attack.|r
 }
 
 STRING 2471
@@ -16352,6 +16376,12 @@ STRING 2472
 // Units: h045 (Soul Tower 8: Runic Crystal), Name (Name)
 {
 Soul Tower 8: Runic Crystal
+}
+
+STRING 2473
+// Abilities: A04E (Multishot), Tip (Tooltip - Normal)
+{
+|c0000ff00Multishot - |c0077ff77[Level 4]|r
 }
 
 STRING 2474
@@ -16372,6 +16402,12 @@ STRING 2475
 Soul Tower 9: Runic Crystal
 }
 
+STRING 2476
+// Abilities: A04E (Multishot), Tip (Tooltip - Normal)
+{
+|c0000ff00Multishot - |c0077ff77[Level 5]|r
+}
+
 STRING 2477
 // Units: h02M (Soul Tower 7: Runic Crystal), Ubertip (Tooltip - Extended)
 {
@@ -16388,6 +16424,12 @@ STRING 2478
 // Units: h047 (Ultimate Soul Tower), Name (Name)
 {
 Ultimate Soul Tower
+}
+
+STRING 2479
+// Abilities: A04E (Multishot), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77The Research Tower is able to attack 7 Enemies in one Attack.|r
 }
 
 STRING 2480
@@ -16424,6 +16466,12 @@ STRING 2485
 // Units: e00H (Bouncing Tower 8: Berserking Wildkin), Hotkey (Hotkey)
 {
 Z
+}
+
+STRING 2486
+// Abilities: A04E (Multishot), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77The Research Tower is able to attack 8 Enemies in one Attack.|r
 }
 
 STRING 2487
@@ -18884,6 +18932,60 @@ Whilst above 75% mana this tower has a 10% chance to use all the accumulated man
 If this activates whilst minions are still alive then their damage will be increased and their health will be increased by 50% of their current health.
 }
 
+STRING 2832
+// Abilities: A04E (Multishot), EditorSuffix (Editor Suffix)
+{
+[Shard Tower]
+}
+
+STRING 2833
+// Abilities: A04E (Multishot), Tip (Tooltip - Normal)
+{
+|c0000ff00Multishot - |c0077ff77[Level 1]|r
+}
+
+STRING 2834
+// Units: n00X (Shard Tower 3: Frozen Obelisk), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Magic
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff771700
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff771.13 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300
+|c0000ff00Ability (2):|r |c0077ff77Freezing Attack|r
+}
+
+STRING 2835
+// Abilities: A02I (Frostbite), Ubertip (Tooltip - Normal - Extended)
+{
+Deals 25 damage to nearby enemies every second
+}
+
+STRING 2836
+// Abilities: A02I (Frostbite), Tip (Tooltip - Normal)
+{
+Frostbite
+}
+
+STRING 2837
+// Units: n00X (Shard Tower 3: Frozen Obelisk), Name (Name)
+{
+Shard Tower 3: Frozen Obelisk
+}
+
+STRING 2838
+// Units: n00X (Shard Tower 3: Frozen Obelisk), Tip (Tooltip - Basic)
+{
+|c0077ff77[X] |c0000ff00Upgrade To Frozen Obelisk.|r |cAAAAFFAAShard Tower 3.|r
+}
+
+STRING 2839
+// Abilities: A049 (Random Game Modes + Difficulty), Hotkey (Hotkey - Normal)
+{
+X
+}
+
 STRING 2876
 // Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
@@ -20003,25 +20105,25 @@ X
 }
 
 STRING 4481
-// Abilities: A01B (Stasis Trap), Hotkey (Hotkey - Normal)
+// Units: n00X (Shard Tower 3: Frozen Obelisk), Hotkey (Hotkey)
 {
 X
 }
 
 STRING 4484
-// Abilities: A012 (Emergency Siege Tower), Hotkey (Hotkey - Normal)
+// Abilities: A01B (Stasis Trap), Hotkey (Hotkey - Normal)
 {
 X
 }
 
 STRING 4487
-// Abilities: A01Y (Emergency Siege Tower), Hotkey (Hotkey - Normal)
+// Abilities: A012 (Emergency Siege Tower), Hotkey (Hotkey - Normal)
 {
 X
 }
 
 STRING 4490
-// Abilities: A028 (Debug), Hotkey (Hotkey - Normal)
+// Abilities: A01Y (Emergency Siege Tower), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -21749,79 +21851,73 @@ Z
 }
 
 STRING 7087
-// Units: n00X (Shard Tower 3), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 7088
 // Abilities: A01J (Slow), Hotkey (Hotkey - Normal)
 {
 Z
 }
 
-STRING 7089
+STRING 7088
 // Abilities: A01J (Slow), Unhotkey (Hotkey - Turn Off)
 {
 Z
 }
 
-STRING 7090
+STRING 7089
 // Abilities: A023 (Upgrade Trap Ability), Hotkey (Hotkey - Normal)
 {
 Z
 }
 
-STRING 7091
+STRING 7090
 // Abilities: A01K (Immolation), Hotkey (Hotkey - Normal)
 {
 Z
 }
 
-STRING 7092
+STRING 7091
 // Abilities: A01K (Immolation), Unhotkey (Hotkey - Turn Off)
 {
 Z
 }
 
-STRING 7093
+STRING 7092
 // Abilities: A020 (3 - Decrease Zoom), Hotkey (Hotkey - Normal)
 {
 Z
 }
 
-STRING 7094
+STRING 7093
 // Abilities: A02M (Chaos Mode), Hotkey (Hotkey - Normal)
 {
 Z
 }
 
-STRING 7095
+STRING 7094
 // Abilities: A02Q (Disable Aura Tower), Hotkey (Hotkey - Normal)
 {
 Z
 }
 
-STRING 7096
+STRING 7095
 // Abilities: A048 (Random Game Modes), Hotkey (Hotkey - Normal)
 {
 Z
 }
 
 STRING 7108
-// Abilities: A02P (Disable Traps), Hotkey (Hotkey - Normal)
+// Abilities: A028 (Debug), Hotkey (Hotkey - Normal)
 {
 X
 }
 
 STRING 7112
-// Abilities: A047 (Game Modes), Hotkey (Hotkey - Normal)
+// Abilities: A02P (Disable Traps), Hotkey (Hotkey - Normal)
 {
 X
 }
 
 STRING 7114
-// Abilities: A049 (Random Game Modes + Difficulty), Hotkey (Hotkey - Normal)
+// Abilities: A047 (Game Modes), Hotkey (Hotkey - Normal)
 {
 X
 }
