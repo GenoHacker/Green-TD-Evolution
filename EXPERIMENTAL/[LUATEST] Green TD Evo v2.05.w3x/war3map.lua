@@ -333,7 +333,6 @@ gg_snd_Wave_Normal = nil
 gg_snd_Wave_Hero = nil
 gg_snd_Wave_Boss = nil
 gg_snd_HeroLichPissed8 = nil
-gg_trg_Damage_Tag = nil
 gg_trg_Damage_Engine_Config = nil
 gg_trg_Crit_System = nil
 gg_trg_Crit_Aura = nil
