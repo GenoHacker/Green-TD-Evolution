@@ -13342,18 +13342,6 @@ STRING 2060
 Income is increased by |cffFDD0172 Gold|c0077ff77 for each activated game mode.
 }
 
-STRING 2061
-// Units: n00V (Frost Tower 9: Frost Warrior), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Magic
-|c0000ff00Cooldown:|r |c0077ff770.75
-|c0000ff00Damage:|r |c0077ff7727000
-|c0000ff00Range:|r |c0077ff77900
-|c0000ff00Efficiency:|r |c0077ff771.54 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300
-|c0000ff00Ability (2):|r |c0077ff77Freezing Attack|r
-}
-
 STRING 2062
 // Abilities: A032 (Hard - Chaos Mode), Tip (Tooltip - Normal)
 {
@@ -15354,6 +15342,12 @@ STRING 2314
 |c0077ff77[Z] |c0000ff00Upgrade To Warlock, Ultimate Fel Tower.|r |cAAAAFFAAFel Tower 10.|r
 }
 
+STRING 2315
+// Units: n01E (Shard Tower 5: Frozen Obelisk), Name (Name)
+{
+Shard Tower 5: Frozen Obelisk
+}
+
 STRING 2316
 // Units: h02E (Hellfire Tower 5: Hell Shrine), Tip (Tooltip - Basic)
 {
@@ -16087,12 +16081,6 @@ Bash Tower 1
 STRING 2427
 {
 Vimp Gaming
-}
-
-STRING 2428
-// Abilities: A04B (Dummy Ability), Name (Name)
-{
-Dummy Ability
 }
 
 STRING 2429
@@ -18944,29 +18932,130 @@ STRING 2833
 |c0000ff00Multishot - |c0077ff77[Level 1]|r
 }
 
+STRING 2834
+// Units: n01F (Shard Tower 6: Frozen Obelisk), Name (Name)
+{
+Shard Tower 6: Frozen Obelisk
+}
+
+STRING 2835
+// Units: n01F (Shard Tower 6: Frozen Obelisk), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade To Frozen Obelisk.|r |cAAAAFFAAShard Tower 6.|r
+}
+
+STRING 2837
+// Units: n01L (Shard Tower 7: Frozen Obelisk), Name (Name)
+{
+Shard Tower 7: Frozen Obelisk
+}
+
+STRING 2838
+// Units: n01L (Shard Tower 7: Frozen Obelisk), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade To Frozen Obelisk.|r |cAAAAFFAAShard Tower 7.|r
+}
+
 STRING 2839
 // Units: h013 (Venom Tower 4: Lizard), Hotkey (Hotkey)
 {
 X
 }
 
-STRING 2841
-// Units: n00X (Shard Tower 4: Frozen Obelisk), Ubertip (Tooltip - Extended)
+STRING 2842
+// Units: n01M (Shard Tower 8: Frozen Obelisk), Name (Name)
 {
-|c0000ff00Attack:|r |c0077ff77Magic
-|c0000ff00Cooldown:|r |c0077ff771.50
-|c0000ff00Damage:|r |c0077ff771700
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff771.13 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Freezing Attack|r
-|c0000ff00Ability (2):|r |c0077ff77Multishot: attacks 3 targets at once
-|c0000ff00Ability (3):|r |c0077ff77Frostbite: Nearby units affected by this have a 10% chance to be hit by an Ice Shard, dealing 25% of the towers damage as spell damage, Frostbite and Ice Shards generate mana, whilst at full mana the towers multishot is temporarily improved and it deals 200% damage to units slowed by any frost tower.|r
+Shard Tower 8: Frozen Obelisk
 }
 
 STRING 2843
 // Abilities: A04D (Frost Nova), EditorSuffix (Editor Suffix)
 {
 [Shard Tower]
+}
+
+STRING 2844
+// Units: n01M (Shard Tower 8: Frozen Obelisk), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade To Frozen Obelisk.|r |cAAAAFFAAShard Tower 8.|r
+}
+
+STRING 2846
+// Units: n01N (Shard Tower 9: Frozen Obelisk), Name (Name)
+{
+Shard Tower 9: Frozen Obelisk
+}
+
+STRING 2847
+// Units: n01N (Shard Tower 9: Frozen Obelisk), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade To Frozen Obelisk.|r |cAAAAFFAAShard Tower 9.|r
+}
+
+STRING 2849
+// Units: n01O (Frozen Obelisk, UIltimate Shard Tower), Name (Name)
+{
+Frozen Obelisk, UIltimate Shard Tower
+}
+
+STRING 2850
+// Units: n01O (Frozen Obelisk, UIltimate Shard Tower), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade To Frozen Obelisk, Ultimate.|r |cAAAAFFAAShard Tower 10.|r
+}
+
+STRING 2852
+// Units: e00I (Bouncing Tower 9: Shadow Wolf), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 2853
+// Units: h02N (Chaos Tower 9: Chaos Soul), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 2854
+// Units: h02P (Chaos Tower 6: Chaos Stalker), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 2855
+// Units: h02Q (Chaos Tower 7: Chaos Heretic), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 2856
+// Units: h02R (Chaos Tower 8: Chaos Revenant), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 2859
+// Units: n01E (Shard Tower 5: Frozen Obelisk), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade To Frozen Obelisk.|r |cAAAAFFAAShard Tower 5.|r
+}
+
+STRING 2866
+// Units: h02A (Chaos Tower 5: Chaos Infernal), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 2867
+// Units: n00V (Frost Tower 9: Frost Warrior), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Magic
+|c0000ff00Cooldown:|r |c0077ff770.75
+|c0000ff00Damage:|r |c0077ff7727000
+|c0000ff00Range:|r |c0077ff77900
+|c0000ff00Efficiency:|r |c0077ff771.59 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300
+|c0000ff00Ability (2):|r |c0077ff77Freezing Attack|r
 }
 
 STRING 2876
@@ -19224,8 +19313,20 @@ STRING 2908
 Q
 }
 
+STRING 2909
+// Abilities: A04B (Frostbite), Name (Name)
+{
+Frostbite
+}
+
+STRING 2910
+// Abilities: A04B (Frostbite), Tip (Tooltip - Normal)
+{
+|c0000ff00Frostbite
+}
+
 STRING 2911
-// Units: e00I (Bouncing Tower 9: Shadow Wolf), Hotkey (Hotkey)
+// Units: h032 (Bash Tower 6: Siege Golem), Hotkey (Hotkey)
 {
 Z
 }
@@ -19248,28 +19349,128 @@ STRING 2923
 Q
 }
 
+STRING 2925
+// Units: n00X (Shard Tower 4: Frozen Obelisk), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Magic
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff772000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.80 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Freezing Attack|r
+|c0000ff00Ability (2):|r |c0077ff77Multishot: attacks 3 targets, becomes 10 targets when at full mana but each hit drains mana.
+|c0000ff00Ability (3):|r |c0077ff77Frostbite: Attacks have a chance to cast a frost nova onto an enemy, dealing spell damage and slowing units in a 300 area of effect, also generates mana.|r
+}
+
 STRING 2926
 // Abilities: A03T (Emergency Towers), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
+STRING 2927
+// Units: n01E (Shard Tower 5: Frozen Obelisk), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Magic
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff774000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff771.00 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Freezing Attack|r
+|c0000ff00Ability (2):|r |c0077ff77Multishot: attacks 3 targets, becomes 10 targets when at full mana but each hit drains mana.
+|c0000ff00Ability (3):|r |c0077ff77Frostbite: Attacks have a chance to cast a frost nova onto an enemy, dealing spell damage and slowing units in a 300 area of effect, also generates mana.|r
+}
+
+STRING 2928
+// Units: n01F (Shard Tower 6: Frozen Obelisk), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Magic
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff777000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff771.16 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Freezing Attack|r
+|c0000ff00Ability (2):|r |c0077ff77Multishot: attacks 3 targets, becomes 10 targets when at full mana but each hit drains mana.
+|c0000ff00Ability (3):|r |c0077ff77Frostbite: Attacks have a chance to cast a frost nova onto an enemy, dealing spell damage and slowing units in a 300 area of effect, also generates mana.|r
+}
+
 STRING 2929
-// Units: h02N (Chaos Tower 9: Chaos Soul), Hotkey (Hotkey)
+// Units: h03V (Research Tower 4: Ancient of Wind), Hotkey (Hotkey)
 {
 Z
+}
+
+STRING 2930
+// Units: n01L (Shard Tower 7: Frozen Obelisk), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Magic
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff7712000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff771.33 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Freezing Attack|r
+|c0000ff00Ability (2):|r |c0077ff77Multishot: attacks 3 targets, becomes 10 targets when at full mana but each hit drains mana.
+|c0000ff00Ability (3):|r |c0077ff77Frostbite: Attacks have a chance to cast a frost nova onto an enemy, dealing spell damage and slowing units in a 300 area of effect, also generates mana.|r
+}
+
+STRING 2931
+// Units: n01M (Shard Tower 8: Frozen Obelisk), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Magic
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff7718000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff771.50 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Freezing Attack|r
+|c0000ff00Ability (2):|r |c0077ff77Multishot: attacks 3 targets, becomes 10 targets when at full mana but each hit drains mana.
+|c0000ff00Ability (3):|r |c0077ff77Frostbite: Attacks have a chance to cast a frost nova onto an enemy, dealing spell damage and slowing units in a 300 area of effect, also generates mana.|r
 }
 
 STRING 2932
-// Units: h02P (Chaos Tower 6: Chaos Stalker), Hotkey (Hotkey)
+// Units: h03W (Research Tower 3: Hydra), Hotkey (Hotkey)
 {
 Z
 }
 
+STRING 2933
+// Units: n01N (Shard Tower 9: Frozen Obelisk), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Magic
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff7728000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff771.75Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Freezing Attack|r
+|c0000ff00Ability (2):|r |c0077ff77Multishot: attacks 3 targets, becomes 10 targets when at full mana but each hit drains mana.
+|c0000ff00Ability (3):|r |c0077ff77Frostbite: Attacks have a chance to cast a frost nova onto an enemy, dealing spell damage and slowing units in a 300 area of effect, also generates mana.|r
+}
+
+STRING 2934
+// Units: n01O (Frozen Obelisk, UIltimate Shard Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Magic
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff7745000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff772.04 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Freezing Attack|r
+|c0000ff00Ability (2):|r |c0077ff77Multishot: attacks 3 targets, becomes 10 targets when at full mana but each hit drains mana.
+|c0000ff00Ability (3):|r |c0077ff77Frostbite: Attacks have a chance to cast a frost nova onto an enemy, dealing spell damage and slowing units in a 300 area of effect, also generates mana.|r
+}
+
 STRING 2935
-// Units: h02Q (Chaos Tower 7: Chaos Heretic), Hotkey (Hotkey)
+// Units: h03X (Research Tower 6: Wildkin), Hotkey (Hotkey)
 {
 Z
+}
+
+STRING 2936
+// Abilities: A04B (Frostbite), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Attacks have a 25% chance to cast a frost nova onto an enemy, dealing [500 + 25% of Towers Damage] as spell damage and slowing units in a 300 area of effect, also generates [20 x Wave Number] mana.
+
+
+When at full mana the towers multishot is improved and the tower deals 200% damage to units affected by a frost slow. If the tower falls below 10% mana multishot returns to normal.
 }
 
 STRING 2945
@@ -19309,7 +19510,7 @@ Q
 }
 
 STRING 2999
-// Units: h02R (Chaos Tower 8: Chaos Revenant), Hotkey (Hotkey)
+// Units: h03Y (Research Tower 7: Ancient Sasquatch), Hotkey (Hotkey)
 {
 Z
 }
@@ -19375,7 +19576,7 @@ W
 }
 
 STRING 3207
-// Units: h02A (Chaos Tower 5: Chaos Infernal), Hotkey (Hotkey)
+// Units: h03Z (Research Tower 9: Albatross), Hotkey (Hotkey)
 {
 Z
 }
@@ -19399,13 +19600,13 @@ D
 }
 
 STRING 3266
-// Units: h032 (Bash Tower 6: Siege Golem), Hotkey (Hotkey)
+// Units: h040 (Research Tower 2: Tinker), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 3267
-// Units: h03V (Research Tower 4: Ancient of Wind), Hotkey (Hotkey)
+// Units: h041 (Research Tower 5: Bandit Lord), Hotkey (Hotkey)
 {
 Z
 }
@@ -20530,7 +20731,7 @@ V
 }
 
 STRING 5619
-// Units: h03W (Research Tower 3: Hydra), Hotkey (Hotkey)
+// Units: h042 (Research Tower 8: Naga Myrmidon), Hotkey (Hotkey)
 {
 Z
 }
@@ -20820,7 +21021,7 @@ C
 }
 
 STRING 5968
-// Units: h03X (Research Tower 6: Wildkin), Hotkey (Hotkey)
+// Units: n01C (Earth Trap), Hotkey (Hotkey)
 {
 Z
 }
@@ -21424,7 +21625,7 @@ Sell - 20% Gold Return
 }
 
 STRING 6917
-// Units: h03Y (Research Tower 7: Ancient Sasquatch), Hotkey (Hotkey)
+// Units: h00G (Aura Tower), Hotkey (Hotkey)
 {
 Z
 }
@@ -21552,283 +21753,283 @@ Sell - 20% Gold Return
 }
 
 STRING 6994
-// Units: h03Z (Research Tower 9: Albatross), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 6995
-// Units: h040 (Research Tower 2: Tinker), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 6996
-// Units: h041 (Research Tower 5: Bandit Lord), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 6997
-// Units: h042 (Research Tower 8: Naga Myrmidon), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 6998
-// Units: n01C (Earth Trap), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 7010
-// Units: h00G (Aura Tower), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 7012
 // Units: n001 (Banshee, Ultimate Frost Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7014
+STRING 6995
 // Units: h003 (Siege Tower 5: Skeletal Grunt), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7016
+STRING 6996
 // Units: e006 (Bouncing Tower 5: Spellbreaker), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7018
+STRING 6997
 // Units: e008 (Naisha, Ultimate Bouncing Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7020
+STRING 6998
 // Units: h005 (Flesh Golem, Ultimate Bash Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7021
+STRING 7010
 // Units: h00I (Ultimate Ballista Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7023
+STRING 7012
 // Units: h00L (Ballista Tower 7), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7025
+STRING 7014
 // Units: h00O (Ballista Tower 6), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7027
+STRING 7016
 // Units: h00P (Ballista Tower 5), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7029
+STRING 7018
 // Units: h00R (Ballista Tower 8), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7031
+STRING 7020
 // Units: h00S (Ballista Tower 9), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7033
+STRING 7021
 // Units: h00J (Flak Tower 5), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7034
+STRING 7023
 // Units: h00T (Flak Tower 6), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7035
+STRING 7025
 // Units: h00Y (Flak Tower 7), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7036
+STRING 7027
 // Units: h00Z (Flak Tower 8), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7037
+STRING 7029
 // Units: h010 (Flak Tower 9), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7038
+STRING 7031
 // Units: h011 (Ultimate Flak Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7039
+STRING 7033
 // Units: h016 (Fel Tower 5: Warlock), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7040
+STRING 7034
 // Units: h018 (Ultimate Fel Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7041
+STRING 7035
 // Units: h01A (Fel Tower 7: Warlock), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7063
+STRING 7036
 // Units: h01D (Fel Tower 8: Warlock), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7064
+STRING 7037
 // Units: h01F (Fel Tower 6: Warlock), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7065
+STRING 7038
 // Units: h01G (Fel Tower 9: Warlock), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7066
+STRING 7039
 // Units: h017 (Venom Tower 5: Lizard), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7067
+STRING 7040
 // Units: h01M (Venom Tower 6: Lizard), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7068
+STRING 7041
 // Units: h01P (Venom Tower 7: Lizard), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7069
+STRING 7063
 // Units: h01Q (Venom Tower 8: Lizard), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7071
+STRING 7064
 // Units: h01R (Venom Tower 9: Lizard), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7072
+STRING 7065
 // Units: h01S (Ultimate Venom Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7073
+STRING 7066
 // Units: h01Z (Hellfire Tower 8: Hell Shrine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7075
+STRING 7067
 // Units: h02C (Hellfire Tower 9: Hell Shrine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7077
+STRING 7068
 // Units: h02D (Ultimate Hellfire Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7078
+STRING 7069
 // Units: h02E (Hellfire Tower 5: Hell Shrine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7079
+STRING 7071
 // Units: h02H (Hellfire Tower 7: Hell Shrine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7080
+STRING 7072
 // Units: h02K (Hellfire Tower 6: Hell Shrine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7081
+STRING 7073
 // Units: h02M (Soul Tower 7: Runic Crystal), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7082
+STRING 7075
 // Units: h043 (Soul Tower 6: Runic Crystal), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7083
+STRING 7077
 // Units: h044 (Soul Tower 5: Runic Crystal), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7084
+STRING 7078
 // Units: h045 (Soul Tower 8: Runic Crystal), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7085
+STRING 7079
 // Units: h046 (Soul Tower 9: Runic Crystal), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7086
+STRING 7080
 // Units: h047 (Ultimate Soul Tower), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 7081
+// Units: n01E (Shard Tower 5: Frozen Obelisk), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 7082
+// Units: n01F (Shard Tower 6: Frozen Obelisk), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 7083
+// Units: n01L (Shard Tower 7: Frozen Obelisk), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 7084
+// Units: n01M (Shard Tower 8: Frozen Obelisk), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 7085
+// Units: n01N (Shard Tower 9: Frozen Obelisk), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 7086
+// Units: n01O (Frozen Obelisk, UIltimate Shard Tower), Hotkey (Hotkey)
 {
 Z
 }

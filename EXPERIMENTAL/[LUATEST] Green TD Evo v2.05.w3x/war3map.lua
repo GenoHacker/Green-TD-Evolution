@@ -2117,6 +2117,14 @@ function CreateNeutralHostile()
     local t
     local life
     u = BlzCreateUnitWithSkin(p, FourCC("n013"), -1794.5, 3141.5, 257.934, FourCC("n013"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2509.9, 2999.1, 133.070, FourCC("h01H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2642.9, 3077.6, 344.553, FourCC("h01H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2577.1, 2855.8, 308.802, FourCC("h01H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2370.1, 2630.2, 66.678, FourCC("h01H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2418.8, 2952.3, 133.070, FourCC("h01H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2504.4, 2926.9, 344.553, FourCC("h01H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2438.7, 2705.1, 308.802, FourCC("h01H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2539.5, 2693.0, 66.678, FourCC("h01H"))
 end
 
 function CreateNeutralPassiveBuildings()
@@ -2373,75 +2381,6 @@ function CreateRegions()
     gg_rct_Next_Wave_4 = Rect(-1312.0, 6880.0, -1248.0, 6944.0)
 end
 
-function Trig_Damage_Tag_Func004Func001Func001C()
-    if (not (udg_DamageScalingWC3 == 0.00)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Damage_Tag_Func004Func001C()
-    if (not (GetUnitTypeId(udg_DamageEventSource) == FourCC("hpea"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Damage_Tag_Func004Func002Func001C()
-    if (not (udg_DamageScalingUser >= 1.50)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Damage_Tag_Func004Func002C()
-    if (not (udg_DamageEventAmount < -0.99)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Damage_Tag_Func004C()
-    if (not (udg_DamageEventAmount == 0.00)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Damage_Tag_Actions()
-    udg_ReportLife = GetUnitStateSwap(UNIT_STATE_LIFE, udg_DamageEventTarget)
-    udg_DmgStr = "|cffffffff"
-    if (Trig_Damage_Tag_Func004C()) then
-        if (Trig_Damage_Tag_Func004Func001C()) then
-            udg_DmgStr = "|c00AAAAAADODGED!|r"
-        else
-            if (Trig_Damage_Tag_Func004Func001Func001C()) then
-                udg_DmgStr = ("|c00AAAAAABlocked " .. (I2S(R2I((udg_DamageEventPrevAmt * udg_DamageScalingUser))) .. "!|r"))
-            else
-                udg_DmgStr = ("|c00AAAAAABlocked " .. (I2S(R2I((udg_DamageEventPrevAmt * udg_DamageScalingWC3))) .. "!|r"))
-            end
-        end
-                ArcingTextTag(udg_DmgStr, udg_DamageEventTarget)
-    else
-        if (Trig_Damage_Tag_Func004Func002C()) then
-            udg_DmgStr = "|cff00ff00+"
-                        ArcingTextTag(udg_DmgStr .. R2I(-udg_DamageEventAmount) .. "|r", udg_DamageEventTarget)
-        else
-            if (Trig_Damage_Tag_Func004Func002Func001C()) then
-                udg_DmgStr = ("|cffff0000" .. (I2S(R2I(udg_DamageEventAmount)) .. "!|r"))
-                                ArcingTextTag(udg_DmgStr, udg_DamageEventTarget)
-            else
-            end
-        end
-    end
-end
-
-function InitTrig_Damage_Tag()
-    gg_trg_Damage_Tag = CreateTrigger()
-    TriggerRegisterVariableEvent(gg_trg_Damage_Tag, "udg_DamageEvent", EQUAL, 1.00)
-    TriggerAddAction(gg_trg_Damage_Tag, Trig_Damage_Tag_Actions)
-end
-
 function Trig_Damage_Engine_Config_Actions()
     udg_DamageTypePureExplosive = -2
     udg_DamageTypeExplosive = -1
@@ -2534,7 +2473,7 @@ function Trig_Crit_System_Func001C()
     return true
 end
 
-function Trig_Crit_System_Func005Func005C()
+function Trig_Crit_System_Func005Func004C()
     if (not (udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (10.00 + udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))]))) then
         return false
     end
@@ -2562,7 +2501,7 @@ function Trig_Crit_System_Func009C()
     return true
 end
 
-function Trig_Crit_System_Func013Func005C()
+function Trig_Crit_System_Func013Func004C()
     if (not (udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (5.00 + udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))]))) then
         return false
     end
@@ -2585,9 +2524,13 @@ function Trig_Crit_System_Actions()
         udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_SkillCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraChances[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + I2R(GetUnitAbilityLevelSwapped(FourCC("A00T"), udg_DamageEventSource))))
         udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_RangedCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (udg_Real_Array_SkillCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (I2R(GetUnitAbilityLevelSwapped(FourCC("A00T"), udg_DamageEventSource)) + 0.00))))
         udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
-        if (Trig_Crit_System_Func005Func005C()) then
+        if (Trig_Crit_System_Func005Func004C()) then
             udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
             SetUnitAbilityLevelSwapped(FourCC("A00T"), udg_DamageEventSource, 1)
+            udg_ReportLife = GetUnitStateSwap(UNIT_STATE_LIFE, udg_DamageEventTarget)
+            udg_DmgStr = "|cffffffff"
+            udg_DmgStr = ("|cffff0000" .. (I2S(R2I(udg_DamageEventAmount)) .. "!|r"))
+                        ArcingTextTag(udg_DmgStr, udg_DamageEventTarget)
         else
         end
     else
@@ -2598,6 +2541,10 @@ function Trig_Crit_System_Actions()
         udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
         if (Trig_Crit_System_Func009Func004C()) then
             udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
+            udg_ReportLife = GetUnitStateSwap(UNIT_STATE_LIFE, udg_DamageEventTarget)
+            udg_DmgStr = "|cffffffff"
+            udg_DmgStr = ("|cffffff00" .. (I2S(R2I(udg_DamageEventAmount)) .. "!|r"))
+                        ArcingTextTag(udg_DmgStr, udg_DamageEventTarget)
         else
         end
     else
@@ -2606,8 +2553,12 @@ function Trig_Crit_System_Actions()
         udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_SkillCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + udg_Real_Array_CritAuraChances[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)])
         udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_SpellCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (udg_Real_Array_SkillCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + 0.00)))
         udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
-        if (Trig_Crit_System_Func013Func005C()) then
+        if (Trig_Crit_System_Func013Func004C()) then
             udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
+            udg_ReportLife = GetUnitStateSwap(UNIT_STATE_LIFE, udg_DamageEventTarget)
+            udg_DmgStr = "|cffffffff"
+            udg_DmgStr = ("|cff3264c8" .. (I2S(R2I(udg_DamageEventAmount)) .. "!|r"))
+                        ArcingTextTag(udg_DmgStr, udg_DamageEventTarget)
         else
         end
     else
@@ -2875,6 +2826,9 @@ function Trig_Shard_Tower_Abilities_Func001Func003C()
     if (not (UnitHasBuffBJ(udg_DamageEventTarget, FourCC("Bfro")) == true)) then
         return false
     end
+    if (not (udg_IsDamageRanged == true)) then
+        return false
+    end
     return true
 end
 
@@ -2912,16 +2866,6 @@ function Trig_Shard_Tower_Abilities_Func003C()
     return true
 end
 
-function Trig_Shard_Tower_Abilities_Func004C()
-    if (not (udg_IsDamageSpell == true)) then
-        return false
-    end
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A04D"), udg_DamageEventSource) == 1)) then
-        return false
-    end
-    return true
-end
-
 function Trig_Shard_Tower_Abilities_Actions()
     if (Trig_Shard_Tower_Abilities_Func001C()) then
         SetUnitManaBJ(udg_DamageEventSource, (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) - (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) * 0.05)))
@@ -2939,18 +2883,14 @@ function Trig_Shard_Tower_Abilities_Actions()
     if (Trig_Shard_Tower_Abilities_Func003C()) then
         udg_Real_Array_ShardTowerChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
         if (Trig_Shard_Tower_Abilities_Func003Func003C()) then
-            SetUnitManaBJ(udg_DamageEventSource, (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + GetRandomReal(10.00, 100.00)))
+            SetUnitManaBJ(udg_DamageEventSource, (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + (20.00 * I2R(udg_Integer_WaveNumber))))
+            UnitDamageTargetBJ(udg_DamageEventSource, udg_DamageEventTarget, (I2R(BlzGetUnitBaseDamage(udg_DamageEventSource, 0)) * 0.25), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
             CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventTarget), bj_UNIT_FACING)
-            BlzSetUnitRealFieldBJ(GetLastCreatedUnit(), UNIT_RF_PRIORITY, (I2R(BlzGetUnitWeaponIntegerField(udg_DamageEventSource, UNIT_WEAPON_IF_ATTACK_DAMAGE_BASE, 0)) * 0.25))
             UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
             UnitAddAbilityBJ(FourCC("A04D"), GetLastCreatedUnit())
             IssueTargetOrderBJ(GetLastCreatedUnit(), "frostnova", udg_DamageEventTarget)
         else
         end
-    else
-    end
-    if (Trig_Shard_Tower_Abilities_Func004C()) then
-        UnitDamageTargetBJ(udg_DamageEventSource, udg_DamageEventTarget, BlzGetUnitRealField(udg_DamageEventSource, UNIT_RF_PRIORITY), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
     else
     end
 end
@@ -16379,7 +16319,6 @@ function InitTrig_Critical_Aura()
 end
 
 function InitCustomTriggers()
-    InitTrig_Damage_Tag()
     InitTrig_Damage_Engine_Config()
     InitTrig_Crit_System()
     InitTrig_Crit_Aura()
