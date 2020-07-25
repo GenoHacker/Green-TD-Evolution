@@ -13342,6 +13342,12 @@ STRING 2060
 Income is increased by |cffFDD0172 Gold|c0077ff77 for each activated game mode.
 }
 
+STRING 2061
+// Units: n01P (Spirit Tower 4: Winter Beacon), Name (Name)
+{
+Spirit Tower 4: Winter Beacon
+}
+
 STRING 2062
 // Abilities: A032 (Hard - Chaos Mode), Tip (Tooltip - Normal)
 {
@@ -15573,6 +15579,12 @@ STRING 2348
 |c0077ff77[Z] |c0000ff00Upgrade To Lizard.|r |cAAAAFFAAVenom Tower 5.|r
 }
 
+STRING 2349
+// Units: n00X (Shard Tower 4: Frozen Obelisk), Tip (Tooltip - Basic)
+{
+|c0077ff77[X] |c0000ff00Upgrade To Frozen Obelisk.|r |cAAAAFFAAShard Tower 4.|r
+}
+
 STRING 2350
 // Units: h00P (Ballista Tower 5), Name (Name)
 {
@@ -15974,10 +15986,17 @@ STRING 2409
 |c0077ff77[Z] |c0000ff00Upgrade To Lizard.|r |cAAAAFFAAVenom Tower 9.|r
 }
 
-STRING 2410
-// Units: n00X (Shard Tower 4: Frozen Obelisk), Tip (Tooltip - Basic)
+STRING 2411
+// Units: n00X (Shard Tower 4: Frozen Obelisk), Ubertip (Tooltip - Extended)
 {
-|c0077ff77[X] |c0000ff00Upgrade To Frozen Obelisk.|r |cAAAAFFAAShard Tower 4.|r
+|c0000ff00Attack:|r |c0077ff77Magic
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff772000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.80 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Freezing Attack|r
+|c0000ff00Ability (2):|r |c0077ff77Multishot: attacks 3 targets, becomes 10 targets when at full mana but each hit drains mana.
+|c0000ff00Ability (3):|r |c0077ff77Frostbite: Attacks have a chance to cast a frost nova onto an enemy, dealing spell damage and slowing units in a 300 area of effect, also generates mana.|r
 }
 
 STRING 2412
@@ -16055,18 +16074,12 @@ STRING 2422
 }
 
 STRING 2423
-// Abilities: A03P (Dummy Ability), Name (Name)
-{
-Dummy Ability
-}
-
-STRING 2424
 // Abilities: A03Q (Dummy Ability), Name (Name)
 {
 Dummy Ability
 }
 
-STRING 2425
+STRING 2424
 // Abilities: A03U (Dummy Ability), Name (Name)
 {
 Dummy Ability
@@ -16081,6 +16094,12 @@ Bash Tower 1
 STRING 2427
 {
 Vimp Gaming
+}
+
+STRING 2428
+// Units: h013 (Venom Tower 4: Lizard), Hotkey (Hotkey)
+{
+X
 }
 
 STRING 2429
@@ -18244,66 +18263,6 @@ STRING 2724
 |c0077ff77Causes the tower to attack randomly.|r
 }
 
-STRING 2725
-// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Chaos Energies - |c0077ff771 Stack
-}
-
-STRING 2726
-// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Chaos Energies - |c0077ff772 Stack
-}
-
-STRING 2727
-// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Chaos Energies - |c0077ff773 Stack
-}
-
-STRING 2728
-// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Chaos Energies - |c0077ff774 Stack
-}
-
-STRING 2729
-// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Chaos Energies - |c0077ff775 Stack
-}
-
-STRING 2730
-// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Chaos Energies - |c0077ff776 Stack
-}
-
-STRING 2731
-// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Chaos Energies - |c0077ff777 Stack
-}
-
-STRING 2732
-// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Chaos Energies - |c0077ff778 Stack
-}
-
-STRING 2733
-// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Chaos Energies - |c0077ff779 Stack
-}
-
-STRING 2734
-// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Chaos Energies - |c0077ff7710 Stack
-}
-
 STRING 2735
 // Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
@@ -18784,66 +18743,6 @@ STRING 2814
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
-STRING 2815
-// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Chaos Energies - |c0077ff7711 Stack
-}
-
-STRING 2816
-// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Chaos Energies - |c0077ff7712 Stack
-}
-
-STRING 2817
-// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Chaos Energies - |c0077ff7713 Stack
-}
-
-STRING 2818
-// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Chaos Energies - |c0077ff7714 Stack
-}
-
-STRING 2819
-// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Chaos Energies - |c0077ff7715 Stack
-}
-
-STRING 2820
-// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Chaos Energies - |c0077ff7716 Stack
-}
-
-STRING 2821
-// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Chaos Energies - |c0077ff7717 Stack
-}
-
-STRING 2822
-// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Chaos Energies - |c0077ff7718 Stack
-}
-
-STRING 2823
-// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Chaos Energies - |c0077ff7719 Stack
-}
-
-STRING 2824
-// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
-{
-|c0000ff00Chaos Energies - |c0077ff7720 Stack
-}
-
 STRING 2825
 // Abilities: A00T (Chaos Energies), Name (Name)
 {
@@ -18944,6 +18843,12 @@ STRING 2835
 |c0077ff77[Z] |c0000ff00Upgrade To Frozen Obelisk.|r |cAAAAFFAAShard Tower 6.|r
 }
 
+STRING 2836
+// Units: u000 (Winter Spirit), Name (Name)
+{
+Winter Spirit
+}
+
 STRING 2837
 // Units: n01L (Shard Tower 7: Frozen Obelisk), Name (Name)
 {
@@ -18957,9 +18862,15 @@ STRING 2838
 }
 
 STRING 2839
-// Units: h013 (Venom Tower 4: Lizard), Hotkey (Hotkey)
+// Units: h02L (Hellfire Tower 4: Hell Shrine), Hotkey (Hotkey)
 {
 X
+}
+
+STRING 2840
+// Abilities: A03P (Winter Spirits), Name (Name)
+{
+Winter Spirits
 }
 
 STRING 2842
@@ -19004,6 +18915,12 @@ STRING 2850
 |c0077ff77[Z] |c0000ff00Upgrade To Frozen Obelisk, Ultimate.|r |cAAAAFFAAShard Tower 10.|r
 }
 
+STRING 2851
+// Abilities: A04F (Brainfreeze), Name (Name)
+{
+Brainfreeze
+}
+
 STRING 2852
 // Units: e00I (Bouncing Tower 9: Shadow Wolf), Hotkey (Hotkey)
 {
@@ -19034,10 +18951,34 @@ STRING 2856
 Z
 }
 
+STRING 2857
+// Buffs/Effects: B000 (), Bufftip (Tooltip)
+{
+Brainfreeze
+}
+
+STRING 2858
+// Units: n01Q (Spirit Tower 5: Winter Beacon), Name (Name)
+{
+Spirit Tower 5: Winter Beacon
+}
+
 STRING 2859
 // Units: n01E (Shard Tower 5: Frozen Obelisk), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Frozen Obelisk.|r |cAAAAFFAAShard Tower 5.|r
+}
+
+STRING 2861
+// Buffs/Effects: B000 (), Buffubertip (Tooltip - Extended)
+{
+Attackers have a chance to deal extra damage
+}
+
+STRING 2865
+// Units: n01R (Spirit Tower 6: Winter Beacon), Name (Name)
+{
+Spirit Tower 6: Winter Beacon
 }
 
 STRING 2866
@@ -19056,6 +18997,18 @@ STRING 2867
 |c0000ff00Efficiency:|r |c0077ff771.59 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300
 |c0000ff00Ability (2):|r |c0077ff77Freezing Attack|r
+}
+
+STRING 2870
+// Units: n01S (Spirit Tower 7: Winter Beacon), Name (Name)
+{
+Spirit Tower 7: Winter Beacon
+}
+
+STRING 2873
+// Units: n01T (Spirit Tower 8: Winter Beacon), Name (Name)
+{
+Spirit Tower 8: Winter Beacon
 }
 
 STRING 2876
@@ -19301,6 +19254,12 @@ STRING 2903
 |c0000ff00Ability:|r |c0077ff77Chaos Energies: Attacks increase Crit Chance by 1% and Crit Damage by 100%, stacks up to 20, resets whenever the tower crits.
 }
 
+STRING 2904
+// Units: n01U (Spirit Tower 9: Winter Beacon), Name (Name)
+{
+Spirit Tower 9: Winter Beacon
+}
+
 STRING 2905
 // Abilities: A00I (Upgrade Damage Aura), Hotkey (Hotkey - Normal)
 {
@@ -19331,6 +19290,12 @@ STRING 2911
 Z
 }
 
+STRING 2912
+// Units: n01V (Winter Beacon, Ultimate Spirit Tower), Name (Name)
+{
+Winter Beacon, Ultimate Spirit Tower
+}
+
 STRING 2920
 // Abilities: A02N (Easy Mode), Hotkey (Hotkey - Normal)
 {
@@ -19347,19 +19312,6 @@ STRING 2923
 // Abilities: A036 (Endless Mode), Hotkey (Hotkey - Normal)
 {
 Q
-}
-
-STRING 2925
-// Units: n00X (Shard Tower 4: Frozen Obelisk), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Magic
-|c0000ff00Cooldown:|r |c0077ff771.50
-|c0000ff00Damage:|r |c0077ff772000
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff770.80 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Freezing Attack|r
-|c0000ff00Ability (2):|r |c0077ff77Multishot: attacks 3 targets, becomes 10 targets when at full mana but each hit drains mana.
-|c0000ff00Ability (3):|r |c0077ff77Frostbite: Attacks have a chance to cast a frost nova onto an enemy, dealing spell damage and slowing units in a 300 area of effect, also generates mana.|r
 }
 
 STRING 2926
@@ -19473,10 +19425,34 @@ STRING 2936
 When at full mana the towers multishot is improved and the tower deals 200% damage to units affected by a frost slow. If the tower falls below 10% mana multishot returns to normal.
 }
 
+STRING 2942
+// Abilities: A01K (Immolation), Hotkey (Hotkey - Normal)
+{
+Z
+}
+
+STRING 2943
+// Abilities: A01K (Immolation), Unhotkey (Hotkey - Turn Off)
+{
+Z
+}
+
+STRING 2944
+// Abilities: A020 (3 - Decrease Zoom), Hotkey (Hotkey - Normal)
+{
+Z
+}
+
 STRING 2945
 // Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 2946
+// Abilities: A02M (Chaos Mode), Hotkey (Hotkey - Normal)
+{
+Z
 }
 
 STRING 2947
@@ -19485,16 +19461,58 @@ STRING 2947
 Q
 }
 
+STRING 2948
+// Abilities: A02Q (Disable Aura Tower), Hotkey (Hotkey - Normal)
+{
+Z
+}
+
+STRING 2949
+// Abilities: A048 (Random Game Modes), Hotkey (Hotkey - Normal)
+{
+Z
+}
+
 STRING 2950
 // Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
 }
 
+STRING 2951
+// Units: n01P (Spirit Tower 4: Winter Beacon), Tip (Tooltip - Basic)
+{
+|c0077ff77[C] |c0000ff00Upgrade To Winter Beacon.|r |cAAAAFFAASpirit Tower 4.|r
+}
+
+STRING 2952
+// Units: n01Q (Spirit Tower 5: Winter Beacon), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade To Winter Beacon.|r |cAAAAFFAASpirit Tower 5.|r
+}
+
 STRING 2953
 // Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 2954
+// Units: n01R (Spirit Tower 6: Winter Beacon), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade to Winter Beacon.|r |cAAAAFFAASpirit Tower 6.|r
+}
+
+STRING 2956
+// Units: n01S (Spirit Tower 7: Winter Beacon), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade To Winter Beacon.|r |cAAAAFFAASpirit Tower 7.|r
+}
+
+STRING 2958
+// Units: n01T (Spirit Tower 8: Winter Beacon), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade To Winter Beacon.|r |cAAAAFFAASpirit Tower 8.|r
 }
 
 STRING 2959
@@ -19507,6 +19525,252 @@ STRING 2961
 // Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 2962
+// Units: n01U (Spirit Tower 9: Winter Beacon), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade To Winter Beacon.|r |cAAAAFFAASpirit Tower 9.|r
+}
+
+STRING 2964
+// Units: n01V (Winter Beacon, Ultimate Spirit Tower), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade To Winter Beacon, Ultimate.|r |cAAAAFFAASpirit Tower 10.|r
+}
+
+STRING 2966
+// Abilities: A016 (Emergency Air Tower), Hotkey (Hotkey - Normal)
+{
+C
+}
+
+STRING 2967
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff771 Stacks
+}
+
+STRING 2968
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff772 Stacks
+}
+
+STRING 2969
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff773 Stacks
+}
+
+STRING 2970
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff774 Stacks
+}
+
+STRING 2971
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff775 Stacks
+}
+
+STRING 2972
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff776 Stacks
+}
+
+STRING 2973
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff777 Stacks
+}
+
+STRING 2974
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff778 Stacks
+}
+
+STRING 2975
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff779 Stacks
+}
+
+STRING 2976
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff7710 Stacks
+}
+
+STRING 2977
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff7711 Stacks
+}
+
+STRING 2978
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff7712 Stacks
+}
+
+STRING 2979
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff7713 Stacks
+}
+
+STRING 2980
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff7714 Stacks
+}
+
+STRING 2981
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff7715 Stacks
+}
+
+STRING 2982
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff7716 Stacks
+}
+
+STRING 2983
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff7717 Stacks
+}
+
+STRING 2984
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff7718 Stacks
+}
+
+STRING 2985
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff7719 Stacks
+}
+
+STRING 2986
+// Abilities: A00T (Chaos Energies), Tip (Tooltip - Normal)
+{
+|c0000ff00Chaos Energies - |c0077ff7720 Stacks
+}
+
+STRING 2987
+// Abilities: A03P (Winter Spirits), Tip (Tooltip - Normal)
+{
+|c0000ff00Winter Spirits
+}
+
+STRING 2988
+// Abilities: A03P (Winter Spirits), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Gains up to 10 mana for each enemy unit hit when attacking, at full mana the tower summons a ring of Winter Spirits, these slow units they attack and deal damage based on the targets current movement speed, slower movement speed equals more damage.
+}
+
+STRING 2989
+// Abilities: A04F (Brainfreeze), Tip (Tooltip - Normal)
+{
+|c0000ff00Brainfreeze
+}
+
+STRING 2990
+// Abilities: A04F (Brainfreeze), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Enemies hit by this tower cause it to be affected by Brainfreeze, all towers that attack a unit affected by this have a 10% chance to deal 20% of their attack damage as magic damage to their target.
+}
+
+STRING 2991
+// Units: n01P (Spirit Tower 4: Winter Beacon), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Magic
+|c0000ff00Cooldown:|r |c0077ff773.00
+|c0000ff00Damage:|r |c0077ff773000
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff771.00 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Winter Spirits: Gains mana for each enemy hit, at full mana summons a ring of spirits that deal spell damage and slow enemys.|r
+|c0000ff00Ability (2):|r |c0077ff77Brainfreeze: Enemies hit by this tower are affected by Brainfreeze, this causes all towers to have a 10% chance to deal additional magic damage equaling 20% of their damage.
+}
+
+STRING 2992
+// Units: n01Q (Spirit Tower 5: Winter Beacon), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Magic
+|c0000ff00Cooldown:|r |c0077ff773.00
+|c0000ff00Damage:|r |c0077ff776000
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff771.20 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Winter Spirits: Gains mana for each enemy hit, at full mana summons a ring of spirits that deal spell damage and slow enemys.|r
+|c0000ff00Ability (2):|r |c0077ff77Brainfreeze: Enemies hit by this tower are affected by Brainfreeze, this causes all towers to have a 10% chance to deal additional magic damage equaling 20% of their damage.
+}
+
+STRING 2993
+// Units: n01R (Spirit Tower 6: Winter Beacon), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Magic
+|c0000ff00Cooldown:|r |c0077ff773.00
+|c0000ff00Damage:|r |c0077ff7711000
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff771.37 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Winter Spirits: Gains mana for each enemy hit, at full mana summons a ring of spirits that deal spell damage and slow enemys.|r
+|c0000ff00Ability (2):|r |c0077ff77Brainfreeze: Enemies hit by this tower are affected by Brainfreeze, this causes all towers to have a 10% chance to deal additional magic damage equaling 20% of their damage.
+}
+
+STRING 2994
+// Units: n01S (Spirit Tower 7: Winter Beacon), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Magic
+|c0000ff00Cooldown:|r |c0077ff773.00
+|c0000ff00Damage:|r |c0077ff7716500
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff771.50 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Winter Spirits: Gains mana for each enemy hit, at full mana summons a ring of spirits that deal spell damage and slow enemys.|r
+|c0000ff00Ability (2):|r |c0077ff77Brainfreeze: Enemies hit by this tower are affected by Brainfreeze, this causes all towers to have a 10% chance to deal additional magic damage equaling 20% of their damage.
+}
+
+STRING 2995
+// Units: n01T (Spirit Tower 8: Winter Beacon), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Magic
+|c0000ff00Cooldown:|r |c0077ff773.00
+|c0000ff00Damage:|r |c0077ff7725000
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff771.67 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Winter Spirits: Gains mana for each enemy hit, at full mana summons a ring of spirits that deal spell damage and slow enemys.|r
+|c0000ff00Ability (2):|r |c0077ff77Brainfreeze: Enemies hit by this tower are affected by Brainfreeze, this causes all towers to have a 10% chance to deal additional magic damage equaling 20% of their damage.
+}
+
+STRING 2996
+// Units: n01U (Spirit Tower 9: Winter Beacon), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Magic
+|c0000ff00Cooldown:|r |c0077ff773.00
+|c0000ff00Damage:|r |c0077ff7736000
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff771.80 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Winter Spirits: Gains mana for each enemy hit, at full mana summons a ring of spirits that deal spell damage and slow enemys.|r
+|c0000ff00Ability (2):|r |c0077ff77Brainfreeze: Enemies hit by this tower are affected by Brainfreeze, this causes all towers to have a 10% chance to deal additional magic damage equaling 20% of their damage.
+}
+
+STRING 2997
+// Units: n01V (Winter Beacon, Ultimate Spirit Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Magic
+|c0000ff00Cooldown:|r |c0077ff773.00
+|c0000ff00Damage:|r |c0077ff7750000
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff772.00 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Winter Spirits: Gains mana for each enemy hit, at full mana summons a ring of spirits that deal spell damage and slow enemys.|r
+|c0000ff00Ability (2):|r |c0077ff77Brainfreeze: Enemies hit by this tower are affected by Brainfreeze, this causes all towers to have a 10% chance to deal additional magic damage equaling 20% of their damage.
 }
 
 STRING 2999
@@ -20188,7 +20452,7 @@ S
 }
 
 STRING 4338
-// Units: h02L (Hellfire Tower 4: Hell Shrine), Hotkey (Hotkey)
+// Units: n00X (Shard Tower 4: Frozen Obelisk), Hotkey (Hotkey)
 {
 X
 }
@@ -20283,31 +20547,31 @@ This unit is under the effect of a Damage Aura, It has Increased Attack Damage.
 }
 
 STRING 4480
-// Units: n00X (Shard Tower 4: Frozen Obelisk), Hotkey (Hotkey)
-{
-X
-}
-
-STRING 4481
 // Abilities: A01B (Stasis Trap), Hotkey (Hotkey - Normal)
 {
 X
 }
 
-STRING 4484
+STRING 4481
 // Abilities: A012 (Emergency Siege Tower), Hotkey (Hotkey - Normal)
 {
 X
 }
 
-STRING 4487
+STRING 4484
 // Abilities: A01Y (Emergency Siege Tower), Hotkey (Hotkey - Normal)
 {
 X
 }
 
-STRING 4490
+STRING 4487
 // Abilities: A028 (Debug), Hotkey (Hotkey - Normal)
+{
+X
+}
+
+STRING 4490
+// Abilities: A02P (Disable Traps), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -22035,79 +22299,73 @@ Z
 }
 
 STRING 7087
-// Abilities: A01J (Slow), Hotkey (Hotkey - Normal)
+// Units: n01Q (Spirit Tower 5: Winter Beacon), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7088
-// Abilities: A01J (Slow), Unhotkey (Hotkey - Turn Off)
+// Units: n01R (Spirit Tower 6: Winter Beacon), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7089
-// Abilities: A023 (Upgrade Trap Ability), Hotkey (Hotkey - Normal)
+// Units: n01S (Spirit Tower 7: Winter Beacon), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7090
-// Abilities: A01K (Immolation), Hotkey (Hotkey - Normal)
+// Units: n01T (Spirit Tower 8: Winter Beacon), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7091
-// Abilities: A01K (Immolation), Unhotkey (Hotkey - Turn Off)
+// Units: n01U (Spirit Tower 9: Winter Beacon), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7092
-// Abilities: A020 (3 - Decrease Zoom), Hotkey (Hotkey - Normal)
+// Units: n01V (Winter Beacon, Ultimate Spirit Tower), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7093
-// Abilities: A02M (Chaos Mode), Hotkey (Hotkey - Normal)
+// Abilities: A01J (Slow), Hotkey (Hotkey - Normal)
 {
 Z
 }
 
 STRING 7094
-// Abilities: A02Q (Disable Aura Tower), Hotkey (Hotkey - Normal)
+// Abilities: A01J (Slow), Unhotkey (Hotkey - Turn Off)
 {
 Z
 }
 
 STRING 7095
-// Abilities: A048 (Random Game Modes), Hotkey (Hotkey - Normal)
+// Abilities: A023 (Upgrade Trap Ability), Hotkey (Hotkey - Normal)
 {
 Z
 }
 
 STRING 7108
-// Abilities: A02P (Disable Traps), Hotkey (Hotkey - Normal)
-{
-X
-}
-
-STRING 7112
 // Abilities: A047 (Game Modes), Hotkey (Hotkey - Normal)
 {
 X
 }
 
-STRING 7114
+STRING 7112
 // Abilities: A049 (Random Game Modes + Difficulty), Hotkey (Hotkey - Normal)
 {
 X
 }
 
 STRING 7119
-// Abilities: A016 (Emergency Air Tower), Hotkey (Hotkey - Normal)
+// Units: n01P (Spirit Tower 4: Winter Beacon), Hotkey (Hotkey)
 {
 C
 }

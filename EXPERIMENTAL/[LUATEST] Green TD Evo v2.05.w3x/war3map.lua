@@ -254,6 +254,8 @@ udg_Real_Array_SoulTowerChance = __jarray(0.0)
 udg_Real_Array_SoulTowerDamage = __jarray(0.0)
 udg_UnitGroup_Array_SoulTowerUnits = {}
 udg_Real_Array_ShardTowerChance = __jarray(0.0)
+udg_Real_Array_BrainfreezeChance = __jarray(0.0)
+udg_Real_Array_AqRange = __jarray(0.0)
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -341,6 +343,7 @@ gg_trg_Ballista_Tower_Enchanted_Bolts = nil
 gg_trg_Soul_Tower_Soul_Extraction = nil
 gg_trg_Soul_Tower_Minion_Remove_From_Group = nil
 gg_trg_Shard_Tower_Abilities = nil
+gg_trg_Spirit_Tower = nil
 gg_trg_Set_Variables = nil
 gg_trg_Set_Random_Wave_Variables = nil
 gg_trg_Map_Start = nil
@@ -1079,6 +1082,18 @@ function InitGlobals()
     while (true) do
         if ((i > 1)) then break end
         udg_Real_Array_ShardTowerChance[i] = 0.0
+        i = i + 1
+    end
+    i = 0
+    while (true) do
+        if ((i > 1)) then break end
+        udg_Real_Array_BrainfreezeChance[i] = 0.0
+        i = i + 1
+    end
+    i = 0
+    while (true) do
+        if ((i > 1)) then break end
+        udg_Real_Array_AqRange[i] = 0.0
         i = i + 1
     end
 end
@@ -2107,6 +2122,7 @@ function CreateBuildingsForPlayer0()
     local t
     local life
     gg_unit_n00C_0019 = BlzCreateUnitWithSkin(p, FourCC("n00C"), -1792.0, 3392.0, 270.000, FourCC("n00C"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01P"), -2048.0, 1600.0, 270.000, FourCC("n01P"))
 end
 
 function CreateNeutralHostile()
@@ -2116,14 +2132,16 @@ function CreateNeutralHostile()
     local t
     local life
     u = BlzCreateUnitWithSkin(p, FourCC("n013"), -1794.5, 3141.5, 257.934, FourCC("n013"))
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2509.9, 2999.1, 133.070, FourCC("h01H"))
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2642.9, 3077.6, 344.553, FourCC("h01H"))
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2577.1, 2855.8, 308.802, FourCC("h01H"))
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2370.1, 2630.2, 66.678, FourCC("h01H"))
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2418.8, 2952.3, 133.070, FourCC("h01H"))
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2504.4, 2926.9, 344.553, FourCC("h01H"))
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2438.7, 2705.1, 308.802, FourCC("h01H"))
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2539.5, 2693.0, 66.678, FourCC("h01H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2156.9, 1474.0, 344.553, FourCC("h01H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2216.5, 1568.8, 344.553, FourCC("h01H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2204.8, 1707.0, 344.553, FourCC("h01H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2095.3, 1759.4, 344.553, FourCC("h01H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2006.1, 1759.4, 344.553, FourCC("h01H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1917.3, 1717.4, 344.553, FourCC("h01H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1909.9, 1615.8, 344.553, FourCC("h01H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1932.2, 1511.4, 344.553, FourCC("h01H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2013.8, 1442.7, 344.553, FourCC("h01H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2104.3, 1413.8, 344.553, FourCC("h01H"))
 end
 
 function CreateNeutralPassiveBuildings()
@@ -2898,6 +2916,81 @@ function InitTrig_Shard_Tower_Abilities()
     gg_trg_Shard_Tower_Abilities = CreateTrigger()
     TriggerRegisterVariableEvent(gg_trg_Shard_Tower_Abilities, "udg_DamageModifierEvent", EQUAL, 1.00)
     TriggerAddAction(gg_trg_Shard_Tower_Abilities, Trig_Shard_Tower_Abilities_Actions)
+end
+
+function Trig_Spirit_Tower_Func001Func003C()
+    if (not (GetUnitManaPercent(udg_DamageEventSource) >= 100.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Spirit_Tower_Func001C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A04F"), udg_DamageEventSource) == 1)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Spirit_Tower_Func002C()
+    if (not (GetUnitTypeId(udg_DamageEventSource) == FourCC("u000"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Spirit_Tower_Func003Func002C()
+    if (not (udg_Real_Array_BrainfreezeChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= 10)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Spirit_Tower_Func003C()
+    if (not (UnitHasBuffBJ(udg_DamageEventTarget, FourCC("B000")) == true)) then
+        return false
+    end
+    if (not (IsUnitType(udg_DamageEventSource, UNIT_TYPE_STRUCTURE) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Spirit_Tower_Actions()
+    if (Trig_Spirit_Tower_Func001C()) then
+        SetUnitManaBJ(udg_DamageEventSource, (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + GetRandomReal(1.00, 10.00)))
+        if (Trig_Spirit_Tower_Func001Func003C()) then
+            bj_forLoopAIndex = 1
+            bj_forLoopAIndexEnd = 36
+            while (true) do
+                if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
+                CreateNUnitsAtLoc(1, FourCC("u000"), GetOwningPlayer(udg_DamageEventSource), PolarProjectionBJ(GetUnitLoc(udg_DamageEventSource), 600.00, (I2R(GetForLoopIndexA()) * (360.00 / 36.00))), bj_UNIT_FACING)
+                UnitApplyTimedLifeBJ(15.00, FourCC("BTLF"), GetLastCreatedUnit())
+                bj_forLoopAIndex = bj_forLoopAIndex + 1
+            end
+            SetUnitManaBJ(udg_DamageEventSource, 0)
+        else
+        end
+    else
+    end
+    if (Trig_Spirit_Tower_Func002C()) then
+        UnitDamageTargetBJ(udg_DamageEventSource, udg_DamageEventTarget, (522.00 - GetUnitMoveSpeed(udg_DamageEventSource)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+    else
+    end
+    if (Trig_Spirit_Tower_Func003C()) then
+        udg_Real_Array_BrainfreezeChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0.00, 100.00)
+        if (Trig_Spirit_Tower_Func003Func002C()) then
+            UnitDamageTargetBJ(udg_DamageEventSource, udg_DamageEventTarget, (I2R(BlzGetUnitBaseDamage(udg_DamageEventSource, 0)) * 0.20), ATTACK_TYPE_MAGIC, DAMAGE_TYPE_NORMAL)
+        else
+        end
+    else
+    end
+end
+
+function InitTrig_Spirit_Tower()
+    gg_trg_Spirit_Tower = CreateTrigger()
+    TriggerRegisterVariableEvent(gg_trg_Spirit_Tower, "udg_DamageEvent", EQUAL, 1.00)
+    TriggerAddAction(gg_trg_Spirit_Tower, Trig_Spirit_Tower_Actions)
 end
 
 function Trig_Set_Variables_Func178001()
@@ -16326,6 +16419,7 @@ function InitCustomTriggers()
     InitTrig_Soul_Tower_Soul_Extraction()
     InitTrig_Soul_Tower_Minion_Remove_From_Group()
     InitTrig_Shard_Tower_Abilities()
+    InitTrig_Spirit_Tower()
     InitTrig_Set_Variables()
     InitTrig_Set_Random_Wave_Variables()
     InitTrig_Map_Start()
