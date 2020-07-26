@@ -532,6 +532,7 @@ gg_unit_z000_0121 = nil
 gg_unit_z001_0122 = nil
 gg_unit_z001_0123 = nil
 gg_unit_o00I_0124 = nil
+gg_trg_Untitled_Trigger_001 = nil
 function InitGlobals()
     local i = 0
     i = 0
@@ -7273,6 +7274,13 @@ function Trig_Ready_Modes_Func021C()
     return true
 end
 
+function Trig_Ready_Modes_Func025Func001C()
+    if (not (udg_Integer_EndlessMode == 1)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Ready_Modes_Func025C()
     if (not (udg_Integer_RWActivated == 1)) then
         return false
@@ -7366,6 +7374,10 @@ function Trig_Ready_Modes_Actions()
     else
     end
     if (Trig_Ready_Modes_Func025C()) then
+        if (Trig_Ready_Modes_Func025Func001C()) then
+            udg_Integer_WaveAmount = 300
+        else
+        end
         TriggerExecute(gg_trg_Set_Random_Wave_Variables)
         TriggerExecute(gg_trg_Generate_Random_Waves)
         TriggerExecute(gg_trg_Start_Random_Waves)
@@ -9055,7 +9067,24 @@ function Trig_Start_Random_Waves_Func011C()
     return true
 end
 
-function Trig_Start_Random_Waves_Func012Func007C()
+function Trig_Start_Random_Waves_Func012Func001Func007C()
+    if (not (udg_Integer_WaveNumber >= 301)) then
+        return false
+    end
+    if (not (udg_Integer_EndlessMode == 1)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Start_Random_Waves_Func012Func001C()
+    if (not Trig_Start_Random_Waves_Func012Func001Func007C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Start_Random_Waves_Func012Func008C()
     if (not (udg_Integer_WaveNumber >= 61)) then
         return false
     end
@@ -9066,7 +9095,7 @@ function Trig_Start_Random_Waves_Func012Func007C()
 end
 
 function Trig_Start_Random_Waves_Func012C()
-    if (not Trig_Start_Random_Waves_Func012Func007C()) then
+    if (not Trig_Start_Random_Waves_Func012Func008C()) then
         return false
     end
     return true
@@ -9102,6 +9131,15 @@ function Trig_Start_Random_Waves_Actions()
         TriggerSleepAction(60.00)
         TriggerExecute(gg_trg_WinGame)
     else
+        if (Trig_Start_Random_Waves_Func012Func001C()) then
+            udg_Integer_Array_WaveTimer[1] = 60
+            EnableTrigger(gg_trg_Timer)
+            MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 14, "TRIGSTR_2410")
+            DisplayTimedTextToForce(GetPlayersAll(), 60.00, "TRIGSTR_2425")
+            TriggerSleepAction(60.00)
+            TriggerExecute(gg_trg_WinGame)
+        else
+        end
     end
 end
 
@@ -9601,9 +9639,6 @@ function Trig_Random_Wave_Spawning_Sys_Func002Func002C()
     if (not (GetPlayerName(Player(0)) ~= "Defender 1")) then
         return false
     end
-    if (not (udg_Integer_WaveNumber <= 60)) then
-        return false
-    end
     return true
 end
 
@@ -9619,9 +9654,6 @@ function Trig_Random_Wave_Spawning_Sys_Func002Func004C()
         return false
     end
     if (not (GetPlayerName(Player(1)) ~= "Defender 2")) then
-        return false
-    end
-    if (not (udg_Integer_WaveNumber <= 60)) then
         return false
     end
     return true
@@ -9641,9 +9673,6 @@ function Trig_Random_Wave_Spawning_Sys_Func002Func006C()
     if (not (GetPlayerName(Player(2)) ~= "Defender 3")) then
         return false
     end
-    if (not (udg_Integer_WaveNumber <= 60)) then
-        return false
-    end
     return true
 end
 
@@ -9659,9 +9688,6 @@ function Trig_Random_Wave_Spawning_Sys_Func002Func008C()
         return false
     end
     if (not (GetPlayerName(Player(3)) ~= "Defender 4")) then
-        return false
-    end
-    if (not (udg_Integer_WaveNumber <= 60)) then
         return false
     end
     return true
@@ -9681,9 +9707,6 @@ function Trig_Random_Wave_Spawning_Sys_Func002Func010C()
     if (not (GetPlayerName(Player(4)) ~= "Defender 5")) then
         return false
     end
-    if (not (udg_Integer_WaveNumber <= 60)) then
-        return false
-    end
     return true
 end
 
@@ -9699,9 +9722,6 @@ function Trig_Random_Wave_Spawning_Sys_Func002Func012C()
         return false
     end
     if (not (GetPlayerName(Player(5)) ~= "Defender 6")) then
-        return false
-    end
-    if (not (udg_Integer_WaveNumber <= 60)) then
         return false
     end
     return true
@@ -9721,9 +9741,6 @@ function Trig_Random_Wave_Spawning_Sys_Func002Func014C()
     if (not (GetPlayerName(Player(6)) ~= "Defender 7")) then
         return false
     end
-    if (not (udg_Integer_WaveNumber <= 60)) then
-        return false
-    end
     return true
 end
 
@@ -9741,9 +9758,6 @@ function Trig_Random_Wave_Spawning_Sys_Func002Func016C()
     if (not (GetPlayerName(Player(7)) ~= "Defender 8")) then
         return false
     end
-    if (not (udg_Integer_WaveNumber <= 60)) then
-        return false
-    end
     return true
 end
 
@@ -9759,39 +9773,6 @@ function Trig_Random_Wave_Spawning_Sys_Func002Func018C()
         return false
     end
     if (not (GetPlayerSlotState(Player(8)) == PLAYER_SLOT_STATE_PLAYING)) then
-        return false
-    end
-    if (not (udg_Integer_WaveNumber <= 60)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Random_Wave_Spawning_Sys_Func002Func019Func005Func004A()
-    DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], ("|c008000FFWave " .. (I2S(udg_Integer_WaveNumber) .. (" of Endless Mode.|r [Endless Creeps] Creep Handicap is now set at " .. (I2S(udg_Integer_Array_CreepHandicap[1]) .. "%.")))))
-end
-
-function Trig_Random_Wave_Spawning_Sys_Func002Func019Func005Func005A()
-    DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], ("|c008000FFWave " .. (I2S(udg_Integer_WaveNumber) .. (" of Endless Mode.|r [Endless Creeps] Creep Handicap is now set at " .. (I2S(udg_Integer_Array_CreepHandicap[3]) .. "%.")))))
-end
-
-function Trig_Random_Wave_Spawning_Sys_Func002Func019Func005C()
-    if (not (udg_Integer_ChaosModeOn == 1)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Random_Wave_Spawning_Sys_Func002Func019Func008001()
-    return (udg_Integer_EndlessMode == 1)
-end
-
-function Trig_Random_Wave_Spawning_Sys_Func002Func019Func008002()
-    return (udg_Integer_WaveNumber >= 61)
-end
-
-function Trig_Random_Wave_Spawning_Sys_Func002Func019C()
-    if (not GetBooleanAnd(Trig_Random_Wave_Spawning_Sys_Func002Func019Func008001(), Trig_Random_Wave_Spawning_Sys_Func002Func019Func008002())) then
         return false
     end
     return true
@@ -9934,23 +9915,6 @@ function Trig_Random_Wave_Spawning_Sys_Actions()
             BlzSetUnitMaxHP(GetLastCreatedUnit(), R2I(udg_Real_Array_CreepHealthWaves[udg_Integer_WaveNumber]))
             SetUnitLifePercentBJ(GetLastCreatedUnit(), 100)
             BlzSetUnitArmor(GetLastCreatedUnit(), udg_Real_Array_RWArmourTotal[udg_Integer_WaveNumber])
-        else
-        end
-        if (Trig_Random_Wave_Spawning_Sys_Func002Func019C()) then
-            udg_UnitType_Array_UnitsTypes[udg_Integer_WaveNumber] = udg_UnitType_Array_EndWaveArmor[GetRandomInt(1, 6)]
-            udg_Integer_Array_WaveTimer[1] = 10
-            EnableTrigger(gg_trg_Timer)
-            TriggerSleepAction(10.00)
-            if (Trig_Random_Wave_Spawning_Sys_Func002Func019Func005C()) then
-                ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Random_Wave_Spawning_Sys_Func002Func019Func005Func005A)
-            else
-                udg_Integer_Array_CreepHandicap[1] = (R2I(GetPlayerHandicapBJ(Player(11))) + 20)
-                SetPlayerHandicapBJ(Player(10), I2R(udg_Integer_Array_CreepHandicap[1]))
-                SetPlayerHandicapBJ(Player(11), I2R(udg_Integer_Array_CreepHandicap[1]))
-                ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Random_Wave_Spawning_Sys_Func002Func019Func005Func004A)
-            end
-            EnableTrigger(gg_trg_Static_Wave_Spawning_System)
-            PlaySoundBJ(gg_snd_Wave_Normal)
         else
         end
     end
@@ -13240,6 +13204,16 @@ function InitTrig_Kick_Gray()
     TriggerRegisterPlayerChatEvent(gg_trg_Kick_Gray, Player(0), "-kick gray", true)
     TriggerRegisterPlayerChatEvent(gg_trg_Kick_Gray, Player(0), "-kick grey", true)
     TriggerAddAction(gg_trg_Kick_Gray, Trig_Kick_Gray_Actions)
+end
+
+function Trig_Untitled_Trigger_001_Actions()
+    udg_Integer_WaveNumber = 150
+end
+
+function InitTrig_Untitled_Trigger_001()
+    gg_trg_Untitled_Trigger_001 = CreateTrigger()
+    TriggerRegisterPlayerChatEvent(gg_trg_Untitled_Trigger_001, Player(0), "-wave", true)
+    TriggerAddAction(gg_trg_Untitled_Trigger_001, Trig_Untitled_Trigger_001_Actions)
 end
 
 function Trig_Restart_Func002C()
@@ -16534,6 +16508,7 @@ function InitCustomTriggers()
     InitTrig_Kick_Green()
     InitTrig_Kick_Pink()
     InitTrig_Kick_Gray()
+    InitTrig_Untitled_Trigger_001()
     InitTrig_Restart()
     InitTrig_Game_Setup_Ownership()
     InitTrig_Camera_Zoom_Command()
