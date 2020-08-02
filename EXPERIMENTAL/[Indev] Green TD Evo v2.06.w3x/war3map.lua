@@ -458,6 +458,7 @@ gg_trg_Kick_Orange = nil
 gg_trg_Kick_Green = nil
 gg_trg_Kick_Pink = nil
 gg_trg_Kick_Gray = nil
+gg_trg_Untitled_Trigger_001 = nil
 gg_trg_Restart = nil
 gg_trg_Game_Setup_Ownership = nil
 gg_trg_Camera_Zoom_Command = nil
@@ -532,7 +533,6 @@ gg_unit_z000_0121 = nil
 gg_unit_z001_0122 = nil
 gg_unit_z001_0123 = nil
 gg_unit_o00I_0124 = nil
-gg_trg_Untitled_Trigger_001 = nil
 function InitGlobals()
     local i = 0
     i = 0
@@ -2123,7 +2123,6 @@ function CreateBuildingsForPlayer0()
     local t
     local life
     gg_unit_n00C_0019 = BlzCreateUnitWithSkin(p, FourCC("n00C"), -1792.0, 3392.0, 270.000, FourCC("n00C"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01P"), -2048.0, 1600.0, 270.000, FourCC("n01P"))
 end
 
 function CreateNeutralHostile()
@@ -2133,16 +2132,6 @@ function CreateNeutralHostile()
     local t
     local life
     u = BlzCreateUnitWithSkin(p, FourCC("n013"), -1794.5, 3141.5, 257.934, FourCC("n013"))
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2156.9, 1474.0, 344.553, FourCC("h01H"))
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2216.5, 1568.8, 344.553, FourCC("h01H"))
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2204.8, 1707.0, 344.553, FourCC("h01H"))
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2095.3, 1759.4, 344.553, FourCC("h01H"))
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2006.1, 1759.4, 344.553, FourCC("h01H"))
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1917.3, 1717.4, 344.553, FourCC("h01H"))
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1909.9, 1615.8, 344.553, FourCC("h01H"))
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1932.2, 1511.4, 344.553, FourCC("h01H"))
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2013.8, 1442.7, 344.553, FourCC("h01H"))
-    u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2104.3, 1413.8, 344.553, FourCC("h01H"))
 end
 
 function CreateNeutralPassiveBuildings()
@@ -2871,7 +2860,7 @@ function Trig_Shard_Tower_Abilities_Func002C()
 end
 
 function Trig_Shard_Tower_Abilities_Func003Func003C()
-    if (not (udg_Real_Array_ShardTowerChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= 25.00)) then
+    if (not (udg_Real_Array_ShardTowerChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= 50.00)) then
         return false
     end
     return true
@@ -2901,7 +2890,7 @@ function Trig_Shard_Tower_Abilities_Actions()
     if (Trig_Shard_Tower_Abilities_Func003C()) then
         udg_Real_Array_ShardTowerChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
         if (Trig_Shard_Tower_Abilities_Func003Func003C()) then
-            SetUnitManaBJ(udg_DamageEventSource, (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + (20.00 * I2R(udg_Integer_WaveNumber))))
+            SetUnitManaBJ(udg_DamageEventSource, (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + (10.00 * I2R(udg_Integer_WaveNumber))))
             UnitDamageTargetBJ(udg_DamageEventSource, udg_DamageEventTarget, (I2R(BlzGetUnitBaseDamage(udg_DamageEventSource, 0)) * 0.25), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
             CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventTarget), bj_UNIT_FACING)
             UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
@@ -3652,6 +3641,8 @@ function Trig_Quest_Actions()
     CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_2593")
     CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_2561")
     CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_2569")
+    CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_2729", "TRIGSTR_2730", "ReplaceableTextures\\CommandButtons\\BTNSpellBookBLS.blp")
+    CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_2731")
     CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_030", "TRIGSTR_292", "ReplaceableTextures\\CommandButtons\\BTNSpellBookBLS.blp")
     CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_708")
     CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_2558", "TRIGSTR_2559", "ReplaceableTextures\\CommandButtons\\BTNSpellBookBLS.blp")

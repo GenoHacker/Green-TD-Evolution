@@ -5,7 +5,7 @@ No more Upgrades
 
 STRING 1
 {
-[LUATEST] Green TD Evo v2.05
+[INDEV] Green TD Evo v2.06
 }
 
 STRING 2
@@ -15,7 +15,7 @@ STRING 2
 
 STRING 3
 {
-|c0000FF00Version Released -|r |cAAAAFFAA01/07/2020|r
+|c0000FF00Version Released -|r |cAAAAFFAA02/08/2020|r
 }
 
 STRING 4
@@ -18273,6 +18273,57 @@ STRING 2724
 |c0077ff77Causes the tower to attack randomly.|r
 }
 
+STRING 2725
+// Abilities: A04B (Frostbite), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Attacks have a 50% chance to cast a frost nova onto an enemy, dealing [500 + 25% of Towers Damage] as spell damage and slowing units in a 300 area of effect, also generates [10 x Wave Number] mana.
+
+
+When at full mana the towers multishot is improved and the tower deals 200% damage to units affected by a frost slow. If the tower falls below 10% mana multishot returns to normal.
+}
+
+STRING 2726
+{
+Green TD Evolution
+}
+
+STRING 2727
+{
+v2.06 Indev
+}
+
+STRING 2728
+{
+This is a indevelopment version, their may be various bug, issues, crashes or desyncs.
+}
+
+STRING 2729
+{
+Changelog -- v2.06
+
+}
+
+STRING 2730
+{
+-- Consolidated all emergency towers into 1 learnable abillity instead of each tower having its own.
+-- Switched from JASS scripting to LUA Scripting
+-- Added Bribes LUA Damage Engine
+-- Added Dr Super Goods LUA Garbage Collector
+-- Added Custom Crit System
+-- Added Critical Aura
+-- Added Crit Bonus to hero
+-- Added more easter eggs
+-- Reduced Health, Armour and Movement Speed of non-random waves
+-- Fixed Endless Mode and Random Waves not being compatible
+-- Fixed chaos mode difficultys still being active after changing to a non-chaos mode difficulty during game setup
+-- Fixed -wave command only being available to player 1
+}
+
+STRING 2731
+{
+v2.06 Indev Release Date - 02/08/20
+}
+
 STRING 2735
 // Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
@@ -19424,15 +19475,6 @@ STRING 2935
 // Units: h03X (Research Tower 6: Wildkin), Hotkey (Hotkey)
 {
 Z
-}
-
-STRING 2936
-// Abilities: A04B (Frostbite), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Attacks have a 25% chance to cast a frost nova onto an enemy, dealing [500 + 25% of Towers Damage] as spell damage and slowing units in a 300 area of effect, also generates [20 x Wave Number] mana.
-
-
-When at full mana the towers multishot is improved and the tower deals 200% damage to units affected by a frost slow. If the tower falls below 10% mana multishot returns to normal.
 }
 
 STRING 2942
