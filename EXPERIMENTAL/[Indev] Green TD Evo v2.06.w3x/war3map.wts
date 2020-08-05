@@ -1208,12 +1208,6 @@ STRING 164
 |c0000ff00Hero Waves --|r |c0077ff7739, 40, 41, 42, 43, 44, 45, 46, 47, 49, 50, 51, 52, 54, 55, 56. |c0000ff00The |c0077ff77Research Tower|r |c0000ff00deals the most damage to Heroes and is highly recommended to get one before the hero waves start, just dont get it too early though.|r
 }
 
-STRING 165
-// Abilities: A01J (Slow), EditorSuffix (Editor Suffix)
-{
-[Spell]
-}
-
 STRING 166
 // Units: h021 (Bash Tower 1: Storm Panda), Hotkey (Hotkey)
 {
@@ -6836,18 +6830,6 @@ STRING 1027
 // Abilities: A03O (Intelligence Bonus), Name (Name)
 {
 Intelligence Bonus
-}
-
-STRING 1028
-// Abilities: A01P (Body Snatching), EditorSuffix (Editor Suffix)
-{
-[Ability]
-}
-
-STRING 1029
-// Abilities: A01Q (Body Snatching), EditorSuffix (Editor Suffix)
-{
-[Tooltip]
 }
 
 STRING 1030
@@ -15475,7 +15457,7 @@ STRING 2335
 }
 
 STRING 2336
-// Abilities: A00Z (Random Attack), EditorSuffix (Editor Suffix)
+// Abilities: A03W (Venom 1), EditorSuffix (Editor Suffix)
 {
 [Venom Tower]
 }
@@ -16365,12 +16347,6 @@ STRING 2467
 |c0000ff00Multishot - |c0077ff77[Level 3]|r
 }
 
-STRING 2468
-// Abilities: A004 (Critical Strike), EditorSuffix (Editor Suffix)
-{
-[Custom]
-}
-
 STRING 2469
 // Abilities: A04E (Multishot), Ubertip (Tooltip - Normal - Extended)
 {
@@ -16489,18 +16465,6 @@ STRING 2486
 // Abilities: A046 (Multishot), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77The Research Tower is able to attack 8 Enemies in one Attack.|r
-}
-
-STRING 2487
-// Units: h047 (Ultimate Soul Tower), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff770.25
-|c0000ff00Damage:|r |c0077ff778500
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff770.37 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Multishot; can attack up to 6 enemy units.|r
-|c0000ff00Ability (2):|r |c0077ff77Servitude; upon killing an enemy this tower gains 1 mana, upon reaching 15 mana it can summon 15 random units that deal a random attack type.|r
 }
 
 STRING 2488
@@ -18324,6 +18288,30 @@ STRING 2731
 v2.06 Indev Release Date - 02/08/20
 }
 
+STRING 2732
+// Units: h047 (Ultimate Soul Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff770.25
+|c0000ff00Damage:|r |c0077ff778500
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.37 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Multishot; can attack up to 6 enemy units.|r
+|c0000ff00Ability (2):|r |c0077ff77Soul Extraction; attacks have a 10% chance to deal 5% of an enemy units current health as chaos damage, the tower gains mana equal to the damage dealt. When above 75% mana tower has a 10% chance to use all mana to summon 5 minions.|r
+}
+
+STRING 2733
+// Abilities: A00T (Chaos Energies), EditorSuffix (Editor Suffix)
+{
+[Fel Tower]
+}
+
+STRING 2734
+// Abilities: A03P (Winter Spirits), EditorSuffix (Editor Suffix)
+{
+[Spirit Tower]
+}
+
 STRING 2735
 // Abilities: A00T (Chaos Energies), Ubertip (Tooltip - Normal - Extended)
 {
@@ -18804,6 +18792,70 @@ STRING 2814
 Attacks increases the towers range by 25, crit chance by 1% and crit damage by 100%, bonuses are lost whenever the tower crits
 }
 
+STRING 2815
+// Abilities: A04F (Brainfreeze), EditorSuffix (Editor Suffix)
+{
+[Spirit Tower]
+}
+
+STRING 2816
+// Abilities: A04C (Soul Extraction), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Attacks have a 10% chance to deal 5% of units current health as chaos damage, the tower gains mana equal to [5 + Damage Dealt].
+
+Whilst above 75% mana this tower has a 10% chance to use all the accumulated mana to summon 5 minions with random attack types whose damage is equal to [500 + 25% of Mana Spent].
+
+If this activates whilst minions are still alive then their damage will be increased and their health will be increased by 50% of their current health.
+}
+
+STRING 2817
+// Abilities: A04C (Soul Extraction), EditorSuffix (Editor Suffix)
+{
+[Soul Tower]
+}
+
+STRING 2818
+// Abilities: A003 (Frost Attack), EditorSuffix (Editor Suffix)
+{
+[Frost Towers]
+}
+
+STRING 2819
+// Abilities: A004 (Critical Strike), EditorSuffix (Editor Suffix)
+{
+[Crit System]
+}
+
+STRING 2820
+// Abilities: A01E (Bash Tower 1), EditorSuffix (Editor Suffix)
+{
+[Bash Tower]
+}
+
+STRING 2821
+// Abilities: A00D (Speed Aura), EditorSuffix (Editor Suffix)
+{
+[Aura Tower]
+}
+
+STRING 2822
+// Abilities: A014 (Damage Aura), EditorSuffix (Editor Suffix)
+{
+[Aura Tower]
+}
+
+STRING 2823
+// Abilities: A017 (Armour Aura), EditorSuffix (Editor Suffix)
+{
+[Aura Tower]
+}
+
+STRING 2824
+// Abilities: A01A (Bloodlust), EditorSuffix (Editor Suffix)
+{
+[Spell Tower]
+}
+
 STRING 2825
 // Abilities: A00T (Chaos Energies), Name (Name)
 {
@@ -18870,18 +18922,8 @@ STRING 2830
 |c0000ff00Ability (2):|r |c0077ff77Soul Extraction; attacks have a 10% chance to deal 5% of an enemy units current health as chaos damage, the tower gains mana equal to the damage dealt. When above 75% mana tower has a 10% chance to use all mana to summon 5 minions.|r
 }
 
-STRING 2831
-// Abilities: A04C (Soul Extraction), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Attacks have a 10% chance to deal 5% of units current health as chaos damage, the tower gains mana equal to [5 + Damage Dealt].
-
-Whilst above 75% mana this tower has a 10% chance to use all the accumulated mana to summon 5 minions with random attack types whose damage is equal to [500 + Mana Spent].
-
-If this activates whilst minions are still alive then their damage will be increased and their health will be increased by 50% of their current health.
-}
-
 STRING 2832
-// Abilities: A04E (Multishot), EditorSuffix (Editor Suffix)
+// Abilities: A04B (Frostbite), EditorSuffix (Editor Suffix)
 {
 [Shard Tower]
 }
@@ -18934,6 +18976,12 @@ STRING 2840
 Winter Spirits
 }
 
+STRING 2841
+// Abilities: A01B (Stasis Trap), EditorSuffix (Editor Suffix)
+{
+[Spell Tower]
+}
+
 STRING 2842
 // Units: n01M (Shard Tower 8: Frozen Obelisk), Name (Name)
 {
@@ -18941,7 +18989,7 @@ Shard Tower 8: Frozen Obelisk
 }
 
 STRING 2843
-// Abilities: A04D (Frost Nova), EditorSuffix (Editor Suffix)
+// Abilities: A04E (Multishot), EditorSuffix (Editor Suffix)
 {
 [Shard Tower]
 }
@@ -18950,6 +18998,12 @@ STRING 2844
 // Units: n01M (Shard Tower 8: Frozen Obelisk), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Frozen Obelisk.|r |cAAAAFFAAShard Tower 8.|r
+}
+
+STRING 2845
+// Abilities: A01J (Slow), EditorSuffix (Editor Suffix)
+{
+[Spell Tower]
 }
 
 STRING 2846
@@ -18962,6 +19016,12 @@ STRING 2847
 // Units: n01N (Shard Tower 9: Frozen Obelisk), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Frozen Obelisk.|r |cAAAAFFAAShard Tower 9.|r
+}
+
+STRING 2848
+// Abilities: A01M (Raise Dead), EditorSuffix (Editor Suffix)
+{
+[Spell Tower]
 }
 
 STRING 2849
@@ -19030,10 +19090,34 @@ STRING 2859
 |c0077ff77[Z] |c0000ff00Upgrade To Frozen Obelisk.|r |cAAAAFFAAShard Tower 5.|r
 }
 
+STRING 2860
+// Abilities: A01N (Faerie Fire), EditorSuffix (Editor Suffix)
+{
+[Spell Tower]
+}
+
 STRING 2861
 // Buffs/Effects: B000 (), Buffubertip (Tooltip - Extended)
 {
 Attackers have a chance to deal extra damage
+}
+
+STRING 2862
+// Abilities: A01O (Roar), EditorSuffix (Editor Suffix)
+{
+[Spell Tower]
+}
+
+STRING 2863
+// Abilities: A00K (Sell Tower), EditorSuffix (Editor Suffix)
+{
+[Spell Tower]
+}
+
+STRING 2864
+// Abilities: A02C (Crippling Aura), EditorSuffix (Editor Suffix)
+{
+[Aura Tower]
 }
 
 STRING 2865
@@ -19060,16 +19144,52 @@ STRING 2867
 |c0000ff00Ability (2):|r |c0077ff77Freezing Attack|r
 }
 
+STRING 2868
+// Abilities: A002 (Aura Upgrades), EditorSuffix (Editor Suffix)
+{
+[Aura Tower]
+}
+
+STRING 2869
+// Abilities: A00F (Upgrade Speed Aura), EditorSuffix (Editor Suffix)
+{
+[Aura Spellbook]
+}
+
 STRING 2870
 // Units: n01S (Spirit Tower 7: Winter Beacon), Name (Name)
 {
 Spirit Tower 7: Winter Beacon
 }
 
+STRING 2871
+// Abilities: A005 (Upgrade Crippling Aura), EditorSuffix (Editor Suffix)
+{
+[Aura Spellbook]
+}
+
+STRING 2872
+// Abilities: A00H (Upgrade Armor Aura), EditorSuffix (Editor Suffix)
+{
+[Aura Spellbook]
+}
+
 STRING 2873
 // Units: n01T (Spirit Tower 8: Winter Beacon), Name (Name)
 {
 Spirit Tower 8: Winter Beacon
+}
+
+STRING 2874
+// Abilities: A00I (Upgrade Damage Aura), EditorSuffix (Editor Suffix)
+{
+[Aura Spellbook]
+}
+
+STRING 2875
+// Abilities: A006 (Waypoints), EditorSuffix (Editor Suffix)
+{
+[Creeps]
 }
 
 STRING 2876
@@ -19327,6 +19447,18 @@ STRING 2905
 Q
 }
 
+STRING 2906
+// Abilities: A01P (Body Snatching), EditorSuffix (Editor Suffix)
+{
+[Ability - Spell Tower]
+}
+
+STRING 2907
+// Abilities: A01Q (Body Snatching), EditorSuffix (Editor Suffix)
+{
+[Tooltip - Spell Tower]
+}
+
 STRING 2908
 // Abilities: A02A (Game Modes), Hotkey (Hotkey - Normal)
 {
@@ -19357,10 +19489,58 @@ STRING 2912
 Winter Beacon, Ultimate Spirit Tower
 }
 
+STRING 2913
+// Abilities: A03Z (Hellfire 7), EditorSuffix (Editor Suffix)
+{
+[Hellfire Tower]
+}
+
+STRING 2914
+// Abilities: A040 (Hellfire 5), EditorSuffix (Editor Suffix)
+{
+[Hellfire Tower]
+}
+
+STRING 2915
+// Abilities: A041 (Hellfire 6), EditorSuffix (Editor Suffix)
+{
+[Hellfire Tower]
+}
+
+STRING 2916
+// Abilities: A042 (Hellfire 1), EditorSuffix (Editor Suffix)
+{
+[Hellfire Tower]
+}
+
+STRING 2917
+// Abilities: A043 (Hellfire 3), EditorSuffix (Editor Suffix)
+{
+[Hellfire Tower]
+}
+
+STRING 2918
+// Abilities: A044 (Hellfire 2), EditorSuffix (Editor Suffix)
+{
+[Hellfire Tower]
+}
+
+STRING 2919
+// Abilities: A045 (Hellfire 4), EditorSuffix (Editor Suffix)
+{
+[Hellfire Tower]
+}
+
 STRING 2920
 // Abilities: A02N (Easy Mode), Hotkey (Hotkey - Normal)
 {
 Q
+}
+
+STRING 2921
+// Abilities: A00Q (Critical Aura), EditorSuffix (Editor Suffix)
+{
+[Aura Tower]
 }
 
 STRING 2922
@@ -19373,6 +19553,18 @@ STRING 2923
 // Abilities: A036 (Endless Mode), Hotkey (Hotkey - Normal)
 {
 Q
+}
+
+STRING 2924
+// Abilities: A00R (Upgrade Critical Aura), EditorSuffix (Editor Suffix)
+{
+[Aura Spellbook]
+}
+
+STRING 2925
+// Abilities: A00Z (Random Attack), EditorSuffix (Editor Suffix)
+{
+[Venom Tower]
 }
 
 STRING 2926
@@ -19475,6 +19667,18 @@ STRING 2935
 // Units: h03X (Research Tower 6: Wildkin), Hotkey (Hotkey)
 {
 Z
+}
+
+STRING 2936
+// Abilities: A03N (Enchanted Bolts), EditorSuffix (Editor Suffix)
+{
+[Ballista Tower]
+}
+
+STRING 2937
+// Abilities: A04D (Frost Nova), EditorSuffix (Editor Suffix)
+{
+[Shard Tower]
 }
 
 STRING 2942
@@ -21071,7 +21275,7 @@ C
 }
 
 STRING 5671
-// Abilities: A00K (Sell Tower), EditorSuffix (Editor Suffix)
+// Abilities: A019 (Inner Fire), EditorSuffix (Editor Suffix)
 {
 [Spell Tower]
 }

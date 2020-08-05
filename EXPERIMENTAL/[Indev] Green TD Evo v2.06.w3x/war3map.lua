@@ -2552,7 +2552,7 @@ function Trig_Soul_Tower_Soul_Extraction_Conditions()
 end
 
 function Trig_Soul_Tower_Soul_Extraction_Func002Func004Func001Func002A()
-    BlzSetUnitBaseDamage(GetEnumUnit(), (BlzGetUnitBaseDamage(GetEnumUnit(), 0) + R2I(GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource))), 0)
+    BlzSetUnitBaseDamage(GetEnumUnit(), (BlzGetUnitBaseDamage(GetEnumUnit(), 0) + R2I((GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + 0.25))), 0)
     SetUnitLifeBJ(GetEnumUnit(), (GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) + (GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) / 0.50)))
 end
 
