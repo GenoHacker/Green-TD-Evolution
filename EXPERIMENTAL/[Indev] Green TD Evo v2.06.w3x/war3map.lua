@@ -336,6 +336,14 @@ gg_snd_Wave_Hero = nil
 gg_snd_Wave_Boss = nil
 gg_snd_HeroLichPissed8 = nil
 gg_trg_Damage_Engine_Config = nil
+gg_trg_Kick_Blue = nil
+gg_trg_Kick_Teal = nil
+gg_trg_Kick_Purple = nil
+gg_trg_Kick_Yellow = nil
+gg_trg_Kick_Orange = nil
+gg_trg_Kick_Green = nil
+gg_trg_Kick_Pink = nil
+gg_trg_Kick_Gray = nil
 gg_trg_Crit_System = nil
 gg_trg_Crit_Aura = nil
 gg_trg_Venom_Tower_Random_Target = nil
@@ -402,46 +410,6 @@ gg_trg_Generate_Random_Waves = nil
 gg_trg_Generate_Next_Units = nil
 gg_trg_Gold_After_Wave = nil
 gg_trg_Debug_Wave = nil
-gg_trg_Path_Orange_Spawn = nil
-gg_trg_Path_Orange_1 = nil
-gg_trg_Path_Orange_2 = nil
-gg_trg_Path_Orange_3 = nil
-gg_trg_Path_Green_Spawn = nil
-gg_trg_Path_Green_1 = nil
-gg_trg_Path_Green_2 = nil
-gg_trg_Path_Green_3 = nil
-gg_trg_Path_Pink_Spawn = nil
-gg_trg_Path_Pink_1 = nil
-gg_trg_Path_Pink_2 = nil
-gg_trg_Path_Gray_Spawn = nil
-gg_trg_Path_Gray_1 = nil
-gg_trg_Path_Gray_2 = nil
-gg_trg_Path_Red_Spawn_A = nil
-gg_trg_Path_Red_1_A = nil
-gg_trg_Path_Red_2_A = nil
-gg_trg_Path_Red_3_A = nil
-gg_trg_Path_Red_4_A = nil
-gg_trg_Path_Red_Spawn_B = nil
-gg_trg_Path_Red_1_B = nil
-gg_trg_Path_Red_2_B = nil
-gg_trg_Path_Red_3_B = nil
-gg_trg_Path_Red_4_B = nil
-gg_trg_Path_Purple_Spawn = nil
-gg_trg_Path_Purple_1 = nil
-gg_trg_Path_Purple_2 = nil
-gg_trg_Path_Purple_3 = nil
-gg_trg_Path_7_Yellow_Spawn = nil
-gg_trg_Path_Yellow_1 = nil
-gg_trg_Path_Yellow_2 = nil
-gg_trg_Path_Yellow_3 = nil
-gg_trg_Path_Blue_Spawn = nil
-gg_trg_Path_Blue_1 = nil
-gg_trg_Path_Blue_2 = nil
-gg_trg_Path_Blue_3 = nil
-gg_trg_Path_Teal_Spawn = nil
-gg_trg_Path_Teal_1 = nil
-gg_trg_Path_Teal_2 = nil
-gg_trg_Path_Teal_3 = nil
 gg_trg_Create_the_Multiboard = nil
 gg_trg_Timer = nil
 gg_trg_Kill_Update = nil
@@ -525,14 +493,46 @@ gg_unit_z000_0121 = nil
 gg_unit_z001_0122 = nil
 gg_unit_z001_0123 = nil
 gg_unit_o00I_0124 = nil
-gg_trg_Kick_Gray = nil
-gg_trg_Kick_Pink = nil
-gg_trg_Kick_Green = nil
-gg_trg_Kick_Orange = nil
-gg_trg_Kick_Yellow = nil
-gg_trg_Kick_Purple = nil
-gg_trg_Kick_Teal = nil
-gg_trg_Kick_Blue = nil
+gg_trg_Path_Teal_3 = nil
+gg_trg_Path_Teal_2 = nil
+gg_trg_Path_Teal_1 = nil
+gg_trg_Path_Teal_Spawn = nil
+gg_trg_Path_Blue_3 = nil
+gg_trg_Path_Blue_2 = nil
+gg_trg_Path_Blue_1 = nil
+gg_trg_Path_Blue_Spawn = nil
+gg_trg_Path_Yellow_3 = nil
+gg_trg_Path_Yellow_2 = nil
+gg_trg_Path_Yellow_1 = nil
+gg_trg_Path_7_Yellow_Spawn = nil
+gg_trg_Path_Purple_3 = nil
+gg_trg_Path_Purple_2 = nil
+gg_trg_Path_Purple_1 = nil
+gg_trg_Path_Purple_Spawn = nil
+gg_trg_Path_Red_4_B = nil
+gg_trg_Path_Red_3_B = nil
+gg_trg_Path_Red_2_B = nil
+gg_trg_Path_Red_1_B = nil
+gg_trg_Path_Red_Spawn_B = nil
+gg_trg_Path_Red_4_A = nil
+gg_trg_Path_Red_3_A = nil
+gg_trg_Path_Red_2_A = nil
+gg_trg_Path_Red_1_A = nil
+gg_trg_Path_Red_Spawn_A = nil
+gg_trg_Path_Gray_2 = nil
+gg_trg_Path_Gray_1 = nil
+gg_trg_Path_Gray_Spawn = nil
+gg_trg_Path_Pink_2 = nil
+gg_trg_Path_Pink_1 = nil
+gg_trg_Path_Pink_Spawn = nil
+gg_trg_Path_Green_3 = nil
+gg_trg_Path_Green_2 = nil
+gg_trg_Path_Green_1 = nil
+gg_trg_Path_Green_Spawn = nil
+gg_trg_Path_Orange_3 = nil
+gg_trg_Path_Orange_2 = nil
+gg_trg_Path_Orange_1 = nil
+gg_trg_Path_Orange_Spawn = nil
 function InitGlobals()
     local i = 0
     i = 0
@@ -10191,6 +10191,7 @@ function Trig_Path_Orange_Spawn_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 1)
     udg_PointArray_Waypoints[1] = GetRectCenter(gg_rct_Orange_1)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[1])
+        RemoveLocation(udg_PointArray_Waypoints[1])
 end
 
 function InitTrig_Path_Orange_Spawn()
@@ -10224,6 +10225,7 @@ function Trig_Path_Orange_1_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 2)
     udg_PointArray_Waypoints[1] = GetRectCenter(gg_rct_Orange_2)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[1])
+        RemoveLocation(udg_PointArray_Waypoints[1])
 end
 
 function InitTrig_Path_Orange_1()
@@ -10257,6 +10259,7 @@ function Trig_Path_Orange_2_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 3)
     udg_PointArray_Waypoints[1] = GetRectCenter(gg_rct_Orange_3)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[1])
+        RemoveLocation(udg_PointArray_Waypoints[1])
 end
 
 function InitTrig_Path_Orange_2()
@@ -10290,6 +10293,7 @@ function Trig_Path_Orange_3_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 4)
     udg_PointArray_Waypoints[1] = GetRectCenter(gg_rct_Pink_2)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[1])
+        RemoveLocation(udg_PointArray_Waypoints[1])
 end
 
 function InitTrig_Path_Orange_3()
@@ -10299,7 +10303,7 @@ function InitTrig_Path_Orange_3()
     TriggerAddAction(gg_trg_Path_Orange_3, Trig_Path_Orange_3_Actions)
 end
 
-function Trig_Path_Green_Spawn_Func006C()
+function Trig_Path_Green_Spawn_Func007C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -10313,7 +10317,7 @@ function Trig_Path_Green_Spawn_Func006C()
 end
 
 function Trig_Path_Green_Spawn_Conditions()
-    if (not Trig_Path_Green_Spawn_Func006C()) then
+    if (not Trig_Path_Green_Spawn_Func007C()) then
         return false
     end
     return true
@@ -10324,6 +10328,7 @@ function Trig_Path_Green_Spawn_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 5)
     udg_PointArray_Waypoints[2] = GetRectCenter(gg_rct_Green_1)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[2])
+        RemoveLocation(udg_PointArray_Waypoints[2])
 end
 
 function InitTrig_Path_Green_Spawn()
@@ -10333,7 +10338,7 @@ function InitTrig_Path_Green_Spawn()
     TriggerAddAction(gg_trg_Path_Green_Spawn, Trig_Path_Green_Spawn_Actions)
 end
 
-function Trig_Path_Green_1_Func005C()
+function Trig_Path_Green_1_Func006C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -10347,7 +10352,7 @@ function Trig_Path_Green_1_Func005C()
 end
 
 function Trig_Path_Green_1_Conditions()
-    if (not Trig_Path_Green_1_Func005C()) then
+    if (not Trig_Path_Green_1_Func006C()) then
         return false
     end
     return true
@@ -10357,6 +10362,7 @@ function Trig_Path_Green_1_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 6)
     udg_PointArray_Waypoints[2] = GetRectCenter(gg_rct_Green_2)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[2])
+        RemoveLocation(udg_PointArray_Waypoints[2])
 end
 
 function InitTrig_Path_Green_1()
@@ -10366,7 +10372,7 @@ function InitTrig_Path_Green_1()
     TriggerAddAction(gg_trg_Path_Green_1, Trig_Path_Green_1_Actions)
 end
 
-function Trig_Path_Green_2_Func005C()
+function Trig_Path_Green_2_Func006C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -10380,7 +10386,7 @@ function Trig_Path_Green_2_Func005C()
 end
 
 function Trig_Path_Green_2_Conditions()
-    if (not Trig_Path_Green_2_Func005C()) then
+    if (not Trig_Path_Green_2_Func006C()) then
         return false
     end
     return true
@@ -10390,6 +10396,7 @@ function Trig_Path_Green_2_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 7)
     udg_PointArray_Waypoints[2] = GetRectCenter(gg_rct_Green_3)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[2])
+        RemoveLocation(udg_PointArray_Waypoints[2])
 end
 
 function InitTrig_Path_Green_2()
@@ -10399,7 +10406,7 @@ function InitTrig_Path_Green_2()
     TriggerAddAction(gg_trg_Path_Green_2, Trig_Path_Green_2_Actions)
 end
 
-function Trig_Path_Green_3_Func005C()
+function Trig_Path_Green_3_Func006C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -10413,7 +10420,7 @@ function Trig_Path_Green_3_Func005C()
 end
 
 function Trig_Path_Green_3_Conditions()
-    if (not Trig_Path_Green_3_Func005C()) then
+    if (not Trig_Path_Green_3_Func006C()) then
         return false
     end
     return true
@@ -10423,6 +10430,7 @@ function Trig_Path_Green_3_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 8)
     udg_PointArray_Waypoints[2] = GetRectCenter(gg_rct_Gray_2)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[2])
+        RemoveLocation(udg_PointArray_Waypoints[2])
 end
 
 function InitTrig_Path_Green_3()
@@ -10432,7 +10440,7 @@ function InitTrig_Path_Green_3()
     TriggerAddAction(gg_trg_Path_Green_3, Trig_Path_Green_3_Actions)
 end
 
-function Trig_Path_Pink_Spawn_Func006C()
+function Trig_Path_Pink_Spawn_Func007C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -10446,7 +10454,7 @@ function Trig_Path_Pink_Spawn_Func006C()
 end
 
 function Trig_Path_Pink_Spawn_Conditions()
-    if (not Trig_Path_Pink_Spawn_Func006C()) then
+    if (not Trig_Path_Pink_Spawn_Func007C()) then
         return false
     end
     return true
@@ -10457,6 +10465,7 @@ function Trig_Path_Pink_Spawn_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 9)
     udg_PointArray_Waypoints[3] = GetRectCenter(gg_rct_Pink_1)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[3])
+        RemoveLocation(udg_PointArray_Waypoints[3])
 end
 
 function InitTrig_Path_Pink_Spawn()
@@ -10490,6 +10499,7 @@ function Trig_Path_Pink_1_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 10)
     udg_PointArray_Waypoints[3] = GetRectCenter(gg_rct_Pink_2)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[3])
+        RemoveLocation(udg_PointArray_Waypoints[3])
 end
 
 function InitTrig_Path_Pink_1()
@@ -10519,7 +10529,7 @@ function Trig_Path_Pink_2_Conditions()
     return true
 end
 
-function Trig_Path_Pink_2_Func001Func006C()
+function Trig_Path_Pink_2_Func001Func008C()
     if (GetPlayerSlotState(Player(0)) == PLAYER_SLOT_STATE_LEFT) then
         return true
     end
@@ -10530,7 +10540,7 @@ function Trig_Path_Pink_2_Func001Func006C()
 end
 
 function Trig_Path_Pink_2_Func001C()
-    if (not Trig_Path_Pink_2_Func001Func006C()) then
+    if (not Trig_Path_Pink_2_Func001Func008C()) then
         return false
     end
     return true
@@ -10540,10 +10550,12 @@ function Trig_Path_Pink_2_Actions()
     if (Trig_Path_Pink_2_Func001C()) then
         udg_PointArray_Waypoints[3] = GetRectCenter(gg_rct_Red_4_A)
         SetUnitPositionLocFacingBJ(GetEnteringUnit(), udg_PointArray_Waypoints[3], 180.00)
+                RemoveLocation(udg_PointArray_Waypoints[3])
     else
         SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 11)
         udg_PointArray_Waypoints[3] = GetRectCenter(gg_rct_Red_1_A)
         IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[3])
+                RemoveLocation(udg_PointArray_Waypoints[3])
     end
 end
 
@@ -10554,7 +10566,7 @@ function InitTrig_Path_Pink_2()
     TriggerAddAction(gg_trg_Path_Pink_2, Trig_Path_Pink_2_Actions)
 end
 
-function Trig_Path_Gray_Spawn_Func006C()
+function Trig_Path_Gray_Spawn_Func007C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -10568,7 +10580,7 @@ function Trig_Path_Gray_Spawn_Func006C()
 end
 
 function Trig_Path_Gray_Spawn_Conditions()
-    if (not Trig_Path_Gray_Spawn_Func006C()) then
+    if (not Trig_Path_Gray_Spawn_Func007C()) then
         return false
     end
     return true
@@ -10579,6 +10591,7 @@ function Trig_Path_Gray_Spawn_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 12)
     udg_PointArray_Waypoints[4] = GetRectCenter(gg_rct_Gray_1)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[4])
+        RemoveLocation(udg_PointArray_Waypoints[4])
 end
 
 function InitTrig_Path_Gray_Spawn()
@@ -10588,7 +10601,7 @@ function InitTrig_Path_Gray_Spawn()
     TriggerAddAction(gg_trg_Path_Gray_Spawn, Trig_Path_Gray_Spawn_Actions)
 end
 
-function Trig_Path_Gray_1_Func005C()
+function Trig_Path_Gray_1_Func006C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -10602,7 +10615,7 @@ function Trig_Path_Gray_1_Func005C()
 end
 
 function Trig_Path_Gray_1_Conditions()
-    if (not Trig_Path_Gray_1_Func005C()) then
+    if (not Trig_Path_Gray_1_Func006C()) then
         return false
     end
     return true
@@ -10612,6 +10625,7 @@ function Trig_Path_Gray_1_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 13)
     udg_PointArray_Waypoints[4] = GetRectCenter(gg_rct_Gray_2)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[4])
+        RemoveLocation(udg_PointArray_Waypoints[4])
 end
 
 function InitTrig_Path_Gray_1()
@@ -10652,10 +10666,12 @@ function Trig_Path_Gray_2_Actions()
     if (Trig_Path_Gray_2_Func001C()) then
         udg_PointArray_Waypoints[4] = GetRectCenter(gg_rct_Red_4_B)
         SetUnitPositionLocFacingBJ(GetEnteringUnit(), udg_PointArray_Waypoints[4], 0.00)
+                RemoveLocation(udg_PointArray_Waypoints[4])
     else
         SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 14)
         udg_PointArray_Waypoints[4] = GetRectCenter(gg_rct_Red_1_B)
         IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[4])
+                RemoveLocation(udg_PointArray_Waypoints[4])
     end
 end
 
@@ -10666,7 +10682,7 @@ function InitTrig_Path_Gray_2()
     TriggerAddAction(gg_trg_Path_Gray_2, Trig_Path_Gray_2_Actions)
 end
 
-function Trig_Path_Red_Spawn_A_Func006C()
+function Trig_Path_Red_Spawn_A_Func007C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -10680,7 +10696,7 @@ function Trig_Path_Red_Spawn_A_Func006C()
 end
 
 function Trig_Path_Red_Spawn_A_Conditions()
-    if (not Trig_Path_Red_Spawn_A_Func006C()) then
+    if (not Trig_Path_Red_Spawn_A_Func007C()) then
         return false
     end
     return true
@@ -10691,6 +10707,7 @@ function Trig_Path_Red_Spawn_A_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 15)
     udg_PointArray_Waypoints[5] = GetRectCenter(gg_rct_Red_1_A)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[5])
+        RemoveLocation(udg_PointArray_Waypoints[5])
 end
 
 function InitTrig_Path_Red_Spawn_A()
@@ -10700,7 +10717,7 @@ function InitTrig_Path_Red_Spawn_A()
     TriggerAddAction(gg_trg_Path_Red_Spawn_A, Trig_Path_Red_Spawn_A_Actions)
 end
 
-function Trig_Path_Red_1_A_Func005C()
+function Trig_Path_Red_1_A_Func006C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -10714,7 +10731,7 @@ function Trig_Path_Red_1_A_Func005C()
 end
 
 function Trig_Path_Red_1_A_Conditions()
-    if (not Trig_Path_Red_1_A_Func005C()) then
+    if (not Trig_Path_Red_1_A_Func006C()) then
         return false
     end
     return true
@@ -10724,6 +10741,7 @@ function Trig_Path_Red_1_A_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 16)
     udg_PointArray_Waypoints[5] = GetRectCenter(gg_rct_Red_2_A)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[5])
+        RemoveLocation(udg_PointArray_Waypoints[5])
 end
 
 function InitTrig_Path_Red_1_A()
@@ -10733,7 +10751,7 @@ function InitTrig_Path_Red_1_A()
     TriggerAddAction(gg_trg_Path_Red_1_A, Trig_Path_Red_1_A_Actions)
 end
 
-function Trig_Path_Red_2_A_Func005C()
+function Trig_Path_Red_2_A_Func006C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -10747,7 +10765,7 @@ function Trig_Path_Red_2_A_Func005C()
 end
 
 function Trig_Path_Red_2_A_Conditions()
-    if (not Trig_Path_Red_2_A_Func005C()) then
+    if (not Trig_Path_Red_2_A_Func006C()) then
         return false
     end
     return true
@@ -10757,6 +10775,7 @@ function Trig_Path_Red_2_A_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 17)
     udg_PointArray_Waypoints[5] = GetRectCenter(gg_rct_Red_3_A)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[5])
+        RemoveLocation(udg_PointArray_Waypoints[5])
 end
 
 function InitTrig_Path_Red_2_A()
@@ -10766,7 +10785,7 @@ function InitTrig_Path_Red_2_A()
     TriggerAddAction(gg_trg_Path_Red_2_A, Trig_Path_Red_2_A_Actions)
 end
 
-function Trig_Path_Red_3_A_Func004C()
+function Trig_Path_Red_3_A_Func005C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -10780,7 +10799,7 @@ function Trig_Path_Red_3_A_Func004C()
 end
 
 function Trig_Path_Red_3_A_Conditions()
-    if (not Trig_Path_Red_3_A_Func004C()) then
+    if (not Trig_Path_Red_3_A_Func005C()) then
         return false
     end
     return true
@@ -10789,6 +10808,7 @@ end
 function Trig_Path_Red_3_A_Actions()
     udg_PointArray_Waypoints[5] = GetRectCenter(gg_rct_Red_4_A)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[5])
+        RemoveLocation(udg_PointArray_Waypoints[5])
 end
 
 function InitTrig_Path_Red_3_A()
@@ -10818,7 +10838,7 @@ function Trig_Path_Red_4_A_Conditions()
     return true
 end
 
-function Trig_Path_Red_4_A_Func001Func006C()
+function Trig_Path_Red_4_A_Func001Func008C()
     if (GetPlayerSlotState(Player(3)) == PLAYER_SLOT_STATE_LEFT) then
         return true
     end
@@ -10829,7 +10849,7 @@ function Trig_Path_Red_4_A_Func001Func006C()
 end
 
 function Trig_Path_Red_4_A_Func001C()
-    if (not Trig_Path_Red_4_A_Func001Func006C()) then
+    if (not Trig_Path_Red_4_A_Func001Func008C()) then
         return false
     end
     return true
@@ -10839,10 +10859,12 @@ function Trig_Path_Red_4_A_Actions()
     if (Trig_Path_Red_4_A_Func001C()) then
         udg_PointArray_Waypoints[5] = GetRectCenter(gg_rct_Purple_3)
         SetUnitPositionLocFacingBJ(GetEnteringUnit(), udg_PointArray_Waypoints[5], 0.00)
+                RemoveLocation(udg_PointArray_Waypoints[5])
     else
         SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 18)
         udg_PointArray_Waypoints[5] = GetRectCenter(gg_rct_Purple_1)
         IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[5])
+                RemoveLocation(udg_PointArray_Waypoints[5])
     end
 end
 
@@ -10853,7 +10875,7 @@ function InitTrig_Path_Red_4_A()
     TriggerAddAction(gg_trg_Path_Red_4_A, Trig_Path_Red_4_A_Actions)
 end
 
-function Trig_Path_Red_Spawn_B_Func006C()
+function Trig_Path_Red_Spawn_B_Func007C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -10867,7 +10889,7 @@ function Trig_Path_Red_Spawn_B_Func006C()
 end
 
 function Trig_Path_Red_Spawn_B_Conditions()
-    if (not Trig_Path_Red_Spawn_B_Func006C()) then
+    if (not Trig_Path_Red_Spawn_B_Func007C()) then
         return false
     end
     return true
@@ -10878,6 +10900,7 @@ function Trig_Path_Red_Spawn_B_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 19)
     udg_PointArray_Waypoints[6] = GetRectCenter(gg_rct_Red_2_B)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[6])
+        RemoveLocation(udg_PointArray_Waypoints[6])
 end
 
 function InitTrig_Path_Red_Spawn_B()
@@ -10887,7 +10910,7 @@ function InitTrig_Path_Red_Spawn_B()
     TriggerAddAction(gg_trg_Path_Red_Spawn_B, Trig_Path_Red_Spawn_B_Actions)
 end
 
-function Trig_Path_Red_1_B_Func005C()
+function Trig_Path_Red_1_B_Func006C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -10901,7 +10924,7 @@ function Trig_Path_Red_1_B_Func005C()
 end
 
 function Trig_Path_Red_1_B_Conditions()
-    if (not Trig_Path_Red_1_B_Func005C()) then
+    if (not Trig_Path_Red_1_B_Func006C()) then
         return false
     end
     return true
@@ -10911,6 +10934,7 @@ function Trig_Path_Red_1_B_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 20)
     udg_PointArray_Waypoints[6] = GetRectCenter(gg_rct_Red_2_B)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[6])
+        RemoveLocation(udg_PointArray_Waypoints[6])
 end
 
 function InitTrig_Path_Red_1_B()
@@ -10944,6 +10968,7 @@ function Trig_Path_Red_2_B_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 21)
     udg_PointArray_Waypoints[6] = GetRectCenter(gg_rct_Red_3_B)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[6])
+        RemoveLocation(udg_PointArray_Waypoints[6])
 end
 
 function InitTrig_Path_Red_2_B()
@@ -10953,7 +10978,7 @@ function InitTrig_Path_Red_2_B()
     TriggerAddAction(gg_trg_Path_Red_2_B, Trig_Path_Red_2_B_Actions)
 end
 
-function Trig_Path_Red_3_B_Func004C()
+function Trig_Path_Red_3_B_Func005C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -10967,7 +10992,7 @@ function Trig_Path_Red_3_B_Func004C()
 end
 
 function Trig_Path_Red_3_B_Conditions()
-    if (not Trig_Path_Red_3_B_Func004C()) then
+    if (not Trig_Path_Red_3_B_Func005C()) then
         return false
     end
     return true
@@ -10976,6 +11001,7 @@ end
 function Trig_Path_Red_3_B_Actions()
     udg_PointArray_Waypoints[6] = GetRectCenter(gg_rct_Red_4_B)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[6])
+        RemoveLocation(udg_PointArray_Waypoints[6])
 end
 
 function InitTrig_Path_Red_3_B()
@@ -11005,7 +11031,7 @@ function Trig_Path_Red_4_B_Conditions()
     return true
 end
 
-function Trig_Path_Red_4_B_Func002Func006C()
+function Trig_Path_Red_4_B_Func002Func008C()
     if (GetPlayerSlotState(Player(4)) == PLAYER_SLOT_STATE_LEFT) then
         return true
     end
@@ -11016,7 +11042,7 @@ function Trig_Path_Red_4_B_Func002Func006C()
 end
 
 function Trig_Path_Red_4_B_Func002C()
-    if (not Trig_Path_Red_4_B_Func002Func006C()) then
+    if (not Trig_Path_Red_4_B_Func002Func008C()) then
         return false
     end
     return true
@@ -11027,10 +11053,12 @@ function Trig_Path_Red_4_B_Actions()
     if (Trig_Path_Red_4_B_Func002C()) then
         udg_PointArray_Waypoints[6] = GetRectCenter(gg_rct_Yellow_3)
         SetUnitPositionLocFacingBJ(GetEnteringUnit(), udg_PointArray_Waypoints[6], 180.00)
+                RemoveLocation(udg_PointArray_Waypoints[6])
     else
         SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 22)
         udg_PointArray_Waypoints[6] = GetRectCenter(gg_rct_Yellow_2)
         IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[6])
+                RemoveLocation(udg_PointArray_Waypoints[6])
     end
 end
 
@@ -11041,7 +11069,7 @@ function InitTrig_Path_Red_4_B()
     TriggerAddAction(gg_trg_Path_Red_4_B, Trig_Path_Red_4_B_Actions)
 end
 
-function Trig_Path_Purple_Spawn_Func006C()
+function Trig_Path_Purple_Spawn_Func007C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -11055,7 +11083,7 @@ function Trig_Path_Purple_Spawn_Func006C()
 end
 
 function Trig_Path_Purple_Spawn_Conditions()
-    if (not Trig_Path_Purple_Spawn_Func006C()) then
+    if (not Trig_Path_Purple_Spawn_Func007C()) then
         return false
     end
     return true
@@ -11066,6 +11094,7 @@ function Trig_Path_Purple_Spawn_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 23)
     udg_PointArray_Waypoints[7] = GetRectCenter(gg_rct_Purple_1)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[7])
+        RemoveLocation(udg_PointArray_Waypoints[7])
 end
 
 function InitTrig_Path_Purple_Spawn()
@@ -11099,6 +11128,7 @@ function Trig_Path_Purple_1_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 24)
     udg_PointArray_Waypoints[7] = GetRectCenter(gg_rct_Purple_2)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[7])
+        RemoveLocation(udg_PointArray_Waypoints[7])
 end
 
 function InitTrig_Path_Purple_1()
@@ -11108,7 +11138,7 @@ function InitTrig_Path_Purple_1()
     TriggerAddAction(gg_trg_Path_Purple_1, Trig_Path_Purple_1_Actions)
 end
 
-function Trig_Path_Purple_2_Func005C()
+function Trig_Path_Purple_2_Func006C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -11122,7 +11152,7 @@ function Trig_Path_Purple_2_Func005C()
 end
 
 function Trig_Path_Purple_2_Conditions()
-    if (not Trig_Path_Purple_2_Func005C()) then
+    if (not Trig_Path_Purple_2_Func006C()) then
         return false
     end
     return true
@@ -11132,6 +11162,7 @@ function Trig_Path_Purple_2_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 25)
     udg_PointArray_Waypoints[7] = GetRectCenter(gg_rct_Purple_3)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[7])
+        RemoveLocation(udg_PointArray_Waypoints[7])
 end
 
 function InitTrig_Path_Purple_2()
@@ -11141,7 +11172,7 @@ function InitTrig_Path_Purple_2()
     TriggerAddAction(gg_trg_Path_Purple_2, Trig_Path_Purple_2_Actions)
 end
 
-function Trig_Path_Purple_3_Func005C()
+function Trig_Path_Purple_3_Func006C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -11155,7 +11186,7 @@ function Trig_Path_Purple_3_Func005C()
 end
 
 function Trig_Path_Purple_3_Conditions()
-    if (not Trig_Path_Purple_3_Func005C()) then
+    if (not Trig_Path_Purple_3_Func006C()) then
         return false
     end
     return true
@@ -11165,6 +11196,7 @@ function Trig_Path_Purple_3_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 26)
     udg_PointArray_Waypoints[7] = GetRectCenter(gg_rct_Blue_3)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[7])
+        RemoveLocation(udg_PointArray_Waypoints[7])
 end
 
 function InitTrig_Path_Purple_3()
@@ -11174,7 +11206,7 @@ function InitTrig_Path_Purple_3()
     TriggerAddAction(gg_trg_Path_Purple_3, Trig_Path_Purple_3_Actions)
 end
 
-function Trig_Path_7_Yellow_Spawn_Func006C()
+function Trig_Path_7_Yellow_Spawn_Func007C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -11188,7 +11220,7 @@ function Trig_Path_7_Yellow_Spawn_Func006C()
 end
 
 function Trig_Path_7_Yellow_Spawn_Conditions()
-    if (not Trig_Path_7_Yellow_Spawn_Func006C()) then
+    if (not Trig_Path_7_Yellow_Spawn_Func007C()) then
         return false
     end
     return true
@@ -11199,6 +11231,7 @@ function Trig_Path_7_Yellow_Spawn_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 27)
     udg_PointArray_Waypoints[8] = GetRectCenter(gg_rct_Yellow_1)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[8])
+        RemoveLocation(udg_PointArray_Waypoints[8])
 end
 
 function InitTrig_Path_7_Yellow_Spawn()
@@ -11208,7 +11241,7 @@ function InitTrig_Path_7_Yellow_Spawn()
     TriggerAddAction(gg_trg_Path_7_Yellow_Spawn, Trig_Path_7_Yellow_Spawn_Actions)
 end
 
-function Trig_Path_Yellow_1_Func005C()
+function Trig_Path_Yellow_1_Func006C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -11222,7 +11255,7 @@ function Trig_Path_Yellow_1_Func005C()
 end
 
 function Trig_Path_Yellow_1_Conditions()
-    if (not Trig_Path_Yellow_1_Func005C()) then
+    if (not Trig_Path_Yellow_1_Func006C()) then
         return false
     end
     return true
@@ -11232,6 +11265,7 @@ function Trig_Path_Yellow_1_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 28)
     udg_PointArray_Waypoints[8] = GetRectCenter(gg_rct_Yellow_2)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[8])
+        RemoveLocation(udg_PointArray_Waypoints[8])
 end
 
 function InitTrig_Path_Yellow_1()
@@ -11241,7 +11275,7 @@ function InitTrig_Path_Yellow_1()
     TriggerAddAction(gg_trg_Path_Yellow_1, Trig_Path_Yellow_1_Actions)
 end
 
-function Trig_Path_Yellow_2_Func005C()
+function Trig_Path_Yellow_2_Func006C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -11255,7 +11289,7 @@ function Trig_Path_Yellow_2_Func005C()
 end
 
 function Trig_Path_Yellow_2_Conditions()
-    if (not Trig_Path_Yellow_2_Func005C()) then
+    if (not Trig_Path_Yellow_2_Func006C()) then
         return false
     end
     return true
@@ -11265,6 +11299,7 @@ function Trig_Path_Yellow_2_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 29)
     udg_PointArray_Waypoints[8] = GetRectCenter(gg_rct_Yellow_3)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[8])
+        RemoveLocation(udg_PointArray_Waypoints[8])
 end
 
 function InitTrig_Path_Yellow_2()
@@ -11274,7 +11309,7 @@ function InitTrig_Path_Yellow_2()
     TriggerAddAction(gg_trg_Path_Yellow_2, Trig_Path_Yellow_2_Actions)
 end
 
-function Trig_Path_Yellow_3_Func005C()
+function Trig_Path_Yellow_3_Func006C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -11288,7 +11323,7 @@ function Trig_Path_Yellow_3_Func005C()
 end
 
 function Trig_Path_Yellow_3_Conditions()
-    if (not Trig_Path_Yellow_3_Func005C()) then
+    if (not Trig_Path_Yellow_3_Func006C()) then
         return false
     end
     return true
@@ -11298,6 +11333,7 @@ function Trig_Path_Yellow_3_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 30)
     udg_PointArray_Waypoints[8] = GetRectCenter(gg_rct_Teal_3)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[8])
+        RemoveLocation(udg_PointArray_Waypoints[8])
 end
 
 function InitTrig_Path_Yellow_3()
@@ -11307,7 +11343,7 @@ function InitTrig_Path_Yellow_3()
     TriggerAddAction(gg_trg_Path_Yellow_3, Trig_Path_Yellow_3_Actions)
 end
 
-function Trig_Path_Blue_Spawn_Func006C()
+function Trig_Path_Blue_Spawn_Func007C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -11321,7 +11357,7 @@ function Trig_Path_Blue_Spawn_Func006C()
 end
 
 function Trig_Path_Blue_Spawn_Conditions()
-    if (not Trig_Path_Blue_Spawn_Func006C()) then
+    if (not Trig_Path_Blue_Spawn_Func007C()) then
         return false
     end
     return true
@@ -11332,6 +11368,7 @@ function Trig_Path_Blue_Spawn_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 31)
     udg_PointArray_Waypoints[9] = GetRectCenter(gg_rct_Blue_1)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[9])
+        RemoveLocation(udg_PointArray_Waypoints[9])
 end
 
 function InitTrig_Path_Blue_Spawn()
@@ -11341,7 +11378,7 @@ function InitTrig_Path_Blue_Spawn()
     TriggerAddAction(gg_trg_Path_Blue_Spawn, Trig_Path_Blue_Spawn_Actions)
 end
 
-function Trig_Path_Blue_1_Func005C()
+function Trig_Path_Blue_1_Func006C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -11355,7 +11392,7 @@ function Trig_Path_Blue_1_Func005C()
 end
 
 function Trig_Path_Blue_1_Conditions()
-    if (not Trig_Path_Blue_1_Func005C()) then
+    if (not Trig_Path_Blue_1_Func006C()) then
         return false
     end
     return true
@@ -11365,6 +11402,7 @@ function Trig_Path_Blue_1_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 32)
     udg_PointArray_Waypoints[9] = GetRectCenter(gg_rct_Blue_2)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[9])
+        RemoveLocation(udg_PointArray_Waypoints[9])
 end
 
 function InitTrig_Path_Blue_1()
@@ -11374,7 +11412,7 @@ function InitTrig_Path_Blue_1()
     TriggerAddAction(gg_trg_Path_Blue_1, Trig_Path_Blue_1_Actions)
 end
 
-function Trig_Path_Blue_2_Func005C()
+function Trig_Path_Blue_2_Func006C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -11388,7 +11426,7 @@ function Trig_Path_Blue_2_Func005C()
 end
 
 function Trig_Path_Blue_2_Conditions()
-    if (not Trig_Path_Blue_2_Func005C()) then
+    if (not Trig_Path_Blue_2_Func006C()) then
         return false
     end
     return true
@@ -11398,6 +11436,7 @@ function Trig_Path_Blue_2_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 33)
     udg_PointArray_Waypoints[9] = GetRectCenter(gg_rct_Blue_3)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[9])
+        RemoveLocation(udg_PointArray_Waypoints[9])
 end
 
 function InitTrig_Path_Blue_2()
@@ -11407,7 +11446,7 @@ function InitTrig_Path_Blue_2()
     TriggerAddAction(gg_trg_Path_Blue_2, Trig_Path_Blue_2_Actions)
 end
 
-function Trig_Path_Blue_3_Func005C()
+function Trig_Path_Blue_3_Func006C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -11421,7 +11460,7 @@ function Trig_Path_Blue_3_Func005C()
 end
 
 function Trig_Path_Blue_3_Conditions()
-    if (not Trig_Path_Blue_3_Func005C()) then
+    if (not Trig_Path_Blue_3_Func006C()) then
         return false
     end
     return true
@@ -11431,6 +11470,7 @@ function Trig_Path_Blue_3_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 34)
     udg_PointArray_Waypoints[9] = GetRectCenter(gg_rct_Life_Zone)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[9])
+        RemoveLocation(udg_PointArray_Waypoints[9])
 end
 
 function InitTrig_Path_Blue_3()
@@ -11440,7 +11480,7 @@ function InitTrig_Path_Blue_3()
     TriggerAddAction(gg_trg_Path_Blue_3, Trig_Path_Blue_3_Actions)
 end
 
-function Trig_Path_Teal_Spawn_Func006C()
+function Trig_Path_Teal_Spawn_Func007C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -11454,7 +11494,7 @@ function Trig_Path_Teal_Spawn_Func006C()
 end
 
 function Trig_Path_Teal_Spawn_Conditions()
-    if (not Trig_Path_Teal_Spawn_Func006C()) then
+    if (not Trig_Path_Teal_Spawn_Func007C()) then
         return false
     end
     return true
@@ -11465,6 +11505,7 @@ function Trig_Path_Teal_Spawn_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 35)
     udg_PointArray_Waypoints[10] = GetRectCenter(gg_rct_Teal_1)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[10])
+        RemoveLocation(udg_PointArray_Waypoints[10])
 end
 
 function InitTrig_Path_Teal_Spawn()
@@ -11474,7 +11515,7 @@ function InitTrig_Path_Teal_Spawn()
     TriggerAddAction(gg_trg_Path_Teal_Spawn, Trig_Path_Teal_Spawn_Actions)
 end
 
-function Trig_Path_Teal_1_Func005C()
+function Trig_Path_Teal_1_Func006C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -11488,7 +11529,7 @@ function Trig_Path_Teal_1_Func005C()
 end
 
 function Trig_Path_Teal_1_Conditions()
-    if (not Trig_Path_Teal_1_Func005C()) then
+    if (not Trig_Path_Teal_1_Func006C()) then
         return false
     end
     return true
@@ -11498,6 +11539,7 @@ function Trig_Path_Teal_1_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 36)
     udg_PointArray_Waypoints[10] = GetRectCenter(gg_rct_Teal_2)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[10])
+        RemoveLocation(udg_PointArray_Waypoints[10])
 end
 
 function InitTrig_Path_Teal_1()
@@ -11507,7 +11549,7 @@ function InitTrig_Path_Teal_1()
     TriggerAddAction(gg_trg_Path_Teal_1, Trig_Path_Teal_1_Actions)
 end
 
-function Trig_Path_Teal_2_Func004C()
+function Trig_Path_Teal_2_Func005C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -11521,7 +11563,7 @@ function Trig_Path_Teal_2_Func004C()
 end
 
 function Trig_Path_Teal_2_Conditions()
-    if (not Trig_Path_Teal_2_Func004C()) then
+    if (not Trig_Path_Teal_2_Func005C()) then
         return false
     end
     return true
@@ -11531,6 +11573,7 @@ function Trig_Path_Teal_2_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 37)
     udg_PointArray_Waypoints[10] = GetRectCenter(gg_rct_Teal_3)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[10])
+        RemoveLocation(udg_PointArray_Waypoints[10])
 end
 
 function InitTrig_Path_Teal_2()
@@ -11540,7 +11583,7 @@ function InitTrig_Path_Teal_2()
     TriggerAddAction(gg_trg_Path_Teal_2, Trig_Path_Teal_2_Actions)
 end
 
-function Trig_Path_Teal_3_Func004C()
+function Trig_Path_Teal_3_Func005C()
     if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
         return true
     end
@@ -11554,7 +11597,7 @@ function Trig_Path_Teal_3_Func004C()
 end
 
 function Trig_Path_Teal_3_Conditions()
-    if (not Trig_Path_Teal_3_Func004C()) then
+    if (not Trig_Path_Teal_3_Func005C()) then
         return false
     end
     return true
@@ -11564,6 +11607,7 @@ function Trig_Path_Teal_3_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 38)
     udg_PointArray_Waypoints[10] = GetRectCenter(gg_rct_Life_Zone)
     IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[10])
+        RemoveLocation(udg_PointArray_Waypoints[10])
 end
 
 function InitTrig_Path_Teal_3()
