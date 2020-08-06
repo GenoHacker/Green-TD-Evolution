@@ -7868,8 +7868,7 @@ function Trig_Random_Wave_Bounty_Actions()
     else
         if (Trig_Random_Wave_Bounty_Func001Func002C()) then
             AdjustPlayerStateBJ(GetUnitUserData(GetDyingUnit()), GetOwningPlayer(GetKillingUnitBJ()), PLAYER_STATE_RESOURCE_GOLD)
-            udg_Point_PntArray[13] = GetUnitLoc(GetDyingUnit())
-            CreateTextTagLocBJ(("+" .. I2S(GetUnitUserData(GetDyingUnit()))), udg_Point_PntArray[13], 0, 10, 100, 100, 0.00, 0)
+            CreateTextTagUnitBJ(("+" .. I2S(GetUnitUserData(GetDyingUnit()))), GetDyingUnit(), 0, 10, 100, 100, 100, 0)
         else
         end
     end
