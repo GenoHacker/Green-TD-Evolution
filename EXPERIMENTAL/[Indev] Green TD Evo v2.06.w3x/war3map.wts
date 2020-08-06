@@ -931,11 +931,6 @@ STRING 130
 |c0077ff77Cast this on another tower to swap position with it, this is a one time use ability.|r
 }
 
-STRING 131
-{
-Click Again to Sell
-}
-
 STRING 132
 // Abilities: A00U (Swap Towers), Tip (Tooltip - Normal)
 {
@@ -1206,6 +1201,11 @@ Max Level Reached
 STRING 164
 {
 |c0000ff00Hero Waves --|r |c0077ff7739, 40, 41, 42, 43, 44, 45, 46, 47, 49, 50, 51, 52, 54, 55, 56. |c0000ff00The |c0077ff77Research Tower|r |c0000ff00deals the most damage to Heroes and is highly recommended to get one before the hero waves start, just dont get it too early though.|r
+}
+
+STRING 165
+{
+Click Again to Sell
 }
 
 STRING 166
@@ -18851,7 +18851,7 @@ STRING 2823
 }
 
 STRING 2824
-// Abilities: A01A (Bloodlust), EditorSuffix (Editor Suffix)
+// Abilities: A019 (Inner Fire), EditorSuffix (Editor Suffix)
 {
 [Spell Tower]
 }
@@ -18977,7 +18977,7 @@ Winter Spirits
 }
 
 STRING 2841
-// Abilities: A01B (Stasis Trap), EditorSuffix (Editor Suffix)
+// Abilities: A01A (Bloodlust), EditorSuffix (Editor Suffix)
 {
 [Spell Tower]
 }
@@ -19001,7 +19001,7 @@ STRING 2844
 }
 
 STRING 2845
-// Abilities: A01J (Slow), EditorSuffix (Editor Suffix)
+// Abilities: A01B (Stasis Trap), EditorSuffix (Editor Suffix)
 {
 [Spell Tower]
 }
@@ -19019,7 +19019,7 @@ STRING 2847
 }
 
 STRING 2848
-// Abilities: A01M (Raise Dead), EditorSuffix (Editor Suffix)
+// Abilities: A01J (Slow), EditorSuffix (Editor Suffix)
 {
 [Spell Tower]
 }
@@ -19091,7 +19091,7 @@ STRING 2859
 }
 
 STRING 2860
-// Abilities: A01N (Faerie Fire), EditorSuffix (Editor Suffix)
+// Abilities: A01M (Raise Dead), EditorSuffix (Editor Suffix)
 {
 [Spell Tower]
 }
@@ -19103,13 +19103,13 @@ Attackers have a chance to deal extra damage
 }
 
 STRING 2862
-// Abilities: A01O (Roar), EditorSuffix (Editor Suffix)
+// Abilities: A01N (Faerie Fire), EditorSuffix (Editor Suffix)
 {
 [Spell Tower]
 }
 
 STRING 2863
-// Abilities: A00K (Sell Tower), EditorSuffix (Editor Suffix)
+// Abilities: A01O (Roar), EditorSuffix (Editor Suffix)
 {
 [Spell Tower]
 }
@@ -21275,7 +21275,7 @@ C
 }
 
 STRING 5671
-// Abilities: A019 (Inner Fire), EditorSuffix (Editor Suffix)
+// Abilities: A00K (Sell Tower), EditorSuffix (Editor Suffix)
 {
 [Spell Tower]
 }

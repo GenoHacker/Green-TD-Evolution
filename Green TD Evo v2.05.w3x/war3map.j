@@ -344,9 +344,6 @@ trigger gg_trg_Autoclear_Command= null
 trigger gg_trg_Autoclear_Trigger= null
 trigger gg_trg_Clear_Command= null
 trigger gg_trg_Clear_Ability= null
-trigger gg_trg_Soul_Tower_Autocast= null
-trigger gg_trg_Soul_Tower_Mana= null
-trigger gg_trg_Soul_Tower_Servitude= null
 trigger gg_trg_Tower_Swapping= null
 trigger gg_trg_Emergency_Towers= null
 trigger gg_trg_Auto_Blink= null
@@ -385,6 +382,9 @@ trigger gg_trg_Speed_Aura= null
 unit gg_unit_n00C_0019= null
 unit gg_unit_n015_0010= null
 unit gg_unit_n00D_0042= null
+trigger gg_trg_Soul_Tower_Servitude= null
+trigger gg_trg_Soul_Tower_Mana= null
+trigger gg_trg_Soul_Tower_Autocast= null
 
 
 //JASSHelper struct globals:
