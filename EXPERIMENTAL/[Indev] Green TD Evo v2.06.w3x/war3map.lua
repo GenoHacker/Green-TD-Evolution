@@ -450,14 +450,6 @@ gg_trg_Wave_and_Lives_Update = nil
 gg_trg_Player_Update_Game_Start = nil
 gg_trg_Next_Wave_and_Current_Wave_Update = nil
 gg_trg_Player_Leave_Gold_Split = nil
-gg_trg_Kick_Blue = nil
-gg_trg_Kick_Teal = nil
-gg_trg_Kick_Purple = nil
-gg_trg_Kick_Yellow = nil
-gg_trg_Kick_Orange = nil
-gg_trg_Kick_Green = nil
-gg_trg_Kick_Pink = nil
-gg_trg_Kick_Gray = nil
 gg_trg_Untitled_Trigger_001 = nil
 gg_trg_Restart = nil
 gg_trg_Game_Setup_Ownership = nil
@@ -489,6 +481,22 @@ gg_trg_Autoclear_Command = nil
 gg_trg_Autoclear_Trigger = nil
 gg_trg_Clear_Command = nil
 gg_trg_Clear_Ability = nil
+gg_trg_Tower_Swapping = nil
+gg_trg_Emergency_Towers = nil
+gg_trg_Auto_Blink = nil
+gg_trg_Gamble = nil
+gg_trg_Transmute = nil
+gg_trg_DebugAbility = nil
+gg_trg_Unit_Debugger = nil
+gg_trg_Player_1 = nil
+gg_trg_Player_2 = nil
+gg_trg_Player_3 = nil
+gg_trg_Player_4 = nil
+gg_trg_Player_5 = nil
+gg_trg_Player_6 = nil
+gg_trg_Player_7 = nil
+gg_trg_Player_8 = nil
+gg_trg_Player_9 = nil
 gg_trg_Void_Trap_Autocast = nil
 gg_trg_Earth_Trap_Autocast = nil
 gg_trg_Poison_Trap_Autocast = nil
@@ -517,22 +525,14 @@ gg_unit_z000_0121 = nil
 gg_unit_z001_0122 = nil
 gg_unit_z001_0123 = nil
 gg_unit_o00I_0124 = nil
-gg_trg_Player_9 = nil
-gg_trg_Player_8 = nil
-gg_trg_Player_7 = nil
-gg_trg_Player_6 = nil
-gg_trg_Player_5 = nil
-gg_trg_Player_4 = nil
-gg_trg_Player_3 = nil
-gg_trg_Player_2 = nil
-gg_trg_Player_1 = nil
-gg_trg_Unit_Debugger = nil
-gg_trg_DebugAbility = nil
-gg_trg_Transmute = nil
-gg_trg_Gamble = nil
-gg_trg_Auto_Blink = nil
-gg_trg_Emergency_Towers = nil
-gg_trg_Tower_Swapping = nil
+gg_trg_Kick_Gray = nil
+gg_trg_Kick_Pink = nil
+gg_trg_Kick_Green = nil
+gg_trg_Kick_Orange = nil
+gg_trg_Kick_Yellow = nil
+gg_trg_Kick_Purple = nil
+gg_trg_Kick_Teal = nil
+gg_trg_Kick_Blue = nil
 function InitGlobals()
     local i = 0
     i = 0
@@ -2294,6 +2294,151 @@ end
 function InitTrig_Damage_Engine_Config()
     gg_trg_Damage_Engine_Config = CreateTrigger()
     TriggerAddAction(gg_trg_Damage_Engine_Config, Trig_Damage_Engine_Config_Actions)
+end
+
+function Trig_Kick_Blue_Func004002()
+    KillUnit(GetEnumUnit())
+end
+
+function Trig_Kick_Blue_Actions()
+    PlaySoundBJ(gg_snd_HeroLichPissed8)
+    CustomDefeatBJ(Player(1), "TRIGSTR_2940")
+        bj_wantDestroyGroup = true
+    ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(1)), Trig_Kick_Blue_Func004002)
+    MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 3, (udg_String_Array_MultiBoardColours[2] .. ("-Kicked-" .. "|r")))
+end
+
+function InitTrig_Kick_Blue()
+    gg_trg_Kick_Blue = CreateTrigger()
+    TriggerRegisterPlayerChatEvent(gg_trg_Kick_Blue, Player(0), "-kick blue", true)
+    TriggerAddAction(gg_trg_Kick_Blue, Trig_Kick_Blue_Actions)
+end
+
+function Trig_Kick_Teal_Func004002()
+    KillUnit(GetEnumUnit())
+end
+
+function Trig_Kick_Teal_Actions()
+    PlaySoundBJ(gg_snd_HeroLichPissed8)
+    CustomDefeatBJ(Player(2), "TRIGSTR_2939")
+        bj_wantDestroyGroup = true
+    ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(2)), Trig_Kick_Teal_Func004002)
+    MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 4, (udg_String_Array_MultiBoardColours[3] .. ("-Kicked-" .. "|r")))
+end
+
+function InitTrig_Kick_Teal()
+    gg_trg_Kick_Teal = CreateTrigger()
+    TriggerRegisterPlayerChatEvent(gg_trg_Kick_Teal, Player(0), "-kick teal", true)
+    TriggerAddAction(gg_trg_Kick_Teal, Trig_Kick_Teal_Actions)
+end
+
+function Trig_Kick_Purple_Func004002()
+    KillUnit(GetEnumUnit())
+end
+
+function Trig_Kick_Purple_Actions()
+    PlaySoundBJ(gg_snd_HeroLichPissed8)
+    CustomDefeatBJ(Player(3), "TRIGSTR_2938")
+        bj_wantDestroyGroup = true
+    ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(3)), Trig_Kick_Purple_Func004002)
+    MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 5, (udg_String_Array_MultiBoardColours[4] .. ("-Kicked-" .. "|r")))
+end
+
+function InitTrig_Kick_Purple()
+    gg_trg_Kick_Purple = CreateTrigger()
+    TriggerRegisterPlayerChatEvent(gg_trg_Kick_Purple, Player(0), "-kick purple", true)
+    TriggerAddAction(gg_trg_Kick_Purple, Trig_Kick_Purple_Actions)
+end
+
+function Trig_Kick_Yellow_Func004002()
+    KillUnit(GetEnumUnit())
+end
+
+function Trig_Kick_Yellow_Actions()
+    PlaySoundBJ(gg_snd_HeroLichPissed8)
+    CustomDefeatBJ(Player(4), "TRIGSTR_2831")
+        bj_wantDestroyGroup = true
+    ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(4)), Trig_Kick_Yellow_Func004002)
+    MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 6, (udg_String_Array_MultiBoardColours[5] .. ("-Kicked-" .. "|r")))
+end
+
+function InitTrig_Kick_Yellow()
+    gg_trg_Kick_Yellow = CreateTrigger()
+    TriggerRegisterPlayerChatEvent(gg_trg_Kick_Yellow, Player(0), "-kick yellow", true)
+    TriggerAddAction(gg_trg_Kick_Yellow, Trig_Kick_Yellow_Actions)
+end
+
+function Trig_Kick_Orange_Func005002()
+    KillUnit(GetEnumUnit())
+end
+
+function Trig_Kick_Orange_Actions()
+    PlaySoundBJ(gg_snd_HeroLichPissed8)
+    CustomDefeatBJ(Player(5), "TRIGSTR_2487")
+        bj_wantDestroyGroup = true
+    ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(5)), Trig_Kick_Orange_Func005002)
+    MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 7, (udg_String_Array_MultiBoardColours[6] .. ("-Kicked-" .. "|r")))
+end
+
+function InitTrig_Kick_Orange()
+    gg_trg_Kick_Orange = CreateTrigger()
+    TriggerRegisterPlayerChatEvent(gg_trg_Kick_Orange, Player(0), "-kick orange", true)
+    TriggerAddAction(gg_trg_Kick_Orange, Trig_Kick_Orange_Actions)
+end
+
+function Trig_Kick_Green_Func004002()
+    KillUnit(GetEnumUnit())
+end
+
+function Trig_Kick_Green_Actions()
+    PlaySoundBJ(gg_snd_HeroLichPissed8)
+    CustomDefeatBJ(Player(6), "TRIGSTR_2468")
+        bj_wantDestroyGroup = true
+    ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(6)), Trig_Kick_Green_Func004002)
+    MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 8, (udg_String_Array_MultiBoardColours[7] .. ("-Kicked-" .. "|r")))
+end
+
+function InitTrig_Kick_Green()
+    gg_trg_Kick_Green = CreateTrigger()
+    TriggerRegisterPlayerChatEvent(gg_trg_Kick_Green, Player(0), "-kick green", true)
+    TriggerAddAction(gg_trg_Kick_Green, Trig_Kick_Green_Actions)
+end
+
+function Trig_Kick_Pink_Func004002()
+    KillUnit(GetEnumUnit())
+end
+
+function Trig_Kick_Pink_Actions()
+    PlaySoundBJ(gg_snd_HeroLichPissed8)
+    CustomDefeatBJ(Player(7), "TRIGSTR_1029")
+        bj_wantDestroyGroup = true
+    ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(7)), Trig_Kick_Pink_Func004002)
+    MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 9, (udg_String_Array_MultiBoardColours[8] .. ("-Kicked-" .. "|r")))
+end
+
+function InitTrig_Kick_Pink()
+    gg_trg_Kick_Pink = CreateTrigger()
+    TriggerRegisterPlayerChatEvent(gg_trg_Kick_Pink, Player(0), "-kick pink", true)
+    TriggerAddAction(gg_trg_Kick_Pink, Trig_Kick_Pink_Actions)
+end
+
+function Trig_Kick_Gray_Func004002()
+    KillUnit(GetEnumUnit())
+end
+
+function Trig_Kick_Gray_Actions()
+    PlaySoundBJ(gg_snd_HeroLichPissed8)
+    CustomDefeatBJ(Player(8), "TRIGSTR_1028")
+        bj_wantDestroyGroup = true
+    ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(8)), Trig_Kick_Gray_Func004002)
+    MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 10, (udg_String_Array_MultiBoardColours[9] .. ("-Kicked-" .. "|r")))
+end
+
+function InitTrig_Kick_Gray()
+    gg_trg_Kick_Gray = CreateTrigger()
+    TriggerRegisterPlayerChatEvent(gg_trg_Kick_Gray, Player(0), "-kick gray", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kick_Gray, Player(0), "-kick grey", true)
+    TriggerAddAction(gg_trg_Kick_Gray, Trig_Kick_Gray_Actions)
 end
 
 function Trig_Crit_System_Func001C()
@@ -12878,143 +13023,6 @@ function InitTrig_Player_Leave_Gold_Split()
     TriggerAddAction(gg_trg_Player_Leave_Gold_Split, Trig_Player_Leave_Gold_Split_Actions)
 end
 
-function Trig_Kick_Blue_Func003002()
-    KillUnit(GetEnumUnit())
-end
-
-function Trig_Kick_Blue_Actions()
-    PlaySoundBJ(gg_snd_HeroLichPissed8)
-    CustomDefeatBJ(Player(1), "TRIGSTR_755")
-    ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(1)), Trig_Kick_Blue_Func003002)
-    MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 3, (udg_String_Array_MultiBoardColours[2] .. ("-Kicked-" .. "|r")))
-end
-
-function InitTrig_Kick_Blue()
-    gg_trg_Kick_Blue = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Kick_Blue, Player(0), "-kick blue", true)
-    TriggerAddAction(gg_trg_Kick_Blue, Trig_Kick_Blue_Actions)
-end
-
-function Trig_Kick_Teal_Func003002()
-    KillUnit(GetEnumUnit())
-end
-
-function Trig_Kick_Teal_Actions()
-    PlaySoundBJ(gg_snd_HeroLichPissed8)
-    CustomDefeatBJ(Player(2), "TRIGSTR_2568")
-    ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(2)), Trig_Kick_Teal_Func003002)
-    MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 4, (udg_String_Array_MultiBoardColours[3] .. ("-Kicked-" .. "|r")))
-end
-
-function InitTrig_Kick_Teal()
-    gg_trg_Kick_Teal = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Kick_Teal, Player(0), "-kick teal", true)
-    TriggerAddAction(gg_trg_Kick_Teal, Trig_Kick_Teal_Actions)
-end
-
-function Trig_Kick_Purple_Func003002()
-    KillUnit(GetEnumUnit())
-end
-
-function Trig_Kick_Purple_Actions()
-    PlaySoundBJ(gg_snd_HeroLichPissed8)
-    CustomDefeatBJ(Player(3), "TRIGSTR_2566")
-    ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(3)), Trig_Kick_Purple_Func003002)
-    MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 5, (udg_String_Array_MultiBoardColours[4] .. ("-Kicked-" .. "|r")))
-end
-
-function InitTrig_Kick_Purple()
-    gg_trg_Kick_Purple = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Kick_Purple, Player(0), "-kick purple", true)
-    TriggerAddAction(gg_trg_Kick_Purple, Trig_Kick_Purple_Actions)
-end
-
-function Trig_Kick_Yellow_Func003002()
-    KillUnit(GetEnumUnit())
-end
-
-function Trig_Kick_Yellow_Actions()
-    PlaySoundBJ(gg_snd_HeroLichPissed8)
-    CustomDefeatBJ(Player(4), "TRIGSTR_2567")
-    ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(4)), Trig_Kick_Yellow_Func003002)
-    MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 6, (udg_String_Array_MultiBoardColours[5] .. ("-Kicked-" .. "|r")))
-end
-
-function InitTrig_Kick_Yellow()
-    gg_trg_Kick_Yellow = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Kick_Yellow, Player(0), "-kick yellow", true)
-    TriggerAddAction(gg_trg_Kick_Yellow, Trig_Kick_Yellow_Actions)
-end
-
-function Trig_Kick_Orange_Func004002()
-    KillUnit(GetEnumUnit())
-end
-
-function Trig_Kick_Orange_Actions()
-    PlaySoundBJ(gg_snd_HeroLichPissed8)
-    CustomDefeatBJ(Player(5), "TRIGSTR_2562")
-    ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(5)), Trig_Kick_Orange_Func004002)
-    MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 7, (udg_String_Array_MultiBoardColours[6] .. ("-Kicked-" .. "|r")))
-end
-
-function InitTrig_Kick_Orange()
-    gg_trg_Kick_Orange = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Kick_Orange, Player(0), "-kick orange", true)
-    TriggerAddAction(gg_trg_Kick_Orange, Trig_Kick_Orange_Actions)
-end
-
-function Trig_Kick_Green_Func003002()
-    KillUnit(GetEnumUnit())
-end
-
-function Trig_Kick_Green_Actions()
-    PlaySoundBJ(gg_snd_HeroLichPissed8)
-    CustomDefeatBJ(Player(6), "TRIGSTR_2564")
-    ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(6)), Trig_Kick_Green_Func003002)
-    MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 8, (udg_String_Array_MultiBoardColours[7] .. ("-Kicked-" .. "|r")))
-end
-
-function InitTrig_Kick_Green()
-    gg_trg_Kick_Green = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Kick_Green, Player(0), "-kick green", true)
-    TriggerAddAction(gg_trg_Kick_Green, Trig_Kick_Green_Actions)
-end
-
-function Trig_Kick_Pink_Func003002()
-    KillUnit(GetEnumUnit())
-end
-
-function Trig_Kick_Pink_Actions()
-    PlaySoundBJ(gg_snd_HeroLichPissed8)
-    CustomDefeatBJ(Player(7), "TRIGSTR_2563")
-    ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(7)), Trig_Kick_Pink_Func003002)
-    MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 9, (udg_String_Array_MultiBoardColours[8] .. ("-Kicked-" .. "|r")))
-end
-
-function InitTrig_Kick_Pink()
-    gg_trg_Kick_Pink = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Kick_Pink, Player(0), "-kick pink", true)
-    TriggerAddAction(gg_trg_Kick_Pink, Trig_Kick_Pink_Actions)
-end
-
-function Trig_Kick_Gray_Func003002()
-    KillUnit(GetEnumUnit())
-end
-
-function Trig_Kick_Gray_Actions()
-    PlaySoundBJ(gg_snd_HeroLichPissed8)
-    CustomDefeatBJ(Player(8), "TRIGSTR_2565")
-    ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(8)), Trig_Kick_Gray_Func003002)
-    MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 10, (udg_String_Array_MultiBoardColours[9] .. ("-Kicked-" .. "|r")))
-end
-
-function InitTrig_Kick_Gray()
-    gg_trg_Kick_Gray = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Kick_Gray, Player(0), "-kick gray", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kick_Gray, Player(0), "-kick grey", true)
-    TriggerAddAction(gg_trg_Kick_Gray, Trig_Kick_Gray_Actions)
-end
-
 function Trig_Untitled_Trigger_001_Actions()
     udg_Integer_WaveNumber = 150
 end
@@ -16256,6 +16264,14 @@ end
 
 function InitCustomTriggers()
     InitTrig_Damage_Engine_Config()
+    InitTrig_Kick_Blue()
+    InitTrig_Kick_Teal()
+    InitTrig_Kick_Purple()
+    InitTrig_Kick_Yellow()
+    InitTrig_Kick_Orange()
+    InitTrig_Kick_Green()
+    InitTrig_Kick_Pink()
+    InitTrig_Kick_Gray()
     InitTrig_Crit_System()
     InitTrig_Crit_Aura()
     InitTrig_Venom_Tower_Random_Target()
@@ -16370,14 +16386,6 @@ function InitCustomTriggers()
     InitTrig_Player_Update_Game_Start()
     InitTrig_Next_Wave_and_Current_Wave_Update()
     InitTrig_Player_Leave_Gold_Split()
-    InitTrig_Kick_Blue()
-    InitTrig_Kick_Teal()
-    InitTrig_Kick_Purple()
-    InitTrig_Kick_Yellow()
-    InitTrig_Kick_Orange()
-    InitTrig_Kick_Green()
-    InitTrig_Kick_Pink()
-    InitTrig_Kick_Gray()
     InitTrig_Untitled_Trigger_001()
     InitTrig_Restart()
     InitTrig_Game_Setup_Ownership()

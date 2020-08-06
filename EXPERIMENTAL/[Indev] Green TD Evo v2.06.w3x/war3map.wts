@@ -4870,11 +4870,6 @@ STRING 754
 HH Cripple Active
 }
 
-STRING 755
-{
-Kicked
-}
-
 STRING 756
 // Units: h00A (Research Tower 5: Bandit Lord), Tip (Tooltip - Basic)
 {
@@ -6830,6 +6825,16 @@ STRING 1027
 // Abilities: A03O (Intelligence Bonus), Name (Name)
 {
 Intelligence Bonus
+}
+
+STRING 1028
+{
+Kicked
+}
+
+STRING 1029
+{
+Kicked
 }
 
 STRING 1030
@@ -16347,6 +16352,11 @@ STRING 2467
 |c0000ff00Multishot - |c0077ff77[Level 3]|r
 }
 
+STRING 2468
+{
+Kicked
+}
+
 STRING 2469
 // Abilities: A04E (Multishot), Ubertip (Tooltip - Normal - Extended)
 {
@@ -16465,6 +16475,11 @@ STRING 2486
 // Abilities: A046 (Multishot), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77The Research Tower is able to attack 8 Enemies in one Attack.|r
+}
+
+STRING 2487
+{
+Kicked
 }
 
 STRING 2488
@@ -17008,41 +17023,6 @@ v2.04e Release Date - 24/01/20
 STRING 2561
 {
  that i have modified to work in whatever context i need them to
-}
-
-STRING 2562
-{
-Kicked
-}
-
-STRING 2563
-{
-Kicked
-}
-
-STRING 2564
-{
-Kicked
-}
-
-STRING 2565
-{
-Kicked
-}
-
-STRING 2566
-{
-Kicked
-}
-
-STRING 2567
-{
-Kicked
-}
-
-STRING 2568
-{
-Kicked
 }
 
 STRING 2569
@@ -18922,6 +18902,11 @@ STRING 2830
 |c0000ff00Ability (2):|r |c0077ff77Soul Extraction; attacks have a 10% chance to deal 5% of an enemy units current health as chaos damage, the tower gains mana equal to the damage dealt. When above 75% mana tower has a 10% chance to use all mana to summon 5 minions.|r
 }
 
+STRING 2831
+{
+Kicked
+}
+
 STRING 2832
 // Abilities: A04B (Frostbite), EditorSuffix (Editor Suffix)
 {
@@ -19679,6 +19664,21 @@ STRING 2937
 // Abilities: A04D (Frost Nova), EditorSuffix (Editor Suffix)
 {
 [Shard Tower]
+}
+
+STRING 2938
+{
+Kicked
+}
+
+STRING 2939
+{
+Kicked
+}
+
+STRING 2940
+{
+Kicked
 }
 
 STRING 2942
