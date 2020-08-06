@@ -410,6 +410,46 @@ gg_trg_Generate_Random_Waves = nil
 gg_trg_Generate_Next_Units = nil
 gg_trg_Gold_After_Wave = nil
 gg_trg_Debug_Wave = nil
+gg_trg_Path_Orange_Spawn = nil
+gg_trg_Path_Orange_1 = nil
+gg_trg_Path_Orange_2 = nil
+gg_trg_Path_Orange_3 = nil
+gg_trg_Path_Green_Spawn = nil
+gg_trg_Path_Green_1 = nil
+gg_trg_Path_Green_2 = nil
+gg_trg_Path_Green_3 = nil
+gg_trg_Path_Pink_Spawn = nil
+gg_trg_Path_Pink_1 = nil
+gg_trg_Path_Pink_2 = nil
+gg_trg_Path_Gray_Spawn = nil
+gg_trg_Path_Gray_1 = nil
+gg_trg_Path_Gray_2 = nil
+gg_trg_Path_Red_Spawn_A = nil
+gg_trg_Path_Red_1_A = nil
+gg_trg_Path_Red_2_A = nil
+gg_trg_Path_Red_3_A = nil
+gg_trg_Path_Red_4_A = nil
+gg_trg_Path_Red_Spawn_B = nil
+gg_trg_Path_Red_1_B = nil
+gg_trg_Path_Red_2_B = nil
+gg_trg_Path_Red_3_B = nil
+gg_trg_Path_Red_4_B = nil
+gg_trg_Path_Purple_Spawn = nil
+gg_trg_Path_Purple_1 = nil
+gg_trg_Path_Purple_2 = nil
+gg_trg_Path_Purple_3 = nil
+gg_trg_Path_7_Yellow_Spawn = nil
+gg_trg_Path_Yellow_1 = nil
+gg_trg_Path_Yellow_2 = nil
+gg_trg_Path_Yellow_3 = nil
+gg_trg_Path_Blue_Spawn = nil
+gg_trg_Path_Blue_1 = nil
+gg_trg_Path_Blue_2 = nil
+gg_trg_Path_Blue_3 = nil
+gg_trg_Path_Teal_Spawn = nil
+gg_trg_Path_Teal_1 = nil
+gg_trg_Path_Teal_2 = nil
+gg_trg_Path_Teal_3 = nil
 gg_trg_Create_the_Multiboard = nil
 gg_trg_Timer = nil
 gg_trg_Kill_Update = nil
@@ -493,46 +533,6 @@ gg_unit_z000_0121 = nil
 gg_unit_z001_0122 = nil
 gg_unit_z001_0123 = nil
 gg_unit_o00I_0124 = nil
-gg_trg_Path_Teal_3 = nil
-gg_trg_Path_Teal_2 = nil
-gg_trg_Path_Teal_1 = nil
-gg_trg_Path_Teal_Spawn = nil
-gg_trg_Path_Blue_3 = nil
-gg_trg_Path_Blue_2 = nil
-gg_trg_Path_Blue_1 = nil
-gg_trg_Path_Blue_Spawn = nil
-gg_trg_Path_Yellow_3 = nil
-gg_trg_Path_Yellow_2 = nil
-gg_trg_Path_Yellow_1 = nil
-gg_trg_Path_7_Yellow_Spawn = nil
-gg_trg_Path_Purple_3 = nil
-gg_trg_Path_Purple_2 = nil
-gg_trg_Path_Purple_1 = nil
-gg_trg_Path_Purple_Spawn = nil
-gg_trg_Path_Red_4_B = nil
-gg_trg_Path_Red_3_B = nil
-gg_trg_Path_Red_2_B = nil
-gg_trg_Path_Red_1_B = nil
-gg_trg_Path_Red_Spawn_B = nil
-gg_trg_Path_Red_4_A = nil
-gg_trg_Path_Red_3_A = nil
-gg_trg_Path_Red_2_A = nil
-gg_trg_Path_Red_1_A = nil
-gg_trg_Path_Red_Spawn_A = nil
-gg_trg_Path_Gray_2 = nil
-gg_trg_Path_Gray_1 = nil
-gg_trg_Path_Gray_Spawn = nil
-gg_trg_Path_Pink_2 = nil
-gg_trg_Path_Pink_1 = nil
-gg_trg_Path_Pink_Spawn = nil
-gg_trg_Path_Green_3 = nil
-gg_trg_Path_Green_2 = nil
-gg_trg_Path_Green_1 = nil
-gg_trg_Path_Green_Spawn = nil
-gg_trg_Path_Orange_3 = nil
-gg_trg_Path_Orange_2 = nil
-gg_trg_Path_Orange_1 = nil
-gg_trg_Path_Orange_Spawn = nil
 function InitGlobals()
     local i = 0
     i = 0
@@ -5003,6 +5003,7 @@ function Trig_Start_Messages_Actions()
     DisplayTimedTextToForce(udg_PlayerGroup_PlyGrpArray[3], 120.00, (("|c0000ff00If|r " .. udg_String_Array_PlayerNames[1]) .. " |c0000ff00does not pick any game options after|r |c0077ff77120 seconds|r|c0000ff00, then the game will default to|r |c0077ff77Normal Difficulty.|r "))
     DisplayTimedTextToForce(udg_PlayerGroup_PlyGrpArray[3], 120.00, (("|c0000ff00If|r " .. udg_String_Array_PlayerNames[1]) .. " |c0000ff00picks a game option but does not start the game then after|r |c0077ff77120 seconds|r|c0000ff00, any player may type |c0077ff77-rdy or -ready|r |c0000ff00to start the game.|r"))
     DisplayTimedTextToForce(udg_PlayerGroup_PlyGrpArray[3], 120.00, "TRIGSTR_2589")
+        DestroyForce(udg_PlayerGroup_PlyGrpArray[3])
     EnableTrigger(gg_trg_Timer)
 end
 
@@ -8326,6 +8327,7 @@ function Trig_Headhunter_Actives_Actions()
                 end
             end
         end
+                RemoveLocation(udg_HHAbility_Point)
     else
     end
 end
