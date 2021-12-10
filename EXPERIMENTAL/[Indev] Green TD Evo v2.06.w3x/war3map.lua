@@ -256,6 +256,7 @@ udg_UnitGroup_Array_SoulTowerUnits = {}
 udg_Real_Array_ShardTowerChance = __jarray(0.0)
 udg_Real_Array_BrainfreezeChance = __jarray(0.0)
 udg_Real_Array_AqRange = __jarray(0.0)
+udg_String_Array_Alpharius = __jarray("")
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -352,6 +353,7 @@ gg_trg_Soul_Tower_Soul_Extraction = nil
 gg_trg_Soul_Tower_Minion_Remove_From_Group = nil
 gg_trg_Shard_Tower_Abilities = nil
 gg_trg_Spirit_Tower = nil
+gg_trg_Rocket_Tower = nil
 gg_trg_Set_Variables = nil
 gg_trg_Set_Random_Wave_Variables = nil
 gg_trg_Map_Start = nil
@@ -372,6 +374,7 @@ gg_trg_WinGame = nil
 gg_trg_Tabaho = nil
 gg_trg_Alpharius_Omegon = nil
 gg_trg_Ork = nil
+gg_trg_Smonze = nil
 gg_trg_Creep_Boosting = nil
 gg_trg_Hero_XP = nil
 gg_trg_Hero_Level_Up_Point = nil
@@ -458,7 +461,7 @@ gg_trg_Wave_and_Lives_Update = nil
 gg_trg_Player_Update_Game_Start = nil
 gg_trg_Next_Wave_and_Current_Wave_Update = nil
 gg_trg_Player_Leave_Gold_Split = nil
-gg_trg_Untitled_Trigger_001 = nil
+gg_trg_Test_Trigger = nil
 gg_trg_Restart = nil
 gg_trg_Game_Setup_Ownership = nil
 gg_trg_Camera_Zoom_Command = nil
@@ -494,7 +497,6 @@ gg_trg_Emergency_Towers = nil
 gg_trg_Auto_Blink = nil
 gg_trg_Gamble = nil
 gg_trg_Transmute = nil
-gg_trg_DebugAbility = nil
 gg_trg_Unit_Debugger = nil
 gg_trg_Player_1 = nil
 gg_trg_Player_2 = nil
@@ -528,11 +530,12 @@ gg_trg_Critical_Aura = nil
 gg_unit_n00C_0019 = nil
 gg_unit_n015_0010 = nil
 gg_unit_n00D_0042 = nil
-gg_unit_z000_0120 = nil
+gg_unit_n018_0091 = nil
+gg_unit_n01D_0119 = nil
+gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
-gg_unit_z001_0122 = nil
-gg_unit_z001_0123 = nil
 gg_unit_o00I_0124 = nil
+gg_unit_z000_0122 = nil
 function InitGlobals()
     local i = 0
     i = 0
@@ -1095,6 +1098,12 @@ function InitGlobals()
     while (true) do
         if ((i > 1)) then break end
         udg_Real_Array_AqRange[i] = 0.0
+        i = i + 1
+    end
+    i = 0
+    while (true) do
+        if ((i > 1)) then break end
+        udg_String_Array_Alpharius[i] = ""
         i = i + 1
     end
 end
@@ -1969,6 +1978,11 @@ function CreateNeutralPassiveBuildings()
     SetUnitColor(u, ConvertPlayerColor(0))
     u = BlzCreateUnitWithSkin(p, FourCC("ngad"), -9408.0, 7040.0, 270.000, FourCC("ngad"))
     u = BlzCreateUnitWithSkin(p, FourCC("ngme"), -9600.0, 6272.0, 270.000, FourCC("ngme"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h048"), 5504.0, 6976.0, 270.000, FourCC("h048"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h048"), 5504.0, 7360.0, 270.000, FourCC("h048"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h048"), 5376.0, 7360.0, 270.000, FourCC("h048"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h048"), 5632.0, 7232.0, 270.000, FourCC("h048"))
+    u = BlzCreateUnitWithSkin(p, FourCC("h048"), 5632.0, 7104.0, 270.000, FourCC("h048"))
 end
 
 function CreateNeutralPassive()
@@ -2083,7 +2097,7 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("nrac"), -8925.7, 5913.0, 27.807, FourCC("nrac"))
     u = BlzCreateUnitWithSkin(p, FourCC("nrac"), -8742.9, 7495.8, 107.483, FourCC("nrac"))
     u = BlzCreateUnitWithSkin(p, FourCC("npng"), -8891.6, 3654.3, 151.133, FourCC("npng"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n018"), 5377.8, -2977.3, 179.062, FourCC("n018"))
+    gg_unit_n018_0091 = BlzCreateUnitWithSkin(p, FourCC("n018"), 5377.8, -2977.3, 179.062, FourCC("n018"))
     u = BlzCreateUnitWithSkin(p, FourCC("nder"), -7442.9, -6286.3, 84.982, FourCC("nder"))
     u = BlzCreateUnitWithSkin(p, FourCC("nder"), -6318.3, -6790.2, 37.970, FourCC("nder"))
     u = BlzCreateUnitWithSkin(p, FourCC("nder"), -6793.3, -6849.6, 31.949, FourCC("nder"))
@@ -2111,12 +2125,12 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("hhes"), 4071.5, -6442.4, 276.006, FourCC("hhes"))
     u = BlzCreateUnitWithSkin(p, FourCC("nchp"), 5818.1, -6135.5, 246.879, FourCC("nchp"))
     u = BlzCreateUnitWithSkin(p, FourCC("hhes"), 4184.3, -6478.4, 229.246, FourCC("hhes"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 4978.7, -2919.5, 171.711, FourCC("n01D"))
-    gg_unit_z000_0120 = BlzCreateUnitWithSkin(p, FourCC("z000"), -8863.9, -6327.9, 40.167, FourCC("z000"))
-    gg_unit_z000_0121 = BlzCreateUnitWithSkin(p, FourCC("z000"), -8387.5, -6315.6, 148.860, FourCC("z000"))
-    gg_unit_z001_0122 = BlzCreateUnitWithSkin(p, FourCC("z001"), -8659.6, -6389.8, 94.479, FourCC("z001"))
-    gg_unit_z001_0123 = BlzCreateUnitWithSkin(p, FourCC("z001"), -8312.6, -6139.0, 188.742, FourCC("z001"))
+    gg_unit_n01D_0119 = BlzCreateUnitWithSkin(p, FourCC("n01D"), 4978.7, -2919.5, 171.711, FourCC("n01D"))
+    gg_unit_z000_0121 = BlzCreateUnitWithSkin(p, FourCC("z000"), -8870.4, -6299.5, 34.011, FourCC("z000"))
+    gg_unit_z000_0122 = BlzCreateUnitWithSkin(p, FourCC("z000"), -8664.9, -6395.9, 93.739, FourCC("z000"))
+    gg_unit_z000_0123 = BlzCreateUnitWithSkin(p, FourCC("z000"), -8380.4, -6325.5, 148.860, FourCC("z000"))
     gg_unit_o00I_0124 = BlzCreateUnitWithSkin(p, FourCC("o00I"), -8064.2, 1974.8, 209.483, FourCC("o00I"))
+    u = BlzCreateUnitWithSkin(p, FourCC("u003"), 5452.9, 7164.6, 36.490, FourCC("u003"))
 end
 
 function CreatePlayerBuildings()
@@ -2951,53 +2965,105 @@ function InitTrig_Spirit_Tower()
     TriggerAddAction(gg_trg_Spirit_Tower, Trig_Spirit_Tower_Actions)
 end
 
-function Trig_Set_Variables_Func178001()
+function Trig_Rocket_Tower_Conditions()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A04G"), udg_DamageEventSource) == 1)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Rocket_Tower_Func002Func002C()
+    if (not (udg_IsDamageSpell == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Rocket_Tower_Func002Func005C()
+    if (not (GetUnitManaPercent(udg_DamageEventSource) >= 75.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Rocket_Tower_Func002C()
+    if (not (udg_IsDamageRanged == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Rocket_Tower_Actions()
+    if (Trig_Rocket_Tower_Func002C()) then
+        BlzSetUnitDiceNumber(udg_DamageEventSource, (BlzGetUnitDiceNumber(udg_DamageEventSource, 0) + 5), 0)
+        SetUnitManaBJ(udg_DamageEventSource, (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + 1))
+        if (Trig_Rocket_Tower_Func002Func005C()) then
+            IssueTargetOrderBJ(udg_DamageEventSource, "forkedlightning", udg_DamageEventTarget)
+            BlzSetUnitDiceNumber(udg_DamageEventSource, 1, 0)
+        else
+        end
+    else
+        if (Trig_Rocket_Tower_Func002Func002C()) then
+            UnitDamageTargetBJ(udg_DamageEventSource, udg_DamageEventTarget, (I2R(BlzGetUnitBaseDamage(udg_DamageEventSource, 0)) * GetRandomReal(0.50, 2.00)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+        else
+        end
+    end
+end
+
+function InitTrig_Rocket_Tower()
+    gg_trg_Rocket_Tower = CreateTrigger()
+    TriggerRegisterVariableEvent(gg_trg_Rocket_Tower, "udg_DamageEvent", EQUAL, 1.00)
+    TriggerAddCondition(gg_trg_Rocket_Tower, Condition(Trig_Rocket_Tower_Conditions))
+    TriggerAddAction(gg_trg_Rocket_Tower, Trig_Rocket_Tower_Actions)
+end
+
+function Trig_Set_Variables_Func189001()
     return (GetPlayerSlotState(Player(0)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func179001()
+function Trig_Set_Variables_Func190001()
     return (GetPlayerSlotState(Player(1)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func180001()
+function Trig_Set_Variables_Func191001()
     return (GetPlayerSlotState(Player(2)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func181001()
+function Trig_Set_Variables_Func192001()
     return (GetPlayerSlotState(Player(3)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func182001()
+function Trig_Set_Variables_Func193001()
     return (GetPlayerSlotState(Player(4)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func183001()
+function Trig_Set_Variables_Func194001()
     return (GetPlayerSlotState(Player(5)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func184001()
+function Trig_Set_Variables_Func195001()
     return (GetPlayerSlotState(Player(6)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func185001()
+function Trig_Set_Variables_Func196001()
     return (GetPlayerSlotState(Player(7)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func186001()
+function Trig_Set_Variables_Func197001()
     return (GetPlayerSlotState(Player(8)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func187Func003C()
+function Trig_Set_Variables_Func198Func003C()
     if (not (GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_LEFT)) then
         return false
     end
     return true
 end
 
-function Trig_Set_Variables_Func187A()
+function Trig_Set_Variables_Func198A()
     udg_String_Array_PlayerNames[GetConvertedPlayerId(GetEnumPlayer())] = (udg_String_Array_MultiBoardColours[GetConvertedPlayerId(GetEnumPlayer())] .. (GetPlayerName(GetEnumPlayer()) .. "|r"))
     udg_Real_Array_CameraDistance[GetConvertedPlayerId(GetEnumPlayer())] = 2500.00
-    if (Trig_Set_Variables_Func187Func003C()) then
+    if (Trig_Set_Variables_Func198Func003C()) then
         ForceRemovePlayerSimple(GetEnumPlayer(), udg_PlayerGroup_PlyGrpArray[1])
     else
         udg_Integer_Players = (udg_Integer_Players + 1)
@@ -3007,6 +3073,16 @@ function Trig_Set_Variables_Func187A()
 end
 
 function Trig_Set_Variables_Actions()
+    udg_String_Array_Alpharius[1] = "I am Alpharius"
+    udg_String_Array_Alpharius[2] = "We are Alpharius"
+    udg_String_Array_Alpharius[3] = "You are Alpharius"
+    udg_String_Array_Alpharius[4] = "Swell guy that Kharn"
+    udg_String_Array_Alpharius[5] = "Heresy!"
+    udg_String_Array_Alpharius[6] = "Bold words for someone within Bolter range!"
+    udg_String_Array_Alpharius[7] = "Hahaha...You thought it was Alpharius but it was me Omegon!"
+    udg_String_Array_Alpharius[8] = "In the grim darkness of the future, war never changes."
+    udg_String_Array_Alpharius[9] = "Grimdank."
+    udg_String_Array_Alpharius[10] = "Rowboat Girlyman Lives!"
     udg_Real_Array_CritAuraDamage[1] = 0.00
     udg_Real_Array_CritAuraDamage[2] = 0.25
     udg_Real_Array_CritAuraDamage[3] = 0.50
@@ -3178,52 +3254,52 @@ function Trig_Set_Variables_Actions()
         udg_Integer_Array_TowerOption[GetForLoopIndexA()] = 1
         bj_forLoopAIndex = bj_forLoopAIndex + 1
     end
-    if (Trig_Set_Variables_Func178001()) then
+    if (Trig_Set_Variables_Func189001()) then
         ForceAddPlayerSimple(Player(0), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    if (Trig_Set_Variables_Func179001()) then
+    if (Trig_Set_Variables_Func190001()) then
         ForceAddPlayerSimple(Player(1), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    if (Trig_Set_Variables_Func180001()) then
+    if (Trig_Set_Variables_Func191001()) then
         ForceAddPlayerSimple(Player(2), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    if (Trig_Set_Variables_Func181001()) then
+    if (Trig_Set_Variables_Func192001()) then
         ForceAddPlayerSimple(Player(3), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    if (Trig_Set_Variables_Func182001()) then
+    if (Trig_Set_Variables_Func193001()) then
         ForceAddPlayerSimple(Player(4), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    if (Trig_Set_Variables_Func183001()) then
+    if (Trig_Set_Variables_Func194001()) then
         ForceAddPlayerSimple(Player(5), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    if (Trig_Set_Variables_Func184001()) then
+    if (Trig_Set_Variables_Func195001()) then
         ForceAddPlayerSimple(Player(6), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    if (Trig_Set_Variables_Func185001()) then
+    if (Trig_Set_Variables_Func196001()) then
         ForceAddPlayerSimple(Player(7), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    if (Trig_Set_Variables_Func186001()) then
+    if (Trig_Set_Variables_Func197001()) then
         ForceAddPlayerSimple(Player(8), udg_PlayerGroup_PlyGrpArray[1])
     else
         DoNothing()
     end
-    ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Set_Variables_Func187A)
+    ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Set_Variables_Func198A)
     udg_Real_Array_MessageTime[1] = 60.00
 end
 
@@ -4371,31 +4447,21 @@ function InitTrig_Tabaho()
     TriggerAddAction(gg_trg_Tabaho, Trig_Tabaho_Actions)
 end
 
-function Trig_Alpharius_Omegon_Func001Func001C()
-    if (not (GetUnitName(GetTriggerUnit()) == "Alpharius")) then
-        return false
-    end
-    return true
-end
-
-function Trig_Alpharius_Omegon_Func001Func002C()
-    if (GetTriggerUnit() == gg_unit_z000_0120) then
-        return true
-    end
-    if (GetTriggerUnit() == gg_unit_z001_0122) then
-        return true
-    end
+function Trig_Alpharius_Omegon_Func001Func006C()
     if (GetTriggerUnit() == gg_unit_z000_0121) then
         return true
     end
-    if (GetTriggerUnit() == gg_unit_z001_0123) then
+    if (GetTriggerUnit() == gg_unit_z000_0122) then
+        return true
+    end
+    if (GetTriggerUnit() == gg_unit_z000_0123) then
         return true
     end
     return false
 end
 
 function Trig_Alpharius_Omegon_Func001C()
-    if (not Trig_Alpharius_Omegon_Func001Func002C()) then
+    if (not Trig_Alpharius_Omegon_Func001Func006C()) then
         return false
     end
     return true
@@ -4403,21 +4469,11 @@ end
 
 function Trig_Alpharius_Omegon_Actions()
     if (Trig_Alpharius_Omegon_Func001C()) then
-        if (Trig_Alpharius_Omegon_Func001Func001C()) then
-            BlzSetUnitName(GetTriggerUnit(), "Omegon")
-            CreateTextTagUnitBJ("TRIGSTR_2655", GetTriggerUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
-            SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
-            SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
-            SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
-            SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
-        else
-            BlzSetUnitName(GetTriggerUnit(), "Alpharius")
-            CreateTextTagUnitBJ("TRIGSTR_2658", GetTriggerUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
-            SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
-            SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
-            SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
-            SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
-        end
+        CreateTextTagUnitBJ(udg_String_Array_Alpharius[GetRandomInt(1, 10)], GetTriggerUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
+        SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
+        SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
+        SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
+        SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
     else
     end
 end
@@ -4482,6 +4538,16 @@ function InitTrig_Ork()
     TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(7), true)
     TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(8), true)
     TriggerAddAction(gg_trg_Ork, Trig_Ork_Actions)
+end
+
+function Trig_Smonze_Actions()
+    SetUnitOwner(gg_unit_n018_0091, Player(PLAYER_NEUTRAL_AGGRESSIVE), true)
+end
+
+function InitTrig_Smonze()
+    gg_trg_Smonze = CreateTrigger()
+    TriggerRegisterUnitEvent(gg_trg_Smonze, gg_unit_n01D_0119, EVENT_UNIT_DEATH)
+    TriggerAddAction(gg_trg_Smonze, Trig_Smonze_Actions)
 end
 
 function Trig_Creep_Boosting_Func009C()
@@ -13010,48 +13076,48 @@ function InitTrig_Next_Wave_and_Current_Wave_Update()
     TriggerAddAction(gg_trg_Next_Wave_and_Current_Wave_Update, Trig_Next_Wave_and_Current_Wave_Update_Actions)
 end
 
-function Trig_Player_Leave_Gold_Split_Func003002()
-    RemoveUnit(GetEnumUnit())
-end
-
-function Trig_Player_Leave_Gold_Split_Func009Func001C()
-    if (not (GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Player_Leave_Gold_Split_Func009A()
-    if (Trig_Player_Leave_Gold_Split_Func009Func001C()) then
-        DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetTriggerPlayer())] .. (GetPlayerName(GetTriggerPlayer()) .. ("|cff00FF00, Has left the game. You have been given|r |cffFDD017" .. (I2S((udg_Integer_PlayerLeaveGold // udg_Integer_Players)) .. " Gold.|r")))))
-        AdjustPlayerStateBJ((udg_Integer_PlayerLeaveGold // udg_Integer_Players), GetEnumPlayer(), PLAYER_STATE_RESOURCE_GOLD)
-    else
-    end
-end
-
-function Trig_Player_Leave_Gold_Split_Func011C()
+function Trig_Player_Leave_Gold_Split_Func001C()
     if (not (GetTriggerPlayer() == GetOwningPlayer(gg_unit_n00C_0019))) then
         return false
     end
     return true
 end
 
+function Trig_Player_Leave_Gold_Split_Func004002()
+    RemoveUnit(GetEnumUnit())
+end
+
+function Trig_Player_Leave_Gold_Split_Func010Func001C()
+    if (not (GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Player_Leave_Gold_Split_Func010A()
+    if (Trig_Player_Leave_Gold_Split_Func010Func001C()) then
+        DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetTriggerPlayer())] .. (GetPlayerName(GetTriggerPlayer()) .. ("|cff00FF00, Has left the game. You have been given|r |cffFDD017" .. (I2S((udg_Integer_PlayerLeaveGold // udg_Integer_Players)) .. " Gold.|r")))))
+        AdjustPlayerStateBJ((udg_Integer_PlayerLeaveGold // udg_Integer_Players), GetEnumPlayer(), PLAYER_STATE_RESOURCE_GOLD)
+    else
+    end
+end
+
 function Trig_Player_Leave_Gold_Split_Actions()
+    if (Trig_Player_Leave_Gold_Split_Func001C()) then
+        SetUnitOwner(gg_unit_n00C_0019, Player(PLAYER_NEUTRAL_PASSIVE), true)
+        EnableTrigger(gg_trg_Game_Setup_Ownership)
+    else
+    end
     udg_Integer_PlayerLeaveGold = GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD)
     ForceRemovePlayerSimple(GetTriggerPlayer(), udg_PlayerGroup_PlyGrpArray[1])
-    ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), GetTriggerPlayer()), Trig_Player_Leave_Gold_Split_Func003002)
+    ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), GetTriggerPlayer()), Trig_Player_Leave_Gold_Split_Func004002)
     MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, (GetConvertedPlayerId(GetTriggerPlayer()) + 1), (udg_String_Array_MultiBoardColours[GetConvertedPlayerId(GetTriggerPlayer())] .. "Left the Game|r"))
     MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, (GetConvertedPlayerId(GetTriggerPlayer()) + 1), ("|cffFDD017" .. "0"))
     MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 3, (GetConvertedPlayerId(GetTriggerPlayer()) + 1), ("|cffFDD017" .. "0"))
     udg_Integer_Array_Kills[GetConvertedPlayerId(GetTriggerPlayer())] = 0
     udg_Integer_Players = (udg_Integer_Players - 1)
-    ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Player_Leave_Gold_Split_Func009A)
+    ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Player_Leave_Gold_Split_Func010A)
     SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD, 0)
-    if (Trig_Player_Leave_Gold_Split_Func011C()) then
-        SetUnitOwner(gg_unit_n00C_0019, Player(PLAYER_NEUTRAL_PASSIVE), true)
-        EnableTrigger(gg_trg_Game_Setup_Ownership)
-    else
-    end
 end
 
 function InitTrig_Player_Leave_Gold_Split()
@@ -13066,16 +13132,6 @@ function InitTrig_Player_Leave_Gold_Split()
     TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(7))
     TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(8))
     TriggerAddAction(gg_trg_Player_Leave_Gold_Split, Trig_Player_Leave_Gold_Split_Actions)
-end
-
-function Trig_Untitled_Trigger_001_Actions()
-    udg_Integer_WaveNumber = 150
-end
-
-function InitTrig_Untitled_Trigger_001()
-    gg_trg_Untitled_Trigger_001 = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Untitled_Trigger_001, Player(0), "-wave", true)
-    TriggerAddAction(gg_trg_Untitled_Trigger_001, Trig_Untitled_Trigger_001_Actions)
 end
 
 function Trig_Restart_Func002C()
@@ -14514,26 +14570,6 @@ function InitTrig_Transmute()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Transmute, EVENT_PLAYER_UNIT_SPELL_CAST)
     TriggerAddCondition(gg_trg_Transmute, Condition(Trig_Transmute_Conditions))
     TriggerAddAction(gg_trg_Transmute, Trig_Transmute_Actions)
-end
-
-function Trig_DebugAbility_Conditions()
-    if (not (GetSpellAbilityId() == FourCC("A00W"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_DebugAbility_Actions()
-    udg_Point_PntArray[6] = GetRectCenter(gg_rct_Life_Zone)
-    IssuePointOrderLocBJ(GetSpellTargetUnit(), "move", udg_Point_PntArray[6])
-        RemoveLocation(udg_Point_PntArray[6])
-end
-
-function InitTrig_DebugAbility()
-    gg_trg_DebugAbility = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_DebugAbility, EVENT_PLAYER_UNIT_SPELL_CAST)
-    TriggerAddCondition(gg_trg_DebugAbility, Condition(Trig_DebugAbility_Conditions))
-    TriggerAddAction(gg_trg_DebugAbility, Trig_DebugAbility_Actions)
 end
 
 function Trig_Unit_Debugger_Conditions()
@@ -16325,6 +16361,7 @@ function InitCustomTriggers()
     InitTrig_Soul_Tower_Minion_Remove_From_Group()
     InitTrig_Shard_Tower_Abilities()
     InitTrig_Spirit_Tower()
+    InitTrig_Rocket_Tower()
     InitTrig_Set_Variables()
     InitTrig_Set_Random_Wave_Variables()
     InitTrig_Map_Start()
@@ -16345,6 +16382,7 @@ function InitCustomTriggers()
     InitTrig_Tabaho()
     InitTrig_Alpharius_Omegon()
     InitTrig_Ork()
+    InitTrig_Smonze()
     InitTrig_Creep_Boosting()
     InitTrig_Hero_XP()
     InitTrig_Hero_Level_Up_Point()
@@ -16431,7 +16469,6 @@ function InitCustomTriggers()
     InitTrig_Player_Update_Game_Start()
     InitTrig_Next_Wave_and_Current_Wave_Update()
     InitTrig_Player_Leave_Gold_Split()
-    InitTrig_Untitled_Trigger_001()
     InitTrig_Restart()
     InitTrig_Game_Setup_Ownership()
     InitTrig_Camera_Zoom_Command()
@@ -16467,7 +16504,6 @@ function InitCustomTriggers()
     InitTrig_Auto_Blink()
     InitTrig_Gamble()
     InitTrig_Transmute()
-    InitTrig_DebugAbility()
     InitTrig_Unit_Debugger()
     InitTrig_Player_1()
     InitTrig_Player_2()

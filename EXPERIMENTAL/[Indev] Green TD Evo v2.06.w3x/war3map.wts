@@ -931,6 +931,12 @@ STRING 130
 |c0077ff77Cast this on another tower to swap position with it, this is a one time use ability.|r
 }
 
+STRING 131
+// Doodads: D00L (Flowers 2), Name (Name)
+{
+Flowers 2
+}
+
 STRING 132
 // Abilities: A00U (Swap Towers), Tip (Tooltip - Normal)
 {
@@ -1250,7 +1256,7 @@ STRING 172
 }
 
 STRING 173
-// Units: h008 (Poison Tower 1: Elven Archer), Hotkey (Hotkey)
+// Units: h008 (Poison Tower 1: Elven Archer 222), Hotkey (Hotkey)
 {
 S
 }
@@ -4046,7 +4052,7 @@ Siege Tower 5: Skeletal Grunt
 }
 
 STRING 627
-// Units: h008 (Poison Tower 1: Elven Archer), Tip (Tooltip - Basic)
+// Units: h008 (Poison Tower 1: Elven Archer 222), Tip (Tooltip - Basic)
 {
 |c0077ff77[S] |c0000ff00Build Elven Archer.|r |cAAAAFFAAPoison Tower 1.|r
 }
@@ -4868,6 +4874,20 @@ STRING 754
 // Abilities: A03H (HH Cripple Active), Name (Name)
 {
 HH Cripple Active
+}
+
+STRING 755
+// Units: n00K (Frost Tower 3: Hydromancer), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Can be upgraded into Frost, Shard or Spirit Towers.|r
+
+|c0000ff00Attack:|r |c0077ff77Magic
+|c0000ff00Cooldown:|r |c0077ff770.75
+|c0000ff00Damage:|r |c0077ff771700
+|c0000ff00Range:|r |c0077ff77900
+|c0000ff00Efficiency:|r |c0077ff771.13 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300
+|c0000ff00Ability (2):|r |c0077ff77Freezing Attack|r
 }
 
 STRING 756
@@ -6620,15 +6640,9 @@ STRING 1001
 }
 
 STRING 1002
-// Units: n00K (Frost Tower 3: Hydromancer), Ubertip (Tooltip - Extended)
+// Units: h008 (Poison Tower 1: Elven Archer 222), Name (Name)
 {
-|c0000ff00Attack:|r |c0077ff77Magic
-|c0000ff00Cooldown:|r |c0077ff770.75
-|c0000ff00Damage:|r |c0077ff771700
-|c0000ff00Range:|r |c0077ff77900
-|c0000ff00Efficiency:|r |c0077ff771.13 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300
-|c0000ff00Ability (2):|r |c0077ff77Freezing Attack|r
+Poison Tower 1: Elven Archer 222
 }
 
 STRING 1003
@@ -14649,7 +14663,7 @@ STRING 2204
 
 STRING 2205
 {
-Stop poking me Oomie
+Stop poking me!
 }
 
 STRING 2206
@@ -15396,9 +15410,11 @@ STRING 2324
 }
 
 STRING 2325
-// Units: h00I (Ultimate Ballista Tower), Name (Name)
+// Abilities: A02I (Electroboom), Ubertip (Tooltip - Normal - Extended)
 {
-Ultimate Ballista Tower
+|c0077ff77The Tower discharge its capacitors, hitting up to 8 units for up to 200% of the towers base attack damage as spell damage.
+
+The damage gain from Overdrive will also reset.
 }
 
 STRING 2326
@@ -15872,9 +15888,9 @@ STRING 2393
 }
 
 STRING 2394
-// Units: h011 (Ultimate Flak Tower), Name (Name)
+// Abilities: A04G (Overdrive), Ubertip (Tooltip - Normal - Extended)
 {
-Ultimate Flak Tower
+|c0077ff77Overdrive; Gains 1 mana for each enemy hit by its attack, also gains 5 temporary damage for each enemy hit.
 }
 
 STRING 2395
@@ -15896,7 +15912,7 @@ X
 }
 
 STRING 2397
-// Units: h00I (Ultimate Ballista Tower), Tip (Tooltip - Basic)
+// Units: h00I (Watch Tower, Ultimate Ballista Tower), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade to Watch Tower, Ultimate Ballista Tower.|r |cAAAAFFAABallista Tower 10.|r
 }
@@ -15938,7 +15954,7 @@ STRING 2403
 }
 
 STRING 2404
-// Units: h011 (Ultimate Flak Tower), Tip (Tooltip - Basic)
+// Units: h011 (Mortar Team, Ultimate Flak Tower), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Mortar Team, Ultimate Flak Tower.|r |cAAAAFFAAFlak Tower 10.|r
 }
@@ -16054,7 +16070,7 @@ STRING 2421
 }
 
 STRING 2422
-// Units: h00I (Ultimate Ballista Tower), Ubertip (Tooltip - Extended)
+// Units: h00I (Watch Tower, Ultimate Ballista Tower), Ubertip (Tooltip - Extended)
 {
 |c0000ff00Attack:|r |c0077ff77Pierce
 |c0000ff00Cooldown:|r |c0077ff771.50
@@ -16160,7 +16176,7 @@ Bash Tower 2
 }
 
 STRING 2439
-// Units: h011 (Ultimate Flak Tower), Ubertip (Tooltip - Extended)
+// Units: h011 (Mortar Team, Ultimate Flak Tower), Ubertip (Tooltip - Extended)
 {
 |c0000ff00Attack:|r |c0077ff77Siege
 |c0000ff00Cooldown:|r |c0077ff771.25 (ground)
@@ -17025,6 +17041,42 @@ STRING 2561
  that i have modified to work in whatever context i need them to
 }
 
+STRING 2562
+// Units: u003 (Shaman), Name (Name)
+{
+Shaman
+}
+
+STRING 2563
+// Units: h048 (Chipped Amethyst), Name (Name)
+{
+Chipped Amethyst
+}
+
+STRING 2564
+// Units: n020 (Rocket Tower 4: War Machine), Name (Name)
+{
+Rocket Tower 4: War Machine
+}
+
+STRING 2565
+// Units: n020 (Rocket Tower 4: War Machine), Tip (Tooltip - Basic)
+{
+|c0077ff77[X] |c0000ff00Upgrade To War Machine.|r |cAAAAFFAARocket Tower 4.|r
+}
+
+STRING 2566
+// Units: h00I (Watch Tower, Ultimate Ballista Tower), Name (Name)
+{
+Watch Tower, Ultimate Ballista Tower
+}
+
+STRING 2567
+// Units: h02L (Hellfire Tower 4: Hell Shrine), Hotkey (Hotkey)
+{
+X
+}
+
 STRING 2569
 {
  these will remain uncredited within this list, everything else will be listed here.
@@ -17494,7 +17546,7 @@ STRING 2630
 }
 
 STRING 2631
-// Units: h008 (Poison Tower 1: Elven Archer), Ubertip (Tooltip - Extended)
+// Units: h008 (Poison Tower 1: Elven Archer 222), Ubertip (Tooltip - Extended)
 {
 |c00FFFF00[Secondary Tower]|r
 
@@ -17756,11 +17808,6 @@ STRING 2654
 Fel Power
 }
 
-STRING 2655
-{
-I am Omegon
-}
-
 STRING 2656
 // Abilities: A00H (Upgrade Armor Aura), Hotkey (Hotkey - Normal)
 {
@@ -17774,8 +17821,9 @@ E
 }
 
 STRING 2658
+// Abilities: A02I (Electroboom), EditorSuffix (Editor Suffix)
 {
-I am Alpharius
+[Rocket Tower]
 }
 
 STRING 2659
@@ -18252,15 +18300,16 @@ STRING 2730
 -- Consolidated all emergency towers into 1 learnable abillity instead of each tower having its own.
 -- Switched from JASS scripting to LUA Scripting
 -- Added Bribes LUA Damage Engine
--- Added Dr Super Goods LUA Garbage Collector
 -- Added Custom Crit System
 -- Added Critical Aura
 -- Added Crit Bonus to hero
 -- Added more easter eggs
+-- Added several new towers
 -- Reduced Health, Armour and Movement Speed of non-random waves
 -- Fixed Endless Mode and Random Waves not being compatible
 -- Fixed chaos mode difficultys still being active after changing to a non-chaos mode difficulty during game setup
 -- Fixed -wave command only being available to player 1
+-- Fixed Game Setup Unit being removed when its owner leaves
 }
 
 STRING 2731
@@ -18950,7 +18999,7 @@ STRING 2838
 }
 
 STRING 2839
-// Units: h02L (Hellfire Tower 4: Hell Shrine), Hotkey (Hotkey)
+// Units: n00X (Shard Tower 4: Frozen Obelisk), Hotkey (Hotkey)
 {
 X
 }
@@ -19777,6 +19826,12 @@ STRING 2959
 Q
 }
 
+STRING 2960
+// Units: n01W (War Machine, Ultimate Rocket Tower), Name (Name)
+{
+War Machine, Ultimate Rocket Tower
+}
+
 STRING 2961
 // Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
@@ -19787,6 +19842,12 @@ STRING 2962
 // Units: n01U (Spirit Tower 9: Winter Beacon), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Winter Beacon.|r |cAAAAFFAASpirit Tower 9.|r
+}
+
+STRING 2963
+// Units: n01X (Rocket Tower 7: War Machine), Name (Name)
+{
+Rocket Tower 7: War Machine
 }
 
 STRING 2964
@@ -20035,10 +20096,82 @@ STRING 2999
 Z
 }
 
+STRING 3000
+// Units: n01Y (Rocket Tower 6: War Machine), Name (Name)
+{
+Rocket Tower 6: War Machine
+}
+
 STRING 3003
 // Units: n00U (Frost Tower 6: Frosty Elemental), Name (Name)
 {
 Frost Tower 6: Frosty Elemental
+}
+
+STRING 3004
+// Units: n01Z (Rocket Tower 5: War Machine), Name (Name)
+{
+Rocket Tower 5: War Machine
+}
+
+STRING 3009
+// Units: n021 (Rocket Tower 8: War Machine), Name (Name)
+{
+Rocket Tower 8: War Machine
+}
+
+STRING 3012
+// Units: n022 (Rocket Tower 9: War Machine), Name (Name)
+{
+Rocket Tower 9: War Machine
+}
+
+STRING 3015
+// Units: n020 (Rocket Tower 4: War Machine), Hotkey (Hotkey)
+{
+X
+}
+
+STRING 3016
+// Abilities: A01B (Stasis Trap), Hotkey (Hotkey - Normal)
+{
+X
+}
+
+STRING 3017
+// Units: n001 (Banshee, Ultimate Frost Tower), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 3018
+// Abilities: A012 (Emergency Siege Tower), Hotkey (Hotkey - Normal)
+{
+X
+}
+
+STRING 3019
+// Units: h003 (Siege Tower 5: Skeletal Grunt), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 3020
+// Abilities: A01Y (Emergency Siege Tower), Hotkey (Hotkey - Normal)
+{
+X
+}
+
+STRING 3021
+// Units: h011 (Mortar Team, Ultimate Flak Tower), Name (Name)
+{
+Mortar Team, Ultimate Flak Tower
+}
+
+STRING 3022
+// Units: n01W (War Machine, Ultimate Rocket Tower), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z.] |c0000ff00Upgrade To War Machine, Ultimate.|r |cAAAAFFAARocket Tower 10.|r
 }
 
 STRING 3026
@@ -20053,10 +20186,22 @@ STRING 3028
 W
 }
 
+STRING 3030
+// Units: e006 (Bouncing Tower 5: Spellbreaker), Hotkey (Hotkey)
+{
+Z
+}
+
 STRING 3031
 // Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 W
+}
+
+STRING 3032
+// Units: e008 (Naisha, Ultimate Bouncing Tower), Hotkey (Hotkey)
+{
+Z
 }
 
 STRING 3033
@@ -20065,16 +20210,198 @@ STRING 3033
 W
 }
 
+STRING 3034
+// Units: h005 (Flesh Golem, Ultimate Bash Tower), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 3035
+// Units: h00I (Watch Tower, Ultimate Ballista Tower), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 3036
+// Abilities: A04G (Overdrive), EditorSuffix (Editor Suffix)
+{
+[Rocket Tower]
+}
+
+STRING 3045
+// Units: n01X (Rocket Tower 7: War Machine), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade To War Machine.|r |cAAAAFFAARocket Tower 7.|r
+}
+
+STRING 3047
+// Units: n01Y (Rocket Tower 6: War Machine), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade To War Machine.|r |cAAAAFFAARocket Tower 6.|r
+}
+
+STRING 3049
+// Units: n01Z (Rocket Tower 5: War Machine), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade To War Machine.|r |cAAAAFFAARocket Tower 5.|r
+}
+
+STRING 3051
+// Units: n021 (Rocket Tower 8: War Machine), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade To War Machine.|r |cAAAAFFAARocket Tower 8.|r
+}
+
+STRING 3053
+// Units: n022 (Rocket Tower 9: War Machine), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade To War Machine.|r |cAAAAFFAARocket Tower 9.|r
+}
+
+STRING 3067
+// Buffs/Effects: B003 (), Bufftip (Tooltip)
+{
+Rocket Damage
+}
+
+STRING 3071
+// Buffs/Effects: B003 (), Buffubertip (Tooltip - Extended)
+{
+Increased Damage from Overdrive
+}
+
 STRING 3075
 // Units: h021 (Bash Tower 1: Storm Panda), Name (Name)
 {
 Bash Tower 1: Storm Panda
 }
 
+STRING 3125
+// Abilities: A04G (Overdrive), Name (Name)
+{
+Overdrive
+}
+
+STRING 3126
+// Abilities: A04G (Overdrive), Tip (Tooltip - Normal)
+{
+Overdrive
+}
+
+STRING 3128
+// Units: n01W (War Machine, Ultimate Rocket Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff7724000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.91 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200|r
+|c0000ff00Ability (2):|r |c0077ff77Overdrive; Gains 1 mana for each enemy hit by its attack.|r
+|c0000ff00Ability (3):|r |c0077ff77Electroboom; At 250 mana the rocket tower will discharge its capacitors, hitting up to 8 enemies dealing up to 200% of towers base damage as spell damage.|r
+
+}
+
+STRING 3129
+// Units: n01X (Rocket Tower 7: War Machine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff778000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.71 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200|r
+|c0000ff00Ability (2):|r |c0077ff77Overdrive; Gains 1 mana for each enemy hit by its attack.|r
+|c0000ff00Ability (3):|r |c0077ff77Electroboom; At 250 mana the rocket tower will discharge its capacitors, hitting up to 8 enemies dealing up to 200% of towers base damage as spell damage.|r
+
+}
+
+STRING 3130
+// Units: n01Y (Rocket Tower 6: War Machine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff775500
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.66 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200|r
+|c0000ff00Ability (2):|r |c0077ff77Overdrive; Gains 1 mana for each enemy hit by its attack.|r
+|c0000ff00Ability (3):|r |c0077ff77Electroboom; At 250 mana the rocket tower will discharge its capacitors, hitting up to 8 enemies dealing up to 200% of towers base damage as spell damage.|r
+
+}
+
+STRING 3131
+// Units: n01Z (Rocket Tower 5: War Machine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff773500
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.60 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200|r
+|c0000ff00Ability (2):|r |c0077ff77Overdrive; Gains 1 mana for each enemy hit by its attack.|r
+|c0000ff00Ability (3):|r |c0077ff77Electroboom; At 250 mana the rocket tower will discharge its capacitors, hitting up to 8 enemies dealing up to 200% of towers base damage as spell damage.|r
+
+}
+
+STRING 3132
+// Units: n020 (Rocket Tower 4: War Machine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff772000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.52 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200|r
+|c0000ff00Ability (2):|r |c0077ff77Overdrive; Gains 1 mana for each enemy hit by its attack.|r
+|c0000ff00Ability (3):|r |c0077ff77Electroboom; At 250 mana the rocket tower will discharge its capacitors, hitting up to 8 enemies dealing up to 200% of towers base damage as spell damage.|r
+
+}
+
+STRING 3133
+// Units: n021 (Rocket Tower 8: War Machine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff7712000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.78 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200|r
+|c0000ff00Ability (2):|r |c0077ff77Overdrive; Gains 1 mana for each enemy hit by its attack.|r
+|c0000ff00Ability (3):|r |c0077ff77Electroboom; At 250 mana the rocket tower will discharge its capacitors, hitting up to 8 enemies dealing up to 200% of towers base damage as spell damage.|r
+
+}
+
+STRING 3134
+// Units: n022 (Rocket Tower 9: War Machine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff7717500
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.86 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200|r
+|c0000ff00Ability (2):|r |c0077ff77Overdrive; Gains 1 mana for each enemy hit by its attack.|r
+|c0000ff00Ability (3):|r |c0077ff77Electroboom; At 250 mana the rocket tower will discharge its capacitors, hitting up to 8 enemies dealing up to 200% of towers base damage as spell damage.|r
+
+}
+
 STRING 3135
 // Abilities: A00Y (Blitz Mode), Hotkey (Hotkey - Normal)
 {
 D
+}
+
+STRING 3137
+// Abilities: A02I (Electroboom), Name (Name)
+{
+Electroboom
+}
+
+STRING 3138
+// Abilities: A02I (Electroboom), Tip (Tooltip - Normal)
+{
+Electroboom
 }
 
 STRING 3148
@@ -20096,7 +20423,7 @@ W
 }
 
 STRING 3207
-// Units: n001 (Banshee, Ultimate Frost Tower), Hotkey (Hotkey)
+// Units: h00L (Ballista Tower 7), Hotkey (Hotkey)
 {
 Z
 }
@@ -20120,13 +20447,13 @@ D
 }
 
 STRING 3266
-// Units: h003 (Siege Tower 5: Skeletal Grunt), Hotkey (Hotkey)
+// Units: h00O (Ballista Tower 6), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 3267
-// Units: e006 (Bouncing Tower 5: Spellbreaker), Hotkey (Hotkey)
+// Units: h00P (Ballista Tower 5), Hotkey (Hotkey)
 {
 Z
 }
@@ -20708,7 +21035,7 @@ S
 }
 
 STRING 4338
-// Units: n00X (Shard Tower 4: Frozen Obelisk), Hotkey (Hotkey)
+// Abilities: A028 (Debug), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -20803,31 +21130,19 @@ This unit is under the effect of a Damage Aura, It has Increased Attack Damage.
 }
 
 STRING 4480
-// Abilities: A01B (Stasis Trap), Hotkey (Hotkey - Normal)
+// Abilities: A02P (Disable Traps), Hotkey (Hotkey - Normal)
 {
 X
 }
 
 STRING 4481
-// Abilities: A012 (Emergency Siege Tower), Hotkey (Hotkey - Normal)
+// Abilities: A047 (Game Modes), Hotkey (Hotkey - Normal)
 {
 X
 }
 
 STRING 4484
-// Abilities: A01Y (Emergency Siege Tower), Hotkey (Hotkey - Normal)
-{
-X
-}
-
-STRING 4487
-// Abilities: A028 (Debug), Hotkey (Hotkey - Normal)
-{
-X
-}
-
-STRING 4490
-// Abilities: A02P (Disable Traps), Hotkey (Hotkey - Normal)
+// Abilities: A049 (Random Game Modes + Difficulty), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -20842,12 +21157,6 @@ STRING 4516
 // Buffs/Effects: BHad (), Buffubertip (Tooltip - Extended)
 {
 This unit is under the effect of an Armour Aura, It has Decreased Armour.
-}
-
-STRING 4577
-// Units: h008 (Poison Tower 1: Elven Archer), Name (Name)
-{
-Poison Tower 1: Elven Archer
 }
 
 STRING 4621
@@ -21251,7 +21560,7 @@ V
 }
 
 STRING 5619
-// Units: e008 (Naisha, Ultimate Bouncing Tower), Hotkey (Hotkey)
+// Units: h00R (Ballista Tower 8), Hotkey (Hotkey)
 {
 Z
 }
@@ -21541,7 +21850,7 @@ C
 }
 
 STRING 5968
-// Units: h005 (Flesh Golem, Ultimate Bash Tower), Hotkey (Hotkey)
+// Units: h00S (Ballista Tower 9), Hotkey (Hotkey)
 {
 Z
 }
@@ -22145,7 +22454,7 @@ Sell - 20% Gold Return
 }
 
 STRING 6917
-// Units: h00I (Ultimate Ballista Tower), Hotkey (Hotkey)
+// Units: h00J (Flak Tower 5), Hotkey (Hotkey)
 {
 Z
 }
@@ -22273,283 +22582,283 @@ Sell - 20% Gold Return
 }
 
 STRING 6994
-// Units: h00L (Ballista Tower 7), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 6995
-// Units: h00O (Ballista Tower 6), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 6996
-// Units: h00P (Ballista Tower 5), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 6997
-// Units: h00R (Ballista Tower 8), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 6998
-// Units: h00S (Ballista Tower 9), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 7010
-// Units: h00J (Flak Tower 5), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 7012
 // Units: h00T (Flak Tower 6), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7014
+STRING 6995
 // Units: h00Y (Flak Tower 7), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7016
+STRING 6996
 // Units: h00Z (Flak Tower 8), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7018
+STRING 6997
 // Units: h010 (Flak Tower 9), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7020
-// Units: h011 (Ultimate Flak Tower), Hotkey (Hotkey)
+STRING 6998
+// Units: h011 (Mortar Team, Ultimate Flak Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7021
+STRING 7010
 // Units: h016 (Fel Tower 5: Warlock), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7023
+STRING 7012
 // Units: h018 (Ultimate Fel Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7025
+STRING 7014
 // Units: h01A (Fel Tower 7: Warlock), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7027
+STRING 7016
 // Units: h01D (Fel Tower 8: Warlock), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7029
+STRING 7018
 // Units: h01F (Fel Tower 6: Warlock), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7031
+STRING 7020
 // Units: h01G (Fel Tower 9: Warlock), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7033
+STRING 7021
 // Units: h017 (Venom Tower 5: Lizard), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7034
+STRING 7023
 // Units: h01M (Venom Tower 6: Lizard), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7035
+STRING 7025
 // Units: h01P (Venom Tower 7: Lizard), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7036
+STRING 7027
 // Units: h01Q (Venom Tower 8: Lizard), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7037
+STRING 7029
 // Units: h01R (Venom Tower 9: Lizard), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7038
+STRING 7031
 // Units: h01S (Ultimate Venom Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7039
+STRING 7033
 // Units: h01Z (Hellfire Tower 8: Hell Shrine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7040
+STRING 7034
 // Units: h02C (Hellfire Tower 9: Hell Shrine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7041
+STRING 7035
 // Units: h02D (Ultimate Hellfire Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7063
+STRING 7036
 // Units: h02E (Hellfire Tower 5: Hell Shrine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7064
+STRING 7037
 // Units: h02H (Hellfire Tower 7: Hell Shrine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7065
+STRING 7038
 // Units: h02K (Hellfire Tower 6: Hell Shrine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7066
+STRING 7039
 // Units: h02M (Soul Tower 7: Runic Crystal), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7067
+STRING 7040
 // Units: h043 (Soul Tower 6: Runic Crystal), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7068
+STRING 7041
 // Units: h044 (Soul Tower 5: Runic Crystal), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7069
+STRING 7063
 // Units: h045 (Soul Tower 8: Runic Crystal), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7071
+STRING 7064
 // Units: h046 (Soul Tower 9: Runic Crystal), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7072
+STRING 7065
 // Units: h047 (Ultimate Soul Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7073
+STRING 7066
 // Units: n01E (Shard Tower 5: Frozen Obelisk), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7075
+STRING 7067
 // Units: n01F (Shard Tower 6: Frozen Obelisk), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7077
+STRING 7068
 // Units: n01L (Shard Tower 7: Frozen Obelisk), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7078
+STRING 7069
 // Units: n01M (Shard Tower 8: Frozen Obelisk), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7079
+STRING 7071
 // Units: n01N (Shard Tower 9: Frozen Obelisk), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7080
+STRING 7072
 // Units: n01O (Frozen Obelisk, UIltimate Shard Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7081
+STRING 7073
 // Units: n01Q (Spirit Tower 5: Winter Beacon), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7082
+STRING 7075
 // Units: n01R (Spirit Tower 6: Winter Beacon), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7083
+STRING 7077
 // Units: n01S (Spirit Tower 7: Winter Beacon), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7084
+STRING 7078
 // Units: n01T (Spirit Tower 8: Winter Beacon), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7085
+STRING 7079
 // Units: n01U (Spirit Tower 9: Winter Beacon), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7086
+STRING 7080
 // Units: n01V (Winter Beacon, Ultimate Spirit Tower), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 7081
+// Units: n01W (War Machine, Ultimate Rocket Tower), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 7082
+// Units: n01X (Rocket Tower 7: War Machine), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 7083
+// Units: n01Y (Rocket Tower 6: War Machine), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 7084
+// Units: n01Z (Rocket Tower 5: War Machine), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 7085
+// Units: n021 (Rocket Tower 8: War Machine), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 7086
+// Units: n022 (Rocket Tower 9: War Machine), Hotkey (Hotkey)
 {
 Z
 }
@@ -22606,18 +22915,6 @@ STRING 7095
 // Abilities: A048 (Random Game Modes), Hotkey (Hotkey - Normal)
 {
 Z
-}
-
-STRING 7108
-// Abilities: A047 (Game Modes), Hotkey (Hotkey - Normal)
-{
-X
-}
-
-STRING 7112
-// Abilities: A049 (Random Game Modes + Difficulty), Hotkey (Hotkey - Normal)
-{
-X
 }
 
 STRING 7119
