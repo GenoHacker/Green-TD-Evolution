@@ -1256,7 +1256,7 @@ STRING 172
 }
 
 STRING 173
-// Units: h008 (Poison Tower 1: Elven Archer 222), Hotkey (Hotkey)
+// Units: h008 (Poison Tower 1: Elven Archer), Hotkey (Hotkey)
 {
 S
 }
@@ -4052,7 +4052,7 @@ Siege Tower 5: Skeletal Grunt
 }
 
 STRING 627
-// Units: h008 (Poison Tower 1: Elven Archer 222), Tip (Tooltip - Basic)
+// Units: h008 (Poison Tower 1: Elven Archer), Tip (Tooltip - Basic)
 {
 |c0077ff77[S] |c0000ff00Build Elven Archer.|r |cAAAAFFAAPoison Tower 1.|r
 }
@@ -6637,12 +6637,6 @@ STRING 1001
 // Units: h005 (Flesh Golem, Ultimate Bash Tower), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Flesh Golem, Ultimate.|r |cAAAAFFAABash Tower 8.|r
-}
-
-STRING 1002
-// Units: h008 (Poison Tower 1: Elven Archer 222), Name (Name)
-{
-Poison Tower 1: Elven Archer 222
 }
 
 STRING 1003
@@ -17077,6 +17071,12 @@ STRING 2567
 X
 }
 
+STRING 2568
+// Units: h008 (Poison Tower 1: Elven Archer), Name (Name)
+{
+Poison Tower 1: Elven Archer
+}
+
 STRING 2569
 {
  these will remain uncredited within this list, everything else will be listed here.
@@ -17546,7 +17546,7 @@ STRING 2630
 }
 
 STRING 2631
-// Units: h008 (Poison Tower 1: Elven Archer 222), Ubertip (Tooltip - Extended)
+// Units: h008 (Poison Tower 1: Elven Archer), Ubertip (Tooltip - Extended)
 {
 |c00FFFF00[Secondary Tower]|r
 
@@ -20410,6 +20410,26 @@ STRING 3148
 E
 }
 
+STRING 3155
+{
+[Endless Creeps]
+}
+
+STRING 3156
+{
+[None]
+}
+
+STRING 3157
+{
+[Endless Creeps]
+}
+
+STRING 3158
+{
+[Endless Creeps]
+}
+
 STRING 3188
 // Abilities: A024 (Hero Waves), Hotkey (Hotkey - Normal)
 {
@@ -21805,7 +21825,7 @@ STRING 5927
 
 STRING 5931
 {
-|c0000ff00-----------------------------------------
+|c0000ff00-------------------------------------
 }
 
 STRING 5934
