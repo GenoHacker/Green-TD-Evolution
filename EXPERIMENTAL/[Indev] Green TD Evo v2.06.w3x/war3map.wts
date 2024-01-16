@@ -6639,6 +6639,11 @@ STRING 1001
 |c0077ff77[Z] |c0000ff00Upgrade To Flesh Golem, Ultimate.|r |cAAAAFFAABash Tower 8.|r
 }
 
+STRING 1002
+{
+[Endless Creeps]
+}
+
 STRING 1003
 // Units: h026 (Bash Tower 3: Goblin Basher), Tip (Tooltip - Basic)
 {
@@ -17808,6 +17813,11 @@ STRING 2654
 Fel Power
 }
 
+STRING 2655
+{
+[Endless Creeps]
+}
+
 STRING 2656
 // Abilities: A00H (Upgrade Armor Aura), Hotkey (Hotkey - Normal)
 {
@@ -20410,19 +20420,9 @@ STRING 3148
 E
 }
 
-STRING 3155
-{
-[Endless Creeps]
-}
-
 STRING 3156
 {
 [None]
-}
-
-STRING 3157
-{
-[Endless Creeps]
 }
 
 STRING 3158

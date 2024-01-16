@@ -9127,7 +9127,7 @@ else
 end
 if (Trig_Start_Static_Waves_Func019C()) then
 udg_Integer_SpawnMax = 1
-TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update)
+TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update_Copy)
 udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
 if (Trig_Start_Static_Waves_Func019Func004C()) then
 EnableTrigger(gg_trg_Static_Wave_Spawning_System)
@@ -9245,7 +9245,7 @@ else
 end
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 14, "TRIGSTR_008")
 TriggerExecute(gg_trg_Generate_Next_Units)
-TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update)
+TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update_Copy)
 udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
 if (Trig_Start_Random_Waves_Func011C()) then
 ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Random_Waves_Func011Func001A)
@@ -13290,110 +13290,108 @@ gg_trg_Next_Wave_and_Current_Wave_Update = CreateTrigger()
 TriggerAddAction(gg_trg_Next_Wave_and_Current_Wave_Update, Trig_Next_Wave_and_Current_Wave_Update_Actions)
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func003C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func006Func001C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 0)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func004C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func006Func005C()
+if (udg_Integer_WaveNumber == 12) then
+return true
+end
+if (udg_Integer_WaveNumber == 24) then
+return true
+end
+if (udg_Integer_WaveNumber == 36) then
+return true
+end
+if (udg_Integer_WaveNumber == 48) then
+return true
+end
+return false
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func006C()
+if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 0)) then
+return false
+end
+if (not Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func006Func005C()) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func007Func001C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 0)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func005C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func007Func003C()
+if (udg_Integer_WaveNumber == 11) then
+return true
+end
+if (udg_Integer_WaveNumber == 23) then
+return true
+end
+if (udg_Integer_WaveNumber == 35) then
+return true
+end
+if (udg_Integer_WaveNumber == 47) then
+return true
+end
+return false
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func007C()
+if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 0)) then
+return false
+end
+if (not Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func007Func003C()) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func011C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func006C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func012C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func007C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func016C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 2)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func008C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func017C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 2)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func009C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func021Func001C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 3)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func010C()
-if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 3)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func017Func001C()
-if (udg_Integer_WaveNumber == 5) then
-return true
-end
-if (udg_Integer_WaveNumber == 10) then
-return true
-end
-if (udg_Integer_WaveNumber == 15) then
-return true
-end
-if (udg_Integer_WaveNumber == 20) then
-return true
-end
-if (udg_Integer_WaveNumber == 25) then
-return true
-end
-if (udg_Integer_WaveNumber == 30) then
-return true
-end
-if (udg_Integer_WaveNumber == 35) then
-return true
-end
-if (udg_Integer_WaveNumber == 40) then
-return true
-end
-if (udg_Integer_WaveNumber == 45) then
-return true
-end
-if (udg_Integer_WaveNumber == 50) then
-return true
-end
-if (udg_Integer_WaveNumber == 55) then
-return true
-end
-if (udg_Integer_WaveNumber == 60) then
-return true
-end
-return false
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func017C()
-if (not Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func017Func001C()) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func018Func001C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func021Func003C()
 if (udg_Integer_WaveNumber == 7) then
 return true
 end
@@ -13421,117 +13419,90 @@ end
 return false
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func018C()
-if (not Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func018Func001C()) then
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func021C()
+if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 3)) then
+return false
+end
+if (not Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func021Func003C()) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func019Func001C()
-if (udg_Integer_WaveNumber == 12) then
-return true
-end
-if (udg_Integer_WaveNumber == 24) then
-return true
-end
-if (udg_Integer_WaveNumber == 36) then
-return true
-end
-if (udg_Integer_WaveNumber == 48) then
-return true
-end
-return false
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func019C()
-if (not Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func019Func001C()) then
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func022Func001C()
+if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 3)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func020Func001C()
-if (udg_Integer_WaveNumber == 18) then
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func022Func003C()
+if (udg_Integer_WaveNumber == 6) then
 return true
 end
-if (udg_Integer_WaveNumber == 29) then
+if (udg_Integer_WaveNumber == 8) then
+return true
+end
+if (udg_Integer_WaveNumber == 16) then
+return true
+end
+if (udg_Integer_WaveNumber == 20) then
+return true
+end
+if (udg_Integer_WaveNumber == 26) then
+return true
+end
+if (udg_Integer_WaveNumber == 32) then
 return true
 end
 if (udg_Integer_WaveNumber == 37) then
 return true
 end
-if (udg_Integer_WaveNumber == 58) then
-return true
-end
-return false
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func020C()
-if (not Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func020Func001C()) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func021Func001C()
-if (udg_Integer_WaveNumber == 39) then
-return true
-end
-if (udg_Integer_WaveNumber == 41) then
-return true
-end
-if (udg_Integer_WaveNumber == 42) then
-return true
-end
-if (udg_Integer_WaveNumber == 43) then
-return true
-end
-if (udg_Integer_WaveNumber == 44) then
-return true
-end
-if (udg_Integer_WaveNumber == 46) then
-return true
-end
-if (udg_Integer_WaveNumber == 47) then
-return true
-end
-if (udg_Integer_WaveNumber == 49) then
-return true
-end
-if (udg_Integer_WaveNumber == 51) then
-return true
-end
 if (udg_Integer_WaveNumber == 52) then
 return true
 end
-if (udg_Integer_WaveNumber == 54) then
-return true
-end
-if (udg_Integer_WaveNumber == 56) then
-return true
-end
 return false
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func021C()
-if (not Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func021Func001C()) then
-return false
-end
-return true
 end
 
 function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func022C()
-if (not (udg_Integer_EndlessMode == 0)) then
+if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 3)) then
 return false
 end
-if (not (udg_Integer_WaveNumber == 60)) then
+if (not Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func022Func003C()) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func023Func001C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func026C()
+if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 5)) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func027C()
+if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 5)) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func037C()
+if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 6)) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func038C()
+if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 6)) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func042Func001Func001C()
 if (not (udg_Integer_EndlessMode == 1)) then
 return false
 end
@@ -13541,8 +13512,21 @@ end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func023C()
-if (not Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func023Func001C()) then
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func042Func001C()
+if (not (udg_Integer_EndlessMode == 1)) then
+return false
+end
+if (not (udg_Integer_WaveNumber == 60)) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func042C()
+if (not (udg_Integer_EndlessMode == 0)) then
+return false
+end
+if (not (udg_Integer_WaveNumber == 60)) then
 return false
 end
 return true
@@ -13559,84 +13543,105 @@ function Trig_Next_Wave_and_Current_Wave_Update_Copy_Actions()
 if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011C()) then
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, udg_String_Array_MBStatWavUniIcons[udg_Integer_WaveNumber])
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, udg_String_Array_MBStatWavUniIcons[(udg_Integer_WaveNumber + 1)])
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func003C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func006C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Light" .. "/Boss]"))
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNLightArmour.blp")
+else
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func006Func001C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Light" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNLightArmour.blp")
 else
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func004C()) then
+end
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func007C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Light" .. "/Boss]"))
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNLightArmour.blp")
+else
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func007Func001C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Light" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNLightArmour.blp")
 else
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func005C()) then
+end
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func011C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Medium" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNMediumArmour.blp")
 else
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func006C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func012C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Medium" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNMediumArmour.blp")
 else
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func007C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func016C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Heavy" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNHeavyArmour.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func008C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Heavy" .. "]"))
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNHeavyArmour.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func009C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Heavy" .. "]"))
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNHeavyArmour.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func010C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Heavy" .. "]"))
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNHeavyArmour.blp")
 else
 end
 if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func017C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Divine" .. "]"))
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNDivineArmour.blp")
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Heavy" .. "]"))
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNHeavyArmour.blp")
 else
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func018C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Fortified" .. " + Air]"))
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func021C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Fortified" .. "/Air]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
 else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func019C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Light" .. " + Boss]"))
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNLightArmour.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func020C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func021Func001C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Fortified" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNArcaniteArchitecture.blp")
 else
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func021C()) then
+end
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func022C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Fortified" .. "/Air]"))
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
+else
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func022Func001C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Fortified" .. "]"))
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNArcaniteArchitecture.blp")
+else
+end
+end
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func026C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Hero" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
 else
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func022C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func027C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Hero" .. "]"))
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
+else
+end
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func037C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Divine" .. "/Immune]"))
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNDivineArmour.blp")
+else
+end
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func038C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Divine" .. "/Immune]"))
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNDivineArmour.blp")
+else
+end
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func042C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_3156")
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNAcorn.blp")
 else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func023C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_3157")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp")
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func042Func001C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_3158")
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp")
 else
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func042Func001Func001C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_1002")
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp")
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_2655")
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp")
+else
+end
+end
 end
 else
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, udg_String_Array_WaveType[udg_Integer_Array_RWUnitType[udg_Integer_WaveNumber]])
