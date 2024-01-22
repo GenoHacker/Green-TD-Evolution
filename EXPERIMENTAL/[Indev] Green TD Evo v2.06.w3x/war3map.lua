@@ -10157,11 +10157,11 @@ udg_Integer_RWBossChance = GetRandomInt(1, 300)
 if (Trig_Generate_Random_Waves_Func001Func002C()) then
 udg_String_RWBossWaveText = (udg_String_RWBossWaveText .. (I2S(GetForLoopIndexA()) .. ","))
 udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()] = GetRandomInt(1, 4)
-udg_Real_Array_RandomWaveBounty[GetForLoopIndexA()] = (((I2R(GetForLoopIndexA()) + (20.00 + I2R(udg_Integer_WaveNumber))) * udg_Real_CreepHealthMultiplier) * 20.00)
+udg_Real_Array_RandomWaveBounty[GetForLoopIndexA()] = (((I2R(GetForLoopIndexA()) + (30.00 + I2R(udg_Integer_WaveNumber))) * udg_Real_CreepHealthMultiplier) * 20.00)
 udg_Integer_Array_RWBounty[GetForLoopIndexA()] = R2I(udg_Real_Array_RandomWaveBounty[GetForLoopIndexA()])
 else
 udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()] = GetRandomInt(10, 30)
-udg_Real_Array_RandomWaveBounty[GetForLoopIndexA()] = (((I2R(GetForLoopIndexA()) + 10.00) * udg_Real_CreepHealthMultiplier) * 20.00)
+udg_Real_Array_RandomWaveBounty[GetForLoopIndexA()] = (((I2R(GetForLoopIndexA()) + 20.00) * udg_Real_CreepHealthMultiplier) * 20.00)
 udg_Integer_Array_RWBounty[GetForLoopIndexA()] = R2I(udg_Real_Array_RandomWaveBounty[GetForLoopIndexA()])
 end
 if (Trig_Generate_Random_Waves_Func001Func003C()) then
