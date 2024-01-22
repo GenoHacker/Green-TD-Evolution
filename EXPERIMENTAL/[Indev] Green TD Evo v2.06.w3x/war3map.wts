@@ -130,22 +130,17 @@ STRING 21
 {
 |c0077ff77-- |c0000ff00Damage Information |c0077ff77--
 
-|c0000ff00Chaos - |c00FF0000200% |c0000ff00vs Divine, |c0077ff7725% |c0000ff00vs Others
-|c0000ff00Hero - |c00FF0000200% |c0000ff00vs Hero / |c00FF7F00100% |c0000ff00vs Others / |c0077ff775% |c0000ff00vs Divine
+|c0000ff00Chaos - |c00FF0000200% |c0000ff00vs Divine, |c0077ff7750% |c0000ff00vs Others
+|c0000ff00Hero - |c00FF0000200% |c0000ff00vs Hero / |c00FF7F00100% |c0000ff00vs Others / |c0077ff7725% |c0000ff00vs Divine
 |c0000ff00Magic - |c00FF0000200% |c0000ff00vs Heavy / |c00FF7F00125% |c0000ff00vs Light / |c00FFFF0050% |c0000ff00vs Others / |c0077ff770% |c0000ff00vs Divine
-|c0000ff00Normal - |c00FF0000200% |c0000ff00vs Medium / |c00FF7F00125% |c0000ff00vs Heavy / |c00FFFF0050% |c0000ff00vs Others / |c0077ff775% |c0000ff00vs Divine
-|c0000ff00Pierce - |c00FF0000200% |c0000ff00vs Light / |c00FF7F00125% |c0000ff00vs Medium / |c00FFFF0050% |c0000ff00vs Others / |c0077ff775% |c0000ff00vs Divine
-|c0000ff00Siege - |c00FF0000200% |c0000ff00vs Fort / |c00FF7F00125% |c0000ff00vs Light, Medium, Heavy / |c00FFFF0050% |c0000ff00vs Hero /|c0077ff775% |c0000ff00vs Divine
+|c0000ff00Normal - |c00FF0000200% |c0000ff00vs Medium / |c00FF7F00125% |c0000ff00vs Heavy / |c00FFFF0050% |c0000ff00vs Others / |c0077ff7725% |c0000ff00vs Divine
+|c0000ff00Pierce - |c00FF0000200% |c0000ff00vs Light / |c00FF7F00125% |c0000ff00vs Medium / |c00FFFF0050% |c0000ff00vs Others / |c0077ff7725% |c0000ff00vs Divine
+|c0000ff00Siege - |c00FF0000200% |c0000ff00vs Fort / |c00FF7F00125% |c0000ff00vs Light, Medium, Heavy / |c00FFFF0050% |c0000ff00vs Hero /|c0077ff7725% |c0000ff00vs Divine
 }
 
 STRING 22
 {
 |c0000ff00Difficulty: |c0077ff77Easy
-}
-
-STRING 23
-{
-|c0000ff00Air Waves --|r |c0077ff777, 9, 17, 21, 27, 33, 38, 53|r |c0000ff00Build an|r |c0077ff77Air Tower|r |c0000ff00to kill them, some of the |c0077ff77other towers|r|c0000ff00 can also be used but wont be as effective.|r
 }
 
 STRING 24
@@ -157,11 +152,6 @@ STRING 25
 // Units: Hkal (Blood Mage), Propernames (Proper Names)
 {
 Uncle Greg
-}
-
-STRING 26
-{
-|c0000ff00Hero Waves --|r |c0077ff7739, 40, 41, 42, 43, 44, 45, 46, 47, 49, 50, 51, 52, 54, 55, 56. |c0000ff00The |c0077ff77Research Tower|r |c0000ff00deals the most damage to Heroes and is highly recommended to get one before the hero waves start, just dont get it too early though.|r
 }
 
 STRING 27
@@ -596,11 +586,6 @@ STRING 94
 // Abilities: A00U (Swap Towers), Name (Name)
 {
 Swap Towers
-}
-
-STRING 95
-{
-|c0000ff00Air Waves --|r |c0077ff777, 9, 17, 21, 27, 33, 38, 53|r |c0000ff00Build an|r |c0077ff77Air Tower|r |c0000ff00to kill them, some of the |c0077ff77other towers|r|c0000ff00 can also be used but wont be as effective.|r
 }
 
 STRING 96
@@ -1204,11 +1189,6 @@ STRING 163
 Max Level Reached
 }
 
-STRING 164
-{
-|c0000ff00Hero Waves --|r |c0077ff7739, 40, 41, 42, 43, 44, 45, 46, 47, 49, 50, 51, 52, 54, 55, 56. |c0000ff00The |c0077ff77Research Tower|r |c0000ff00deals the most damage to Heroes and is highly recommended to get one before the hero waves start, just dont get it too early though.|r
-}
-
 STRING 165
 {
 Click Again to Sell
@@ -1239,11 +1219,6 @@ Game Modes
 STRING 170
 {
 |c0000ff00Difficulty: |c0077ff77Easy - Chaos Mode
-}
-
-STRING 171
-{
-|c0000ff00Boss Waves --|r |c0077ff7712, 24, 36, 48.|r |c0000ff00Leaking a Boss will make you lose|r |c0077ff7710 Lives.|r
 }
 
 STRING 172
@@ -18320,6 +18295,8 @@ STRING 2730
 -- Fixed chaos mode difficultys still being active after changing to a non-chaos mode difficulty during game setup
 -- Fixed -wave command only being available to player 1
 -- Fixed Game Setup Unit being removed when its owner leaves
+-- Changes to multiple commands
+-- Changes to multiboard
 }
 
 STRING 2731
@@ -19740,6 +19717,11 @@ STRING 2940
 Kicked
 }
 
+STRING 2941
+{
+|c0077ff77Hero Damage|r |c0000ff00deals |c0077ff77200%|r |c0000ff00damage to |c0077ff77Hero Armour.|r
+}
+
 STRING 2942
 // Units: h03Y (Research Tower 7: Ancient Sasquatch), Hotkey (Hotkey)
 {
@@ -19818,10 +19800,20 @@ STRING 2954
 |c0077ff77[Z] |c0000ff00Upgrade to Winter Beacon.|r |cAAAAFFAASpirit Tower 6.|r
 }
 
+STRING 2955
+{
+|c0077ff77Hero Damage|r |c0000ff00deals |c0077ff77200%|r |c0000ff00damage to |c0077ff77Hero Armour.|r
+}
+
 STRING 2956
 // Units: n01S (Spirit Tower 7: Winter Beacon), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Winter Beacon.|r |cAAAAFFAASpirit Tower 7.|r
+}
+
+STRING 2957
+{
+|c0000ff00Unaffected by|r |c0077ff77Spell Damage, Frost Tower|r |c0000ff00freeze,|r |c0077ff77Bash Tower|r |c0000ff00stun and certain|r |c0077ff77Traps.|r |c0077ff77Chaos Damage |c0000ff00deals |c0077ff77200% |c0000ff00damage to |c0077ff77Divine Armour. 
 }
 
 STRING 2958
@@ -19864,6 +19856,11 @@ STRING 2964
 // Units: n01V (Winter Beacon, Ultimate Spirit Tower), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Winter Beacon, Ultimate.|r |cAAAAFFAASpirit Tower 10.|r
+}
+
+STRING 2965
+{
+|c0000ff00Unaffected by|r |c0077ff77Spell Damage, Frost Tower|r |c0000ff00freeze,|r |c0077ff77Bash Tower|r |c0000ff00stun and certain|r |c0077ff77Traps.|r |c0077ff77Chaos Damage |c0000ff00deals |c0077ff77200% |c0000ff00damage to |c0077ff77Divine Armour. 
 }
 
 STRING 2966
@@ -19998,12 +19995,6 @@ STRING 2987
 |c0000ff00Winter Spirits
 }
 
-STRING 2988
-// Abilities: A03P (Winter Spirits), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Gains up to 10 mana for each enemy unit hit when attacking, at full mana the tower summons a ring of Winter Spirits, these slow units they attack and deal damage based on the targets current movement speed, slower movement speed equals more damage.
-}
-
 STRING 2989
 // Abilities: A04F (Brainfreeze), Tip (Tooltip - Normal)
 {
@@ -20100,6 +20091,11 @@ STRING 2997
 |c0000ff00Ability (2):|r |c0077ff77Brainfreeze: Enemies hit by this tower are affected by Brainfreeze, this causes all towers to have a 10% chance to deal additional magic damage equaling 20% of their damage.
 }
 
+STRING 2998
+{
+|c0077ff77Siege Damage|r |c0000ff00deals |c0077ff77200% |c0000ff00|c0000ff00to Air Units.
+}
+
 STRING 2999
 // Units: h00G (Aura Tower), Hotkey (Hotkey)
 {
@@ -20110,6 +20106,17 @@ STRING 3000
 // Units: n01Y (Rocket Tower 6: War Machine), Name (Name)
 {
 Rocket Tower 6: War Machine
+}
+
+STRING 3001
+{
+|c0077ff77Siege Damage|r |c0000ff00deals |c0077ff77200% |c0000ff00|c0000ff00to Air Units.
+}
+
+STRING 3002
+// Abilities: A03P (Winter Spirits), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Gains up to 10 + [Wave Number] mana for each enemy unit hit when attacking, at full mana the tower summons a ring of Winter Spirits, these slow units they attack and deal damage based on the targets current movement speed, slower movement speed equals more damage.
 }
 
 STRING 3003
@@ -21517,12 +21524,12 @@ Their are also additional Chaos Mode difficultys that can be activated in the Ga
 
 STRING 5349
 {
-[Normal Creeps]
+[Heavy]
 }
 
 STRING 5350
 {
-[Normal Creeps]
+[Medium]
 }
 
 STRING 5577

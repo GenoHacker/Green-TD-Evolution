@@ -262,6 +262,11 @@ udg_String_Array_MBStaticWArmIcons = __jarray("")
 udg_Real_OrkSize = 0.0
 udg_String_Array_MBStatWavUniIcons = __jarray("")
 udg_String_Array_MBStatNextArmIcon = __jarray("")
+udg_String_AirWavesText = ""
+udg_String_DivineWavesText = ""
+udg_String_HeroWavesText = ""
+udg_Integer_RWBossChance = 0
+udg_String_RWBossWaveText = ""
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -466,7 +471,6 @@ gg_trg_Wave_and_Lives_Update = nil
 gg_trg_Player_Update_Game_Start = nil
 gg_trg_Next_Wave_and_Current_Wave_Update = nil
 gg_trg_Next_Wave_and_Current_Wave_Update_Copy = nil
-gg_trg_Untitled_Trigger_001 = nil
 gg_trg_Player_Leave_Gold_Split = nil
 gg_trg_Test_Trigger = nil
 gg_trg_Restart = nil
@@ -1139,6 +1143,11 @@ if ((i > 1)) then break end
 udg_String_Array_MBStatNextArmIcon[i] = ""
 i = i + 1
 end
+udg_String_AirWavesText = ""
+udg_String_DivineWavesText = ""
+udg_String_HeroWavesText = ""
+udg_Integer_RWBossChance = 0
+udg_String_RWBossWaveText = ""
 end
 
 -- Arcing Text Tag v1.0.0.3 by Maker encoded to Lua
@@ -2969,14 +2978,14 @@ end
 
 function Trig_Spirit_Tower_Actions()
 if (Trig_Spirit_Tower_Func001C()) then
-SetUnitManaBJ(udg_DamageEventSource, (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + GetRandomReal(1.00, 10.00)))
+SetUnitManaBJ(udg_DamageEventSource, (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + GetRandomReal(1.00, (10.00 + I2R(udg_Integer_WaveNumber)))))
 if (Trig_Spirit_Tower_Func001Func003C()) then
 bj_forLoopAIndex = 1
 bj_forLoopAIndexEnd = 36
 while (true) do
 if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
 CreateNUnitsAtLoc(1, FourCC("u000"), GetOwningPlayer(udg_DamageEventSource), PolarProjectionBJ(GetUnitLoc(udg_DamageEventSource), 600.00, (I2R(GetForLoopIndexA()) * (360.00 / 36.00))), bj_UNIT_FACING)
-UnitApplyTimedLifeBJ(15.00, FourCC("BTLF"), GetLastCreatedUnit())
+UnitApplyTimedLifeBJ(30.00, FourCC("BTLF"), GetLastCreatedUnit())
 bj_forLoopAIndex = bj_forLoopAIndex + 1
 end
 SetUnitManaBJ(udg_DamageEventSource, 0)
@@ -7516,6 +7525,9 @@ EnableTrigger(gg_trg_Random_Wave_Bounty)
 udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
 else
 TriggerExecute(gg_trg_Start_Static_Waves)
+udg_String_AirWavesText = "7, 9, 17, 21, 27, 33, 38, 53"
+udg_String_HeroWavesText = "39, 40, 41, 42, 43, 44, 46, 47, 49, 50, 51, 52, 54, 56."
+udg_String_RWBossWaveText = "12, 24, 36, 48."
 udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
 end
 if (Trig_Ready_Modes_Func030C()) then
@@ -10059,6 +10071,13 @@ TriggerRegisterTimerEventPeriodic(gg_trg_Random_Wave_Spawning_Sys, 0.25)
 TriggerAddAction(gg_trg_Random_Wave_Spawning_Sys, Trig_Random_Wave_Spawning_Sys_Actions)
 end
 
+function Trig_Generate_Random_Waves_Func001Func002C()
+if (not (udg_Integer_RWBossChance <= (5 + GetForLoopIndexA()))) then
+return false
+end
+return true
+end
+
 function Trig_Generate_Random_Waves_Func001Func003C()
 if (not (udg_Integer_SwarmMode == 1)) then
 return false
@@ -10073,56 +10092,56 @@ end
 return true
 end
 
-function Trig_Generate_Random_Waves_Func001Func011C()
+function Trig_Generate_Random_Waves_Func001Func010C()
 if (not (udg_Integer_SwarmMode == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Generate_Random_Waves_Func001Func014C()
+function Trig_Generate_Random_Waves_Func001Func013C()
 if (not (udg_Integer_Array_RWUnitType[GetForLoopIndexA()] == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Generate_Random_Waves_Func001Func016C()
+function Trig_Generate_Random_Waves_Func001Func015C()
 if (not (udg_Integer_Array_RWUnitType[GetForLoopIndexA()] == 2)) then
 return false
 end
 return true
 end
 
-function Trig_Generate_Random_Waves_Func001Func018C()
+function Trig_Generate_Random_Waves_Func001Func017C()
 if (not (udg_Integer_Array_RWUnitType[GetForLoopIndexA()] == 3)) then
 return false
 end
 return true
 end
 
-function Trig_Generate_Random_Waves_Func001Func020C()
+function Trig_Generate_Random_Waves_Func001Func019C()
 if (not (udg_Integer_Array_RWUnitType[GetForLoopIndexA()] == 4)) then
 return false
 end
 return true
 end
 
-function Trig_Generate_Random_Waves_Func001Func022C()
+function Trig_Generate_Random_Waves_Func001Func021C()
 if (not (udg_Integer_Array_RWUnitType[GetForLoopIndexA()] == 5)) then
 return false
 end
 return true
 end
 
-function Trig_Generate_Random_Waves_Func001Func024C()
+function Trig_Generate_Random_Waves_Func001Func023C()
 if (not (udg_Integer_Array_RWUnitType[GetForLoopIndexA()] == 6)) then
 return false
 end
 return true
 end
 
-function Trig_Generate_Random_Waves_Func001Func026C()
+function Trig_Generate_Random_Waves_Func001Func025C()
 if (not (udg_Integer_Array_RWUnitType[GetForLoopIndexA()] == 7)) then
 return false
 end
@@ -10134,54 +10153,65 @@ bj_forLoopAIndex = 1
 bj_forLoopAIndexEnd = udg_Integer_WaveAmount
 while (true) do
 if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
-udg_Real_Array_RandomWaveBounty[GetForLoopIndexA()] = (((I2R(GetForLoopIndexA()) + 5.00) * udg_Real_CreepHealthMultiplier) * 20.00)
+udg_Integer_RWBossChance = GetRandomInt(1, 300)
+if (Trig_Generate_Random_Waves_Func001Func002C()) then
+udg_String_RWBossWaveText = (udg_String_RWBossWaveText .. (I2S(GetForLoopIndexA()) .. ","))
+udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()] = GetRandomInt(1, 4)
+udg_Real_Array_RandomWaveBounty[GetForLoopIndexA()] = (((I2R(GetForLoopIndexA()) + (20.00 + I2R(udg_Integer_WaveNumber))) * udg_Real_CreepHealthMultiplier) * 20.00)
 udg_Integer_Array_RWBounty[GetForLoopIndexA()] = R2I(udg_Real_Array_RandomWaveBounty[GetForLoopIndexA()])
+else
+udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()] = GetRandomInt(10, 30)
+udg_Real_Array_RandomWaveBounty[GetForLoopIndexA()] = (((I2R(GetForLoopIndexA()) + 10.00) * udg_Real_CreepHealthMultiplier) * 20.00)
+udg_Integer_Array_RWBounty[GetForLoopIndexA()] = R2I(udg_Real_Array_RandomWaveBounty[GetForLoopIndexA()])
+end
 if (Trig_Generate_Random_Waves_Func001Func003C()) then
 udg_Integer_Array_RWBounty[GetForLoopIndexA()] = (udg_Integer_Array_RWBounty[GetForLoopIndexA()] * 2)
 else
 end
-udg_Real_CreepHealth = (udg_Real_CreepHealth + (100.00 * I2R(GetForLoopIndexA())))
-udg_Real_CreepHealthTotal = (udg_Real_CreepHealth * 20.00)
+udg_Real_CreepHealth = (udg_Real_CreepHealth + (75.00 * I2R(GetForLoopIndexA())))
+udg_Real_CreepHealthTotal = (udg_Real_CreepHealth * 15.00)
 if (Trig_Generate_Random_Waves_Func001Func006C()) then
 udg_Real_Array_HPMultiplierWaves[GetForLoopIndexA()] = GetRandomReal(udg_Real_Array_ChaosHealthPerLow[udg_Integer_ChaosMode], udg_Real_Array_ChaosHealthPerHigh[udg_Integer_ChaosMode])
 udg_Real_CreepHealthTotal = (udg_Real_CreepHealthTotal * udg_Real_Array_HPMultiplierWaves[GetForLoopIndexA()])
 else
 udg_Real_CreepHealthTotal = (udg_Real_CreepHealthTotal * udg_Real_CreepHealthMultiplier)
 end
-udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()] = GetRandomInt(10, 30)
 udg_Real_Array_RWArmour[GetForLoopIndexA()] = (udg_Real_Array_RWArmour[(GetForLoopIndexA() - 1)] + I2R(GetForLoopIndexA()))
 udg_Real_Array_RWArmourTotal[GetForLoopIndexA()] = (udg_Real_Array_RWArmour[GetForLoopIndexA()] / I2R(udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()]))
 udg_Real_Array_CreepHealthWaves[GetForLoopIndexA()] = (udg_Real_CreepHealthTotal / I2R(udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()]))
-if (Trig_Generate_Random_Waves_Func001Func011C()) then
+if (Trig_Generate_Random_Waves_Func001Func010C()) then
 udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()] = (udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()] * 2)
 else
 end
 udg_Integer_Array_RWUnitType[GetForLoopIndexA()] = GetRandomInt(1, 7)
-if (Trig_Generate_Random_Waves_Func001Func014C()) then
+if (Trig_Generate_Random_Waves_Func001Func013C()) then
 udg_UnitType_Array_RWSpawnUnit[GetForLoopIndexA()] = udg_UnitType_Array_RWAir[GetRandomInt(1, 43)]
+udg_String_AirWavesText = (udg_String_AirWavesText .. (I2S(GetForLoopIndexA()) .. ", "))
 else
 end
-if (Trig_Generate_Random_Waves_Func001Func016C()) then
+if (Trig_Generate_Random_Waves_Func001Func015C()) then
 udg_UnitType_Array_RWSpawnUnit[GetForLoopIndexA()] = udg_UnitType_Array_RWHero[GetRandomInt(1, 43)]
+udg_String_HeroWavesText = (udg_String_HeroWavesText .. (I2S(GetForLoopIndexA()) .. ", "))
 else
 end
-if (Trig_Generate_Random_Waves_Func001Func018C()) then
+if (Trig_Generate_Random_Waves_Func001Func017C()) then
 udg_UnitType_Array_RWSpawnUnit[GetForLoopIndexA()] = udg_UnitType_Array_RWImmune[GetRandomInt(1, 43)]
+udg_String_DivineWavesText = (udg_String_DivineWavesText .. (I2S(GetForLoopIndexA()) .. ", "))
 else
 end
-if (Trig_Generate_Random_Waves_Func001Func020C()) then
+if (Trig_Generate_Random_Waves_Func001Func019C()) then
 udg_UnitType_Array_RWSpawnUnit[GetForLoopIndexA()] = udg_UnitType_Array_RWFortified[GetRandomInt(1, 43)]
 else
 end
-if (Trig_Generate_Random_Waves_Func001Func022C()) then
+if (Trig_Generate_Random_Waves_Func001Func021C()) then
 udg_UnitType_Array_RWSpawnUnit[GetForLoopIndexA()] = udg_UnitType_Array_RWHeavy[GetRandomInt(1, 43)]
 else
 end
-if (Trig_Generate_Random_Waves_Func001Func024C()) then
+if (Trig_Generate_Random_Waves_Func001Func023C()) then
 udg_UnitType_Array_RWSpawnUnit[GetForLoopIndexA()] = udg_UnitType_Array_RWLight[GetRandomInt(1, 43)]
 else
 end
-if (Trig_Generate_Random_Waves_Func001Func026C()) then
+if (Trig_Generate_Random_Waves_Func001Func025C()) then
 udg_UnitType_Array_RWSpawnUnit[GetForLoopIndexA()] = udg_UnitType_Array_RWMedium[GetRandomInt(1, 43)]
 else
 end
@@ -12197,1107 +12227,14 @@ gg_trg_Player_Update_Game_Start = CreateTrigger()
 TriggerAddAction(gg_trg_Player_Update_Game_Start, Trig_Player_Update_Game_Start_Actions)
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Func001C()
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func009Func001C()
-return false
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func009C()
-if (not Trig_Next_Wave_and_Current_Wave_Update_Func002Func009Func001C()) then
-return false
-end
-if (not (udg_Integer_WaveNumber == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func010C()
-if (not (udg_Integer_WaveNumber == 2)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func011C()
-if (not (udg_Integer_WaveNumber == 3)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func012C()
-if (not (udg_Integer_WaveNumber == 4)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func013C()
-if (not (udg_Integer_WaveNumber == 5)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func014C()
-if (not (udg_Integer_WaveNumber == 6)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func015C()
-if (not (udg_Integer_WaveNumber == 7)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func016C()
-if (not (udg_Integer_WaveNumber == 8)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func017C()
-if (not (udg_Integer_WaveNumber == 9)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func018C()
-if (not (udg_Integer_WaveNumber == 10)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func019C()
-if (not (udg_Integer_WaveNumber == 11)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func020C()
-if (not (udg_Integer_WaveNumber == 12)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func021C()
-if (not (udg_Integer_WaveNumber == 13)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func022C()
-if (not (udg_Integer_WaveNumber == 14)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func023C()
-if (not (udg_Integer_WaveNumber == 15)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func024C()
-if (not (udg_Integer_WaveNumber == 16)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func025C()
-if (not (udg_Integer_WaveNumber == 17)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func026C()
-if (not (udg_Integer_WaveNumber == 18)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func027C()
-if (not (udg_Integer_WaveNumber == 19)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func028C()
-if (not (udg_Integer_WaveNumber == 20)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func029C()
-if (not (udg_Integer_WaveNumber == 21)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func030C()
-if (not (udg_Integer_WaveNumber == 22)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func031C()
-if (not (udg_Integer_WaveNumber == 23)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func032C()
-if (not (udg_Integer_WaveNumber == 24)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func033C()
-if (not (udg_Integer_WaveNumber == 25)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func034C()
-if (not (udg_Integer_WaveNumber == 26)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func035C()
-if (not (udg_Integer_WaveNumber == 27)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func036C()
-if (not (udg_Integer_WaveNumber == 28)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func037C()
-if (not (udg_Integer_WaveNumber == 29)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func038C()
-if (not (udg_Integer_WaveNumber == 30)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func039C()
-if (not (udg_Integer_WaveNumber == 31)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func040C()
-if (not (udg_Integer_WaveNumber == 32)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func041C()
-if (not (udg_Integer_WaveNumber == 33)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func042C()
-if (not (udg_Integer_WaveNumber == 34)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func043C()
-if (not (udg_Integer_WaveNumber == 35)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func044C()
-if (not (udg_Integer_WaveNumber == 36)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func045C()
-if (not (udg_Integer_WaveNumber == 37)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func046C()
-if (not (udg_Integer_WaveNumber == 38)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func047C()
-if (not (udg_Integer_WaveNumber == 39)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func048C()
-if (not (udg_Integer_WaveNumber == 40)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func049C()
-if (not (udg_Integer_WaveNumber == 41)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func050C()
-if (not (udg_Integer_WaveNumber == 42)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func051C()
-if (not (udg_Integer_WaveNumber == 43)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func052C()
-if (not (udg_Integer_WaveNumber == 44)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func053C()
-if (not (udg_Integer_WaveNumber == 45)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func054C()
-if (not (udg_Integer_WaveNumber == 46)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func055C()
-if (not (udg_Integer_WaveNumber == 47)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func056C()
-if (not (udg_Integer_WaveNumber == 48)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func057C()
-if (not (udg_Integer_WaveNumber == 49)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func058C()
-if (not (udg_Integer_WaveNumber == 50)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func059C()
-if (not (udg_Integer_WaveNumber == 51)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func060C()
-if (not (udg_Integer_WaveNumber == 52)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func061C()
-if (not (udg_Integer_WaveNumber == 53)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func062C()
-if (not (udg_Integer_WaveNumber == 54)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func063C()
-if (not (udg_Integer_WaveNumber == 55)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func064C()
-if (not (udg_Integer_WaveNumber == 56)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func065C()
-if (not (udg_Integer_WaveNumber == 57)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func066C()
-if (not (udg_Integer_WaveNumber == 58)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func067C()
-if (not (udg_Integer_WaveNumber == 59)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func068Func004C()
-if (not (udg_Integer_EndlessMode == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func068C()
-if (not (udg_Integer_WaveNumber == 60)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func069Func001C()
-if (not (udg_Integer_EndlessMode == 1)) then
-return false
-end
-if (not (udg_Integer_WaveNumber >= 61)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002Func069C()
-if (not Trig_Next_Wave_and_Current_Wave_Update_Func002Func069Func001C()) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func002C()
-if (not (udg_Integer_RWActivated == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Actions()
-if (Trig_Next_Wave_and_Current_Wave_Update_Func001C()) then
-udg_String_Array_MBStatWavUniIcons[1] = "ReplaceableTextures\\CommandButtons\\BTNFootman.blp"
-udg_String_Array_MBStatWavUniIcons[2] = "ReplaceableTextures\\CommandButtons\\BTNRifleman.blp"
-udg_String_Array_MBStatWavUniIcons[3] = "ReplaceableTextures\\CommandButtons\\BTNSorceress.blp"
-udg_String_Array_MBStatWavUniIcons[4] = "ReplaceableTextures\\CommandButtons\\BTNSpellBreaker.blp"
-udg_String_Array_MBStatWavUniIcons[5] = "ReplaceableTextures\\CommandButtons\\BTNPriest.blp"
-udg_String_Array_MBStatWavUniIcons[6] = "ReplaceableTextures\\CommandButtons\\BTNKnight.blp"
-udg_String_Array_MBStatWavUniIcons[7] = "ReplaceableTextures\\CommandButtons\\BTNFlyingMachine.blp"
-udg_String_Array_MBStatWavUniIcons[8] = "ReplaceableTextures\\CommandButtons\\BTNMortarTeam.blp"
-udg_String_Array_MBStatWavUniIcons[9] = "ReplaceableTextures\\CommandButtons\\BTNGryphonRider.blp"
-udg_String_Array_MBStatWavUniIcons[10] = "ReplaceableTextures\\CommandButtons\\BTNGrunt.blp"
-udg_String_Array_MBStatWavUniIcons[11] = "ReplaceableTextures\\CommandButtons\\BTNHeadhunter.blp"
-udg_String_Array_MBStatWavUniIcons[12] = "ReplaceableTextures\\CommandButtons\\BTNHeadHunterBerserker.blp"
-udg_String_Array_MBStatWavUniIcons[13] = "ReplaceableTextures\\CommandButtons\\BTNWitchDoctor.blp"
-udg_String_Array_MBStatWavUniIcons[14] = "ReplaceableTextures\\CommandButtons\\BTNShaman.blp"
-udg_String_Array_MBStatWavUniIcons[15] = "ReplaceableTextures\\CommandButtons\\BTNChaosGrunt.blp"
-udg_String_Array_MBStatWavUniIcons[16] = "ReplaceableTextures\\CommandButtons\\BTNRaider.blp"
-udg_String_Array_MBStatWavUniIcons[17] = "ReplaceableTextures\\CommandButtons\\BTNTrollBatRider.blp"
-udg_String_Array_MBStatWavUniIcons[18] = "ReplaceableTextures\\CommandButtons\\BTNKotoBeast.blp"
-udg_String_Array_MBStatWavUniIcons[19] = "ReplaceableTextures\\CommandButtons\\BTNSpiritWalker.blp"
-udg_String_Array_MBStatWavUniIcons[20] = "ReplaceableTextures\\CommandButtons\\BTNTauren.blp"
-udg_String_Array_MBStatWavUniIcons[21] = "ReplaceableTextures\\CommandButtons\\BTNWyvernRider.blp"
-udg_String_Array_MBStatWavUniIcons[22] = "ReplaceableTextures\\CommandButtons\\BTNArcher.blp"
-udg_String_Array_MBStatWavUniIcons[23] = "ReplaceableTextures\\CommandButtons\\BTNHuntress.blp"
-udg_String_Array_MBStatWavUniIcons[24] = "ReplaceableTextures\\CommandButtons\\BTNDruidOfTheTalon.blp"
-udg_String_Array_MBStatWavUniIcons[25] = "ReplaceableTextures\\CommandButtons\\BTNDryad.blp"
-udg_String_Array_MBStatWavUniIcons[26] = "ReplaceableTextures\\CommandButtons\\BTNDruidOfTheClaw.blp"
-udg_String_Array_MBStatWavUniIcons[27] = "ReplaceableTextures\\CommandButtons\\BTNHippogriff.blp"
-udg_String_Array_MBStatWavUniIcons[28] = "ReplaceableTextures\\CommandButtons\\BTNWisp.blp"
-udg_String_Array_MBStatWavUniIcons[29] = "ReplaceableTextures\\CommandButtons\\BTNMountainGiant.blp"
-udg_String_Array_MBStatWavUniIcons[30] = "ReplaceableTextures\\CommandButtons\\BTNChimaera.blp"
-udg_String_Array_MBStatWavUniIcons[31] = "ReplaceableTextures\\CommandButtons\\BTNGhoul.blp"
-udg_String_Array_MBStatWavUniIcons[32] = "ReplaceableTextures\\CommandButtons\\BTNNecromancer.blp"
-udg_String_Array_MBStatWavUniIcons[33] = "ReplaceableTextures\\CommandButtons\\BTNBanshee.blp"
-udg_String_Array_MBStatWavUniIcons[34] = "ReplaceableTextures\\CommandButtons\\BTNCryptFiend.blp"
-udg_String_Array_MBStatWavUniIcons[35] = "ReplaceableTextures\\CommandButtons\\BTNGargoyle.blp"
-udg_String_Array_MBStatWavUniIcons[36] = "ReplaceableTextures\\CommandButtons\\BTNObsidianStatue.blp"
-udg_String_Array_MBStatWavUniIcons[37] = "ReplaceableTextures\\CommandButtons\\BTNAbomination.blp"
-udg_String_Array_MBStatWavUniIcons[38] = "ReplaceableTextures\\CommandButtons\\BTNFrostWyrm.blp"
-udg_String_Array_MBStatWavUniIcons[39] = "ReplaceableTextures\\CommandButtons\\BTNHeroMountainKing.blp"
-udg_String_Array_MBStatWavUniIcons[40] = "ReplaceableTextures\\CommandButtons\\BTNHeroPaladin.blp"
-udg_String_Array_MBStatWavUniIcons[41] = "ReplaceableTextures\\CommandButtons\\BTNHeroBloodElfPrince.blp"
-udg_String_Array_MBStatWavUniIcons[42] = "ReplaceableTextures\\CommandButtons\\BTNHeroArchMage.blp"
-udg_String_Array_MBStatWavUniIcons[43] = "ReplaceableTextures\\CommandButtons\\BTNHeroBlademaster.blp"
-udg_String_Array_MBStatWavUniIcons[44] = "ReplaceableTextures\\CommandButtons\\BTNHeroTaurenChieftain.blp"
-udg_String_Array_MBStatWavUniIcons[45] = "ReplaceableTextures\\CommandButtons\\BTNHeroFarseer.blp"
-udg_String_Array_MBStatWavUniIcons[46] = "ReplaceableTextures\\CommandButtons\\BTNShadowHunter.blp"
-udg_String_Array_MBStatWavUniIcons[47] = "ReplaceableTextures\\CommandButtons\\BTNKeeperOfTheGrove.blp"
-udg_String_Array_MBStatWavUniIcons[48] = "ReplaceableTextures\\CommandButtons\\BTNSheep.blp"
-udg_String_Array_MBStatWavUniIcons[49] = "ReplaceableTextures\\CommandButtons\\BTNHeroDemonHunter.blp"
-udg_String_Array_MBStatWavUniIcons[50] = "ReplaceableTextures\\CommandButtons\\BTNPriestessOfTheMoon.blp"
-udg_String_Array_MBStatWavUniIcons[51] = "ReplaceableTextures\\CommandButtons\\BTNHeroWarden.blp"
-udg_String_Array_MBStatWavUniIcons[52] = "ReplaceableTextures\\CommandButtons\\BTNHeroDreadLord.blp"
-udg_String_Array_MBStatWavUniIcons[53] = "ReplaceableTextures\\CommandButtons\\BTNBlackDragon.blp"
-udg_String_Array_MBStatWavUniIcons[54] = "ReplaceableTextures\\CommandButtons\\BTNHeroDeathKnight.blp"
-udg_String_Array_MBStatWavUniIcons[55] = "ReplaceableTextures\\CommandButtons\\BTNLichVersion2.blp"
-udg_String_Array_MBStatWavUniIcons[56] = "ReplaceableTextures\\CommandButtons\\BTNHeroCryptLord.blp"
-udg_String_Array_MBStatWavUniIcons[57] = "ReplaceableTextures\\CommandButtons\\BTNInfernal.blp"
-udg_String_Array_MBStatWavUniIcons[58] = "ReplaceableTextures\\CommandButtons\\BTNNagaMyrmidonRoyalGuard.blp"
-udg_String_Array_MBStatWavUniIcons[59] = "ReplaceableTextures\\CommandButtons\\BTNSeaWitch.blp"
-udg_String_Array_MBStatWavUniIcons[60] = "ReplaceableTextures\\CommandButtons\\BTNNagaMyrmidon.blp"
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002C()) then
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, udg_String_Array_MBStaticWArmIcons[udg_Integer_WaveNumber])
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, udg_String_Array_MBStaticWArmIcons[(udg_Integer_WaveNumber + 1)])
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func009C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_408")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNHeavyArmour.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_517")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNMediumArmour.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func010C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_774")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNMediumArmour.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_775")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNLightArmour.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func011C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_776")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNLightArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNSorceress.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_777")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNHeavyArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNSpellBreaker.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func012C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_778")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNHeavyArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNSpellBreaker.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_779")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNDivineArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNPriest.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func013C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_780")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNDivineArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNPriest.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_781")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNMediumArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNKnight.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func014C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_782")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNMediumArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNKnight.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_783")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNFlyingMachine.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func015C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_784")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNFlyingMachine.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_785")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNLightArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNMortarTeam.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func016C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_786")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNLightArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNMortarTeam.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_787")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNGryphonRider.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func017C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_788")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNGryphonRider.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_155")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNDivineArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNGrunt.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func018C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_790")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNDivineArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNGrunt.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_791")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNHeavyArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNHeadhunter.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func019C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_792")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNHeavyArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNHeadhunter.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_793")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNLightArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNHeadHunterBerserker.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func020C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_794")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNLightArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNHeadHunterBerserker.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_795")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNMediumArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNWitchDoctor.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func021C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_796")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNMediumArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNWitchDoctor.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_797")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNLightArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNShaman.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func022C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_798")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNLightArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNShaman.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_799")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNDivineArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNChaosGrunt.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func023C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_800")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNDivineArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNChaosGrunt.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_801")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNHeavyArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNRaider.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func024C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_802")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNHeavyArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNRaider.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_803")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNTrollBatRider.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func025C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_804")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNTrollBatRider.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_805")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNArcaniteArchitecture.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNKotoBeast.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func026C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_806")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNArcaniteArchitecture.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNKotoBeast.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_807")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNMediumArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNSpiritWalker.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func027C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_808")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNMediumArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNSpiritWalker.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_809")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNDivineArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNTauren.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func028C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_810")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNDivineArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNTauren.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_811")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNWyvernRider.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func029C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_812")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNWyvernRider.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_813")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNLightArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNArcher.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func030C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_814")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNLightArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNArcher.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_815")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNHeavyArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNHuntress.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func031C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_816")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNHeavyArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNHuntress.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_817")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNLightArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNDruidOfTheTalon.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func032C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_818")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNLightArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNDruidOfTheTalon.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_819")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNDivineArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNDryad.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func033C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_820")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNDivineArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNDryad.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_821")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNMediumArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNDruidOfTheClaw.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func034C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_822")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNMediumArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNDruidOfTheClaw.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_823")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNHippogriff.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func035C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_824")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNHippogriff.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_825")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNLightArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNWisp.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func036C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_826")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNLightArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNWisp.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_827")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNArcaniteArchitecture.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNMountainGiant.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func037C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_828")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNArcaniteArchitecture.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNMountainGiant.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_829")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNDivineArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNChimaera.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func038C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_830")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNDivineArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNChimaera.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_831")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNHeavyArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNGhoul.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func039C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_832")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNHeavyArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNGhoul.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_833")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNMediumArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNNecromancer.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func040C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_834")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNMediumArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNNecromancer.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_835")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNBanshee.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func041C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_836")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNBanshee.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_837")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNLightArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNCryptFiend.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func042C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_838")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNLightArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNCryptFiend.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_839")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNDivineArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNGargoyle.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func043C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_840")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNDivineArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNGargoyle.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_841")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNLightArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNObsidianStatue.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func044C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_842")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNLightArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNObsidianStatue.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_843")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNArcaniteArchitecture.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNAbomination.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func045C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_844")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNArcaniteArchitecture.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNAbomination.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_845")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNFrostWyrm.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func046C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_846")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNFrostWyrm.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_847")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNHeroMountainKing.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func047C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_848")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNHeroMountainKing.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_849")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNDivineArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNHeroPaladin.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func048C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_850")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNDivineArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNHeroPaladin.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_851")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNHeroBloodElfPrince.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func049C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_852")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNHeroBloodElfPrince.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_853")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNHeroArchMage.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func050C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_854")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNHeroArchMage.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_855")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNHeroBlademaster.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func051C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_856")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNHeroBlademaster.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_857")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNHeroTaurenChieftain.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func052C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_858")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNHeroTaurenChieftain.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_859")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNDivineArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNHeroFarseer.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func053C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_860")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNDivineArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNHeroFarseer.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_861")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNShadowHunter.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func054C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_862")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNShadowHunter.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_863")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNKeeperOfTheGrove.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func055C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_864")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNKeeperOfTheGrove.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_865")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNLightArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNRedDragon.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func056C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_866")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNLightArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNSheep.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_867")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNHeroDemonHunter.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func057C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_868")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNHeroDemonHunter.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_869")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNDivineArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNPriestessOfTheMoon.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func058C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_870")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNDivineArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNPriestessOfTheMoon.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_871")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNHeroWarden.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func059C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_872")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNHeroWarden.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_873")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNHeroDreadLord.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func060C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_874")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNHeroDreadLord.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_875")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNBlackDragon.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func061C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_876")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNBlackDragon.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_877")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNHeroDeathKnight.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func062C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_878")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNHeroDeathKnight.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_879")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNDivineArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNLichVersion2.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func063C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_880")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNDivineArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNLichVersion2.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_881")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNHeroCryptLord.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func064C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_882")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNHeroCryptLord.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_883")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNHeavyArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNInfernal.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func065C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_884")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNHeavyArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNInfernal.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_885")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNArcaniteArchitecture.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNNagaMyrmidonRoyalGuard.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func066C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_886")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNArcaniteArchitecture.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNNagaMyrmidonRoyalGuard.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_887")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNLightArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNSeaWitch.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func067C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_888")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNLightArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNSeaWitch.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_889")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNDivineArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNNagaMyrmidon.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func068C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_890")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNDivineArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNNagaMyrmidon.blp")
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func068Func004C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_892")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNAcorn.blp")
-else
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_891")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp")
-end
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func002Func069C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_893")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_894")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp")
-else
-end
-else
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, udg_String_Array_WaveType[udg_Integer_Array_RWUnitType[udg_Integer_WaveNumber]])
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, udg_String_Array_ImageFile[udg_Integer_Array_RWUnitType[udg_Integer_WaveNumber]])
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, udg_String_Array_WaveType[udg_Integer_Array_RWUnitType[(udg_Integer_WaveNumber + 1)]])
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, udg_String_Array_ImageFile[udg_Integer_Array_RWUnitType[(udg_Integer_WaveNumber + 1)]])
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp")
-end
-end
-
-function InitTrig_Next_Wave_and_Current_Wave_Update()
-gg_trg_Next_Wave_and_Current_Wave_Update = CreateTrigger()
-TriggerAddAction(gg_trg_Next_Wave_and_Current_Wave_Update, Trig_Next_Wave_and_Current_Wave_Update_Actions)
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func006Func001C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func006Func001C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 0)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func006Func005C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func006Func005C()
 if (udg_Integer_WaveNumber == 12) then
 return true
 end
@@ -13313,24 +12250,24 @@ end
 return false
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func006C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func006C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 0)) then
 return false
 end
-if (not Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func006Func005C()) then
+if (not Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func006Func005C()) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func007Func001C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func007Func001C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 0)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func007Func003C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func007Func003C()
 if (udg_Integer_WaveNumber == 11) then
 return true
 end
@@ -13346,52 +12283,52 @@ end
 return false
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func007C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func007C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 0)) then
 return false
 end
-if (not Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func007Func003C()) then
+if (not Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func007Func003C()) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func011C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func011C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func012C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func012C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func016C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func016C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 2)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func017C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func017C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 2)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func021Func001C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func021Func001C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 3)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func021Func003C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func021Func003C()
 if (udg_Integer_WaveNumber == 7) then
 return true
 end
@@ -13419,24 +12356,24 @@ end
 return false
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func021C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func021C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 3)) then
 return false
 end
-if (not Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func021Func003C()) then
+if (not Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func021Func003C()) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func022Func001C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func022Func001C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 3)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func022Func003C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func022Func003C()
 if (udg_Integer_WaveNumber == 6) then
 return true
 end
@@ -13464,45 +12401,45 @@ end
 return false
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func022C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func022C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 3)) then
 return false
 end
-if (not Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func022Func003C()) then
+if (not Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func022Func003C()) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func026C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func026C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 5)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func027C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func027C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 5)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func037C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func037C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 6)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func038C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func038C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 6)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func042Func001Func001C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func042Func001Func001C()
 if (not (udg_Integer_EndlessMode == 1)) then
 return false
 end
@@ -13512,7 +12449,7 @@ end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func042Func001C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func042Func001C()
 if (not (udg_Integer_EndlessMode == 1)) then
 return false
 end
@@ -13522,7 +12459,7 @@ end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func042C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func042C()
 if (not (udg_Integer_EndlessMode == 0)) then
 return false
 end
@@ -13532,7 +12469,7 @@ end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011C()
+function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001C()
 if (not (udg_Integer_RWActivated == 0)) then
 return false
 end
@@ -13540,99 +12477,99 @@ return true
 end
 
 function Trig_Next_Wave_and_Current_Wave_Update_Copy_Actions()
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001C()) then
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, udg_String_Array_MBStatWavUniIcons[udg_Integer_WaveNumber])
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, udg_String_Array_MBStatWavUniIcons[(udg_Integer_WaveNumber + 1)])
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func006C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func006C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Light" .. "/Boss]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNLightArmour.blp")
 else
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func006Func001C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func006Func001C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Light" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNLightArmour.blp")
 else
 end
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func007C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func007C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Light" .. "/Boss]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNLightArmour.blp")
 else
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func007Func001C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func007Func001C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Light" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNLightArmour.blp")
 else
 end
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func011C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func011C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Medium" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNMediumArmour.blp")
 else
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func012C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func012C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Medium" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNMediumArmour.blp")
 else
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func016C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func016C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Heavy" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNHeavyArmour.blp")
 else
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func017C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func017C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Heavy" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNHeavyArmour.blp")
 else
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func021C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func021C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Fortified" .. "/Air]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
 else
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func021Func001C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func021Func001C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Fortified" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNArcaniteArchitecture.blp")
 else
 end
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func022C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func022C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Fortified" .. "/Air]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
 else
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func022Func001C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func022Func001C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Fortified" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNArcaniteArchitecture.blp")
 else
 end
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func026C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func026C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Hero" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
 else
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func027C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func027C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Hero" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
 else
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func037C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func037C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Divine" .. "/Immune]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNDivineArmour.blp")
 else
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func038C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func038C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Divine" .. "/Immune]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNDivineArmour.blp")
 else
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func042C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func042C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_3156")
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNAcorn.blp")
 else
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func042Func001C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func042Func001C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_3158")
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp")
 else
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func011Func042Func001Func001C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func042Func001Func001C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_1002")
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp")
@@ -14500,7 +13437,8 @@ TriggerAddAction(gg_trg_Autocam_Ability, Trig_Autocam_Ability_Actions)
 end
 
 function Trig_Air_Command_Actions()
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_095")
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], ("|c0000ff00Air Waves -|r|c0077ff77" .. (udg_String_AirWavesText .. "|r")))
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_2998")
 end
 
 function InitTrig_Air_Command()
@@ -14525,7 +13463,8 @@ return true
 end
 
 function Trig_Air_Ability_Actions()
-DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], "TRIGSTR_023")
+DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], ("|c0000ff00Air Waves -|r|c0077ff77" .. (udg_String_AirWavesText .. "|r")))
+DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], "TRIGSTR_3001")
 end
 
 function InitTrig_Air_Ability()
@@ -14597,8 +13536,20 @@ TriggerAddCondition(gg_trg_Debug_Ability, Condition(Trig_Debug_Ability_Condition
 TriggerAddAction(gg_trg_Debug_Ability, Trig_Debug_Ability_Actions)
 end
 
+function Trig_Immune_Command_Func001C()
+if (not (udg_Integer_RWActivated == 1)) then
+return false
+end
+return true
+end
+
 function Trig_Immune_Command_Actions()
+if (Trig_Immune_Command_Func001C()) then
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], ("|c0000ff00Divine Wave - |c0077ff77" .. (udg_String_DivineWavesText .. "|r")))
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_2957")
+else
 DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_136")
+end
 end
 
 function InitTrig_Immune_Command()
@@ -14622,8 +13573,20 @@ end
 return true
 end
 
+function Trig_Immune_Ability_Func001C()
+if (not (udg_Integer_RWActivated == 1)) then
+return false
+end
+return true
+end
+
 function Trig_Immune_Ability_Actions()
+if (Trig_Immune_Ability_Func001C()) then
+DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], ("|c0000ff00Divine Wave - |c0077ff77" .. (udg_String_DivineWavesText .. "|r")))
+DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], "TRIGSTR_2965")
+else
 DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], "TRIGSTR_024")
+end
 end
 
 function InitTrig_Immune_Ability()
@@ -14634,7 +13597,8 @@ TriggerAddAction(gg_trg_Immune_Ability, Trig_Immune_Ability_Actions)
 end
 
 function Trig_Hero_Command_Actions()
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_164")
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], ("|c0000ff00Hero Waves --|r |c0077ff77" .. (udg_String_HeroWavesText .. "  ")))
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_2955")
 end
 
 function InitTrig_Hero_Command()
@@ -14659,7 +13623,8 @@ return true
 end
 
 function Trig_Hero_Ability_Actions()
-DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], "TRIGSTR_026")
+DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], ("|c0000ff00Hero Waves --|r |c0077ff77" .. (udg_String_HeroWavesText .. "  ")))
+DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], "TRIGSTR_2941")
 end
 
 function InitTrig_Hero_Ability()
@@ -14670,7 +13635,7 @@ TriggerAddAction(gg_trg_Hero_Ability, Trig_Hero_Ability_Actions)
 end
 
 function Trig_Boss_Command_Actions()
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_171")
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], ("|c0000ff00Boss Waves -|r |c0077ff77" .. (udg_String_RWBossWaveText .. "|r |c0000ff00Leaking a Boss will make you lose|r |c0077ff7710 Lives.|r")))
 end
 
 function InitTrig_Boss_Command()
@@ -17049,7 +16014,6 @@ InitTrig_Kill_Update()
 InitTrig_Gold_Update()
 InitTrig_Wave_and_Lives_Update()
 InitTrig_Player_Update_Game_Start()
-InitTrig_Next_Wave_and_Current_Wave_Update()
 InitTrig_Next_Wave_and_Current_Wave_Update_Copy()
 InitTrig_Player_Leave_Gold_Split()
 InitTrig_Restart()
