@@ -1208,7 +1208,7 @@ Max Level Reached
 }
 
 STRING 164
-// Abilities: A03S (Venom 5), EditorSuffix (Editor Suffix)
+// Abilities: A01L (Venom 3), EditorSuffix (Editor Suffix)
 {
 [Venom Tower]
 }
@@ -1246,7 +1246,7 @@ STRING 170
 }
 
 STRING 171
-// Abilities: A03V (Venom 6), EditorSuffix (Editor Suffix)
+// Abilities: A01R (Venom 4), EditorSuffix (Editor Suffix)
 {
 [Venom Tower]
 }
@@ -15482,7 +15482,7 @@ STRING 2335
 }
 
 STRING 2336
-// Abilities: A01L (Venom 3), EditorSuffix (Editor Suffix)
+// Abilities: A03S (Venom 5), EditorSuffix (Editor Suffix)
 {
 [Venom Tower]
 }
@@ -15889,6 +15889,12 @@ STRING 2393
 // Units: h010 (Flak Tower 9), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Mortar Team.|r |cAAAAFFAAFlak Tower 9.|r
+}
+
+STRING 2394
+// Units: e009 (Shrapnel Tower 4: Goblin Shredder), Name (Name)
+{
+Shrapnel Tower 4: Goblin Shredder
 }
 
 STRING 2395
@@ -16688,10 +16694,40 @@ STRING 2512
 |c0077ff77Leaves a patch of burning hellfire on the ground, dealing 10000 damage per second to non-immune creeps walking through it.
 }
 
+STRING 2513
+// Units: e009 (Shrapnel Tower 4: Goblin Shredder), Tip (Tooltip - Basic)
+{
+|c0077ff77[X] |c0000ff00Upgrade To Goblin Shredder.|r |cAAAAFFAAShrapnel Tower 4.|r
+}
+
+STRING 2515
+// Abilities: A049 (Random Game Modes + Difficulty), Hotkey (Hotkey - Normal)
+{
+X
+}
+
 STRING 2516
 // Abilities: A044 (Hellfire 2), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Leaves a patch of burning hellfire on the ground, dealing 3000 damage per second to non-immune creeps walking through it.
+}
+
+STRING 2517
+// Units: e009 (Shrapnel Tower 4: Goblin Shredder), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff772.00
+|c0000ff00Damage:|r |c0077ff772000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.71 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Bouncing Attack; attacks bounce up to 3 times
+|c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing 100 x armour piercing damage to nearby enemy units
+}
+
+STRING 2518
+// Abilities: A04H (Bouncing Attack), Tip (Tooltip - Normal)
+{
+|c0000ff00Bouncing Attack|r
 }
 
 STRING 2519
@@ -18174,6 +18210,48 @@ STRING 2717
 |c0000ff00Ability:|r |c0077ff77Venomous: Deals 20000 damage per second, stacks with other Venom Towers, also causes the tower to attack randomly.
 }
 
+STRING 2718
+// Abilities: A04H (Bouncing Attack), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Allows the projectiles of the tower to bounce from creep to creep for up to 3 times.|r
+}
+
+STRING 2719
+// Abilities: A04H (Bouncing Attack), Name (Name)
+{
+Bouncing Attack
+}
+
+STRING 2720
+// Abilities: A04H (Bouncing Attack), EditorSuffix (Editor Suffix)
+{
+[Shrapnel Tower]
+}
+
+STRING 2721
+// Abilities: A04I (Shrapnel Blast), Name (Name)
+{
+Shrapnel Blast
+}
+
+STRING 2722
+// Abilities: A04I (Shrapnel Blast), Tip (Tooltip - Normal)
+{
+Shrapnel Blast
+}
+
+STRING 2723
+// Abilities: A04I (Shrapnel Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Hits on enemies have a [10% + 0.1% per armour of hit unit] chance to trigger a shrapnel blast dealing piercing damage to near by units equaling to [100 x armor of hit unit].
+}
+
+STRING 2724
+// Abilities: A04I (Shrapnel Blast), EditorSuffix (Editor Suffix)
+{
+[Shrapnel Tower]
+}
+
 STRING 2725
 // Abilities: A04B (Frostbite), Ubertip (Tooltip - Normal - Extended)
 {
@@ -19507,7 +19585,7 @@ STRING 2924
 }
 
 STRING 2925
-// Abilities: A01R (Venom 4), EditorSuffix (Editor Suffix)
+// Abilities: A03V (Venom 6), EditorSuffix (Editor Suffix)
 {
 [Venom Tower]
 }
@@ -20148,7 +20226,7 @@ X
 }
 
 STRING 3016
-// Abilities: A01B (Stasis Trap), Hotkey (Hotkey - Normal)
+// Units: e009 (Shrapnel Tower 4: Goblin Shredder), Hotkey (Hotkey)
 {
 X
 }
@@ -20160,7 +20238,7 @@ Z
 }
 
 STRING 3018
-// Abilities: A012 (Emergency Siege Tower), Hotkey (Hotkey - Normal)
+// Abilities: A01B (Stasis Trap), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -20172,7 +20250,7 @@ Z
 }
 
 STRING 3020
-// Abilities: A01Y (Emergency Siege Tower), Hotkey (Hotkey - Normal)
+// Abilities: A012 (Emergency Siege Tower), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -21098,7 +21176,7 @@ S
 }
 
 STRING 4338
-// Abilities: A028 (Debug), Hotkey (Hotkey - Normal)
+// Abilities: A01Y (Emergency Siege Tower), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -21193,19 +21271,19 @@ This unit is under the effect of a Damage Aura, It has Increased Attack Damage.
 }
 
 STRING 4480
-// Abilities: A02P (Disable Traps), Hotkey (Hotkey - Normal)
+// Abilities: A028 (Debug), Hotkey (Hotkey - Normal)
 {
 X
 }
 
 STRING 4481
-// Abilities: A047 (Game Modes), Hotkey (Hotkey - Normal)
+// Abilities: A02P (Disable Traps), Hotkey (Hotkey - Normal)
 {
 X
 }
 
 STRING 4484
-// Abilities: A049 (Random Game Modes + Difficulty), Hotkey (Hotkey - Normal)
+// Abilities: A047 (Game Modes), Hotkey (Hotkey - Normal)
 {
 X
 }
