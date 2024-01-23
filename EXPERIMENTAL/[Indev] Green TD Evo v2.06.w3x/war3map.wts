@@ -143,6 +143,12 @@ STRING 22
 |c0000ff00Difficulty: |c0077ff77Easy
 }
 
+STRING 23
+// Abilities: A04G (Overdrive), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Overdrive; Gains 1 mana for each enemy hit by its attack, also gains 25 temporary damage for each enemy hit.
+}
+
 STRING 24
 {
 |c0000ff00Magic Immune every|r |c0077ff775 Waves|r|c0000ff00, they have|r |c0077ff77Divine Armour.|r |c0000ff00They are not affected by|r |c0077ff77Frost Tower|r |c0000ff00freeze,|r |c0077ff77Bash Tower|r |c0000ff00stun and certain|r |c0077ff77Traps.|r|c0000ff00 You Have to build a |c0077ff77Chaos Tower|r |c0000ff00to kill them.|r
@@ -152,6 +158,12 @@ STRING 25
 // Units: Hkal (Blood Mage), Propernames (Proper Names)
 {
 Uncle Greg
+}
+
+STRING 26
+// Abilities: A02I (Electroboom), Tip (Tooltip - Normal)
+{
+|c0000ff00Electroboom
 }
 
 STRING 27
@@ -586,6 +598,12 @@ STRING 94
 // Abilities: A00U (Swap Towers), Name (Name)
 {
 Swap Towers
+}
+
+STRING 95
+// Abilities: A04G (Overdrive), Tip (Tooltip - Normal)
+{
+|c0000ff00Overdrive
 }
 
 STRING 96
@@ -1189,6 +1207,12 @@ STRING 163
 Max Level Reached
 }
 
+STRING 164
+// Abilities: A03S (Venom 5), EditorSuffix (Editor Suffix)
+{
+[Venom Tower]
+}
+
 STRING 165
 {
 Click Again to Sell
@@ -1219,6 +1243,12 @@ Game Modes
 STRING 170
 {
 |c0000ff00Difficulty: |c0077ff77Easy - Chaos Mode
+}
+
+STRING 171
+// Abilities: A03V (Venom 6), EditorSuffix (Editor Suffix)
+{
+[Venom Tower]
 }
 
 STRING 172
@@ -15452,7 +15482,7 @@ STRING 2335
 }
 
 STRING 2336
-// Abilities: A03W (Venom 1), EditorSuffix (Editor Suffix)
+// Abilities: A01L (Venom 3), EditorSuffix (Editor Suffix)
 {
 [Venom Tower]
 }
@@ -15859,12 +15889,6 @@ STRING 2393
 // Units: h010 (Flak Tower 9), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Mortar Team.|r |cAAAAFFAAFlak Tower 9.|r
-}
-
-STRING 2394
-// Abilities: A04G (Overdrive), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Overdrive; Gains 1 mana for each enemy hit by its attack, also gains 5 temporary damage for each enemy hit.
 }
 
 STRING 2395
@@ -16659,45 +16683,15 @@ STRING 2511
 }
 
 STRING 2512
-// Abilities: A03Z (Hellfire 7), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A040 (Hellfire 5), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Leaves a patch of burning hellfire on the ground, dealing 10000 damage per second to non-immune creeps walking through it.
 }
 
-STRING 2513
-// Abilities: A040 (Hellfire 5), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Leaves a patch of burning hellfire on the ground, dealing 6000 damage per second to non-immune creeps walking through it.
-}
-
-STRING 2514
-// Abilities: A041 (Hellfire 6), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Leaves a patch of burning hellfire on the ground, dealing 8000 damage per second to non-immune creeps walking through it.
-}
-
-STRING 2515
-// Abilities: A042 (Hellfire 1), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Leaves a patch of burning hellfire on the ground, dealing 1000 damage per second to non-immune creeps walking through it.
-}
-
 STRING 2516
-// Abilities: A043 (Hellfire 3), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Leaves a patch of burning hellfire on the ground, dealing 3000 damage per second to non-immune creeps walking through it.
-}
-
-STRING 2517
 // Abilities: A044 (Hellfire 2), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff77Leaves a patch of burning hellfire on the ground, dealing 2000 damage per second to non-immune creeps walking through it.
-}
-
-STRING 2518
-// Abilities: A045 (Hellfire 4), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Leaves a patch of burning hellfire on the ground, dealing 4500 damage per second to non-immune creeps walking through it.
+|c0077ff77Leaves a patch of burning hellfire on the ground, dealing 3000 damage per second to non-immune creeps walking through it.
 }
 
 STRING 2519
@@ -18180,76 +18174,6 @@ STRING 2717
 |c0000ff00Ability:|r |c0077ff77Venomous: Deals 20000 damage per second, stacks with other Venom Towers, also causes the tower to attack randomly.
 }
 
-STRING 2718
-// Abilities: A01L (Venom 3), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A venoumous attack that deals 2500 damage per second for 15 seconds.|r
-
-|c0077ff77Stacks with other Venom towers and is capable of killing.|r
-
-|c0077ff77Causes the tower to attack randomly.|r
-}
-
-STRING 2719
-// Abilities: A01R (Venom 4), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A venoumous attack that deals 5500 damage per second for 15 seconds.|r
-
-|c0077ff77Stacks with other Venom towers and is capable of killing.|r
-
-|c0077ff77Causes the tower to attack randomly.|r
-}
-
-STRING 2720
-// Abilities: A03S (Venom 5), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A venoumous attack that deals 9000 damage per second for 15 seconds.|r
-
-|c0077ff77Stacks with other Venom towers and is capable of killing.|r
-
-|c0077ff77Causes the tower to attack randomly.|r
-}
-
-STRING 2721
-// Abilities: A03V (Venom 6), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A venoumous attack that deals 13000 damage per second for 15 seconds.|r
-
-|c0077ff77Stacks with other Venom towers and is capable of killing.|r
-
-|c0077ff77Causes the tower to attack randomly.|r
-}
-
-STRING 2722
-// Abilities: A03W (Venom 1), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A venoumous attack that deals 500 damage per second for 15 seconds.|r
-
-|c0077ff77Stacks with other Venom towers and is capable of killing.|r
-
-|c0077ff77Causes the tower to attack randomly.|r
-}
-
-STRING 2723
-// Abilities: A03X (Venom 2), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A venoumous attack that deals 1250 damage per second for 15 seconds.|r
-
-|c0077ff77Stacks with other Venom towers and is capable of killing.|r
-
-|c0077ff77Causes the tower to attack randomly.|r
-}
-
-STRING 2724
-// Abilities: A03Y (Venom 7), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A venoumous attack that deals 20000 damage per second for 15 seconds.|r
-
-|c0077ff77Stacks with other Venom towers and is capable of killing.|r
-
-|c0077ff77Causes the tower to attack randomly.|r
-}
-
 STRING 2725
 // Abilities: A04B (Frostbite), Ubertip (Tooltip - Normal - Extended)
 {
@@ -19583,7 +19507,7 @@ STRING 2924
 }
 
 STRING 2925
-// Abilities: A00Z (Random Attack), EditorSuffix (Editor Suffix)
+// Abilities: A01R (Venom 4), EditorSuffix (Editor Suffix)
 {
 [Venom Tower]
 }
@@ -19995,6 +19919,12 @@ STRING 2987
 |c0000ff00Winter Spirits
 }
 
+STRING 2988
+// Abilities: A03W (Venom 1), EditorSuffix (Editor Suffix)
+{
+[Venom Tower]
+}
+
 STRING 2989
 // Abilities: A04F (Brainfreeze), Tip (Tooltip - Normal)
 {
@@ -20131,16 +20061,84 @@ STRING 3004
 Rocket Tower 5: War Machine
 }
 
+STRING 3005
+// Abilities: A03X (Venom 2), EditorSuffix (Editor Suffix)
+{
+[Venom Tower]
+}
+
+STRING 3006
+// Abilities: A03Y (Venom 7), EditorSuffix (Editor Suffix)
+{
+[Venom Tower]
+}
+
+STRING 3007
+// Abilities: A00Z (Random Attack), EditorSuffix (Editor Suffix)
+{
+[Venom Tower]
+}
+
+STRING 3008
+// Abilities: A01L (Venom 3), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A venoumous attack that deals 3000 damage per second for 15 seconds.|r
+
+|c0077ff77Stacks with other Venom towers and is capable of killing.|r
+
+|c0077ff77Causes the tower to attack randomly.|r
+}
+
 STRING 3009
 // Units: n021 (Rocket Tower 8: War Machine), Name (Name)
 {
 Rocket Tower 8: War Machine
 }
 
+STRING 3010
+// Abilities: A01R (Venom 4), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A venoumous attack that deals 5000 damage per second for 15 seconds.|r
+
+|c0077ff77Stacks with other Venom towers and is capable of killing.|r
+
+|c0077ff77Causes the tower to attack randomly.|r
+}
+
+STRING 3011
+// Abilities: A03S (Venom 5), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A venoumous attack that deals 8000 damage per second for 15 seconds.|r
+
+|c0077ff77Stacks with other Venom towers and is capable of killing.|r
+
+|c0077ff77Causes the tower to attack randomly.|r
+}
+
 STRING 3012
 // Units: n022 (Rocket Tower 9: War Machine), Name (Name)
 {
 Rocket Tower 9: War Machine
+}
+
+STRING 3013
+// Abilities: A03V (Venom 6), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A venoumous attack that deals 15000 damage per second for 15 seconds.|r
+
+|c0077ff77Stacks with other Venom towers and is capable of killing.|r
+
+|c0077ff77Causes the tower to attack randomly.|r
+}
+
+STRING 3014
+// Abilities: A03W (Venom 1), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A venoumous attack that deals 1000 damage per second for 15 seconds.|r
+
+|c0077ff77Stacks with other Venom towers and is capable of killing.|r
+
+|c0077ff77Causes the tower to attack randomly.|r
 }
 
 STRING 3015
@@ -20191,16 +20189,54 @@ STRING 3022
 |c0077ff77[Z.] |c0000ff00Upgrade To War Machine, Ultimate.|r |cAAAAFFAARocket Tower 10.|r
 }
 
+STRING 3023
+// Abilities: A03X (Venom 2), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A venoumous attack that deals 1750 damage per second for 15 seconds.|r
+
+|c0077ff77Stacks with other Venom towers and is capable of killing.|r
+
+|c0077ff77Causes the tower to attack randomly.|r
+}
+
+STRING 3024
+// Abilities: A03Y (Venom 7), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A venoumous attack that deals 25000 damage per second for 15 seconds.|r
+
+|c0077ff77Stacks with other Venom towers and is capable of killing.|r
+
+|c0077ff77Causes the tower to attack randomly.|r
+}
+
+STRING 3025
+// Abilities: A03Z (Hellfire 7), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Leaves a patch of burning hellfire on the ground, dealing 25000 damage per second to non-immune creeps walking through it.
+}
+
 STRING 3026
 // Abilities: A03R (Income Bonus), Hotkey (Hotkey - Normal)
 {
 W
 }
 
+STRING 3027
+// Abilities: A041 (Hellfire 6), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Leaves a patch of burning hellfire on the ground, dealing 17500 damage per second to non-immune creeps walking through it.
+}
+
 STRING 3028
 // Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 W
+}
+
+STRING 3029
+// Abilities: A042 (Hellfire 1), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Leaves a patch of burning hellfire on the ground, dealing 1500 damage per second to non-immune creeps walking through it.
 }
 
 STRING 3030
@@ -20243,6 +20279,18 @@ STRING 3036
 // Abilities: A04G (Overdrive), EditorSuffix (Editor Suffix)
 {
 [Rocket Tower]
+}
+
+STRING 3037
+// Abilities: A043 (Hellfire 3), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Leaves a patch of burning hellfire on the ground, dealing 5000 damage per second to non-immune creeps walking through it.
+}
+
+STRING 3038
+// Abilities: A045 (Hellfire 4), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Leaves a patch of burning hellfire on the ground, dealing 7500 damage per second to non-immune creeps walking through it.
 }
 
 STRING 3045
@@ -20295,12 +20343,6 @@ Bash Tower 1: Storm Panda
 
 STRING 3125
 // Abilities: A04G (Overdrive), Name (Name)
-{
-Overdrive
-}
-
-STRING 3126
-// Abilities: A04G (Overdrive), Tip (Tooltip - Normal)
 {
 Overdrive
 }
@@ -20411,12 +20453,6 @@ D
 
 STRING 3137
 // Abilities: A02I (Electroboom), Name (Name)
-{
-Electroboom
-}
-
-STRING 3138
-// Abilities: A02I (Electroboom), Tip (Tooltip - Normal)
 {
 Electroboom
 }

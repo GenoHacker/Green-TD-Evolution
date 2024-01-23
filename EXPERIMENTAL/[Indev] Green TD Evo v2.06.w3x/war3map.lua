@@ -3043,7 +3043,7 @@ end
 
 function Trig_Rocket_Tower_Actions()
 if (Trig_Rocket_Tower_Func002C()) then
-BlzSetUnitDiceNumber(udg_DamageEventSource, (BlzGetUnitDiceNumber(udg_DamageEventSource, 0) + 5), 0)
+BlzSetUnitDiceNumber(udg_DamageEventSource, (BlzGetUnitDiceNumber(udg_DamageEventSource, 0) + 25), 0)
 SetUnitManaBJ(udg_DamageEventSource, (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + 1))
 if (Trig_Rocket_Tower_Func002Func005C()) then
 IssueTargetOrderBJ(udg_DamageEventSource, "forkedlightning", udg_DamageEventTarget)
