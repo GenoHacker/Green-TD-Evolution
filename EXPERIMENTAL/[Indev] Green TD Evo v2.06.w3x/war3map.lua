@@ -2780,6 +2780,9 @@ CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), Get
 UnitApplyTimedLifeBJ(0.50, FourCC("BTLF"), GetLastCreatedUnit())
 UnitDamagePointLoc(GetLastCreatedUnit(), 0, 300.00, GetUnitLoc(udg_DamageEventTarget), (250.00 * (1 + BlzGetUnitArmor(udg_DamageEventTarget))), ATTACK_TYPE_PIERCE, DAMAGE_TYPE_NORMAL)
 AddSpecialEffectLocBJ(GetUnitLoc(udg_DamageEventTarget), "Abilities\\Spells\\NightElf\\FanOfKnives\\FanOfKnivesCaster.mdl")
+BlzSetSpecialEffectYaw(GetLastCreatedEffectBJ(), GetRandomReal(0, 360.00))
+BlzSetSpecialEffectPitch(GetLastCreatedEffectBJ(), 0.0)
+BlzSetSpecialEffectRoll(GetLastCreatedEffectBJ(), 0.0)
 BlzSetSpecialEffectTimeScale(GetLastCreatedEffectBJ(), 2.00)
 BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 0.50)
 else
@@ -8633,44 +8636,44 @@ end
 return true
 end
 
-function Trig_Start_Static_Waves_Func011Func003Func002Func001A()
+function Trig_Start_Static_Waves_Func011Func002Func002Func001A()
 DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], ("|c008000FFWave " .. (I2S(udg_Integer_WaveNumber) .. " of 60.|r [Normal Creeps]")))
 end
 
-function Trig_Start_Static_Waves_Func011Func003Func002Func002A()
+function Trig_Start_Static_Waves_Func011Func002Func002Func002A()
 DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], ("|c008000FFWave " .. (I2S(udg_Integer_WaveNumber) .. (" of 60.|r [Normal Creeps]" .. (" Health Multiplier is now set at " .. udg_String_Array_ChaosMultiplier[1])))))
 end
 
-function Trig_Start_Static_Waves_Func011Func003Func002C()
+function Trig_Start_Static_Waves_Func011Func002Func002C()
 if (not (udg_Integer_ChaosModeOn == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Start_Static_Waves_Func011Func003Func007Func001A()
+function Trig_Start_Static_Waves_Func011Func002Func007Func001A()
 DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], ("|c008000FFWave " .. (I2S(udg_Integer_WaveNumber) .. " of 60.|r [Normal Creeps]")))
 end
 
-function Trig_Start_Static_Waves_Func011Func003Func007Func002A()
+function Trig_Start_Static_Waves_Func011Func002Func007Func002A()
 DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], ("|c008000FFWave " .. (I2S(udg_Integer_WaveNumber) .. (" of 60.|r [Normal Creeps]" .. (" Health Multiplier is now set at " .. udg_String_Array_ChaosMultiplier[1])))))
 end
 
-function Trig_Start_Static_Waves_Func011Func003Func007C()
+function Trig_Start_Static_Waves_Func011Func002Func007C()
 if (not (udg_Integer_ChaosModeOn == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Start_Static_Waves_Func011Func003C()
+function Trig_Start_Static_Waves_Func011Func002C()
 if (not (udg_Integer_BlitzMode == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Start_Static_Waves_Func011Func004C()
+function Trig_Start_Static_Waves_Func011Func003C()
 if (udg_Integer_WaveNumber == 1) then
 return true
 end
@@ -8747,7 +8750,7 @@ return false
 end
 
 function Trig_Start_Static_Waves_Func011C()
-if (not Trig_Start_Static_Waves_Func011Func004C()) then
+if (not Trig_Start_Static_Waves_Func011Func003C()) then
 return false
 end
 return true
@@ -9085,22 +9088,22 @@ else
 end
 if (Trig_Start_Static_Waves_Func011C()) then
 TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update_Copy)
-if (Trig_Start_Static_Waves_Func011Func003C()) then
+if (Trig_Start_Static_Waves_Func011Func002C()) then
 udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
-if (Trig_Start_Static_Waves_Func011Func003Func002C()) then
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func011Func003Func002Func002A)
+if (Trig_Start_Static_Waves_Func011Func002Func002C()) then
+ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func011Func002Func002Func002A)
 else
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func011Func003Func002Func001A)
+ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func011Func002Func002Func001A)
 end
 EnableTrigger(gg_trg_Static_Wave_Spawning_System)
 PlaySoundBJ(gg_snd_Wave_Normal)
 else
 EnableTrigger(gg_trg_Timer)
 TriggerSleepAction(udg_Real_SpawnTime)
-if (Trig_Start_Static_Waves_Func011Func003Func007C()) then
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func011Func003Func007Func002A)
+if (Trig_Start_Static_Waves_Func011Func002Func007C()) then
+ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func011Func002Func007Func002A)
 else
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func011Func003Func007Func001A)
+ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func011Func002Func007Func001A)
 end
 EnableTrigger(gg_trg_Static_Wave_Spawning_System)
 PlaySoundBJ(gg_snd_Wave_Normal)
