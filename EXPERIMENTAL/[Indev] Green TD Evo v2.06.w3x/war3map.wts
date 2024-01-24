@@ -16712,18 +16712,6 @@ STRING 2516
 |c0077ff77Leaves a patch of burning hellfire on the ground, dealing 3000 damage per second to non-immune creeps walking through it.
 }
 
-STRING 2517
-// Units: e009 (Shrapnel Tower 4: Goblin Shredder), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Hero
-|c0000ff00Cooldown:|r |c0077ff772.00
-|c0000ff00Damage:|r |c0077ff772000
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff770.71 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Bouncing Attack; attacks bounce up to 3 times
-|c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing 100 x armour piercing damage to nearby enemy units
-}
-
 STRING 2518
 // Abilities: A04H (Bouncing Attack), Tip (Tooltip - Normal)
 {
@@ -18238,12 +18226,6 @@ STRING 2722
 // Abilities: A04I (Shrapnel Blast), Tip (Tooltip - Normal)
 {
 Shrapnel Blast
-}
-
-STRING 2723
-// Abilities: A04I (Shrapnel Blast), Ubertip (Tooltip - Normal - Extended)
-{
-Hits on enemies have a [10% + 0.1% per armour of hit unit] chance to trigger a shrapnel blast dealing piercing damage to near by units equaling to [100 x armor of hit unit].
 }
 
 STRING 2724
@@ -20369,6 +20351,24 @@ STRING 3038
 // Abilities: A045 (Hellfire 4), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Leaves a patch of burning hellfire on the ground, dealing 7500 damage per second to non-immune creeps walking through it.
+}
+
+STRING 3039
+// Units: e009 (Shrapnel Tower 4: Goblin Shredder), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff772.00
+|c0000ff00Damage:|r |c0077ff772000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.71 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Bouncing Attack; attacks bounce up to 3 times
+|c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing 250 x armour piercing damage to nearby enemy units
+}
+
+STRING 3040
+// Abilities: A04I (Shrapnel Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Hits on enemies have a [10% + 0.1% per armour of hit unit] chance to trigger a shrapnel blast dealing piercing damage to near by units equaling to [250 x armor of hit unit].
 }
 
 STRING 3045

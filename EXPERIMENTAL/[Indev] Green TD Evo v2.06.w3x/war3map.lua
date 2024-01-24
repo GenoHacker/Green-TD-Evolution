@@ -2763,9 +2763,6 @@ function Trig_Shrapnel_Tower_Shrapnel_Blast_Conditions()
 if (not (GetUnitAbilityLevelSwapped(FourCC("A04I"), udg_DamageEventSource) == 1)) then
 return false
 end
-if (not (udg_ATTACK_TYPE_HERO == 6)) then
-return false
-end
 return true
 end
 
@@ -2779,8 +2776,12 @@ end
 function Trig_Shrapnel_Tower_Shrapnel_Blast_Actions()
 udg_Real_Array_ShrapBlastChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal((100.00 + BlzGetUnitArmor(udg_DamageEventTarget)), 1000.00)
 if (Trig_Shrapnel_Tower_Shrapnel_Blast_Func002C()) then
-UnitDamagePointLoc(udg_DamageEventSource, 0, 300.00, GetUnitLoc(udg_DamageEventTarget), (100.00 * BlzGetUnitArmor(udg_DamageEventTarget)), ATTACK_TYPE_PIERCE, DAMAGE_TYPE_NORMAL)
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventTarget), bj_UNIT_FACING)
+UnitApplyTimedLifeBJ(0.50, FourCC("BTLF"), GetLastCreatedUnit())
+UnitDamagePointLoc(GetLastCreatedUnit(), 0, 300.00, GetUnitLoc(udg_DamageEventTarget), (250.00 * (1 + BlzGetUnitArmor(udg_DamageEventTarget))), ATTACK_TYPE_PIERCE, DAMAGE_TYPE_NORMAL)
 AddSpecialEffectLocBJ(GetUnitLoc(udg_DamageEventTarget), "Abilities\\Spells\\NightElf\\FanOfKnives\\FanOfKnivesCaster.mdl")
+BlzSetSpecialEffectTimeScale(GetLastCreatedEffectBJ(), 2.00)
+BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 0.50)
 else
 end
 end
@@ -10112,8 +10113,15 @@ TriggerRegisterTimerEventPeriodic(gg_trg_Random_Wave_Spawning_Sys, 0.25)
 TriggerAddAction(gg_trg_Random_Wave_Spawning_Sys, Trig_Random_Wave_Spawning_Sys_Actions)
 end
 
+function Trig_Generate_Random_Waves_Func001Func001C()
+if (not (udg_Integer_EndlessMode == 1)) then
+return false
+end
+return true
+end
+
 function Trig_Generate_Random_Waves_Func001Func002C()
-if (not (udg_Integer_RWBossChance <= (5 + GetForLoopIndexA()))) then
+if (not (udg_Integer_RWBossChance <= (25 + GetForLoopIndexA()))) then
 return false
 end
 return true
@@ -10194,7 +10202,11 @@ bj_forLoopAIndex = 1
 bj_forLoopAIndexEnd = udg_Integer_WaveAmount
 while (true) do
 if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
-udg_Integer_RWBossChance = GetRandomInt(1, 300)
+if (Trig_Generate_Random_Waves_Func001Func001C()) then
+udg_Integer_RWBossChance = GetRandomInt(1, 1000)
+else
+udg_Integer_RWBossChance = GetRandomInt(1, 500)
+end
 if (Trig_Generate_Random_Waves_Func001Func002C()) then
 udg_String_RWBossWaveText = (udg_String_RWBossWaveText .. (I2S(GetForLoopIndexA()) .. ","))
 udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()] = GetRandomInt(1, 4)
