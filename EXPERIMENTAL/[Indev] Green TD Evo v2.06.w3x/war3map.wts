@@ -20353,11 +20353,11 @@ STRING 3038
 |c0077ff77Leaves a patch of burning hellfire on the ground, dealing 7500 damage per second to non-immune creeps walking through it.
 }
 
-STRING 3039
+STRING 3041
 // Units: e009 (Shrapnel Tower 4: Goblin Shredder), Ubertip (Tooltip - Extended)
 {
 |c0000ff00Attack:|r |c0077ff77Hero
-|c0000ff00Cooldown:|r |c0077ff772.00
+|c0000ff00Cooldown:|r |c0077ff771.25
 |c0000ff00Damage:|r |c0077ff772000
 |c0000ff00Range:|r |c0077ff77600
 |c0000ff00Efficiency:|r |c0077ff770.71 Damage per Gold
@@ -20365,10 +20365,28 @@ STRING 3039
 |c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing 250 x armour piercing damage to nearby enemy units
 }
 
-STRING 3040
-// Abilities: A04I (Shrapnel Blast), Ubertip (Tooltip - Normal - Extended)
+STRING 3042
+// Units: e00C (Goblin Shredder, Ultimate Shrapnel Tower), Name (Name)
 {
-Hits on enemies have a [10% + 0.1% per armour of hit unit] chance to trigger a shrapnel blast dealing piercing damage to near by units equaling to [250 x armor of hit unit].
+Goblin Shredder, Ultimate Shrapnel Tower
+}
+
+STRING 3043
+// Units: e00C (Goblin Shredder, Ultimate Shrapnel Tower), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade To Goblin Shredder, Ultimate.|r |cAAAAFFAAShrapnel Tower 10.|r
+}
+
+STRING 3044
+// Units: e00C (Goblin Shredder, Ultimate Shrapnel Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff7727000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff771.24 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Bouncing Attack; attacks bounce up to 3 times
+|c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing 250 x armour piercing damage to nearby enemy units
 }
 
 STRING 3045
@@ -20377,10 +20395,22 @@ STRING 3045
 |c0077ff77[Z] |c0000ff00Upgrade To War Machine.|r |cAAAAFFAARocket Tower 7.|r
 }
 
+STRING 3046
+// Units: e00D (Shrapnel Tower 9: Goblin Shredder), Name (Name)
+{
+Shrapnel Tower 9: Goblin Shredder
+}
+
 STRING 3047
 // Units: n01Y (Rocket Tower 6: War Machine), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To War Machine.|r |cAAAAFFAARocket Tower 6.|r
+}
+
+STRING 3048
+// Units: e00D (Shrapnel Tower 9: Goblin Shredder), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade To Goblin Shredder.|r |cAAAAFFAAShrapnel Tower 9.|r
 }
 
 STRING 3049
@@ -20389,10 +20419,28 @@ STRING 3049
 |c0077ff77[Z] |c0000ff00Upgrade To War Machine.|r |cAAAAFFAARocket Tower 5.|r
 }
 
+STRING 3050
+// Units: e00D (Shrapnel Tower 9: Goblin Shredder), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff7718500
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff771.10 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Bouncing Attack; attacks bounce up to 3 times
+|c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing 250 x armour piercing damage to nearby enemy units
+}
+
 STRING 3051
 // Units: n021 (Rocket Tower 8: War Machine), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To War Machine.|r |cAAAAFFAARocket Tower 8.|r
+}
+
+STRING 3052
+// Units: e00S (Shrapnel Tower 8: Goblin Shredder), Name (Name)
+{
+Shrapnel Tower 8: Goblin Shredder
 }
 
 STRING 3053
@@ -20401,16 +20449,148 @@ STRING 3053
 |c0077ff77[Z] |c0000ff00Upgrade To War Machine.|r |cAAAAFFAARocket Tower 9.|r
 }
 
+STRING 3054
+// Units: e00S (Shrapnel Tower 8: Goblin Shredder), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade To Goblin Shredder.|r |cAAAAFFAAShrapnel Tower 8.|r
+}
+
+STRING 3055
+// Units: e00S (Shrapnel Tower 8: Goblin Shredder), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff7713000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff771.02 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Bouncing Attack; attacks bounce up to 3 times
+|c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing 250 x armour piercing damage to nearby enemy units
+}
+
+STRING 3056
+// Units: e00T (Shrapnel Tower 7: Goblin Shredder), Name (Name)
+{
+Shrapnel Tower 7: Goblin Shredder
+}
+
+STRING 3057
+// Units: e00T (Shrapnel Tower 7: Goblin Shredder), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade To Goblin Shredder.|r |cAAAAFFAAShrapnel Tower 7.|r
+}
+
+STRING 3058
+// Units: e00T (Shrapnel Tower 7: Goblin Shredder), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff778700
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.94 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Bouncing Attack; attacks bounce up to 3 times
+|c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing 250 x armour piercing damage to nearby enemy units
+}
+
+STRING 3059
+// Units: e00U (Shrapnel Tower 6: Goblin Shredder), Name (Name)
+{
+Shrapnel Tower 6: Goblin Shredder
+}
+
+STRING 3060
+// Units: e00U (Shrapnel Tower 6: Goblin Shredder), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade To Goblin Shredder.|r |cAAAAFFAAShrapnel Tower 6.|r
+}
+
+STRING 3061
+// Units: e00U (Shrapnel Tower 6: Goblin Shredder), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff775500
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.87 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Bouncing Attack; attacks bounce up to 3 times
+|c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing 250 x armour piercing damage to nearby enemy units
+}
+
+STRING 3062
+// Units: e00V (Shrapnel Tower 5: Goblin Shredder), Name (Name)
+{
+Shrapnel Tower 5: Goblin Shredder
+}
+
+STRING 3063
+// Units: e00V (Shrapnel Tower 5: Goblin Shredder), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade To Goblin Shredder.|r |cAAAAFFAAShrapnel Tower 5.|r
+}
+
+STRING 3064
+// Units: e00V (Shrapnel Tower 5: Goblin Shredder), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff773500
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.83 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Bouncing Attack; attacks bounce up to 3 times
+|c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing 250 x armour piercing damage to nearby enemy units
+}
+
+STRING 3065
+// Abilities: A01K (Immolation), Hotkey (Hotkey - Normal)
+{
+Z
+}
+
+STRING 3066
+// Abilities: A01K (Immolation), Unhotkey (Hotkey - Turn Off)
+{
+Z
+}
+
 STRING 3067
 // Buffs/Effects: B003 (), Bufftip (Tooltip)
 {
 Rocket Damage
 }
 
+STRING 3068
+// Abilities: A020 (3 - Decrease Zoom), Hotkey (Hotkey - Normal)
+{
+Z
+}
+
+STRING 3069
+// Abilities: A02M (Chaos Mode), Hotkey (Hotkey - Normal)
+{
+Z
+}
+
+STRING 3070
+// Abilities: A02Q (Disable Aura Tower), Hotkey (Hotkey - Normal)
+{
+Z
+}
+
 STRING 3071
 // Buffs/Effects: B003 (), Buffubertip (Tooltip - Extended)
 {
 Increased Damage from Overdrive
+}
+
+STRING 3072
+// Abilities: A048 (Random Game Modes), Hotkey (Hotkey - Normal)
+{
+Z
+}
+
+STRING 3073
+// Abilities: A04I (Shrapnel Blast), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Hits on enemies have a [10% + 0.1% per armour of hit unit] chance to trigger a shrapnel blast dealing piercing damage to near by units equaling to [250 x armor of hit unit].
 }
 
 STRING 3075
@@ -23005,55 +23185,55 @@ Z
 }
 
 STRING 7087
-// Abilities: A01J (Slow), Hotkey (Hotkey - Normal)
+// Units: e00C (Goblin Shredder, Ultimate Shrapnel Tower), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7088
-// Abilities: A01J (Slow), Unhotkey (Hotkey - Turn Off)
+// Units: e00D (Shrapnel Tower 9: Goblin Shredder), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7089
-// Abilities: A023 (Upgrade Trap Ability), Hotkey (Hotkey - Normal)
+// Units: e00S (Shrapnel Tower 8: Goblin Shredder), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7090
-// Abilities: A01K (Immolation), Hotkey (Hotkey - Normal)
+// Units: e00T (Shrapnel Tower 7: Goblin Shredder), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7091
-// Abilities: A01K (Immolation), Unhotkey (Hotkey - Turn Off)
+// Units: e00U (Shrapnel Tower 6: Goblin Shredder), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7092
-// Abilities: A020 (3 - Decrease Zoom), Hotkey (Hotkey - Normal)
+// Units: e00V (Shrapnel Tower 5: Goblin Shredder), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7093
-// Abilities: A02M (Chaos Mode), Hotkey (Hotkey - Normal)
+// Abilities: A01J (Slow), Hotkey (Hotkey - Normal)
 {
 Z
 }
 
 STRING 7094
-// Abilities: A02Q (Disable Aura Tower), Hotkey (Hotkey - Normal)
+// Abilities: A01J (Slow), Unhotkey (Hotkey - Turn Off)
 {
 Z
 }
 
 STRING 7095
-// Abilities: A048 (Random Game Modes), Hotkey (Hotkey - Normal)
+// Abilities: A023 (Upgrade Trap Ability), Hotkey (Hotkey - Normal)
 {
 Z
 }
