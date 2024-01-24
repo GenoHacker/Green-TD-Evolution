@@ -14422,18 +14422,6 @@ STRING 2178
 [Siege Damage]
 }
 
-STRING 2179
-// Units: h02L (Hellfire Tower 4: Hell Shrine), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff772250
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff770.45 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
-|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 1000 damage per second to non-immune creeps walking through it.|r
-}
-
 STRING 2180
 // Units: h01G (Fel Tower 9: Warlock), Name (Name)
 {
@@ -16502,58 +16490,10 @@ STRING 2487
 Kicked
 }
 
-STRING 2488
-// Units: h01Z (Hellfire Tower 8: Hell Shrine), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff7712500
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff770.76 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
-|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 6000 damage per second to non-immune creeps walking through it.|r
-}
-
-STRING 2489
-// Units: h02C (Hellfire Tower 9: Hell Shrine), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff7716500
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff770.77 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
-|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 8000 damage per second to non-immune creeps walking through it.|r
-}
-
-STRING 2490
-// Units: h02D (Ultimate Hellfire Tower), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff7721250
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff770.79 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
-|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 10000 damage per second to non-immune creeps walking through it.|r
-}
-
 STRING 2491
 // Abilities: A03Z (Hellfire 7), Name (Name)
 {
 Hellfire 7
-}
-
-STRING 2492
-// Units: h02E (Hellfire Tower 5: Hell Shrine), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff774250
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff770.61 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
-|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 2000 damage per second to non-immune creeps walking through it.|r
 }
 
 STRING 2493
@@ -16568,18 +16508,6 @@ STRING 2494
 Hellfire 5
 }
 
-STRING 2495
-// Units: h02H (Hellfire Tower 7: Hell Shrine), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff779000
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff770.72 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
-|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 4500 damage per second to non-immune creeps walking through it.|r
-}
-
 STRING 2496
 // Abilities: A040 (Hellfire 5), Tip (Tooltip - Normal)
 {
@@ -16590,18 +16518,6 @@ STRING 2497
 // Abilities: A041 (Hellfire 6), Name (Name)
 {
 Hellfire 6
-}
-
-STRING 2498
-// Units: h02K (Hellfire Tower 6: Hell Shrine), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff776000
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff770.63 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
-|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 3000 damage per second to non-immune creeps walking through it.|r
 }
 
 STRING 2499
@@ -18218,12 +18134,6 @@ STRING 2720
 
 STRING 2721
 // Abilities: A04I (Shrapnel Blast), Name (Name)
-{
-Shrapnel Blast
-}
-
-STRING 2722
-// Abilities: A04I (Shrapnel Blast), Tip (Tooltip - Normal)
 {
 Shrapnel Blast
 }
@@ -20597,6 +20507,96 @@ STRING 3075
 // Units: h021 (Bash Tower 1: Storm Panda), Name (Name)
 {
 Bash Tower 1: Storm Panda
+}
+
+STRING 3076
+// Abilities: A04I (Shrapnel Blast), Tip (Tooltip - Normal)
+{
+|c0000ff00Shrapnel Blast
+}
+
+STRING 3077
+// Units: h01Z (Hellfire Tower 8: Hell Shrine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff7712500
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff770.76 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
+|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 10000 damage per second to non-immune creeps walking through it.|r
+}
+
+STRING 3078
+// Units: h02C (Hellfire Tower 9: Hell Shrine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff7716500
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff770.77 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
+|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 17500 damage per second to non-immune creeps walking through it.|r
+}
+
+STRING 3079
+// Units: h02D (Ultimate Hellfire Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff7721250
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff770.79 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
+|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 25000 damage per second to non-immune creeps walking through it.|r
+}
+
+STRING 3080
+// Units: h02E (Hellfire Tower 5: Hell Shrine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff774250
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff770.61 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
+|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 3000 damage per second to non-immune creeps walking through it.|r
+}
+
+STRING 3081
+// Units: h02H (Hellfire Tower 7: Hell Shrine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff779000
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff770.72 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
+|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 7500 damage per second to non-immune creeps walking through it.|r
+}
+
+STRING 3082
+// Units: h02K (Hellfire Tower 6: Hell Shrine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff776000
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff770.63 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
+|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 6000 damage per second to non-immune creeps walking through it.|r
+}
+
+STRING 3083
+// Units: h02L (Hellfire Tower 4: Hell Shrine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff772250
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff770.45 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
+|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 1500 damage per second to non-immune creeps walking through it.|r
 }
 
 STRING 3125
