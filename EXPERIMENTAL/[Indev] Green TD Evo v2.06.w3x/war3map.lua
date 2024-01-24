@@ -267,6 +267,7 @@ udg_String_DivineWavesText = ""
 udg_String_HeroWavesText = ""
 udg_Integer_RWBossChance = 0
 udg_String_RWBossWaveText = ""
+udg_Real_Array_ShrapBlastChance = __jarray(0.0)
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -547,6 +548,7 @@ gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
+gg_trg_Shrapnel_Tower_Shrapnel_Blast = nil
 function InitGlobals()
 local i = 0
 
@@ -1148,6 +1150,12 @@ udg_String_DivineWavesText = ""
 udg_String_HeroWavesText = ""
 udg_Integer_RWBossChance = 0
 udg_String_RWBossWaveText = ""
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Real_Array_ShrapBlastChance[i] = 0.0
+i = i + 1
+end
 end
 
 -- Arcing Text Tag v1.0.0.3 by Maker encoded to Lua
@@ -2749,6 +2757,39 @@ gg_trg_Ballista_Tower_Enchanted_Bolts = CreateTrigger()
 TriggerRegisterVariableEvent(gg_trg_Ballista_Tower_Enchanted_Bolts, "udg_DamageEvent", EQUAL, 1.00)
 TriggerAddCondition(gg_trg_Ballista_Tower_Enchanted_Bolts, Condition(Trig_Ballista_Tower_Enchanted_Bolts_Conditions))
 TriggerAddAction(gg_trg_Ballista_Tower_Enchanted_Bolts, Trig_Ballista_Tower_Enchanted_Bolts_Actions)
+end
+
+function Trig_Shrapnel_Tower_Shrapnel_Blast_Conditions()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A04I"), udg_DamageEventSource) == 1)) then
+return false
+end
+if (not (udg_ATTACK_TYPE_HERO == 6)) then
+return false
+end
+return true
+end
+
+function Trig_Shrapnel_Tower_Shrapnel_Blast_Func002C()
+if (not (udg_Real_Array_ShardTowerChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (100.00 + BlzGetUnitArmor(udg_DamageEventTarget)))) then
+return false
+end
+return true
+end
+
+function Trig_Shrapnel_Tower_Shrapnel_Blast_Actions()
+udg_Real_Array_ShrapBlastChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal((100.00 + BlzGetUnitArmor(udg_DamageEventTarget)), 1000.00)
+if (Trig_Shrapnel_Tower_Shrapnel_Blast_Func002C()) then
+UnitDamagePointLoc(udg_DamageEventSource, 0, 300.00, GetUnitLoc(udg_DamageEventTarget), (100.00 * BlzGetUnitArmor(udg_DamageEventTarget)), ATTACK_TYPE_PIERCE, DAMAGE_TYPE_NORMAL)
+AddSpecialEffectLocBJ(GetUnitLoc(udg_DamageEventTarget), "Abilities\\Spells\\NightElf\\FanOfKnives\\FanOfKnivesCaster.mdl")
+else
+end
+end
+
+function InitTrig_Shrapnel_Tower_Shrapnel_Blast()
+gg_trg_Shrapnel_Tower_Shrapnel_Blast = CreateTrigger()
+TriggerRegisterVariableEvent(gg_trg_Shrapnel_Tower_Shrapnel_Blast, "udg_DamageEvent", EQUAL, 1.00)
+TriggerAddCondition(gg_trg_Shrapnel_Tower_Shrapnel_Blast, Condition(Trig_Shrapnel_Tower_Shrapnel_Blast_Conditions))
+TriggerAddAction(gg_trg_Shrapnel_Tower_Shrapnel_Blast, Trig_Shrapnel_Tower_Shrapnel_Blast_Actions)
 end
 
 function Trig_Soul_Tower_Soul_Extraction_Conditions()
@@ -15904,6 +15945,7 @@ InitTrig_Crit_System()
 InitTrig_Crit_Aura()
 InitTrig_Venom_Tower_Random_Target()
 InitTrig_Ballista_Tower_Enchanted_Bolts()
+InitTrig_Shrapnel_Tower_Shrapnel_Blast()
 InitTrig_Soul_Tower_Soul_Extraction()
 InitTrig_Soul_Tower_Minion_Remove_From_Group()
 InitTrig_Shard_Tower_Abilities()
