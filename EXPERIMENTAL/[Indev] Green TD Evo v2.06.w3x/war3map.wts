@@ -16617,7 +16617,7 @@ STRING 2513
 }
 
 STRING 2515
-// Abilities: A049 (Random Game Modes + Difficulty), Hotkey (Hotkey - Normal)
+// Units: h02L (Hellfire Tower 4: Hell Shrine), Hotkey (Hotkey)
 {
 X
 }
@@ -16629,7 +16629,7 @@ STRING 2516
 }
 
 STRING 2518
-// Abilities: A04H (Bouncing Attack), Tip (Tooltip - Normal)
+// Abilities: Amgr (Bouncing Attack), Tip (Tooltip - Normal)
 {
 |c0000ff00Bouncing Attack|r
 }
@@ -16980,7 +16980,7 @@ Watch Tower, Ultimate Ballista Tower
 }
 
 STRING 2567
-// Units: h02L (Hellfire Tower 4: Hell Shrine), Hotkey (Hotkey)
+// Units: n00X (Shard Tower 4: Frozen Obelisk), Hotkey (Hotkey)
 {
 X
 }
@@ -18121,7 +18121,7 @@ STRING 2718
 }
 
 STRING 2719
-// Abilities: A04H (Bouncing Attack), Name (Name)
+// Abilities: Amgr (Bouncing Attack), Name (Name)
 {
 Bouncing Attack
 }
@@ -18880,7 +18880,7 @@ STRING 2838
 }
 
 STRING 2839
-// Units: n00X (Shard Tower 4: Frozen Obelisk), Hotkey (Hotkey)
+// Units: n020 (Rocket Tower 4: War Machine), Hotkey (Hotkey)
 {
 X
 }
@@ -20112,13 +20112,13 @@ STRING 3014
 }
 
 STRING 3015
-// Units: n020 (Rocket Tower 4: War Machine), Hotkey (Hotkey)
+// Units: e009 (Shrapnel Tower 4: Goblin Shredder), Hotkey (Hotkey)
 {
 X
 }
 
 STRING 3016
-// Units: e009 (Shrapnel Tower 4: Goblin Shredder), Hotkey (Hotkey)
+// Abilities: A01B (Stasis Trap), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -20130,7 +20130,7 @@ Z
 }
 
 STRING 3018
-// Abilities: A01B (Stasis Trap), Hotkey (Hotkey - Normal)
+// Abilities: A012 (Emergency Siege Tower), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -20142,7 +20142,7 @@ Z
 }
 
 STRING 3020
-// Abilities: A012 (Emergency Siege Tower), Hotkey (Hotkey - Normal)
+// Abilities: A01Y (Emergency Siege Tower), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -20450,13 +20450,13 @@ STRING 3064
 }
 
 STRING 3065
-// Abilities: A01K (Immolation), Hotkey (Hotkey - Normal)
+// Units: h00L (Ballista Tower 7), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 3066
-// Abilities: A01K (Immolation), Unhotkey (Hotkey - Turn Off)
+// Units: h00O (Ballista Tower 6), Hotkey (Hotkey)
 {
 Z
 }
@@ -20468,19 +20468,19 @@ Rocket Damage
 }
 
 STRING 3068
-// Abilities: A020 (3 - Decrease Zoom), Hotkey (Hotkey - Normal)
+// Units: h00P (Ballista Tower 5), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 3069
-// Abilities: A02M (Chaos Mode), Hotkey (Hotkey - Normal)
+// Units: h00R (Ballista Tower 8), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 3070
-// Abilities: A02Q (Disable Aura Tower), Hotkey (Hotkey - Normal)
+// Units: h00S (Ballista Tower 9), Hotkey (Hotkey)
 {
 Z
 }
@@ -20492,7 +20492,7 @@ Increased Damage from Overdrive
 }
 
 STRING 3072
-// Abilities: A048 (Random Game Modes), Hotkey (Hotkey - Normal)
+// Units: h00J (Flak Tower 5), Hotkey (Hotkey)
 {
 Z
 }
@@ -20744,7 +20744,7 @@ W
 }
 
 STRING 3207
-// Units: h00L (Ballista Tower 7), Hotkey (Hotkey)
+// Units: h00T (Flak Tower 6), Hotkey (Hotkey)
 {
 Z
 }
@@ -20768,13 +20768,13 @@ D
 }
 
 STRING 3266
-// Units: h00O (Ballista Tower 6), Hotkey (Hotkey)
+// Units: h00Y (Flak Tower 7), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 3267
-// Units: h00P (Ballista Tower 5), Hotkey (Hotkey)
+// Units: h00Z (Flak Tower 8), Hotkey (Hotkey)
 {
 Z
 }
@@ -21356,7 +21356,7 @@ S
 }
 
 STRING 4338
-// Abilities: A01Y (Emergency Siege Tower), Hotkey (Hotkey - Normal)
+// Abilities: A028 (Debug), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -21451,19 +21451,19 @@ This unit is under the effect of a Damage Aura, It has Increased Attack Damage.
 }
 
 STRING 4480
-// Abilities: A028 (Debug), Hotkey (Hotkey - Normal)
-{
-X
-}
-
-STRING 4481
 // Abilities: A02P (Disable Traps), Hotkey (Hotkey - Normal)
 {
 X
 }
 
-STRING 4484
+STRING 4481
 // Abilities: A047 (Game Modes), Hotkey (Hotkey - Normal)
+{
+X
+}
+
+STRING 4484
+// Abilities: A049 (Random Game Modes + Difficulty), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -21881,7 +21881,7 @@ V
 }
 
 STRING 5619
-// Units: h00R (Ballista Tower 8), Hotkey (Hotkey)
+// Units: h010 (Flak Tower 9), Hotkey (Hotkey)
 {
 Z
 }
@@ -22067,7 +22067,7 @@ STRING 5846
 }
 
 STRING 5892
-// Abilities: Amgr (Bouncing Attack), Name (Name)
+// Abilities: A04H (Bouncing Attack), Name (Name)
 {
 Bouncing Attack
 }
@@ -22171,7 +22171,7 @@ C
 }
 
 STRING 5968
-// Units: h00S (Ballista Tower 9), Hotkey (Hotkey)
+// Units: h011 (Mortar Team, Ultimate Flak Tower), Hotkey (Hotkey)
 {
 Z
 }
@@ -22195,7 +22195,7 @@ Research Tower 2: Tinker
 }
 
 STRING 6087
-// Abilities: Amgr (Bouncing Attack), Tip (Tooltip - Normal)
+// Abilities: A04H (Bouncing Attack), Tip (Tooltip - Normal)
 {
 |c0000ff00Bouncing Attack|r
 }
@@ -22775,7 +22775,7 @@ Sell - 20% Gold Return
 }
 
 STRING 6917
-// Units: h00J (Flak Tower 5), Hotkey (Hotkey)
+// Units: h016 (Fel Tower 5: Warlock), Hotkey (Hotkey)
 {
 Z
 }
@@ -22903,337 +22903,337 @@ Sell - 20% Gold Return
 }
 
 STRING 6994
-// Units: h00T (Flak Tower 6), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 6995
-// Units: h00Y (Flak Tower 7), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 6996
-// Units: h00Z (Flak Tower 8), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 6997
-// Units: h010 (Flak Tower 9), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 6998
-// Units: h011 (Mortar Team, Ultimate Flak Tower), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 7010
-// Units: h016 (Fel Tower 5: Warlock), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 7012
 // Units: h018 (Ultimate Fel Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7014
+STRING 6995
 // Units: h01A (Fel Tower 7: Warlock), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7016
+STRING 6996
 // Units: h01D (Fel Tower 8: Warlock), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7018
+STRING 6997
 // Units: h01F (Fel Tower 6: Warlock), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7020
+STRING 6998
 // Units: h01G (Fel Tower 9: Warlock), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7021
+STRING 7010
 // Units: h017 (Venom Tower 5: Lizard), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7023
+STRING 7012
 // Units: h01M (Venom Tower 6: Lizard), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7025
+STRING 7014
 // Units: h01P (Venom Tower 7: Lizard), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7027
+STRING 7016
 // Units: h01Q (Venom Tower 8: Lizard), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7029
+STRING 7018
 // Units: h01R (Venom Tower 9: Lizard), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7031
+STRING 7020
 // Units: h01S (Ultimate Venom Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7033
+STRING 7021
 // Units: h01Z (Hellfire Tower 8: Hell Shrine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7034
+STRING 7023
 // Units: h02C (Hellfire Tower 9: Hell Shrine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7035
+STRING 7025
 // Units: h02D (Ultimate Hellfire Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7036
+STRING 7027
 // Units: h02E (Hellfire Tower 5: Hell Shrine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7037
+STRING 7029
 // Units: h02H (Hellfire Tower 7: Hell Shrine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7038
+STRING 7031
 // Units: h02K (Hellfire Tower 6: Hell Shrine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7039
+STRING 7033
 // Units: h02M (Soul Tower 7: Runic Crystal), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7040
+STRING 7034
 // Units: h043 (Soul Tower 6: Runic Crystal), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7041
+STRING 7035
 // Units: h044 (Soul Tower 5: Runic Crystal), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7063
+STRING 7036
 // Units: h045 (Soul Tower 8: Runic Crystal), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7064
+STRING 7037
 // Units: h046 (Soul Tower 9: Runic Crystal), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7065
+STRING 7038
 // Units: h047 (Ultimate Soul Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7066
+STRING 7039
 // Units: n01E (Shard Tower 5: Frozen Obelisk), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7067
+STRING 7040
 // Units: n01F (Shard Tower 6: Frozen Obelisk), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7068
+STRING 7041
 // Units: n01L (Shard Tower 7: Frozen Obelisk), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7069
+STRING 7063
 // Units: n01M (Shard Tower 8: Frozen Obelisk), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7071
+STRING 7064
 // Units: n01N (Shard Tower 9: Frozen Obelisk), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7072
+STRING 7065
 // Units: n01O (Frozen Obelisk, UIltimate Shard Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7073
+STRING 7066
 // Units: n01Q (Spirit Tower 5: Winter Beacon), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7075
+STRING 7067
 // Units: n01R (Spirit Tower 6: Winter Beacon), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7077
+STRING 7068
 // Units: n01S (Spirit Tower 7: Winter Beacon), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7078
+STRING 7069
 // Units: n01T (Spirit Tower 8: Winter Beacon), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7079
+STRING 7071
 // Units: n01U (Spirit Tower 9: Winter Beacon), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7080
+STRING 7072
 // Units: n01V (Winter Beacon, Ultimate Spirit Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7081
+STRING 7073
 // Units: n01W (War Machine, Ultimate Rocket Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7082
+STRING 7075
 // Units: n01X (Rocket Tower 7: War Machine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7083
+STRING 7077
 // Units: n01Y (Rocket Tower 6: War Machine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7084
+STRING 7078
 // Units: n01Z (Rocket Tower 5: War Machine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7085
+STRING 7079
 // Units: n021 (Rocket Tower 8: War Machine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7086
+STRING 7080
 // Units: n022 (Rocket Tower 9: War Machine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7087
+STRING 7081
 // Units: e00C (Goblin Shredder, Ultimate Shrapnel Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7088
+STRING 7082
 // Units: e00D (Shrapnel Tower 9: Goblin Shredder), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7089
+STRING 7083
 // Units: e00S (Shrapnel Tower 8: Goblin Shredder), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7090
+STRING 7084
 // Units: e00T (Shrapnel Tower 7: Goblin Shredder), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7091
+STRING 7085
 // Units: e00U (Shrapnel Tower 6: Goblin Shredder), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7092
+STRING 7086
 // Units: e00V (Shrapnel Tower 5: Goblin Shredder), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7093
+STRING 7087
 // Abilities: A01J (Slow), Hotkey (Hotkey - Normal)
 {
 Z
 }
 
-STRING 7094
+STRING 7088
 // Abilities: A01J (Slow), Unhotkey (Hotkey - Turn Off)
 {
 Z
 }
 
-STRING 7095
+STRING 7089
 // Abilities: A023 (Upgrade Trap Ability), Hotkey (Hotkey - Normal)
+{
+Z
+}
+
+STRING 7090
+// Abilities: A01K (Immolation), Hotkey (Hotkey - Normal)
+{
+Z
+}
+
+STRING 7091
+// Abilities: A01K (Immolation), Unhotkey (Hotkey - Turn Off)
+{
+Z
+}
+
+STRING 7092
+// Abilities: A020 (3 - Decrease Zoom), Hotkey (Hotkey - Normal)
+{
+Z
+}
+
+STRING 7093
+// Abilities: A02M (Chaos Mode), Hotkey (Hotkey - Normal)
+{
+Z
+}
+
+STRING 7094
+// Abilities: A02Q (Disable Aura Tower), Hotkey (Hotkey - Normal)
+{
+Z
+}
+
+STRING 7095
+// Abilities: A048 (Random Game Modes), Hotkey (Hotkey - Normal)
 {
 Z
 }

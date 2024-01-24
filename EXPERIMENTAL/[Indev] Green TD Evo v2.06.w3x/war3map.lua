@@ -257,7 +257,7 @@ udg_Real_Array_ShardTowerChance = __jarray(0.0)
 udg_Real_Array_BrainfreezeChance = __jarray(0.0)
 udg_Real_Array_AqRange = __jarray(0.0)
 udg_String_Array_Alpharius = __jarray("")
-udg_String_Array_MBStaticWaveText = __jarray("")
+udg_String_Array_MBWaveModifier = __jarray("")
 udg_String_Array_MBStaticWArmIcons = __jarray("")
 udg_Real_OrkSize = 0.0
 udg_String_Array_MBStatWavUniIcons = __jarray("")
@@ -360,6 +360,7 @@ gg_trg_Crit_System = nil
 gg_trg_Crit_Aura = nil
 gg_trg_Venom_Tower_Random_Target = nil
 gg_trg_Ballista_Tower_Enchanted_Bolts = nil
+gg_trg_Shrapnel_Tower_Shrapnel_Blast = nil
 gg_trg_Soul_Tower_Soul_Extraction = nil
 gg_trg_Soul_Tower_Minion_Remove_From_Group = nil
 gg_trg_Shard_Tower_Abilities = nil
@@ -548,7 +549,6 @@ gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
-gg_trg_Shrapnel_Tower_Shrapnel_Blast = nil
 function InitGlobals()
 local i = 0
 
@@ -1123,7 +1123,7 @@ end
 i = 0
 while (true) do
 if ((i > 1)) then break end
-udg_String_Array_MBStaticWaveText[i] = ""
+udg_String_Array_MBWaveModifier[i] = ""
 i = i + 1
 end
 i = 0
@@ -3110,53 +3110,53 @@ TriggerAddCondition(gg_trg_Rocket_Tower, Condition(Trig_Rocket_Tower_Conditions)
 TriggerAddAction(gg_trg_Rocket_Tower, Trig_Rocket_Tower_Actions)
 end
 
-function Trig_Set_Variables_Func258001()
+function Trig_Set_Variables_Func250001()
 return (GetPlayerSlotState(Player(0)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func259001()
+function Trig_Set_Variables_Func251001()
 return (GetPlayerSlotState(Player(1)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func260001()
+function Trig_Set_Variables_Func252001()
 return (GetPlayerSlotState(Player(2)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func261001()
+function Trig_Set_Variables_Func253001()
 return (GetPlayerSlotState(Player(3)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func262001()
+function Trig_Set_Variables_Func254001()
 return (GetPlayerSlotState(Player(4)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func263001()
+function Trig_Set_Variables_Func255001()
 return (GetPlayerSlotState(Player(5)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func264001()
+function Trig_Set_Variables_Func256001()
 return (GetPlayerSlotState(Player(6)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func265001()
+function Trig_Set_Variables_Func257001()
 return (GetPlayerSlotState(Player(7)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func266001()
+function Trig_Set_Variables_Func258001()
 return (GetPlayerSlotState(Player(8)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func267Func003C()
+function Trig_Set_Variables_Func259Func003C()
 if (not (GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_LEFT)) then
 return false
 end
 return true
 end
 
-function Trig_Set_Variables_Func267A()
+function Trig_Set_Variables_Func259A()
 udg_String_Array_PlayerNames[GetConvertedPlayerId(GetEnumPlayer())] = (udg_String_Array_MultiBoardColours[GetConvertedPlayerId(GetEnumPlayer())] .. (GetPlayerName(GetEnumPlayer()) .. "|r"))
 udg_Real_Array_CameraDistance[GetConvertedPlayerId(GetEnumPlayer())] = 2500.00
-if (Trig_Set_Variables_Func267Func003C()) then
+if (Trig_Set_Variables_Func259Func003C()) then
 ForceRemovePlayerSimple(GetEnumPlayer(), udg_PlayerGroup_PlyGrpArray[1])
 else
 udg_Integer_Players = (udg_Integer_Players + 1)
@@ -3226,13 +3226,6 @@ udg_String_Array_MBStatWavUniIcons[57] = "ReplaceableTextures\\CommandButtons\\B
 udg_String_Array_MBStatWavUniIcons[58] = "ReplaceableTextures\\CommandButtons\\BTNNagaMyrmidonRoyalGuard.blp"
 udg_String_Array_MBStatWavUniIcons[59] = "ReplaceableTextures\\CommandButtons\\BTNSeaWitch.blp"
 udg_String_Array_MBStatWavUniIcons[60] = "ReplaceableTextures\\CommandButtons\\BTNNagaMyrmidon.blp"
-udg_String_Array_MBStaticWaveText[1] = "Light"
-udg_String_Array_MBStaticWaveText[2] = "Medium"
-udg_String_Array_MBStaticWaveText[3] = "Heavy"
-udg_String_Array_MBStaticWaveText[4] = "Fortified - Ground"
-udg_String_Array_MBStaticWaveText[5] = "Fortified - Air"
-udg_String_Array_MBStaticWaveText[6] = "Divine - Immune"
-udg_String_Array_MBStaticWaveText[7] = "Hero"
 udg_String_Array_Alpharius[1] = "I am Alpharius"
 udg_String_Array_Alpharius[2] = "We are Alpharius"
 udg_String_Array_Alpharius[3] = "You are Alpharius"
@@ -3414,52 +3407,52 @@ udg_String_Array_TowerEnabled[GetForLoopIndexA()] = "|c0077ff77Enabled"
 udg_Integer_Array_TowerOption[GetForLoopIndexA()] = 1
 bj_forLoopAIndex = bj_forLoopAIndex + 1
 end
-if (Trig_Set_Variables_Func258001()) then
+if (Trig_Set_Variables_Func250001()) then
 ForceAddPlayerSimple(Player(0), udg_PlayerGroup_PlyGrpArray[1])
 else
 DoNothing()
 end
-if (Trig_Set_Variables_Func259001()) then
+if (Trig_Set_Variables_Func251001()) then
 ForceAddPlayerSimple(Player(1), udg_PlayerGroup_PlyGrpArray[1])
 else
 DoNothing()
 end
-if (Trig_Set_Variables_Func260001()) then
+if (Trig_Set_Variables_Func252001()) then
 ForceAddPlayerSimple(Player(2), udg_PlayerGroup_PlyGrpArray[1])
 else
 DoNothing()
 end
-if (Trig_Set_Variables_Func261001()) then
+if (Trig_Set_Variables_Func253001()) then
 ForceAddPlayerSimple(Player(3), udg_PlayerGroup_PlyGrpArray[1])
 else
 DoNothing()
 end
-if (Trig_Set_Variables_Func262001()) then
+if (Trig_Set_Variables_Func254001()) then
 ForceAddPlayerSimple(Player(4), udg_PlayerGroup_PlyGrpArray[1])
 else
 DoNothing()
 end
-if (Trig_Set_Variables_Func263001()) then
+if (Trig_Set_Variables_Func255001()) then
 ForceAddPlayerSimple(Player(5), udg_PlayerGroup_PlyGrpArray[1])
 else
 DoNothing()
 end
-if (Trig_Set_Variables_Func264001()) then
+if (Trig_Set_Variables_Func256001()) then
 ForceAddPlayerSimple(Player(6), udg_PlayerGroup_PlyGrpArray[1])
 else
 DoNothing()
 end
-if (Trig_Set_Variables_Func265001()) then
+if (Trig_Set_Variables_Func257001()) then
 ForceAddPlayerSimple(Player(7), udg_PlayerGroup_PlyGrpArray[1])
 else
 DoNothing()
 end
-if (Trig_Set_Variables_Func266001()) then
+if (Trig_Set_Variables_Func258001()) then
 ForceAddPlayerSimple(Player(8), udg_PlayerGroup_PlyGrpArray[1])
 else
 DoNothing()
 end
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Set_Variables_Func267A)
+ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Set_Variables_Func259A)
 udg_Real_Array_MessageTime[1] = 60.00
 end
 
@@ -8756,44 +8749,44 @@ end
 return true
 end
 
-function Trig_Start_Static_Waves_Func013Func003Func002Func001A()
+function Trig_Start_Static_Waves_Func013Func002Func002Func001A()
 DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], ("|c008000FFWave " .. (I2S(udg_Integer_WaveNumber) .. " of 60.|r [Air Creeps]")))
 end
 
-function Trig_Start_Static_Waves_Func013Func003Func002Func002A()
+function Trig_Start_Static_Waves_Func013Func002Func002Func002A()
 DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], ("|c008000FFWave " .. (I2S(udg_Integer_WaveNumber) .. (" of 60.|r [Air Creeps]" .. (" Health Multiplier is now set at " .. udg_String_Array_ChaosMultiplier[1])))))
 end
 
-function Trig_Start_Static_Waves_Func013Func003Func002C()
+function Trig_Start_Static_Waves_Func013Func002Func002C()
 if (not (udg_Integer_ChaosModeOn == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Start_Static_Waves_Func013Func003Func007Func001A()
+function Trig_Start_Static_Waves_Func013Func002Func007Func001A()
 DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], ("|c008000FFWave " .. (I2S(udg_Integer_WaveNumber) .. " of 60.|r [Air Creeps]")))
 end
 
-function Trig_Start_Static_Waves_Func013Func003Func007Func002A()
+function Trig_Start_Static_Waves_Func013Func002Func007Func002A()
 DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], ("|c008000FFWave " .. (I2S(udg_Integer_WaveNumber) .. (" of 60.|r [Air Creeps]" .. (" Health Multiplier is now set at " .. udg_String_Array_ChaosMultiplier[1])))))
 end
 
-function Trig_Start_Static_Waves_Func013Func003Func007C()
+function Trig_Start_Static_Waves_Func013Func002Func007C()
 if (not (udg_Integer_ChaosModeOn == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Start_Static_Waves_Func013Func003C()
+function Trig_Start_Static_Waves_Func013Func002C()
 if (not (udg_Integer_BlitzMode == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Start_Static_Waves_Func013Func004C()
+function Trig_Start_Static_Waves_Func013Func003C()
 if (udg_Integer_WaveNumber == 7) then
 return true
 end
@@ -8822,50 +8815,50 @@ return false
 end
 
 function Trig_Start_Static_Waves_Func013C()
-if (not Trig_Start_Static_Waves_Func013Func004C()) then
+if (not Trig_Start_Static_Waves_Func013Func003C()) then
 return false
 end
 return true
 end
 
-function Trig_Start_Static_Waves_Func015Func003Func002Func001A()
+function Trig_Start_Static_Waves_Func015Func002Func002Func001A()
 DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], ("|c008000FFWave " .. (I2S(udg_Integer_WaveNumber) .. " of 60.|r [Divine Creeps]")))
 end
 
-function Trig_Start_Static_Waves_Func015Func003Func002Func002A()
+function Trig_Start_Static_Waves_Func015Func002Func002Func002A()
 DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], ("|c008000FFWave " .. (I2S(udg_Integer_WaveNumber) .. (" of 60.|r [Divine Creeps]" .. (" Health Multiplier is now set at " .. udg_String_Array_ChaosMultiplier[1])))))
 end
 
-function Trig_Start_Static_Waves_Func015Func003Func002C()
+function Trig_Start_Static_Waves_Func015Func002Func002C()
 if (not (udg_Integer_ChaosModeOn == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Start_Static_Waves_Func015Func003Func007Func001A()
+function Trig_Start_Static_Waves_Func015Func002Func007Func001A()
 DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], ("|c008000FFWave " .. (I2S(udg_Integer_WaveNumber) .. " of 60.|r [Divine Creeps]")))
 end
 
-function Trig_Start_Static_Waves_Func015Func003Func007Func002A()
+function Trig_Start_Static_Waves_Func015Func002Func007Func002A()
 DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], ("|c008000FFWave " .. (I2S(udg_Integer_WaveNumber) .. (" of 60.|r [Divine Creeps]" .. (" Health Multiplier is now set at " .. udg_String_Array_ChaosMultiplier[1])))))
 end
 
-function Trig_Start_Static_Waves_Func015Func003Func007C()
+function Trig_Start_Static_Waves_Func015Func002Func007C()
 if (not (udg_Integer_ChaosModeOn == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Start_Static_Waves_Func015Func003C()
+function Trig_Start_Static_Waves_Func015Func002C()
 if (not (udg_Integer_BlitzMode == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Start_Static_Waves_Func015Func004C()
+function Trig_Start_Static_Waves_Func015Func003C()
 if (udg_Integer_WaveNumber == 5) then
 return true
 end
@@ -8906,50 +8899,50 @@ return false
 end
 
 function Trig_Start_Static_Waves_Func015C()
-if (not Trig_Start_Static_Waves_Func015Func004C()) then
+if (not Trig_Start_Static_Waves_Func015Func003C()) then
 return false
 end
 return true
 end
 
-function Trig_Start_Static_Waves_Func017Func004Func001Func001A()
+function Trig_Start_Static_Waves_Func017Func003Func001Func001A()
 DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], ("|c008000FFWave " .. (I2S(udg_Integer_WaveNumber) .. " of 60.|r [Hero Creeps]")))
 end
 
-function Trig_Start_Static_Waves_Func017Func004Func001Func002A()
+function Trig_Start_Static_Waves_Func017Func003Func001Func002A()
 DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], ("|c008000FFWave " .. (I2S(udg_Integer_WaveNumber) .. (" of 60.|r [Hero Creeps]" .. (" Health Multiplier is now set at " .. udg_String_Array_ChaosMultiplier[1])))))
 end
 
-function Trig_Start_Static_Waves_Func017Func004Func001C()
+function Trig_Start_Static_Waves_Func017Func003Func001C()
 if (not (udg_Integer_ChaosModeOn == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Start_Static_Waves_Func017Func004Func006Func001A()
+function Trig_Start_Static_Waves_Func017Func003Func006Func001A()
 DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], ("|c008000FFWave " .. (I2S(udg_Integer_WaveNumber) .. " of 60.|r [Hero Creeps]")))
 end
 
-function Trig_Start_Static_Waves_Func017Func004Func006Func002A()
+function Trig_Start_Static_Waves_Func017Func003Func006Func002A()
 DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], ("|c008000FFWave " .. (I2S(udg_Integer_WaveNumber) .. (" of 60.|r [Hero Creeps]" .. (" Health Multiplier is now set at " .. udg_String_Array_ChaosMultiplier[1])))))
 end
 
-function Trig_Start_Static_Waves_Func017Func004Func006C()
+function Trig_Start_Static_Waves_Func017Func003Func006C()
 if (not (udg_Integer_ChaosModeOn == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Start_Static_Waves_Func017Func004C()
+function Trig_Start_Static_Waves_Func017Func003C()
 if (not (udg_Integer_BlitzMode == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Start_Static_Waves_Func017Func005C()
+function Trig_Start_Static_Waves_Func017Func004C()
 if (udg_Integer_WaveNumber == 39) then
 return true
 end
@@ -8990,7 +8983,7 @@ return false
 end
 
 function Trig_Start_Static_Waves_Func017C()
-if (not Trig_Start_Static_Waves_Func017Func005C()) then
+if (not Trig_Start_Static_Waves_Func017Func004C()) then
 return false
 end
 return true
@@ -9026,29 +9019,29 @@ end
 return true
 end
 
-function Trig_Start_Static_Waves_Func021Func007C()
+function Trig_Start_Static_Waves_Func021Func006C()
 if (not (udg_Integer_BlitzMode == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Start_Static_Waves_Func021Func008001()
+function Trig_Start_Static_Waves_Func021Func007001()
 return (udg_Integer_EndlessMode == 1)
 end
 
-function Trig_Start_Static_Waves_Func021Func008002()
+function Trig_Start_Static_Waves_Func021Func007002()
 return (udg_Integer_WaveNumber >= 61)
 end
 
 function Trig_Start_Static_Waves_Func021C()
-if (not GetBooleanAnd(Trig_Start_Static_Waves_Func021Func008001(), Trig_Start_Static_Waves_Func021Func008002())) then
+if (not GetBooleanAnd(Trig_Start_Static_Waves_Func021Func007001(), Trig_Start_Static_Waves_Func021Func007002())) then
 return false
 end
 return true
 end
 
-function Trig_Start_Static_Waves_Func023Func009C()
+function Trig_Start_Static_Waves_Func023Func008C()
 if (not (udg_Integer_WaveNumber >= 61)) then
 return false
 end
@@ -9059,7 +9052,7 @@ return true
 end
 
 function Trig_Start_Static_Waves_Func023C()
-if (not Trig_Start_Static_Waves_Func023Func009C()) then
+if (not Trig_Start_Static_Waves_Func023Func008C()) then
 return false
 end
 return true
@@ -9112,22 +9105,22 @@ else
 end
 if (Trig_Start_Static_Waves_Func013C()) then
 TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update_Copy)
-if (Trig_Start_Static_Waves_Func013Func003C()) then
+if (Trig_Start_Static_Waves_Func013Func002C()) then
 udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
-if (Trig_Start_Static_Waves_Func013Func003Func002C()) then
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func013Func003Func002Func002A)
+if (Trig_Start_Static_Waves_Func013Func002Func002C()) then
+ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func013Func002Func002Func002A)
 else
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func013Func003Func002Func001A)
+ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func013Func002Func002Func001A)
 end
 EnableTrigger(gg_trg_Static_Wave_Spawning_System)
 PlaySoundBJ(gg_snd_Wave_Air)
 else
 EnableTrigger(gg_trg_Timer)
 TriggerSleepAction(udg_Real_SpawnTime)
-if (Trig_Start_Static_Waves_Func013Func003Func007C()) then
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func013Func003Func007Func002A)
+if (Trig_Start_Static_Waves_Func013Func002Func007C()) then
+ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func013Func002Func007Func002A)
 else
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func013Func003Func007Func001A)
+ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func013Func002Func007Func001A)
 end
 EnableTrigger(gg_trg_Static_Wave_Spawning_System)
 PlaySoundBJ(gg_snd_Wave_Air)
@@ -9136,22 +9129,22 @@ else
 end
 if (Trig_Start_Static_Waves_Func015C()) then
 TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update_Copy)
-if (Trig_Start_Static_Waves_Func015Func003C()) then
+if (Trig_Start_Static_Waves_Func015Func002C()) then
 udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
-if (Trig_Start_Static_Waves_Func015Func003Func002C()) then
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func015Func003Func002Func002A)
+if (Trig_Start_Static_Waves_Func015Func002Func002C()) then
+ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func015Func002Func002Func002A)
 else
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func015Func003Func002Func001A)
+ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func015Func002Func002Func001A)
 end
 EnableTrigger(gg_trg_Static_Wave_Spawning_System)
 PlaySoundBJ(gg_snd_Wave_Immune)
 else
 EnableTrigger(gg_trg_Timer)
 TriggerSleepAction(udg_Real_SpawnTime)
-if (Trig_Start_Static_Waves_Func015Func003Func007C()) then
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func015Func003Func007Func002A)
+if (Trig_Start_Static_Waves_Func015Func002Func007C()) then
+ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func015Func002Func007Func002A)
 else
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func015Func003Func007Func001A)
+ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func015Func002Func007Func001A)
 end
 EnableTrigger(gg_trg_Static_Wave_Spawning_System)
 PlaySoundBJ(gg_snd_Wave_Immune)
@@ -9161,21 +9154,21 @@ end
 if (Trig_Start_Static_Waves_Func017C()) then
 TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update_Copy)
 udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
-if (Trig_Start_Static_Waves_Func017Func004C()) then
-if (Trig_Start_Static_Waves_Func017Func004Func001C()) then
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func017Func004Func001Func002A)
+if (Trig_Start_Static_Waves_Func017Func003C()) then
+if (Trig_Start_Static_Waves_Func017Func003Func001C()) then
+ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func017Func003Func001Func002A)
 else
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func017Func004Func001Func001A)
+ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func017Func003Func001Func001A)
 end
 EnableTrigger(gg_trg_Static_Wave_Spawning_System)
 PlaySoundBJ(gg_snd_Wave_Hero)
 else
 EnableTrigger(gg_trg_Timer)
 TriggerSleepAction(udg_Real_SpawnTime)
-if (Trig_Start_Static_Waves_Func017Func004Func006C()) then
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func017Func004Func006Func002A)
+if (Trig_Start_Static_Waves_Func017Func003Func006C()) then
+ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func017Func003Func006Func002A)
 else
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func017Func004Func006Func001A)
+ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func017Func003Func006Func001A)
 end
 EnableTrigger(gg_trg_Static_Wave_Spawning_System)
 PlaySoundBJ(gg_snd_Wave_Hero)
@@ -9203,7 +9196,7 @@ udg_Real_CreepHealthMultiplier = (udg_Real_CreepHealthMultiplier + udg_Real_Arra
 TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update_Copy)
 udg_UnitType_Array_UnitsTypes[udg_Integer_WaveNumber] = udg_UnitType_Array_EndWaveArmor[GetRandomInt(1, 6)]
 udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
-if (Trig_Start_Static_Waves_Func021Func007C()) then
+if (Trig_Start_Static_Waves_Func021Func006C()) then
 DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], ("|c008000FFWave " .. (I2S(udg_Integer_WaveNumber) .. (" of Endless Mode.|r [Endless Creeps] Health Multiplier is now set to " .. R2S(udg_Real_CreepHealthMultiplier)))))
 EnableTrigger(gg_trg_Static_Wave_Spawning_System)
 PlaySoundBJ(gg_snd_Wave_Normal)
@@ -10215,6 +10208,7 @@ udg_String_RWBossWaveText = (udg_String_RWBossWaveText .. (I2S(GetForLoopIndexA(
 udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()] = GetRandomInt(1, 4)
 udg_Real_Array_RandomWaveBounty[GetForLoopIndexA()] = (((I2R(GetForLoopIndexA()) + (30.00 + I2R(udg_Integer_WaveNumber))) * udg_Real_CreepHealthMultiplier) * 20.00)
 udg_Integer_Array_RWBounty[GetForLoopIndexA()] = R2I(udg_Real_Array_RandomWaveBounty[GetForLoopIndexA()])
+udg_String_Array_MBWaveModifier[GetForLoopIndexA()] = " + Boss"
 else
 udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()] = GetRandomInt(10, 30)
 udg_Real_Array_RandomWaveBounty[GetForLoopIndexA()] = (((I2R(GetForLoopIndexA()) + 20.00) * udg_Real_CreepHealthMultiplier) * 20.00)
@@ -10243,32 +10237,39 @@ udg_Integer_Array_RWUnitType[GetForLoopIndexA()] = GetRandomInt(1, 7)
 if (Trig_Generate_Random_Waves_Func001Func013C()) then
 udg_UnitType_Array_RWSpawnUnit[GetForLoopIndexA()] = udg_UnitType_Array_RWAir[GetRandomInt(1, 43)]
 udg_String_AirWavesText = (udg_String_AirWavesText .. (I2S(GetForLoopIndexA()) .. ", "))
+udg_String_Array_WaveType[GetForLoopIndexA()] = ("[Air" .. (udg_String_Array_MBWaveModifier[GetForLoopIndexA()] .. "]"))
 else
 end
 if (Trig_Generate_Random_Waves_Func001Func015C()) then
 udg_UnitType_Array_RWSpawnUnit[GetForLoopIndexA()] = udg_UnitType_Array_RWHero[GetRandomInt(1, 43)]
 udg_String_HeroWavesText = (udg_String_HeroWavesText .. (I2S(GetForLoopIndexA()) .. ", "))
+udg_String_Array_WaveType[GetForLoopIndexA()] = ("[Hero" .. (udg_String_Array_MBWaveModifier[GetForLoopIndexA()] .. "]"))
 else
 end
 if (Trig_Generate_Random_Waves_Func001Func017C()) then
 udg_UnitType_Array_RWSpawnUnit[GetForLoopIndexA()] = udg_UnitType_Array_RWImmune[GetRandomInt(1, 43)]
 udg_String_DivineWavesText = (udg_String_DivineWavesText .. (I2S(GetForLoopIndexA()) .. ", "))
+udg_String_Array_WaveType[GetForLoopIndexA()] = ("[Divine" .. (udg_String_Array_MBWaveModifier[GetForLoopIndexA()] .. "]"))
 else
 end
 if (Trig_Generate_Random_Waves_Func001Func019C()) then
 udg_UnitType_Array_RWSpawnUnit[GetForLoopIndexA()] = udg_UnitType_Array_RWFortified[GetRandomInt(1, 43)]
+udg_String_Array_WaveType[GetForLoopIndexA()] = ("[Fortified" .. (udg_String_Array_MBWaveModifier[GetForLoopIndexA()] .. "]"))
 else
 end
 if (Trig_Generate_Random_Waves_Func001Func021C()) then
 udg_UnitType_Array_RWSpawnUnit[GetForLoopIndexA()] = udg_UnitType_Array_RWHeavy[GetRandomInt(1, 43)]
+udg_String_Array_WaveType[GetForLoopIndexA()] = ("[Heavy" .. (udg_String_Array_MBWaveModifier[GetForLoopIndexA()] .. "]"))
 else
 end
 if (Trig_Generate_Random_Waves_Func001Func023C()) then
 udg_UnitType_Array_RWSpawnUnit[GetForLoopIndexA()] = udg_UnitType_Array_RWLight[GetRandomInt(1, 43)]
+udg_String_Array_WaveType[GetForLoopIndexA()] = ("[Light" .. (udg_String_Array_MBWaveModifier[GetForLoopIndexA()] .. "]"))
 else
 end
 if (Trig_Generate_Random_Waves_Func001Func025C()) then
 udg_UnitType_Array_RWSpawnUnit[GetForLoopIndexA()] = udg_UnitType_Array_RWMedium[GetRandomInt(1, 43)]
+udg_String_Array_WaveType[GetForLoopIndexA()] = ("[Medium" .. (udg_String_Array_MBWaveModifier[GetForLoopIndexA()] .. "]"))
 else
 end
 bj_forLoopAIndex = bj_forLoopAIndex + 1
@@ -12637,10 +12638,10 @@ end
 end
 end
 else
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, udg_String_Array_WaveType[udg_Integer_Array_RWUnitType[udg_Integer_WaveNumber]])
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, udg_String_Array_WaveType[udg_Integer_WaveNumber])
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, udg_String_Array_ImageFile[udg_Integer_Array_RWUnitType[udg_Integer_WaveNumber]])
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, udg_String_Array_WaveType[udg_Integer_Array_RWUnitType[(udg_Integer_WaveNumber + 1)]])
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, udg_String_Array_WaveType[(udg_Integer_WaveNumber + 1)])
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, udg_String_Array_ImageFile[udg_Integer_Array_RWUnitType[(udg_Integer_WaveNumber + 1)]])
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp")
 end
