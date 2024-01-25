@@ -268,6 +268,9 @@ udg_String_HeroWavesText = ""
 udg_Integer_RWBossChance = 0
 udg_String_RWBossWaveText = ""
 udg_Real_Array_ShrapBlastChance = __jarray(0.0)
+udg_Integer_Array_FireTrapChance = __jarray(0)
+udg_Integer_TotalFireTrapsBuilt = 0
+udg_Integer_Array_Firetrap5050 = 0
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -1157,6 +1160,14 @@ if ((i > 1)) then break end
 udg_Real_Array_ShrapBlastChance[i] = 0.0
 i = i + 1
 end
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Integer_Array_FireTrapChance[i] = 0
+i = i + 1
+end
+udg_Integer_TotalFireTrapsBuilt = 0
+udg_Integer_Array_Firetrap5050 = 0
 end
 
 -- Arcing Text Tag v1.0.0.3 by Maker encoded to Lua
@@ -3112,13 +3123,42 @@ TriggerAddAction(gg_trg_Rocket_Tower, Trig_Rocket_Tower_Actions)
 end
 
 function Trig_Fire_Trap_Autocast_Conditions()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A04G"), udg_DamageEventSource) == 1)) then
+if (not (GetUnitAbilityLevelSwapped(FourCC("A04L"), udg_DamageEventSource) == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Fire_Trap_Autocast_Func002Func002C()
+if (not (udg_Integer_Array_Firetrap5050 <= 50)) then
+return false
+end
+return true
+end
+
+function Trig_Fire_Trap_Autocast_Func002C()
+if (not (udg_Integer_Array_FireTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (5 + udg_Integer_TotalFireTrapsBuilt))) then
 return false
 end
 return true
 end
 
 function Trig_Fire_Trap_Autocast_Actions()
+udg_Integer_Array_FireTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomInt(1, 100)
+if (Trig_Fire_Trap_Autocast_Func002C()) then
+udg_Integer_Array_Firetrap5050 = GetRandomInt(1, 100)
+if (Trig_Fire_Trap_Autocast_Func002Func002C()) then
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
+UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
+UnitAddAbilityBJ(FourCC("A04K"), GetLastCreatedUnit())
+else
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
+UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
+UnitAddAbilityBJ(FourCC("A04J"), GetLastCreatedUnit())
+SetUnitAbilityLevelSwapped(FourCC("A04J"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A04L"), udg_DamageEventSource))
+end
+else
+end
 end
 
 function InitTrig_Fire_Trap_Autocast()
@@ -5137,7 +5177,21 @@ TriggerRegisterAnyUnitEventBJ(gg_trg_Finish_Upgrade, EVENT_PLAYER_UNIT_UPGRADE_S
 TriggerAddAction(gg_trg_Finish_Upgrade, Trig_Finish_Upgrade_Actions)
 end
 
+function Trig_Instant_Upgrade_Func001Func011Func001Func001C()
+if (not (CountUnitsInGroup(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), FourCC("n00A"))) == 1)) then
+return false
+end
+return true
+end
+
 function Trig_Instant_Upgrade_Func001Func011Func001C()
+if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("n00A"))) then
+return false
+end
+return true
+end
+
+function Trig_Instant_Upgrade_Func001Func011Func002C()
 if (GetUnitTypeId(GetTriggerUnit()) == FourCC("n01J")) then
 return true
 end
@@ -5169,7 +5223,7 @@ return false
 end
 
 function Trig_Instant_Upgrade_Func001Func011C()
-if (not Trig_Instant_Upgrade_Func001Func011Func001C()) then
+if (not Trig_Instant_Upgrade_Func001Func011Func002C()) then
 return false
 end
 return true
@@ -5219,6 +5273,13 @@ SetUnitAbilityLevelSwapped(FourCC("A00G"), GetLastReplacedUnitBJ(), udg_Integer_
 SelectUnitForPlayerSingle(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
 SetUnitInvulnerable(GetLastReplacedUnitBJ(), true)
 if (Trig_Instant_Upgrade_Func001Func011C()) then
+if (Trig_Instant_Upgrade_Func001Func011Func001C()) then
+if (Trig_Instant_Upgrade_Func001Func011Func001Func001C()) then
+udg_Integer_TotalFireTrapsBuilt = (udg_Integer_TotalFireTrapsBuilt + 1)
+else
+end
+else
+end
 else
 UnitAddAbilityBJ(FourCC("A00U"), GetLastReplacedUnitBJ())
 end
