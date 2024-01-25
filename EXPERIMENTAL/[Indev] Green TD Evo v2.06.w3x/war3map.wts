@@ -18208,6 +18208,8 @@ STRING 2730
 -- Added Crit Bonus to hero
 -- Added more easter eggs
 -- Added several new towers
+-- Added new abilities to traps
+-- Added bosses to random waves
 -- Reduced Health, Armour and Movement Speed of non-random waves
 -- Fixed Endless Mode and Random Waves not being compatible
 -- Fixed chaos mode difficultys still being active after changing to a non-chaos mode difficulty during game setup
