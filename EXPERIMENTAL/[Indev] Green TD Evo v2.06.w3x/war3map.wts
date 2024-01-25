@@ -20641,22 +20641,6 @@ STRING 3083
 |c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 1500 damage per second to non-immune creeps walking through it.|r
 }
 
-STRING 3084
-// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
-
-|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
-|c0000ff00Initial Damage:|r |c0077ff77500
-|c0000ff00Damage over Time:|r |c0077ff77250/s if affected by flask of oil
-|c0000ff00Duration:|r|c0077ff77 3 Seconds
-
-|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
-|c0000ff00Area of Effect:|r |c0077ff77400
-|c0000ff00Duration:|r|c0077ff77 3 Seconds
-|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
-}
-
 STRING 3085
 // Abilities: A04L (Incinerate and Flask of Oil), EditorSuffix (Editor Suffix)
 {
@@ -20717,7 +20701,23 @@ STRING 3094
 |c0000ff00Incinerate and Flask of Oil
 }
 
-STRING 3095
+STRING 3104
+// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
+
+|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
+|c0000ff00Initial Damage:|r |c0077ff77500
+|c0000ff00Damage over Time:|r |c0077ff77250/s if affected by flask of oil
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+
+|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
+|c0000ff00Area of Effect:|r |c0077ff77400
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
+}
+
+STRING 3105
 // Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
@@ -20730,10 +20730,10 @@ STRING 3095
 |c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
 |c0000ff00Area of Effect:|r |c0077ff77400
 |c0000ff00Duration:|r|c0077ff77 3 Seconds
-|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
 }
 
-STRING 3096
+STRING 3106
 // Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
@@ -20746,10 +20746,10 @@ STRING 3096
 |c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
 |c0000ff00Area of Effect:|r |c0077ff77400
 |c0000ff00Duration:|r|c0077ff77 3 Seconds
-|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
 }
 
-STRING 3097
+STRING 3107
 // Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
@@ -20762,10 +20762,10 @@ STRING 3097
 |c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
 |c0000ff00Area of Effect:|r |c0077ff77400
 |c0000ff00Duration:|r|c0077ff77 3 Seconds
-|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
 }
 
-STRING 3098
+STRING 3108
 // Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
@@ -20778,10 +20778,10 @@ STRING 3098
 |c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
 |c0000ff00Area of Effect:|r |c0077ff77400
 |c0000ff00Duration:|r|c0077ff77 3 Seconds
-|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
 }
 
-STRING 3099
+STRING 3109
 // Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
@@ -20794,10 +20794,10 @@ STRING 3099
 |c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
 |c0000ff00Area of Effect:|r |c0077ff77400
 |c0000ff00Duration:|r|c0077ff77 3 Seconds
-|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
 }
 
-STRING 3100
+STRING 3110
 // Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
@@ -20810,10 +20810,10 @@ STRING 3100
 |c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
 |c0000ff00Area of Effect:|r |c0077ff77400
 |c0000ff00Duration:|r|c0077ff77 3 Seconds
-|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
 }
 
-STRING 3101
+STRING 3111
 // Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
@@ -20826,10 +20826,10 @@ STRING 3101
 |c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
 |c0000ff00Area of Effect:|r |c0077ff77400
 |c0000ff00Duration:|r|c0077ff77 3 Seconds
-|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
 }
 
-STRING 3102
+STRING 3112
 // Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
@@ -20842,10 +20842,10 @@ STRING 3102
 |c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
 |c0000ff00Area of Effect:|r |c0077ff77400
 |c0000ff00Duration:|r|c0077ff77 3 Seconds
-|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
 }
 
-STRING 3103
+STRING 3113
 // Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
@@ -20858,7 +20858,7 @@ STRING 3103
 |c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
 |c0000ff00Area of Effect:|r |c0077ff77400
 |c0000ff00Duration:|r|c0077ff77 3 Seconds
-|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
 }
 
 STRING 3125

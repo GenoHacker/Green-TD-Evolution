@@ -3123,7 +3123,7 @@ TriggerAddAction(gg_trg_Rocket_Tower, Trig_Rocket_Tower_Actions)
 end
 
 function Trig_Fire_Trap_Autocast_Conditions()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A04L"), udg_DamageEventSource) == 1)) then
+if (not (GetUnitAbilityLevelSwapped(FourCC("A04L"), udg_DamageEventSource) >= 1)) then
 return false
 end
 return true
@@ -3151,11 +3151,13 @@ if (Trig_Fire_Trap_Autocast_Func002Func002C()) then
 CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
 UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
 UnitAddAbilityBJ(FourCC("A04K"), GetLastCreatedUnit())
+IssueTargetOrderBJ(GetLastCreatedUnit(), "drunkenhaze", udg_DamageEventTarget)
 else
 CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
 UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
 UnitAddAbilityBJ(FourCC("A04J"), GetLastCreatedUnit())
 SetUnitAbilityLevelSwapped(FourCC("A04J"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A04L"), udg_DamageEventSource))
+IssuePointOrderLocBJ(GetLastCreatedUnit(), "breathoffire", GetUnitLoc(udg_DamageEventTarget))
 end
 else
 end
@@ -5177,21 +5179,7 @@ TriggerRegisterAnyUnitEventBJ(gg_trg_Finish_Upgrade, EVENT_PLAYER_UNIT_UPGRADE_S
 TriggerAddAction(gg_trg_Finish_Upgrade, Trig_Finish_Upgrade_Actions)
 end
 
-function Trig_Instant_Upgrade_Func001Func011Func001Func001C()
-if (not (CountUnitsInGroup(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), FourCC("n00A"))) == 1)) then
-return false
-end
-return true
-end
-
 function Trig_Instant_Upgrade_Func001Func011Func001C()
-if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("n00A"))) then
-return false
-end
-return true
-end
-
-function Trig_Instant_Upgrade_Func001Func011Func002C()
 if (GetUnitTypeId(GetTriggerUnit()) == FourCC("n01J")) then
 return true
 end
@@ -5223,7 +5211,7 @@ return false
 end
 
 function Trig_Instant_Upgrade_Func001Func011C()
-if (not Trig_Instant_Upgrade_Func001Func011Func002C()) then
+if (not Trig_Instant_Upgrade_Func001Func011Func001C()) then
 return false
 end
 return true
@@ -5252,6 +5240,21 @@ end
 return true
 end
 
+function Trig_Instant_Upgrade_Func002Func001Func001002003001002()
+return (GetUnitTypeId(GetFilterUnit()) == FourCC("n00A"))
+end
+
+function Trig_Instant_Upgrade_Func002Func001Func002001001002()
+return (GetUnitTypeId(GetFilterUnit()) == FourCC("n00A"))
+end
+
+function Trig_Instant_Upgrade_Func002Func001C()
+if (not (CountUnitsInGroup(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Instant_Upgrade_Func002Func001Func002001001002))) <= 10)) then
+return false
+end
+return true
+end
+
 function Trig_Instant_Upgrade_Func002C()
 if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("n00A"))) then
 return false
@@ -5273,19 +5276,16 @@ SetUnitAbilityLevelSwapped(FourCC("A00G"), GetLastReplacedUnitBJ(), udg_Integer_
 SelectUnitForPlayerSingle(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
 SetUnitInvulnerable(GetLastReplacedUnitBJ(), true)
 if (Trig_Instant_Upgrade_Func001Func011C()) then
-if (Trig_Instant_Upgrade_Func001Func011Func001C()) then
-if (Trig_Instant_Upgrade_Func001Func011Func001Func001C()) then
-udg_Integer_TotalFireTrapsBuilt = (udg_Integer_TotalFireTrapsBuilt + 1)
-else
-end
-else
-end
 else
 UnitAddAbilityBJ(FourCC("A00U"), GetLastReplacedUnitBJ())
 end
 BlzUnitHideAbility(GetLastReplacedUnitBJ(), FourCC("Amim"), true)
 end
 if (Trig_Instant_Upgrade_Func002C()) then
+if (Trig_Instant_Upgrade_Func002Func001C()) then
+udg_Integer_TotalFireTrapsBuilt = (0 + CountUnitsInGroup(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Instant_Upgrade_Func002Func001Func001002003001002))))
+else
+end
 IssueImmediateOrderBJ(GetLastReplacedUnitBJ(), "immolation")
 else
 end
@@ -15360,7 +15360,7 @@ end
 return true
 end
 
-function Trig_Fire_Trap_Func002Func007C()
+function Trig_Fire_Trap_Func002Func009C()
 if (not (GetUnitAbilityLevelSwapped(FourCC("A01K"), GetTriggerUnit()) >= 10)) then
 return false
 end
@@ -15382,10 +15382,12 @@ else
 CreateTextTagUnitBJ("TRIGSTR_9646", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
 IssueImmediateOrderBJ(GetTriggerUnit(), "unimmolation")
 IncUnitAbilityLevelSwapped(FourCC("A01K"), GetTriggerUnit())
+IncUnitAbilityLevelSwapped(FourCC("A04L"), GetTriggerUnit())
+DisplayTextToForce(GetPlayersAll(), I2S(udg_Integer_TotalFireTrapsBuilt))
 IssueImmediateOrderBJ(GetTriggerUnit(), "immolation")
 BlzSetUnitName(GetTriggerUnit(), ("Fire Trap " .. I2S(GetUnitAbilityLevelSwapped(FourCC("A01K"), GetTriggerUnit()))))
 SetPlayerStateBJ(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD, (GetPlayerState(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD) - GetUnitUserData(GetTriggerUnit())))
-if (Trig_Fire_Trap_Func002Func007C()) then
+if (Trig_Fire_Trap_Func002Func009C()) then
 UnitRemoveAbilityBJ(FourCC("A023"), GetTriggerUnit())
 else
 end
