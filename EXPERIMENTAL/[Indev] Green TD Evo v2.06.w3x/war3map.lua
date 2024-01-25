@@ -549,6 +549,7 @@ gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
+gg_trg_Fire_Trap_Autocast = nil
 function InitGlobals()
 local i = 0
 
@@ -3108,6 +3109,23 @@ gg_trg_Rocket_Tower = CreateTrigger()
 TriggerRegisterVariableEvent(gg_trg_Rocket_Tower, "udg_DamageEvent", EQUAL, 1.00)
 TriggerAddCondition(gg_trg_Rocket_Tower, Condition(Trig_Rocket_Tower_Conditions))
 TriggerAddAction(gg_trg_Rocket_Tower, Trig_Rocket_Tower_Actions)
+end
+
+function Trig_Fire_Trap_Autocast_Conditions()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A04G"), udg_DamageEventSource) == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Fire_Trap_Autocast_Actions()
+end
+
+function InitTrig_Fire_Trap_Autocast()
+gg_trg_Fire_Trap_Autocast = CreateTrigger()
+TriggerRegisterVariableEvent(gg_trg_Fire_Trap_Autocast, "udg_DamageEvent", EQUAL, 1.00)
+TriggerAddCondition(gg_trg_Fire_Trap_Autocast, Condition(Trig_Fire_Trap_Autocast_Conditions))
+TriggerAddAction(gg_trg_Fire_Trap_Autocast, Trig_Fire_Trap_Autocast_Actions)
 end
 
 function Trig_Set_Variables_Func250001()
@@ -15967,6 +15985,7 @@ InitTrig_Soul_Tower_Minion_Remove_From_Group()
 InitTrig_Shard_Tower_Abilities()
 InitTrig_Spirit_Tower()
 InitTrig_Rocket_Tower()
+InitTrig_Fire_Trap_Autocast()
 InitTrig_Set_Variables()
 InitTrig_Set_Random_Wave_Variables()
 InitTrig_Map_Start()

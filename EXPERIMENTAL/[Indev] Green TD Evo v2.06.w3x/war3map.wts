@@ -581,19 +581,6 @@ STRING 92
 |cff0080FFGame Ends In: |r
 }
 
-STRING 93
-// Units: n00A (Fire Trap), Ubertip (Tooltip - Extended)
-{
-|c006969FF[Support Tower]|r
-|c0000ff00Attacks land units only.|r
-
-|c0077ff77A trap that deals damage to enemys around it. Does not affect Immune or Air Creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Immolation [Auto-Casted]
-|c0000ff00Damage:|r |c0077ff77250 per second
-|c0000ff00Area of Effect:|r |c0077ff77400
-}
-
 STRING 94
 // Abilities: A00U (Swap Towers), Name (Name)
 {
@@ -16638,6 +16625,12 @@ STRING 2513
 |c0077ff77[X] |c0000ff00Upgrade To Goblin Shredder.|r |cAAAAFFAAShrapnel Tower 4.|r
 }
 
+STRING 2514
+// Abilities: A04J (Incinerate), EditorSuffix (Editor Suffix)
+{
+[Fire Trap]
+}
+
 STRING 2515
 // Units: h02L (Hellfire Tower 4: Hell Shrine), Hotkey (Hotkey)
 {
@@ -16648,6 +16641,12 @@ STRING 2516
 // Abilities: A044 (Hellfire 2), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Leaves a patch of burning hellfire on the ground, dealing 3000 damage per second to non-immune creeps walking through it.
+}
+
+STRING 2517
+// Abilities: A04K (Flask of Oil), EditorSuffix (Editor Suffix)
+{
+[Fire Trap]
 }
 
 STRING 2518
@@ -18136,6 +18135,31 @@ STRING 2721
 // Abilities: A04I (Shrapnel Blast), Name (Name)
 {
 Shrapnel Blast
+}
+
+STRING 2722
+// Units: n00A (Fire Trap), Ubertip (Tooltip - Extended)
+{
+|c006969FF[Support Tower]|r
+|c0000ff00Attacks land units only.|r
+
+|c0077ff77A trap that deals damage to enemys around it and has a chance to cast incinerate or flask of oil. Does not affect Immune or Air Creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Immolation [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff77250 per second
+|c0000ff00Area of Effect:|r |c0077ff77400
+|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff77500
+|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff77250 per second if ignited
+|c0000ff00Area of Effect:|r |c0077ff77400
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
+}
+
+STRING 2723
+// Abilities: A04J (Incinerate), Name (Name)
+{
+Incinerate
 }
 
 STRING 2724
@@ -20263,6 +20287,18 @@ STRING 3038
 |c0077ff77Leaves a patch of burning hellfire on the ground, dealing 7500 damage per second to non-immune creeps walking through it.
 }
 
+STRING 3039
+// Abilities: A04K (Flask of Oil), Name (Name)
+{
+Flask of Oil
+}
+
+STRING 3040
+// Abilities: A04L (Incinerate and Flask of Oil), Name (Name)
+{
+Incinerate and Flask of Oil
+}
+
 STRING 3041
 // Units: e009 (Shrapnel Tower 4: Goblin Shredder), Ubertip (Tooltip - Extended)
 {
@@ -20503,6 +20539,12 @@ STRING 3073
 |c0077ff77Hits on enemies have a [10% + 0.1% per armour of hit unit] chance to trigger a shrapnel blast dealing piercing damage to near by units equaling to [250 x armor of hit unit].
 }
 
+STRING 3074
+// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
+{
+|c0000ff00Incinerate and Flask of Oil
+}
+
 STRING 3075
 // Units: h021 (Bash Tower 1: Storm Panda), Name (Name)
 {
@@ -20597,6 +20639,226 @@ STRING 3083
 |c0000ff00Efficiency:|r |c0077ff770.45 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
 |c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 1500 damage per second to non-immune creeps walking through it.|r
+}
+
+STRING 3084
+// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
+
+|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
+|c0000ff00Initial Damage:|r |c0077ff77500
+|c0000ff00Damage over Time:|r |c0077ff77250/s if affected by flask of oil
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+
+|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
+|c0000ff00Area of Effect:|r |c0077ff77400
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
+}
+
+STRING 3085
+// Abilities: A04L (Incinerate and Flask of Oil), EditorSuffix (Editor Suffix)
+{
+[Fire Trap]
+}
+
+STRING 3086
+// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
+{
+|c0000ff00Incinerate and Flask of Oil
+}
+
+STRING 3087
+// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
+{
+|c0000ff00Incinerate and Flask of Oil
+}
+
+STRING 3088
+// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
+{
+|c0000ff00Incinerate and Flask of Oil
+}
+
+STRING 3089
+// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
+{
+|c0000ff00Incinerate and Flask of Oil
+}
+
+STRING 3090
+// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
+{
+|c0000ff00Incinerate and Flask of Oil
+}
+
+STRING 3091
+// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
+{
+|c0000ff00Incinerate and Flask of Oil
+}
+
+STRING 3092
+// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
+{
+|c0000ff00Incinerate and Flask of Oil
+}
+
+STRING 3093
+// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
+{
+|c0000ff00Incinerate and Flask of Oil
+}
+
+STRING 3094
+// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
+{
+|c0000ff00Incinerate and Flask of Oil
+}
+
+STRING 3095
+// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
+
+|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
+|c0000ff00Initial Damage:|r |c0077ff771000
+|c0000ff00Damage over Time:|r |c0077ff77500/s if affected by flask of oil
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+
+|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
+|c0000ff00Area of Effect:|r |c0077ff77400
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
+}
+
+STRING 3096
+// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
+
+|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
+|c0000ff00Initial Damage:|r |c0077ff771750
+|c0000ff00Damage over Time:|r |c0077ff77875/s if affected by flask of oil
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+
+|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
+|c0000ff00Area of Effect:|r |c0077ff77400
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
+}
+
+STRING 3097
+// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
+
+|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
+|c0000ff00Initial Damage:|r |c0077ff772750
+|c0000ff00Damage over Time:|r |c0077ff771375/s if affected by flask of oil
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+
+|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
+|c0000ff00Area of Effect:|r |c0077ff77400
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
+}
+
+STRING 3098
+// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
+
+|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
+|c0000ff00Initial Damage:|r |c0077ff772750
+|c0000ff00Damage over Time:|r |c0077ff772000/s if affected by flask of oil
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+
+|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
+|c0000ff00Area of Effect:|r |c0077ff77400
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
+}
+
+STRING 3099
+// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
+
+|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
+|c0000ff00Initial Damage:|r |c0077ff775500
+|c0000ff00Damage over Time:|r |c0077ff772750/s if affected by flask of oil
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+
+|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
+|c0000ff00Area of Effect:|r |c0077ff77400
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
+}
+
+STRING 3100
+// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
+
+|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
+|c0000ff00Initial Damage:|r |c0077ff777250
+|c0000ff00Damage over Time:|r |c0077ff773625/s if affected by flask of oil
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+
+|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
+|c0000ff00Area of Effect:|r |c0077ff77400
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
+}
+
+STRING 3101
+// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
+
+|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
+|c0000ff00Initial Damage:|r |c0077ff779250
+|c0000ff00Damage over Time:|r |c0077ff774625/s if affected by flask of oil
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+
+|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
+|c0000ff00Area of Effect:|r |c0077ff77400
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
+}
+
+STRING 3102
+// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
+
+|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
+|c0000ff00Initial Damage:|r |c0077ff7711500
+|c0000ff00Damage over Time:|r |c0077ff775750/s if affected by flask of oil
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+
+|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
+|c0000ff00Area of Effect:|r |c0077ff77400
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
+}
+
+STRING 3103
+// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
+
+|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
+|c0000ff00Initial Damage:|r |c0077ff7714000
+|c0000ff00Damage over Time:|r |c0077ff777000/s if affected by flask of oil
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+
+|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
+|c0000ff00Area of Effect:|r |c0077ff77400
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
 }
 
 STRING 3125
@@ -23203,36 +23465,24 @@ Z
 }
 
 STRING 7090
-// Abilities: A01K (Immolation), Hotkey (Hotkey - Normal)
-{
-Z
-}
-
-STRING 7091
-// Abilities: A01K (Immolation), Unhotkey (Hotkey - Turn Off)
-{
-Z
-}
-
-STRING 7092
 // Abilities: A020 (3 - Decrease Zoom), Hotkey (Hotkey - Normal)
 {
 Z
 }
 
-STRING 7093
+STRING 7091
 // Abilities: A02M (Chaos Mode), Hotkey (Hotkey - Normal)
 {
 Z
 }
 
-STRING 7094
+STRING 7092
 // Abilities: A02Q (Disable Aura Tower), Hotkey (Hotkey - Normal)
 {
 Z
 }
 
-STRING 7095
+STRING 7093
 // Abilities: A048 (Random Game Modes), Hotkey (Hotkey - Normal)
 {
 Z
