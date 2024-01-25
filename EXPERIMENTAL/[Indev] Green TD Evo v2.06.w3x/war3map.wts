@@ -19754,7 +19754,7 @@ STRING 2964
 
 STRING 2965
 {
-|c0000ff00Unaffected by|r |c0077ff77Spell Damage, Frost Tower|r |c0000ff00freeze,|r |c0077ff77Bash Tower|r |c0000ff00stun and certain|r |c0077ff77Traps.|r |c0077ff77Chaos Damage |c0000ff00deals |c0077ff77200% |c0000ff00damage to |c0077ff77Divine Armour. 
+|c0077ff77Chaos Damage |c0000ff00deals |c0077ff77200% |c0000ff00damage to |c0077ff77Divine Armour. 
 }
 
 STRING 2966
