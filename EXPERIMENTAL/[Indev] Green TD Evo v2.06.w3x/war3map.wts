@@ -14422,6 +14422,17 @@ STRING 2178
 [Siege Damage]
 }
 
+STRING 2179
+// Units: h013 (Venom Tower 4: Lizard), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff770.25
+|c0000ff00Damage:|r |c0077ff77250
+|c0000ff00Range:|r |c0077ff77400
+|c0000ff00Efficiency:|r |c0077ff770.13 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Venomous: Deals 1000 damage per second, stacks with other Venom Towers, also causes the tower to attack randomly.
+}
+
 STRING 2180
 // Units: h01G (Fel Tower 9: Warlock), Name (Name)
 {
@@ -15481,28 +15492,6 @@ STRING 2337
 This ability is used in the random attack trigger for venom towers
 }
 
-STRING 2338
-// Units: h013 (Venom Tower 4: Lizard), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff770.25
-|c0000ff00Damage:|r |c0077ff77250
-|c0000ff00Range:|r |c0077ff77400
-|c0000ff00Efficiency:|r |c0077ff770.13 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Venomous: Deals 500 damage per second, stacks with other Venom Towers, also causes the tower to attack randomly.
-}
-
-STRING 2339
-// Units: h017 (Venom Tower 5: Lizard), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff770.25
-|c0000ff00Damage:|r |c0077ff77625
-|c0000ff00Range:|r |c0077ff77400
-|c0000ff00Efficiency:|r |c0077ff770.19 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Venomous: Deals 1250 damage per second, stacks with other Venom Towers, also causes the tower to attack randomly.
-}
-
 STRING 2340
 // Units: h00V (Flak Tower 4), Ubertip (Tooltip - Extended)
 {
@@ -15520,28 +15509,6 @@ STRING 2341
 // Units: h00V (Flak Tower 4), Tip (Tooltip - Basic)
 {
 |c0077ff77[C] |c0000ff00Upgrade To Mortar Team.|r |cAAAAFFAAFlak Tower 4.|r
-}
-
-STRING 2342
-// Units: h01M (Venom Tower 6: Lizard), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff770.25
-|c0000ff00Damage:|r |c0077ff771250
-|c0000ff00Range:|r |c0077ff77400
-|c0000ff00Efficiency:|r |c0077ff770.26 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Venomous: Deals 2500 damage per second, stacks with other Venom Towers, also causes the tower to attack randomly.
-}
-
-STRING 2343
-// Units: h01P (Venom Tower 7: Lizard), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff770.25
-|c0000ff00Damage:|r |c0077ff772750
-|c0000ff00Range:|r |c0077ff77400
-|c0000ff00Efficiency:|r |c0077ff770.41 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Venomous: Deals 5500 damage per second, stacks with other Venom Towers, also causes the tower to attack randomly.
 }
 
 STRING 2344
@@ -16490,10 +16457,54 @@ STRING 2487
 Kicked
 }
 
+STRING 2488
+// Units: h017 (Venom Tower 5: Lizard), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff770.25
+|c0000ff00Damage:|r |c0077ff77625
+|c0000ff00Range:|r |c0077ff77400
+|c0000ff00Efficiency:|r |c0077ff770.19 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Venomous: Deals 1750 damage per second, stacks with other Venom Towers, also causes the tower to attack randomly.
+}
+
+STRING 2489
+// Units: h01M (Venom Tower 6: Lizard), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff770.25
+|c0000ff00Damage:|r |c0077ff771250
+|c0000ff00Range:|r |c0077ff77400
+|c0000ff00Efficiency:|r |c0077ff770.26 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Venomous: Deals 3000 damage per second, stacks with other Venom Towers, also causes the tower to attack randomly.
+}
+
+STRING 2490
+// Units: h01P (Venom Tower 7: Lizard), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff770.25
+|c0000ff00Damage:|r |c0077ff772750
+|c0000ff00Range:|r |c0077ff77400
+|c0000ff00Efficiency:|r |c0077ff770.41 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Venomous: Deals 5000 damage per second, stacks with other Venom Towers, also causes the tower to attack randomly.
+}
+
 STRING 2491
 // Abilities: A03Z (Hellfire 7), Name (Name)
 {
 Hellfire 7
+}
+
+STRING 2492
+// Units: h01R (Venom Tower 9: Lizard), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff770.25
+|c0000ff00Damage:|r |c0077ff776500
+|c0000ff00Range:|r |c0077ff77400
+|c0000ff00Efficiency:|r |c0077ff770.50 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Venomous: Deals 15000 damage per second, stacks with other Venom Towers, also causes the tower to attack randomly.
 }
 
 STRING 2493
@@ -16506,6 +16517,17 @@ STRING 2494
 // Abilities: A040 (Hellfire 5), Name (Name)
 {
 Hellfire 5
+}
+
+STRING 2495
+// Units: h01S (Ultimate Venom Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff770.25
+|c0000ff00Damage:|r |c0077ff7710000
+|c0000ff00Range:|r |c0077ff77400
+|c0000ff00Efficiency:|r |c0077ff770.56 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Venomous: Deals 25000 damage per second, stacks with other Venom Towers, also causes the tower to attack randomly.
 }
 
 STRING 2496
@@ -18090,28 +18112,6 @@ STRING 2715
 |c0000ff00Range:|r |c0077ff77400
 |c0000ff00Efficiency:|r |c0077ff770.47 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Venomous: Deals 9000 damage per second, stacks with other Venom Towers, also causes the tower to attack randomly.
-}
-
-STRING 2716
-// Units: h01R (Venom Tower 9: Lizard), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff770.25
-|c0000ff00Damage:|r |c0077ff776500
-|c0000ff00Range:|r |c0077ff77400
-|c0000ff00Efficiency:|r |c0077ff770.50 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Venomous: Deals 13000 damage per second, stacks with other Venom Towers, also causes the tower to attack randomly.
-}
-
-STRING 2717
-// Units: h01S (Ultimate Venom Tower), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff770.25
-|c0000ff00Damage:|r |c0077ff7710000
-|c0000ff00Range:|r |c0077ff77400
-|c0000ff00Efficiency:|r |c0077ff770.56 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Venomous: Deals 20000 damage per second, stacks with other Venom Towers, also causes the tower to attack randomly.
 }
 
 STRING 2718
