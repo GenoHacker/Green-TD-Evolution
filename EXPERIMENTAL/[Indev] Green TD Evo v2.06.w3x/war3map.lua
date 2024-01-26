@@ -372,6 +372,8 @@ gg_trg_Shard_Tower_Abilities = nil
 gg_trg_Spirit_Tower = nil
 gg_trg_Rocket_Tower = nil
 gg_trg_Fire_Trap_Autocast = nil
+gg_trg_Frost_Trap_Autocast = nil
+gg_trg_Ice_Cage_Autocast = nil
 gg_trg_Set_Variables = nil
 gg_trg_Set_Random_Wave_Variables = nil
 gg_trg_Map_Start = nil
@@ -555,8 +557,6 @@ gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
-gg_trg_Frost_Trap_Autocast = nil
-gg_trg_Ice_Cage_Autocast = nil
 function InitGlobals()
 local i = 0
 
@@ -3165,7 +3165,7 @@ UnitAddAbilityBJ(FourCC("A04K"), GetLastCreatedUnit())
 IssueTargetOrderBJ(GetLastCreatedUnit(), "drunkenhaze", udg_DamageEventTarget)
 else
 CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
-UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
+UnitApplyTimedLifeBJ(3.50, FourCC("BTLF"), GetLastCreatedUnit())
 UnitAddAbilityBJ(FourCC("A04J"), GetLastCreatedUnit())
 SetUnitAbilityLevelSwapped(FourCC("A04J"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A04L"), udg_DamageEventSource))
 IssuePointOrderLocBJ(GetLastCreatedUnit(), "breathoffire", GetUnitLoc(udg_DamageEventTarget))
@@ -3190,7 +3190,7 @@ end
 
 function Trig_Frost_Trap_Autocast_Actions()
 CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
-UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
+UnitApplyTimedLifeBJ(5.50, FourCC("BTLF"), GetLastCreatedUnit())
 UnitAddAbilityBJ(FourCC("A00A"), GetLastCreatedUnit())
 SetUnitAbilityLevelSwapped(FourCC("A00A"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A04N"), udg_DamageEventSource))
 IssuePointOrderLocBJ(GetLastCreatedUnit(), "breathoffrost", GetUnitLoc(udg_DamageEventTarget))
@@ -5306,16 +5306,16 @@ end
 return true
 end
 
-function Trig_Instant_Upgrade_Func002Func001Func001002003001002()
+function Trig_Instant_Upgrade_Func002Func002Func001002003001002()
 return (GetUnitTypeId(GetFilterUnit()) == FourCC("n00A"))
 end
 
-function Trig_Instant_Upgrade_Func002Func001Func002001001002()
+function Trig_Instant_Upgrade_Func002Func002Func002001001002()
 return (GetUnitTypeId(GetFilterUnit()) == FourCC("n00A"))
 end
 
-function Trig_Instant_Upgrade_Func002Func001C()
-if (not (CountUnitsInGroup(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Instant_Upgrade_Func002Func001Func002001001002))) <= 10)) then
+function Trig_Instant_Upgrade_Func002Func002C()
+if (not (CountUnitsInGroup(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Instant_Upgrade_Func002Func002Func002001001002))) <= 10)) then
 return false
 end
 return true
@@ -5370,8 +5370,9 @@ end
 BlzUnitHideAbility(GetLastReplacedUnitBJ(), FourCC("Amim"), true)
 end
 if (Trig_Instant_Upgrade_Func002C()) then
-if (Trig_Instant_Upgrade_Func002Func001C()) then
-udg_Integer_TotalFireTrapsBuilt = (0 + CountUnitsInGroup(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Instant_Upgrade_Func002Func001Func001002003001002))))
+BlzUnitHideAbility(GetTriggerUnit(), FourCC("Amim"), true)
+if (Trig_Instant_Upgrade_Func002Func002C()) then
+udg_Integer_TotalFireTrapsBuilt = (0 + CountUnitsInGroup(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Instant_Upgrade_Func002Func002Func001002003001002))))
 else
 end
 IssueImmediateOrderBJ(GetLastReplacedUnitBJ(), "immolation")
@@ -15533,7 +15534,7 @@ CreateTextTagUnitBJ(("You Need " .. (I2S(GetUnitUserData(GetTriggerUnit())) .. "
 else
 CreateTextTagUnitBJ("TRIGSTR_019", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
 IncUnitAbilityLevelSwapped(FourCC("A04N"), GetTriggerUnit())
-BlzSetUnitName(GetTriggerUnit(), ("Frost Trap " .. I2S(GetUnitAbilityLevelSwapped(FourCC("A00A"), GetTriggerUnit()))))
+BlzSetUnitName(GetTriggerUnit(), ("Frost Trap " .. I2S(GetUnitAbilityLevelSwapped(FourCC("A04N"), GetTriggerUnit()))))
 SetPlayerStateBJ(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD, (GetPlayerState(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD) - GetUnitUserData(GetTriggerUnit())))
 if (Trig_Frost_Trap_Func002Func005C()) then
 UnitRemoveAbilityBJ(FourCC("A023"), GetTriggerUnit())

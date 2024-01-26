@@ -20830,7 +20830,7 @@ STRING 3116
 }
 
 STRING 3117
-// Abilities: A04M (Ice Cage), EditorSuffix (Editor Suffix)
+// Abilities: A00A (Frost Blast), EditorSuffix (Editor Suffix)
 {
 [Frost Trap]
 }
@@ -21018,7 +21018,7 @@ STRING 3139
 }
 
 STRING 3140
-// Abilities: A04N (Frost Blast and Ice Cage), EditorSuffix (Editor Suffix)
+// Abilities: A04M (Ice Cage), EditorSuffix (Editor Suffix)
 {
 [Frost Trap]
 }
@@ -25087,7 +25087,7 @@ Trap Upgraded
 }
 
 STRING 9116
-// Abilities: A00A (Frost Blast), EditorSuffix (Editor Suffix)
+// Abilities: A04N (Frost Blast and Ice Cage), EditorSuffix (Editor Suffix)
 {
 [Frost Trap]
 }
