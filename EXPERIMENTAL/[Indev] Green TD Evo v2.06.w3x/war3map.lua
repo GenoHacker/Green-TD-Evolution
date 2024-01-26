@@ -271,6 +271,8 @@ udg_Real_Array_ShrapBlastChance = __jarray(0.0)
 udg_Integer_Array_FireTrapChance = __jarray(0)
 udg_Integer_TotalFireTrapsBuilt = 0
 udg_Integer_Array_Firetrap5050 = 0
+udg_Integer_Array_FrostTrapChance = __jarray(0)
+udg_Integer_TotalFrostTrapsBuilt = 0
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -369,6 +371,7 @@ gg_trg_Soul_Tower_Minion_Remove_From_Group = nil
 gg_trg_Shard_Tower_Abilities = nil
 gg_trg_Spirit_Tower = nil
 gg_trg_Rocket_Tower = nil
+gg_trg_Fire_Trap_Autocast = nil
 gg_trg_Set_Variables = nil
 gg_trg_Set_Random_Wave_Variables = nil
 gg_trg_Map_Start = nil
@@ -526,7 +529,7 @@ gg_trg_Player_9 = nil
 gg_trg_Void_Trap_Autocast = nil
 gg_trg_Earth_Trap_Autocast = nil
 gg_trg_Poison_Trap_Autocast = nil
-gg_trg_Frost_Trap_Autocast = nil
+gg_trg_Frost_Trap_Autocast___rrerer = nil
 gg_trg_Darkness_Trap_Autocast = nil
 gg_trg_Iron_Trap_Autocast = nil
 gg_trg_Iron_Trap_Autocast_Mine = nil
@@ -552,7 +555,8 @@ gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
-gg_trg_Fire_Trap_Autocast = nil
+gg_trg_Frost_Trap_Autocast = nil
+gg_trg_Ice_Cage_Autocast = nil
 function InitGlobals()
 local i = 0
 
@@ -1168,6 +1172,13 @@ i = i + 1
 end
 udg_Integer_TotalFireTrapsBuilt = 0
 udg_Integer_Array_Firetrap5050 = 0
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Integer_Array_FrostTrapChance[i] = 0
+i = i + 1
+end
+udg_Integer_TotalFrostTrapsBuilt = 0
 end
 
 -- Arcing Text Tag v1.0.0.3 by Maker encoded to Lua
@@ -3168,6 +3179,61 @@ gg_trg_Fire_Trap_Autocast = CreateTrigger()
 TriggerRegisterVariableEvent(gg_trg_Fire_Trap_Autocast, "udg_DamageEvent", EQUAL, 1.00)
 TriggerAddCondition(gg_trg_Fire_Trap_Autocast, Condition(Trig_Fire_Trap_Autocast_Conditions))
 TriggerAddAction(gg_trg_Fire_Trap_Autocast, Trig_Fire_Trap_Autocast_Actions)
+end
+
+function Trig_Frost_Trap_Autocast_Conditions()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A04N"), udg_DamageEventSource) >= 1)) then
+return false
+end
+return true
+end
+
+function Trig_Frost_Trap_Autocast_Actions()
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
+UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
+UnitAddAbilityBJ(FourCC("A00A"), GetLastCreatedUnit())
+SetUnitAbilityLevelSwapped(FourCC("A00A"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A04N"), udg_DamageEventSource))
+IssuePointOrderLocBJ(GetLastCreatedUnit(), "breathoffrost", GetUnitLoc(udg_DamageEventTarget))
+end
+
+function InitTrig_Frost_Trap_Autocast()
+gg_trg_Frost_Trap_Autocast = CreateTrigger()
+TriggerRegisterVariableEvent(gg_trg_Frost_Trap_Autocast, "udg_DamageEvent", EQUAL, 1.00)
+TriggerAddCondition(gg_trg_Frost_Trap_Autocast, Condition(Trig_Frost_Trap_Autocast_Conditions))
+TriggerAddAction(gg_trg_Frost_Trap_Autocast, Trig_Frost_Trap_Autocast_Actions)
+end
+
+function Trig_Ice_Cage_Autocast_Conditions()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A00A"), udg_DamageEventSource) >= 1)) then
+return false
+end
+return true
+end
+
+function Trig_Ice_Cage_Autocast_Func002C()
+if (not (udg_Integer_Array_FrostTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (5 + udg_Integer_TotalFrostTrapsBuilt))) then
+return false
+end
+return true
+end
+
+function Trig_Ice_Cage_Autocast_Actions()
+udg_Integer_Array_FrostTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomInt(1, 100)
+if (Trig_Ice_Cage_Autocast_Func002C()) then
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
+UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
+UnitAddAbilityBJ(FourCC("A04M"), GetLastCreatedUnit())
+SetUnitAbilityLevelSwapped(FourCC("A04M"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A00A"), udg_DamageEventSource))
+IssueTargetOrderBJ(GetLastCreatedUnit(), "frostarmor", udg_DamageEventTarget)
+else
+end
+end
+
+function InitTrig_Ice_Cage_Autocast()
+gg_trg_Ice_Cage_Autocast = CreateTrigger()
+TriggerRegisterVariableEvent(gg_trg_Ice_Cage_Autocast, "udg_DamageEvent", EQUAL, 1.00)
+TriggerAddCondition(gg_trg_Ice_Cage_Autocast, Condition(Trig_Ice_Cage_Autocast_Conditions))
+TriggerAddAction(gg_trg_Ice_Cage_Autocast, Trig_Ice_Cage_Autocast_Actions)
 end
 
 function Trig_Set_Variables_Func250001()
@@ -5262,6 +5328,28 @@ end
 return true
 end
 
+function Trig_Instant_Upgrade_Func003Func001Func001002003001002()
+return (GetUnitTypeId(GetFilterUnit()) == FourCC("n017"))
+end
+
+function Trig_Instant_Upgrade_Func003Func001Func002001001002()
+return (GetUnitTypeId(GetFilterUnit()) == FourCC("n017"))
+end
+
+function Trig_Instant_Upgrade_Func003Func001C()
+if (not (CountUnitsInGroup(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Instant_Upgrade_Func003Func001Func002001001002))) <= 10)) then
+return false
+end
+return true
+end
+
+function Trig_Instant_Upgrade_Func003C()
+if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("n017"))) then
+return false
+end
+return true
+end
+
 function Trig_Instant_Upgrade_Actions()
 if (Trig_Instant_Upgrade_Func001C()) then
 ReplaceUnitBJ(GetTriggerUnit(), GetUnitTypeId(GetTriggerUnit()), bj_UNIT_STATE_METHOD_RELATIVE)
@@ -5287,6 +5375,13 @@ udg_Integer_TotalFireTrapsBuilt = (0 + CountUnitsInGroup(GetUnitsInRectMatching(
 else
 end
 IssueImmediateOrderBJ(GetLastReplacedUnitBJ(), "immolation")
+else
+end
+if (Trig_Instant_Upgrade_Func003C()) then
+if (Trig_Instant_Upgrade_Func003Func001C()) then
+udg_Integer_TotalFrostTrapsBuilt = (0 + CountUnitsInGroup(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Instant_Upgrade_Func003Func001Func001002003001002))))
+else
+end
 else
 end
 end
@@ -15273,22 +15368,22 @@ TriggerAddCondition(gg_trg_Poison_Trap_Autocast, Condition(Trig_Poison_Trap_Auto
 TriggerAddAction(gg_trg_Poison_Trap_Autocast, Trig_Poison_Trap_Autocast_Actions)
 end
 
-function Trig_Frost_Trap_Autocast_Conditions()
+function Trig_Frost_Trap_Autocast___rrerer_Conditions()
 if (not (GetUnitTypeId(GetAttacker()) == FourCC("n017"))) then
 return false
 end
 return true
 end
 
-function Trig_Frost_Trap_Autocast_Actions()
+function Trig_Frost_Trap_Autocast___rrerer_Actions()
 IssuePointOrderLocBJ(GetAttacker(), "breathoffrost", GetUnitLoc(GetAttackedUnitBJ()))
 end
 
-function InitTrig_Frost_Trap_Autocast()
-gg_trg_Frost_Trap_Autocast = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Frost_Trap_Autocast, EVENT_PLAYER_UNIT_ATTACKED)
-TriggerAddCondition(gg_trg_Frost_Trap_Autocast, Condition(Trig_Frost_Trap_Autocast_Conditions))
-TriggerAddAction(gg_trg_Frost_Trap_Autocast, Trig_Frost_Trap_Autocast_Actions)
+function InitTrig_Frost_Trap_Autocast___rrerer()
+gg_trg_Frost_Trap_Autocast___rrerer = CreateTrigger()
+TriggerRegisterAnyUnitEventBJ(gg_trg_Frost_Trap_Autocast___rrerer, EVENT_PLAYER_UNIT_ATTACKED)
+TriggerAddCondition(gg_trg_Frost_Trap_Autocast___rrerer, Condition(Trig_Frost_Trap_Autocast___rrerer_Conditions))
+TriggerAddAction(gg_trg_Frost_Trap_Autocast___rrerer, Trig_Frost_Trap_Autocast___rrerer_Actions)
 end
 
 function Trig_Darkness_Trap_Autocast_Conditions()
@@ -15418,7 +15513,7 @@ return true
 end
 
 function Trig_Frost_Trap_Func002Func005C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A00A"), GetTriggerUnit()) >= 10)) then
+if (not (GetUnitAbilityLevelSwapped(FourCC("A04N"), GetTriggerUnit()) >= 10)) then
 return false
 end
 return true
@@ -15432,12 +15527,12 @@ return true
 end
 
 function Trig_Frost_Trap_Actions()
-SetUnitUserData(GetTriggerUnit(), udg_Integer_Array_TrapGoldCost[GetUnitAbilityLevelSwapped(FourCC("A00A"), GetTriggerUnit())])
+SetUnitUserData(GetTriggerUnit(), udg_Integer_Array_TrapGoldCost[GetUnitAbilityLevelSwapped(FourCC("A04N"), GetTriggerUnit())])
 if (Trig_Frost_Trap_Func002C()) then
 CreateTextTagUnitBJ(("You Need " .. (I2S(GetUnitUserData(GetTriggerUnit())) .. " To Upgrade")), GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
 else
 CreateTextTagUnitBJ("TRIGSTR_019", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
-IncUnitAbilityLevelSwapped(FourCC("A00A"), GetTriggerUnit())
+IncUnitAbilityLevelSwapped(FourCC("A04N"), GetTriggerUnit())
 BlzSetUnitName(GetTriggerUnit(), ("Frost Trap " .. I2S(GetUnitAbilityLevelSwapped(FourCC("A00A"), GetTriggerUnit()))))
 SetPlayerStateBJ(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD, (GetPlayerState(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD) - GetUnitUserData(GetTriggerUnit())))
 if (Trig_Frost_Trap_Func002Func005C()) then
@@ -16049,6 +16144,8 @@ InitTrig_Shard_Tower_Abilities()
 InitTrig_Spirit_Tower()
 InitTrig_Rocket_Tower()
 InitTrig_Fire_Trap_Autocast()
+InitTrig_Frost_Trap_Autocast()
+InitTrig_Ice_Cage_Autocast()
 InitTrig_Set_Variables()
 InitTrig_Set_Random_Wave_Variables()
 InitTrig_Map_Start()
@@ -16204,7 +16301,7 @@ InitTrig_Player_9()
 InitTrig_Void_Trap_Autocast()
 InitTrig_Earth_Trap_Autocast()
 InitTrig_Poison_Trap_Autocast()
-InitTrig_Frost_Trap_Autocast()
+InitTrig_Frost_Trap_Autocast___rrerer()
 InitTrig_Darkness_Trap_Autocast()
 InitTrig_Iron_Trap_Autocast()
 InitTrig_Iron_Trap_Autocast_Mine()

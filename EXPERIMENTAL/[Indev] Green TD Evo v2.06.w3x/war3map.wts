@@ -2500,21 +2500,6 @@ STRING 370
 |c00FF0000You have beaten Green TD Evolution, thank you for playing.
 }
 
-STRING 371
-// Units: n017 (Frost Trap), Ubertip (Tooltip - Extended)
-{
-|c006969FF[Support Tower]|r
-|c0000ff00Attacks land units only.|r
-
-|c0077ff77Sends out a blast of frost in a cone towards the enemy dealing damage and damage over time. Does not affect Immune or Air Creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
-|c0000ff00Damage:|r |c0077ff77150
-|c0000ff00Damage per second:|r |c0077ff77300
-|c0000ff00Cooldown:|r |c0077ff774 Seconds
-|c0000ff00Duration:|r |c0077ff775 Seconds
-}
-
 STRING 372
 // Units: nomg ([Immune] Ogre Magi), Name (Name)
 {
@@ -15479,6 +15464,38 @@ STRING 2337
 This ability is used in the random attack trigger for venom towers
 }
 
+STRING 2338
+// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Immolation deals damage their is a [5% + 1% per fire trap built globally] chance to trigger either Incinerate or Flask of Oil
+
+|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
+|c0000ff00Initial Damage:|r |c0077ff77500
+|c0000ff00Damage over Time:|r |c0077ff77250/s if affected by flask of oil
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+
+|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
+|c0000ff00Area of Effect:|r |c0077ff77400
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
+}
+
+STRING 2339
+// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Immolation deals damage their is a [5% + 1% per fire trap built globally] chance to trigger either Incinerate or Flask of Oil
+
+|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
+|c0000ff00Initial Damage:|r |c0077ff771000
+|c0000ff00Damage over Time:|r |c0077ff77500/s if affected by flask of oil
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+
+|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
+|c0000ff00Area of Effect:|r |c0077ff77400
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
+}
+
 STRING 2340
 // Units: h00V (Flak Tower 4), Ubertip (Tooltip - Extended)
 {
@@ -15496,6 +15513,38 @@ STRING 2341
 // Units: h00V (Flak Tower 4), Tip (Tooltip - Basic)
 {
 |c0077ff77[C] |c0000ff00Upgrade To Mortar Team.|r |cAAAAFFAAFlak Tower 4.|r
+}
+
+STRING 2342
+// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Immolation deals damage their is a [5% + 1% per fire trap built globally] chance to trigger either Incinerate or Flask of Oil
+
+|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
+|c0000ff00Initial Damage:|r |c0077ff771750
+|c0000ff00Damage over Time:|r |c0077ff77875/s if affected by flask of oil
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+
+|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
+|c0000ff00Area of Effect:|r |c0077ff77400
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
+}
+
+STRING 2343
+// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Immolation deals damage their is a [5% + 1% per fire trap built globally] chance to trigger either Incinerate or Flask of Oil
+
+|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
+|c0000ff00Initial Damage:|r |c0077ff772750
+|c0000ff00Damage over Time:|r |c0077ff771375/s if affected by flask of oil
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+
+|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
+|c0000ff00Area of Effect:|r |c0077ff77400
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
 }
 
 STRING 2344
@@ -16529,6 +16578,22 @@ STRING 2497
 Hellfire 6
 }
 
+STRING 2498
+// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Immolation deals damage their is a [5% + 1% per fire trap built globally] chance to trigger either Incinerate or Flask of Oil
+
+|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
+|c0000ff00Initial Damage:|r |c0077ff772750
+|c0000ff00Damage over Time:|r |c0077ff772000/s if affected by flask of oil
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+
+|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
+|c0000ff00Area of Effect:|r |c0077ff77400
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
+}
+
 STRING 2499
 // Abilities: A041 (Hellfire 6), Tip (Tooltip - Normal)
 {
@@ -16626,7 +16691,7 @@ STRING 2513
 }
 
 STRING 2514
-// Abilities: A04J (Incinerate), EditorSuffix (Editor Suffix)
+// Abilities: A01K (Immolation), EditorSuffix (Editor Suffix)
 {
 [Fire Trap]
 }
@@ -16644,7 +16709,7 @@ STRING 2516
 }
 
 STRING 2517
-// Abilities: A04K (Flask of Oil), EditorSuffix (Editor Suffix)
+// Abilities: A04J (Incinerate), EditorSuffix (Editor Suffix)
 {
 [Fire Trap]
 }
@@ -18113,6 +18178,38 @@ STRING 2715
 |c0000ff00Ability:|r |c0077ff77Venomous: Deals 9000 damage per second, stacks with other Venom Towers, also causes the tower to attack randomly.
 }
 
+STRING 2716
+// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Immolation deals damage their is a [5% + 1% per fire trap built globally] chance to trigger either Incinerate or Flask of Oil
+
+|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
+|c0000ff00Initial Damage:|r |c0077ff775500
+|c0000ff00Damage over Time:|r |c0077ff772750/s if affected by flask of oil
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+
+|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
+|c0000ff00Area of Effect:|r |c0077ff77400
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
+}
+
+STRING 2717
+// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Immolation deals damage their is a [5% + 1% per fire trap built globally] chance to trigger either Incinerate or Flask of Oil
+
+|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
+|c0000ff00Initial Damage:|r |c0077ff777250
+|c0000ff00Damage over Time:|r |c0077ff773625/s if affected by flask of oil
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+
+|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
+|c0000ff00Area of Effect:|r |c0077ff77400
+|c0000ff00Duration:|r|c0077ff77 3 Seconds
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
+}
+
 STRING 2718
 // Abilities: A04H (Bouncing Attack), Ubertip (Tooltip - Normal - Extended)
 {
@@ -18135,25 +18232,6 @@ STRING 2721
 // Abilities: A04I (Shrapnel Blast), Name (Name)
 {
 Shrapnel Blast
-}
-
-STRING 2722
-// Units: n00A (Fire Trap), Ubertip (Tooltip - Extended)
-{
-|c006969FF[Support Tower]|r
-|c0000ff00Attacks land units only.|r
-
-|c0077ff77A trap that deals damage to enemys around it and has a chance to cast incinerate or flask of oil. Does not affect Immune or Air Creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Immolation [Auto-Casted]
-|c0000ff00Damage:|r |c0077ff77250 per second
-|c0000ff00Area of Effect:|r |c0077ff77400
-|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
-|c0000ff00Damage:|r |c0077ff77500
-|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
-|c0000ff00Damage:|r |c0077ff77250 per second if ignited
-|c0000ff00Area of Effect:|r |c0077ff77400
-|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
 }
 
 STRING 2723
@@ -20541,12 +20619,6 @@ STRING 3073
 |c0077ff77Hits on enemies have a [10% + 0.1% per armour of hit unit] chance to trigger a shrapnel blast dealing piercing damage to near by units equaling to [250 x armor of hit unit].
 }
 
-STRING 3074
-// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
-{
-|c0000ff00Incinerate and Flask of Oil
-}
-
 STRING 3075
 // Units: h021 (Bash Tower 1: Storm Panda), Name (Name)
 {
@@ -20643,182 +20715,10 @@ STRING 3083
 |c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 1500 damage per second to non-immune creeps walking through it.|r
 }
 
-STRING 3085
-// Abilities: A04L (Incinerate and Flask of Oil), EditorSuffix (Editor Suffix)
-{
-[Fire Trap]
-}
-
-STRING 3086
-// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
-{
-|c0000ff00Incinerate and Flask of Oil
-}
-
-STRING 3087
-// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
-{
-|c0000ff00Incinerate and Flask of Oil
-}
-
-STRING 3088
-// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
-{
-|c0000ff00Incinerate and Flask of Oil
-}
-
-STRING 3089
-// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
-{
-|c0000ff00Incinerate and Flask of Oil
-}
-
-STRING 3090
-// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
-{
-|c0000ff00Incinerate and Flask of Oil
-}
-
-STRING 3091
-// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
-{
-|c0000ff00Incinerate and Flask of Oil
-}
-
-STRING 3092
-// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
-{
-|c0000ff00Incinerate and Flask of Oil
-}
-
-STRING 3093
-// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
-{
-|c0000ff00Incinerate and Flask of Oil
-}
-
-STRING 3094
-// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
-{
-|c0000ff00Incinerate and Flask of Oil
-}
-
-STRING 3104
+STRING 3084
 // Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
-
-|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
-|c0000ff00Initial Damage:|r |c0077ff77500
-|c0000ff00Damage over Time:|r |c0077ff77250/s if affected by flask of oil
-|c0000ff00Duration:|r|c0077ff77 3 Seconds
-
-|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
-|c0000ff00Area of Effect:|r |c0077ff77400
-|c0000ff00Duration:|r|c0077ff77 3 Seconds
-|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
-}
-
-STRING 3105
-// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
-
-|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
-|c0000ff00Initial Damage:|r |c0077ff771000
-|c0000ff00Damage over Time:|r |c0077ff77500/s if affected by flask of oil
-|c0000ff00Duration:|r|c0077ff77 3 Seconds
-
-|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
-|c0000ff00Area of Effect:|r |c0077ff77400
-|c0000ff00Duration:|r|c0077ff77 3 Seconds
-|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
-}
-
-STRING 3106
-// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
-
-|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
-|c0000ff00Initial Damage:|r |c0077ff771750
-|c0000ff00Damage over Time:|r |c0077ff77875/s if affected by flask of oil
-|c0000ff00Duration:|r|c0077ff77 3 Seconds
-
-|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
-|c0000ff00Area of Effect:|r |c0077ff77400
-|c0000ff00Duration:|r|c0077ff77 3 Seconds
-|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
-}
-
-STRING 3107
-// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
-
-|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
-|c0000ff00Initial Damage:|r |c0077ff772750
-|c0000ff00Damage over Time:|r |c0077ff771375/s if affected by flask of oil
-|c0000ff00Duration:|r|c0077ff77 3 Seconds
-
-|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
-|c0000ff00Area of Effect:|r |c0077ff77400
-|c0000ff00Duration:|r|c0077ff77 3 Seconds
-|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
-}
-
-STRING 3108
-// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
-
-|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
-|c0000ff00Initial Damage:|r |c0077ff772750
-|c0000ff00Damage over Time:|r |c0077ff772000/s if affected by flask of oil
-|c0000ff00Duration:|r|c0077ff77 3 Seconds
-
-|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
-|c0000ff00Area of Effect:|r |c0077ff77400
-|c0000ff00Duration:|r|c0077ff77 3 Seconds
-|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
-}
-
-STRING 3109
-// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
-
-|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
-|c0000ff00Initial Damage:|r |c0077ff775500
-|c0000ff00Damage over Time:|r |c0077ff772750/s if affected by flask of oil
-|c0000ff00Duration:|r|c0077ff77 3 Seconds
-
-|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
-|c0000ff00Area of Effect:|r |c0077ff77400
-|c0000ff00Duration:|r|c0077ff77 3 Seconds
-|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
-}
-
-STRING 3110
-// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
-
-|c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
-|c0000ff00Initial Damage:|r |c0077ff777250
-|c0000ff00Damage over Time:|r |c0077ff773625/s if affected by flask of oil
-|c0000ff00Duration:|r|c0077ff77 3 Seconds
-
-|c0000ff00Ability (2):|r |c0077ff77Flask of Oil [Auto-Casted]
-|c0000ff00Area of Effect:|r |c0077ff77400
-|c0000ff00Duration:|r|c0077ff77 3 Seconds
-|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
-}
-
-STRING 3111
-// Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
+|c0077ff77When Immolation deals damage their is a [5% + 1% per fire trap built globally] chance to trigger either Incinerate or Flask of Oil
 
 |c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
 |c0000ff00Initial Damage:|r |c0077ff779250
@@ -20831,10 +20731,16 @@ STRING 3111
 |c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
 }
 
-STRING 3112
+STRING 3085
+// Abilities: A04K (Flask of Oil), EditorSuffix (Editor Suffix)
+{
+[Fire Trap]
+}
+
+STRING 3095
 // Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
+|c0077ff77When Immolation deals damage their is a [5% + 1% per fire trap built globally] chance to trigger either Incinerate or Flask of Oil
 
 |c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
 |c0000ff00Initial Damage:|r |c0077ff7711500
@@ -20847,10 +20753,10 @@ STRING 3112
 |c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
 }
 
-STRING 3113
+STRING 3096
 // Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff77When Immolation deals damage their is a [5% + 1% per player with a fire trap built] chance to trigger either Incinerate or Flask of Oil
+|c0077ff77When Immolation deals damage their is a [5% + 1% per fire trap built globally] chance to trigger either Incinerate or Flask of Oil
 
 |c0000ff00Ability (1):|r |c0077ff77Incinerate [Auto-Casted]
 |c0000ff00Initial Damage:|r |c0077ff7714000
@@ -20863,10 +20769,124 @@ STRING 3113
 |c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
 }
 
+STRING 3097
+// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
+{
+|c0000ff00Incinerate and Flask of Oil - Level 1
+}
+
+STRING 3098
+// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
+{
+|c0000ff00Incinerate and Flask of Oil - Level 2
+}
+
+STRING 3099
+// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
+{
+|c0000ff00Incinerate and Flask of Oil - Level 3
+}
+
+STRING 3100
+// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
+{
+|c0000ff00Incinerate and Flask of Oil - Level 4
+}
+
+STRING 3101
+// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
+{
+|c0000ff00Incinerate and Flask of Oil - Level 5
+}
+
+STRING 3102
+// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
+{
+|c0000ff00Incinerate and Flask of Oil - Level 6
+}
+
+STRING 3103
+// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
+{
+|c0000ff00Incinerate and Flask of Oil - Level 7
+}
+
+STRING 3114
+// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
+{
+|c0000ff00Incinerate and Flask of Oil - Level 8
+}
+
+STRING 3115
+// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
+{
+|c0000ff00Incinerate and Flask of Oil - Level 9
+}
+
+STRING 3116
+// Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
+{
+|c0000ff00Incinerate and Flask of Oil - Level 10
+}
+
+STRING 3117
+// Abilities: A04M (Ice Cage), EditorSuffix (Editor Suffix)
+{
+[Frost Trap]
+}
+
+STRING 3118
+// Abilities: A04N (Frost Blast and Ice Cage), Name (Name)
+{
+Frost Blast and Ice Cage
+}
+
+STRING 3119
+// Abilities: A04N (Frost Blast and Ice Cage), Tip (Tooltip - Normal)
+{
+|c0000ff00Frost Blast and Ice Cage - Level 1
+}
+
+STRING 3121
+// Abilities: A04N (Frost Blast and Ice Cage), Tip (Tooltip - Normal)
+{
+|c0000ff00Frost Blast and Ice Cage - Level 2
+}
+
+STRING 3122
+// Abilities: A04N (Frost Blast and Ice Cage), Tip (Tooltip - Normal)
+{
+|c0000ff00Frost Blast and Ice Cage - Level 3
+}
+
+STRING 3123
+// Abilities: A04N (Frost Blast and Ice Cage), Tip (Tooltip - Normal)
+{
+|c0000ff00Frost Blast and Ice Cage - Level 4
+}
+
+STRING 3124
+// Abilities: A04N (Frost Blast and Ice Cage), Tip (Tooltip - Normal)
+{
+|c0000ff00Frost Blast and Ice Cage - Level 5
+}
+
 STRING 3125
 // Abilities: A04G (Overdrive), Name (Name)
 {
 Overdrive
+}
+
+STRING 3126
+// Abilities: A04N (Frost Blast and Ice Cage), Tip (Tooltip - Normal)
+{
+|c0000ff00Frost Blast and Ice Cage - Level 6
+}
+
+STRING 3127
+// Abilities: A04N (Frost Blast and Ice Cage), Tip (Tooltip - Normal)
+{
+|c0000ff00Frost Blast and Ice Cage - Level 7
 }
 
 STRING 3128
@@ -20973,10 +20993,34 @@ STRING 3135
 D
 }
 
+STRING 3136
+// Abilities: A04N (Frost Blast and Ice Cage), Tip (Tooltip - Normal)
+{
+|c0000ff00Frost Blast and Ice Cage - Level 8
+}
+
 STRING 3137
 // Abilities: A02I (Electroboom), Name (Name)
 {
 Electroboom
+}
+
+STRING 3138
+// Abilities: A04N (Frost Blast and Ice Cage), Tip (Tooltip - Normal)
+{
+|c0000ff00Frost Blast and Ice Cage - Level 9
+}
+
+STRING 3139
+// Abilities: A04N (Frost Blast and Ice Cage), Tip (Tooltip - Normal)
+{
+|c0000ff00Frost Blast and Ice Cage - Level 10
+}
+
+STRING 3140
+// Abilities: A04N (Frost Blast and Ice Cage), EditorSuffix (Editor Suffix)
+{
+[Frost Trap]
 }
 
 STRING 3148
@@ -20985,14 +21029,174 @@ STRING 3148
 E
 }
 
+STRING 3151
+// Units: n00A (Fire Trap), Ubertip (Tooltip - Extended)
+{
+|c006969FF[Support Tower]|r
+|c0000ff00Attacks land units only.|r
+
+|c0077ff77A trap that deals damage to enemys around it and has a chance to cast incinerate or flask of oil. Does not affect Immune or Air Creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Immolation [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff77250 per second
+|c0000ff00Area of Effect:|r |c0077ff77400
+
+|c0000ff00Ability:|r |c0077ff77Incinerate [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff77500
+
+|c0000ff00Ability:|r |c0077ff77Flask of Oil [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff77250 per second if ignited
+|c0000ff00Area of Effect:|r |c0077ff77400
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
+}
+
+STRING 3153
+// Abilities: A04M (Ice Cage), Name (Name)
+{
+Ice Cage
+}
+
+STRING 3154
+// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
+
+|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff77150
+|c0000ff00Damage per second:|r |c0077ff77300
+|c0000ff00Duration:|r |c0077ff775 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Ice Cage [Auto-Casted]
+|c0000ff00Armour Decrease:|r |c0077ff77-2
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
+STRING 3155
+// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
+
+|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff77300
+|c0000ff00Damage per second:|r |c0077ff77500
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
 STRING 3156
 {
 [None]
 }
 
+STRING 3157
+// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
+
+|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff77600
+|c0000ff00Damage per second:|r |c0077ff771000
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
 STRING 3158
 {
 [Endless Creeps]
+}
+
+STRING 3159
+// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
+
+|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff771200
+|c0000ff00Damage per second:|r |c0077ff772000
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
+STRING 3160
+// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
+
+|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff772400
+|c0000ff00Damage per second:|r |c0077ff774000
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
+STRING 3161
+// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
+
+|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff773000
+|c0000ff00Damage per second:|r |c0077ff776000
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
+STRING 3162
+// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
+
+|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff774000
+|c0000ff00Damage per second:|r |c0077ff778000
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
+STRING 3163
+// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
+
+|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff775000
+|c0000ff00Damage per second:|r |c0077ff7710000
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
+STRING 3164
+// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
+
+|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff777500
+|c0000ff00Damage per second:|r |c0077ff7715000
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
+STRING 3165
+// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
+
+|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff7710000
+|c0000ff00Damage per second:|r |c0077ff7720000
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
+STRING 3167
+// Units: n017 (Frost Trap), Ubertip (Tooltip - Extended)
+{
+|c006969FF[Support Tower]|r
+|c0000ff00Attacks land units only.|r
+
+|c0077ff77Sends out a blast of frost in a cone towards the enemy dealing damage and damage over time. Has a chance to trigger ice cage when dealing damage. Does not affect Immune or Air Creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
+|c0000ff00Base Cooldown:|r |c0077ff772 Seconds
+|c0000ff00Damage:|r |c0077ff77150
+|c0000ff00Damage per second:|r |c0077ff77300
+
+|c0000ff00Ability:|r |c0077ff77Ice Cage [Auto-Casted]
+|c0000ff00Armour Decrease:|r |c0077ff77-2
+|c0000ff00Duration:|r |c0077ff775 Seconds
+
 }
 
 STRING 3188
@@ -24857,7 +25061,7 @@ Upgrade Trap Ability
 }
 
 STRING 9105
-// Abilities: A01K (Immolation), EditorSuffix (Editor Suffix)
+// Abilities: A04L (Incinerate and Flask of Oil), EditorSuffix (Editor Suffix)
 {
 [Fire Trap]
 }
