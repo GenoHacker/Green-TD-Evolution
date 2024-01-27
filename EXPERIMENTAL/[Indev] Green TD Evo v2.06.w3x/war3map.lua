@@ -15689,7 +15689,7 @@ return true
 end
 
 function Trig_Darkness_Trap_Func002Func005C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A00B"), GetTriggerUnit()) >= 10)) then
+if (not (GetUnitAbilityLevelSwapped(FourCC("A04Q"), GetTriggerUnit()) >= 10)) then
 return false
 end
 return true
@@ -15703,13 +15703,13 @@ return true
 end
 
 function Trig_Darkness_Trap_Actions()
-SetUnitUserData(GetTriggerUnit(), udg_Integer_Array_TrapGoldCost[GetUnitAbilityLevelSwapped(FourCC("A00B"), GetTriggerUnit())])
+SetUnitUserData(GetTriggerUnit(), udg_Integer_Array_TrapGoldCost[GetUnitAbilityLevelSwapped(FourCC("A04Q"), GetTriggerUnit())])
 if (Trig_Darkness_Trap_Func002C()) then
 CreateTextTagUnitBJ(("You Need " .. (I2S(GetUnitUserData(GetTriggerUnit())) .. " To Upgrade")), GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
 else
 CreateTextTagUnitBJ("TRIGSTR_059", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
-IncUnitAbilityLevelSwapped(FourCC("A00B"), GetTriggerUnit())
-BlzSetUnitName(GetTriggerUnit(), ("Darkness Trap " .. I2S(GetUnitAbilityLevelSwapped(FourCC("A00B"), GetTriggerUnit()))))
+IncUnitAbilityLevelSwapped(FourCC("A04Q"), GetTriggerUnit())
+BlzSetUnitName(GetTriggerUnit(), ("Darkness Trap " .. I2S(GetUnitAbilityLevelSwapped(FourCC("A04Q"), GetTriggerUnit()))))
 SetPlayerStateBJ(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD, (GetPlayerState(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD) - GetUnitUserData(GetTriggerUnit())))
 if (Trig_Darkness_Trap_Func002Func005C()) then
 UnitRemoveAbilityBJ(FourCC("A023"), GetTriggerUnit())
