@@ -2061,14 +2061,19 @@ local life
 gg_unit_n00C_0019 = BlzCreateUnitWithSkin(p, FourCC("n00C"), -1792.0, 3392.0, 270.000, FourCC("n00C"))
 end
 
-function CreateNeutralHostile()
-local p = Player(PLAYER_NEUTRAL_AGGRESSIVE)
+function CreateUnitsForPlayer10()
+local p = Player(10)
 local u
 local unitID
 local t
 local life
 
-u = BlzCreateUnitWithSkin(p, FourCC("n013"), -1794.5, 3141.5, 257.934, FourCC("n013"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1889.2, 2760.1, 208.835, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1765.9, 2867.4, 121.589, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1653.0, 2745.8, 52.582, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1770.7, 2589.0, 319.086, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1913.8, 2624.3, 213.724, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1669.2, 2621.1, 215.009, FourCC("h01H"))
 end
 
 function CreateNeutralPassiveBuildings()
@@ -2103,6 +2108,7 @@ u = BlzCreateUnitWithSkin(p, FourCC("n013"), 2567.0, 7200.0, 149.353, FourCC("n0
 u = BlzCreateUnitWithSkin(p, FourCC("n013"), -6140.9, 7180.5, 320.162, FourCC("n013"))
 u = BlzCreateUnitWithSkin(p, FourCC("n013"), -6394.9, 3343.3, 51.813, FourCC("n013"))
 u = BlzCreateUnitWithSkin(p, FourCC("n013"), -6130.3, -1541.8, 66.524, FourCC("n013"))
+u = BlzCreateUnitWithSkin(p, FourCC("n013"), -1795.8, 3327.3, 257.930, FourCC("n013"))
 u = BlzCreateUnitWithSkin(p, FourCC("n013"), -2113.5, -3121.5, 70.282, FourCC("n013"))
 u = BlzCreateUnitWithSkin(p, FourCC("n013"), -1471.5, -3125.2, 89.124, FourCC("n013"))
 u = BlzCreateUnitWithSkin(p, FourCC("n013"), 2566.6, -1537.0, 51.813, FourCC("n013"))
@@ -2245,12 +2251,12 @@ CreateBuildingsForPlayer0()
 end
 
 function CreatePlayerUnits()
+CreateUnitsForPlayer10()
 end
 
 function CreateAllUnits()
 CreateNeutralPassiveBuildings()
 CreatePlayerBuildings()
-CreateNeutralHostile()
 CreateNeutralPassive()
 CreatePlayerUnits()
 end
@@ -2841,11 +2847,11 @@ return true
 end
 
 function Trig_Shrapnel_Tower_Shrapnel_Blast_Actions()
-udg_Real_Array_ShrapBlastChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal((100.00 + BlzGetUnitArmor(udg_DamageEventTarget)), 1000.00)
+udg_Real_Array_ShrapBlastChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal((100.00 + BlzGetUnitRealField(udg_DamageEventTarget, UNIT_RF_DEFENSE)), 1000.00)
 if (Trig_Shrapnel_Tower_Shrapnel_Blast_Func002C()) then
 CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventTarget), bj_UNIT_FACING)
 UnitApplyTimedLifeBJ(0.50, FourCC("BTLF"), GetLastCreatedUnit())
-UnitDamagePointLoc(GetLastCreatedUnit(), 0, 300.00, GetUnitLoc(udg_DamageEventTarget), (250.00 * (1 + BlzGetUnitArmor(udg_DamageEventTarget))), ATTACK_TYPE_PIERCE, DAMAGE_TYPE_NORMAL)
+UnitDamagePointLoc(GetLastCreatedUnit(), 0, 300.00, GetUnitLoc(udg_DamageEventTarget), (250.00 * (1 + BlzGetUnitRealField(udg_DamageEventTarget, UNIT_RF_DEFENSE))), ATTACK_TYPE_PIERCE, DAMAGE_TYPE_NORMAL)
 AddSpecialEffectLocBJ(GetUnitLoc(udg_DamageEventTarget), "Abilities\\Spells\\NightElf\\FanOfKnives\\FanOfKnivesCaster.mdl")
 BlzSetSpecialEffectYaw(GetLastCreatedEffectBJ(), GetRandomReal(0, 360.00))
 BlzSetSpecialEffectPitch(GetLastCreatedEffectBJ(), 0.0)
@@ -3368,7 +3374,7 @@ TriggerAddAction(gg_trg_Darkness_Trap_Autocast, Trig_Darkness_Trap_Autocast_Acti
 end
 
 function Trig_Doom_Autocast_Conditions()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A04P"), udg_DamageEventSource) >= 1)) then
+if (not (GetUnitAbilityLevelSwapped(FourCC("A00B"), udg_DamageEventSource) >= 1)) then
 return false
 end
 return true
