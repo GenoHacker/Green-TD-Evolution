@@ -273,6 +273,10 @@ udg_Integer_TotalFireTrapsBuilt = 0
 udg_Integer_Array_Firetrap5050 = 0
 udg_Integer_Array_FrostTrapChance = __jarray(0)
 udg_Integer_TotalFrostTrapsBuilt = 0
+udg_Integer_Array_PoisTrapChance = __jarray(0)
+udg_Integer_TotalPoisonTrapsBuilt = 0
+udg_UnitGroup_Array_PoisCasGroup = {}
+udg_Integer_PoisonCascadeNum = 0
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -530,7 +534,7 @@ gg_trg_Player_8 = nil
 gg_trg_Player_9 = nil
 gg_trg_Void_Trap_Autocast = nil
 gg_trg_Earth_Trap_Autocast = nil
-gg_trg_Poison_Trap_Autocast = nil
+gg_trg_Poison_Trap_Autocastmmm = nil
 gg_trg_Frost_Trap_Autocast___rrerer = nil
 gg_trg_Darkness_Trap_Autocast = nil
 gg_trg_Iron_Trap_Autocast = nil
@@ -557,6 +561,8 @@ gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
+gg_trg_Poison_Cascade_Autocast = nil
+gg_trg_Poison_Trap_Autocast = nil
 function InitGlobals()
 local i = 0
 
@@ -1179,6 +1185,20 @@ udg_Integer_Array_FrostTrapChance[i] = 0
 i = i + 1
 end
 udg_Integer_TotalFrostTrapsBuilt = 0
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Integer_Array_PoisTrapChance[i] = 0
+i = i + 1
+end
+udg_Integer_TotalPoisonTrapsBuilt = 0
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_UnitGroup_Array_PoisCasGroup[i] = CreateGroup()
+i = i + 1
+end
+udg_Integer_PoisonCascadeNum = 0
 end
 
 -- Arcing Text Tag v1.0.0.3 by Maker encoded to Lua
@@ -3234,6 +3254,71 @@ gg_trg_Ice_Cage_Autocast = CreateTrigger()
 TriggerRegisterVariableEvent(gg_trg_Ice_Cage_Autocast, "udg_DamageEvent", EQUAL, 1.00)
 TriggerAddCondition(gg_trg_Ice_Cage_Autocast, Condition(Trig_Ice_Cage_Autocast_Conditions))
 TriggerAddAction(gg_trg_Ice_Cage_Autocast, Trig_Ice_Cage_Autocast_Actions)
+end
+
+function Trig_Poison_Cascade_Autocast_Conditions()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A009"), udg_DamageEventSource) >= 1)) then
+return false
+end
+return true
+end
+
+function Trig_Poison_Cascade_Autocast_Func002Func002002002003()
+return (IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_DamageEventSource)) == true)
+end
+
+function Trig_Poison_Cascade_Autocast_Func002Func003A()
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
+UnitApplyTimedLifeBJ(5.50, FourCC("BTLF"), GetLastCreatedUnit())
+UnitAddAbilityBJ(FourCC("A009"), GetLastCreatedUnit())
+SetUnitAbilityLevelSwapped(FourCC("A009"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A009"), udg_DamageEventSource))
+IssueTargetOrderBJ(GetLastCreatedUnit(), "shadowstrike", GetEnumUnit())
+end
+
+function Trig_Poison_Cascade_Autocast_Func002C()
+if (not (udg_Integer_Array_PoisTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (5 + udg_Integer_TotalPoisonTrapsBuilt))) then
+return false
+end
+return true
+end
+
+function Trig_Poison_Cascade_Autocast_Actions()
+udg_Integer_Array_PoisTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomInt(1, 100)
+if (Trig_Poison_Cascade_Autocast_Func002C()) then
+udg_Integer_PoisonCascadeNum = GetRandomInt(1, 6)
+udg_UnitGroup_Array_PoisCasGroup[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomSubGroup(udg_Integer_PoisonCascadeNum, GetUnitsInRangeOfLocMatching(400.00, GetUnitLoc(udg_DamageEventSource), Condition(Trig_Poison_Cascade_Autocast_Func002Func002002002003)))
+ForGroupBJ(udg_UnitGroup_Array_PoisCasGroup[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))], Trig_Poison_Cascade_Autocast_Func002Func003A)
+else
+end
+end
+
+function InitTrig_Poison_Cascade_Autocast()
+gg_trg_Poison_Cascade_Autocast = CreateTrigger()
+TriggerRegisterVariableEvent(gg_trg_Poison_Cascade_Autocast, "udg_DamageEvent", EQUAL, 1.00)
+TriggerAddCondition(gg_trg_Poison_Cascade_Autocast, Condition(Trig_Poison_Cascade_Autocast_Conditions))
+TriggerAddAction(gg_trg_Poison_Cascade_Autocast, Trig_Poison_Cascade_Autocast_Actions)
+end
+
+function Trig_Poison_Trap_Autocast_Conditions()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A04O"), udg_DamageEventSource) >= 1)) then
+return false
+end
+return true
+end
+
+function Trig_Poison_Trap_Autocast_Actions()
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
+UnitApplyTimedLifeBJ(5.50, FourCC("BTLF"), GetLastCreatedUnit())
+UnitAddAbilityBJ(FourCC("A009"), GetLastCreatedUnit())
+SetUnitAbilityLevelSwapped(FourCC("A009"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A009"), udg_DamageEventSource))
+IssueTargetOrderBJ(GetLastCreatedUnit(), "shadowstrike", udg_DamageEventTarget)
+end
+
+function InitTrig_Poison_Trap_Autocast()
+gg_trg_Poison_Trap_Autocast = CreateTrigger()
+TriggerRegisterVariableEvent(gg_trg_Poison_Trap_Autocast, "udg_DamageEvent", EQUAL, 1.00)
+TriggerAddCondition(gg_trg_Poison_Trap_Autocast, Condition(Trig_Poison_Trap_Autocast_Conditions))
+TriggerAddAction(gg_trg_Poison_Trap_Autocast, Trig_Poison_Trap_Autocast_Actions)
 end
 
 function Trig_Set_Variables_Func250001()
@@ -15351,22 +15436,22 @@ TriggerAddCondition(gg_trg_Earth_Trap_Autocast, Condition(Trig_Earth_Trap_Autoca
 TriggerAddAction(gg_trg_Earth_Trap_Autocast, Trig_Earth_Trap_Autocast_Actions)
 end
 
-function Trig_Poison_Trap_Autocast_Conditions()
+function Trig_Poison_Trap_Autocastmmm_Conditions()
 if (not (GetUnitTypeId(GetAttacker()) == FourCC("n01A"))) then
 return false
 end
 return true
 end
 
-function Trig_Poison_Trap_Autocast_Actions()
+function Trig_Poison_Trap_Autocastmmm_Actions()
 IssueTargetOrderBJ(GetAttacker(), "shadowstrike", GetAttackedUnitBJ())
 end
 
-function InitTrig_Poison_Trap_Autocast()
-gg_trg_Poison_Trap_Autocast = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Poison_Trap_Autocast, EVENT_PLAYER_UNIT_ATTACKED)
-TriggerAddCondition(gg_trg_Poison_Trap_Autocast, Condition(Trig_Poison_Trap_Autocast_Conditions))
-TriggerAddAction(gg_trg_Poison_Trap_Autocast, Trig_Poison_Trap_Autocast_Actions)
+function InitTrig_Poison_Trap_Autocastmmm()
+gg_trg_Poison_Trap_Autocastmmm = CreateTrigger()
+TriggerRegisterAnyUnitEventBJ(gg_trg_Poison_Trap_Autocastmmm, EVENT_PLAYER_UNIT_ATTACKED)
+TriggerAddCondition(gg_trg_Poison_Trap_Autocastmmm, Condition(Trig_Poison_Trap_Autocastmmm_Conditions))
+TriggerAddAction(gg_trg_Poison_Trap_Autocastmmm, Trig_Poison_Trap_Autocastmmm_Actions)
 end
 
 function Trig_Frost_Trap_Autocast___rrerer_Conditions()
@@ -15673,7 +15758,7 @@ return true
 end
 
 function Trig_Poison_Trap_Func002Func005C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A009"), GetTriggerUnit()) >= 10)) then
+if (not (GetUnitAbilityLevelSwapped(FourCC("A04O"), GetTriggerUnit()) >= 10)) then
 return false
 end
 return true
@@ -15692,8 +15777,8 @@ if (Trig_Poison_Trap_Func002C()) then
 CreateTextTagUnitBJ(("You Need " .. (I2S(GetUnitUserData(GetTriggerUnit())) .. " To Upgrade")), GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
 else
 CreateTextTagUnitBJ("TRIGSTR_9109", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
-IncUnitAbilityLevelSwapped(FourCC("A009"), GetTriggerUnit())
-BlzSetUnitName(GetTriggerUnit(), ("Poison Trap " .. I2S(GetUnitAbilityLevelSwapped(FourCC("A009"), GetTriggerUnit()))))
+IncUnitAbilityLevelSwapped(FourCC("A04O"), GetTriggerUnit())
+BlzSetUnitName(GetTriggerUnit(), ("Poison Trap " .. I2S(GetUnitAbilityLevelSwapped(FourCC("A04O"), GetTriggerUnit()))))
 SetPlayerStateBJ(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD, (GetPlayerState(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD) - GetUnitUserData(GetTriggerUnit())))
 if (Trig_Poison_Trap_Func002Func005C()) then
 UnitRemoveAbilityBJ(FourCC("A023"), GetTriggerUnit())
@@ -16147,6 +16232,8 @@ InitTrig_Rocket_Tower()
 InitTrig_Fire_Trap_Autocast()
 InitTrig_Frost_Trap_Autocast()
 InitTrig_Ice_Cage_Autocast()
+InitTrig_Poison_Cascade_Autocast()
+InitTrig_Poison_Trap_Autocast()
 InitTrig_Set_Variables()
 InitTrig_Set_Random_Wave_Variables()
 InitTrig_Map_Start()
@@ -16301,7 +16388,7 @@ InitTrig_Player_8()
 InitTrig_Player_9()
 InitTrig_Void_Trap_Autocast()
 InitTrig_Earth_Trap_Autocast()
-InitTrig_Poison_Trap_Autocast()
+InitTrig_Poison_Trap_Autocastmmm()
 InitTrig_Frost_Trap_Autocast___rrerer()
 InitTrig_Darkness_Trap_Autocast()
 InitTrig_Iron_Trap_Autocast()
