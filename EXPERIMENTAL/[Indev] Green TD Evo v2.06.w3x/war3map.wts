@@ -5600,23 +5600,6 @@ STRING 896
 |c0000ff00Slow Amount:|r |c0077ff7720%
 }
 
-STRING 897
-// Units: n01G (Darkness Trap), Ubertip (Tooltip - Extended)
-{
-|c006969FF[Support Tower]|r
-|c0000ff00Attacks land and air units.|r
-
-|c0077ff77A trap that launches dark bombs at nearby enemys, decreasing their armour and dealing damage over time. Does not affect Immune Creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Dark Bomb [Auto-Casted]
-|c0000ff00Armour Decrease:|r |c0077ff774
-|c0000ff00Primary Damage:|r |c0077ff77100
-|c0000ff00Secondary Damage:|r |c0077ff7750
-|c0000ff00Damage Interval:|r |c0077ff770.25 Seconds
-|c0000ff00Cooldown:|r |c0077ff77Seconds
-|c0000ff00Duration:|r |c0077ff7710 Seconds
-}
-
 STRING 898
 // Units: n01I (Iron Trap), Ubertip (Tooltip - Extended)
 {
@@ -21216,10 +21199,46 @@ STRING 3143
 |c0000ff00Slow Amount:|r |c0077ff7720%
 }
 
+STRING 3144
+// Abilities: A04P (Doom), Tip (Tooltip - Normal)
+{
+Doom
+}
+
+STRING 3145
+// Abilities: A04P (Doom), Tip (Tooltip - Normal)
+{
+Doom
+}
+
+STRING 3146
+// Abilities: A04P (Doom), Tip (Tooltip - Normal)
+{
+Doom
+}
+
+STRING 3147
+// Abilities: A04P (Doom), Tip (Tooltip - Normal)
+{
+Doom
+}
+
 STRING 3148
 // Abilities: A00V (Tower Options), Hotkey (Hotkey - Normal)
 {
 E
+}
+
+STRING 3149
+// Abilities: A04P (Doom), Tip (Tooltip - Normal)
+{
+Doom
+}
+
+STRING 3150
+// Abilities: A04P (Doom), Tip (Tooltip - Normal)
+{
+Doom
 }
 
 STRING 3151
@@ -21241,6 +21260,12 @@ STRING 3151
 |c0000ff00Damage:|r |c0077ff77250 per second if ignited
 |c0000ff00Area of Effect:|r |c0077ff77400
 |c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
+}
+
+STRING 3152
+// Abilities: A04P (Doom), Tip (Tooltip - Normal)
+{
+Doom
 }
 
 STRING 3153
@@ -21373,6 +21398,12 @@ STRING 3165
 |c0000ff00Duration:|r |c0077ff775 Seconds
 }
 
+STRING 3166
+// Abilities: A04P (Doom), Tip (Tooltip - Normal)
+{
+Doom
+}
+
 STRING 3167
 // Units: n017 (Frost Trap), Ubertip (Tooltip - Extended)
 {
@@ -21392,6 +21423,18 @@ STRING 3167
 
 }
 
+STRING 3168
+// Abilities: A04P (Doom), Tip (Tooltip - Normal)
+{
+Doom
+}
+
+STRING 3171
+// Abilities: A04P (Doom), EditorSuffix (Editor Suffix)
+{
+[Darkness Trap]
+}
+
 STRING 3188
 // Abilities: A024 (Hero Waves), Hotkey (Hotkey - Normal)
 {
@@ -21408,6 +21451,241 @@ STRING 3207
 // Units: h00T (Flak Tower 6), Hotkey (Hotkey)
 {
 Z
+}
+
+STRING 3216
+// Units: n01G (Darkness Trap), Ubertip (Tooltip - Extended)
+{
+|c006969FF[Support Tower]|r
+|c0000ff00Attacks land and air units.|r
+
+|c0077ff77A trap that launches dark bombs at nearby enemys, decreasing their armour and dealing damage over time. Has a chance to cast Doom when dealing damage. Does not affect Immune Creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Dark Bomb [Auto-Casted]
+|c0000ff00Armour Decrease:|r |c0077ff774
+|c0000ff00Primary Damage:|r |c0077ff77100
+|c0000ff00Secondary Damage:|r |c0077ff7750
+|c0000ff00Duration:|r |c0077ff7710 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Doom
+|c0000ff00Damage/s:|r |c0077ff77250
+|c0000ff00Summoned on Death:|r |c0077ff77Tentacle
+}
+
+STRING 3218
+// Abilities: A04Q (Dark Bomb and Doom), Name (Name)
+{
+Dark Bomb and Doom
+}
+
+STRING 3219
+// Abilities: A04Q (Dark Bomb and Doom), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Launches a dark bomb at nearby enemies, decreasing their armour and dealing damage over time. Has a [5% + 1% for each dark trap built globally] chance to cast Doom when dealing damage. Does not affect Immune Creeps.|r
+
+|c0000ff00Armour Decrease:|r |c0077ff774
+|c0000ff00Primary Damage:|r |c0077ff77100
+|c0000ff00Secondary Damage:|r |c0077ff7750
+|c0000ff00Duration:|r |c0077ff7710 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Doom
+|c0000ff00Damage/s:|r |c0077ff77250
+|c0000ff00Summoned on Death:|r |c0077ff77Tentacle
+}
+
+STRING 3220
+// Abilities: A04Q (Dark Bomb and Doom), Tip (Tooltip - Normal)
+{
+|c0000ff00Dark Bomb and Doom - Level 1
+}
+
+STRING 3221
+// Abilities: A04Q (Dark Bomb and Doom), Tip (Tooltip - Normal)
+{
+|c0000ff00Dark Bomb and Doom - Level 2
+}
+
+STRING 3222
+// Abilities: A04Q (Dark Bomb and Doom), Tip (Tooltip - Normal)
+{
+|c0000ff00Dark Bomb and Doom - Level 3
+}
+
+STRING 3223
+// Abilities: A04Q (Dark Bomb and Doom), Tip (Tooltip - Normal)
+{
+|c0000ff00Dark Bomb and Doom - Level 4
+}
+
+STRING 3224
+// Abilities: A04Q (Dark Bomb and Doom), Tip (Tooltip - Normal)
+{
+|c0000ff00Dark Bomb and Doom - Level 5
+}
+
+STRING 3225
+// Abilities: A04Q (Dark Bomb and Doom), Tip (Tooltip - Normal)
+{
+|c0000ff00Dark Bomb and Doom - Level 6
+}
+
+STRING 3226
+// Abilities: A04Q (Dark Bomb and Doom), Tip (Tooltip - Normal)
+{
+|c0000ff00Dark Bomb and Doom - Level 7
+}
+
+STRING 3227
+// Abilities: A04Q (Dark Bomb and Doom), Tip (Tooltip - Normal)
+{
+|c0000ff00Dark Bomb and Doom - Level 8
+}
+
+STRING 3228
+// Abilities: A04Q (Dark Bomb and Doom), Tip (Tooltip - Normal)
+{
+|c0000ff00Dark Bomb and Doom - Level 9
+}
+
+STRING 3229
+// Abilities: A04Q (Dark Bomb and Doom), Tip (Tooltip - Normal)
+{
+|c0000ff00Dark Bomb and Doom - Level 10
+}
+
+STRING 3230
+// Abilities: A04Q (Dark Bomb and Doom), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Launches a dark bomb at nearby enemies, decreasing their armour and dealing damage over time. Has a [5% + 1% for each dark trap built globally] chance to cast Doom when dealing damage. Does not affect Immune Creeps.|r
+
+|c0000ff00Armour Decrease:|r |c0077ff778
+|c0000ff00Primary Damage:|r |c0077ff77200
+|c0000ff00Secondary Damage:|r |c0077ff77100
+|c0000ff00Duration:|r |c0077ff7710 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Doom
+|c0000ff00Damage/s:|r |c0077ff77750
+|c0000ff00Summoned on Death:|r |c0077ff77Tentacle
+}
+
+STRING 3231
+// Abilities: A04Q (Dark Bomb and Doom), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Launches a dark bomb at nearby enemies, decreasing their armour and dealing damage over time. Has a [5% + 1% for each dark trap built globally] chance to cast Doom when dealing damage. Does not affect Immune Creeps.|r
+
+|c0000ff00Armour Decrease:|r |c0077ff7712
+|c0000ff00Primary Damage:|r |c0077ff77400
+|c0000ff00Secondary Damage:|r |c0077ff77200
+|c0000ff00Duration:|r |c0077ff7710 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Doom
+|c0000ff00Damage/s:|r |c0077ff771500
+|c0000ff00Summoned on Death:|r |c0077ff77Tentacle
+}
+
+STRING 3232
+// Abilities: A04Q (Dark Bomb and Doom), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Launches a dark bomb at nearby enemies, decreasing their armour and dealing damage over time. Has a [5% + 1% for each dark trap built globally] chance to cast Doom when dealing damage. Does not affect Immune Creeps.|r
+
+|c0000ff00Armour Decrease:|r |c0077ff7720
+|c0000ff00Primary Damage:|r |c0077ff77800
+|c0000ff00Secondary Damage:|r |c0077ff77400
+|c0000ff00Duration:|r |c0077ff7710 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Doom
+|c0000ff00Damage/s:|r |c0077ff772500
+|c0000ff00Summoned on Death:|r |c0077ff77Tentacle
+}
+
+STRING 3233
+// Abilities: A04Q (Dark Bomb and Doom), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Launches a dark bomb at nearby enemies, decreasing their armour and dealing damage over time. Has a [5% + 1% for each dark trap built globally] chance to cast Doom when dealing damage. Does not affect Immune Creeps.|r
+
+|c0000ff00Armour Decrease:|r |c0077ff7730
+|c0000ff00Primary Damage:|r |c0077ff771600
+|c0000ff00Secondary Damage:|r |c0077ff77800
+|c0000ff00Duration:|r |c0077ff7710 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Doom
+|c0000ff00Damage/s:|r |c0077ff773750
+|c0000ff00Summoned on Death:|r |c0077ff77Tentacle
+}
+
+STRING 3234
+// Abilities: A04Q (Dark Bomb and Doom), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Launches a dark bomb at nearby enemies, decreasing their armour and dealing damage over time. Has a [5% + 1% for each dark trap built globally] chance to cast Doom when dealing damage. Does not affect Immune Creeps.|r
+
+|c0000ff00Armour Decrease:|r |c0077ff7760
+|c0000ff00Primary Damage:|r |c0077ff772000
+|c0000ff00Secondary Damage:|r |c0077ff771000
+|c0000ff00Duration:|r |c0077ff7710 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Doom
+|c0000ff00Damage/s:|r |c0077ff775250
+|c0000ff00Summoned on Death:|r |c0077ff77Tentacle
+}
+
+STRING 3235
+// Abilities: A04Q (Dark Bomb and Doom), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Launches a dark bomb at nearby enemies, decreasing their armour and dealing damage over time. Has a [5% + 1% for each dark trap built globally] chance to cast Doom when dealing damage. Does not affect Immune Creeps.|r
+
+|c0000ff00Armour Decrease:|r |c0077ff77100
+|c0000ff00Primary Damage:|r |c0077ff774000
+|c0000ff00Secondary Damage:|r |c0077ff772000
+|c0000ff00Duration:|r |c0077ff7710 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Doom
+|c0000ff00Damage/s:|r |c0077ff777000
+|c0000ff00Summoned on Death:|r |c0077ff77Tentacle
+}
+
+STRING 3236
+// Abilities: A04Q (Dark Bomb and Doom), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Launches a dark bomb at nearby enemies, decreasing their armour and dealing damage over time. Has a [5% + 1% for each dark trap built globally] chance to cast Doom when dealing damage. Does not affect Immune Creeps.|r
+
+|c0000ff00Armour Decrease:|r |c0077ff77150
+|c0000ff00Primary Damage:|r |c0077ff777000
+|c0000ff00Secondary Damage:|r |c0077ff773500
+|c0000ff00Duration:|r |c0077ff7710 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Doom
+|c0000ff00Damage/s:|r |c0077ff779000
+|c0000ff00Summoned on Death:|r |c0077ff77Tentacle
+}
+
+STRING 3237
+// Abilities: A04Q (Dark Bomb and Doom), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Launches a dark bomb at nearby enemies, decreasing their armour and dealing damage over time. Has a [5% + 1% for each dark trap built globally] chance to cast Doom when dealing damage. Does not affect Immune Creeps.|r
+
+|c0000ff00Armour Decrease:|r |c0077ff77200
+|c0000ff00Primary Damage:|r |c0077ff7710000
+|c0000ff00Secondary Damage:|r |c0077ff775000
+|c0000ff00Duration:|r |c0077ff7710 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Doom
+|c0000ff00Damage/s:|r |c0077ff7711250
+|c0000ff00Summoned on Death:|r |c0077ff77Tentacle
+}
+
+STRING 3238
+// Abilities: A04Q (Dark Bomb and Doom), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Launches a dark bomb at nearby enemies, decreasing their armour and dealing damage over time. Has a [5% + 1% for each dark trap built globally] chance to cast Doom when dealing damage. Does not affect Immune Creeps.|r
+
+|c0000ff00Armour Decrease:|r |c0077ff77300
+|c0000ff00Primary Damage:|r |c0077ff7715000
+|c0000ff00Secondary Damage:|r |c0077ff777500
+|c0000ff00Duration:|r |c0077ff7710 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Doom
+|c0000ff00Damage/s:|r |c0077ff7713750
+|c0000ff00Summoned on Death:|r |c0077ff77Tentacle
 }
 
 STRING 3253
