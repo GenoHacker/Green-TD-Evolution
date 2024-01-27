@@ -281,6 +281,177 @@ udg_UnitGroup_PoisonTrapGroup = nil
 udg_UnitGroup_PoisonTrapRandomUnit = nil
 udg_Integer_Array_DarkTrapChance = __jarray(0)
 udg_Integer_TotalDarkTrapsBuilt = 0
+udg_PreDamageEvent = 0.0
+udg_ArmorDamageEvent = 0.0
+udg_ZeroDamageEvent = 0.0
+udg_LethalDamageEvent_Copy = 0.0
+udg_OnDamageEvent = 0.0
+udg_AfterDamageEvent_Copy = 0.0
+udg_SourceDamageEvent = 0.0
+udg_AOEDamageEvent_Copy = 0.0
+udg_DamageModifierEvent_Copy = 0.0
+udg_DamageEvent_Copy = 0.0
+udg_RemoveDamageEvent = false
+udg_DamageEventOverride_Copy = false
+udg_DamageEngineEnabled = false
+udg_DamageEventSource_Copy = nil
+udg_DamageEventTarget_Copy = nil
+udg_DamageEventPrevAmt_Copy = 0.0
+udg_DamageEventUserAmt = 0.0
+udg_AOEDamageSource_Copy = nil
+udg_EnhancedDamageTarget_Copy = nil
+udg_DamageEventLevel_Copy = 0
+udg_DamageEventAOE_Copy = 0
+udg_DamageEventAOEGroup_Copy = nil
+udg_DamageScalingWC3_Copy = 0.0
+udg_DamageScalingUser_Copy = 0.0
+udg_IsDamageAttack = false
+udg_IsDamageMelee_Copy = false
+udg_IsDamageRanged_Copy = false
+udg_IsDamageSpell_Copy = false
+udg_IsDamageCode_Copy = false
+udg_DamageEventAmount_Copy = 0.0
+udg_DamageEventArmorPierced_Copy = 0.0
+udg_LethalDamageHP_Copy = 0.0
+udg_DamageEventAttackT_Copy = 0
+udg_DamageEventDamageT_Copy = 0
+udg_DamageEventArmorT_Copy = 0
+udg_DamageEventDefenseT_Copy = 0
+udg_DamageEventWeaponT_Copy = 0
+udg_DamageEventType_Copy = 0
+udg_NextDamageIsAttack = false
+udg_NextDamageIsRanged = false
+udg_NextDamageIsMelee = false
+udg_NextDamageType_Copy = 0
+udg_NextDamageWeaponT = 0
+udg_DamageFilterConfigured = false
+udg_DamageFilterSource = nil
+udg_DamageFilterTarget = nil
+udg_DamageFilterAttackT = 0
+udg_DamageFilterDamageT = 0
+udg_DamageFilterSourceT = 0
+udg_DamageFilterTargetT = 0
+udg_DamageFilterSourceB = 0
+udg_DamageFilterTargetB = 0
+udg_DamageFilterType = 0
+udg_DamageFilterMinAmount = 0.0
+udg_DamageFilterRunChance = 0.0
+udg_DamageFilterFailChance = 0.0
+udg_DamageFilterSourceA = 0
+udg_DamageFilterTargetA = 0
+udg_DamageFilterTargetI = 0
+udg_DamageFilterSourceI = 0
+udg_DamageFilterSourceC = 0
+udg_DamageFilterTargetC = 0
+udg_UNIT_CLASS_MAGIC_IMMUNE = 0
+udg_UNIT_CLASS_ETHEREAL = 0
+udg_UNIT_CLASS_RESISTANT = 0
+udg_UNIT_CLASS_SLEEPING = 0
+udg_UNIT_CLASS_POLYMORPHED = 0
+udg_UNIT_CLASS_POISONED = 0
+udg_UNIT_CLASS_TAUREN = 0
+udg_UNIT_CLASS_ANCIENT = 0
+udg_UNIT_CLASS_TOWNHALL = 0
+udg_UNIT_CLASS_SAPPER = 0
+udg_UNIT_CLASS_PEON = 0
+udg_UNIT_CLASS_MECHANICAL = 0
+udg_UNIT_CLASS_UNDEAD = 0
+udg_UNIT_CLASS_SNARED = 0
+udg_UNIT_CLASS_PLAGUED = 0
+udg_UNIT_CLASS_STUNNED = 0
+udg_UNIT_CLASS_SUMMONED = 0
+udg_UNIT_CLASS_GIANT = 0
+udg_UNIT_CLASS_RANGED = 0
+udg_UNIT_CLASS_MELEE = 0
+udg_UNIT_CLASS_ATTACKS_GROUND = 0
+udg_UNIT_CLASS_ATTACKS_FLYING = 0
+udg_UNIT_CLASS_GROUND = 0
+udg_UNIT_CLASS_FLYING = 0
+udg_UNIT_CLASS_STRUCTURE = 0
+udg_UNIT_CLASS_DEAD = 0
+udg_UNIT_CLASS_HERO = 0
+udg_ARMOR_TYPE_NONE_Copy = 0
+udg_ARMOR_TYPE_FLESH_Copy = 0
+udg_ARMOR_TYPE_METAL_Copy = 0
+udg_ARMOR_TYPE_WOOD_Copy = 0
+udg_ARMOR_TYPE_ETHEREAL_Copy = 0
+udg_ARMOR_TYPE_STONE_Copy = 0
+udg_ArmorTypeDebugStr_Copy = __jarray("")
+udg_CONVERTED_ATTACK_TYPE_Copy = {}
+udg_ATTACK_TYPE_SPELLS_Copy = 0
+udg_ATTACK_TYPE_NORMAL_Copy = 0
+udg_ATTACK_TYPE_PIERCE_Copy = 0
+udg_ATTACK_TYPE_SIEGE_Copy = 0
+udg_ATTACK_TYPE_MAGIC_Copy = 0
+udg_ATTACK_TYPE_CHAOS_Copy = 0
+udg_ATTACK_TYPE_HERO_Copy = 0
+udg_AttackTypeDebugStr_Copy = __jarray("")
+udg_DamageTypeBlocked_Copy = 0
+udg_DamageTypeCriticalStrike_Copy = 0
+udg_DamageTypeCode_Copy = 0
+udg_DamageTypeExplosive_Copy = 0
+udg_DamageTypeHeal_Copy = 0
+udg_DamageTypePure_Copy = 0
+udg_DamageTypePureExplosive_Copy = 0
+udg_DamageTypeReduced_Copy = 0
+udg_CONVERTED_DAMAGE_TYPE_Copy = {}
+udg_DAMAGE_TYPE_UNKNOWN_Copy = 0
+udg_DAMAGE_TYPE_NORMAL_Copy = 0
+udg_DAMAGE_TYPE_ENHANCED_Copy = 0
+udg_DAMAGE_TYPE_FIRE_Copy = 0
+udg_DAMAGE_TYPE_COLD_Copy = 0
+udg_DAMAGE_TYPE_LIGHTNING_Copy = 0
+udg_DAMAGE_TYPE_POISON_Copy = 0
+udg_DAMAGE_TYPE_DISEASE_Copy = 0
+udg_DAMAGE_TYPE_DIVINE_Copy = 0
+udg_DAMAGE_TYPE_MAGIC_Copy = 0
+udg_DAMAGE_TYPE_SONIC_Copy = 0
+udg_DAMAGE_TYPE_ACID_Copy = 0
+udg_DAMAGE_TYPE_FORCE_Copy = 0
+udg_DAMAGE_TYPE_DEATH_Copy = 0
+udg_DAMAGE_TYPE_MIND_Copy = 0
+udg_DAMAGE_TYPE_PLANT_Copy = 0
+udg_DAMAGE_TYPE_DEFENSIVE_Copy = 0
+udg_DAMAGE_TYPE_DEMOLITION_Copy = 0
+udg_DAMAGE_TYPE_SLOW_POISON_Copy = 0
+udg_DAMAGE_TYPE_SPIRIT_LINK_Copy = 0
+udg_DAMAGE_TYPE_SHADOW_STRIKE_Copy = 0
+udg_DAMAGE_TYPE_UNIVERSAL_Copy = 0
+udg_DamageTypeDebugStr_Copy = __jarray("")
+udg_DEFENSE_TYPE_LIGHT_Copy = 0
+udg_DEFENSE_TYPE_MEDIUM_Copy = 0
+udg_DEFENSE_TYPE_HEAVY_Copy = 0
+udg_DEFENSE_TYPE_FORTIFIED_Copy = 0
+udg_DEFENSE_TYPE_NORMAL_Copy = 0
+udg_DEFENSE_TYPE_HERO_Copy = 0
+udg_DEFENSE_TYPE_DIVINE_Copy = 0
+udg_DEFENSE_TYPE_UNARMORED_Copy = 0
+udg_DefenseTypeDebugStr_Copy = __jarray("")
+udg_WeaponTypeDebugStr_Copy = __jarray("")
+udg_WEAPON_TYPE_NONE_Copy = 0
+udg_WEAPON_TYPE_ML_CHOP_Copy = 0
+udg_WEAPON_TYPE_MM_CHOP_Copy = 0
+udg_WEAPON_TYPE_MH_CHOP_Copy = 0
+udg_WEAPON_TYPE_ML_SLICE_Copy = 0
+udg_WEAPON_TYPE_MM_SLICE_Copy = 0
+udg_WEAPON_TYPE_MH_SLICE_Copy = 0
+udg_WEAPON_TYPE_MM_BASH_Copy = 0
+udg_WEAPON_TYPE_MH_BASH_Copy = 0
+udg_WEAPON_TYPE_MM_STAB_Copy = 0
+udg_WEAPON_TYPE_MH_STAB_Copy = 0
+udg_WEAPON_TYPE_WL_SLICE_Copy = 0
+udg_WEAPON_TYPE_WM_SLICE_Copy = 0
+udg_WEAPON_TYPE_WH_SLICE_Copy = 0
+udg_WEAPON_TYPE_WL_BASH_Copy = 0
+udg_WEAPON_TYPE_WM_BASH_Copy = 0
+udg_WEAPON_TYPE_WH_BASH_Copy = 0
+udg_WEAPON_TYPE_WL_STAB_Copy = 0
+udg_WEAPON_TYPE_WM_STAB_Copy = 0
+udg_WEAPON_TYPE_CL_SLICE_Copy = 0
+udg_WEAPON_TYPE_CM_SLICE_Copy = 0
+udg_WEAPON_TYPE_CH_SLICE_Copy = 0
+udg_WEAPON_TYPE_AM_CHOP_Copy = 0
+udg_WEAPON_TYPE_RH_BASH_Copy = 0
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -382,6 +553,10 @@ gg_trg_Rocket_Tower = nil
 gg_trg_Fire_Trap_Autocast = nil
 gg_trg_Frost_Trap_Autocast = nil
 gg_trg_Ice_Cage_Autocast = nil
+gg_trg_Poison_Cascade_Autocast = nil
+gg_trg_Poison_Trap_Autocast = nil
+gg_trg_Darkness_Trap_Autocast = nil
+gg_trg_Doom_Autocast = nil
 gg_trg_Set_Variables = nil
 gg_trg_Set_Random_Wave_Variables = nil
 gg_trg_Map_Start = nil
@@ -559,10 +734,7 @@ gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
-gg_trg_Poison_Cascade_Autocast = nil
-gg_trg_Poison_Trap_Autocast = nil
-gg_trg_Darkness_Trap_Autocast = nil
-gg_trg_Doom_Autocast = nil
+gg_trg_Damage_Engine_Config_Copy = nil
 function InitGlobals()
 local i = 0
 
@@ -1208,8 +1380,1820 @@ udg_Integer_Array_DarkTrapChance[i] = 0
 i = i + 1
 end
 udg_Integer_TotalDarkTrapsBuilt = 0
+udg_PreDamageEvent = 0.0
+udg_ArmorDamageEvent = 0.0
+udg_ZeroDamageEvent = 0.0
+udg_LethalDamageEvent_Copy = 0.0
+udg_OnDamageEvent = 0.0
+udg_AfterDamageEvent_Copy = 0.0
+udg_SourceDamageEvent = 0.0
+udg_AOEDamageEvent_Copy = 0.0
+udg_DamageModifierEvent_Copy = 0.0
+udg_DamageEvent_Copy = 0.0
+udg_RemoveDamageEvent = false
+udg_DamageEventOverride_Copy = false
+udg_DamageEngineEnabled = false
+udg_DamageEventPrevAmt_Copy = 0.0
+udg_DamageEventUserAmt = 0.0
+udg_DamageEventLevel_Copy = 0
+udg_DamageEventAOE_Copy = 0
+udg_DamageEventAOEGroup_Copy = CreateGroup()
+udg_DamageScalingWC3_Copy = 0.0
+udg_DamageScalingUser_Copy = 0.0
+udg_IsDamageAttack = false
+udg_IsDamageMelee_Copy = false
+udg_IsDamageRanged_Copy = false
+udg_IsDamageSpell_Copy = false
+udg_IsDamageCode_Copy = false
+udg_DamageEventAmount_Copy = 0.0
+udg_DamageEventArmorPierced_Copy = 0.0
+udg_LethalDamageHP_Copy = 0.0
+udg_DamageEventAttackT_Copy = 0
+udg_DamageEventDamageT_Copy = 0
+udg_DamageEventArmorT_Copy = 0
+udg_DamageEventDefenseT_Copy = 0
+udg_DamageEventWeaponT_Copy = 0
+udg_DamageEventType_Copy = 0
+udg_NextDamageIsAttack = false
+udg_NextDamageIsRanged = false
+udg_NextDamageIsMelee = false
+udg_NextDamageType_Copy = 0
+udg_NextDamageWeaponT = 0
+udg_DamageFilterConfigured = false
+udg_DamageFilterAttackT = 0
+udg_DamageFilterDamageT = 0
+udg_DamageFilterType = 0
+udg_DamageFilterMinAmount = 0.0
+udg_DamageFilterRunChance = 0.0
+udg_DamageFilterFailChance = 0.0
+udg_DamageFilterSourceC = 0
+udg_DamageFilterTargetC = 0
+udg_UNIT_CLASS_MAGIC_IMMUNE = 0
+udg_UNIT_CLASS_ETHEREAL = 0
+udg_UNIT_CLASS_RESISTANT = 0
+udg_UNIT_CLASS_SLEEPING = 0
+udg_UNIT_CLASS_POLYMORPHED = 0
+udg_UNIT_CLASS_POISONED = 0
+udg_UNIT_CLASS_TAUREN = 0
+udg_UNIT_CLASS_ANCIENT = 0
+udg_UNIT_CLASS_TOWNHALL = 0
+udg_UNIT_CLASS_SAPPER = 0
+udg_UNIT_CLASS_PEON = 0
+udg_UNIT_CLASS_MECHANICAL = 0
+udg_UNIT_CLASS_UNDEAD = 0
+udg_UNIT_CLASS_SNARED = 0
+udg_UNIT_CLASS_PLAGUED = 0
+udg_UNIT_CLASS_STUNNED = 0
+udg_UNIT_CLASS_SUMMONED = 0
+udg_UNIT_CLASS_GIANT = 0
+udg_UNIT_CLASS_RANGED = 0
+udg_UNIT_CLASS_MELEE = 0
+udg_UNIT_CLASS_ATTACKS_GROUND = 0
+udg_UNIT_CLASS_ATTACKS_FLYING = 0
+udg_UNIT_CLASS_GROUND = 0
+udg_UNIT_CLASS_FLYING = 0
+udg_UNIT_CLASS_STRUCTURE = 0
+udg_UNIT_CLASS_DEAD = 0
+udg_UNIT_CLASS_HERO = 0
+udg_ARMOR_TYPE_NONE_Copy = 0
+udg_ARMOR_TYPE_FLESH_Copy = 0
+udg_ARMOR_TYPE_METAL_Copy = 0
+udg_ARMOR_TYPE_WOOD_Copy = 0
+udg_ARMOR_TYPE_ETHEREAL_Copy = 0
+udg_ARMOR_TYPE_STONE_Copy = 0
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_ArmorTypeDebugStr_Copy[i] = ""
+i = i + 1
+end
+udg_ATTACK_TYPE_SPELLS_Copy = 0
+udg_ATTACK_TYPE_NORMAL_Copy = 0
+udg_ATTACK_TYPE_PIERCE_Copy = 0
+udg_ATTACK_TYPE_SIEGE_Copy = 0
+udg_ATTACK_TYPE_MAGIC_Copy = 0
+udg_ATTACK_TYPE_CHAOS_Copy = 0
+udg_ATTACK_TYPE_HERO_Copy = 0
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_AttackTypeDebugStr_Copy[i] = ""
+i = i + 1
+end
+udg_DamageTypeBlocked_Copy = 0
+udg_DamageTypeCriticalStrike_Copy = 0
+udg_DamageTypeCode_Copy = 0
+udg_DamageTypeExplosive_Copy = 0
+udg_DamageTypeHeal_Copy = 0
+udg_DamageTypePure_Copy = 0
+udg_DamageTypePureExplosive_Copy = 0
+udg_DamageTypeReduced_Copy = 0
+udg_DAMAGE_TYPE_UNKNOWN_Copy = 0
+udg_DAMAGE_TYPE_NORMAL_Copy = 0
+udg_DAMAGE_TYPE_ENHANCED_Copy = 0
+udg_DAMAGE_TYPE_FIRE_Copy = 0
+udg_DAMAGE_TYPE_COLD_Copy = 0
+udg_DAMAGE_TYPE_LIGHTNING_Copy = 0
+udg_DAMAGE_TYPE_POISON_Copy = 0
+udg_DAMAGE_TYPE_DISEASE_Copy = 0
+udg_DAMAGE_TYPE_DIVINE_Copy = 0
+udg_DAMAGE_TYPE_MAGIC_Copy = 0
+udg_DAMAGE_TYPE_SONIC_Copy = 0
+udg_DAMAGE_TYPE_ACID_Copy = 0
+udg_DAMAGE_TYPE_FORCE_Copy = 0
+udg_DAMAGE_TYPE_DEATH_Copy = 0
+udg_DAMAGE_TYPE_MIND_Copy = 0
+udg_DAMAGE_TYPE_PLANT_Copy = 0
+udg_DAMAGE_TYPE_DEFENSIVE_Copy = 0
+udg_DAMAGE_TYPE_DEMOLITION_Copy = 0
+udg_DAMAGE_TYPE_SLOW_POISON_Copy = 0
+udg_DAMAGE_TYPE_SPIRIT_LINK_Copy = 0
+udg_DAMAGE_TYPE_SHADOW_STRIKE_Copy = 0
+udg_DAMAGE_TYPE_UNIVERSAL_Copy = 0
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_DamageTypeDebugStr_Copy[i] = ""
+i = i + 1
+end
+udg_DEFENSE_TYPE_LIGHT_Copy = 0
+udg_DEFENSE_TYPE_MEDIUM_Copy = 0
+udg_DEFENSE_TYPE_HEAVY_Copy = 0
+udg_DEFENSE_TYPE_FORTIFIED_Copy = 0
+udg_DEFENSE_TYPE_NORMAL_Copy = 0
+udg_DEFENSE_TYPE_HERO_Copy = 0
+udg_DEFENSE_TYPE_DIVINE_Copy = 0
+udg_DEFENSE_TYPE_UNARMORED_Copy = 0
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_DefenseTypeDebugStr_Copy[i] = ""
+i = i + 1
+end
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_WeaponTypeDebugStr_Copy[i] = ""
+i = i + 1
+end
+udg_WEAPON_TYPE_NONE_Copy = 0
+udg_WEAPON_TYPE_ML_CHOP_Copy = 0
+udg_WEAPON_TYPE_MM_CHOP_Copy = 0
+udg_WEAPON_TYPE_MH_CHOP_Copy = 0
+udg_WEAPON_TYPE_ML_SLICE_Copy = 0
+udg_WEAPON_TYPE_MM_SLICE_Copy = 0
+udg_WEAPON_TYPE_MH_SLICE_Copy = 0
+udg_WEAPON_TYPE_MM_BASH_Copy = 0
+udg_WEAPON_TYPE_MH_BASH_Copy = 0
+udg_WEAPON_TYPE_MM_STAB_Copy = 0
+udg_WEAPON_TYPE_MH_STAB_Copy = 0
+udg_WEAPON_TYPE_WL_SLICE_Copy = 0
+udg_WEAPON_TYPE_WM_SLICE_Copy = 0
+udg_WEAPON_TYPE_WH_SLICE_Copy = 0
+udg_WEAPON_TYPE_WL_BASH_Copy = 0
+udg_WEAPON_TYPE_WM_BASH_Copy = 0
+udg_WEAPON_TYPE_WH_BASH_Copy = 0
+udg_WEAPON_TYPE_WL_STAB_Copy = 0
+udg_WEAPON_TYPE_WM_STAB_Copy = 0
+udg_WEAPON_TYPE_CL_SLICE_Copy = 0
+udg_WEAPON_TYPE_CM_SLICE_Copy = 0
+udg_WEAPON_TYPE_CH_SLICE_Copy = 0
+udg_WEAPON_TYPE_AM_CHOP_Copy = 0
+udg_WEAPON_TYPE_RH_BASH_Copy = 0
 end
 
+do
+    --[[
+        Doubly-Linked List v1.3.0.0 by Wrda, Eikonium and Bribe
+        ------------------------------------------------------------------------------
+        A script that allows the possibility to create a sequence of any object
+        linked together.
+        ------------------------------------------------------------------------------
+    API:
+        LinkedList.create(head) -> LinkedList
+        - Creates or resets a table as a LinkedList head.
+        - Allows a user-specified head or generates a new one.
+     
+        list:insert([node_or_value, after]) -> listNode
+        - Inserts *before* the given list/node unless "after" is true.
+        - If a "node or value" is passed, the system will check if the node is
+          a table. If the table isn't yet part of a LinkedList structure, it
+          will be converted into the node that is returned at the end of this
+          function. If the table is a part of the LinkedList structure, or a
+          different type of value than a table, then it will be assigned as a
+          generic "value" (mapped to node.value)
+        - Returns the inserted node that was added to the list (if addition was successful).
+     
+        list:remove(node) -> boolean
+        - Removes a node from whatever list it is a part of and calls self:onRemove().
+        - Returns true if it was sucessful.
+     
+        for node in list:loop([backwards]) do [stuff] end
+        - Iterates over all nodes in "list".
+     
+        fromList:merge(intoList[, backwardsFrom, backwardsInto])
+        - Removes all nodes from one list and adds them into another.
+     
+        list:reset() -> boolean
+        - Removes all nodes from the given linked list, calling node:onRemove() on each.
+        - Returns true if sucessful.
+     
+        - readonly list.n : integer -> the number of nodes in the list.
+    ]]
+        ---@class LinkedList:table
+        ---@field head LinkedList
+        ---@field next listNode|LinkedList
+        ---@field prev listNode|LinkedList
+        ---@field n integer
+        LinkedList = {}
+        LinkedList.__index = LinkedList
+     
+        ---@class listNode:LinkedList
+        ---@field remove fun(node:listNode)->boolean
+        ---@field onRemove fun(self:listNode)
+     
+        ---Creates or resets a table as a LinkedList head.
+        ---@param head? LinkedList allows a user-specified head or generates a new one.
+        ---@return LinkedList
+        function LinkedList.create(head)
+            if head and type(head) == "table" then
+                local h = head.head
+                if h then
+                    if h ~= head then
+                        return --user passed an active ListNode. This is not allowed.
+                    end
+                    if h.n > 0 then --first empty any lists that still have nodes.
+                        for node in head:loop() do node:onRemove() end
+                    end
+                end
+            else
+                head = {}
+            end
+            setmetatable(head, LinkedList)
+            head.next = head
+            head.prev = head
+            head.head = head
+            head.n = 0
+            return head
+        end
+     
+        ---Node can be an existing table, or a new table will be created to represent the
+        ---node. "list" can either be the head, or any point where you want the node to be
+        ---inserted. It will insert *before* the given head/node, unless "backward" is true.
+        ---@param list listNode|LinkedList
+        ---@param node_or_value? any
+        ---@param insertAfter? boolean
+        ---@return listNode node that was added to the list (if addition was successful)
+        function LinkedList.insert(list, node_or_value, insertAfter)
+            if not list then return end
+            local head = list.head
+            if not head then return end
+            local node, value
+     
+            if node_or_value then
+                if type(node_or_value) == "table" then
+                    if node_or_value.head then --table is already part of a linked list. Treat it as a "value"
+                        value = node_or_value
+                    else
+                        node = node_or_value --table will be transmuted into the linked list node itself.
+                    end
+                else
+                    --User passed a non-table value.
+                    value = node_or_value
+                end
+            end
+            if insertAfter then list = list.next end
+     
+            node = node or {}   ---@type listNode
+            setmetatable(node, LinkedList)
+            list.prev.next = node
+            node.prev = list.prev
+            list.prev = node
+            node.next = list
+            node.head = head
+            head.n = head.n + 1
+            node.value = value
+            node.onRemove = function() node.head = nil end
+            return node
+        end
+     
+        ---Removes a node from whatever list it is a part of. A node cannot be a part of
+        ---more than one list at a time, so there is no need to pass the containing list as
+        ---an argument.
+        ---@param node listNode
+        ---@return boolean wasRemoved
+        function LinkedList:remove(node)
+            node = node or self
+            if node then
+                local head = node.head
+                if head and head ~= node then
+                    node.prev.next = node.next
+                    node.next.prev = node.prev
+                    head.n = head.n - 1
+                    node:onRemove()
+                    return true
+                end
+            end
+        end
+     
+        ---Enables the generic for-loop for LinkedLists.
+        ---Syntax: "for node in LinkedList.loop(list) do print(node) end"
+        ---Alternative Syntax: "for node in list:loop() do print(node) end"
+        ---@param list LinkedList
+        ---@param backward? boolean
+        function LinkedList.loop(list, backward)
+            list = list.head
+            local loopNode = list   ---@type listNode
+            local direction = backward and "prev" or "next"
+            return function()
+                loopNode = loopNode[direction]
+                return loopNode ~= list and loopNode or nil
+            end
+        end
+     
+        ---Merges LinkedList "from" to another LinkedList "into"
+        ---@param from LinkedList|listNode
+        ---@param into LinkedList|listNode
+        ---@param backwardFrom boolean
+        ---@param backwardInto boolean
+        function LinkedList.merge(from, into, backwardFrom, backwardInto)
+            if from and from.head and into and into.head then
+                local directionFrom = backwardFrom and "prev" or "next"
+                local n, v
+                local node = from[directionFrom]
+                from = from.head
+                while node ~= from do
+                    n, v = node[directionFrom], node.value
+                    node:remove()
+                    into:insert(node, backwardInto).value = v
+                    node = n
+                end
+            end
+        end
+     
+        ---Removes all nodes from the given linked list.
+        ---@param list LinkedList
+        ---@return boolean was_reset
+        function LinkedList.reset(list)
+            return list:create() ~= nil
+        end
+    end
+if LinkedList then --https://www.hiveworkshop.com/threads/definitive-doubly-linked-list.339392/
+--[[--------------------------------------------------------------------------------------
+    Hook v4.1.0.0 by Bribe, with very special thanks to:
+    Eikonium and Jampion for bug reports, feature improvements, teaching me new things.
+    MyPad for teaching me new things
+    Wrda and Eikonium for the better LinkedList approach
+----------------------------------------------------------------------------------------]]
+    Hook = {}
+    
+    local _LOW_PRIO     = -0.1 -- a number to represent what should be the lowest priority for a before-hook (lower values run first).
+    local _HIGH_PRIO    = 9001  -- a number to represent what should be the lowest priority for an after-hook (lower values run first).
+    local _SKIP_HOOK    = "skip hook" --when this is returned from a Hook.addSimple function, the hook will stop.
+    
+    local hookBefore    = {} ---@type Hook[]    --stores a list of functions that are called prior to a hooked function.
+    local hookAfter     = {} ---@type Hook[]    --stores a list of functions that are called after a hooked function.
+    local hookedFunc    = {} ---@type function[]    --stores a list of overriden functions
+    
+    ---@class Hook:LinkedList
+    ---@field add       function
+    ---@field addSimple function
+    ---@field flush     function
+    ---@field func      function
+
+    ---@class hookNode  :listNode
+    ---@field weight    number
+    ---@field head      Hook
+    ---@field func      fun(hook:Hook)
+
+    ---@class hookInstance:table
+    ---@field args      table
+    ---@field call      function
+    ---@field skip      boolean
+    ---@field returned  table
+--[[--------------------------------------------------------------------------------------
+    Internal functions
+----------------------------------------------------------------------------------------]]
+    ---@param oldFunc string
+    ---@param parent? table
+    ---@return table
+    ---@return table hookedFuncParent
+    ---@return function? hooked_func_or_nil
+    ---@return function hooked_func
+    local function parseArgs(oldFunc, parent)
+        parent = parent or _G
+        local hfp = hookedFunc[parent]
+        local hf = hfp and hfp[oldFunc]
+        return parent, hfp, hf, hf or parent[oldFunc]
+    end
+
+--[[--------------------------------------------------------------------------------------
+    Hook.add
+    Args: string oldFunc, function userFunc[, number weight, table parent, function default]
+          @ oldFunc is a string that represents the name of a function (e.g. "CreateUnit")
+          @ userFunc is the function you want to be called when the original function is
+            called*.
+          @ weight is an optional parameter that determines whether your hook takes place
+            "before" the original function is called, or after. Broken down like this:
+            
+            (a) if "weight" is "nil", "false" or a "negative number", it is treated as a
+                "before hook". If "nil" or "false", "_LOW_PRIO" will be assigned as the weight.
+            (b) if "weight" is "true", "0" or a "positive number", it is treated as an
+                "after hook". If "true", 
+            
+          @ parent is an optional parameter for where the oldFunc is hosted. By default,
+            it assumes a global (_G table) such as "BJDebugMsg".
+          @ default is a function that you can inject into the table in case that variable
+            is not found. If the variable is not found and a function is not passed as a
+            default, the addition will fail.
+    
+    Returns two items:
+        1. The original function you are hooking (if successful) or nil (if failed).
+        2. A table to represent your hook registry. This is part of a linked list belonging
+           to the function you hooked and aligned with whether it is a "before" or "after"
+           hook. Its most relevant use would be to be passed to "Hook.remove(userHookTable)",
+           as that is the way to remove a single hook in version 4.0.
+    
+    *The function you specify in Hook.add can take exactly one argument: a table. That
+    table has the following properties within itself:
+    
+    args
+    (table)
+        Contains the original arguments passed during a hook. Useful for referencing in an
+        "after hook". Can be modified by a "before hook".
+    
+    returned
+    (table or nil)
+        Contains a table of the return value(s) from "before" hooks and (if applicable) the
+        original function. This is either "nil", or usually only holds a single index. To
+        initialize this correctly, use table.pack(returnVal[, returnVal2, returnVal3, ...]).
+    
+    old
+    (function)
+        The original, native function that has been hooked (in case you want to call it).
+    
+    skip
+    (boolean)
+    Note: Set this to "true" from within a before-hook callback function to prevent the
+          original function from being called. Users can check if this is set to true if
+          they want to change the behavior of their own hooks accordingly.
+----------------------------------------------------------------------------------------]]
+    ---@param oldFunc string
+    ---@param userFunc fun(hook:table)
+    ---@param weight? number
+    ---@param parent? table
+    ---@param default? function
+    ---@return function original_function
+    ---@return hookNode newUserNode
+    function Hook.add(oldFunc, userFunc, weight, parent, default)
+        if type(oldFunc) ~= "string" or type(userFunc) ~= "function" then
+            --print "Hook.add Error: The first argument must be a string, the second must be a function."
+            return
+        end
+        local parent, hfp, hf, old = parseArgs(oldFunc, parent)
+        
+        if not old or type(old) ~= "function" then
+            if default then
+                old             = default
+                parent[oldFunc] = default
+            else
+                --print("Hook.add Error: Tried to hook a function that doesn't exist: " .. oldFunc .. ".\nTry calling Hook.add from a Global Initialization function.")
+                return
+            end
+        end
+        if not hf then
+            if not hfp then
+                hfp                 = {}
+                hookedFunc[parent]  = hfp
+            end
+            hfp[oldFunc]    = old ---@type function
+            local hb        = LinkedList.create()   ---@type Hook
+            hookBefore[old] = hb
+            hb.func         = old
+            local ha        = LinkedList.create()   ---@type Hook
+            hookAfter[old]  = ha
+            ha.func         = old
+            parent[oldFunc] =
+            function(...)
+                local this = {args = table.pack(...), call = old, skip = false } ---@type hookInstance
+                
+                for userNode in hb:loop() do userNode.func(this) end
+                
+                local r
+                if not this.skip then
+                    r = table.pack(old(table.unpack(this.args, 1, this.args.n)))
+                    if r.n > 0 then this.returned = r end
+                end
+                r = this.returned
+                if not (r and type(r) == "table" and r.n and r.n > 0) then
+                    r = nil; this.returned = nil
+                --else
+                    --print("Hook report: returning " .. r.n .. " values.")
+                end
+                
+                for userNode in ha:loop() do userNode.func(this) end
+                
+                if r then return table.unpack(r, 1, r.n) end
+            end
+        end
+        
+        weight = weight or _LOW_PRIO
+        if weight == true then weight = _HIGH_PRIO end
+        
+        --This creates and inserts newUserNode into the corresponding table with taking into consideration the weight of each item.
+        local tab = weight < 0 and hookBefore[old] or hookAfter[old]
+        local insertPoint = tab.head
+        local newUserNode
+        for node in tab:loop() do
+            if node.weight > weight then insertPoint = node; break end
+        end
+        newUserNode = insertPoint:insert(nil, true) ---@type hookNode
+        newUserNode.func = userFunc
+        newUserNode.weight = weight
+        newUserNode.remove = Hook.remove
+        
+        --print("indexing")
+        return old, newUserNode
+    end
+    
+    ---Remove a registered hook by passing the node returned from the second
+    ---return value of Hook.add.
+    ---@param node hookNode
+    ---@return integer number_of_hooks_remaining
+    function Hook.remove(node)
+        local r = 0
+        local head = node.head
+        if head then
+            node:remove()
+            r = hookBefore[head.func].n + hookAfter[head.func].n
+            if r == 0 then
+                Hook.flush(head.func)
+            end
+        end
+        return r
+    end
+    
+--[[--------------------------------------------------------------------------------------
+    Hook.flush
+    Args: string oldFunc[, table parent]
+    Desc: Purges all hooks associated with the given function string and sets the original
+          function back inside of the parent table.
+----------------------------------------------------------------------------------------]]
+    
+    ---Hook.flush
+    ---@param oldFunc string
+    ---@param parent? table
+    function Hook.flush(oldFunc, parent)
+        local parent, hfp, hf, old = parseArgs(oldFunc, parent)
+        if hf then
+            parent[oldFunc] = old
+            hookBefore[old] = nil
+            hookAfter[old]  = nil
+            hfp[oldFunc]    = nil
+        end
+    end
+    
+--[[--------------------------------------------------------------------------------------
+    The user-function parameters and behavior are different from Hook.add. This uses
+    the original format I wanted for hook-behavior, but it became clear that there
+    were scenarios where the user should be able to do more.
+    
+    "Before hook" parameters are the arguments of the original function call. This is
+    useful in a situation where you don't want to unpack the args yourself to see them in
+    an intuitive way, and don't need the additional complexities of the table to determine
+    what you want to do.
+    
+    Return: If anything other than "nil" is returned, it will prevent any additional
+            "before" hooks with a lower priority from running, as well as prevent the
+            original function from being called. If returning a value other than "nil"
+            would break the expectations of the original function, return the string
+            "stop hook" instead.
+    
+    "After hook"
+    ------------
+    Args: Takes the return value(s) as parameter(s), if there was any return value.
+----------------------------------------------------------------------------------------]]
+    ---@param oldFunc string
+    ---@param userFunc function
+    ---@param weight? number
+    ---@param parent? table
+    ---@param default? function
+    ---@return function original_function
+    ---@return hookNode newUserNode
+    function Hook.addSimple(oldFunc, userFunc, weight, parent, default)
+        return Hook.add(oldFunc,
+        function(hook)
+            local r = hook.returned
+            if weight and (weight == true or weight >= 0) then
+                if r then
+                    userFunc(table.unpack(r, 1, r.n))
+                else
+                    userFunc()
+                end
+            elseif not hook.skip and not r then
+                r = userFunc(table.unpack(hook.args, 1, hook.args.n))
+                if r and #r > 0 then
+                    if r[1] ~= _SKIP_HOOK then
+                        hook.returned = table.pack(r)
+                    end
+                    hook.skip = true
+                end
+            end
+        end, weight, parent, default)
+    end
+    
+end
+if Hook then --https://www.hiveworkshop.com/threads/hook.339153
+    
+    -- Global Initialization 2.2.2.0 by Bribe, with special thanks to Tasyen, Forsakn and Troll-Brain
+    
+    local sFuncs
+    local function Flush()
+        if sFuncs then return end
+        sFuncs = {}
+        Hook.add("InitBlizzard",
+        function()
+            local t = CreateTimer()
+            TimerStart(t, 0.00, false,
+            function()
+                DestroyTimer(t)
+                for _, f in ipairs(sFuncs) do f() end
+                sFuncs          = nil
+                OnGlobalInit    = nil
+                OnTrigInit      = nil
+                OnMapInit       = nil
+                OnGameStart     = nil
+                Hook.flush("InitBlizzard")
+                Hook.flush("InitGlobals")
+                Hook.flush("InitCustomTriggers")
+                Hook.flush("RunInitializationTriggers")
+            end)
+        end)
+    end
+    
+    local function Init(str, backup, func, priority)
+        if not func or type(func) == "number" then
+            func, priority = priority, func or true
+        end
+        if not Hook.add(str, func, priority) then
+            backup(priority, func)
+        end
+        Flush()
+    end
+    
+    ---@param priority number | function
+    ---@param func? function
+    function OnGlobalInit(priority, func) -- Runs once all GUI variables are instantiated.
+        Init("InitGlobals", function(priority, func) Hook.add("InitBlizzard", func, priority) end, func, priority)
+    end
+    
+    ---@param priority number | function
+    ---@param func? function
+    function OnTrigInit(priority, func) -- Runs once all InitTrig_ are called
+        Init("InitCustomTriggers", OnGlobalInit, func, priority)
+    end
+    
+    ---@param priority number | function
+    ---@param func? function
+    function OnMapInit(priority, func) -- Runs once all Map Initialization triggers are run
+        Init("RunInitializationTriggers", OnTrigInit, func, priority)
+    end
+    
+    ---@param func function
+    function OnGameStart(func) -- Runs once the game has actually started
+        Flush()
+        sFuncs[#sFuncs + 1] = func
+    end
+end
+if Hook then --https://www.hiveworkshop.com/threads/hook.339153
+--[[--------------------------------------------------------------------------------------
+    Global Variable Remapper v1.0.1.1 by Bribe
+    - Intended to empower the GUI user-base and those who design systems for them.
+ 
+    API:
+        GlobalRemap(variableStr, getterFunc, setterFunc)
+        @variableStr is a string such as "udg_MyVariable"
+        @getterFunc is a function that takes nothing but returns the expected value when
+            "udg_MyVariable" is referenced.
+        @setterFunc is a function that takes a single argument (the value that is being
+            assigned) and allows you to do what you want when someone uses "Set MyVariable = SomeValue".
+            The function doesn't need to do anything nor return anything. Enables read-only
+            GUI variables for the first time in WarCraft 3 history.
+    
+    Systems that use this should call GlobalRemap via Global Initialization or later:
+    https://www.hiveworkshop.com/threads/global-initialization.317099/
+
+----------------------------------------------------------------------------------------]]
+ 
+    local getters, setters, skip
+ 
+    ---GlobalRemap
+    ---@param var string
+    ---@param getFunc? fun() ->value?
+    ---@param setFunc? fun(value)
+    function GlobalRemap(var, getFunc, setFunc)
+        if not skip then
+            getters, setters, skip = {}, {}, DoNothing
+ 
+            local mt = getmetatable(_G)
+            if not mt then
+                mt = {}
+                setmetatable(_G, mt) 
+            end
+            
+            --hook.args = {1:table, 2:index}
+            Hook.add("__index",
+            function(hook)
+                local func = getters[hook.args[2]]
+                if func then
+                    hook.skip = true
+                    hook.returned = table.pack(func())
+                end
+            end, nil, mt,
+            function(a, b)
+                return rawget(a, b)
+            end)
+
+            --hook.args = {1:table, 2:index, 3:value}
+            Hook.add("__newindex", 
+            function(hook)
+                local func = setters[hook.args[2]]
+                if func then
+                    hook.skip = true
+                    func(hook.args[3])
+                end
+            end, nil, mt,
+            function(a, b, c)
+                rawset(a, b, c)
+            end)
+        end
+        _G[var] = nil                   --Delete the variable from the global table.
+        getters[var] = getFunc or skip  --Assign a function that returns what should be returned when this variable is referenced.
+        setters[var] = setFunc or skip  --Assign a function that captures the value the variable is attempting to be set to.
+    end
+end
+if LinkedList then --https://www.hiveworkshop.com/threads/definitive-doubly-linked-list.339392
+--[[--------------------------------------------------------------------------------------
+    Timed Call and Echo v1.2.1.0, code structure credit to Eikonium and Jesus4Lyf
+    
+    Timed.call([delay, ]userFunc)
+    -> Call userFunc after 'delay' seconds. Delay defaults to 0 seconds.
+    
+    Timed.echo(userFunc[, timeout, userTable])
+    -> Returns userTable or a new table.
+    -> calls userFunc every "timeout" seconds until userFunc returns true or you call
+       userTable:remove()
+    
+    Node API (for the tables returned by Timed.echo):
+        node.elapsed -> the number of seconds that 'node' has been iterating for.
+----------------------------------------------------------------------------------------]]
+    
+    local _TIMEOUT = 0.03125 --default echo timeout
+    
+    Timed = {}
+    ---@class timedNode:listNode
+    ---@field elapsed number
+    
+--[[--------------------------------------------------------------------------------------
+    Internal
+----------------------------------------------------------------------------------------]]
+    
+    local zeroList, _ZERO_TIMER
+    
+--[[--------------------------------------------------------------------------------------
+    Name: Timed.call
+    Args: [delay, ]userFunc
+    Desc: After "delay" seconds, call "userFunc".
+----------------------------------------------------------------------------------------]]
+    
+    ---Core function by Eikonium; zero-second expiration is a simple list by Bribe
+    ---@param delay number|function
+    ---@param userFunc? function|number
+    function Timed.call(delay, userFunc)
+        if not userFunc or delay == 0.00 then
+            if not zeroList then
+                zeroList = {}
+                _ZERO_TIMER = _ZERO_TIMER or CreateTimer()
+                TimerStart(_ZERO_TIMER, 0.00, false, 
+                function()
+                    local tempList = zeroList
+                    zeroList = nil
+                    for _, func in ipairs(tempList) do func() end
+                end)
+            end
+            zeroList[#zeroList + 1] = userFunc or delay
+            return
+        end
+        local t = CreateTimer()
+        TimerStart(t, delay, false,
+        function()
+            DestroyTimer(t)
+            userFunc()
+        end)
+    end
+ 
+    local lists = {}
+ 
+--[[--------------------------------------------------------------------------------------
+    Timed.echo is reminiscent of Jesus4Lyf's Timer32 module. It borrows from it with the
+    LinkedList syntax and "exitwhen true" nature of the original T32 module.
+
+    Desc: Calls userFunc every timeout seconds (by default, every 0.03125 seconds). If
+        your own node should be specified but you want to use the default timeout, you
+        can use Timed.echo(yourFunc, nil, myTable).
+    Warn: This merges all timeouts of the same value together, so large numbers can cause
+        expirations to occur too early on.
+----------------------------------------------------------------------------------------]]
+    ---@param userFunc fun(node:timedNode):boolean -- if true, echo will stop
+    ---@param timeout? number
+    ---@param node? timedNode
+    ---@return timedNode new_node
+    function Timed.echo(userFunc, timeout, node)
+        timeout = timeout or _TIMEOUT
+        local list = lists[timeout]
+        local t
+        node = node or {} ---@type timedNode
+        if list then
+            t = list.timer
+            local r = TimerGetRemaining(t)
+            if r < timeout * 0.50 then --the merge uses rounding to determine if
+                local q = list.queue   --the first expiration should be skipped
+                if not q then
+                    q = LinkedList.create()
+                    list.queue = q
+                end
+                node.elapsed = r       --add the remaining timeout to the elapsed time for this node.
+                node.func = userFunc
+                return q:insert(node)
+            end
+            node.elapsed = r - timeout --the instance will be called on the next tick, despite not being around for the full tick.
+        else
+            list = LinkedList.create()
+            lists[timeout] = list
+            t = CreateTimer()       --one timer per timeout interval
+            list.timer = t
+            TimerStart(t, timeout, true,
+            function()
+                for tNode in list:loop() do
+                    tNode.elapsed = tNode.elapsed + timeout
+                    if tNode.func(tNode) then --function can return true to remove itself from the list.
+                        tNode:remove()
+                    end
+                end
+                -- delayed add to list
+                if list.queue then
+                    list.queue:merge(list)
+                    list.queue = nil
+                end
+                --
+                if list.n == 0 then --list is empty; delete it.
+                    lists[timeout] = nil
+                    PauseTimer(t)
+                    DestroyTimer(t)
+                end
+            end)
+            node.elapsed = 0.00
+        end
+        node.func = userFunc
+        return list:insert(node)
+    end
+end
+if  Hook        -- https://www.hiveworkshop.com/threads/hook.339153
+and Timed then  -- https://www.hiveworkshop.com/threads/timed-call-and-echo.339222/
+
+--[[--------------------------------------------------------------------------------------
+    
+    Lua Damage Engine Version 2.0.0.0
+    
+    Documentation is found in the code, not in this header.
+    
+    I'd like to give very special thanks to Eikonium for equipping me with the debugging
+    tools I needed to get Lua Damage Engine published. I'd also like to thank MindWorX and
+    Eikonium for getting me started with VSCode, which has changed my (programming) life.
+
+    If you want GUI functionality, you also will need the following library:
+    Global Variable Remapper    - https://www.hiveworkshop.com/threads/global-variable-remapper
+    
+----------------------------------------------------------------------------------------]]
+
+OnGlobalInit(1, function() Damage = {}
+
+    ---@class damageEvent:LinkedList
+    ---@class damageEventRegistry:listNode
+    ---@class damageInstance:table
+
+--[[--------------------------------------------------------------------------------------
+    Configurable variables are listed below
+----------------------------------------------------------------------------------------]]
+    
+    local _USE_GUI          = GlobalRemap
+    
+    local _USE_EXTRA        = _USE_GUI  --If you don't use DamageEventLevel/DamageEventAOE/SourceDamageEvent, set this to false
+    local _USE_ARMOR_MOD    = true      --If you do not modify nor detect armor/defense, set this to false
+    local _USE_MELEE_RANGE  = true      --If you do not detect melee nor ranged damage, set this to false
+    
+    local _LIMBO            = 16        --When manually-enabled recursion is enabled via Damage.recurion, the engine will never go deeper than LIMBO.
+    local _DEATH_VAL        = 0.405     --In case M$ or Bliz ever change this, it'll be a quick fix here.
+    
+    local _TYPE_CODE        = 1         --Must be the same as udg_DamageTypeCode, or 0 if you prefer to disable the automatic flag.
+    local _TYPE_PURE        = 2         --Must be the same as udg_DamageTypePure
+    
+    --These variables coincide with Blizzard's "limitop" type definitions.
+    local _FILTER_ATTACK    = 0     --LESS_THAN
+    local _FILTER_MELEE     = 1     --LESS_THAN_OR_EQUAL
+    local _FILTER_OTHER     = 2     --EQUAL
+    local _FILTER_RANGED    = 3     --GREATER_THAN_OR_EQUAL
+    local _FILTER_SPELL     = 4     --GREATER_THAN
+    local _FILTER_CODE      = 5     --NOT_EQUAL
+    
+    local CheckUnitType = IsUnitType
+    local t1, t2, t3    ---@type trigger
+    local current       = nil   ---@type damageInstance
+    local userIndex     = nil   ---@type damageEventRegistry
+    local checkConfig
+    do
+        local GetUnitItem   = UnitItemInSlot
+        local GetItemType   = GetItemTypeId
+        local GUTI          = GetUnitTypeId
+        local GUAL          = GetUnitAbilityLevel
+        local GRR           = GetRandomReal
+        local function checkItem(u,  id) 
+            if CheckUnitType(u, UNIT_TYPE_HERO) then
+                for i = 0, UnitInventorySize(u) - 1 do
+                    if GetItemType(GetUnitItem(u, i)) == id then return true end
+                end
+            end
+        end
+        checkConfig = function() if not userIndex.configured then return true
+        
+--[[--------------------------------------------------------------------------------------
+    Mapmakers should comment-out any of the below lines that they will never need to check
+    for, and move the most common checks to the top of the list.
+----------------------------------------------------------------------------------------]]
+            
+            elseif userIndex.sourceType  and GUTI(current.source) ~= userIndex.sourceType then
+            elseif userIndex.targetType  and GUTI(current.target) ~= userIndex.targetType then
+            elseif userIndex.sourceBuff  and GUAL(current.source, userIndex.sourceBuff) == 0 then
+            elseif userIndex.targetBuff  and GUAL(current.target, userIndex.targetBuff) == 0 then
+            elseif userIndex.failChance  and GRR(0.00, 1.00) <= userIndex.failChance then
+            elseif userIndex.userType    and current.userType ~= userIndex.userType then
+            elseif userIndex.source      and userIndex.source ~= current.source then
+            elseif userIndex.target      and userIndex.target ~= current.target then
+            elseif userIndex.attackType  and userIndex.attackType ~= current.attackType then
+            elseif userIndex.damageType  and userIndex.damageType ~= current.damageType then
+            elseif userIndex.sourceItem  and not checkItem(current.source, userIndex.sourceItem) then
+            elseif userIndex.targetItem  and not checkItem(current.target, userIndex.targetItem) then
+            elseif userIndex.sourceClass and not CheckUnitType(current.source, userIndex.sourceClass) then
+            elseif userIndex.targetClass and not CheckUnitType(current.target, userIndex.targetClass) then
+            elseif current.damage >= userIndex.damageMin then
+            
+--[[--------------------------------------------------------------------------------------
+    Configuration section is over. The rest of the library is hard-coded.
+----------------------------------------------------------------------------------------]]
+            
+                --print("Configuration passed")
+                return true
+            end
+            --print("Checking failed")
+        end
+    end 
+    
+--[[--------------------------------------------------------------------------------------
+    Readonly variables are defined below.
+----------------------------------------------------------------------------------------]]
+    
+    local readonly          = {}
+    
+    readonly.index          = function() return current end         --Damage.index is the currently-running damage table that contains properties like source/target/damage.
+    
+    local lastRegistered    = nil                                   ---@type damageEventRegistry
+    readonly.lastRegistered = function() return lastRegistered end  --Damage.lastRegistered identifies whatever damage event was most recently added.
+    
+    readonly.userIndex      = function() return userIndex end       --Damage.userIndex identifies the registry table for the damage function that's currently running.
+    
+    local sourceStacks      = 1
+    readonly.sourceStacks   = function() return sourceStacks end    --Damage.sourceStacks holds how many times a single unit was hit from the same source using the same attack. AKA udg_DamageEventLevel.
+    
+    local sourceAOE         = 1
+    readonly.sourceAOE      = function() return sourceAOE end       --Damage.sourceAOE holds how many units were hit by the same source using the same attack. AKA udg_DamageEventAOE.
+
+    local originalSource
+    readonly.originalSource = function() return originalSource end  --Damage.originalSource tracks whatever source unit started the current series of damage event(s). AKA udg_AOEDamageSource.
+    
+    local originalTarget
+    readonly.originalTarget = function() return originalTarget end  --Damage.originalTarget tracks whatever target unit was first hit by the original source. AKA udg_EnhancedDamageTarget.
+    
+    local _DAMAGING         = LinkedList.create()   ---@type damageEvent
+    readonly.damagingEvent  = function() return _DAMAGING end
+    
+    local _ARMOR            = LinkedList.create()   ---@type damageEvent
+    readonly.armorEvent     = function() return _ARMOR end
+    
+    local _DAMAGED          = LinkedList.create()   ---@type damageEvent
+    readonly.damagedEvent   = function() return _DAMAGED end
+    
+    local _ZERO             = LinkedList.create()   ---@type damageEvent
+    readonly.zeroEvent      = function() return _ZERO end
+    
+    local _AFTER            = LinkedList.create()   ---@type damageEvent
+    readonly.afterEvent     = function() return _AFTER end
+    
+    local _LETHAL           = LinkedList.create()   ---@type damageEvent
+    readonly.lethalEvent    = function() return _LETHAL end
+    
+    local _SOURCE           = LinkedList.create()   ---@type damageEvent
+    readonly.sourceEvent    = function() return _SOURCE end
+    
+    local GetUnitLife       = GetWidgetLife
+    local SetUnitLife       = SetWidgetLife
+    local Alive             = UnitAlive
+    local disableT          = DisableTrigger
+    local enableT           = EnableTrigger
+    local hasLethal         ---@type boolean
+    local hasSource         ---@type boolean
+    
+    ---@class damageEvent
+
+    ---@class damageEventRegistry
+    ---@field minAOE        integer
+    ---@field filters       boolean[]
+    ---@field targetClass   unittype
+    ---@field sourceClass   unittype
+    ---@field targetItem    itemtype
+    ---@field sourceItem    itemtype
+    ---@field sourceType    unittype
+    ---@field targetType    unittype
+    ---@field targetBuff    integer
+    ---@field sourceBuff    integer
+    ---@field source        unit
+    ---@field target        unit
+    ---@field attackType    attacktype
+    ---@field damageType    damagetype
+    ---@field weaponType    weapontype
+    ---@field damageMin     number
+    ---@field userType      integer
+    ---@field trig          trigger
+    ---@field eFilter       integer
+    ---@field trigFrozen    boolean
+    ---@field levelsDeep    integer
+
+    ---@class damageInstance
+    ---@field source        unit
+    ---@field target        unit
+    ---@field damage        real
+    ---@field prevAmt       real
+    ---@field isAttack      boolean
+    ---@field isRanged      boolean
+    ---@field isMelee       boolean
+    ---@field attackType    attacktype
+    ---@field damageType    damagetype
+    ---@field weaponType    weapontype
+    ---@field isCode        boolean
+    ---@field isSpell       boolean
+    ---@field recursiveFunc damageEventRegistry[]
+    ---@field userType      integer
+    ---@field armorPierced  real
+    ---@field prevArmorT    integer
+    ---@field armorType     integer
+    ---@field prevDefenseT  integer
+    ---@field defenseType   integer
+
+
+    local dreaming ---@type boolean
+    ---Turn on (true) or off (false or nil) Damage Engine
+    ---@param on boolean
+    function Damage.enable(on)
+        if on then
+            if dreaming then enableT(t3)
+            else enableT(t1); enableT(t2) end
+        else
+            if dreaming then disableT(t3)
+            else disableT(t1); disableT(t2) end
+        end
+    end
+    
+    local breakCheck = {}   ---@type function[]
+    local override          ---@type boolean
+    
+    breakCheck[_DAMAGING]   = function() return override or current.userType == _TYPE_PURE end
+    breakCheck[_ARMOR]      = function() return current.damage <= 0.00 end
+    breakCheck[_LETHAL]     = function() return hasLethal and Damage.life > _DEATH_VAL end
+    
+    ---@return boolean
+    local function damageOrAfter() return current.damageType == DAMAGE_TYPE_UNKNOWN end
+    breakCheck[_DAMAGED]    = damageOrAfter
+    breakCheck[_AFTER]      = damageOrAfter
+    
+    local function defaultCheck() end
+    
+    ---Common function to run any major event in the system.
+    ---@param head damageEventRegistry
+    ---@return boolean ran_yn
+    local function runEvent(head)
+        local check = breakCheck[head] or defaultCheck
+        if dreaming or check() then
+            return
+        end
+        userIndex = head.next
+        if userIndex ~= head then
+            Damage.enable(false)
+            enableT(t3)
+            dreaming = true
+            
+            --print("Start of event running")
+            repeat
+                if not userIndex.trigFrozen and userIndex.filters[userIndex.eFilter] and checkConfig() and not hasSource or (head ~= _SOURCE or (userIndex.minAOE and sourceAOE > userIndex.minAOE)) then
+                    userIndex.func()
+                end
+                userIndex = userIndex.next
+            until userIndex == head or check()
+            --print("End of event running")
+            
+            dreaming = nil
+            Damage.enable(true)
+            disableT(t3)
+        end
+        return true
+    end
+    
+--[[--------------------------------------------------------------------------------------
+    Creates a new table for the damage properties for each particular event sequence.
+----------------------------------------------------------------------------------------]]
+    
+    ---Create a new damage instance
+    ---@param src unit
+    ---@param tgt unit
+    ---@param amt number
+    ---@param a boolean
+    ---@param r boolean
+    ---@param at attacktype
+    ---@param dt damagetype
+    ---@param wt weapontype
+    ---@param fromCode boolean
+    ---@return damageInstance
+    local function create(src, tgt, amt, a, r, at, dt, wt, fromCode)
+        local d = { ---@type damageInstance
+            source              = src,
+            target              = tgt,
+            damage              = amt,
+            isAttack            = a or _USE_GUI and udg_NextDamageIsAttack,
+            isRanged            = r,
+            attackType          = at, 
+            damageType          = dt, 
+            weaponType          = wt, 
+            prevAmt             = amt,
+            userAmt             = amt
+        }
+        d.isSpell               = at == ATTACK_TYPE_NORMAL and not d.isAttack
+        if fromCode or Damage.nextType or d.damageType == DAMAGE_TYPE_MIND or (d.damageType == DAMAGE_TYPE_UNKNOWN and d.damage ~= 0.00) or (_USE_GUI and (udg_NextDamageIsAttack or udg_NextDamageIsRanged or udg_NextDamageIsMelee or udg_NextDamageWeaponT)) then
+            d.isCode            = true
+            d.userType          = Damage.nextType or _TYPE_CODE
+            Damage.nextType     = nil
+            if _USE_MELEE_RANGE and not d.isSpell then
+                d.isMelee       = _USE_GUI and udg_NextDamageIsMelee or (a and not r)
+                d.isRanged      = _USE_GUI and udg_NextDamageIsRanged or (a and r)
+            end
+            d.eFilter           = _FILTER_CODE
+            if _USE_GUI then
+                udg_NextDamageIsAttack      = nil
+                if udg_NextDamageWeaponT then
+                    d.weaponType            = ConvertWeaponType(udg_NextDamageWeaponT)
+                    udg_NextDamageWeaponT   = nil
+                end
+                if _USE_MELEE_RANGE then
+                    udg_NextDamageIsMelee   = nil
+                    udg_NextDamageIsRanged  = nil
+                end
+            end
+        else
+            d.userType          = 0
+        end
+        return d
+    end
+    
+    local GetDamage         = GetEventDamage
+    local createFromEvent
+    do
+        local GetSource     = GetEventDamageSource
+        local GetTarget     = GetTriggerUnit
+        local GetIsAttack   = BlzGetEventIsAttack
+        local GetAttackType = BlzGetEventAttackType
+        local GetDamageType = BlzGetEventDamageType
+        local GetWeaponType = BlzGetEventWeaponType
+        
+        ---Create a damage event from a naturally-occuring event.
+        ---@param isCode? boolean
+        ---@return damageInstance
+        function createFromEvent(isCode)
+            local d = create(GetSource(), GetTarget(), GetDamage(), GetIsAttack(), false, GetAttackType(), GetDamageType(), GetWeaponType(), isCode)
+            if not d.isCode then
+                if d.damageType == DAMAGE_TYPE_NORMAL and d.isAttack then
+                    if _USE_MELEE_RANGE then
+                        d.isMelee       = CheckUnitType(d.source, UNIT_TYPE_MELEE_ATTACKER)
+                        d.isRanged      = CheckUnitType(d.source, UNIT_TYPE_RANGED_ATTACKER)
+                        if d.isMelee and d.isRanged then
+                            d.isMelee   = d.weaponType  -- Melee units play a sound when damaging. In naturally-occuring cases where a
+                            d.isRanged  = not d.isMelee -- unit is both ranged and melee, the ranged attack plays no sound.
+                        end
+                        if d.isMelee then
+                            d.eFilter   = _FILTER_MELEE
+                        elseif d.isRanged then
+                            d.eFilter   = _FILTER_RANGED
+                        else
+                            d.eFilter   = _FILTER_ATTACK
+                        end
+                    else
+                        d.eFilter       = _FILTER_ATTACK
+                    end
+                else
+                    if d.isSpell then
+                        d.eFilter   = _FILTER_SPELL
+                    else
+                        d.eFilter   = _FILTER_OTHER
+                    end
+                end
+            end
+            return d
+        end
+    end
+    
+    local alarmSet
+    Damage.targets = udg_DamageEventAOEGroup
+    
+    local function onAOEEnd()
+        if _USE_EXTRA then
+            runEvent(_SOURCE)
+            sourceAOE       = 1
+            sourceStacks    = 1
+            originalTarget  = nil
+            originalSource  = nil
+            GroupClear(Damage.targets)
+        end
+    end
+    
+    ---Handle any desired armor modification.
+    ---@param reset? boolean
+    local function setArmor(reset)
+        if _USE_ARMOR_MOD then
+            local pierce    ---@type real
+            local at        ---@type integer
+            local dt        ---@type integer
+            if reset then
+                pierce  =   current.armorPierced
+                at      =   current.prevArmorT
+                dt      =   current.prevDefenseT
+            else
+                pierce  =  -current.armorPierced
+                at      =   current.armorType
+                dt      =   current.defenseType
+            end
+            if pierce ~= 0.00 then --Changed condition thanks to bug reported by BLOKKADE
+                BlzSetUnitArmor(current.target, BlzGetUnitArmor(current.target) + pierce)
+            end
+            if current.prevArmorT ~= current.armorType then
+                BlzSetUnitIntegerField(current.target, UNIT_IF_ARMOR_TYPE, at)
+            end
+            if current.prevDefenseT ~= current.defenseType then
+                BlzSetUnitIntegerField(current.target, UNIT_IF_DEFENSE_TYPE, dt)
+            end
+        end
+    end
+    
+    local proclusGlobal     = {}                ---@type boolean[]
+    local fischerMorrow     = {}                ---@type boolean[]
+    local SetEventDamage    = BlzSetEventDamage
+    
+    local doPreEvents
+    do
+        local SetEventAttackType     = BlzSetEventAttackType
+        local SetEventDamageType     = BlzSetEventDamageType
+        local SetEventWeaponType     = BlzSetEventWeaponType
+        
+        ---Setup pre-events before running any user-facing damage events.
+        ---@param d damageInstance
+        ---@param natural? boolean
+        ---@return boolean isZeroDamage_yn
+        doPreEvents = function(d, natural)
+            if _USE_ARMOR_MOD then
+                d.armorType      = BlzGetUnitIntegerField(d.target, UNIT_IF_ARMOR_TYPE)
+                d.defenseType    = BlzGetUnitIntegerField(d.target, UNIT_IF_DEFENSE_TYPE)
+                d.prevArmorT     = d.armorType
+                d.prevDefenseT   = d.defenseType
+                d.armorPierced   = 0.00
+            end
+            current             = d
+            
+            proclusGlobal[d.source] = true
+            fischerMorrow[d.target] = true
+            
+            if d.damage == 0.00 then
+                return true
+            end
+            override = d.damageType == DAMAGE_TYPE_UNKNOWN
+            runEvent(_DAMAGING)
+            if natural then
+                SetEventAttackType(d.attackType)
+                SetEventDamageType(d.damageType)
+                SetEventWeaponType(d.weaponType)
+                SetEventDamage(d.damage)
+            end
+            setArmor()
+        end
+    end
+    
+    local function afterDamage() 
+        if current then
+            runEvent(_AFTER)
+            current = nil
+        end
+        override = nil
+    end
+    
+    local canKick                   = true
+    local sleepLevel                = 0
+    local totem, kicking, eventsRun
+    local prepped                   = nil       ---@type damageInstance
+    local recursiveStack            = {}        ---@type damageInstance[]
+    local UDT                       = UnitDamageTarget
+    
+    local function finish()
+        if eventsRun then
+            eventsRun = nil
+            afterDamage()
+        end
+        current = nil
+        override = nil
+        if canKick and not kicking then
+            if #recursiveStack > 0 then
+                kicking = true
+                local i = 1
+                local exit
+                repeat
+                    sleepLevel  = sleepLevel + 1
+                    exit        = #recursiveStack
+                    repeat
+                        prepped = recursiveStack[i]
+                        if Alive(prepped.target) then
+                            doPreEvents(prepped) --don't evaluate the pre-event
+                            if prepped.damage > 0.00 then
+                                disableT(t1) --Force only the after armor event to run.
+                                enableT(t2)  --in case the user forgot to re-enable this
+                                totem = true
+                                UDT(prepped.source, prepped.target, prepped.damage, prepped.isAttack, prepped.isRanged, prepped.attackType, prepped.damageType, prepped.weaponType)
+                            else
+                                runEvent(_DAMAGED)
+                                if prepped.damage < 0.00 then
+                                    --No need for BlzSetEventDamage here
+                                    SetUnitLife(prepped.target, GetUnitLife(prepped.target) - prepped.damage)
+                                end
+                                setArmor(true)
+                            end
+                            afterDamage()
+                        end
+                        i = i + 1
+                    until (i >= exit)
+                until (i >= #recursiveStack)
+            end
+            for i = 1, #recursiveStack do
+                recursiveStack[i].recursiveFunc.trigFrozen  = nil
+                recursiveStack[i].recursiveFunc.levelsDeep  = 0
+                recursiveStack[i] = nil
+            end
+            sleepLevel      = 0
+            prepped, kicking, dreaming = nil, nil, nil
+            Damage.enable(true)
+            
+            proclusGlobal = {} ---@type boolean[]
+            fischerMorrow = {} ---@type boolean[]
+            --print("Cleared up the groups")
+        end
+    end
+    
+    local function failsafeClear()
+        setArmor(true)
+        canKick = true
+        kicking, totem = nil, nil
+        runEvent(_DAMAGED)
+        eventsRun = true
+        finish()
+    end
+    
+    local lastInstance       ---@type damageInstance
+    local attacksImmune = {} ---@type boolean[]
+    local damagesImmune = {} ---@type boolean[]
+    
+    t1 = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(t1, EVENT_PLAYER_UNIT_DAMAGING)
+    TriggerAddCondition(t1, Filter(function()
+        local d = createFromEvent()
+        --print("Pre-damage event running for " .. GetUnitName(GetTriggerUnit()))
+        if alarmSet then
+            if totem then --WarCraft 3 didn't run the DAMAGED event despite running the DAMAGING event.
+                if d.damageType == DAMAGE_TYPE_SPIRIT_LINK or d.damageType == DAMAGE_TYPE_DEFENSIVE or d.damageType == DAMAGE_TYPE_PLANT then
+                    lastInstance    = current
+                    totem           = nil
+                    canKick         = nil
+                else
+                    failsafeClear() --Not an overlapping event - just wrap it up
+                end
+            else
+                finish() --wrap up any previous damage index
+            end
+            
+            if _USE_EXTRA then
+                if d.source ~= originalSource then
+                    onAOEEnd()
+                    originalSource = d.source
+                    originalTarget = d.target
+                elseif d.target == originalTarget then
+                    sourceStacks = sourceStacks + 1
+                elseif not IsUnitInGroup(d.target, Damage.targets) then
+                    sourceAOE = sourceAOE + 1
+                end
+            end
+        else
+            alarmSet = true
+            Timed.call(
+            function()
+                alarmSet, dreaming = nil, nil
+                Damage.enable(true)
+                if totem then
+                    failsafeClear() --WarCraft 3 didn't run the DAMAGED event despite running the DAMAGING event.
+                else
+                    canKick = true
+                    kicking = nil
+                    finish()
+                end
+                onAOEEnd()
+                current = nil
+                --print("Timer wrapped up")
+            end)
+            if _USE_EXTRA then
+                originalSource  = d.source
+                originalTarget  = d.target
+            end
+        end
+        if _USE_EXTRA then GroupAddUnit(Damage.targets, d.target) end
+        if doPreEvents(d, true) then
+            runEvent(_ZERO)
+            canKick = true
+            finish()
+        end
+        totem = not lastInstance or attacksImmune[d.attackType] or damagesImmune[d.damageType] or not CheckUnitType(d.target, UNIT_TYPE_MAGIC_IMMUNE)
+    end))
+    
+    t2 = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(t2, EVENT_PLAYER_UNIT_DAMAGED)
+    TriggerAddCondition(t2, Filter(function() 
+        local r = GetDamage()
+        local d = current
+        --print("Second damage event running for " .. GetUnitName(GetTriggerUnit()))
+        if prepped                              then prepped = nil
+        elseif dreaming or d.prevAmt == 0.00    then return
+        elseif totem                            then totem = nil
+        else
+            afterDamage()
+            d               = lastInstance
+            current         = d
+            lastInstance    = nil
+            canKick         = true
+        end
+        setArmor(true)
+        d.userAmt = d.damage
+        d.damage = r
+        
+        if r > 0.00 then
+            runEvent(_ARMOR)
+            if hasLethal or d.userType < 0 then
+                Damage.life = GetUnitLife(d.target) - d.damage
+                if Damage.life <= _DEATH_VAL then
+                    if hasLethal then
+                        runEvent(_LETHAL)
+                        
+                        d.damage = GetUnitLife(d.target) - Damage.life
+                    end
+                    if d.userType < 0 and Damage.life <= _DEATH_VAL then
+                        SetUnitExploded(d.target, true)
+                    end
+                end
+            end
+        end
+        if d.damageType ~= DAMAGE_TYPE_UNKNOWN then runEvent(_DAMAGED) end
+        SetEventDamage(d.damage)
+        eventsRun = true
+        if d.damage == 0.00 then finish() end
+    end))
+    
+    --Call to enable recursive damage on your trigger.
+    function Damage.inception() userIndex.inceptionTrig = true end
+    
+    ---add a recursive damage instance
+    ---@param d damageInstance
+    local function addRecursive(d) 
+        if d.damage ~= 0.00 then
+            d.recursiveFunc = userIndex
+            if kicking and proclusGlobal[d.source] and fischerMorrow[d.target] then
+                if not userIndex.inceptionTrig then
+                    userIndex.trigFrozen = true
+                elseif not userIndex.trigFrozen and userIndex.levelsDeep < sleepLevel then
+                    userIndex.levelsDeep = userIndex.levelsDeep + 1
+                    userIndex.trigFrozen = userIndex.levelsDeep >= _LIMBO
+                end
+            end
+            recursiveStack[#recursiveStack + 1] = d
+            --print("recursiveStack: " .. #recursiveStack .. " levelsDeep: " .. userIndex.levelsDeep .. " sleepLevel: " .. sleepLevel)
+        end
+    end
+    
+    t3 = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(t3, EVENT_PLAYER_UNIT_DAMAGING)
+    TriggerAddCondition(t3, Filter(function()
+        addRecursive(createFromEvent(true))
+        SetEventDamage(0.00)
+    end))
+    disableT(t3)
+    
+    ---register a new damage event
+    ---@param head damageEvent
+    ---@param func function
+    ---@param lbs number
+    ---@param filt? integer
+    ---@param trig? trigger
+    ---@return damageEventRegistry
+    function Damage.register(head, func, lbs, filt, trig)
+        filt = filt or _FILTER_OTHER
+        if trig and lastRegistered and lastRegistered.trig and lastRegistered.trig == trig then
+            lastRegistered.filters[filt]= true
+            return
+        end
+        
+        hasLethal                       = hasLethal or head == _LETHAL
+        hasSource                       = hasSource or head == _SOURCE
+        
+        local id                        = {} ---@type damageEventRegistry
+        lastRegistered                  = id
+        
+        id.filters                      = {}
+        if filt == _FILTER_OTHER then 
+            id.filters[_FILTER_ATTACK]  = true
+            id.filters[_FILTER_MELEE]   = true
+            id.filters[_FILTER_OTHER]   = true
+            id.filters[_FILTER_RANGED]  = true
+            id.filters[_FILTER_SPELL]   = true
+            id.filters[_FILTER_CODE]    = true
+        elseif filt == _FILTER_ATTACK then
+            id.filters[_FILTER_ATTACK]  = true
+            id.filters[_FILTER_MELEE]   = true
+            id.filters[_FILTER_RANGED]  = true
+        else                            
+            id.filters[filt]            = true
+        end
+        id.levelsDeep                   = 0
+        id.trig                         = trig
+        lbs                             = lbs or 1.00
+        id.weight                       = lbs
+        id.func                         = func
+        
+        local insertAt = head
+        for node in head:loop() do if node.weight > lbs then insertAt = node; break end end
+        insertAt:insert(id)
+        
+        --print("Registered new event to " .. var)
+        return lastRegistered
+    end
+    ---Remove registered damage event by index
+    ---@param index damageEventRegistry
+    ---@return boolean removed_yn
+    function Damage.remove(index)
+        if lastRegistered == index then lastRegistered = nil end
+        return index:remove()
+    end
+    
+    Hook.addSimple("TriggerRegisterVariableEvent",
+    function(whichTrig, varName, opCode, limitVal)
+        local index = ((varName == "udg_DamageModifierEvent" and limitVal < 4)  or varName == "udg_PreDamageEvent")     and _DAMAGING   or
+            (varName == "udg_DamageModifierEvent"                               or varName == "udg_ArmorDamageEvent")   and _ARMOR      or
+            ((varName == "udg_DamageEvent" and limitVal == 2 or limitVal == 0)  or varName == "udg_ZeroDamageEvent")    and _ZERO       or
+            (varName == "udg_DamageEvent"                                       or varName == "udg_OnDamageEvent")      and _DAMAGED    or
+            varName == "udg_AfterDamageEvent"                                                                           and _AFTER      or
+            varName == "udg_LethalDamageEvent"                                                                          and _LETHAL     or
+            (varName == "udg_AOEDamageEvent"                                    or varName == "udg_SourceDamageEvent")  and _SOURCE
+        if index then
+            local id = Damage.register(index, function() if IsTriggerEnabled(whichTrig) then ConditionalTriggerExecute(whichTrig) end end, limitVal, GetHandleId(opCode), whichTrig)
+            if index == _SOURCE then
+                id.minAOE = (varName == "udg_AOEDamageEvent" and 1)             or (varName == "udg_SourceDamageEvent" and 0)
+            end
+            return "skip hook"
+        end
+    end)
+    
+    for i = 0, 26 do udg_CONVERTED_DAMAGE_TYPE[i] = ConvertDamageType(i) end
+    
+    --For filling an array with values from a table.
+    ---@param arr table
+    ---@param tbl table
+    ---@param offset? integer
+    local function fillArray(arr, tbl, offset)
+        for i, v in ipairs(tbl) do arr[i + (offset or -1)] = v end
+    end
+    
+    --For filling a group of similarly-named variables.
+    ---@param prefix string
+    ---@param tbl table
+    ---@param offset? integer
+    local function fillVars(prefix, tbl, offset)
+        for i, v in ipairs(tbl) do _G[prefix .. v] = i + (offset or -1) end
+    end
+    
+    local list
+    if _USE_GUI then
+        udg_DamageTypeDebugStr[0]   = "UNKNOWN"
+        udg_DamageTypeDebugStr[4]   = "NORMAL"
+        udg_DamageTypeDebugStr[5]   = "ENHANCED"
+        udg_DAMAGE_TYPE_UNKNOWN     = 0
+        udg_DAMAGE_TYPE_NORMAL      = 4
+        udg_DAMAGE_TYPE_ENHANCED    = 5
+    end
+    damagesImmune[0]            = true
+    damagesImmune[4]            = true
+    damagesImmune[5]            = true
+    fillArray(damagesImmune, {false,  false,    false,      true,     true,     false,    false,   false,   true,   false,   false,   false,  false,     false,        true,          true,          false,          false,        true}, 7)
+    if _USE_GUI then
+        list =               {"FIRE", "COLD", "LIGHTNING", "POISON", "DISEASE", "DIVINE", "MAGIC", "SONIC", "ACID", "FORCE", "DEATH", "MIND", "PLANT", "DEFENSIVE", "DEMOLITION", "SLOW_POISON", "SPIRIT_LINK", "SHADOW_STRIKE", "UNIVERSAL"}
+        fillArray(udg_DamageTypeDebugStr, list, 7)
+        fillVars("udg_DAMAGE_TYPE_", list, 7)
+    end
+    fillArray(attacksImmune, { false,    true,      true,    true,    false,   true,    true})
+    if _USE_GUI then
+        list               = {"SPELLS", "NORMAL", "PIERCE", "SIEGE", "MAGIC", "CHAOS", "HERO"}
+        fillArray(udg_AttackTypeDebugStr, list)
+        fillVars("udg_ATTACK_TYPE_", list)
+        
+        fillArray(udg_WeaponTypeDebugStr, {"NONE", "METAL_LIGHT_CHOP", "METAL_MEDIUM_CHOP", "METAL_HEAVY_CHOP", "METAL_LIGHT_SLICE", "METAL_MEDIUM_SLICE", "METAL_HEAVY_SLICE", "METAL_MEDIUM_BASH", "METAL_HEAVY_BASH", "METAL_MEDIUM_STAB", "METAL_HEAVY_STAB", "WOOD_LIGHT_SLICE", "WOOD_MEDIUM_SLICE", "WOOD_HEAVY_SLICE", "WOOD_LIGHT_BASH", "WOOD_MEDIUM_BASH", "WOOD_HEAVY_BASH", "WOOD_LIGHT_STAB", "WOOD_MEDIUM_STAB", "CLAW_LIGHT_SLICE", "CLAW_MEDIUM_SLICE", "CLAW_HEAVY_SLICE", "AXE_MEDIUM_CHOP", "ROCK_HEAVY_BASH"})
+        fillVars("udg_WEAPON_TYPE_",      {"NONE",     "ML_CHOP",           "MM_CHOP",           "MH_CHOP",          "ML_SLICE",           "MM_SLICE",           "MH_SLICE",          "MM_BASH",          "MH_BASH",          "MM_STAB",          "MH_STAB",          "WL_SLICE",          "WM_SLICE",         "WH_SLICE",         "WL_BASH",          "WM_BASH",         "WH_BASH",         "WL_STAB",         "WM_STAB",          "CL_SLICE",          "CM_SLICE",          "CH_SLICE",         "AM_CHOP",         "RH_BASH"})
+        
+        list = {"LIGHT", "MEDIUM", "HEAVY", "FORTIFIED", "NORMAL", "HERO", "DIVINE", "UNARMORED"}
+        fillArray(udg_DefenseTypeDebugStr, list)
+        fillVars("udg_DEFENSE_TYPE_", list)
+        
+        list = {"NONE", "FLESH", "METAL", "WOOD", "ETHEREAL", "STONE"}
+        fillArray(udg_ArmorTypeDebugStr, list)
+        fillVars("udg_ARMOR_TYPE_", list)
+        
+        fillVars("udg_UNIT_CLASS_", {"HERO", "DEAD", "STRUCTURE", "FLYING", "GROUND", "ATTACKS_FLYING", "ATTACKS_GROUND", "MELEE", "RANGED", "GIANT", "SUMMONED", "STUNNED", "PLAGUED", "SNARED", "UNDEAD", "MECHANICAL", "PEON", "SAPPER", "TOWNHALL", "ANCIENT", "TAUREN", "POISONED", "POLYMORPHED", "SLEEPING", "RESISTANT", "ETHEREAL", "MAGIC_IMMUNE"})
+        
+        for i = 0, 6 do udg_CONVERTED_ATTACK_TYPE[i] = ConvertAttackType(i) end
+    end
+    
+    ---Apply damage directly via Damage Engine
+    ---@param src unit
+    ---@param tgt unit
+    ---@param amt real
+    ---@param a boolean
+    ---@param r boolean
+    ---@param at attacktype
+    ---@param dt damagetype
+    ---@param wt weapontype
+    ---@return damageInstance
+    function Damage.apply(src, tgt, amt, a, r, at, dt, wt)
+        local d ---@type damageInstance
+        if dreaming then
+            d = create(src, tgt, amt, a, r, at, dt, wt, true)
+            addRecursive(d)
+        else
+            UDT(src, tgt, amt, a, r, at, dt, wt)
+            d = current
+            finish()
+        end
+        return d
+    end
+    ---Deal spell damage using the below simple criteria
+    ---@param src unit
+    ---@param tgt unit
+    ---@param amt real
+    ---@param dt damagetype
+    ---@return damageInstance
+    function Damage.applySpell(src,  tgt,  amt, dt)
+        return Damage.apply(src, tgt, amt, nil, nil, nil, dt, nil)
+    end
+    function Damage.applyAttack(src, tgt, amt, ranged, at, wt)
+        return Damage.apply(src, tgt, amt, true, ranged, at, DAMAGE_TYPE_NORMAL, wt)
+    end
+    
+--[[--------------------------------------------------------------------------------------
+    The below section defines how GUI interacts with Damage Engine and vice-versa. This is
+a breakthrough in coding thanks to the innovation brought forth via Global Variable Remapper.
+----------------------------------------------------------------------------------------]]
+    
+    if _USE_GUI then
+        ---Remap damageInstance types of variables (DamageEventSource/Target/Amount/etc)
+        ---@param oldVarStr string
+        ---@param newVarStr string
+        ---@param get? boolean
+        ---@param set? boolean
+        local function map(oldVarStr, newVarStr, get, set)
+            GlobalRemap(oldVarStr, get and function() return current[newVarStr] end, set and function(val) current[newVarStr] = val end)
+        end
+        map("udg_DamageEventAmount", "damage", true, true)
+        map("udg_DamageEventType", "userType", true, true)
+        if _USE_ARMOR_MOD then
+            map("udg_DamageEventArmorPierced", "armorPierced", true, true)
+            map("udg_DamageEventArmorT", "armorType", true, true)
+            map("udg_DamageEventDefenseT", "defenseType", true, true)
+        end
+        map("udg_DamageEventSource", "source", true)
+        map("udg_DamageEventTarget", "target", true)
+        map("udg_DamageEventPrevAmt", "prevAmt", true)
+        map("udg_DamageEventUserAmt", "userAmt", true)
+        map("udg_IsDamageAttack", "isAttack", true)
+        map("udg_IsDamageCode", "isCode", true)
+        map("udg_IsDamageSpell", "isSpell", true)
+        if _USE_MELEE_RANGE then 
+            map("udg_IsDamageMelee", "isMelee", true)
+            map("udg_IsDamageRanged", "isRanged", true)
+        end
+        GlobalRemap("udg_DamageEventAOE", function() return sourceAOE end)
+        GlobalRemap("udg_DamageEventLevel", function() return sourceStacks end)
+        GlobalRemap("udg_AOEDamageSource", function() return originalSource end)
+        GlobalRemap("udg_EnhancedDamageTarget", function() return originalTarget end)
+        
+        GlobalRemap("udg_LethalDamageHP", function() return Damage.life end, function(var) Damage.life = var end)
+        
+        GlobalRemap("udg_DamageEventAttackT", function() return GetHandleId(current.attackType) end, function(var) current.attackType  = ConvertAttackType(var) end)
+        GlobalRemap("udg_DamageEventDamageT", function() return GetHandleId(current.damageType) end, function(var) current.damageType  = ConvertDamageType(var) end)
+        GlobalRemap("udg_DamageEventWeaponT", function() return GetHandleId(current.weaponType) end, function(var) current.weaponType  = ConvertWeaponType(var) end)
+        
+        --New GUI vars unique to version 2.0: boolean DamageEngineEnabled, boolean DamageFilterConfigured, real DamageEventUserAmt
+        
+        GlobalRemap("udg_DamageEngineEnabled", nil, function(val) Damage.enable(val) end)
+        GlobalRemap("udg_NextDamageType", nil, function(val) Damage.nextType = val end)
+        GlobalRemap("udg_RemoveDamageEvent", nil, function() Damage.remove(userIndex) end)
+        GlobalRemap("udg_DamageFilterSourceC", nil, function(val) current.sourceClass = ConvertUnitType(val) end)
+        GlobalRemap("udg_DamageFilterTargetC", nil, function(val) current.targetClass = ConvertUnitType(val) end)
+        
+        ---Remap damageEventRegistry type variables (DamageFilterSource/Target/MinAmount/etc)
+        ---@param oldVarStr string
+        ---@param newVarStr string
+        local function configVar(oldVarStr, newVarStr)
+            GlobalRemap(oldVarStr, nil,
+            function(val)
+                userIndex[newVarStr] = val
+            end)
+        end
+        configVar("udg_DamageFilterSource", "source")
+        configVar("udg_DamageFilterTarget", "target")
+        configVar("udg_DamageFilterSourceT", "sourceType")
+        configVar("udg_DamageFilterTargetT", "targetType")
+        configVar("udg_DamageFilterType", "userType")
+        configVar("udg_DamageFilterAttackT", "attackType")
+        configVar("udg_DamageFilterDamageT", "damageType")
+        configVar("udg_DamageFilterSourceI", "sourceItem")
+        configVar("udg_DamageFilterTargetI", "targetItem")
+        configVar("udg_DamageFilterMinAmount", "damageMin")
+        configVar("udg_DamageFilterSourceA", "sourceBuff")
+        configVar("udg_DamageFilterSourceB", "sourceBuff")
+        configVar("udg_DamageFilterTargetA", "targetBuff")
+        configVar("udg_DamageFilterTargetB", "targetBuff")
+        configVar("udg_DamageFilterFailChance", "failChance")
+        
+        GlobalRemap("udg_DamageFilterRunChance", nil,
+        function(val)
+            userIndex.failChance = 1.00 - val
+        end)
+        GlobalRemap("udg_DamageFilterConfigured",
+        function()
+            local c = userIndex.configured
+            if not c then
+                userIndex.configured = 0
+                return false
+            elseif c == 0 then
+                userIndex.configured = 1
+                return checkConfig()
+            end
+            return true
+        end)
+        
+--[[--------------------------------------------------------------------------------------
+    Set references to readonly variables for public use.
+----------------------------------------------------------------------------------------]]
+        
+        setmetatable(Damage, {
+            __index =
+            function(tbl, key)
+                local index = readonly[key]
+                if index then return index() end
+                return rawget(tbl, key)
+            end,
+            
+            __newindex =
+            function(tbl, key, val)
+                if readonly[key] then return end
+                rawset(tbl, key, val)
+            end
+        })
+    end
+end)
+end
 -- Arcing Text Tag v1.0.0.3 by Maker encoded to Lua
 
 DEFINITION      = 1.0/60.0
@@ -1305,705 +3289,6 @@ function ArcingTextTag(s, u)
         end)
     end
     return this
-end
---Global Initialization 1.1 also hooks the InitCustomTriggers and RunInitializationTriggers functions
-do
-   local iFuncs = {}
-   function onInitialization(func) -- Runs once all Map Initialization triggers are executed
-      iFuncs[func] = func
-   end
-   local function runInitialization()
-      for k, f in pairs(iFuncs) do f() end
-      iFuncs = nil
-   end
-   
-   local tFuncs = {}
-   function onTriggerInit(func) -- Runs once all InitTrig_ functions are called
-      tFuncs[func] = func
-   end
-   local function runTriggerInit()
-      for k, f in pairs(tFuncs) do f() end
-      tFuncs = nil
-      local old = RunInitializationTriggers
-      if old then
-         function RunInitializationTriggers()
-            old()
-            runInitialization()
-         end
-      else
-         runInitialization()
-      end
-   end
-   
-   local gFuncs = {}
-   function onGlobalInit(func) --Runs once all udg_ globals are set.
-      gFuncs[func] = func --Simplification thanks to TheReviewer and Zed on Hive Discord
-   end
-   local function runGlobalInit()
-      for k, f in pairs(gFuncs) do f() end
-      gFuncs = nil
-      
-      local old = InitCustomTriggers
-      if old then
-         function InitCustomTriggers()
-            old()
-            runTriggerInit()
-         end
-      else
-         runTriggerInit()
-      end
-   end
-   
-   local oldBliz = InitBlizzard
-   function InitBlizzard()
-      oldBliz()
-      local old = InitGlobals
-      if old then
-         function InitGlobals()
-            old()
-            runGlobalInit()
-         end
-      else
-         runGlobalInit()
-      end
-   end
-end
--- TriggerRegisterVariableEvent hook to convert these old school events into something more useful.
-
-do
-   events = {}
-   function onRegisterVar(func)
-      events[func] = func
-   end
-   
-   local oldEvent = TriggerRegisterVariableEvent 
-   function TriggerRegisterVariableEvent(trig, var, op, val)
-      for k, func in pairs(events) do
-         if func(trig, var, val) then return end
-      end
-      oldEvent(trig, var, op, val)
-   end
-end
---[[
-===========================================================================
- Lua Version
- 
- Damage Engine lets you detect, amplify, block or nullify damage. It even
- lets you detect if the damage was physical or from a spell. Just reference
- DamageEventAmount/Source/Target or the boolean IsDamageSpell, to get the
- necessary damage event data.
-   
- - Detect damage (after it was dealt to the unit): use the event "DamageEvent Equal to 1.00"
- - To change damage before it is dealt: use the event "DamageModifierEvent Equal to 1.00"
- - Detect spell damage: use the condition "IsDamageSpell Equal to True"
- - Detect zero-damage: use the event "DamageEvent Equal to 2.00"
-   
- You can specify the DamageEventType before dealing triggered damage:
- - Set NextDamageType = DamageTypeWhatever
- - Unit - Cause...
-   
- You can modify the DamageEventAmount and the DamageEventType from a "DamageModifierEvent Equal to 1.00" trigger.
- - If the amount is modified to negative, it will count as a heal.
- - If the amount is set to 0, no damage will be dealt.
-   
- If you need to reference the original in-game damage, use the variable "DamageEventPrevAmt".
- 
-GUI Vars:
-   
-   Retained from 3.8 and prior:
-   ----------------------------
-   unit           udg_DamageEventSource
-   unit           udg_DamageEventTarget
-   unit           udg_EnhancedDamageTarget
-   group          udg_DamageEventAOEGroup
-   integer        udg_DamageEventAOE
-   integer        udg_DamageEventLevel
-   real           udg_DamageModifierEvent
-   real           udg_DamageEvent
-   real           udg_AfterDamageEvent
-   real           udg_DamageEventAmount
-   real           udg_DamageEventPrevAmt
-   real           udg_AOEDamageEvent
-   boolean        udg_DamageEventOverride
-   boolean        udg_NextDamageType
-   boolean        udg_DamageEventType
-   boolean        udg_IsDamageSpell
-   
-   Added in 5.0:
-   boolean        udg_IsDamageMelee    
-   boolean        udg_IsDamageRanged   
-   unit           udg_AOEDamageSource   
-   real           udg_LethalDamageEvent 
-   real           udg_LethalDamageHP   
-   real           udg_DamageScalingWC3
-   integer        udg_DamageEventAttackT
-   integer        udg_DamageEventDamageT
-   integer        udg_DamageEventWeaponT
-   
-   Added in 5.1:
-   boolean        udg_IsDamageCode   
-   
-   Added in 5.2:
-   integer        udg_DamageEventArmorT  
-   integer        udg_DamageEventDefenseT
-   
-   Addded in 5.3:
-   real           DamageEventArmorPierced
-   real           udg_DamageScalingUser  
-   
-   Added in 5.4.2 to allow GUI users to re-issue the exact same attack and damage type at the attacker.
-   attacktype array udg_CONVERTED_ATTACK_TYPE
-   damagetype array udg_CONVERTED_DAMAGE_TYPE
-   
-=============================================================================
---]]
- 
-do
-   local alarm       = CreateTimer()
-   local alarmSet    = false
-   
-   --Values to track the original pre-spirit Link/defensive damage values
-   local canKick     = true
-   local totem       = false
-   local armorType   = 0
-   local defenseType = 0
-   local prev        = {}
-   
-   --Stuff to track recursive UnitDamageTarget calls.
-   local eventsRun   = false
-   local kicking     = false
-   local stack       = {}
-   
-   --Added in 5.4 to silently eliminate infinite recursion.
-   local userTrigs   = 9
-   local eventTrig   = 0
-   local nextTrig    = {}
-   local userTrig    = {}
-   local trigFrozen  = {}
-   
-   --Added/re-tooled in 5.4.1 to allow forced recursion (for advanced users only).
-   local levelsDeep     = {}   --How deep the user recursion currently is.
-   local LIMBO          = 16   --Recursion will never go deeper than LIMBO.
-   DamageEngine_inception= false --You must set DamageEngine_inception = true before dealing damage to utlize this.
-                          --When true, it allows your trigger to potentially go recursive up to LIMBO.
-   local dreaming       = false
-   local fischerMorrow  = {} --track targets of recursion
-   local inceptionTrig  = {}   --Added in 5.4.2 to simplify the inception variable for very complex DamageEvent trigger.
-   local proclusGlobal  = {} --track sources of recursion
-   local sleepLevel     = 0
-   
-   --Improves readability in the code to have these as named constants.
-   local event = {
-      mod      = 1,
-      shield   = 4,
-      damage   = 5,
-      zero     = 6,
-      after    = 7,
-      lethal   = 8,
-      aoe      = 9
-   }
-   
-   local function runTrigs(i)
-      local cat = i
-      dreaming = true
-      --print("Running " .. cat)
-      while (true) do
-         i = nextTrig[i]
-         if (i == 0)
-           or (cat == event.mod and (udg_DamageEventOverride or udg_DamageEventType*udg_DamageEventType == 4))
-           or (cat == event.shield and udg_DamageEventAmount <= 0.00)
-           or (cat == event.lethal and udg_LethalDamageHP > 0.405) then
-            break
-         end
-         if not trigFrozen[i] then
-            eventTrig = i
-            if RunTrigger then --Added 10 July 2019 to enable FastTriggers mode.
-               RunTrigger(userTrig[i])
-            elseif IsTriggerEnabled(userTrig[i])
-              and TriggerEvaluate(userTrig[i]) then
-               TriggerExecute(userTrig[i])
-            end
-            --print("Ran " .. i)
-         end
-      end
-      --print("Ran")
-      dreaming = false
-   end
-   
-   local function onAOEEnd()
-      if udg_DamageEventAOE > 1 then
-         runTrigs(event.aoe)
-         udg_DamageEventAOE   = 1
-      end
-      udg_DamageEventLevel    = 1
-      udg_EnhancedDamageTarget= nil
-      udg_AOEDamageSource     = nil
-      GroupClear(udg_DamageEventAOEGroup)
-   end
-   
-   local function afterDamage()
-      if udg_DamageEventPrevAmt ~= 0.00 and udg_DamageEventDamageT ~= udg_DAMAGE_TYPE_UNKNOWN then
-         runTrigs(event.after)
-      end
-   end
-   
-   local oldUDT = UnitDamageTarget
-   
-   local function finish()
-      if eventsRun then
-         --print "events ran"
-         eventsRun = false
-         afterDamage()
-      end
-      if canKick and not kicking then
-         local n = #stack
-         if n > 0 then
-            kicking = true
-            --print("Clearing Recursion: " .. n)
-            local i = 0
-            local open
-            repeat
-               sleepLevel = sleepLevel + 1
-               repeat
-                  i = i + 1 --Need to loop bottom to top to make sure damage order is preserved.
-                  open = stack[i]
-                  udg_NextDamageType = open.type
-                  --print("Stacking on " .. open.amount)
-                  oldUDT(open.source, open.target, open.amount, true, false, open.attack, open.damage, open.weapon)
-                  afterDamage()
-               until (i == n)
-               --print("Exit at: " .. i)
-               n = #stack
-            until (i == n)
-            --print("Terminate at: " .. i)
-            sleepLevel = 0
-            repeat
-               open = stack[i].trig
-               stack[i] = nil
-               proclusGlobal[open] = nil
-               fischerMorrow[open] = nil
-               trigFrozen[open] = false -- Only re-enable recursive triggers AFTER all damage is dealt.
-               levelsDeep[open] = 0 --Reset this stuff if the user tried some nonsense
-               --print("unfreezing " .. open)
-               i = i - 1
-            until (i == 0)
-            kicking = false
-         end
-      end
-   end
-   
-   function UnitDamageTarget(src, tgt, amt, a, r, at, dt, wt)
-      if udg_NextDamageType == 0 then
-         udg_NextDamageType = udg_DamageTypeCode
-      end
-      local b = false
-      if dreaming then
-         if amt ~= 0.00 then
-            -- Store triggered, recursive damage into a stack.
-            -- This damage will be fired after the current damage instance has wrapped up its events.
-            stack[#stack + 1] = {
-               type     = udg_NextDamageType,
-               source   = src,
-               target   = tgt,
-               amount   = amt,
-               attack   = at,
-               damage   = dt,
-               weapon   = wt,
-               trig     = eventTrig
-            }
-            --print("increasing damage stack: " .. #stack)
-            
-            -- Next block added in 5.4.1 to allow *some* control over whether recursion should kick
-            -- in. Also it's important to track whether the source and target were both involved at
-            -- some earlier point, so this is a more accurate and lenient method than before.
-            DamageEngine_inception = DamageEngine_inception or inceptionTrig[eventTrig]
-            
-            local sg = proclusGlobal[eventTrig]
-            if not sg then
-               sg = {}
-               proclusGlobal[eventTrig] = sg
-            end
-            sg[udg_DamageEventSource] = true
-            
-            local tg = fischerMorrow[eventTrig]
-            if not tg then
-               tg = {}
-               fischerMorrow[eventTrig] = tg
-            end
-            tg[udg_DamageEventTarget] = true
-            
-            if kicking and sg[src] and tg[tgt] then
-               if DamageEngine_inception and not trigFrozen[eventTrig] then
-                  inceptionTrig[eventTrig] = true
-                  if levelsDeep[eventTrig] < sleepLevel then
-                     levelsDeep[eventTrig] = levelsDeep[eventTrig] + 1
-                     if levelsDeep[eventTrig] >= LIMBO then
-                        --print("freezing inception trig: " .. eventTrig)
-                        trigFrozen[eventTrig] = true
-                     end
-                  end
-               else
-                  --print("freezing standard trig: " .. eventTrig)
-                  trigFrozen[eventTrig] = true
-               end
-            end
-         end
-      else
-         b = oldUDT(src, tgt, amt, a, r, at, dt, wt)
-      end
-      --print("setting inception to false")
-      DamageEngine_inception = false
-      udg_NextDamageType = 0
-      if b and not dreaming then
-         finish() -- Wrap up the outstanding damage instance right away.
-      end
-      return b
-   end
-   
-   local function resetArmor()
-      if udg_DamageEventArmorPierced ~= 0.00 then
-         BlzSetUnitArmor(udg_DamageEventTarget, BlzGetUnitArmor(udg_DamageEventTarget) + udg_DamageEventArmorPierced)
-      end
-      if armorType ~= udg_DamageEventArmorT then
-         BlzSetUnitIntegerField(udg_DamageEventTarget, UNIT_IF_ARMOR_TYPE, armorType) --revert changes made to the damage instance
-      end
-      if defenseType ~= udg_DamageEventDefenseT then
-         BlzSetUnitIntegerField(udg_DamageEventTarget, UNIT_IF_DEFENSE_TYPE, defenseType)
-      end
-   end
-   
-   local function failsafeClear()
-      --print("Damage from " .. GetUnitName(udg_DamageEventSource) .. " to " .. GetUnitName(udg_DamageEventTarget) .. " has been messing up Damage Engine.")
-      --print(udg_DamageEventAmount .. " " .. " " .. udg_DamageEventPrevAmt .. " " .. udg_AttackTypeDebugStr[udg_DamageEventAttackT] .. " " .. udg_DamageTypeDebugStr[udg_DamageEventDamageT])
-      resetArmor()
-      canKick = true
-      totem = false
-      udg_DamageEventAmount = 0.00
-      udg_DamageScalingWC3  = 0.00
-      if udg_DamageEventDamageT ~= udg_DAMAGE_TYPE_UNKNOWN then
-         runTrigs(event.damage) --Run the normal on-damage event based on this failure.
-         eventsRun = true --Run the normal after-damage event based on this failure.
-      end
-      finish()
-   end
-   
-   local function calibrateMR()
-      udg_IsDamageMelee         = false
-      udg_IsDamageRanged        = false
-      udg_IsDamageSpell         = udg_DamageEventAttackT == 0 --In Patch 1.31, one can just check the attack type to find out if it's a spell.
-      if udg_DamageEventDamageT == udg_DAMAGE_TYPE_NORMAL and not udg_IsDamageSpell then --This damage type is the only one that can get reduced by armor.
-         udg_IsDamageMelee      = IsUnitType(udg_DamageEventSource, UNIT_TYPE_MELEE_ATTACKER)
-         udg_IsDamageRanged     = IsUnitType(udg_DamageEventSource, UNIT_TYPE_RANGED_ATTACKER)
-         if udg_IsDamageMelee and udg_IsDamageRanged then
-            udg_IsDamageMelee   = udg_DamageEventWeaponT > 0-- Melee units play a sound when damaging
-            udg_IsDamageRanged  = not udg_IsDamageMelee    -- In the case where a unit is both ranged and melee, the ranged attack plays no sound.
-         end                                       -- The Huntress has a melee sound for her ranged projectile, however it is only an issue
-      end                                          --if she also had a melee attack, because by default she is only UNIT_TYPE_RANGED_ATTACKER.
-   end
-   
-   local t1 = CreateTrigger()
-   TriggerRegisterAnyUnitEventBJ(t1, EVENT_PLAYER_UNIT_DAMAGING)
-   TriggerAddCondition(t1, Filter(function()
-      local src = GetEventDamageSource()
-      local tgt = BlzGetEventDamageTarget()
-      local amt = GetEventDamage()
-      local at = BlzGetEventAttackType()
-      local dt = BlzGetEventDamageType()
-      local wt = BlzGetEventWeaponType()
-      
-      --print "First damage event running"
-      
-      if not kicking then
-         if alarmSet then
-            if totem then
-               if dt ~= DAMAGE_TYPE_SPIRIT_LINK and dt ~= DAMAGE_TYPE_DEFENSIVE and dt ~= DAMAGE_TYPE_PLANT then
-                  -- if 'totem' is still set and it's not due to spirit link distribution or defense retaliation,
-                  -- the next function must be called as a debug. This reverts an issue I created in patch 5.1.3.
-                  failsafeClear()
-               else
-                  totem       = false
-                  canKick     = false
-                  prev.type   = udg_DamageEventType      -- also store the damage type.
-                  prev.amount = udg_DamageEventAmount
-                  prev.preAmt = udg_DamageEventPrevAmt   -- Store the actual pre-armor value.
-                  prev.pierce = udg_DamageEventArmorPierced
-                  prev.armor  = udg_DamageEventArmorT
-                  prev.preArm = armorType
-                  prev.defense= udg_DamageEventDefenseT
-                  prev.preDef = defenseType
-                  prev.code   = udg_IsDamageCode        -- store this as well.
-               end
-            end
-            if src ~= udg_AOEDamageSource then -- Source has damaged more than once
-               onAOEEnd() -- New damage source - unflag everything
-               udg_AOEDamageSource = src
-            elseif tgt == udg_EnhancedDamageTarget then
-               udg_DamageEventLevel= udg_DamageEventLevel + 1  -- The number of times the same unit was hit.
-            elseif not IsUnitInGroup(tgt, udg_DamageEventAOEGroup) then
-               udg_DamageEventAOE  = udg_DamageEventAOE + 1   -- Multiple targets hit by this source - flag as AOE
-            end
-         else
-            TimerStart(alarm, 0.00, false, function()
-               alarmSet = false --The timer has expired. Flag off to allow it to be restarted when needed.
-               finish() --Wrap up any outstanding damage instance
-               onAOEEnd() --Reset things so they don't perpetuate for AoE/Level target detection
-            end)
-            alarmSet                = true
-            udg_AOEDamageSource     = src
-            udg_EnhancedDamageTarget= tgt
-         end
-         GroupAddUnit(udg_DamageEventAOEGroup, tgt)
-      end
-      udg_DamageEventType           = udg_NextDamageType
-      udg_IsDamageCode              = udg_NextDamageType ~= 0
-      udg_DamageEventOverride       = dt == nil -- Got rid of NextDamageOverride in 5.1 for simplicity
-      udg_DamageEventPrevAmt        = amt
-      udg_DamageEventSource         = src
-      udg_DamageEventTarget         = tgt
-      udg_DamageEventAmount         = amt
-      udg_DamageEventAttackT        = GetHandleId(at)
-      udg_DamageEventDamageT        = GetHandleId(dt)
-      udg_DamageEventWeaponT        = GetHandleId(wt)
-      
-      calibrateMR() -- Set Melee and Ranged settings.
-      
-      udg_DamageEventArmorT         = BlzGetUnitIntegerField(udg_DamageEventTarget, UNIT_IF_ARMOR_TYPE) -- Introduced in Damage Engine 5.2.0.0
-      udg_DamageEventDefenseT       = BlzGetUnitIntegerField(udg_DamageEventTarget, UNIT_IF_DEFENSE_TYPE)
-      armorType                     = udg_DamageEventArmorT
-      defenseType                   = udg_DamageEventDefenseT
-      udg_DamageEventArmorPierced   = 0.00
-      udg_DamageScalingUser         = 1.00
-      udg_DamageScalingWC3          = 1.00
-      
-      if amt ~= 0.00 then
-         if not udg_DamageEventOverride then
-            runTrigs(event.mod)
-       
-            -- All events have run and the pre-damage amount is finalized.
-            BlzSetEventAttackType(ConvertAttackType(udg_DamageEventAttackT))
-            BlzSetEventDamageType(ConvertDamageType(udg_DamageEventDamageT))
-            BlzSetEventWeaponType(ConvertWeaponType(udg_DamageEventWeaponT))
-            if udg_DamageEventArmorPierced ~= 0.00 then
-               BlzSetUnitArmor(udg_DamageEventTarget, BlzGetUnitArmor(udg_DamageEventTarget) - udg_DamageEventArmorPierced)
-            end
-            if armorType ~= udg_DamageEventArmorT then
-               BlzSetUnitIntegerField(udg_DamageEventTarget, UNIT_IF_ARMOR_TYPE, udg_DamageEventArmorT) -- Introduced in Damage Engine 5.2.0.0
-            end
-            if defenseType ~= udg_DamageEventDefenseT then
-               BlzSetUnitIntegerField(udg_DamageEventTarget, UNIT_IF_DEFENSE_TYPE, udg_DamageEventDefenseT) -- Introduced in Damage Engine 5.2.0.0
-            end
-            BlzSetEventDamage(udg_DamageEventAmount)
-         end
-         totem = true
-         -- print("Ready to deal " .. udg_DamageEventAmount)
-      else
-         runTrigs(event.zero)
-         canKick = true
-         finish()
-      end
-      return false
-   end))
-   
-   local t2 = CreateTrigger()
-   TriggerRegisterAnyUnitEventBJ(t2, EVENT_PLAYER_UNIT_DAMAGED)
-   TriggerAddCondition(t2, Filter(function()
-      if udg_DamageEventPrevAmt == 0.00 then
-         return false
-      end
-      --print "Second event running"
-      if totem then
-         totem = false   --This should be the case in almost all circumstances
-      else
-         afterDamage() --Wrap up the outstanding damage instance
-         canKick                = true
-         --Unfortunately, Spirit Link and Thorns Aura/Spiked Carapace fire the DAMAGED event out of sequence with the DAMAGING event,
-         --so I have to re-generate a buncha stuff here.
-         udg_DamageEventSource      = GetEventDamageSource()
-         udg_DamageEventTarget      = GetTriggerUnit()
-         udg_DamageEventAmount      = prev.amount
-         udg_DamageEventPrevAmt     = prev.preAmt
-         udg_DamageEventAttackT     = GetHandleId(BlzGetEventAttackType())
-         udg_DamageEventDamageT     = GetHandleId(BlzGetEventDamageType())
-         udg_DamageEventWeaponT     = GetHandleId(BlzGetEventWeaponType())
-         udg_DamageEventType        = prev.type
-         udg_IsDamageCode           = prev.code
-         udg_DamageEventArmorT      = prev.armor
-         udg_DamageEventDefenseT    = prev.defense
-         udg_DamageEventArmorPierced= prev.pierce
-         armorType                  = prev.preArm
-         defenseType                = prev.preDef
-         calibrateMR() --Apply melee/ranged settings once again.
-      end
-      resetArmor()
-      local r = GetEventDamage()
-      if udg_DamageEventAmount ~= 0.00 and r ~= 0.00 then
-         udg_DamageScalingWC3 = r/udg_DamageEventAmount
-      else
-         if udg_DamageEventAmount > 0.00 then
-            udg_DamageScalingWC3 = 0.00
-         else
-            udg_DamageScalingWC3 = 1.00
-         end
-         udg_DamageScalingUser = udg_DamageEventAmount/udg_DamageEventPrevAmt
-      end
-      udg_DamageEventAmount = udg_DamageEventAmount*udg_DamageScalingWC3
-      
-      if udg_DamageEventAmount > 0.00 then
-         --This event is used for custom shields which have a limited hit point value
-         --The shield here kicks in after armor, so it acts like extra hit points.
-         runTrigs(event.shield)
-         udg_LethalDamageHP = GetWidgetLife(udg_DamageEventTarget) - udg_DamageEventAmount
-         if udg_LethalDamageHP <= 0.405 then
-            runTrigs(event.lethal) -- added 10 May 2019 to detect and potentially prevent lethal damage. Instead of
-            -- modifying the damage, you need to modify LethalDamageHP instead (the final HP of the unit).
-            
-            udg_DamageEventAmount = GetWidgetLife(udg_DamageEventTarget) - udg_LethalDamageHP
-            if udg_DamageEventType < 0 and udg_LethalDamageHP <= 0.405 then
-               SetUnitExploded(udg_DamageEventTarget, true)   --Explosive damage types should blow up the target.
-            end
-         end
-         udg_DamageScalingUser = udg_DamageEventAmount/udg_DamageEventPrevAmt/udg_DamageScalingWC3
-      end
-      BlzSetEventDamage(udg_DamageEventAmount)   --Apply the final damage amount.
-      if udg_DamageEventDamageT ~= udg_DAMAGE_TYPE_UNKNOWN then
-         runTrigs(event.damage)
-      end
-      eventsRun = true
-      --print(canKick)
-      if udg_DamageEventAmount == 0.00 then
-         finish()
-      end
-      return false
-   end))
-   
-   onGlobalInit(function()
-      local i
-      for i = 0, 6 do udg_CONVERTED_ATTACK_TYPE[i] = ConvertAttackType(i) end
-      for i = 0, 26 do udg_CONVERTED_DAMAGE_TYPE[i] = ConvertDamageType(i) end
-      
-      udg_AttackTypeDebugStr[0] = "SPELLS"   -- ATTACK_TYPE_NORMAL in JASS
-      udg_AttackTypeDebugStr[1] = "NORMAL"   -- ATTACK_TYPE_MELEE in JASS
-      udg_AttackTypeDebugStr[2] = "PIERCE"
-      udg_AttackTypeDebugStr[3] = "SIEGE"
-      udg_AttackTypeDebugStr[4] = "MAGIC"
-      udg_AttackTypeDebugStr[5] = "CHAOS"
-      udg_AttackTypeDebugStr[6] = "HERO"
-      
-      udg_DamageTypeDebugStr[0]  = "UNKNOWN"
-      udg_DamageTypeDebugStr[4]  = "NORMAL"
-      udg_DamageTypeDebugStr[5]  = "ENHANCED"
-      udg_DamageTypeDebugStr[8]  = "FIRE"
-      udg_DamageTypeDebugStr[9]  = "COLD"
-      udg_DamageTypeDebugStr[10] = "LIGHTNING"
-      udg_DamageTypeDebugStr[11] = "POISON"
-      udg_DamageTypeDebugStr[12] = "DISEASE"
-      udg_DamageTypeDebugStr[13] = "DIVINE"
-      udg_DamageTypeDebugStr[14] = "MAGIC"
-      udg_DamageTypeDebugStr[15] = "SONIC"
-      udg_DamageTypeDebugStr[16] = "ACID"
-      udg_DamageTypeDebugStr[17] = "FORCE"
-      udg_DamageTypeDebugStr[18] = "DEATH"
-      udg_DamageTypeDebugStr[19] = "MIND"
-      udg_DamageTypeDebugStr[20] = "PLANT"
-      udg_DamageTypeDebugStr[21] = "DEFENSIVE"
-      udg_DamageTypeDebugStr[22] = "DEMOLITION"
-      udg_DamageTypeDebugStr[23] = "SLOW_POISON"
-      udg_DamageTypeDebugStr[24] = "SPIRIT_LINK"
-      udg_DamageTypeDebugStr[25] = "SHADOW_STRIKE"
-      udg_DamageTypeDebugStr[26] = "UNIVERSAL"
-      
-      udg_WeaponTypeDebugStr[0]  = "NONE"    -- WEAPON_TYPE_WHOKNOWS in JASS
-      udg_WeaponTypeDebugStr[1]  = "METAL_LIGHT_CHOP"
-      udg_WeaponTypeDebugStr[2]  = "METAL_MEDIUM_CHOP"
-      udg_WeaponTypeDebugStr[3]  = "METAL_HEAVY_CHOP"
-      udg_WeaponTypeDebugStr[4]  = "METAL_LIGHT_SLICE"
-      udg_WeaponTypeDebugStr[5]  = "METAL_MEDIUM_SLICE"
-      udg_WeaponTypeDebugStr[6]  = "METAL_HEAVY_SLICE"
-      udg_WeaponTypeDebugStr[7]  = "METAL_MEDIUM_BASH"
-      udg_WeaponTypeDebugStr[8]  = "METAL_HEAVY_BASH"
-      udg_WeaponTypeDebugStr[9]  = "METAL_MEDIUM_STAB"
-      udg_WeaponTypeDebugStr[10] = "METAL_HEAVY_STAB"
-      udg_WeaponTypeDebugStr[11] = "WOOD_LIGHT_SLICE"
-      udg_WeaponTypeDebugStr[12] = "WOOD_MEDIUM_SLICE"
-      udg_WeaponTypeDebugStr[13] = "WOOD_HEAVY_SLICE"
-      udg_WeaponTypeDebugStr[14] = "WOOD_LIGHT_BASH"
-      udg_WeaponTypeDebugStr[15] = "WOOD_MEDIUM_BASH"
-      udg_WeaponTypeDebugStr[16] = "WOOD_HEAVY_BASH"
-      udg_WeaponTypeDebugStr[17] = "WOOD_LIGHT_STAB"
-      udg_WeaponTypeDebugStr[18] = "WOOD_MEDIUM_STAB"
-      udg_WeaponTypeDebugStr[19] = "CLAW_LIGHT_SLICE"
-      udg_WeaponTypeDebugStr[20] = "CLAW_MEDIUM_SLICE"
-      udg_WeaponTypeDebugStr[21] = "CLAW_HEAVY_SLICE"
-      udg_WeaponTypeDebugStr[22] = "AXE_MEDIUM_CHOP"
-      udg_WeaponTypeDebugStr[23] = "ROCK_HEAVY_BASH"
-      
-      udg_DefenseTypeDebugStr[0] = "LIGHT"
-      udg_DefenseTypeDebugStr[1] = "MEDIUM"
-      udg_DefenseTypeDebugStr[2] = "HEAVY"
-      udg_DefenseTypeDebugStr[3] = "FORTIFIED"
-      udg_DefenseTypeDebugStr[4] = "NORMAL"
-      udg_DefenseTypeDebugStr[5] = "HERO"
-      udg_DefenseTypeDebugStr[6] = "DIVINE"
-      udg_DefenseTypeDebugStr[7] = "UNARMORED"
-      
-      udg_ArmorTypeDebugStr[0] = "NONE"
-      udg_ArmorTypeDebugStr[1] = "FLESH"
-      udg_ArmorTypeDebugStr[2] = "METAL"
-      udg_ArmorTypeDebugStr[3] = "WOOD"
-      udg_ArmorTypeDebugStr[4] = "ETHEREAL"
-      udg_ArmorTypeDebugStr[5] = "STONE"
-   end)
-   
-   function DamageEngine_SetupEvent(whichTrig, var, val)
-      --print("Setup event: " .. var)
-      local mx = 1
-      local off = 0
-      local ex = 0
-      if var == "udg_DamageModifierEvent" then --event.mod 1-4 -> Events 1-4
-         if (val < 3) then 
-            ex = val + 1
-         end
-         mx = 4
-      elseif var == "udg_DamageEvent" then --event.damage 1,2 -> Events 5,6
-         mx = 2
-         off = 4
-      elseif var == "udg_AfterDamageEvent" then --event.after -> Event 7
-         off = 6
-      elseif var == "udg_LethalDamageEvent" then --event.lethal -> Event 8
-         off = 7
-      elseif var == "udg_AOEDamageEvent" then --event.aoe -> Event 9
-         off = 8
-      else
-         return false
-      end
-      local i
-      if userTrigs == 9 then
-         nextTrig[1] = 2
-         nextTrig[2] = 3
-         trigFrozen[2] = true
-         trigFrozen[3] = true
-         for i = 3, 9 do nextTrig[i] = 0 end
-      end
-      i = math.max(math.min(val, mx), 1) + off
-      --print("Root index: " .. i .. " nextTrig: " .. nextTrig[i] .. " exit: " .. ex)
-      repeat
-         val = i
-         i = nextTrig[i]
-      until (i == ex)
-      userTrigs = userTrigs + 1   --User list runs from index 10 and up
-      nextTrig[val] = userTrigs
-      nextTrig[userTrigs] = ex
-      userTrig[userTrigs] = whichTrig
-      levelsDeep[userTrigs] = 0
-      trigFrozen[userTrigs] = false
-      inceptionTrig[userTrigs] = false
-      --print("Registered " .. userTrigs .. " to " .. val)
-      return true
-   end
-   
-   onRegisterVar(function(trig, var, val) 
-      DamageEngine_SetupEvent(trig, var, math.floor(val))
-   end)
 end
 function InitSounds()
 gg_snd_Wave_Air = CreateSound("Sound\\Music\\mp3Music\\Tension.mp3", false, false, false, 10, 10, "DefaultEAXON")
@@ -2323,7 +3608,7 @@ gg_rct_Next_Wave_3 = Rect(-1568.0, 6880.0, -1504.0, 6944.0)
 gg_rct_Next_Wave_4 = Rect(-1312.0, 6880.0, -1248.0, 6944.0)
 end
 
-function Trig_Damage_Engine_Config_Actions()
+function Trig_Damage_Engine_Config_Copy_Actions()
 udg_DamageTypePureExplosive = -2
 udg_DamageTypeExplosive = -1
 udg_DamageTypeCode = 1
@@ -2332,80 +3617,11 @@ udg_DamageTypeHeal = 3
 udg_DamageTypeBlocked = 4
 udg_DamageTypeReduced = 5
 udg_DamageTypeCriticalStrike = 6
-udg_DamageEventAOE = 1
-udg_DamageEventLevel = 1
-udg_ATTACK_TYPE_SPELLS = 0
-udg_ATTACK_TYPE_NORMAL = 1
-udg_ATTACK_TYPE_PIERCE = 2
-udg_ATTACK_TYPE_SIEGE = 3
-udg_ATTACK_TYPE_MAGIC = 4
-udg_ATTACK_TYPE_CHAOS = 5
-udg_ATTACK_TYPE_HERO = 6
-udg_DAMAGE_TYPE_UNKNOWN = 0
-udg_DAMAGE_TYPE_NORMAL = 4
-udg_DAMAGE_TYPE_ENHANCED = 5
-udg_DAMAGE_TYPE_FIRE = 8
-udg_DAMAGE_TYPE_COLD = 9
-udg_DAMAGE_TYPE_LIGHTNING = 10
-udg_DAMAGE_TYPE_POISON = 11
-udg_DAMAGE_TYPE_DISEASE = 12
-udg_DAMAGE_TYPE_DIVINE = 13
-udg_DAMAGE_TYPE_MAGIC = 14
-udg_DAMAGE_TYPE_SONIC = 15
-udg_DAMAGE_TYPE_ACID = 16
-udg_DAMAGE_TYPE_FORCE = 17
-udg_DAMAGE_TYPE_DEATH = 18
-udg_DAMAGE_TYPE_MIND = 19
-udg_DAMAGE_TYPE_PLANT = 20
-udg_DAMAGE_TYPE_DEFENSIVE = 21
-udg_DAMAGE_TYPE_DEMOLITION = 22
-udg_DAMAGE_TYPE_SLOW_POISON = 23
-udg_DAMAGE_TYPE_SPIRIT_LINK = 24
-udg_DAMAGE_TYPE_SHADOW_STRIKE = 25
-udg_DAMAGE_TYPE_UNIVERSAL = 26
-udg_WEAPON_TYPE_NONE = 0
-udg_WEAPON_TYPE_ML_CHOP = 1
-udg_WEAPON_TYPE_MM_CHOP = 2
-udg_WEAPON_TYPE_MH_CHOP = 3
-udg_WEAPON_TYPE_ML_SLICE = 4
-udg_WEAPON_TYPE_MM_SLICE = 5
-udg_WEAPON_TYPE_MH_SLICE = 6
-udg_WEAPON_TYPE_MM_BASH = 7
-udg_WEAPON_TYPE_MH_BASH = 8
-udg_WEAPON_TYPE_MM_STAB = 9
-udg_WEAPON_TYPE_MH_STAB = 10
-udg_WEAPON_TYPE_WL_SLICE = 11
-udg_WEAPON_TYPE_WM_SLICE = 12
-udg_WEAPON_TYPE_WH_SLICE = 13
-udg_WEAPON_TYPE_WL_BASH = 14
-udg_WEAPON_TYPE_WM_BASH = 15
-udg_WEAPON_TYPE_WH_BASH = 16
-udg_WEAPON_TYPE_WL_STAB = 17
-udg_WEAPON_TYPE_WM_STAB = 18
-udg_WEAPON_TYPE_CL_SLICE = 19
-udg_WEAPON_TYPE_CM_SLICE = 20
-udg_WEAPON_TYPE_CH_SLICE = 21
-udg_WEAPON_TYPE_AM_CHOP = 22
-udg_WEAPON_TYPE_RH_BASH = 23
-udg_ARMOR_TYPE_NONE = 0
-udg_ARMOR_TYPE_FLESH = 1
-udg_ARMOR_TYPE_METAL = 2
-udg_ARMOR_TYPE_WOOD = 3
-udg_ARMOR_TYPE_ETHEREAL = 4
-udg_ARMOR_TYPE_STONE = 5
-udg_DEFENSE_TYPE_LIGHT = 0
-udg_DEFENSE_TYPE_MEDIUM = 1
-udg_DEFENSE_TYPE_HEAVY = 2
-udg_DEFENSE_TYPE_FORTIFIED = 3
-udg_DEFENSE_TYPE_NORMAL = 4
-udg_DEFENSE_TYPE_HERO = 5
-udg_DEFENSE_TYPE_DIVINE = 6
-udg_DEFENSE_TYPE_UNARMORED = 7
 end
 
-function InitTrig_Damage_Engine_Config()
-gg_trg_Damage_Engine_Config = CreateTrigger()
-TriggerAddAction(gg_trg_Damage_Engine_Config, Trig_Damage_Engine_Config_Actions)
+function InitTrig_Damage_Engine_Config_Copy()
+gg_trg_Damage_Engine_Config_Copy = CreateTrigger()
+TriggerAddAction(gg_trg_Damage_Engine_Config_Copy, Trig_Damage_Engine_Config_Copy_Actions)
 end
 
 function Trig_Kick_Blue_Func004002()
@@ -16237,7 +17453,7 @@ TriggerAddAction(gg_trg_Critical_Aura, Trig_Critical_Aura_Actions)
 end
 
 function InitCustomTriggers()
-InitTrig_Damage_Engine_Config()
+InitTrig_Damage_Engine_Config_Copy()
 InitTrig_Kick_Blue()
 InitTrig_Kick_Teal()
 InitTrig_Kick_Purple()
@@ -16432,7 +17648,7 @@ InitTrig_Critical_Aura()
 end
 
 function RunInitializationTriggers()
-ConditionalTriggerExecute(gg_trg_Damage_Engine_Config)
+ConditionalTriggerExecute(gg_trg_Damage_Engine_Config_Copy)
 ConditionalTriggerExecute(gg_trg_Set_Variables)
 ConditionalTriggerExecute(gg_trg_Quest)
 end

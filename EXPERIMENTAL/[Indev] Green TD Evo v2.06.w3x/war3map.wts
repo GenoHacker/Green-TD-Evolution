@@ -581,6 +581,18 @@ STRING 92
 |cff0080FFGame Ends In: |r
 }
 
+STRING 93
+// Units: h00V (Flak Tower 4), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
+|c0000ff00Damage:|r |c0077ff772000 (both)
+|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
+|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (both)|r
+
+}
+
 STRING 94
 // Abilities: A00U (Swap Towers), Name (Name)
 {
@@ -4340,6 +4352,18 @@ STRING 676
 Siege Tower 5: Skeletal Grunt
 }
 
+STRING 677
+// Units: h00J (Flak Tower 5), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
+|c0000ff00Damage:|r |c0077ff773500 (both)
+|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
+|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (both)|r
+
+}
+
 STRING 678
 // Units: n003 (Air Tower 4: Phoenix), Name (Name)
 {
@@ -5598,6 +5622,18 @@ STRING 896
 |c0000ff00Cooldown:|r |c0077ff774 Seconds
 |c0000ff00Slow Duration:|r |c0077ff774 Seconds
 |c0000ff00Slow Amount:|r |c0077ff7720%
+}
+
+STRING 897
+// Units: h00T (Flak Tower 6), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
+|c0000ff00Damage:|r |c0077ff775500 (both)
+|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
+|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (both)|r
+
 }
 
 STRING 898
@@ -15469,19 +15505,6 @@ STRING 2339
 |c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
 }
 
-STRING 2340
-// Units: h00V (Flak Tower 4), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff771.25 (ground)
-|c0000ff00Cooldown:|r |c0077ff770.50 (air)
-|c0000ff00Damage:|r |c0077ff772000 (both)
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200 (both)|r
-
-}
-
 STRING 2341
 // Units: h00V (Flak Tower 4), Tip (Tooltip - Basic)
 {
@@ -15742,36 +15765,10 @@ STRING 2380
 Flak Tower 5
 }
 
-STRING 2381
-// Units: h00J (Flak Tower 5), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff771.25 (ground)
-|c0000ff00Cooldown:|r |c0077ff770.50 (air)
-|c0000ff00Damage:|r |c0077ff773500 (both)
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (both)|r
-
-}
-
 STRING 2382
 // Units: h00T (Flak Tower 6), Name (Name)
 {
 Flak Tower 6
-}
-
-STRING 2383
-// Units: h00T (Flak Tower 6), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff771.25 (ground)
-|c0000ff00Cooldown:|r |c0077ff770.50 (air)
-|c0000ff00Damage:|r |c0077ff775500 (both)
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (both)|r
-
 }
 
 STRING 2384
@@ -15786,19 +15783,6 @@ STRING 2385
 Flak Tower 7
 }
 
-STRING 2386
-// Units: h00Y (Flak Tower 7), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff771.25 (ground)
-|c0000ff00Cooldown:|r |c0077ff770.50 (air)
-|c0000ff00Damage:|r |c0077ff778500 (both)
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (both)|r
-
-}
-
 STRING 2387
 // Units: h00Y (Flak Tower 7), Tip (Tooltip - Basic)
 {
@@ -15811,19 +15795,6 @@ STRING 2388
 Flak Tower 8
 }
 
-STRING 2389
-// Units: h00Z (Flak Tower 8), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff771.25 (ground)
-|c0000ff00Cooldown:|r |c0077ff770.50 (air)
-|c0000ff00Damage:|r |c0077ff7712250 (both)
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (both)|r
-
-}
-
 STRING 2390
 // Units: h00Z (Flak Tower 8), Tip (Tooltip - Basic)
 {
@@ -15834,19 +15805,6 @@ STRING 2391
 // Units: h010 (Flak Tower 9), Name (Name)
 {
 Flak Tower 9
-}
-
-STRING 2392
-// Units: h010 (Flak Tower 9), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff771.25 (ground)
-|c0000ff00Cooldown:|r |c0077ff770.50 (air)
-|c0000ff00Damage:|r |c0077ff7716500 (both)
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (both)|r
-
 }
 
 STRING 2393
@@ -16141,18 +16099,6 @@ STRING 2438
 // Abilities: A01D (Bash Tower 2), Name (Name)
 {
 Bash Tower 2
-}
-
-STRING 2439
-// Units: h011 (Mortar Team, Ultimate Flak Tower), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff771.25 (ground)
-|c0000ff00Cooldown:|r |c0077ff770.50 (air)
-|c0000ff00Damage:|r |c0077ff7721500 (both)
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (both)|r
 }
 
 STRING 2440
@@ -20729,7 +20675,7 @@ STRING 3085
 }
 
 STRING 3086
-// Abilities: A04O (Poison Bolt and Poison Cascade), EditorSuffix (Editor Suffix)
+// Abilities: A009 (Poison Bolt), EditorSuffix (Editor Suffix)
 {
 [Poison Trap]
 }
@@ -21006,6 +20952,18 @@ STRING 3119
 |c0000ff00Frost Blast and Ice Cage - Level 1
 }
 
+STRING 3120
+// Units: h00Y (Flak Tower 7), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
+|c0000ff00Damage:|r |c0077ff778500 (both)
+|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
+|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (both)|r
+
+}
+
 STRING 3121
 // Abilities: A04N (Frost Blast and Ice Cage), Tip (Tooltip - Normal)
 {
@@ -21180,6 +21138,30 @@ STRING 3140
 // Abilities: A04M (Ice Cage), EditorSuffix (Editor Suffix)
 {
 [Frost Trap]
+}
+
+STRING 3141
+// Units: h00Z (Flak Tower 8), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
+|c0000ff00Damage:|r |c0077ff7712250 (both)
+|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
+|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (both)|r
+
+}
+
+STRING 3142
+// Units: h010 (Flak Tower 9), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
+|c0000ff00Damage:|r |c0077ff7716500 (both)
+|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
+|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (both)|r
+
 }
 
 STRING 3143
@@ -21429,8 +21411,19 @@ STRING 3168
 Doom
 }
 
+STRING 3169
+// Units: h011 (Mortar Team, Ultimate Flak Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
+|c0000ff00Damage:|r |c0077ff7721500 (both)
+|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
+|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 350 (both)|r
+}
+
 STRING 3171
-// Abilities: A04P (Doom), EditorSuffix (Editor Suffix)
+// Abilities: A00B (Dark Bomb), EditorSuffix (Editor Suffix)
 {
 [Darkness Trap]
 }
@@ -25564,13 +25557,13 @@ STRING 9116
 }
 
 STRING 9120
-// Abilities: A00B (Dark Bomb), EditorSuffix (Editor Suffix)
+// Abilities: A04P (Doom), EditorSuffix (Editor Suffix)
 {
 [Darkness Trap]
 }
 
 STRING 9125
-// Abilities: A009 (Poison Bolt), EditorSuffix (Editor Suffix)
+// Abilities: A04O (Poison Bolt and Poison Cascade), EditorSuffix (Editor Suffix)
 {
 [Poison Trap]
 }
