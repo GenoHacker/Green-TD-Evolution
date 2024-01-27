@@ -2062,12 +2062,12 @@ local unitID
 local t
 local life
 
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1522.0, 2489.1, 44.793, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1356.0, 2584.0, 342.235, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1164.7, 2506.0, 170.096, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1166.5, 2193.6, 140.970, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1360.2, 2149.9, 304.298, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1528.7, 2197.2, 59.427, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1938.3, 2410.2, 44.793, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1817.8, 2511.6, 342.235, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1693.7, 2432.5, 170.096, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1692.1, 2286.5, 140.970, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1810.6, 2211.6, 304.298, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1919.4, 2299.9, 59.427, FourCC("h01H"))
 end
 
 function CreateNeutralHostile()
@@ -3288,6 +3288,49 @@ gg_trg_Ice_Cage_Autocast = CreateTrigger()
 TriggerRegisterVariableEvent(gg_trg_Ice_Cage_Autocast, "udg_DamageEvent", EQUAL, 1.00)
 TriggerAddCondition(gg_trg_Ice_Cage_Autocast, Condition(Trig_Ice_Cage_Autocast_Conditions))
 TriggerAddAction(gg_trg_Ice_Cage_Autocast, Trig_Ice_Cage_Autocast_Actions)
+end
+
+function Trig_Poison_Cascade_Autocast_Conditions()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A009"), udg_DamageEventSource) >= 1)) then
+return false
+end
+return true
+end
+
+function Trig_Poison_Cascade_Autocast_Func002Func002002002003()
+return (IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_DamageEventSource)) == true)
+end
+
+function Trig_Poison_Cascade_Autocast_Func002Func003A()
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
+UnitApplyTimedLifeBJ(5.50, FourCC("BTLF"), GetLastCreatedUnit())
+UnitAddAbilityBJ(FourCC("A009"), GetLastCreatedUnit())
+SetUnitAbilityLevelSwapped(FourCC("A009"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A009"), udg_DamageEventSource))
+IssueTargetOrderBJ(GetLastCreatedUnit(), "shadowstrike", GetEnumUnit())
+end
+
+function Trig_Poison_Cascade_Autocast_Func002C()
+if (not (udg_Integer_Array_PoisTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (5 + udg_Integer_TotalPoisonTrapsBuilt))) then
+return false
+end
+return true
+end
+
+function Trig_Poison_Cascade_Autocast_Actions()
+udg_Integer_Array_PoisTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomInt(1, 100)
+if (Trig_Poison_Cascade_Autocast_Func002C()) then
+udg_Integer_PoisonCascadeNum = GetRandomInt(1, 6)
+udg_UnitGroup_Array_PoisCasGroup[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomSubGroup(udg_Integer_PoisonCascadeNum, GetUnitsInRangeOfLocMatching(400.00, GetUnitLoc(udg_DamageEventSource), Condition(Trig_Poison_Cascade_Autocast_Func002Func002002002003)))
+ForGroupBJ(udg_UnitGroup_Array_PoisCasGroup[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))], Trig_Poison_Cascade_Autocast_Func002Func003A)
+else
+end
+end
+
+function InitTrig_Poison_Cascade_Autocast()
+gg_trg_Poison_Cascade_Autocast = CreateTrigger()
+TriggerRegisterVariableEvent(gg_trg_Poison_Cascade_Autocast, "udg_DamageEvent", EQUAL, 1.00)
+TriggerAddCondition(gg_trg_Poison_Cascade_Autocast, Condition(Trig_Poison_Cascade_Autocast_Conditions))
+TriggerAddAction(gg_trg_Poison_Cascade_Autocast, Trig_Poison_Cascade_Autocast_Actions)
 end
 
 function Trig_Poison_Trap_Autocast_Conditions()
@@ -16205,6 +16248,7 @@ InitTrig_Rocket_Tower()
 InitTrig_Fire_Trap_Autocast()
 InitTrig_Frost_Trap_Autocast()
 InitTrig_Ice_Cage_Autocast()
+InitTrig_Poison_Cascade_Autocast()
 InitTrig_Poison_Trap_Autocast()
 InitTrig_Set_Variables()
 InitTrig_Set_Random_Wave_Variables()

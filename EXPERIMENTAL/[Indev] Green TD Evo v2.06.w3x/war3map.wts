@@ -21023,23 +21023,6 @@ STRING 3119
 |c0000ff00Frost Blast and Ice Cage - Level 1
 }
 
-STRING 3120
-// Units: n01A (Poison Trap), Ubertip (Tooltip - Extended)
-{
-|c006969FF[Support Tower]|r
-|c0000ff00Attacks land and air units.|r
-
-|c0077ff77Attacks random targets with a poison bolt, dealing damage and damage over time and slowing an enemy, when poison bolt deals damage their is a [5% + 1% per poison trap built globally] chance to unleash a poison cascade, launching up to 6 poison bolts at nearby enemy units. Does not affect Immune creeps.|r
-
-
-|c0000ff00Ability:|r |c0077ff77Poison Bolt [Auto-Casted]
-|c0000ff00Base Cooldown:|r |c0077ff771 Second
-|c0000ff00Damage:|r |c0077ff77500
-|c0000ff00Damage Over Time:|r |c0077ff77250
-|c0000ff00Duration:|r |c0077ff775 Seconds
-|c0000ff00Slow Amount:|r |c0077ff7720%
-}
-
 STRING 3121
 // Abilities: A04N (Frost Blast and Ice Cage), Tip (Tooltip - Normal)
 {
@@ -21214,6 +21197,23 @@ STRING 3140
 // Abilities: A04M (Ice Cage), EditorSuffix (Editor Suffix)
 {
 [Frost Trap]
+}
+
+STRING 3141
+// Units: n01A (Poison Trap), Ubertip (Tooltip - Extended)
+{
+|c006969FF[Support Tower]|r
+|c0000ff00Attacks land and air units.|r
+
+|c0077ff77Attacks random targets with a poison bolt, dealing damage and damage over time and slowing an enemy, when poison bolt deals damage their is a [5% + 1% per poison trap built globally] chance to unleash a poison cascade, launching up to 6 poison bolts at nearby enemy units. Does not affect Immune creeps.|r
+
+
+|c0000ff00Ability:|r |c0077ff77Poison Bolt [Auto-Casted]
+|c0000ff00Base Cooldown:|r |c0077ff772.50 Seconds
+|c0000ff00Damage:|r |c0077ff77500
+|c0000ff00Damage Over Time:|r |c0077ff77250
+|c0000ff00Duration:|r |c0077ff775 Seconds
+|c0000ff00Slow Amount:|r |c0077ff7720%
 }
 
 STRING 3148
