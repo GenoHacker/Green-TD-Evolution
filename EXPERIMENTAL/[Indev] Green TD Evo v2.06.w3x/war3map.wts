@@ -21199,7 +21199,7 @@ STRING 3140
 [Frost Trap]
 }
 
-STRING 3141
+STRING 3143
 // Units: n01A (Poison Trap), Ubertip (Tooltip - Extended)
 {
 |c006969FF[Support Tower]|r
@@ -21209,7 +21209,7 @@ STRING 3141
 
 
 |c0000ff00Ability:|r |c0077ff77Poison Bolt [Auto-Casted]
-|c0000ff00Base Cooldown:|r |c0077ff772.50 Seconds
+|c0000ff00Base Cooldown:|r |c0077ff770.50 Seconds
 |c0000ff00Damage:|r |c0077ff77500
 |c0000ff00Damage Over Time:|r |c0077ff77250
 |c0000ff00Duration:|r |c0077ff775 Seconds
