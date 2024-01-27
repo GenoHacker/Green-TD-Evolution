@@ -581,6 +581,23 @@ STRING 92
 |cff0080FFGame Ends In: |r
 }
 
+STRING 93
+// Units: n01A (Poison Trap), Ubertip (Tooltip - Extended)
+{
+|c006969FF[Support Tower]|r
+|c0000ff00Attacks land and air units.|r
+
+|c0077ff77Attacks random targets with a poison bolt, dealing damage and damage over time and slowing an enemy, when poison bolt deals damage their is a [5% + 1% per poison trap built globally] chance to unleash a poison cascade, launching up to 6 poison bolts at nearby enemy units. Does not affect Immune creeps.|r
+
+
+|c0000ff00Ability:|r |c0077ff77Poison Bolt [Auto-Casted]
+|c0000ff00Base Cooldown:|r 1 Second
+|c0000ff00Damage:|r |c0077ff77500
+|c0000ff00Damage Over Time:|r |c0077ff77250
+|c0000ff00Duration:|r |c0077ff775 Seconds
+|c0000ff00Slow Amount:|r |c0077ff7720%
+}
+
 STRING 94
 // Abilities: A00U (Swap Towers), Name (Name)
 {
@@ -2500,6 +2517,12 @@ STRING 370
 |c00FF0000You have beaten Green TD Evolution, thank you for playing.
 }
 
+STRING 371
+// Abilities: A04O (Poison Bolt and Poison Cascade), Name (Name)
+{
+Poison Bolt and Poison Cascade
+}
+
 STRING 372
 // Units: nomg ([Immune] Ogre Magi), Name (Name)
 {
@@ -4332,22 +4355,6 @@ STRING 676
 // Units: h003 (Siege Tower 5: Skeletal Grunt), Name (Name)
 {
 Siege Tower 5: Skeletal Grunt
-}
-
-STRING 677
-// Units: n01A (Poison Trap), Ubertip (Tooltip - Extended)
-{
-|c006969FF[Support Tower]|r
-|c0000ff00Attacks land and air units.|r
-
-|c0077ff77A trap that can launch a poison bolt at an enemy dealing damage on hit and over time, also slows the enemy. Does not affect Immune creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Poison Bolt [Auto-Casted]
-|c0000ff00Damage:|r |c0077ff77500
-|c0000ff00Damage Over Time:|r |c0077ff77250
-|c0000ff00Cooldown:|r |c0077ff770.25 Seconds
-|c0000ff00Duration:|r |c0077ff7710 Seconds
-|c0000ff00Slow Amount:|r |c0077ff7720%
 }
 
 STRING 678
@@ -18234,6 +18241,12 @@ STRING 2721
 Shrapnel Blast
 }
 
+STRING 2722
+// Abilities: A04O (Poison Bolt and Poison Cascade), Tip (Tooltip - Normal)
+{
+|c0000ff00Poison Bolt and Poison Cascade - [Level 1]
+}
+
 STRING 2723
 // Abilities: A04J (Incinerate), Name (Name)
 {
@@ -20619,6 +20632,18 @@ STRING 3073
 |c0077ff77Hits on enemies have a [10% + 0.1% per armour of hit unit] chance to trigger a shrapnel blast dealing piercing damage to near by units equaling to [250 x armor of hit unit].
 }
 
+STRING 3074
+// Abilities: A04O (Poison Bolt and Poison Cascade), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Attacks random targets with a poison bolt, dealing damage and damage over time and slowing an enemy, when poison bolt deals damage their is a [5% + 1% per poison trap built globally] chance to unleash a poison cascade, launching up to 6 poison bolts at nearby enemy units. Does not affect Immune creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Poison Bolt
+|c0000ff00Damage:|r |c0077ff77500
+|c0000ff00Damage Over Time:|r |c0077ff77250
+|c0000ff00Duration:|r |c0077ff775 Seconds
+|c0000ff00Slow Amount:|r |c0077ff7720%
+}
+
 STRING 3075
 // Units: h021 (Bash Tower 1: Storm Panda), Name (Name)
 {
@@ -20737,6 +20762,60 @@ STRING 3085
 [Fire Trap]
 }
 
+STRING 3086
+// Abilities: A04O (Poison Bolt and Poison Cascade), EditorSuffix (Editor Suffix)
+{
+[Poison Trap]
+}
+
+STRING 3087
+// Abilities: A04O (Poison Bolt and Poison Cascade), Tip (Tooltip - Normal)
+{
+|c0000ff00Poison Bolt and Poison Cascade - [Level 2]
+}
+
+STRING 3088
+// Abilities: A04O (Poison Bolt and Poison Cascade), Tip (Tooltip - Normal)
+{
+|c0000ff00Poison Bolt and Poison Cascade - [Level 3]
+}
+
+STRING 3089
+// Abilities: A04O (Poison Bolt and Poison Cascade), Tip (Tooltip - Normal)
+{
+|c0000ff00Poison Bolt and Poison Cascade - [Level 4]
+}
+
+STRING 3090
+// Abilities: A04O (Poison Bolt and Poison Cascade), Tip (Tooltip - Normal)
+{
+|c0000ff00Poison Bolt and Poison Cascade - [Level 5]
+}
+
+STRING 3091
+// Abilities: A04O (Poison Bolt and Poison Cascade), Tip (Tooltip - Normal)
+{
+|c0000ff00Poison Bolt and Poison Cascade - [Level 6]
+}
+
+STRING 3092
+// Abilities: A04O (Poison Bolt and Poison Cascade), Tip (Tooltip - Normal)
+{
+|c0000ff00Poison Bolt and Poison Cascade - [Level 7]
+}
+
+STRING 3093
+// Abilities: A04O (Poison Bolt and Poison Cascade), Tip (Tooltip - Normal)
+{
+|c0000ff00Poison Bolt and Poison Cascade - [Level 8]
+}
+
+STRING 3094
+// Abilities: A04O (Poison Bolt and Poison Cascade), Tip (Tooltip - Normal)
+{
+|c0000ff00Poison Bolt and Poison Cascade - [Level 9]
+}
+
 STRING 3095
 // Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
 {
@@ -20809,6 +20888,120 @@ STRING 3103
 // Abilities: A04L (Incinerate and Flask of Oil), Tip (Tooltip - Normal)
 {
 |c0000ff00Incinerate and Flask of Oil - Level 7
+}
+
+STRING 3104
+// Abilities: A04O (Poison Bolt and Poison Cascade), Tip (Tooltip - Normal)
+{
+|c0000ff00Poison Bolt and Poison Cascade - [Level 10]
+}
+
+STRING 3105
+// Abilities: A04O (Poison Bolt and Poison Cascade), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Attacks random targets with a poison bolt, dealing damage and damage over time and slowing an enemy, when poison bolt deals damage their is a [5% + 1% per poison trap built globally] chance to unleash a poison cascade, launching up to 6 poison bolts at nearby enemy units. Does not affect Immune creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Poison Bolt
+|c0000ff00Damage:|r |c0077ff771000
+|c0000ff00Damage Over Time:|r |c0077ff77500
+|c0000ff00Duration:|r |c0077ff775 Seconds
+|c0000ff00Slow Amount:|r |c0077ff7720%
+}
+
+STRING 3106
+// Abilities: A04O (Poison Bolt and Poison Cascade), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Attacks random targets with a poison bolt, dealing damage and damage over time and slowing an enemy, when poison bolt deals damage their is a [5% + 1% per poison trap built globally] chance to unleash a poison cascade, launching up to 6 poison bolts at nearby enemy units. Does not affect Immune creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Poison Bolt
+|c0000ff00Damage:|r |c0077ff772000
+|c0000ff00Damage Over Time:|r |c0077ff771000
+|c0000ff00Duration:|r |c0077ff775 Seconds
+|c0000ff00Slow Amount:|r |c0077ff7720%
+}
+
+STRING 3107
+// Abilities: A04O (Poison Bolt and Poison Cascade), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Attacks random targets with a poison bolt, dealing damage and damage over time and slowing an enemy, when poison bolt deals damage their is a [5% + 1% per poison trap built globally] chance to unleash a poison cascade, launching up to 6 poison bolts at nearby enemy units. Does not affect Immune creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Poison Bolt
+|c0000ff00Damage:|r |c0077ff774000
+|c0000ff00Damage Over Time:|r |c0077ff772000
+|c0000ff00Duration:|r |c0077ff775 Seconds
+|c0000ff00Slow Amount:|r |c0077ff7720%
+}
+
+STRING 3108
+// Abilities: A04O (Poison Bolt and Poison Cascade), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Attacks random targets with a poison bolt, dealing damage and damage over time and slowing an enemy, when poison bolt deals damage their is a [5% + 1% per poison trap built globally] chance to unleash a poison cascade, launching up to 6 poison bolts at nearby enemy units. Does not affect Immune creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Poison Bolt
+|c0000ff00Damage:|r |c0077ff776000
+|c0000ff00Damage Over Time:|r |c0077ff773000
+|c0000ff00Duration:|r |c0077ff775 Seconds
+|c0000ff00Slow Amount:|r |c0077ff7720%
+}
+
+STRING 3109
+// Abilities: A04O (Poison Bolt and Poison Cascade), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Attacks random targets with a poison bolt, dealing damage and damage over time and slowing an enemy, when poison bolt deals damage their is a [5% + 1% per poison trap built globally] chance to unleash a poison cascade, launching up to 6 poison bolts at nearby enemy units. Does not affect Immune creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Poison Bolt
+|c0000ff00Damage:|r |c0077ff778000
+|c0000ff00Damage Over Time:|r |c0077ff774000
+|c0000ff00Duration:|r |c0077ff775 Seconds
+|c0000ff00Slow Amount:|r |c0077ff7720%
+}
+
+STRING 3110
+// Abilities: A04O (Poison Bolt and Poison Cascade), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Attacks random targets with a poison bolt, dealing damage and damage over time and slowing an enemy, when poison bolt deals damage their is a [5% + 1% per poison trap built globally] chance to unleash a poison cascade, launching up to 6 poison bolts at nearby enemy units. Does not affect Immune creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Poison Bolt
+|c0000ff00Damage:|r |c0077ff7710000
+|c0000ff00Damage Over Time:|r |c0077ff775000
+|c0000ff00Duration:|r |c0077ff775 Seconds
+|c0000ff00Slow Amount:|r |c0077ff7720%
+}
+
+STRING 3111
+// Abilities: A04O (Poison Bolt and Poison Cascade), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Attacks random targets with a poison bolt, dealing damage and damage over time and slowing an enemy, when poison bolt deals damage their is a [5% + 1% per poison trap built globally] chance to unleash a poison cascade, launching up to 6 poison bolts at nearby enemy units. Does not affect Immune creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Poison Bolt
+|c0000ff00Damage:|r |c0077ff7715000
+|c0000ff00Damage Over Time:|r |c0077ff777500
+|c0000ff00Duration:|r |c0077ff775 Seconds
+|c0000ff00Slow Amount:|r |c0077ff7720%
+}
+
+STRING 3112
+// Abilities: A04O (Poison Bolt and Poison Cascade), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Attacks random targets with a poison bolt, dealing damage and damage over time and slowing an enemy, when poison bolt deals damage their is a [5% + 1% per poison trap built globally] chance to unleash a poison cascade, launching up to 6 poison bolts at nearby enemy units. Does not affect Immune creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Poison Bolt
+|c0000ff00Damage:|r |c0077ff7720000
+|c0000ff00Damage Over Time:|r |c0077ff7710000
+|c0000ff00Duration:|r |c0077ff7710 Seconds
+|c0000ff00Slow Amount:|r |c0077ff7720%
+}
+
+STRING 3113
+// Abilities: A04O (Poison Bolt and Poison Cascade), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Attacks random targets with a poison bolt, dealing damage and damage over time and slowing an enemy, when poison bolt deals damage their is a [5% + 1% per poison trap built globally] chance to unleash a poison cascade, launching up to 6 poison bolts at nearby enemy units. Does not affect Immune creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Poison Bolt
+|c0000ff00Damage:|r |c0077ff7725000
+|c0000ff00Damage Over Time:|r |c0077ff7712500
+|c0000ff00Duration:|r |c0077ff7710 Seconds
+|c0000ff00Slow Amount:|r |c0077ff7720%
 }
 
 STRING 3114
