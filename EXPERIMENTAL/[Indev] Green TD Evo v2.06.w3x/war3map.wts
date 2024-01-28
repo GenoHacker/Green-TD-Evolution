@@ -5608,22 +5608,6 @@ STRING 895
 [Hero]
 }
 
-STRING 896
-// Units: n01C (Earth Trap), Ubertip (Tooltip - Extended)
-{
-|c006969FF[Support Tower]|r
-|c0000ff00Attacks land units only.|r
-
-|c0077ff77A trap that can slam the ground, damaging enemys around it and slowing them. Does not affect Immune or Air Creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Slam [Auto-Casted]
-|c0000ff00Damage:|r |c0077ff772000
-|c0000ff00Area of Effect:|r |c0077ff77250
-|c0000ff00Cooldown:|r |c0077ff774 Seconds
-|c0000ff00Slow Duration:|r |c0077ff774 Seconds
-|c0000ff00Slow Amount:|r |c0077ff7720%
-}
-
 STRING 897
 // Units: h00T (Flak Tower 6), Ubertip (Tooltip - Extended)
 {
@@ -21428,216 +21412,16 @@ STRING 3171
 [Darkness Trap]
 }
 
-STRING 3172
-// Abilities: A03U (Slam and Bladestorm), Tip (Tooltip - Normal)
-{
-|c0000ff00DSlam and Bladestorm - [Level 1]
-}
-
-STRING 3173
-// Abilities: A03U (Slam and Bladestorm), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Slams the ground, dealing damage and slowing the movement of nearby enemy units. Has a [5% + 1% per earth trap built globally] chance to trigger a bladestorm when dealing damage.
-
-|c0000ff00Ability:|r |c0077ff77Slam
-|c0000ff00Damage:|r |c0077ff772000
-|c0000ff00Area of Effect:|r |c0077ff77250
-|c0000ff00Slow Duration:|r |c0077ff774 Seconds
-|c0000ff00Slow Amount:|r |c0077ff7720%
-
-|c0000ff00Ability:|r |c0077ff77Bladestorm
-}
-
-STRING 3174
-// Abilities: A03U (Slam and Bladestorm), Tip (Tooltip - Normal)
-{
-|c0000ff00DSlam and Bladestorm - [Level 2]
-}
-
-STRING 3175
-// Abilities: A03U (Slam and Bladestorm), Tip (Tooltip - Normal)
-{
-|c0000ff00DSlam and Bladestorm - [Level 3]
-}
-
-STRING 3176
-// Abilities: A03U (Slam and Bladestorm), Tip (Tooltip - Normal)
-{
-|c0000ff00DSlam and Bladestorm - [Level 4]
-}
-
-STRING 3177
-// Abilities: A03U (Slam and Bladestorm), Tip (Tooltip - Normal)
-{
-|c0000ff00DSlam and Bladestorm - [Level 5]
-}
-
-STRING 3178
-// Abilities: A03U (Slam and Bladestorm), Tip (Tooltip - Normal)
-{
-|c0000ff00DSlam and Bladestorm - [Level 6]
-}
-
-STRING 3179
-// Abilities: A03U (Slam and Bladestorm), Tip (Tooltip - Normal)
-{
-|c0000ff00DSlam and Bladestorm - [Level 7]
-}
-
-STRING 3180
-// Abilities: A03U (Slam and Bladestorm), Tip (Tooltip - Normal)
-{
-|c0000ff00DSlam and Bladestorm - [Level 8]
-}
-
-STRING 3181
-// Abilities: A03U (Slam and Bladestorm), Tip (Tooltip - Normal)
-{
-|c0000ff00DSlam and Bladestorm - [Level 9]
-}
-
-STRING 3182
-// Abilities: A03U (Slam and Bladestorm), Tip (Tooltip - Normal)
-{
-|c0000ff00DSlam and Bladestorm - [Level 10]
-}
-
-STRING 3183
-// Abilities: A03U (Slam and Bladestorm), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Slams the ground, dealing damage and slowing the movement of nearby enemy units. Has a [5% + 1% per earth trap built globally] chance to trigger a bladestorm when dealing damage.
-
-|c0000ff00Ability:|r |c0077ff77Slam
-|c0000ff00Damage:|r |c0077ff774000
-|c0000ff00Area of Effect:|r |c0077ff77250
-|c0000ff00Slow Duration:|r |c0077ff774 Seconds
-|c0000ff00Slow Amount:|r |c0077ff7720%
-
-|c0000ff00Ability:|r |c0077ff77Bladestorm
-}
-
-STRING 3184
-// Abilities: A03U (Slam and Bladestorm), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Slams the ground, dealing damage and slowing the movement of nearby enemy units. Has a [5% + 1% per earth trap built globally] chance to trigger a bladestorm when dealing damage.
-
-|c0000ff00Ability:|r |c0077ff77Slam
-|c0000ff00Damage:|r |c0077ff778000
-|c0000ff00Area of Effect:|r |c0077ff77250
-|c0000ff00Slow Duration:|r |c0077ff774 Seconds
-|c0000ff00Slow Amount:|r |c0077ff7720%
-
-|c0000ff00Ability:|r |c0077ff77Bladestorm
-}
-
-STRING 3185
-// Abilities: A03U (Slam and Bladestorm), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Slams the ground, dealing damage and slowing the movement of nearby enemy units. Has a [5% + 1% per earth trap built globally] chance to trigger a bladestorm when dealing damage.
-
-|c0000ff00Ability:|r |c0077ff77Slam
-|c0000ff00Damage:|r |c0077ff7712000
-|c0000ff00Area of Effect:|r |c0077ff77250
-|c0000ff00Slow Duration:|r |c0077ff774 Seconds
-|c0000ff00Slow Amount:|r |c0077ff7720%
-
-|c0000ff00Ability:|r |c0077ff77Bladestorm
-}
-
-STRING 3186
-// Abilities: A03U (Slam and Bladestorm), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Slams the ground, dealing damage and slowing the movement of nearby enemy units. Has a [5% + 1% per earth trap built globally] chance to trigger a bladestorm when dealing damage.
-
-|c0000ff00Ability:|r |c0077ff77Slam
-|c0000ff00Damage:|r |c0077ff7716000
-|c0000ff00Area of Effect:|r |c0077ff77250
-|c0000ff00Slow Duration:|r |c0077ff774 Seconds
-|c0000ff00Slow Amount:|r |c0077ff7720%
-
-|c0000ff00Ability:|r |c0077ff77Bladestorm
-}
-
-STRING 3187
-// Abilities: A03U (Slam and Bladestorm), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Slams the ground, dealing damage and slowing the movement of nearby enemy units. Has a [5% + 1% per earth trap built globally] chance to trigger a bladestorm when dealing damage.
-
-|c0000ff00Ability:|r |c0077ff77Slam
-|c0000ff00Damage:|r |c0077ff7720000
-|c0000ff00Area of Effect:|r |c0077ff77250
-|c0000ff00Slow Duration:|r |c0077ff774 Seconds
-|c0000ff00Slow Amount:|r |c0077ff7720%
-
-|c0000ff00Ability:|r |c0077ff77Bladestorm
-}
-
 STRING 3188
 // Abilities: A024 (Hero Waves), Hotkey (Hotkey - Normal)
 {
 R
 }
 
-STRING 3189
-// Abilities: A03U (Slam and Bladestorm), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Slams the ground, dealing damage and slowing the movement of nearby enemy units. Has a [5% + 1% per earth trap built globally] chance to trigger a bladestorm when dealing damage.
-
-|c0000ff00Ability:|r |c0077ff77Slam
-|c0000ff00Damage:|r |c0077ff7725000
-|c0000ff00Area of Effect:|r |c0077ff77250
-|c0000ff00Slow Duration:|r |c0077ff774 Seconds
-|c0000ff00Slow Amount:|r |c0077ff7720%
-
-|c0000ff00Ability:|r |c0077ff77Bladestorm
-}
-
-STRING 3190
-// Abilities: A03U (Slam and Bladestorm), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Slams the ground, dealing damage and slowing the movement of nearby enemy units. Has a [5% + 1% per earth trap built globally] chance to trigger a bladestorm when dealing damage.
-
-|c0000ff00Ability:|r |c0077ff77Slam
-|c0000ff00Damage:|r |c0077ff7730000
-|c0000ff00Area of Effect:|r |c0077ff77250
-|c0000ff00Slow Duration:|r |c0077ff774 Seconds
-|c0000ff00Slow Amount:|r |c0077ff7720%
-
-|c0000ff00Ability:|r |c0077ff77Bladestorm
-}
-
 STRING 3191
 // Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 W
-}
-
-STRING 3192
-// Abilities: A03U (Slam and Bladestorm), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Slams the ground, dealing damage and slowing the movement of nearby enemy units. Has a [5% + 1% per earth trap built globally] chance to trigger a bladestorm when dealing damage.
-
-|c0000ff00Ability:|r |c0077ff77Slam
-|c0000ff00Damage:|r |c0077ff7740000
-|c0000ff00Area of Effect:|r |c0077ff77250
-|c0000ff00Slow Duration:|r |c0077ff774 Seconds
-|c0000ff00Slow Amount:|r |c0077ff7720%
-
-|c0000ff00Ability:|r |c0077ff77Bladestorm
-}
-
-STRING 3193
-// Abilities: A03U (Slam and Bladestorm), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Slams the ground, dealing damage and slowing the movement of nearby enemy units. Has a [5% + 1% per earth trap built globally] chance to trigger a bladestorm when dealing damage.
-
-|c0000ff00Ability:|r |c0077ff77Slam
-|c0000ff00Damage:|r |c0077ff7750000
-|c0000ff00Area of Effect:|r |c0077ff77250
-|c0000ff00Slow Duration:|r |c0077ff774 Seconds
-|c0000ff00Slow Amount:|r |c0077ff7720%
-
-|c0000ff00Ability:|r |c0077ff77Bladestorm
 }
 
 STRING 3194
@@ -21652,10 +21436,210 @@ STRING 3195
 [Earth Trap]
 }
 
+STRING 3197
+// Units: n01C (Earth Trap), Ubertip (Tooltip - Extended)
+{
+|c006969FF[Support Tower]|r
+|c0000ff00Attacks land units only.|r
+
+|c0077ff77Slams the ground, dealing damage and slowing the movement of nearby enemy units. Has a [5% + 1% per earth trap built globally] chance to trigger a bladestorm when dealing damage.
+
+|c0000ff00Ability:|r |c0077ff77Slam
+|c0000ff00Base Cooldown:|r |c0077ff772 Seconds
+|c0000ff00Damage:|r |c0077ff772000
+|c0000ff00Area of Effect:|r |c0077ff77250
+|c0000ff00Slow Duration:|r |c0077ff774 Seconds
+|c0000ff00Slow Amount:|r |c0077ff7720%
+
+|c0000ff00Ability:|r |c0077ff77Bladestorm
+|c0000ff00Damage/s:|r |c0077ff77200
+|c0000ff00Area of Effect:|r |c0077ff77300
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
+STRING 3198
+// Abilities: A03U (Slam and Bladestorm), Tip (Tooltip - Normal)
+{
+|c0000ff00Slam and Bladestorm - [Level 1]
+}
+
+STRING 3199
+// Abilities: A03U (Slam and Bladestorm), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Slams the ground, dealing damage and slowing the movement of nearby enemy units. Has a [5% + 1% per earth trap built globally] chance to trigger a bladestorm when dealing damage.
+
+|c0000ff00Ability:|r |c0077ff77Slam
+|c0000ff00Damage:|r |c0077ff772000
+|c0000ff00Area of Effect:|r |c0077ff77250
+|c0000ff00Slow Duration:|r |c0077ff774 Seconds
+|c0000ff00Slow Amount:|r |c0077ff7720%
+
+|c0000ff00Ability:|r |c0077ff77Bladestorm
+|c0000ff00Damage/s:|r |c0077ff77200
+|c0000ff00Area of Effect:|r |c0077ff77300
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
+STRING 3200
+// Abilities: A03U (Slam and Bladestorm), Tip (Tooltip - Normal)
+{
+|c0000ff00Slam and Bladestorm - [Level 2]
+}
+
+STRING 3201
+// Abilities: A03U (Slam and Bladestorm), Tip (Tooltip - Normal)
+{
+|c0000ff00Slam and Bladestorm - [Level 3]
+}
+
+STRING 3202
+// Abilities: A03U (Slam and Bladestorm), Tip (Tooltip - Normal)
+{
+|c0000ff00Slam and Bladestorm - [Level 4]
+}
+
+STRING 3203
+// Abilities: A03U (Slam and Bladestorm), Tip (Tooltip - Normal)
+{
+|c0000ff00Slam and Bladestorm - [Level 5]
+}
+
+STRING 3204
+// Abilities: A03U (Slam and Bladestorm), Tip (Tooltip - Normal)
+{
+|c0000ff00Slam and Bladestorm - [Level 6]
+}
+
+STRING 3205
+// Abilities: A03U (Slam and Bladestorm), Tip (Tooltip - Normal)
+{
+|c0000ff00Slam and Bladestorm - [Level 7]
+}
+
+STRING 3206
+// Abilities: A03U (Slam and Bladestorm), Tip (Tooltip - Normal)
+{
+|c0000ff00Slam and Bladestorm - [Level 8]
+}
+
 STRING 3207
 // Units: h00T (Flak Tower 6), Hotkey (Hotkey)
 {
 Z
+}
+
+STRING 3208
+// Abilities: A03U (Slam and Bladestorm), Tip (Tooltip - Normal)
+{
+|c0000ff00Slam and Bladestorm - [Level 9]
+}
+
+STRING 3209
+// Abilities: A03U (Slam and Bladestorm), Tip (Tooltip - Normal)
+{
+|c0000ff00Slam and Bladestorm - [Level 10]
+}
+
+STRING 3210
+// Abilities: A03U (Slam and Bladestorm), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Slams the ground, dealing damage and slowing the movement of nearby enemy units. Has a [5% + 1% per earth trap built globally] chance to trigger a bladestorm when dealing damage.
+
+|c0000ff00Ability:|r |c0077ff77Slam
+|c0000ff00Damage:|r |c0077ff774000
+|c0000ff00Area of Effect:|r |c0077ff77250
+|c0000ff00Slow Duration:|r |c0077ff774 Seconds
+|c0000ff00Slow Amount:|r |c0077ff7720%
+
+|c0000ff00Ability:|r |c0077ff77Bladestorm
+|c0000ff00Damage/s:|r |c0077ff77600
+|c0000ff00Area of Effect:|r |c0077ff77300
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
+STRING 3211
+// Abilities: A03U (Slam and Bladestorm), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Slams the ground, dealing damage and slowing the movement of nearby enemy units. Has a [5% + 1% per earth trap built globally] chance to trigger a bladestorm when dealing damage.
+
+|c0000ff00Ability:|r |c0077ff77Slam
+|c0000ff00Damage:|r |c0077ff778000
+|c0000ff00Area of Effect:|r |c0077ff77250
+|c0000ff00Slow Duration:|r |c0077ff774 Seconds
+|c0000ff00Slow Amount:|r |c0077ff7720%
+
+|c0000ff00Ability:|r |c0077ff77Bladestorm
+|c0000ff00Damage/s:|r |c0077ff771200
+|c0000ff00Area of Effect:|r |c0077ff77300
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
+STRING 3212
+// Abilities: A03U (Slam and Bladestorm), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Slams the ground, dealing damage and slowing the movement of nearby enemy units. Has a [5% + 1% per earth trap built globally] chance to trigger a bladestorm when dealing damage.
+
+|c0000ff00Ability:|r |c0077ff77Slam
+|c0000ff00Damage:|r |c0077ff7712000
+|c0000ff00Area of Effect:|r |c0077ff77250
+|c0000ff00Slow Duration:|r |c0077ff774 Seconds
+|c0000ff00Slow Amount:|r |c0077ff7720%
+
+|c0000ff00Ability:|r |c0077ff77Bladestorm
+|c0000ff00Damage/s:|r |c0077ff772000
+|c0000ff00Area of Effect:|r |c0077ff77300
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
+STRING 3213
+// Abilities: A03U (Slam and Bladestorm), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Slams the ground, dealing damage and slowing the movement of nearby enemy units. Has a [5% + 1% per earth trap built globally] chance to trigger a bladestorm when dealing damage.
+
+|c0000ff00Ability:|r |c0077ff77Slam
+|c0000ff00Damage:|r |c0077ff7716000
+|c0000ff00Area of Effect:|r |c0077ff77250
+|c0000ff00Slow Duration:|r |c0077ff774 Seconds
+|c0000ff00Slow Amount:|r |c0077ff7720%
+
+|c0000ff00Ability:|r |c0077ff77Bladestorm
+|c0000ff00Damage/s:|r |c0077ff773000
+|c0000ff00Area of Effect:|r |c0077ff77300
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
+STRING 3214
+// Abilities: A03U (Slam and Bladestorm), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Slams the ground, dealing damage and slowing the movement of nearby enemy units. Has a [5% + 1% per earth trap built globally] chance to trigger a bladestorm when dealing damage.
+
+|c0000ff00Ability:|r |c0077ff77Slam
+|c0000ff00Damage:|r |c0077ff7720000
+|c0000ff00Area of Effect:|r |c0077ff77250
+|c0000ff00Slow Duration:|r |c0077ff774 Seconds
+|c0000ff00Slow Amount:|r |c0077ff7720%
+
+|c0000ff00Ability:|r |c0077ff77Bladestorm
+|c0000ff00Damage/s:|r |c0077ff774200
+|c0000ff00Area of Effect:|r |c0077ff77300
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
+STRING 3215
+// Abilities: A03U (Slam and Bladestorm), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Slams the ground, dealing damage and slowing the movement of nearby enemy units. Has a [5% + 1% per earth trap built globally] chance to trigger a bladestorm when dealing damage.
+
+|c0000ff00Ability:|r |c0077ff77Slam
+|c0000ff00Damage:|r |c0077ff7725000
+|c0000ff00Area of Effect:|r |c0077ff77250
+|c0000ff00Slow Duration:|r |c0077ff774 Seconds
+|c0000ff00Slow Amount:|r |c0077ff7720%
+
+|c0000ff00Ability:|r |c0077ff77Bladestorm
+|c0000ff00Damage/s:|r |c0077ff775600
+|c0000ff00Area of Effect:|r |c0077ff77300
+|c0000ff00Duration:|r |c0077ff775 Seconds
 }
 
 STRING 3216
@@ -21675,6 +21659,23 @@ STRING 3216
 |c0000ff00Ability:|r |c0077ff77Doom
 |c0000ff00Damage/s:|r |c0077ff77250
 |c0000ff00Summoned on Death:|r |c0077ff77Tentacle
+}
+
+STRING 3217
+// Abilities: A03U (Slam and Bladestorm), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Slams the ground, dealing damage and slowing the movement of nearby enemy units. Has a [5% + 1% per earth trap built globally] chance to trigger a bladestorm when dealing damage.
+
+|c0000ff00Ability:|r |c0077ff77Slam
+|c0000ff00Damage:|r |c0077ff7730000
+|c0000ff00Area of Effect:|r |c0077ff77250
+|c0000ff00Slow Duration:|r |c0077ff774 Seconds
+|c0000ff00Slow Amount:|r |c0077ff7720%
+
+|c0000ff00Ability:|r |c0077ff77Bladestorm
+|c0000ff00Damage/s:|r |c0077ff777200
+|c0000ff00Area of Effect:|r |c0077ff77300
+|c0000ff00Duration:|r |c0077ff775 Seconds
 }
 
 STRING 3218
@@ -21891,6 +21892,40 @@ STRING 3238
 |c0000ff00Ability:|r |c0077ff77Doom
 |c0000ff00Damage/s:|r |c0077ff7713750
 |c0000ff00Summoned on Death:|r |c0077ff77Tentacle
+}
+
+STRING 3239
+// Abilities: A03U (Slam and Bladestorm), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Slams the ground, dealing damage and slowing the movement of nearby enemy units. Has a [5% + 1% per earth trap built globally] chance to trigger a bladestorm when dealing damage.
+
+|c0000ff00Ability:|r |c0077ff77Slam
+|c0000ff00Damage:|r |c0077ff7740000
+|c0000ff00Area of Effect:|r |c0077ff77250
+|c0000ff00Slow Duration:|r |c0077ff774 Seconds
+|c0000ff00Slow Amount:|r |c0077ff7720%
+
+|c0000ff00Ability:|r |c0077ff77Bladestorm
+|c0000ff00Damage/s:|r |c0077ff779000
+|c0000ff00Area of Effect:|r |c0077ff77300
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
+STRING 3240
+// Abilities: A03U (Slam and Bladestorm), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Slams the ground, dealing damage and slowing the movement of nearby enemy units. Has a [5% + 1% per earth trap built globally] chance to trigger a bladestorm when dealing damage.
+
+|c0000ff00Ability:|r |c0077ff77Slam
+|c0000ff00Damage:|r |c0077ff7750000
+|c0000ff00Area of Effect:|r |c0077ff77250
+|c0000ff00Slow Duration:|r |c0077ff774 Seconds
+|c0000ff00Slow Amount:|r |c0077ff7720%
+
+|c0000ff00Ability:|r |c0077ff77Bladestorm
+|c0000ff00Damage/s:|r |c0077ff7711000
+|c0000ff00Area of Effect:|r |c0077ff77300
+|c0000ff00Duration:|r |c0077ff775 Seconds
 }
 
 STRING 3253

@@ -422,6 +422,8 @@ udg_WEAPON_TYPE_CH_SLICE_Copy = 0
 udg_WEAPON_TYPE_AM_CHOP_Copy = 0
 udg_WEAPON_TYPE_RH_BASH_Copy = 0
 udg_DamageEventUserAmt = 0.0
+udg_Integer_Array_SlamTrapChance = __jarray(0)
+udg_Integer_TotalSlamTrapsBuilt = 0
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -1505,6 +1507,13 @@ udg_WEAPON_TYPE_CH_SLICE_Copy = 0
 udg_WEAPON_TYPE_AM_CHOP_Copy = 0
 udg_WEAPON_TYPE_RH_BASH_Copy = 0
 udg_DamageEventUserAmt = 0.0
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Integer_Array_SlamTrapChance[i] = 0
+i = i + 1
+end
+udg_Integer_TotalSlamTrapsBuilt = 0
 end
 
 do
@@ -4003,6 +4012,7 @@ BlzSetSpecialEffectPitch(GetLastCreatedEffectBJ(), 0.0)
 BlzSetSpecialEffectRoll(GetLastCreatedEffectBJ(), 0.0)
 BlzSetSpecialEffectTimeScale(GetLastCreatedEffectBJ(), 2.00)
 BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 0.50)
+DestroyEffectBJ(GetLastCreatedEffectBJ())
 else
 end
 end
@@ -4551,21 +4561,62 @@ TriggerAddCondition(gg_trg_Doom_Autocast, Condition(Trig_Doom_Autocast_Condition
 TriggerAddAction(gg_trg_Doom_Autocast, Trig_Doom_Autocast_Actions)
 end
 
+function Trig_Earth_Trap_Autocast_Conditions()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A03U"), udg_DamageEventSource) >= 1)) then
+return false
+end
+return true
+end
+
 function Trig_Earth_Trap_Autocast_Actions()
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
+UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
+UnitAddAbilityBJ(FourCC("A001"), GetLastCreatedUnit())
+SetUnitAbilityLevelSwapped(FourCC("A001"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A03U"), udg_DamageEventSource))
+IssueImmediateOrderBJ(GetLastCreatedUnit(), "creepthunderclap")
 end
 
 function InitTrig_Earth_Trap_Autocast()
 gg_trg_Earth_Trap_Autocast = CreateTrigger()
 TriggerRegisterVariableEvent(gg_trg_Earth_Trap_Autocast, "udg_DamageEvent", EQUAL, 1.00)
+TriggerAddCondition(gg_trg_Earth_Trap_Autocast, Condition(Trig_Earth_Trap_Autocast_Conditions))
 TriggerAddAction(gg_trg_Earth_Trap_Autocast, Trig_Earth_Trap_Autocast_Actions)
 end
 
+function Trig_Bladestorm_Autocast_Conditions()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A001"), udg_DamageEventSource) >= 1)) then
+return false
+end
+return true
+end
+
+function Trig_Bladestorm_Autocast_Func002C()
+if (not (udg_Integer_Array_SlamTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (5 + udg_Integer_TotalSlamTrapsBuilt))) then
+return false
+end
+return true
+end
+
 function Trig_Bladestorm_Autocast_Actions()
+udg_Integer_Array_SlamTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomInt(1, 100)
+if (Trig_Bladestorm_Autocast_Func002C()) then
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
+UnitApplyTimedLifeBJ(6.00, FourCC("BTLF"), GetLastCreatedUnit())
+UnitAddAbilityBJ(FourCC("A04R"), GetLastCreatedUnit())
+SetUnitAbilityLevelSwapped(FourCC("A04R"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A001"), udg_DamageEventSource))
+IssueImmediateOrderBJ(GetLastCreatedUnit(), "whirlwind")
+AddSpecialEffectLocBJ(GetUnitLoc(GetLastCreatedUnit()), "war3mapImported\\SpinFX2.mdx")
+BlzSetSpecialEffectTimeScale(GetLastCreatedEffectBJ(), 2.00)
+BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 0.50)
+DestroyEffectBJ(GetLastCreatedEffectBJ())
+else
+end
 end
 
 function InitTrig_Bladestorm_Autocast()
 gg_trg_Bladestorm_Autocast = CreateTrigger()
 TriggerRegisterVariableEvent(gg_trg_Bladestorm_Autocast, "udg_DamageEvent", EQUAL, 1.00)
+TriggerAddCondition(gg_trg_Bladestorm_Autocast, Condition(Trig_Bladestorm_Autocast_Conditions))
 TriggerAddAction(gg_trg_Bladestorm_Autocast, Trig_Bladestorm_Autocast_Actions)
 end
 
@@ -6727,6 +6778,28 @@ end
 return true
 end
 
+function Trig_Instant_Upgrade_Func006Func001Func001002003001002()
+return (GetUnitTypeId(GetFilterUnit()) == FourCC("n01C"))
+end
+
+function Trig_Instant_Upgrade_Func006Func001Func002001001002()
+return (GetUnitTypeId(GetFilterUnit()) == FourCC("n01C"))
+end
+
+function Trig_Instant_Upgrade_Func006Func001C()
+if (not (CountUnitsInGroup(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Instant_Upgrade_Func006Func001Func002001001002))) <= 10)) then
+return false
+end
+return true
+end
+
+function Trig_Instant_Upgrade_Func006C()
+if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("n01C"))) then
+return false
+end
+return true
+end
+
 function Trig_Instant_Upgrade_Actions()
 if (Trig_Instant_Upgrade_Func001C()) then
 ReplaceUnitBJ(GetTriggerUnit(), GetUnitTypeId(GetTriggerUnit()), bj_UNIT_STATE_METHOD_RELATIVE)
@@ -6772,6 +6845,13 @@ end
 if (Trig_Instant_Upgrade_Func005C()) then
 if (Trig_Instant_Upgrade_Func005Func001C()) then
 udg_Integer_TotalDarkTrapsBuilt = (0 + CountUnitsInGroup(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Instant_Upgrade_Func005Func001Func001002003001002))))
+else
+end
+else
+end
+if (Trig_Instant_Upgrade_Func006C()) then
+if (Trig_Instant_Upgrade_Func006Func001C()) then
+udg_Integer_TotalDarkTrapsBuilt = (0 + CountUnitsInGroup(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Instant_Upgrade_Func006Func001Func001002003001002))))
 else
 end
 else
@@ -17123,7 +17203,7 @@ return true
 end
 
 function Trig_Earth_Trap_Func004Func005C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A001"), GetTriggerUnit()) >= 10)) then
+if (not (GetUnitAbilityLevelSwapped(FourCC("A03U"), GetTriggerUnit()) >= 10)) then
 return false
 end
 return true
@@ -17137,13 +17217,13 @@ return true
 end
 
 function Trig_Earth_Trap_Actions()
-SetUnitUserData(GetTriggerUnit(), udg_Integer_Array_TrapGoldCost[GetUnitAbilityLevelSwapped(FourCC("A001"), GetTriggerUnit())])
+SetUnitUserData(GetTriggerUnit(), udg_Integer_Array_TrapGoldCost[GetUnitAbilityLevelSwapped(FourCC("A03U"), GetTriggerUnit())])
 if (Trig_Earth_Trap_Func004C()) then
 CreateTextTagUnitBJ(("You Need " .. (I2S(GetUnitUserData(GetTriggerUnit())) .. " To Upgrade")), GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
 else
 CreateTextTagUnitBJ("TRIGSTR_9112", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
-IncUnitAbilityLevelSwapped(FourCC("A001"), GetTriggerUnit())
-BlzSetUnitName(GetTriggerUnit(), ("Earth Trap " .. I2S(GetUnitAbilityLevelSwapped(FourCC("A001"), GetTriggerUnit()))))
+IncUnitAbilityLevelSwapped(FourCC("A03U"), GetTriggerUnit())
+BlzSetUnitName(GetTriggerUnit(), ("Earth Trap " .. I2S(GetUnitAbilityLevelSwapped(FourCC("A03U"), GetTriggerUnit()))))
 SetPlayerStateBJ(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD, (GetPlayerState(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD) - GetUnitUserData(GetTriggerUnit())))
 if (Trig_Earth_Trap_Func004Func005C()) then
 UnitRemoveAbilityBJ(FourCC("A023"), GetTriggerUnit())
