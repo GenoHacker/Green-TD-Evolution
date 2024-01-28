@@ -424,6 +424,8 @@ udg_WEAPON_TYPE_RH_BASH_Copy = 0
 udg_DamageEventUserAmt = 0.0
 udg_Integer_Array_SlamTrapChance = __jarray(0)
 udg_Integer_TotalSlamTrapsBuilt = 0
+udg_Integer_Array_BloodTrapChance = __jarray(0)
+udg_Integer_TotalBloodTrapsBuilt = 0
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -503,6 +505,7 @@ gg_snd_Wave_Normal = nil
 gg_snd_Wave_Hero = nil
 gg_snd_Wave_Boss = nil
 gg_snd_HeroLichPissed8 = nil
+gg_trg_Damage_Engine_Config = nil
 gg_trg_Kick_Blue = nil
 gg_trg_Kick_Teal = nil
 gg_trg_Kick_Purple = nil
@@ -528,6 +531,8 @@ gg_trg_Poison_Cascade_Autocast = nil
 gg_trg_Poison_Trap_Autocast = nil
 gg_trg_Darkness_Trap_Autocast = nil
 gg_trg_Doom_Autocast = nil
+gg_trg_Earth_Trap_Autocast = nil
+gg_trg_Bladestorm_Autocast = nil
 gg_trg_Set_Variables = nil
 gg_trg_Set_Random_Wave_Variables = nil
 gg_trg_Map_Start = nil
@@ -705,9 +710,7 @@ gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
-gg_trg_Damage_Engine_Config = nil
-gg_trg_Earth_Trap_Autocast = nil
-gg_trg_Bladestorm_Autocast = nil
+gg_trg_Bloodtrap = nil
 function InitGlobals()
 local i = 0
 
@@ -1514,6 +1517,13 @@ udg_Integer_Array_SlamTrapChance[i] = 0
 i = i + 1
 end
 udg_Integer_TotalSlamTrapsBuilt = 0
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Integer_Array_BloodTrapChance[i] = 0
+i = i + 1
+end
+udg_Integer_TotalBloodTrapsBuilt = 0
 end
 
 do
@@ -4618,6 +4628,59 @@ gg_trg_Bladestorm_Autocast = CreateTrigger()
 TriggerRegisterVariableEvent(gg_trg_Bladestorm_Autocast, "udg_DamageEvent", EQUAL, 1.00)
 TriggerAddCondition(gg_trg_Bladestorm_Autocast, Condition(Trig_Bladestorm_Autocast_Conditions))
 TriggerAddAction(gg_trg_Bladestorm_Autocast, Trig_Bladestorm_Autocast_Actions)
+end
+
+function Trig_Bloodtrap_Conditions()
+if (not (GetUnitTypeId(udg_DamageEventSource) == FourCC("n01H"))) then
+return false
+end
+return true
+end
+
+function Trig_Bloodtrap_Func002C()
+if (not (udg_Integer_Array_BloodTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (20 - udg_Integer_TotalBloodTrapsBuilt))) then
+return false
+end
+return true
+end
+
+function Trig_Bloodtrap_Func004C()
+if (not (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) >= 15.00)) then
+return false
+end
+return true
+end
+
+function Trig_Bloodtrap_Func005C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A04S"), udg_DamageEventSource) <= 19)) then
+return false
+end
+return true
+end
+
+function Trig_Bloodtrap_Actions()
+udg_Integer_Array_BloodTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomInt(1, 100)
+if (Trig_Bloodtrap_Func002C()) then
+SetUnitAbilityLevelSwapped(FourCC("A04S"), udg_DamageEventSource, 1)
+else
+end
+SetUnitManaBJ(udg_DamageEventSource, (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + 1))
+if (Trig_Bloodtrap_Func004C()) then
+SetUnitAbilityLevelSwapped(FourCC("A04T"), udg_DamageEventSource, GetRandomInt(1, 6))
+SetUnitManaBJ(udg_DamageEventSource, 0.00)
+else
+end
+if (Trig_Bloodtrap_Func005C()) then
+IncUnitAbilityLevelSwapped(FourCC("A04S"), udg_DamageEventSource)
+else
+end
+end
+
+function InitTrig_Bloodtrap()
+gg_trg_Bloodtrap = CreateTrigger()
+TriggerRegisterVariableEvent(gg_trg_Bloodtrap, "udg_DamageEvent", EQUAL, 1.00)
+TriggerAddCondition(gg_trg_Bloodtrap, Condition(Trig_Bloodtrap_Conditions))
+TriggerAddAction(gg_trg_Bloodtrap, Trig_Bloodtrap_Actions)
 end
 
 function Trig_Set_Variables_Func250001()
@@ -17096,7 +17159,7 @@ end
 return true
 end
 
-function Trig_Blood_Trap_Func004Func005C()
+function Trig_Blood_Trap_Func004Func006C()
 if (not (GetUnitAbilityLevelSwapped(FourCC("A008"), GetTriggerUnit()) >= 10)) then
 return false
 end
@@ -17115,11 +17178,12 @@ SetUnitUserData(GetTriggerUnit(), udg_Integer_Array_TrapGoldCost[GetUnitAbilityL
 if (Trig_Blood_Trap_Func004C()) then
 CreateTextTagUnitBJ(("You Need " .. (I2S(GetUnitUserData(GetTriggerUnit())) .. " To Upgrade")), GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
 else
+BlzSetUnitDiceSides(GetTriggerUnit(), (BlzGetUnitDiceSides(GetTriggerUnit(), 0) + 500), 0)
 CreateTextTagUnitBJ("TRIGSTR_9110", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
 IncUnitAbilityLevelSwapped(FourCC("A008"), GetTriggerUnit())
 BlzSetUnitName(GetTriggerUnit(), ("Blood Trap " .. I2S(GetUnitAbilityLevelSwapped(FourCC("A008"), GetTriggerUnit()))))
 SetPlayerStateBJ(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD, (GetPlayerState(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD) - GetUnitUserData(GetTriggerUnit())))
-if (Trig_Blood_Trap_Func004Func005C()) then
+if (Trig_Blood_Trap_Func004Func006C()) then
 UnitRemoveAbilityBJ(FourCC("A023"), GetTriggerUnit())
 else
 end
@@ -17524,6 +17588,7 @@ InitTrig_Darkness_Trap_Autocast()
 InitTrig_Doom_Autocast()
 InitTrig_Earth_Trap_Autocast()
 InitTrig_Bladestorm_Autocast()
+InitTrig_Bloodtrap()
 InitTrig_Set_Variables()
 InitTrig_Set_Random_Wave_Variables()
 InitTrig_Map_Start()

@@ -610,17 +610,6 @@ STRING 96
 |c0000ff00Difficulty: |c0077ff77Normal
 }
 
-STRING 97
-// Abilities: A008 (Bloodstrike), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Gives a chance to deal extra damage.
-
-|c0000ff00Damage:|r |c0077ff771 - 5
-|c0000ff00Multiplied Damage:|r |c0077ff77Up To 1000
-|c0000ff00Chance:|r |c0077ff7790%
-|c0000ff00Multiplier:|r |c0077ff77200x
-}
-
 STRING 98
 // Abilities: A009 (Poison Bolt), Ubertip (Tooltip - Normal - Extended)
 {
@@ -5927,21 +5916,6 @@ STRING 927
 |c0000ff00Ability:|r |c0077ff77Slow Poison; reduces enemy movement by 30%
 }
 
-STRING 928
-// Units: n01H (Blood Trap), Ubertip (Tooltip - Extended)
-{
-|c006969FF[Support Tower]|r
-|c0000ff00Attacks land units only.|r
-
-|c0077ff77A trap that has a chance to deal extra damage to creeps that walk over it. Does not affect Immune or Air Creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Bloodstrike
-|c0000ff00Damage:|r |c0077ff771 - 5
-|c0000ff00Multiplied |c0077ff77Damage: Up To 500
-|c0000ff00Chance:|r |c0077ff7790%
-|c0000ff00Multiplier:|r |c0077ff77100x
-}
-
 STRING 929
 // Units: h01N (Poison Tower 7: Farseer), Ubertip (Tooltip - Extended)
 {
@@ -7446,105 +7420,6 @@ STRING 1108
 // Units: h01C (Fel Tower 4: Warlock), Name (Name)
 {
 Fel Tower 4: Warlock
-}
-
-STRING 1109
-// Abilities: A008 (Bloodstrike), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Gives a chance to deal extra damage.
-
-|c0000ff00Damage:|r |c0077ff771 - 5
-|c0000ff00Multiplied Damage:|r |c0077ff77Up To 500
-|c0000ff00Chance:|r |c0077ff7790%
-|c0000ff00Multiplier:|r |c0077ff77100x
-}
-
-STRING 1110
-// Abilities: A008 (Bloodstrike), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Gives a chance to deal extra damage.
-
-|c0000ff00Damage:|r |c0077ff771 - 5
-|c0000ff00Multiplied Damage:|r |c0077ff77Up To 2000
-|c0000ff00Chance:|r |c0077ff7790%
-|c0000ff00Multiplier:|r |c0077ff77400x
-}
-
-STRING 1111
-// Abilities: A008 (Bloodstrike), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Gives a chance to deal extra damage.
-
-|c0000ff00Damage:|r |c0077ff771 - 5
-|c0000ff00Multiplied Damage:|r |c0077ff77Up To 4000
-|c0000ff00Chance:|r |c0077ff7790%
-|c0000ff00Multiplier:|r |c0077ff77800x
-}
-
-STRING 1112
-// Abilities: A008 (Bloodstrike), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Gives a chance to deal extra damage.
-
-|c0000ff00Damage:|r |c0077ff771 - 5
-|c0000ff00Multiplied Damage:|r |c0077ff77Up To 6000
-|c0000ff00Chance:|r |c0077ff7790%
-|c0000ff00Multiplier:|r |c0077ff771200x
-}
-
-STRING 1113
-// Abilities: A008 (Bloodstrike), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Gives a chance to deal extra damage.
-
-|c0000ff00Damage:|r |c0077ff771 - 5
-|c0000ff00Multiplied Damage:|r |c0077ff77Up To 9000
-|c0000ff00Chance:|r |c0077ff7790%
-|c0000ff00Multiplier:|r |c0077ff771800x
-}
-
-STRING 1114
-// Abilities: A008 (Bloodstrike), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Gives a chance to deal extra damage.
-
-|c0000ff00Damage:|r |c0077ff771 - 5
-|c0000ff00Multiplied Damage:|r |c0077ff77Up To 12000
-|c0000ff00Chance:|r |c0077ff7790%
-|c0000ff00Multiplier:|r |c0077ff772400x
-}
-
-STRING 1115
-// Abilities: A008 (Bloodstrike), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Gives a chance to deal extra damage.
-
-|c0000ff00Damage:|r |c0077ff771 - 5
-|c0000ff00Multiplied Damage:|r |c0077ff77Up To 15000
-|c0000ff00Chance:|r |c0077ff7790%
-|c0000ff00Multiplier:|r |c0077ff773000x
-}
-
-STRING 1116
-// Abilities: A008 (Bloodstrike), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Gives a chance to deal extra damage.
-
-|c0000ff00Damage:|r |c0077ff771 - 5
-|c0000ff00Multiplied Damage:|r |c0077ff77Up To 19000
-|c0000ff00Chance:|r |c0077ff7790%
-|c0000ff00Multiplier:|r |c0077ff773800x
-}
-
-STRING 1117
-// Abilities: A008 (Bloodstrike), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Gives a chance to deal extra damage.
-
-|c0000ff00Damage:|r |c0077ff771 - 5
-|c0000ff00Multiplied Damage:|r |c0077ff77Up To 25000
-|c0000ff00Chance:|r |c0077ff7790%
-|c0000ff00Multiplier:|r |c0077ff775000x
 }
 
 STRING 1118
@@ -10551,76 +10426,16 @@ STRING 1610
 |c0000ff00Slam - Level 1|r
 }
 
-STRING 1611
-// Abilities: A008 (Bloodstrike), Tip (Tooltip - Normal)
-{
-|c0000ff00Bloodstrike - Level 1|r
-}
-
 STRING 1612
 // Abilities: A01V (Emergency Bouncing Tower), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
-STRING 1613
-// Abilities: A008 (Bloodstrike), Tip (Tooltip - Normal)
-{
-|c0000ff00Bloodstrike - Level 2|r
-}
-
 STRING 1614
 // Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), effect2 (Effect 2)
 {
 ratr
-}
-
-STRING 1615
-// Abilities: A008 (Bloodstrike), Tip (Tooltip - Normal)
-{
-|c0000ff00Bloodstrike - Level 3|r
-}
-
-STRING 1616
-// Abilities: A008 (Bloodstrike), Tip (Tooltip - Normal)
-{
-|c0000ff00Bloodstrike - Level 4|r
-}
-
-STRING 1617
-// Abilities: A008 (Bloodstrike), Tip (Tooltip - Normal)
-{
-|c0000ff00Bloodstrike - Level 5|r
-}
-
-STRING 1618
-// Abilities: A008 (Bloodstrike), Tip (Tooltip - Normal)
-{
-|c0000ff00Bloodstrike - Level 6|r
-}
-
-STRING 1619
-// Abilities: A008 (Bloodstrike), Tip (Tooltip - Normal)
-{
-|c0000ff00Bloodstrike - Level 7|r
-}
-
-STRING 1620
-// Abilities: A008 (Bloodstrike), Tip (Tooltip - Normal)
-{
-|c0000ff00Bloodstrike - Level 8|r
-}
-
-STRING 1621
-// Abilities: A008 (Bloodstrike), Tip (Tooltip - Normal)
-{
-|c0000ff00Bloodstrike - Level 9|r
-}
-
-STRING 1622
-// Abilities: A008 (Bloodstrike), Tip (Tooltip - Normal)
-{
-|c0000ff00Bloodstrike - Level 10|r
 }
 
 STRING 1623
@@ -15489,6 +15304,12 @@ STRING 2339
 |c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
 }
 
+STRING 2340
+// Abilities: A04S (Blood Trap Attack Speed), Name (Name)
+{
+Blood Trap Attack Speed
+}
+
 STRING 2341
 // Units: h00V (Flak Tower 4), Tip (Tooltip - Basic)
 {
@@ -15749,10 +15570,22 @@ STRING 2380
 Flak Tower 5
 }
 
+STRING 2381
+// Abilities: A04T (Bloodstrike), Tip (Tooltip - Normal)
+{
+|c0000ff00Bloodstrike - Light
+}
+
 STRING 2382
 // Units: h00T (Flak Tower 6), Name (Name)
 {
 Flak Tower 6
+}
+
+STRING 2383
+// Abilities: A04T (Bloodstrike), Tip (Tooltip - Normal)
+{
+|c0000ff00Bloodstrike - Medium
 }
 
 STRING 2384
@@ -15767,6 +15600,12 @@ STRING 2385
 Flak Tower 7
 }
 
+STRING 2386
+// Abilities: A04T (Bloodstrike), Tip (Tooltip - Normal)
+{
+|c0000ff00Bloodstrike - Heavy
+}
+
 STRING 2387
 // Units: h00Y (Flak Tower 7), Tip (Tooltip - Basic)
 {
@@ -15779,6 +15618,12 @@ STRING 2388
 Flak Tower 8
 }
 
+STRING 2389
+// Abilities: A04T (Bloodstrike), Tip (Tooltip - Normal)
+{
+|c0000ff00Bloodstrike - Fortified
+}
+
 STRING 2390
 // Units: h00Z (Flak Tower 8), Tip (Tooltip - Basic)
 {
@@ -15789,6 +15634,12 @@ STRING 2391
 // Units: h010 (Flak Tower 9), Name (Name)
 {
 Flak Tower 9
+}
+
+STRING 2392
+// Abilities: A04T (Bloodstrike), Tip (Tooltip - Normal)
+{
+|c0000ff00Bloodstrike - Hero
 }
 
 STRING 2393
@@ -15997,6 +15848,12 @@ STRING 2423
 Dummy Ability
 }
 
+STRING 2424
+// Abilities: A04T (Bloodstrike), Tip (Tooltip - Normal)
+{
+|c0000ff00Bloodstrike - Divine
+}
+
 STRING 2425
 {
 |c00FF0000You have beaten Green TD Evolution, thank you for playing.
@@ -16077,6 +15934,12 @@ STRING 2438
 // Abilities: A01D (Bash Tower 2), Name (Name)
 {
 Bash Tower 2
+}
+
+STRING 2439
+// Abilities: A04T (Bloodstrike), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Increases damage dealt to enemy targets with Light armor by 100%
 }
 
 STRING 2440
@@ -21412,6 +21275,58 @@ STRING 3171
 [Darkness Trap]
 }
 
+STRING 3172
+// Abilities: A04T (Bloodstrike), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Increases damage dealt to enemy targets with Medium armor by 100%
+}
+
+STRING 3173
+// Abilities: A04T (Bloodstrike), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Increases damage dealt to enemy targets with Heavy armor by 100%
+}
+
+STRING 3174
+// Abilities: A04T (Bloodstrike), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Increases damage dealt to enemy targets with Fortified armor by 100%
+}
+
+STRING 3175
+// Abilities: A04T (Bloodstrike), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Increases damage dealt to enemy targets with Hero armor by 100%
+}
+
+STRING 3176
+// Abilities: A04T (Bloodstrike), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Increases damage dealt to enemy targets with Divine armor by 100%
+}
+
+STRING 3178
+// Abilities: A008 (Bloodtrap Level), Name (Name)
+{
+Bloodtrap Level
+}
+
+STRING 3180
+// Units: n01H (Blood Trap), Ubertip (Tooltip - Extended)
+{
+|c006969FF[Support Tower]|r
+|c0000ff00Attacks land units only.|r
+
+|c0077ff77A trap that gains attack speed each time it deals damage with a [20% - 1% for each bloodtrap built globally] chance to reset. Gains 100% bonus damage against a random armor type every 15 attacks. Does not affect Air Creeps.|r
+
+|c0000ff00Damage:|r |c0077ff77500
+|c0000ff00Attack Speed:|r |c0077ff771.00
+
+|c0000ff00Ability:|r |c0077ff77Bloodstrike
+|c0000ff00Attack Type: |c0077ff77Random
+|c0000ff00Bonus Damage:|r |c0077ff77100%
+}
+
 STRING 3188
 // Abilities: A024 (Hero Waves), Hotkey (Hotkey - Normal)
 {
@@ -21425,13 +21340,13 @@ W
 }
 
 STRING 3194
-// Abilities: A03U (Slam and Bladestorm), EditorSuffix (Editor Suffix)
+// Abilities: A001 (Slam), EditorSuffix (Editor Suffix)
 {
 [Earth Trap]
 }
 
 STRING 3195
-// Abilities: A04R (Bladestorm), EditorSuffix (Editor Suffix)
+// Abilities: A03U (Slam and Bladestorm), EditorSuffix (Editor Suffix)
 {
 [Earth Trap]
 }
@@ -25828,19 +25743,19 @@ STRING 9135
 }
 
 STRING 9140
-// Abilities: A001 (Slam), EditorSuffix (Editor Suffix)
+// Abilities: A04R (Bladestorm), EditorSuffix (Editor Suffix)
 {
 [Earth Trap]
 }
 
 STRING 9145
-// Abilities: A008 (Bloodstrike), EditorSuffix (Editor Suffix)
+// Abilities: A04T (Bloodstrike), EditorSuffix (Editor Suffix)
 {
 [Blood Trap]
 }
 
 STRING 9242
-// Abilities: A008 (Bloodstrike), Name (Name)
+// Abilities: A04T (Bloodstrike), Name (Name)
 {
 Bloodstrike
 }
