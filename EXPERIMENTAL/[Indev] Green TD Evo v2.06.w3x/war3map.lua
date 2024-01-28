@@ -533,6 +533,7 @@ gg_trg_Darkness_Trap_Autocast = nil
 gg_trg_Doom_Autocast = nil
 gg_trg_Earth_Trap_Autocast = nil
 gg_trg_Bladestorm_Autocast = nil
+gg_trg_Bloodtrap = nil
 gg_trg_Set_Variables = nil
 gg_trg_Set_Random_Wave_Variables = nil
 gg_trg_Map_Start = nil
@@ -710,7 +711,6 @@ gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
-gg_trg_Bloodtrap = nil
 function InitGlobals()
 local i = 0
 
