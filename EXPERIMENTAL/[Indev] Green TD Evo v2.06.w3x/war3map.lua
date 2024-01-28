@@ -284,45 +284,14 @@ udg_Integer_TotalDarkTrapsBuilt = 0
 udg_PreDamageEvent = 0.0
 udg_ArmorDamageEvent = 0.0
 udg_ZeroDamageEvent = 0.0
-udg_LethalDamageEvent_Copy = 0.0
 udg_OnDamageEvent = 0.0
-udg_AfterDamageEvent_Copy = 0.0
 udg_SourceDamageEvent = 0.0
-udg_AOEDamageEvent_Copy = 0.0
-udg_DamageModifierEvent_Copy = 0.0
-udg_DamageEvent_Copy = 0.0
 udg_RemoveDamageEvent = false
-udg_DamageEventOverride_Copy = false
 udg_DamageEngineEnabled = false
-udg_DamageEventSource_Copy = nil
-udg_DamageEventTarget_Copy = nil
-udg_DamageEventPrevAmt_Copy = 0.0
-udg_DamageEventUserAmt = 0.0
-udg_AOEDamageSource_Copy = nil
-udg_EnhancedDamageTarget_Copy = nil
-udg_DamageEventLevel_Copy = 0
-udg_DamageEventAOE_Copy = 0
-udg_DamageEventAOEGroup_Copy = nil
-udg_DamageScalingWC3_Copy = 0.0
-udg_DamageScalingUser_Copy = 0.0
 udg_IsDamageAttack = false
-udg_IsDamageMelee_Copy = false
-udg_IsDamageRanged_Copy = false
-udg_IsDamageSpell_Copy = false
-udg_IsDamageCode_Copy = false
-udg_DamageEventAmount_Copy = 0.0
-udg_DamageEventArmorPierced_Copy = 0.0
-udg_LethalDamageHP_Copy = 0.0
-udg_DamageEventAttackT_Copy = 0
-udg_DamageEventDamageT_Copy = 0
-udg_DamageEventArmorT_Copy = 0
-udg_DamageEventDefenseT_Copy = 0
-udg_DamageEventWeaponT_Copy = 0
-udg_DamageEventType_Copy = 0
 udg_NextDamageIsAttack = false
 udg_NextDamageIsRanged = false
 udg_NextDamageIsMelee = false
-udg_NextDamageType_Copy = 0
 udg_NextDamageWeaponT = 0
 udg_DamageFilterConfigured = false
 udg_DamageFilterSource = nil
@@ -452,6 +421,7 @@ udg_WEAPON_TYPE_CM_SLICE_Copy = 0
 udg_WEAPON_TYPE_CH_SLICE_Copy = 0
 udg_WEAPON_TYPE_AM_CHOP_Copy = 0
 udg_WEAPON_TYPE_RH_BASH_Copy = 0
+udg_DamageEventUserAmt = 0.0
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -531,7 +501,6 @@ gg_snd_Wave_Normal = nil
 gg_snd_Wave_Hero = nil
 gg_snd_Wave_Boss = nil
 gg_snd_HeroLichPissed8 = nil
-gg_trg_Damage_Engine_Config = nil
 gg_trg_Kick_Blue = nil
 gg_trg_Kick_Teal = nil
 gg_trg_Kick_Purple = nil
@@ -734,7 +703,9 @@ gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
-gg_trg_Damage_Engine_Config_Copy = nil
+gg_trg_Damage_Engine_Config = nil
+gg_trg_Earth_Trap_Autocast = nil
+gg_trg_Bladestorm_Autocast = nil
 function InitGlobals()
 local i = 0
 
@@ -1383,41 +1354,14 @@ udg_Integer_TotalDarkTrapsBuilt = 0
 udg_PreDamageEvent = 0.0
 udg_ArmorDamageEvent = 0.0
 udg_ZeroDamageEvent = 0.0
-udg_LethalDamageEvent_Copy = 0.0
 udg_OnDamageEvent = 0.0
-udg_AfterDamageEvent_Copy = 0.0
 udg_SourceDamageEvent = 0.0
-udg_AOEDamageEvent_Copy = 0.0
-udg_DamageModifierEvent_Copy = 0.0
-udg_DamageEvent_Copy = 0.0
 udg_RemoveDamageEvent = false
-udg_DamageEventOverride_Copy = false
 udg_DamageEngineEnabled = false
-udg_DamageEventPrevAmt_Copy = 0.0
-udg_DamageEventUserAmt = 0.0
-udg_DamageEventLevel_Copy = 0
-udg_DamageEventAOE_Copy = 0
-udg_DamageEventAOEGroup_Copy = CreateGroup()
-udg_DamageScalingWC3_Copy = 0.0
-udg_DamageScalingUser_Copy = 0.0
 udg_IsDamageAttack = false
-udg_IsDamageMelee_Copy = false
-udg_IsDamageRanged_Copy = false
-udg_IsDamageSpell_Copy = false
-udg_IsDamageCode_Copy = false
-udg_DamageEventAmount_Copy = 0.0
-udg_DamageEventArmorPierced_Copy = 0.0
-udg_LethalDamageHP_Copy = 0.0
-udg_DamageEventAttackT_Copy = 0
-udg_DamageEventDamageT_Copy = 0
-udg_DamageEventArmorT_Copy = 0
-udg_DamageEventDefenseT_Copy = 0
-udg_DamageEventWeaponT_Copy = 0
-udg_DamageEventType_Copy = 0
 udg_NextDamageIsAttack = false
 udg_NextDamageIsRanged = false
 udg_NextDamageIsMelee = false
-udg_NextDamageType_Copy = 0
 udg_NextDamageWeaponT = 0
 udg_DamageFilterConfigured = false
 udg_DamageFilterAttackT = 0
@@ -1560,6 +1504,7 @@ udg_WEAPON_TYPE_CM_SLICE_Copy = 0
 udg_WEAPON_TYPE_CH_SLICE_Copy = 0
 udg_WEAPON_TYPE_AM_CHOP_Copy = 0
 udg_WEAPON_TYPE_RH_BASH_Copy = 0
+udg_DamageEventUserAmt = 0.0
 end
 
 do
@@ -3608,7 +3553,7 @@ gg_rct_Next_Wave_3 = Rect(-1568.0, 6880.0, -1504.0, 6944.0)
 gg_rct_Next_Wave_4 = Rect(-1312.0, 6880.0, -1248.0, 6944.0)
 end
 
-function Trig_Damage_Engine_Config_Copy_Actions()
+function Trig_Damage_Engine_Config_Actions()
 udg_DamageTypePureExplosive = -2
 udg_DamageTypeExplosive = -1
 udg_DamageTypeCode = 1
@@ -3619,9 +3564,9 @@ udg_DamageTypeReduced = 5
 udg_DamageTypeCriticalStrike = 6
 end
 
-function InitTrig_Damage_Engine_Config_Copy()
-gg_trg_Damage_Engine_Config_Copy = CreateTrigger()
-TriggerAddAction(gg_trg_Damage_Engine_Config_Copy, Trig_Damage_Engine_Config_Copy_Actions)
+function InitTrig_Damage_Engine_Config()
+gg_trg_Damage_Engine_Config = CreateTrigger()
+TriggerAddAction(gg_trg_Damage_Engine_Config, Trig_Damage_Engine_Config_Actions)
 end
 
 function Trig_Kick_Blue_Func004002()
@@ -4604,6 +4549,24 @@ gg_trg_Doom_Autocast = CreateTrigger()
 TriggerRegisterVariableEvent(gg_trg_Doom_Autocast, "udg_DamageEvent", EQUAL, 1.00)
 TriggerAddCondition(gg_trg_Doom_Autocast, Condition(Trig_Doom_Autocast_Conditions))
 TriggerAddAction(gg_trg_Doom_Autocast, Trig_Doom_Autocast_Actions)
+end
+
+function Trig_Earth_Trap_Autocast_Actions()
+end
+
+function InitTrig_Earth_Trap_Autocast()
+gg_trg_Earth_Trap_Autocast = CreateTrigger()
+TriggerRegisterVariableEvent(gg_trg_Earth_Trap_Autocast, "udg_DamageEvent", EQUAL, 1.00)
+TriggerAddAction(gg_trg_Earth_Trap_Autocast, Trig_Earth_Trap_Autocast_Actions)
+end
+
+function Trig_Bladestorm_Autocast_Actions()
+end
+
+function InitTrig_Bladestorm_Autocast()
+gg_trg_Bladestorm_Autocast = CreateTrigger()
+TriggerRegisterVariableEvent(gg_trg_Bladestorm_Autocast, "udg_DamageEvent", EQUAL, 1.00)
+TriggerAddAction(gg_trg_Bladestorm_Autocast, Trig_Bladestorm_Autocast_Actions)
 end
 
 function Trig_Set_Variables_Func250001()
@@ -17453,7 +17416,7 @@ TriggerAddAction(gg_trg_Critical_Aura, Trig_Critical_Aura_Actions)
 end
 
 function InitCustomTriggers()
-InitTrig_Damage_Engine_Config_Copy()
+InitTrig_Damage_Engine_Config()
 InitTrig_Kick_Blue()
 InitTrig_Kick_Teal()
 InitTrig_Kick_Purple()
@@ -17479,6 +17442,8 @@ InitTrig_Poison_Cascade_Autocast()
 InitTrig_Poison_Trap_Autocast()
 InitTrig_Darkness_Trap_Autocast()
 InitTrig_Doom_Autocast()
+InitTrig_Earth_Trap_Autocast()
+InitTrig_Bladestorm_Autocast()
 InitTrig_Set_Variables()
 InitTrig_Set_Random_Wave_Variables()
 InitTrig_Map_Start()
@@ -17648,7 +17613,7 @@ InitTrig_Critical_Aura()
 end
 
 function RunInitializationTriggers()
-ConditionalTriggerExecute(gg_trg_Damage_Engine_Config_Copy)
+ConditionalTriggerExecute(gg_trg_Damage_Engine_Config)
 ConditionalTriggerExecute(gg_trg_Set_Variables)
 ConditionalTriggerExecute(gg_trg_Quest)
 end
