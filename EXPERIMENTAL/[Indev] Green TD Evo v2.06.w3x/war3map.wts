@@ -610,6 +610,21 @@ STRING 96
 |c0000ff00Difficulty: |c0077ff77Normal
 }
 
+STRING 97
+// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
+
+|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff77300
+|c0000ff00Damage per second:|r |c0077ff77500
+|c0000ff00Duration:|r |c0077ff775 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Ice Cage [Auto-Casted]
+|c0000ff00Armour Decrease:|r |c0077ff77-5
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
 STRING 98
 // Abilities: A009 (Poison Bolt), Ubertip (Tooltip - Normal - Extended)
 {
@@ -5597,6 +5612,21 @@ STRING 895
 [Hero]
 }
 
+STRING 896
+// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
+
+|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff77600
+|c0000ff00Damage per second:|r |c0077ff771000
+|c0000ff00Duration:|r |c0077ff775 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Ice Cage [Auto-Casted]
+|c0000ff00Armour Decrease:|r |c0077ff77-8
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
 STRING 897
 // Units: h00T (Flak Tower 6), Ubertip (Tooltip - Extended)
 {
@@ -5914,6 +5944,21 @@ STRING 927
 |c0000ff00Range:|r |c0077ff771000
 |c0000ff00Efficiency:|r |c0077ff771.31 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Slow Poison; reduces enemy movement by 30%
+}
+
+STRING 928
+// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
+
+|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff771200
+|c0000ff00Damage per second:|r |c0077ff772000
+|c0000ff00Duration:|r |c0077ff775 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Ice Cage [Auto-Casted]
+|c0000ff00Armour Decrease:|r |c0077ff77-12
+|c0000ff00Duration:|r |c0077ff775 Seconds
 }
 
 STRING 929
@@ -7420,6 +7465,130 @@ STRING 1108
 // Units: h01C (Fel Tower 4: Warlock), Name (Name)
 {
 Fel Tower 4: Warlock
+}
+
+STRING 1109
+// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
+
+|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff772400
+|c0000ff00Damage per second:|r |c0077ff774000
+|c0000ff00Duration:|r |c0077ff775 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Ice Cage [Auto-Casted]
+|c0000ff00Armour Decrease:|r |c0077ff77-15
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
+STRING 1110
+// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
+
+|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff773000
+|c0000ff00Damage per second:|r |c0077ff776000
+|c0000ff00Duration:|r |c0077ff775 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Ice Cage [Auto-Casted]
+|c0000ff00Armour Decrease:|r |c0077ff77-20
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
+STRING 1111
+// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
+
+|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff774000
+|c0000ff00Damage per second:|r |c0077ff778000
+|c0000ff00Duration:|r |c0077ff775 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Ice Cage [Auto-Casted]
+|c0000ff00Armour Decrease:|r |c0077ff77-25
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
+STRING 1112
+// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
+
+|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff775000
+|c0000ff00Damage per second:|r |c0077ff7710000
+|c0000ff00Duration:|r |c0077ff775 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Ice Cage [Auto-Casted]
+|c0000ff00Armour Decrease:|r |c0077ff77-30
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
+STRING 1113
+// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
+
+|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff777500
+|c0000ff00Damage per second:|r |c0077ff7715000
+|c0000ff00Duration:|r |c0077ff775 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Ice Cage [Auto-Casted]
+|c0000ff00Armour Decrease:|r |c0077ff77-40
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
+STRING 1114
+// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
+
+|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff7710000
+|c0000ff00Damage per second:|r |c0077ff7720000
+|c0000ff00Duration:|r |c0077ff775 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Ice Cage [Auto-Casted]
+|c0000ff00Armour Decrease:|r |c0077ff77-50
+|c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
+STRING 1115
+// Units: n01W (War Machine, Ultimate Rocket Tower), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade To War Machine, Ultimate.|r |cAAAAFFAARocket Tower 10.|r
+}
+
+STRING 1116
+// Units: n01W (War Machine, Ultimate Rocket Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff7724000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.91 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200|r
+|c0000ff00Ability (2):|r |c0077ff77Overdrive; Gains 1 mana for each enemy hit by its attack.|r
+|c0000ff00Ability (3):|r |c0077ff77Electroboom; At 100 mana the rocket tower will discharge its capacitors, hitting up to 8 enemies dealing up to 200% of towers base damage as spell damage.|r
+
+}
+
+STRING 1117
+// Units: n01X (Rocket Tower 7: War Machine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff778000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.71 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200|r
+|c0000ff00Ability (2):|r |c0077ff77Overdrive; Gains 1 mana for each enemy hit by its attack.|r
+|c0000ff00Ability (3):|r |c0077ff77Electroboom; At 100 mana the rocket tower will discharge its capacitors, hitting up to 8 enemies dealing up to 200% of towers base damage as spell damage.|r
+
 }
 
 STRING 1118
@@ -10426,16 +10595,86 @@ STRING 1610
 |c0000ff00Slam - Level 1|r
 }
 
+STRING 1611
+// Units: n01Y (Rocket Tower 6: War Machine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff775500
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.66 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200|r
+|c0000ff00Ability (2):|r |c0077ff77Overdrive; Gains 1 mana for each enemy hit by its attack.|r
+|c0000ff00Ability (3):|r |c0077ff77Electroboom; At 100 mana the rocket tower will discharge its capacitors, hitting up to 8 enemies dealing up to 200% of towers base damage as spell damage.|r
+
+}
+
 STRING 1612
 // Abilities: A01V (Emergency Bouncing Tower), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
+STRING 1613
+// Units: n01Z (Rocket Tower 5: War Machine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff773500
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.60 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200|r
+|c0000ff00Ability (2):|r |c0077ff77Overdrive; Gains 1 mana for each enemy hit by its attack.|r
+|c0000ff00Ability (3):|r |c0077ff77Electroboom; At 100 mana the rocket tower will discharge its capacitors, hitting up to 8 enemies dealing up to 200% of towers base damage as spell damage.|r
+
+}
+
 STRING 1614
 // Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), effect2 (Effect 2)
 {
 ratr
+}
+
+STRING 1615
+// Units: n020 (Rocket Tower 4: War Machine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff772000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.52 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200|r
+|c0000ff00Ability (2):|r |c0077ff77Overdrive; Gains 1 mana for each enemy hit by its attack.|r
+|c0000ff00Ability (3):|r |c0077ff77Electroboom; At 100 mana the rocket tower will discharge its capacitors, hitting up to 8 enemies dealing up to 200% of towers base damage as spell damage.|r
+
+}
+
+STRING 1616
+// Units: n021 (Rocket Tower 8: War Machine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff7712000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.78 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200|r
+|c0000ff00Ability (2):|r |c0077ff77Overdrive; Gains 1 mana for each enemy hit by its attack.|r
+|c0000ff00Ability (3):|r |c0077ff77Electroboom; At 100 mana the rocket tower will discharge its capacitors, hitting up to 8 enemies dealing up to 200% of towers base damage as spell damage.|r
+
+}
+
+STRING 1617
+// Units: n022 (Rocket Tower 9: War Machine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff7717500
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.86 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200|r
+|c0000ff00Ability (2):|r |c0077ff77Overdrive; Gains 1 mana for each enemy hit by its attack.|r
+|c0000ff00Ability (3):|r |c0077ff77Electroboom; At 100 mana the rocket tower will discharge its capacitors, hitting up to 8 enemies dealing up to 200% of towers base damage as spell damage.|r
+
 }
 
 STRING 1623
@@ -20023,12 +20262,6 @@ STRING 3021
 Mortar Team, Ultimate Flak Tower
 }
 
-STRING 3022
-// Units: n01W (War Machine, Ultimate Rocket Tower), Tip (Tooltip - Basic)
-{
-|c0077ff77[Z.] |c0000ff00Upgrade To War Machine, Ultimate.|r |cAAAAFFAARocket Tower 10.|r
-}
-
 STRING 3023
 // Abilities: A03X (Venom 2), Ubertip (Tooltip - Normal - Extended)
 {
@@ -20847,104 +21080,6 @@ STRING 3127
 |c0000ff00Frost Blast and Ice Cage - Level 7
 }
 
-STRING 3128
-// Units: n01W (War Machine, Ultimate Rocket Tower), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff770.50
-|c0000ff00Damage:|r |c0077ff7724000
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff770.91 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200|r
-|c0000ff00Ability (2):|r |c0077ff77Overdrive; Gains 1 mana for each enemy hit by its attack.|r
-|c0000ff00Ability (3):|r |c0077ff77Electroboom; At 250 mana the rocket tower will discharge its capacitors, hitting up to 8 enemies dealing up to 200% of towers base damage as spell damage.|r
-
-}
-
-STRING 3129
-// Units: n01X (Rocket Tower 7: War Machine), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff770.50
-|c0000ff00Damage:|r |c0077ff778000
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff770.71 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200|r
-|c0000ff00Ability (2):|r |c0077ff77Overdrive; Gains 1 mana for each enemy hit by its attack.|r
-|c0000ff00Ability (3):|r |c0077ff77Electroboom; At 250 mana the rocket tower will discharge its capacitors, hitting up to 8 enemies dealing up to 200% of towers base damage as spell damage.|r
-
-}
-
-STRING 3130
-// Units: n01Y (Rocket Tower 6: War Machine), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff770.50
-|c0000ff00Damage:|r |c0077ff775500
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff770.66 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200|r
-|c0000ff00Ability (2):|r |c0077ff77Overdrive; Gains 1 mana for each enemy hit by its attack.|r
-|c0000ff00Ability (3):|r |c0077ff77Electroboom; At 250 mana the rocket tower will discharge its capacitors, hitting up to 8 enemies dealing up to 200% of towers base damage as spell damage.|r
-
-}
-
-STRING 3131
-// Units: n01Z (Rocket Tower 5: War Machine), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff770.50
-|c0000ff00Damage:|r |c0077ff773500
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff770.60 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200|r
-|c0000ff00Ability (2):|r |c0077ff77Overdrive; Gains 1 mana for each enemy hit by its attack.|r
-|c0000ff00Ability (3):|r |c0077ff77Electroboom; At 250 mana the rocket tower will discharge its capacitors, hitting up to 8 enemies dealing up to 200% of towers base damage as spell damage.|r
-
-}
-
-STRING 3132
-// Units: n020 (Rocket Tower 4: War Machine), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff770.50
-|c0000ff00Damage:|r |c0077ff772000
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff770.52 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200|r
-|c0000ff00Ability (2):|r |c0077ff77Overdrive; Gains 1 mana for each enemy hit by its attack.|r
-|c0000ff00Ability (3):|r |c0077ff77Electroboom; At 250 mana the rocket tower will discharge its capacitors, hitting up to 8 enemies dealing up to 200% of towers base damage as spell damage.|r
-
-}
-
-STRING 3133
-// Units: n021 (Rocket Tower 8: War Machine), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff770.50
-|c0000ff00Damage:|r |c0077ff7712000
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff770.78 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200|r
-|c0000ff00Ability (2):|r |c0077ff77Overdrive; Gains 1 mana for each enemy hit by its attack.|r
-|c0000ff00Ability (3):|r |c0077ff77Electroboom; At 250 mana the rocket tower will discharge its capacitors, hitting up to 8 enemies dealing up to 200% of towers base damage as spell damage.|r
-
-}
-
-STRING 3134
-// Units: n022 (Rocket Tower 9: War Machine), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff770.50
-|c0000ff00Damage:|r |c0077ff7717500
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff770.86 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200|r
-|c0000ff00Ability (2):|r |c0077ff77Overdrive; Gains 1 mana for each enemy hit by its attack.|r
-|c0000ff00Ability (3):|r |c0077ff77Electroboom; At 250 mana the rocket tower will discharge its capacitors, hitting up to 8 enemies dealing up to 200% of towers base damage as spell damage.|r
-
-}
-
 STRING 3135
 // Abilities: A00Y (Blitz Mode), Hotkey (Hotkey - Normal)
 {
@@ -21112,113 +21247,14 @@ STRING 3154
 |c0000ff00Duration:|r |c0077ff775 Seconds
 }
 
-STRING 3155
-// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
-
-|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
-|c0000ff00Damage:|r |c0077ff77300
-|c0000ff00Damage per second:|r |c0077ff77500
-|c0000ff00Duration:|r |c0077ff775 Seconds
-}
-
 STRING 3156
 {
 [None]
 }
 
-STRING 3157
-// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
-
-|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
-|c0000ff00Damage:|r |c0077ff77600
-|c0000ff00Damage per second:|r |c0077ff771000
-|c0000ff00Duration:|r |c0077ff775 Seconds
-}
-
 STRING 3158
 {
 [Endless Creeps]
-}
-
-STRING 3159
-// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
-
-|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
-|c0000ff00Damage:|r |c0077ff771200
-|c0000ff00Damage per second:|r |c0077ff772000
-|c0000ff00Duration:|r |c0077ff775 Seconds
-}
-
-STRING 3160
-// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
-
-|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
-|c0000ff00Damage:|r |c0077ff772400
-|c0000ff00Damage per second:|r |c0077ff774000
-|c0000ff00Duration:|r |c0077ff775 Seconds
-}
-
-STRING 3161
-// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
-
-|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
-|c0000ff00Damage:|r |c0077ff773000
-|c0000ff00Damage per second:|r |c0077ff776000
-|c0000ff00Duration:|r |c0077ff775 Seconds
-}
-
-STRING 3162
-// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
-
-|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
-|c0000ff00Damage:|r |c0077ff774000
-|c0000ff00Damage per second:|r |c0077ff778000
-|c0000ff00Duration:|r |c0077ff775 Seconds
-}
-
-STRING 3163
-// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
-
-|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
-|c0000ff00Damage:|r |c0077ff775000
-|c0000ff00Damage per second:|r |c0077ff7710000
-|c0000ff00Duration:|r |c0077ff775 Seconds
-}
-
-STRING 3164
-// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
-
-|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
-|c0000ff00Damage:|r |c0077ff777500
-|c0000ff00Damage per second:|r |c0077ff7715000
-|c0000ff00Duration:|r |c0077ff775 Seconds
-}
-
-STRING 3165
-// Abilities: A04N (Frost Blast and Ice Cage), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77When Frost Blast deals damage their is a [5% + 1% per frost trap built globally] chance to trigger Ice Cage
-
-|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
-|c0000ff00Damage:|r |c0077ff7710000
-|c0000ff00Damage per second:|r |c0077ff7720000
-|c0000ff00Duration:|r |c0077ff775 Seconds
 }
 
 STRING 3166
