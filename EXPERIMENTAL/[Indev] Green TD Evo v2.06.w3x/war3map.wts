@@ -6966,12 +6966,6 @@ STRING 1046
 R
 }
 
-STRING 1047
-// Abilities: A03O (Intelligence Bonus), Tip (Tooltip - Normal)
-{
-|c0077ff77[E|r |c0000ff00Intelligence Bonus
-}
-
 STRING 1048
 {
 Max Level Reached
@@ -10675,6 +10669,36 @@ STRING 1617
 |c0000ff00Ability (2):|r |c0077ff77Overdrive; Gains 1 mana for each enemy hit by its attack.|r
 |c0000ff00Ability (3):|r |c0077ff77Electroboom; At 100 mana the rocket tower will discharge its capacitors, hitting up to 8 enemies dealing up to 200% of towers base damage as spell damage.|r
 
+}
+
+STRING 1618
+// Abilities: A04U (Gamble Bonus), Name (Name)
+{
+Gamble Bonus
+}
+
+STRING 1619
+// Abilities: A04U (Gamble Bonus), EditorSuffix (Editor Suffix)
+{
+[Learn]
+}
+
+STRING 1620
+// Abilities: A04V (Exp Bonus), Name (Name)
+{
+Exp Bonus
+}
+
+STRING 1621
+// Abilities: A04V (Exp Bonus), EditorSuffix (Editor Suffix)
+{
+[Learn]
+}
+
+STRING 1622
+// Abilities: A03O (Intelligence Bonus), Tip (Tooltip - Normal)
+{
+|c0077ff77[E]|r |c0000ff00Intelligence Bonus
 }
 
 STRING 1623
@@ -20262,6 +20286,12 @@ STRING 3021
 Mortar Team, Ultimate Flak Tower
 }
 
+STRING 3022
+// Abilities: A04U (Gamble Bonus), Tip (Tooltip - Normal)
+{
+|c0077ff77[S]|r |c0000ff00Gamble Bonus
+}
+
 STRING 3023
 // Abilities: A03X (Venom 2), Ubertip (Tooltip - Normal - Extended)
 {
@@ -21080,8 +21110,26 @@ STRING 3127
 |c0000ff00Frost Blast and Ice Cage - Level 7
 }
 
-STRING 3135
+STRING 3128
+// Abilities: A04V (Exp Bonus), Tip (Tooltip - Normal)
+{
+|c0077ff77[D]|r |c0000ff00Exp Bonus
+}
+
+STRING 3129
 // Abilities: A00Y (Blitz Mode), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 3130
+// Abilities: A029 (Boss Waves), Hotkey (Hotkey - Normal)
+{
+S
+}
+
+STRING 3135
+// Abilities: A04V (Exp Bonus), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -22474,13 +22522,13 @@ Unstuck
 }
 
 STRING 4334
-// Abilities: A029 (Boss Waves), Hotkey (Hotkey - Normal)
+// Abilities: A02T (Disable Poison Tower), Hotkey (Hotkey - Normal)
 {
 S
 }
 
 STRING 4335
-// Abilities: A02T (Disable Poison Tower), Hotkey (Hotkey - Normal)
+// Abilities: A033 (Speed Mode), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -22981,13 +23029,13 @@ Spell Tower 2: Shaman
 }
 
 STRING 5597
-// Abilities: A033 (Speed Mode), Hotkey (Hotkey - Normal)
+// Abilities: A032 (Hard - Chaos Mode), Hotkey (Hotkey - Normal)
 {
 S
 }
 
 STRING 5598
-// Abilities: A032 (Hard - Chaos Mode), Hotkey (Hotkey - Normal)
+// Abilities: A04U (Gamble Bonus), Hotkey (Hotkey - Normal)
 {
 S
 }
