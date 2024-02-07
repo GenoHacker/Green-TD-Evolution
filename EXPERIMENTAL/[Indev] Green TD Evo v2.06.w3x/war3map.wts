@@ -1504,19 +1504,6 @@ STRING 209
 E
 }
 
-STRING 210
-// Abilities: A011 (Gamble), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Gamble 50 gold for a chance to get more gold. The cost to gamble increases by 50 each time you lose gold, the cost stops increasing at 1500.
-
-75% chance to lose your gold and get nothing.
-15% chance to get your gold back.
-7% chance to get 2000 gold.
-3% chance to get the jackpot.
-
-The jackpot starts at 3000 Gold and increases an amount equal to the cost to gamble. You can use -jackpot to see what the current jackpot is.
-}
-
 STRING 211
 // Units: nbzk ([Air] Bronze Drake), Name (Name)
 {
@@ -4321,7 +4308,7 @@ Bouncing Tower 9: Shadow Wolf
 }
 
 STRING 671
-// Abilities: A02Z (Gold Rush Mode), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A030 (Random Waves), Ubertip (Tooltip - Normal - Extended)
 {
 |c0000ff00Status = |c00FF0000Deactivated
 }
@@ -4488,12 +4475,6 @@ STRING 697
 |c0077ff77[Z] |c0000ff00Upgrade To Aspect Of Blood, Ultimate.|r |cAAAAFFAASiege Tower 10.|r
 }
 
-STRING 698
-// Abilities: A030 (Random Waves), Ubertip (Tooltip - Normal - Extended)
-{
-|c0000ff00Status = |c00FF0000Deactivated
-}
-
 STRING 699
 // Units: h022 (Hydralisk, Ultimate Poison Tower), Tip (Tooltip - Basic)
 {
@@ -4522,12 +4503,6 @@ STRING 703
 // Units: n00O (Bronze Dragon, Ultimate Air Tower), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Bronze Dragon, Ultimate.|r |cAAAAFFAAAir Tower 10.|r
-}
-
-STRING 704
-// Abilities: A031 (Headhunter Mode), Ubertip (Tooltip - Normal - Extended)
-{
-|c0000ff00Status = |c00FF0000Deactivated
 }
 
 STRING 705
@@ -4612,12 +4587,6 @@ STRING 714
 C
 }
 
-STRING 715
-// Abilities: A033 (Speed Mode), Ubertip (Tooltip - Normal - Extended)
-{
-|c0000ff00Status = |c00FF0000Deactivated
-}
-
 STRING 716
 // Units: h024 (Chaos Tower 2: Chaos Elemental), Tip (Tooltip - Basic)
 {
@@ -4634,12 +4603,6 @@ STRING 718
 // Units: h01Y (Chaos Tower 4: Chaos Treant), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Chaos Treant.|r |cAAAAFFAAChaos Tower 4.|r
-}
-
-STRING 719
-// Abilities: A035 (Swarm Mode), Ubertip (Tooltip - Normal - Extended)
-{
-|c0000ff00Status = |c00FF0000Deactivated
 }
 
 STRING 720
@@ -4681,12 +4644,6 @@ STRING 725
 // Units: h02P (Chaos Tower 6: Chaos Stalker), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Chaos Stalker.|r |cAAAAFFAAChaos Tower 6.|r
-}
-
-STRING 726
-// Abilities: A036 (Endless Mode), Ubertip (Tooltip - Normal - Extended)
-{
-|c0000ff00Status = |c00FF0000Deactivated
 }
 
 STRING 727
@@ -5738,12 +5695,6 @@ STRING 904
 STRING 905
 {
 v2.04 Release Date - 24/12/19
-}
-
-STRING 906
-// Abilities: A00Y (Blitz Mode), Ubertip (Tooltip - Normal - Extended)
-{
-|c0000ff00Status = |c00FF0000Deactivated
 }
 
 STRING 907
@@ -6966,6 +6917,12 @@ STRING 1046
 R
 }
 
+STRING 1047
+// Abilities: A02Q (Disable Aura Tower), Tip (Tooltip - Normal)
+{
+|c0077ff77[Z]|r |c0000ff00Enable Aura Tower
+}
+
 STRING 1048
 {
 Max Level Reached
@@ -7615,7 +7572,7 @@ A
 }
 
 STRING 1123
-// Abilities: A03O (Intelligence Bonus), EditorSuffix (Editor Suffix)
+// Abilities: A03R (Income Bonus), EditorSuffix (Editor Suffix)
 {
 [Learn]
 }
@@ -7644,7 +7601,7 @@ STRING 1127
 }
 
 STRING 1128
-// Abilities: A03R (Income Bonus), EditorSuffix (Editor Suffix)
+// Abilities: A03T (Emergency Towers), EditorSuffix (Editor Suffix)
 {
 [Learn]
 }
@@ -8004,7 +7961,7 @@ STRING 1179
 }
 
 STRING 1180
-// Abilities: A03T (Emergency Towers), EditorSuffix (Editor Suffix)
+// Abilities: A04V (Exp Bonus), EditorSuffix (Editor Suffix)
 {
 [Learn]
 }
@@ -10672,13 +10629,13 @@ STRING 1617
 }
 
 STRING 1618
-// Abilities: A04U (Gamble Bonus), Name (Name)
+// Abilities: A04W (Gamble Bonus), Name (Name)
 {
 Gamble Bonus
 }
 
 STRING 1619
-// Abilities: A04U (Gamble Bonus), EditorSuffix (Editor Suffix)
+// Abilities: A04W (Gamble Bonus), EditorSuffix (Editor Suffix)
 {
 [Learn]
 }
@@ -10687,12 +10644,6 @@ STRING 1620
 // Abilities: A04V (Exp Bonus), Name (Name)
 {
 Exp Bonus
-}
-
-STRING 1621
-// Abilities: A04V (Exp Bonus), EditorSuffix (Editor Suffix)
-{
-[Learn]
 }
 
 STRING 1622
@@ -14480,14 +14431,6 @@ STRING 2180
 // Units: h01G (Fel Tower 9: Warlock), Name (Name)
 {
 Fel Tower 9: Warlock
-}
-
-STRING 2181
-// Abilities: A00V (Tower Options), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Allows you to disable up to 3 towers or enable previously disabled towers.
-
-Income is increased by |cffFDD0172 Gold|c0077ff77 for each disabled tower.
 }
 
 STRING 2182
@@ -18315,13 +18258,16 @@ STRING 2730
 -- Added Crit Bonus to hero
 -- Added more easter eggs
 -- Added several new towers
--- Added new abilities to traps
+-- Added many new abilities to all traps
 -- Added bosses to random waves
+-- Removed food cost from aura tower and trap blueprints
 -- Reduced Health, Armour and Movement Speed of non-random waves
 -- Fixed Endless Mode and Random Waves not being compatible
 -- Fixed chaos mode difficultys still being active after changing to a non-chaos mode difficulty during game setup
 -- Fixed -wave command only being available to player 1
 -- Fixed Game Setup Unit being removed when its owner leaves
+-- Fixed Game Setup Units ability tooltips not changing
+-- Changes to Game Setup Unit ability tooltips
 -- Changes to multiple commands
 -- Changes to multiboard
 }
@@ -20287,7 +20233,7 @@ Mortar Team, Ultimate Flak Tower
 }
 
 STRING 3022
-// Abilities: A04U (Gamble Bonus), Tip (Tooltip - Normal)
+// Abilities: A04W (Gamble Bonus), Tip (Tooltip - Normal)
 {
 |c0077ff77[S]|r |c0000ff00Gamble Bonus
 }
@@ -21128,6 +21074,18 @@ STRING 3130
 S
 }
 
+STRING 3132
+// Abilities: A02R (Disable Bash Tower), Tip (Tooltip - Normal)
+{
+|c0077ff77[F]|r |c0000ff00Enable Bash Tower
+}
+
+STRING 3134
+// Abilities: A02V (Disable Bouncing Tower), Tip (Tooltip - Normal)
+{
+|c0077ff77[E]|r |c0000ff00Enable Bouncing Tower
+}
+
 STRING 3135
 // Abilities: A04V (Exp Bonus), Hotkey (Hotkey - Normal)
 {
@@ -21300,9 +21258,27 @@ STRING 3156
 [None]
 }
 
+STRING 3157
+// Abilities: A02W (Disable Air Tower), Tip (Tooltip - Normal)
+{
+|c0077ff77[W]|r |c0000ff00Enable Air Tower
+}
+
 STRING 3158
 {
 [Endless Creeps]
+}
+
+STRING 3160
+// Abilities: A00Y (Blitz Mode), Tip (Tooltip - Normal)
+{
+|c0077ff77[D]|r |c0000ff00Deactivate Blitz Mode
+}
+
+STRING 3164
+// Abilities: A02T (Disable Poison Tower), Tip (Tooltip - Normal)
+{
+|c0077ff77[S]|r |c0000ff00Enable Poison Tower
 }
 
 STRING 3166
@@ -21389,6 +21365,12 @@ STRING 3176
 |c0077ff77Increases damage dealt to enemy targets with Divine armor by 100%
 }
 
+STRING 3177
+// Abilities: A02X (Disable Research Tower), Tip (Tooltip - Normal)
+{
+|c0077ff77[D]|r |c0000ff00Enable Research Tower
+}
+
 STRING 3178
 // Abilities: A008 (Bloodtrap Level), Name (Name)
 {
@@ -21411,16 +21393,52 @@ STRING 3180
 |c0000ff00Bonus Damage:|r |c0077ff77100%
 }
 
+STRING 3181
+// Abilities: A02Y (Disable Frost Tower), Tip (Tooltip - Normal)
+{
+|c0077ff77[A]|r |c0000ff00Enable Frost Tower
+}
+
+STRING 3183
+// Abilities: A02J (Disable Spell Tower), Tip (Tooltip - Normal)
+{
+|c0077ff77[C]|r |c0000ff00Enable Spell Tower
+}
+
+STRING 3184
+// Abilities: A02O (Disable Siege Tower), Tip (Tooltip - Normal)
+{
+|c0077ff77[Q]|r |c0000ff00Enable Siege Tower
+}
+
+STRING 3187
+// Abilities: A02P (Disable Traps), Tip (Tooltip - Normal)
+{
+|c0077ff77[X]|r |c0000ff00Enable Traps
+}
+
 STRING 3188
 // Abilities: A024 (Hero Waves), Hotkey (Hotkey - Normal)
 {
 R
 }
 
+STRING 3190
+// Abilities: A02Z (Gold Rush Mode), Tip (Tooltip - Normal)
+{
+|c0077ff77[W]|r |c0000ff00Deactivate Gold Rush Mode
+}
+
 STRING 3191
 // Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 W
+}
+
+STRING 3192
+// Abilities: A036 (Endless Mode), Tip (Tooltip - Normal)
+{
+|c0077ff77[Q]|r |c0000ff00Deactivate Endless Mode
 }
 
 STRING 3194
@@ -21927,10 +21945,100 @@ STRING 3240
 |c0000ff00Duration:|r |c0077ff775 Seconds
 }
 
+STRING 3241
+// Abilities: A030 (Random Waves), Tip (Tooltip - Normal)
+{
+|c0077ff77[R]|r |c0000ff00Deactivate Random Waves
+}
+
+STRING 3242
+// Abilities: A033 (Speed Mode), Tip (Tooltip - Normal)
+{
+|c0077ff77[S]|r |c0000ff00Deactivate Speed Mode
+}
+
+STRING 3243
+// Abilities: A035 (Swarm Mode), Tip (Tooltip - Normal)
+{
+|c0077ff77[E]|r |c0000ff00Deactivate Swarm Mode
+}
+
+STRING 3247
+// Abilities: A02J (Disable Spell Tower), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Tower Status = |c00FF0000Disabled
+}
+
+STRING 3248
+// Abilities: A02O (Disable Siege Tower), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Tower Status = |c00FF0000Disabled
+}
+
+STRING 3249
+// Abilities: A02P (Disable Traps), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Tower Status = |c00FF0000Disabled
+}
+
+STRING 3250
+// Abilities: A02Q (Disable Aura Tower), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Tower Status = |c00FF0000Disabled
+}
+
+STRING 3251
+// Abilities: A02R (Disable Bash Tower), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Tower Status = |c00FF0000Disabled
+}
+
+STRING 3252
+// Abilities: A02S (Disable Chaos Tower), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Tower Status = |c00FF0000Disabled
+}
+
 STRING 3253
 // Abilities: A02K (Normal Mode), Hotkey (Hotkey - Normal)
 {
 E
+}
+
+STRING 3254
+// Abilities: A02T (Disable Poison Tower), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Tower Status = |c00FF0000Disabled
+}
+
+STRING 3255
+// Abilities: A02V (Disable Bouncing Tower), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Tower Status = |c00FF0000Disabled
+}
+
+STRING 3256
+// Abilities: A02W (Disable Air Tower), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Tower Status = |c00FF0000Disabled
+}
+
+STRING 3257
+// Abilities: A02X (Disable Research Tower), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Tower Status = |c00FF0000Disabled
+}
+
+STRING 3258
+// Abilities: A030 (Random Waves), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Status = |c0077ff77Activated
+}
+
+STRING 3260
+// Abilities: A031 (Headhunter Mode), Tip (Tooltip - Normal)
+{
+|c0077ff77[A]|r |c0000ff00Deactivate Headhunter Mode
 }
 
 STRING 3262
@@ -21955,6 +22063,156 @@ STRING 3267
 // Units: h00Z (Flak Tower 8), Hotkey (Hotkey)
 {
 Z
+}
+
+STRING 3270
+// Abilities: A02S (Disable Chaos Tower), Tip (Tooltip - Normal)
+{
+|c0077ff77[R]|r |c0000ff00Enable Chaos Tower
+}
+
+STRING 3271
+// Abilities: A02Y (Disable Frost Tower), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Tower Status = |c00FF0000Disabled
+}
+
+STRING 3272
+// Abilities: A00V (Tower Options), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Allows you to disable up to 3 towers or enable previously disabled towers.
+
+Income is increased by |cffFDD0175 Gold|c0077ff77 for each disabled tower.
+}
+
+STRING 3273
+// Abilities: A02Z (Gold Rush Mode), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Status = |c00FF0000Deactivated
+
+|c0077ff77Creeps with more than 60% health have a 10% chance to enter a gold rush. Restoring health and Increasing Armour, Max Health, Movespeed, Bounty and increasing the number of lives it depletes.
+}
+
+STRING 3274
+// Abilities: A02Z (Gold Rush Mode), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Status = |c0077ff77Activated
+
+|c0077ff77Creeps with more than 60% health have a 10% chance to enter a gold rush. Restoring health and Increasing Armour, Max Health, Movespeed, Bounty and increasing the number of lives it depletes.
+}
+
+STRING 3275
+// Abilities: A031 (Headhunter Mode), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Status = |c00FF0000Deactivated
+
+|c0077ff77Lets you spawn random bosses, they will give a gold bonus to all players if killed, if it reachs the end point it will deplete all lives and you will lose.
+}
+
+STRING 3276
+// Abilities: A031 (Headhunter Mode), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Status = |c0077ff77Activated
+
+|c0077ff77Lets you spawn random bosses, they will give a gold bonus to all players if killed, if it reachs the end point it will deplete all lives and you will lose.
+}
+
+STRING 3277
+// Abilities: A033 (Speed Mode), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Status = |c00FF0000Deactivated
+
+|c0077ff77Time between wave spawns is set to reduced and creep movement speed is maxed.
+}
+
+STRING 3278
+// Abilities: A033 (Speed Mode), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Status = |c0077ff77Activated
+
+|c0077ff77Time between wave spawns is set to reduced and creep movement speed is maxed.
+}
+
+STRING 3279
+// Abilities: A035 (Swarm Mode), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Status = |c00FF0000Deactivated
+
+|c0077ff77Total creeps spawned per wave is double, excluding bosses.
+}
+
+STRING 3280
+// Abilities: A035 (Swarm Mode), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Status = |c0077ff77Activated
+
+|c0077ff77Total creeps spawned per wave is double, excluding bosses.
+}
+
+STRING 3281
+// Abilities: A036 (Endless Mode), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Status = |c00FF0000Deactivated
+
+|c0077ff77Once you reach wave 60 the game will continuously spawn more waves until you lose the game, creeps gain 20% Health every wave, when Random Waves is activated alongside Endless mode 300 waves are generated instead of 60.
+}
+
+STRING 3282
+// Abilities: A036 (Endless Mode), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Status = |c0077ff77Activated
+
+|c0077ff77Once you reach wave 60 the game will continuously spawn more waves until you lose the game, creeps gain 20% Health every wave, when random waves is activated alongside Endless mode 300 waves are generated instead of 60.
+}
+
+STRING 3283
+// Abilities: A00Y (Blitz Mode), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Status = |c00FF0000Deactivated
+
+|c0000ff00Waves will spawn after the timer reaches 0 instead of waiting for the current wave to be killed.
+}
+
+STRING 3284
+// Abilities: A00Y (Blitz Mode), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Status = |c0077ff77Activated
+
+|c0000ff00Waves will spawn after the timer reaches 0 instead of waiting for the current wave to be killed.
+}
+
+STRING 3285
+{
+Max Level Reached
+}
+
+STRING 3288
+// Abilities: A03O (Intelligence Bonus), EditorSuffix (Editor Suffix)
+{
+[Learn]dsds
+}
+
+STRING 3290
+// Abilities: A04W (Gamble Bonus), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Increases gamble bonus by |cffFDD01715|c0077ff77 for all players.
+
+Up to |cffFDD01775|c0077ff77 can be added to gamble bonus using this ability.
+}
+
+STRING 3291
+// Abilities: A011 (Gamble), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Gamble some gold for a chance to get more gold. The cost to gamble increases by 50 each time you lose gold, the cost stops increasing at 1500.
+
+Rolls a random number between [0 + Gamble Bonus] and 1000.
+
+75% base chance to lose your gold and get nothing.
+15% base chance to get your gold back.
+7% base chance to get 2000 gold.
+3% base chance to get the jackpot.
+
+The jackpot starts at 3000 Gold and increases an amount equal to the cost to gamble. You can use -jackpot to see what the current jackpot is.
 }
 
 STRING 3321
@@ -23035,7 +23293,7 @@ S
 }
 
 STRING 5598
-// Abilities: A04U (Gamble Bonus), Hotkey (Hotkey - Normal)
+// Abilities: A04W (Gamble Bonus), Hotkey (Hotkey - Normal)
 {
 S
 }

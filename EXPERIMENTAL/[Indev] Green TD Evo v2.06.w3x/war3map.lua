@@ -539,6 +539,8 @@ udg_WEAPON_TYPE_CH_SLICE_Copy_2 = 0
 udg_WEAPON_TYPE_AM_CHOP_Copy_2 = 0
 udg_WEAPON_TYPE_RH_BASH_Copy_2 = 0
 udg_DamageEventWeaponT_Copy = 0
+udg_Integer_DisTowerIncomeBonus = 0
+udg_Integer_GambleBonus = 0
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -1768,6 +1770,8 @@ udg_WEAPON_TYPE_CH_SLICE_Copy_2 = 0
 udg_WEAPON_TYPE_AM_CHOP_Copy_2 = 0
 udg_WEAPON_TYPE_RH_BASH_Copy_2 = 0
 udg_DamageEventWeaponT_Copy = 0
+udg_Integer_DisTowerIncomeBonus = 5
+udg_Integer_GambleBonus = 0
 end
 
 --Global Initialization 1.1 also hooks the InitCustomTriggers and RunInitializationTriggers functions
@@ -5960,7 +5964,7 @@ return true
 end
 
 function Trig_Hero_Abilities_Func012Func001Func002C()
-if (not (udg_Integer_Array_FoodBonus[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] <= 4)) then
+if (not (udg_Integer_Array_HeroCritLevel[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] <= 4)) then
 return false
 end
 return true
@@ -5975,6 +5979,27 @@ end
 
 function Trig_Hero_Abilities_Func012C()
 if (not (GetSpellAbilityId() == FourCC("A00S"))) then
+return false
+end
+return true
+end
+
+function Trig_Hero_Abilities_Func014Func001Func003C()
+if (not (udg_Integer_GambleBonus <= 4)) then
+return false
+end
+return true
+end
+
+function Trig_Hero_Abilities_Func014Func001C()
+if (not (udg_Integer_GambleBonus >= 76)) then
+return false
+end
+return true
+end
+
+function Trig_Hero_Abilities_Func014C()
+if (not (GetSpellAbilityId() == FourCC("A04W"))) then
 return false
 end
 return true
@@ -6055,6 +6080,20 @@ udg_Real_Array_SkillCritChance[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbil
 udg_Real_Array_SkillCritDamage[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = (udg_Real_Array_SkillCritDamage[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] + 0.20)
 udg_Integer_Array_HeroCritLevel[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = (udg_Integer_Array_HeroCritLevel[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] + 1)
 DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], "TRIGSTR_160")
+AdjustPlayerStateBJ(-1, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_LUMBER)
+else
+end
+end
+else
+end
+if (Trig_Hero_Abilities_Func014C()) then
+if (Trig_Hero_Abilities_Func014Func001C()) then
+udg_Integer_GambleBonus = 76
+CreateTextTagUnitBJ("TRIGSTR_3285", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
+else
+if (Trig_Hero_Abilities_Func014Func001Func003C()) then
+udg_Integer_GambleBonus = (udg_Integer_GambleBonus + 15)
+DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], (udg_String_Array_MultiBoardColours[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. " |c0000ff00has increased the overall success chance of gamble by 1.5%")))
 AdjustPlayerStateBJ(-1, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_LUMBER)
 else
 end
@@ -6591,84 +6630,70 @@ end
 end
 if (Trig_Choose_Mode_Gamemodes_Func029C()) then
 if (Trig_Choose_Mode_Gamemodes_Func029Func001C()) then
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[Q]|r |c0000ff00Activate Endless Mode", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Status = |c00FF0000Deactivated", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 1)
 udg_Integer_EndlessMode = 0
 else
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[Q]|r |c0000ff00Deactivate Endless Mode", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Status = |c0077ff77Activated", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 2)
 udg_Integer_EndlessMode = 1
 end
 else
 end
 if (Trig_Choose_Mode_Gamemodes_Func031C()) then
 if (Trig_Choose_Mode_Gamemodes_Func031Func001C()) then
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[W]|r |c0000ff00Activate Gold Rush Mode", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Status = |c00FF0000Deactivated", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 1)
 udg_Integer_GoldRush = 0
 else
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[W]|r |c0000ff00Deactivate Gold Rush Mode", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Status = |c0077ff77Activated", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 2)
 udg_Integer_GoldRush = 1
 end
 else
 end
 if (Trig_Choose_Mode_Gamemodes_Func033C()) then
 if (Trig_Choose_Mode_Gamemodes_Func033Func001C()) then
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[E]|r |c0000ff00Activate Swarm Mode", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Status = |c00FF0000Deactivated", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 1)
 udg_Integer_SwarmMode = 0
 else
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[E]|r |c0000ff00Deactivate Swarm Mode", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Status = |c0077ff77Activated", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 2)
 udg_Integer_SwarmMode = 1
 end
 else
 end
 if (Trig_Choose_Mode_Gamemodes_Func035C()) then
 if (Trig_Choose_Mode_Gamemodes_Func035Func001C()) then
-BlzSetAbilityTooltip(FourCC("A030"), "|c0077ff77[R]|r |c0000ff00Activate Random Waves", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Status = |c00FF0000Deactivated", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 1)
 udg_Integer_RWActivated = 0
 else
-BlzSetAbilityTooltip(FourCC("A030"), "|c0077ff77[R]|r |c0000ff00Deactivate Random Waves", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Status = |c0077ff77Activated", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 2)
 udg_Integer_RWActivated = 1
 end
 else
 end
 if (Trig_Choose_Mode_Gamemodes_Func037C()) then
 if (Trig_Choose_Mode_Gamemodes_Func037Func001C()) then
-BlzSetAbilityTooltip(FourCC("A031"), "|c0077ff77[A]|r |c0000ff00Activate Headhunter Mode", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Status = |c00FF0000Deactivated", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 1)
 udg_Integer_HHActivated = 0
 else
-BlzSetAbilityTooltip(FourCC("A031"), "|c0077ff77[A]|r |c0000ff00Deactivate Headhunter Mode", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Status = |c0077ff77Activated", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 2)
 udg_Integer_HHActivated = 1
 end
 else
 end
 if (Trig_Choose_Mode_Gamemodes_Func039C()) then
 if (Trig_Choose_Mode_Gamemodes_Func039Func001C()) then
-BlzSetAbilityTooltip(FourCC("A033"), "|c0077ff77[S]|r |c0000ff00Activate Speed Mode", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Status = |c00FF0000Deactivated", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 1)
 udg_Integer_SpeedMode = 0
 else
-BlzSetAbilityTooltip(FourCC("A033"), "|c0077ff77[S]|r |c0000ff00Deactivate Speed Mode", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Status = |c0077ff77Activated", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 2)
 udg_Integer_SpeedMode = 1
 end
 else
 end
 if (Trig_Choose_Mode_Gamemodes_Func041C()) then
 if (Trig_Choose_Mode_Gamemodes_Func041Func001C()) then
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[D]|r |c0000ff00Activate Blitz Mode", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Status = |c00FF0000Deactivated", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 1)
 udg_Integer_BlitzMode = 0
 else
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[D]|r |c0000ff00Deactivate Blitz Mode", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Status = |c0077ff77Activated", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 2)
 udg_Integer_BlitzMode = 1
 end
 else
@@ -6691,18 +6716,18 @@ end
 return true
 end
 
-function Trig_Choose_Mode_Towers_Func005Func001Func003Func008A()
+function Trig_Choose_Mode_Towers_Func005Func001Func002Func007A()
 SetPlayerUnitAvailableBJ(FourCC("n00M"), false, GetEnumPlayer())
 end
 
-function Trig_Choose_Mode_Towers_Func005Func001Func003C()
+function Trig_Choose_Mode_Towers_Func005Func001Func002C()
 if (not (udg_Integer_TowerLimit >= 3)) then
 return false
 end
 return true
 end
 
-function Trig_Choose_Mode_Towers_Func005Func001Func008A()
+function Trig_Choose_Mode_Towers_Func005Func001Func007A()
 SetPlayerUnitAvailableBJ(FourCC("n00M"), true, GetEnumPlayer())
 end
 
@@ -6720,18 +6745,18 @@ end
 return true
 end
 
-function Trig_Choose_Mode_Towers_Func007Func001Func003Func008A()
+function Trig_Choose_Mode_Towers_Func007Func001Func002Func007A()
 SetPlayerUnitAvailableBJ(FourCC("h00G"), false, GetEnumPlayer())
 end
 
-function Trig_Choose_Mode_Towers_Func007Func001Func003C()
+function Trig_Choose_Mode_Towers_Func007Func001Func002C()
 if (not (udg_Integer_TowerLimit >= 3)) then
 return false
 end
 return true
 end
 
-function Trig_Choose_Mode_Towers_Func007Func001Func008A()
+function Trig_Choose_Mode_Towers_Func007Func001Func007A()
 SetPlayerUnitAvailableBJ(FourCC("h00G"), true, GetEnumPlayer())
 end
 
@@ -6749,15 +6774,15 @@ end
 return true
 end
 
-function Trig_Choose_Mode_Towers_Func009Func002Func007A()
+function Trig_Choose_Mode_Towers_Func009Func002Func006A()
 SetPlayerUnitAvailableBJ(FourCC("h021"), true, GetEnumPlayer())
 end
 
-function Trig_Choose_Mode_Towers_Func009Func002Func009Func007A()
+function Trig_Choose_Mode_Towers_Func009Func002Func008Func006A()
 SetPlayerUnitAvailableBJ(FourCC("h021"), false, GetEnumPlayer())
 end
 
-function Trig_Choose_Mode_Towers_Func009Func002Func009C()
+function Trig_Choose_Mode_Towers_Func009Func002Func008C()
 if (not (udg_Integer_TowerLimit >= 3)) then
 return false
 end
@@ -6778,15 +6803,15 @@ end
 return true
 end
 
-function Trig_Choose_Mode_Towers_Func011Func002Func007A()
+function Trig_Choose_Mode_Towers_Func011Func002Func006A()
 SetPlayerUnitAvailableBJ(FourCC("e001"), true, GetEnumPlayer())
 end
 
-function Trig_Choose_Mode_Towers_Func011Func002Func009Func007A()
+function Trig_Choose_Mode_Towers_Func011Func002Func008Func006A()
 SetPlayerUnitAvailableBJ(FourCC("e001"), false, GetEnumPlayer())
 end
 
-function Trig_Choose_Mode_Towers_Func011Func002Func009C()
+function Trig_Choose_Mode_Towers_Func011Func002Func008C()
 if (not (udg_Integer_TowerLimit >= 3)) then
 return false
 end
@@ -6807,15 +6832,15 @@ end
 return true
 end
 
-function Trig_Choose_Mode_Towers_Func013Func002Func007A()
+function Trig_Choose_Mode_Towers_Func013Func002Func006A()
 SetPlayerUnitAvailableBJ(FourCC("h023"), true, GetEnumPlayer())
 end
 
-function Trig_Choose_Mode_Towers_Func013Func002Func009Func007A()
+function Trig_Choose_Mode_Towers_Func013Func002Func008Func006A()
 SetPlayerUnitAvailableBJ(FourCC("h023"), false, GetEnumPlayer())
 end
 
-function Trig_Choose_Mode_Towers_Func013Func002Func009C()
+function Trig_Choose_Mode_Towers_Func013Func002Func008C()
 if (not (udg_Integer_TowerLimit >= 3)) then
 return false
 end
@@ -6836,15 +6861,15 @@ end
 return true
 end
 
-function Trig_Choose_Mode_Towers_Func015Func002Func007A()
+function Trig_Choose_Mode_Towers_Func015Func002Func006A()
 SetPlayerUnitAvailableBJ(FourCC("n006"), true, GetEnumPlayer())
 end
 
-function Trig_Choose_Mode_Towers_Func015Func002Func009Func007A()
+function Trig_Choose_Mode_Towers_Func015Func002Func008Func006A()
 SetPlayerUnitAvailableBJ(FourCC("n006"), false, GetEnumPlayer())
 end
 
-function Trig_Choose_Mode_Towers_Func015Func002Func009C()
+function Trig_Choose_Mode_Towers_Func015Func002Func008C()
 if (not (udg_Integer_TowerLimit >= 3)) then
 return false
 end
@@ -6865,15 +6890,15 @@ end
 return true
 end
 
-function Trig_Choose_Mode_Towers_Func017Func002Func007A()
+function Trig_Choose_Mode_Towers_Func017Func002Func006A()
 SetPlayerUnitAvailableBJ(FourCC("h008"), true, GetEnumPlayer())
 end
 
-function Trig_Choose_Mode_Towers_Func017Func002Func009Func007A()
+function Trig_Choose_Mode_Towers_Func017Func002Func008Func006A()
 SetPlayerUnitAvailableBJ(FourCC("h008"), false, GetEnumPlayer())
 end
 
-function Trig_Choose_Mode_Towers_Func017Func002Func009C()
+function Trig_Choose_Mode_Towers_Func017Func002Func008C()
 if (not (udg_Integer_TowerLimit >= 3)) then
 return false
 end
@@ -6894,15 +6919,15 @@ end
 return true
 end
 
-function Trig_Choose_Mode_Towers_Func019Func002Func007A()
+function Trig_Choose_Mode_Towers_Func019Func002Func006A()
 SetPlayerUnitAvailableBJ(FourCC("h01I"), true, GetEnumPlayer())
 end
 
-function Trig_Choose_Mode_Towers_Func019Func002Func009Func007A()
+function Trig_Choose_Mode_Towers_Func019Func002Func008Func006A()
 SetPlayerUnitAvailableBJ(FourCC("h01I"), true, GetEnumPlayer())
 end
 
-function Trig_Choose_Mode_Towers_Func019Func002Func009C()
+function Trig_Choose_Mode_Towers_Func019Func002Func008C()
 if (not (udg_Integer_TowerLimit >= 3)) then
 return false
 end
@@ -6923,15 +6948,15 @@ end
 return true
 end
 
-function Trig_Choose_Mode_Towers_Func021Func002Func007A()
+function Trig_Choose_Mode_Towers_Func021Func002Func006A()
 SetPlayerUnitAvailableBJ(FourCC("h000"), true, GetEnumPlayer())
 end
 
-function Trig_Choose_Mode_Towers_Func021Func002Func009Func007A()
+function Trig_Choose_Mode_Towers_Func021Func002Func008Func006A()
 SetPlayerUnitAvailableBJ(FourCC("h000"), false, GetEnumPlayer())
 end
 
-function Trig_Choose_Mode_Towers_Func021Func002Func009C()
+function Trig_Choose_Mode_Towers_Func021Func002Func008C()
 if (not (udg_Integer_TowerLimit >= 3)) then
 return false
 end
@@ -6952,15 +6977,15 @@ end
 return true
 end
 
-function Trig_Choose_Mode_Towers_Func023Func002Func007A()
+function Trig_Choose_Mode_Towers_Func023Func002Func006A()
 SetPlayerUnitAvailableBJ(FourCC("h034"), true, GetEnumPlayer())
 end
 
-function Trig_Choose_Mode_Towers_Func023Func002Func009Func007A()
+function Trig_Choose_Mode_Towers_Func023Func002Func008Func006A()
 SetPlayerUnitAvailableBJ(FourCC("h034"), false, GetEnumPlayer())
 end
 
-function Trig_Choose_Mode_Towers_Func023Func002Func009C()
+function Trig_Choose_Mode_Towers_Func023Func002Func008C()
 if (not (udg_Integer_TowerLimit >= 3)) then
 return false
 end
@@ -6981,15 +7006,15 @@ end
 return true
 end
 
-function Trig_Choose_Mode_Towers_Func025Func002Func007A()
+function Trig_Choose_Mode_Towers_Func025Func002Func006A()
 SetPlayerUnitAvailableBJ(FourCC("n01J"), true, GetEnumPlayer())
 end
 
-function Trig_Choose_Mode_Towers_Func025Func002Func009Func007A()
+function Trig_Choose_Mode_Towers_Func025Func002Func008Func006A()
 SetPlayerUnitAvailableBJ(FourCC("n01J"), false, GetEnumPlayer())
 end
 
-function Trig_Choose_Mode_Towers_Func025Func002Func009C()
+function Trig_Choose_Mode_Towers_Func025Func002Func008C()
 if (not (udg_Integer_TowerLimit >= 3)) then
 return false
 end
@@ -7013,265 +7038,243 @@ end
 function Trig_Choose_Mode_Towers_Actions()
 if (Trig_Choose_Mode_Towers_Func005C()) then
 if (Trig_Choose_Mode_Towers_Func005Func001C()) then
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[W]|r |c0000ff00Disable Air Tower", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Tower Status = |c0077ff77Enabled", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 1)
 udg_Integer_Array_TowerOption[1] = 1
 udg_Integer_TowerLimit = (udg_Integer_TowerLimit - 1)
 udg_String_Array_TowerEnabled[2] = "|c0077ff77Enabled"
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold - 2)
-ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func005Func001Func008A)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold - udg_Integer_DisTowerIncomeBonus)
+ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func005Func001Func007A)
 else
-if (Trig_Choose_Mode_Towers_Func005Func001Func003C()) then
+if (Trig_Choose_Mode_Towers_Func005Func001Func002C()) then
 DisplayTimedTextToForce(GetPlayersAll(), 10.00, "TRIGSTR_2279")
 else
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[W]|r |c0000ff00Enable Air Tower", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Tower Status = |c00FF0000Disabled", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 2)
 udg_Integer_Array_TowerOption[1] = 0
 udg_Integer_TowerLimit = (udg_Integer_TowerLimit + 1)
 udg_String_Array_TowerEnabled[2] = "|c00FF0000Disabled"
 DisplayTimedTextToForce(GetPlayersAll(), 10.00, (GetPlayerName(Player(0)) .. " has disabled Air Towers"))
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
-ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func005Func001Func003Func008A)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + udg_Integer_DisTowerIncomeBonus)
+ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func005Func001Func002Func007A)
 end
 end
 else
 end
 if (Trig_Choose_Mode_Towers_Func007C()) then
 if (Trig_Choose_Mode_Towers_Func007Func001C()) then
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[Z]|r |c0000ff00Disable Aura Tower", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Tower Status = |c0077ff77Enabled", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 1)
 udg_Integer_TowerLimit = (udg_Integer_TowerLimit - 1)
 udg_Integer_Array_TowerOption[2] = 1
 udg_String_Array_TowerEnabled[6] = "|c0077ff77Enabled"
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold - 2)
-ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func007Func001Func008A)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold - udg_Integer_DisTowerIncomeBonus)
+ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func007Func001Func007A)
 else
-if (Trig_Choose_Mode_Towers_Func007Func001Func003C()) then
+if (Trig_Choose_Mode_Towers_Func007Func001Func002C()) then
 DisplayTimedTextToForce(GetPlayersAll(), 10.00, "TRIGSTR_2280")
 else
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[Z]|r |c0000ff00Enable Aura Tower", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Tower Status = |c00FF0000Disabled", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 2)
 udg_Integer_TowerLimit = (udg_Integer_TowerLimit + 1)
 udg_Integer_Array_TowerOption[2] = 0
 udg_String_Array_TowerEnabled[6] = "|c00FF0000Disabled"
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
-ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func007Func001Func003Func008A)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + udg_Integer_DisTowerIncomeBonus)
+ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func007Func001Func002Func007A)
 end
 end
 else
 end
 if (Trig_Choose_Mode_Towers_Func009C()) then
 if (Trig_Choose_Mode_Towers_Func009Func002C()) then
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[F]|r |c0000ff00Disable Bash Tower", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Tower Status = |c0077ff77Enabled", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 1)
 udg_Integer_TowerLimit = (udg_Integer_TowerLimit - 1)
 udg_Integer_Array_TowerOption[9] = 1
 udg_String_Array_TowerEnabled[9] = "|c0077ff77Enabled"
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold - 2)
-ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func009Func002Func007A)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold - udg_Integer_DisTowerIncomeBonus)
+ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func009Func002Func006A)
 else
-if (Trig_Choose_Mode_Towers_Func009Func002Func009C()) then
+if (Trig_Choose_Mode_Towers_Func009Func002Func008C()) then
 DisplayTimedTextToForce(GetPlayersAll(), 10.00, "TRIGSTR_2281")
 else
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[F]|r |c0000ff00Enable Bash Tower", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Tower Status = |c00FF0000Disabled", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 2)
 udg_Integer_TowerLimit = (udg_Integer_TowerLimit + 1)
 udg_Integer_Array_TowerOption[9] = 0
 udg_String_Array_TowerEnabled[9] = "|c00FF0000Disabled"
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
-ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func009Func002Func009Func007A)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + udg_Integer_DisTowerIncomeBonus)
+ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func009Func002Func008Func006A)
 end
 end
 else
 end
 if (Trig_Choose_Mode_Towers_Func011C()) then
 if (Trig_Choose_Mode_Towers_Func011Func002C()) then
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[E]|r |c0000ff00Disable Bouncing Tower", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Tower Status = |c0077ff77Enabled", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 1)
 udg_Integer_TowerLimit = (udg_Integer_TowerLimit - 1)
 udg_Integer_Array_TowerOption[8] = 1
 udg_String_Array_TowerEnabled[8] = "|c0077ff77Enabled"
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold - 2)
-ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func011Func002Func007A)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold - udg_Integer_DisTowerIncomeBonus)
+ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func011Func002Func006A)
 else
-if (Trig_Choose_Mode_Towers_Func011Func002Func009C()) then
+if (Trig_Choose_Mode_Towers_Func011Func002Func008C()) then
 DisplayTimedTextToForce(GetPlayersAll(), 10.00, "TRIGSTR_2282")
 else
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[E]|r |c0000ff00Enable Bouncing Tower", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Tower Status = |c00FF0000Disabled", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 2)
 udg_Integer_TowerLimit = (udg_Integer_TowerLimit + 1)
 udg_Integer_Array_TowerOption[8] = 0
 udg_String_Array_TowerEnabled[8] = "|c00FF0000Disabled"
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
-ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func011Func002Func009Func007A)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + udg_Integer_DisTowerIncomeBonus)
+ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func011Func002Func008Func006A)
 end
 end
 else
 end
 if (Trig_Choose_Mode_Towers_Func013C()) then
 if (Trig_Choose_Mode_Towers_Func013Func002C()) then
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[R]|r |c0000ff00Disable Chaos Tower", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Tower Status = |c0077ff77Enabled", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 1)
 udg_Integer_TowerLimit = (udg_Integer_TowerLimit - 1)
 udg_Integer_Array_TowerOption[6] = 1
 udg_String_Array_TowerEnabled[5] = "|c0077ff77Enabled"
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold - 2)
-ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func013Func002Func007A)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold - udg_Integer_DisTowerIncomeBonus)
+ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func013Func002Func006A)
 else
-if (Trig_Choose_Mode_Towers_Func013Func002Func009C()) then
+if (Trig_Choose_Mode_Towers_Func013Func002Func008C()) then
 DisplayTimedTextToForce(GetPlayersAll(), 10.00, "TRIGSTR_2283")
 else
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[R]|r |c0000ff00Enable Chaos Tower", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Tower Status = |c00FF0000Disabled", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 2)
 udg_Integer_TowerLimit = (udg_Integer_TowerLimit + 1)
 udg_Integer_Array_TowerOption[6] = 0
 udg_String_Array_TowerEnabled[5] = "|c00FF0000Disabled"
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
-ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func013Func002Func009Func007A)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + udg_Integer_DisTowerIncomeBonus)
+ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func013Func002Func008Func006A)
 end
 end
 else
 end
 if (Trig_Choose_Mode_Towers_Func015C()) then
 if (Trig_Choose_Mode_Towers_Func015Func002C()) then
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[A]|r |c0000ff00Disable Frost Tower", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Tower Status = |c0077ff77Enabled", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 1)
 udg_Integer_TowerLimit = (udg_Integer_TowerLimit - 1)
 udg_Integer_Array_TowerOption[7] = 1
 udg_String_Array_TowerEnabled[4] = "|c0077ff77Enabled"
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold - 2)
-ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func015Func002Func007A)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold - udg_Integer_DisTowerIncomeBonus)
+ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func015Func002Func006A)
 else
-if (Trig_Choose_Mode_Towers_Func015Func002Func009C()) then
+if (Trig_Choose_Mode_Towers_Func015Func002Func008C()) then
 DisplayTimedTextToForce(GetPlayersAll(), 10.00, "TRIGSTR_2284")
 else
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[A]|r |c0000ff00Enable Frost Tower", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Tower Status = |c00FF0000Disabled", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 2)
 udg_Integer_TowerLimit = (udg_Integer_TowerLimit + 1)
 udg_Integer_Array_TowerOption[7] = 0
 udg_String_Array_TowerEnabled[4] = "|c00FF0000Disabled"
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
-ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func015Func002Func009Func007A)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + udg_Integer_DisTowerIncomeBonus)
+ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func015Func002Func008Func006A)
 end
 end
 else
 end
 if (Trig_Choose_Mode_Towers_Func017C()) then
 if (Trig_Choose_Mode_Towers_Func017Func002C()) then
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[S]|r |c0000ff00Disable Poison Tower", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Tower Status = |c0077ff77Enabled", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 1)
 udg_Integer_TowerLimit = (udg_Integer_TowerLimit - 1)
 udg_Integer_Array_TowerOption[5] = 1
 udg_String_Array_TowerEnabled[3] = "|c0077ff77Enabled"
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold - 2)
-ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func017Func002Func007A)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold - udg_Integer_DisTowerIncomeBonus)
+ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func017Func002Func006A)
 else
-if (Trig_Choose_Mode_Towers_Func017Func002Func009C()) then
+if (Trig_Choose_Mode_Towers_Func017Func002Func008C()) then
 DisplayTimedTextToForce(GetPlayersAll(), 10.00, "TRIGSTR_2285")
 else
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[S]|r |c0000ff00Enable Poison Tower", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Tower Status = |c00FF0000Disabled", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 2)
 udg_Integer_TowerLimit = (udg_Integer_TowerLimit + 1)
 udg_Integer_Array_TowerOption[5] = 0
 udg_String_Array_TowerEnabled[3] = "|c00FF0000Disabled"
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
-ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func017Func002Func009Func007A)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + udg_Integer_DisTowerIncomeBonus)
+ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func017Func002Func008Func006A)
 end
 end
 else
 end
 if (Trig_Choose_Mode_Towers_Func019C()) then
 if (Trig_Choose_Mode_Towers_Func019Func002C()) then
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[D]|r |c0000ff00Disable Research Tower", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Tower Status = |c0077ff77Enabled", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 1)
 udg_Integer_TowerLimit = (udg_Integer_TowerLimit - 1)
 udg_Integer_Array_TowerOption[4] = 1
 udg_String_Array_TowerEnabled[10] = "|c0077ff77Enabled"
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold - 2)
-ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func019Func002Func007A)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold - udg_Integer_DisTowerIncomeBonus)
+ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func019Func002Func006A)
 else
-if (Trig_Choose_Mode_Towers_Func019Func002Func009C()) then
+if (Trig_Choose_Mode_Towers_Func019Func002Func008C()) then
 DisplayTimedTextToForce(GetPlayersAll(), 10.00, "TRIGSTR_2286")
 else
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[D]|r |c0000ff00Enable Research Tower", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Tower Status = |c00FF0000Disabled", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 2)
 udg_Integer_TowerLimit = (udg_Integer_TowerLimit + 1)
 udg_Integer_Array_TowerOption[4] = 0
 udg_String_Array_TowerEnabled[10] = "|c00FF0000Disabled"
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
-ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func019Func002Func009Func007A)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + udg_Integer_DisTowerIncomeBonus)
+ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func019Func002Func008Func006A)
 end
 end
 else
 end
 if (Trig_Choose_Mode_Towers_Func021C()) then
 if (Trig_Choose_Mode_Towers_Func021Func002C()) then
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[Q]|r |c0000ff00Disable Siege Tower", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Tower Status = |c0077ff77Enabled", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 1)
 udg_Integer_TowerLimit = (udg_Integer_TowerLimit - 1)
 udg_Integer_Array_TowerOption[10] = 1
 udg_String_Array_TowerEnabled[1] = "|c0077ff77Enabled"
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold - 2)
-ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func021Func002Func007A)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold - udg_Integer_DisTowerIncomeBonus)
+ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func021Func002Func006A)
 else
-if (Trig_Choose_Mode_Towers_Func021Func002Func009C()) then
+if (Trig_Choose_Mode_Towers_Func021Func002Func008C()) then
 DisplayTimedTextToForce(GetPlayersAll(), 10.00, "TRIGSTR_2287")
 else
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[Q]|r |c0000ff00Enable Siege Tower", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Tower Status = |c00FF0000Disabled", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 2)
 udg_Integer_TowerLimit = (udg_Integer_TowerLimit + 1)
 udg_Integer_Array_TowerOption[10] = 0
 udg_String_Array_TowerEnabled[1] = "|c00FF0000Disabled"
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
-ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func021Func002Func009Func007A)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + udg_Integer_DisTowerIncomeBonus)
+ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func021Func002Func008Func006A)
 end
 end
 else
 end
 if (Trig_Choose_Mode_Towers_Func023C()) then
 if (Trig_Choose_Mode_Towers_Func023Func002C()) then
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[C]|r |c0000ff00Disable Spell Tower", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Tower Status = |c0077ff77Enabled", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 1)
 udg_Integer_TowerLimit = (udg_Integer_TowerLimit - 1)
 udg_Integer_Array_TowerOption[3] = 1
 udg_String_Array_TowerEnabled[7] = "|c0077ff77Enabled"
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold - 2)
-ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func023Func002Func007A)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold - udg_Integer_DisTowerIncomeBonus)
+ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func023Func002Func006A)
 else
-if (Trig_Choose_Mode_Towers_Func023Func002Func009C()) then
+if (Trig_Choose_Mode_Towers_Func023Func002Func008C()) then
 DisplayTimedTextToForce(GetPlayersAll(), 10.00, "TRIGSTR_2288")
 else
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[C]|r |c0000ff00Enable Spell Tower", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Tower Status = |c00FF0000Disabled", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 2)
 udg_Integer_TowerLimit = (udg_Integer_TowerLimit + 1)
 udg_Integer_Array_TowerOption[3] = 0
 udg_String_Array_TowerEnabled[7] = "|c00FF0000Disabled"
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
-ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func023Func002Func009Func007A)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + udg_Integer_DisTowerIncomeBonus)
+ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func023Func002Func008Func006A)
 end
 end
 else
 end
 if (Trig_Choose_Mode_Towers_Func025C()) then
 if (Trig_Choose_Mode_Towers_Func025Func002C()) then
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[X]|r |c0000ff00Disable Traps", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Tower Status = |c0077ff77Enabled", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 1)
 udg_Integer_TowerLimit = (udg_Integer_TowerLimit - 1)
 udg_Integer_Array_TowerOption[11] = 1
 udg_String_Array_TowerEnabled[11] = "|c0077ff77Enabled"
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold - 2)
-ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func025Func002Func007A)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold - udg_Integer_DisTowerIncomeBonus)
+ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func025Func002Func006A)
 else
-if (Trig_Choose_Mode_Towers_Func025Func002Func009C()) then
+if (Trig_Choose_Mode_Towers_Func025Func002Func008C()) then
 DisplayTimedTextToForce(GetPlayersAll(), 10.00, "TRIGSTR_2289")
 else
-BlzSetAbilityTooltip(GetSpellAbilityId(), "|c0077ff77[X]|r |c0000ff00Enable Traps", 1)
-BlzSetAbilityExtendedTooltip(GetSpellAbilityId(), "|c0000ff00Tower Status = |c00FF0000Disabled", 1)
+SetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit(), 2)
 udg_Integer_TowerLimit = (udg_Integer_TowerLimit + 1)
 udg_Integer_Array_TowerOption[11] = 0
 udg_String_Array_TowerEnabled[11] = "|c00FF0000Disabled"
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
-ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func025Func002Func009Func007A)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + udg_Integer_DisTowerIncomeBonus)
+ForForce(GetPlayersAll(), Trig_Choose_Mode_Towers_Func025Func002Func008Func006A)
 end
 end
 else
@@ -8241,77 +8244,77 @@ end
 if (Trig_Random_Game_Modes_Difficulty_and_Towers_Func001Func007C()) then
 udg_String_Array_TowerEnabled[2] = "|c00FF0000Disabled"
 udg_Integer_Array_TowerOption[1] = 0
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + udg_Integer_DisTowerIncomeBonus)
 ForForce(GetPlayersAll(), Trig_Random_Game_Modes_Difficulty_and_Towers_Func001Func007Func004A)
 else
 end
 if (Trig_Random_Game_Modes_Difficulty_and_Towers_Func001Func008C()) then
 udg_String_Array_TowerEnabled[6] = "|c00FF0000Disabled"
 udg_Integer_Array_TowerOption[2] = 0
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + udg_Integer_DisTowerIncomeBonus)
 ForForce(GetPlayersAll(), Trig_Random_Game_Modes_Difficulty_and_Towers_Func001Func008Func004A)
 else
 end
 if (Trig_Random_Game_Modes_Difficulty_and_Towers_Func001Func009C()) then
 udg_String_Array_TowerEnabled[7] = "|c00FF0000Disabled"
 udg_Integer_Array_TowerOption[3] = 0
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + udg_Integer_DisTowerIncomeBonus)
 ForForce(GetPlayersAll(), Trig_Random_Game_Modes_Difficulty_and_Towers_Func001Func009Func004A)
 else
 end
 if (Trig_Random_Game_Modes_Difficulty_and_Towers_Func001Func010C()) then
 udg_String_Array_TowerEnabled[10] = "|c00FF0000Disabled"
 udg_Integer_Array_TowerOption[4] = 0
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + udg_Integer_DisTowerIncomeBonus)
 ForForce(GetPlayersAll(), Trig_Random_Game_Modes_Difficulty_and_Towers_Func001Func010Func004A)
 else
 end
 if (Trig_Random_Game_Modes_Difficulty_and_Towers_Func001Func011C()) then
 udg_String_Array_TowerEnabled[3] = "|c00FF0000Disabled"
 udg_Integer_Array_TowerOption[5] = 0
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + udg_Integer_DisTowerIncomeBonus)
 ForForce(GetPlayersAll(), Trig_Random_Game_Modes_Difficulty_and_Towers_Func001Func011Func004A)
 else
 end
 if (Trig_Random_Game_Modes_Difficulty_and_Towers_Func001Func012C()) then
 udg_String_Array_TowerEnabled[5] = "|c00FF0000Disabled"
 udg_Integer_Array_TowerOption[6] = 0
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + udg_Integer_DisTowerIncomeBonus)
 ForForce(GetPlayersAll(), Trig_Random_Game_Modes_Difficulty_and_Towers_Func001Func012Func004A)
 else
 end
 if (Trig_Random_Game_Modes_Difficulty_and_Towers_Func001Func013C()) then
 udg_String_Array_TowerEnabled[4] = "|c00FF0000Disabled"
 udg_Integer_Array_TowerOption[7] = 0
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + udg_Integer_DisTowerIncomeBonus)
 ForForce(GetPlayersAll(), Trig_Random_Game_Modes_Difficulty_and_Towers_Func001Func013Func004A)
 else
 end
 if (Trig_Random_Game_Modes_Difficulty_and_Towers_Func001Func014C()) then
 udg_String_Array_TowerEnabled[8] = "|c00FF0000Disabled"
 udg_Integer_Array_TowerOption[8] = 0
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + udg_Integer_DisTowerIncomeBonus)
 ForForce(GetPlayersAll(), Trig_Random_Game_Modes_Difficulty_and_Towers_Func001Func014Func004A)
 else
 end
 if (Trig_Random_Game_Modes_Difficulty_and_Towers_Func001Func015C()) then
 udg_String_Array_TowerEnabled[9] = "|c00FF0000Disabled"
 udg_Integer_Array_TowerOption[9] = 0
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + udg_Integer_DisTowerIncomeBonus)
 ForForce(GetPlayersAll(), Trig_Random_Game_Modes_Difficulty_and_Towers_Func001Func015Func004A)
 else
 end
 if (Trig_Random_Game_Modes_Difficulty_and_Towers_Func001Func016C()) then
 udg_String_Array_TowerEnabled[1] = "|c00FF0000Disabled"
 udg_Integer_Array_TowerOption[10] = 0
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + udg_Integer_DisTowerIncomeBonus)
 ForForce(GetPlayersAll(), Trig_Random_Game_Modes_Difficulty_and_Towers_Func001Func016Func004A)
 else
 end
 if (Trig_Random_Game_Modes_Difficulty_and_Towers_Func001Func017C()) then
 udg_String_Array_TowerEnabled[11] = "|c00FF0000Disabled"
 udg_Integer_Array_TowerOption[11] = 0
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + udg_Integer_DisTowerIncomeBonus)
 ForForce(GetPlayersAll(), Trig_Random_Game_Modes_Difficulty_and_Towers_Func001Func017Func004A)
 else
 end
@@ -11245,6 +11248,13 @@ end
 return true
 end
 
+function Trig_Generate_Random_Waves_Func001Func002Func010C()
+if (not (udg_Integer_SwarmMode == 1)) then
+return false
+end
+return true
+end
+
 function Trig_Generate_Random_Waves_Func001Func002C()
 if (not (udg_Integer_RWBossChance <= (25 + GetForLoopIndexA()))) then
 return false
@@ -11252,70 +11262,56 @@ end
 return true
 end
 
-function Trig_Generate_Random_Waves_Func001Func003C()
-if (not (udg_Integer_SwarmMode == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Generate_Random_Waves_Func001Func006C()
+function Trig_Generate_Random_Waves_Func001Func005C()
 if (not (udg_Integer_ChaosModeOn == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Generate_Random_Waves_Func001Func010C()
-if (not (udg_Integer_SwarmMode == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Generate_Random_Waves_Func001Func013C()
+function Trig_Generate_Random_Waves_Func001Func011C()
 if (not (udg_Integer_Array_RWUnitType[GetForLoopIndexA()] == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Generate_Random_Waves_Func001Func015C()
+function Trig_Generate_Random_Waves_Func001Func013C()
 if (not (udg_Integer_Array_RWUnitType[GetForLoopIndexA()] == 2)) then
 return false
 end
 return true
 end
 
-function Trig_Generate_Random_Waves_Func001Func017C()
+function Trig_Generate_Random_Waves_Func001Func015C()
 if (not (udg_Integer_Array_RWUnitType[GetForLoopIndexA()] == 3)) then
 return false
 end
 return true
 end
 
-function Trig_Generate_Random_Waves_Func001Func019C()
+function Trig_Generate_Random_Waves_Func001Func017C()
 if (not (udg_Integer_Array_RWUnitType[GetForLoopIndexA()] == 4)) then
 return false
 end
 return true
 end
 
-function Trig_Generate_Random_Waves_Func001Func021C()
+function Trig_Generate_Random_Waves_Func001Func019C()
 if (not (udg_Integer_Array_RWUnitType[GetForLoopIndexA()] == 5)) then
 return false
 end
 return true
 end
 
-function Trig_Generate_Random_Waves_Func001Func023C()
+function Trig_Generate_Random_Waves_Func001Func021C()
 if (not (udg_Integer_Array_RWUnitType[GetForLoopIndexA()] == 6)) then
 return false
 end
 return true
 end
 
-function Trig_Generate_Random_Waves_Func001Func025C()
+function Trig_Generate_Random_Waves_Func001Func023C()
 if (not (udg_Integer_Array_RWUnitType[GetForLoopIndexA()] == 7)) then
 return false
 end
@@ -11342,14 +11338,15 @@ else
 udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()] = GetRandomInt(10, 30)
 udg_Real_Array_RandomWaveBounty[GetForLoopIndexA()] = (((I2R(GetForLoopIndexA()) + 20.00) * udg_Real_CreepHealthMultiplier) * 10.00)
 udg_Integer_Array_RWBounty[GetForLoopIndexA()] = R2I(udg_Real_Array_RandomWaveBounty[GetForLoopIndexA()])
-end
-if (Trig_Generate_Random_Waves_Func001Func003C()) then
+if (Trig_Generate_Random_Waves_Func001Func002Func010C()) then
+udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()] = (udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()] * 2)
 udg_Integer_Array_RWBounty[GetForLoopIndexA()] = (udg_Integer_Array_RWBounty[GetForLoopIndexA()] * 2)
 else
 end
+end
 udg_Real_CreepHealth = (udg_Real_CreepHealth + (75.00 * I2R(GetForLoopIndexA())))
 udg_Real_CreepHealthTotal = (udg_Real_CreepHealth * 15.00)
-if (Trig_Generate_Random_Waves_Func001Func006C()) then
+if (Trig_Generate_Random_Waves_Func001Func005C()) then
 udg_Real_Array_HPMultiplierWaves[GetForLoopIndexA()] = GetRandomReal(udg_Real_Array_ChaosHealthPerLow[udg_Integer_ChaosMode], udg_Real_Array_ChaosHealthPerHigh[udg_Integer_ChaosMode])
 udg_Real_CreepHealthTotal = (udg_Real_CreepHealthTotal * udg_Real_Array_HPMultiplierWaves[GetForLoopIndexA()])
 else
@@ -11358,45 +11355,41 @@ end
 udg_Real_Array_RWArmour[GetForLoopIndexA()] = (udg_Real_Array_RWArmour[(GetForLoopIndexA() - 1)] + I2R(GetForLoopIndexA()))
 udg_Real_Array_RWArmourTotal[GetForLoopIndexA()] = (udg_Real_Array_RWArmour[GetForLoopIndexA()] / I2R(udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()]))
 udg_Real_Array_CreepHealthWaves[GetForLoopIndexA()] = (udg_Real_CreepHealthTotal / I2R(udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()]))
-if (Trig_Generate_Random_Waves_Func001Func010C()) then
-udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()] = (udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()] * 2)
-else
-end
 udg_Integer_Array_RWUnitType[GetForLoopIndexA()] = GetRandomInt(1, 7)
-if (Trig_Generate_Random_Waves_Func001Func013C()) then
+if (Trig_Generate_Random_Waves_Func001Func011C()) then
 udg_UnitType_Array_RWSpawnUnit[GetForLoopIndexA()] = udg_UnitType_Array_RWAir[GetRandomInt(1, 43)]
 udg_String_AirWavesText = (udg_String_AirWavesText .. (I2S(GetForLoopIndexA()) .. ", "))
 udg_String_Array_WaveType[GetForLoopIndexA()] = ("[Air" .. (udg_String_Array_MBWaveModifier[GetForLoopIndexA()] .. "]"))
 else
 end
-if (Trig_Generate_Random_Waves_Func001Func015C()) then
+if (Trig_Generate_Random_Waves_Func001Func013C()) then
 udg_UnitType_Array_RWSpawnUnit[GetForLoopIndexA()] = udg_UnitType_Array_RWHero[GetRandomInt(1, 43)]
 udg_String_HeroWavesText = (udg_String_HeroWavesText .. (I2S(GetForLoopIndexA()) .. ", "))
 udg_String_Array_WaveType[GetForLoopIndexA()] = ("[Hero" .. (udg_String_Array_MBWaveModifier[GetForLoopIndexA()] .. "]"))
 else
 end
-if (Trig_Generate_Random_Waves_Func001Func017C()) then
+if (Trig_Generate_Random_Waves_Func001Func015C()) then
 udg_UnitType_Array_RWSpawnUnit[GetForLoopIndexA()] = udg_UnitType_Array_RWImmune[GetRandomInt(1, 43)]
 udg_String_DivineWavesText = (udg_String_DivineWavesText .. (I2S(GetForLoopIndexA()) .. ", "))
 udg_String_Array_WaveType[GetForLoopIndexA()] = ("[Divine" .. (udg_String_Array_MBWaveModifier[GetForLoopIndexA()] .. "]"))
 else
 end
-if (Trig_Generate_Random_Waves_Func001Func019C()) then
+if (Trig_Generate_Random_Waves_Func001Func017C()) then
 udg_UnitType_Array_RWSpawnUnit[GetForLoopIndexA()] = udg_UnitType_Array_RWFortified[GetRandomInt(1, 43)]
 udg_String_Array_WaveType[GetForLoopIndexA()] = ("[Fortified" .. (udg_String_Array_MBWaveModifier[GetForLoopIndexA()] .. "]"))
 else
 end
-if (Trig_Generate_Random_Waves_Func001Func021C()) then
+if (Trig_Generate_Random_Waves_Func001Func019C()) then
 udg_UnitType_Array_RWSpawnUnit[GetForLoopIndexA()] = udg_UnitType_Array_RWHeavy[GetRandomInt(1, 43)]
 udg_String_Array_WaveType[GetForLoopIndexA()] = ("[Heavy" .. (udg_String_Array_MBWaveModifier[GetForLoopIndexA()] .. "]"))
 else
 end
-if (Trig_Generate_Random_Waves_Func001Func023C()) then
+if (Trig_Generate_Random_Waves_Func001Func021C()) then
 udg_UnitType_Array_RWSpawnUnit[GetForLoopIndexA()] = udg_UnitType_Array_RWLight[GetRandomInt(1, 43)]
 udg_String_Array_WaveType[GetForLoopIndexA()] = ("[Light" .. (udg_String_Array_MBWaveModifier[GetForLoopIndexA()] .. "]"))
 else
 end
-if (Trig_Generate_Random_Waves_Func001Func025C()) then
+if (Trig_Generate_Random_Waves_Func001Func023C()) then
 udg_UnitType_Array_RWSpawnUnit[GetForLoopIndexA()] = udg_UnitType_Array_RWMedium[GetRandomInt(1, 43)]
 udg_String_Array_WaveType[GetForLoopIndexA()] = ("[Medium" .. (udg_String_Array_MBWaveModifier[GetForLoopIndexA()] .. "]"))
 else
@@ -13853,10 +13846,6 @@ end
 return true
 end
 
-function Trig_Restart_Func015002()
-RemoveUnit(GetEnumUnit())
-end
-
 function Trig_Restart_Func016002()
 RemoveUnit(GetEnumUnit())
 end
@@ -13865,11 +13854,15 @@ function Trig_Restart_Func017002()
 RemoveUnit(GetEnumUnit())
 end
 
-function Trig_Restart_Func018Func017A()
+function Trig_Restart_Func018002()
 RemoveUnit(GetEnumUnit())
 end
 
-function Trig_Restart_Func018A()
+function Trig_Restart_Func019Func017A()
+RemoveUnit(GetEnumUnit())
+end
+
+function Trig_Restart_Func019A()
 udg_Integer_Array_IncomeLevel[GetConvertedPlayerId(GetEnumPlayer())] = 0
 udg_Integer_Array_FoodBonus[GetConvertedPlayerId(GetEnumPlayer())] = 0
 udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetEnumPlayer())] = 50
@@ -13886,10 +13879,10 @@ SetPlayerUnitAvailableBJ(FourCC("h01I"), true, GetEnumPlayer())
 SetPlayerUnitAvailableBJ(FourCC("h000"), true, GetEnumPlayer())
 SetPlayerUnitAvailableBJ(FourCC("h034"), true, GetEnumPlayer())
 SetPlayerUnitAvailableBJ(FourCC("n01J"), true, GetEnumPlayer())
-ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), GetEnumPlayer()), Trig_Restart_Func018Func017A)
+ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), GetEnumPlayer()), Trig_Restart_Func019Func017A)
 end
 
-function Trig_Restart_Func086C()
+function Trig_Restart_Func053C()
 if (not (GetPlayerSlotState(Player(0)) == PLAYER_SLOT_STATE_LEFT)) then
 return false
 end
@@ -13899,6 +13892,10 @@ end
 function Trig_Restart_Actions()
 DisableTrigger(gg_trg_Defeat_Timer)
 if (Trig_Restart_Func002C()) then
+UnitRemoveAbilityBJ(FourCC("A02A"), gg_unit_n00C_0019)
+UnitAddAbilityBJ(FourCC("A02A"), gg_unit_n00C_0019)
+UnitRemoveAbilityBJ(FourCC("A00V"), gg_unit_n00C_0019)
+UnitAddAbilityBJ(FourCC("A00V"), gg_unit_n00C_0019)
 udg_Integer_GoldRush = 0
 udg_Integer_HHActivated = 0
 udg_Integer_RWActivated = 0
@@ -13906,20 +13903,6 @@ udg_Integer_SwarmMode = 0
 udg_Integer_SpeedMode = 0
 udg_Integer_GoldRush = 0
 udg_Integer_EndlessMode = 0
-BlzSetAbilityTooltip(FourCC("A00Y"), "|c0077ff77[D]|r |c0000ff00Activate Blitz Mode", 1)
-BlzSetAbilityExtendedTooltip(FourCC("A00Y"), "|c0000ff00Status = |c00FF0000Deactivated", 1)
-BlzSetAbilityTooltip(FourCC("A036"), "|c0077ff77[Q]|r |c0000ff00Activate Endless Mode", 1)
-BlzSetAbilityExtendedTooltip(FourCC("A036"), "|c0000ff00Status = |c00FF0000Deactivated", 1)
-BlzSetAbilityTooltip(FourCC("A02Z"), "|c0077ff77[W]|r |c0000ff00Activate Gold Rush Mode", 1)
-BlzSetAbilityExtendedTooltip(FourCC("A02Z"), "|c0000ff00Status = |c00FF0000Deactivated", 1)
-BlzSetAbilityTooltip(FourCC("A031"), "|c0077ff77[A]|r |c0000ff00Activate Headhunter Mode", 1)
-BlzSetAbilityExtendedTooltip(FourCC("A00Y"), "|c0000ff00Status = |c00FF0000Deactivated", 1)
-BlzSetAbilityTooltip(FourCC("A030"), "|c0077ff77[R]|r |c0000ff00Activate Random Waves", 1)
-BlzSetAbilityExtendedTooltip(FourCC("A030"), "|c0000ff00Status = |c00FF0000Deactivated", 1)
-BlzSetAbilityTooltip(FourCC("A033"), "|c0077ff77[S]|r |c0000ff00Activate Speed Mode", 1)
-BlzSetAbilityExtendedTooltip(FourCC("A033"), "|c0000ff00Status = |c00FF0000Deactivated", 1)
-BlzSetAbilityTooltip(FourCC("A035"), "|c0077ff77[E]|r |c0000ff00Activate Swarm Mode", 1)
-BlzSetAbilityExtendedTooltip(FourCC("A035"), "|c0000ff00Status = |c00FF0000Deactivated", 1)
 else
 end
 bj_forLoopAIndex = 1
@@ -13948,18 +13931,18 @@ udg_Integer_Lives = 60
 udg_Integer_WaveNumber = 0
 udg_Integer_Jackpot = 3000
 udg_Integer_TowerLimit = 0
+udg_Integer_GambleBonus = 1
 bj_forLoopAIndex = 1
 bj_forLoopAIndexEnd = 11
 while (true) do
 if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
 udg_Integer_Array_TowerOption[GetForLoopIndexA()] = 0
-udg_String_Array_TowerEnabled[GetForLoopIndexA()] = "|c0077ff77Enabled"
 bj_forLoopAIndex = bj_forLoopAIndex + 1
 end
-ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(10)), Trig_Restart_Func015002)
-ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(11)), Trig_Restart_Func016002)
-ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(12)), Trig_Restart_Func017002)
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Restart_Func018A)
+ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(10)), Trig_Restart_Func016002)
+ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(11)), Trig_Restart_Func017002)
+ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(12)), Trig_Restart_Func018002)
+ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Restart_Func019A)
 DestroyLeaderboardBJ(GetLastCreatedLeaderboard())
 TriggerExecute(gg_trg_Set_Variables)
 TriggerExecute(gg_trg_Map_Start)
@@ -13981,32 +13964,10 @@ EnableTrigger(gg_trg_Turn_on_RedAfk_Restart)
 EnableTrigger(gg_trg_Default_Gamemode_Restart)
 EnableTrigger(gg_trg_Lose_Condition)
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 14, "TRIGSTR_037")
-BlzSetAbilityTooltip(FourCC("A02W"), "|c0077ff77[W]|r |c0000ff00Disable Air Tower", 1)
-BlzSetAbilityExtendedTooltip(FourCC("A02W"), "|c0000ff00Tower Status = |c0077ff77Enabled", 1)
-BlzSetAbilityTooltip(FourCC("A02Q"), "|c0077ff77[Z]|r |c0000ff00Disable Aura Tower", 1)
-BlzSetAbilityExtendedTooltip(FourCC("A02Q"), "|c0000ff00Tower Status = |c0077ff77Enabled", 1)
-BlzSetAbilityTooltip(FourCC("A02R"), "|c0077ff77[F]|r |c0000ff00Disable Bash Tower", 1)
-BlzSetAbilityExtendedTooltip(FourCC("A02R"), "|c0000ff00Tower Status = |c0077ff77Enabled", 1)
-BlzSetAbilityTooltip(FourCC("A02V"), "|c0077ff77[E]|r |c0000ff00Disable Bouncing Tower", 1)
-BlzSetAbilityExtendedTooltip(FourCC("A02V"), "|c0000ff00Tower Status = |c0077ff77Enabled", 1)
-BlzSetAbilityTooltip(FourCC("A02S"), "|c0077ff77[R]|r |c0000ff00Disable Chaos Tower", 1)
-BlzSetAbilityExtendedTooltip(FourCC("A02S"), "|c0000ff00Tower Status = |c0077ff77Enabled", 1)
-BlzSetAbilityTooltip(FourCC("A02Y"), "|c0077ff77[A]|r |c0000ff00Disable Frost Tower", 1)
-BlzSetAbilityExtendedTooltip(FourCC("A02S"), "|c0000ff00Tower Status = |c0077ff77Enabled", 1)
-BlzSetAbilityTooltip(FourCC("A02T"), "|c0077ff77[S]|r |c0000ff00Disable Poison Tower", 1)
-BlzSetAbilityExtendedTooltip(FourCC("A02T"), "|c0000ff00Tower Status = |c0077ff77Enabled", 1)
-BlzSetAbilityTooltip(FourCC("A02X"), "|c0077ff77[D]|r |c0000ff00Disable Research Tower", 1)
-BlzSetAbilityExtendedTooltip(FourCC("A02X"), "|c0000ff00Tower Status = |c0077ff77Enabled", 1)
-BlzSetAbilityTooltip(FourCC("A02O"), "|c0077ff77[Q]|r |c0000ff00Disable Siege Tower", 1)
-BlzSetAbilityExtendedTooltip(FourCC("A02O"), "|c0000ff00Tower Status = |c0077ff77Enabled", 1)
-BlzSetAbilityTooltip(FourCC("A02J"), "|c0077ff77[C]|r |c0000ff00Disable Spell Tower", 1)
-BlzSetAbilityExtendedTooltip(FourCC("A02J"), "|c0000ff00Tower Status = |c0077ff77Enabled", 1)
-BlzSetAbilityTooltip(FourCC("A02P"), "|c0077ff77[X]|r |c0000ff00Disable Traps", 1)
-BlzSetAbilityExtendedTooltip(FourCC("A02P"), "|c0000ff00Tower Status = |c0077ff77Enabled", 1)
 BlzSetAbilityTooltip(FourCC("A03E"), ("|c0000ff00Gold Cost: |c0077ff77" .. (I2S(udg_Integer_HHCost) .. (" / " .. ("|c0000ff00Bosses Spawned: |c0077ff77" .. I2S(udg_Integer_HHSpawnedAmount))))), 1)
 ShowUnitShow(gg_unit_n00C_0019)
 PauseAllUnitsBJ(false)
-if (Trig_Restart_Func086C()) then
+if (Trig_Restart_Func053C()) then
 EnableTrigger(gg_trg_Game_Setup_Ownership)
 SetUnitOwner(gg_unit_n00C_0019, Player(PLAYER_NEUTRAL_PASSIVE), true)
 DisplayTimedTextToForce(GetPlayersAll(), 60.00, (udg_String_Array_PlayerNames[1] .. " |c0000ff00has left the game, any player may select the game setup unit to choose gamemodes."))
@@ -15158,10 +15119,10 @@ return true
 end
 
 function Trig_Gamble_Func001Func002Func001Func002Func001Func007C()
-if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] >= 98)) then
+if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] >= 970)) then
 return false
 end
-if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] <= 100)) then
+if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] <= 1000)) then
 return false
 end
 return true
@@ -15175,10 +15136,10 @@ return true
 end
 
 function Trig_Gamble_Func001Func002Func001Func002Func005C()
-if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] >= 91)) then
+if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] >= 900)) then
 return false
 end
-if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] <= 97)) then
+if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] <= 969)) then
 return false
 end
 return true
@@ -15192,10 +15153,10 @@ return true
 end
 
 function Trig_Gamble_Func001Func002Func001Func003C()
-if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] >= 76)) then
+if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] >= 750)) then
 return false
 end
-if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] <= 90)) then
+if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] <= 899)) then
 return false
 end
 return true
@@ -15216,7 +15177,7 @@ return true
 end
 
 function Trig_Gamble_Func001Func002C()
-if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] <= 75)) then
+if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] <= 750)) then
 return false
 end
 return true
@@ -15233,7 +15194,7 @@ function Trig_Gamble_Actions()
 if (Trig_Gamble_Func001C()) then
 CreateTextTagUnitBJ(("You need " .. (I2S(udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]) .. " gold to gamble.")), GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
 else
-udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = GetRandomInt(1, 100)
+udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = GetRandomInt(udg_Integer_GambleBonus, 1000)
 if (Trig_Gamble_Func001Func002C()) then
 SetPlayerStateBJ(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD, (GetPlayerState(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD) - udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]))
 DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ("|c0000ff00 just gambled away |cffFDD017" .. (I2S(udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]) .. " Gold|c0000ff00."))))
