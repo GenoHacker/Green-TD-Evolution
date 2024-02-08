@@ -339,206 +339,11 @@ udg_UNIT_CLASS_FLYING = 0
 udg_UNIT_CLASS_STRUCTURE = 0
 udg_UNIT_CLASS_DEAD = 0
 udg_UNIT_CLASS_HERO = 0
-udg_ARMOR_TYPE_NONE_Copy = 0
-udg_ARMOR_TYPE_FLESH_Copy = 0
-udg_ARMOR_TYPE_METAL_Copy = 0
-udg_ARMOR_TYPE_WOOD_Copy = 0
-udg_ARMOR_TYPE_ETHEREAL_Copy = 0
-udg_ARMOR_TYPE_STONE_Copy = 0
-udg_ArmorTypeDebugStr_Copy = __jarray("")
-udg_CONVERTED_ATTACK_TYPE_Copy = {}
-udg_ATTACK_TYPE_SPELLS_Copy = 0
-udg_ATTACK_TYPE_NORMAL_Copy = 0
-udg_ATTACK_TYPE_PIERCE_Copy = 0
-udg_ATTACK_TYPE_SIEGE_Copy = 0
-udg_ATTACK_TYPE_MAGIC_Copy = 0
-udg_ATTACK_TYPE_CHAOS_Copy = 0
-udg_ATTACK_TYPE_HERO_Copy = 0
-udg_AttackTypeDebugStr_Copy = __jarray("")
-udg_DamageTypeBlocked_Copy = 0
-udg_DamageTypeCriticalStrike_Copy = 0
-udg_DamageTypeCode_Copy = 0
-udg_DamageTypeExplosive_Copy = 0
-udg_DamageTypeHeal_Copy = 0
-udg_DamageTypePure_Copy = 0
-udg_DamageTypePureExplosive_Copy = 0
-udg_DamageTypeReduced_Copy = 0
-udg_CONVERTED_DAMAGE_TYPE_Copy = {}
-udg_DAMAGE_TYPE_UNKNOWN_Copy = 0
-udg_DAMAGE_TYPE_NORMAL_Copy = 0
-udg_DAMAGE_TYPE_ENHANCED_Copy = 0
-udg_DAMAGE_TYPE_FIRE_Copy = 0
-udg_DAMAGE_TYPE_COLD_Copy = 0
-udg_DAMAGE_TYPE_LIGHTNING_Copy = 0
-udg_DAMAGE_TYPE_POISON_Copy = 0
-udg_DAMAGE_TYPE_DISEASE_Copy = 0
-udg_DAMAGE_TYPE_DIVINE_Copy = 0
-udg_DAMAGE_TYPE_MAGIC_Copy = 0
-udg_DAMAGE_TYPE_SONIC_Copy = 0
-udg_DAMAGE_TYPE_ACID_Copy = 0
-udg_DAMAGE_TYPE_FORCE_Copy = 0
-udg_DAMAGE_TYPE_DEATH_Copy = 0
-udg_DAMAGE_TYPE_MIND_Copy = 0
-udg_DAMAGE_TYPE_PLANT_Copy = 0
-udg_DAMAGE_TYPE_DEFENSIVE_Copy = 0
-udg_DAMAGE_TYPE_DEMOLITION_Copy = 0
-udg_DAMAGE_TYPE_SLOW_POISON_Copy = 0
-udg_DAMAGE_TYPE_SPIRIT_LINK_Copy = 0
-udg_DAMAGE_TYPE_SHADOW_STRIKE_Copy = 0
-udg_DAMAGE_TYPE_UNIVERSAL_Copy = 0
-udg_DamageTypeDebugStr_Copy = __jarray("")
-udg_DEFENSE_TYPE_LIGHT_Copy = 0
-udg_DEFENSE_TYPE_MEDIUM_Copy = 0
-udg_DEFENSE_TYPE_HEAVY_Copy = 0
-udg_DEFENSE_TYPE_FORTIFIED_Copy = 0
-udg_DEFENSE_TYPE_NORMAL_Copy = 0
-udg_DEFENSE_TYPE_HERO_Copy = 0
-udg_DEFENSE_TYPE_DIVINE_Copy = 0
-udg_DEFENSE_TYPE_UNARMORED_Copy = 0
-udg_DefenseTypeDebugStr_Copy = __jarray("")
-udg_WeaponTypeDebugStr_Copy = __jarray("")
-udg_WEAPON_TYPE_NONE_Copy = 0
-udg_WEAPON_TYPE_ML_CHOP_Copy = 0
-udg_WEAPON_TYPE_MM_CHOP_Copy = 0
-udg_WEAPON_TYPE_MH_CHOP_Copy = 0
-udg_WEAPON_TYPE_ML_SLICE_Copy = 0
-udg_WEAPON_TYPE_MM_SLICE_Copy = 0
-udg_WEAPON_TYPE_MH_SLICE_Copy = 0
-udg_WEAPON_TYPE_MM_BASH_Copy = 0
-udg_WEAPON_TYPE_MH_BASH_Copy = 0
-udg_WEAPON_TYPE_MM_STAB_Copy = 0
-udg_WEAPON_TYPE_MH_STAB_Copy = 0
-udg_WEAPON_TYPE_WL_SLICE_Copy = 0
-udg_WEAPON_TYPE_WM_SLICE_Copy = 0
-udg_WEAPON_TYPE_WH_SLICE_Copy = 0
-udg_WEAPON_TYPE_WL_BASH_Copy = 0
-udg_WEAPON_TYPE_WM_BASH_Copy = 0
-udg_WEAPON_TYPE_WH_BASH_Copy = 0
-udg_WEAPON_TYPE_WL_STAB_Copy = 0
-udg_WEAPON_TYPE_WM_STAB_Copy = 0
-udg_WEAPON_TYPE_CL_SLICE_Copy = 0
-udg_WEAPON_TYPE_CM_SLICE_Copy = 0
-udg_WEAPON_TYPE_CH_SLICE_Copy = 0
-udg_WEAPON_TYPE_AM_CHOP_Copy = 0
-udg_WEAPON_TYPE_RH_BASH_Copy = 0
 udg_DamageEventUserAmt = 0.0
 udg_Integer_Array_SlamTrapChance = __jarray(0)
 udg_Integer_TotalSlamTrapsBuilt = 0
 udg_Integer_Array_BloodTrapChance = __jarray(0)
 udg_Integer_TotalBloodTrapsBuilt = 0
-udg_CONVERTED_ATTACK_TYPE_Copy_2 = {}
-udg_CONVERTED_DAMAGE_TYPE_Copy_2 = {}
-udg_DamageEventArmorPierced_Copy = 0.0
-udg_AfterDamageEvent_Copy = 0.0
-udg_DamageEventOverride_Copy = false
-udg_DamageEvent_Copy = 0.0
-udg_DamageModifierEvent_Copy = 0.0
-udg_DamageEventAmount_Copy = 0.0
-udg_DamageEventSource_Copy = nil
-udg_DamageEventTarget_Copy = nil
-udg_DamageEventPrevAmt_Copy = 0.0
-udg_LethalDamageEvent_Copy = 0.0
-udg_LethalDamageHP_Copy = 0.0
-udg_AOEDamageEvent_Copy = 0.0
-udg_AOEDamageSource_Copy = nil
-udg_DamageEventAOE_Copy = 0
-udg_DamageEventAOEGroup_Copy = nil
-udg_DamageEventLevel_Copy = 0
-udg_EnhancedDamageTarget_Copy = nil
-udg_DamageEventType_Copy = 0
-udg_NextDamageType_Copy = 0
-udg_DamageScalingUser_Copy = 0.0
-udg_DamageScalingWC3_Copy = 0.0
-udg_DamageTypeBlocked_Copy_2 = 0
-udg_DamageTypeCriticalStrike_Copy_2 = 0
-udg_DamageTypeCode_Copy_2 = 0
-udg_DamageTypeExplosive_Copy_2 = 0
-udg_DamageTypeHeal_Copy_2 = 0
-udg_DamageTypePure_Copy_2 = 0
-udg_DamageTypePureExplosive_Copy_2 = 0
-udg_DamageTypeReduced_Copy_2 = 0
-udg_IsDamageCode_Copy = false
-udg_IsDamageMelee_Copy = false
-udg_IsDamageRanged_Copy = false
-udg_IsDamageSpell_Copy = false
-udg_DamageEventTrigger_Copy = nil
-udg_DamageEventArmorT_Copy = 0
-udg_ARMOR_TYPE_NONE_Copy_2 = 0
-udg_ARMOR_TYPE_FLESH_Copy_2 = 0
-udg_ARMOR_TYPE_METAL_Copy_2 = 0
-udg_ARMOR_TYPE_WOOD_Copy_2 = 0
-udg_ARMOR_TYPE_ETHEREAL_Copy_2 = 0
-udg_ARMOR_TYPE_STONE_Copy_2 = 0
-udg_ArmorTypeDebugStr_Copy_2 = __jarray("")
-udg_DamageEventAttackT_Copy = 0
-udg_ATTACK_TYPE_SPELLS_Copy_2 = 0
-udg_ATTACK_TYPE_NORMAL_Copy_2 = 0
-udg_ATTACK_TYPE_PIERCE_Copy_2 = 0
-udg_ATTACK_TYPE_SIEGE_Copy_2 = 0
-udg_ATTACK_TYPE_MAGIC_Copy_2 = 0
-udg_ATTACK_TYPE_CHAOS_Copy_2 = 0
-udg_ATTACK_TYPE_HERO_Copy_2 = 0
-udg_AttackTypeDebugStr_Copy_2 = __jarray("")
-udg_DamageEventDamageT_Copy = 0
-udg_DAMAGE_TYPE_UNKNOWN_Copy_2 = 0
-udg_DAMAGE_TYPE_NORMAL_Copy_2 = 0
-udg_DAMAGE_TYPE_ENHANCED_Copy_2 = 0
-udg_DAMAGE_TYPE_FIRE_Copy_2 = 0
-udg_DAMAGE_TYPE_COLD_Copy_2 = 0
-udg_DAMAGE_TYPE_LIGHTNING_Copy_2 = 0
-udg_DAMAGE_TYPE_POISON_Copy_2 = 0
-udg_DAMAGE_TYPE_DISEASE_Copy_2 = 0
-udg_DAMAGE_TYPE_DIVINE_Copy_2 = 0
-udg_DAMAGE_TYPE_MAGIC_Copy_2 = 0
-udg_DAMAGE_TYPE_SONIC_Copy_2 = 0
-udg_DAMAGE_TYPE_ACID_Copy_2 = 0
-udg_DAMAGE_TYPE_FORCE_Copy_2 = 0
-udg_DAMAGE_TYPE_DEATH_Copy_2 = 0
-udg_DAMAGE_TYPE_MIND_Copy_2 = 0
-udg_DAMAGE_TYPE_PLANT_Copy_2 = 0
-udg_DAMAGE_TYPE_DEFENSIVE_Copy_2 = 0
-udg_DAMAGE_TYPE_DEMOLITION_Copy_2 = 0
-udg_DAMAGE_TYPE_SLOW_POISON_Copy_2 = 0
-udg_DAMAGE_TYPE_SPIRIT_LINK_Copy_2 = 0
-udg_DAMAGE_TYPE_SHADOW_STRIKE_Copy_2 = 0
-udg_DAMAGE_TYPE_UNIVERSAL_Copy_2 = 0
-udg_DamageTypeDebugStr_Copy_2 = __jarray("")
-udg_DamageEventDefenseT_Copy = 0
-udg_DEFENSE_TYPE_LIGHT_Copy_2 = 0
-udg_DEFENSE_TYPE_MEDIUM_Copy_2 = 0
-udg_DEFENSE_TYPE_HEAVY_Copy_2 = 0
-udg_DEFENSE_TYPE_FORTIFIED_Copy_2 = 0
-udg_DEFENSE_TYPE_NORMAL_Copy_2 = 0
-udg_DEFENSE_TYPE_HERO_Copy_2 = 0
-udg_DEFENSE_TYPE_DIVINE_Copy_2 = 0
-udg_DEFENSE_TYPE_UNARMORED_Copy_2 = 0
-udg_DefenseTypeDebugStr_Copy_2 = __jarray("")
-udg_WeaponTypeDebugStr_Copy_2 = __jarray("")
-udg_WEAPON_TYPE_NONE_Copy_2 = 0
-udg_WEAPON_TYPE_ML_CHOP_Copy_2 = 0
-udg_WEAPON_TYPE_MM_CHOP_Copy_2 = 0
-udg_WEAPON_TYPE_MH_CHOP_Copy_2 = 0
-udg_WEAPON_TYPE_ML_SLICE_Copy_2 = 0
-udg_WEAPON_TYPE_MM_SLICE_Copy_2 = 0
-udg_WEAPON_TYPE_MH_SLICE_Copy_2 = 0
-udg_WEAPON_TYPE_MM_BASH_Copy_2 = 0
-udg_WEAPON_TYPE_MH_BASH_Copy_2 = 0
-udg_WEAPON_TYPE_MM_STAB_Copy_2 = 0
-udg_WEAPON_TYPE_MH_STAB_Copy_2 = 0
-udg_WEAPON_TYPE_WL_SLICE_Copy_2 = 0
-udg_WEAPON_TYPE_WM_SLICE_Copy_2 = 0
-udg_WEAPON_TYPE_WH_SLICE_Copy_2 = 0
-udg_WEAPON_TYPE_WL_BASH_Copy_2 = 0
-udg_WEAPON_TYPE_WM_BASH_Copy_2 = 0
-udg_WEAPON_TYPE_WH_BASH_Copy_2 = 0
-udg_WEAPON_TYPE_WL_STAB_Copy_2 = 0
-udg_WEAPON_TYPE_WM_STAB_Copy_2 = 0
-udg_WEAPON_TYPE_CL_SLICE_Copy_2 = 0
-udg_WEAPON_TYPE_CM_SLICE_Copy_2 = 0
-udg_WEAPON_TYPE_CH_SLICE_Copy_2 = 0
-udg_WEAPON_TYPE_AM_CHOP_Copy_2 = 0
-udg_WEAPON_TYPE_RH_BASH_Copy_2 = 0
-udg_DamageEventWeaponT_Copy = 0
 udg_Integer_DisTowerIncomeBonus = 0
 udg_Integer_GambleBonus = 0
 gg_rct_Pink_Spawn = nil
@@ -620,7 +425,6 @@ gg_snd_Wave_Normal = nil
 gg_snd_Wave_Hero = nil
 gg_snd_Wave_Boss = nil
 gg_snd_HeroLichPissed8 = nil
-gg_trg_Damage_Engine_Config = nil
 gg_trg_Kick_Blue = nil
 gg_trg_Kick_Teal = nil
 gg_trg_Kick_Purple = nil
@@ -826,6 +630,8 @@ gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
+gg_trg_Damage_Engine_Config = nil
+gg_trg_Void_Trap_Autocast = nil
 function InitGlobals()
 local i = 0
 
@@ -1519,111 +1325,6 @@ udg_UNIT_CLASS_FLYING = 0
 udg_UNIT_CLASS_STRUCTURE = 0
 udg_UNIT_CLASS_DEAD = 0
 udg_UNIT_CLASS_HERO = 0
-udg_ARMOR_TYPE_NONE_Copy = 0
-udg_ARMOR_TYPE_FLESH_Copy = 0
-udg_ARMOR_TYPE_METAL_Copy = 0
-udg_ARMOR_TYPE_WOOD_Copy = 0
-udg_ARMOR_TYPE_ETHEREAL_Copy = 0
-udg_ARMOR_TYPE_STONE_Copy = 0
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_ArmorTypeDebugStr_Copy[i] = ""
-i = i + 1
-end
-udg_ATTACK_TYPE_SPELLS_Copy = 0
-udg_ATTACK_TYPE_NORMAL_Copy = 0
-udg_ATTACK_TYPE_PIERCE_Copy = 0
-udg_ATTACK_TYPE_SIEGE_Copy = 0
-udg_ATTACK_TYPE_MAGIC_Copy = 0
-udg_ATTACK_TYPE_CHAOS_Copy = 0
-udg_ATTACK_TYPE_HERO_Copy = 0
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_AttackTypeDebugStr_Copy[i] = ""
-i = i + 1
-end
-udg_DamageTypeBlocked_Copy = 0
-udg_DamageTypeCriticalStrike_Copy = 0
-udg_DamageTypeCode_Copy = 0
-udg_DamageTypeExplosive_Copy = 0
-udg_DamageTypeHeal_Copy = 0
-udg_DamageTypePure_Copy = 0
-udg_DamageTypePureExplosive_Copy = 0
-udg_DamageTypeReduced_Copy = 0
-udg_DAMAGE_TYPE_UNKNOWN_Copy = 0
-udg_DAMAGE_TYPE_NORMAL_Copy = 0
-udg_DAMAGE_TYPE_ENHANCED_Copy = 0
-udg_DAMAGE_TYPE_FIRE_Copy = 0
-udg_DAMAGE_TYPE_COLD_Copy = 0
-udg_DAMAGE_TYPE_LIGHTNING_Copy = 0
-udg_DAMAGE_TYPE_POISON_Copy = 0
-udg_DAMAGE_TYPE_DISEASE_Copy = 0
-udg_DAMAGE_TYPE_DIVINE_Copy = 0
-udg_DAMAGE_TYPE_MAGIC_Copy = 0
-udg_DAMAGE_TYPE_SONIC_Copy = 0
-udg_DAMAGE_TYPE_ACID_Copy = 0
-udg_DAMAGE_TYPE_FORCE_Copy = 0
-udg_DAMAGE_TYPE_DEATH_Copy = 0
-udg_DAMAGE_TYPE_MIND_Copy = 0
-udg_DAMAGE_TYPE_PLANT_Copy = 0
-udg_DAMAGE_TYPE_DEFENSIVE_Copy = 0
-udg_DAMAGE_TYPE_DEMOLITION_Copy = 0
-udg_DAMAGE_TYPE_SLOW_POISON_Copy = 0
-udg_DAMAGE_TYPE_SPIRIT_LINK_Copy = 0
-udg_DAMAGE_TYPE_SHADOW_STRIKE_Copy = 0
-udg_DAMAGE_TYPE_UNIVERSAL_Copy = 0
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_DamageTypeDebugStr_Copy[i] = ""
-i = i + 1
-end
-udg_DEFENSE_TYPE_LIGHT_Copy = 0
-udg_DEFENSE_TYPE_MEDIUM_Copy = 0
-udg_DEFENSE_TYPE_HEAVY_Copy = 0
-udg_DEFENSE_TYPE_FORTIFIED_Copy = 0
-udg_DEFENSE_TYPE_NORMAL_Copy = 0
-udg_DEFENSE_TYPE_HERO_Copy = 0
-udg_DEFENSE_TYPE_DIVINE_Copy = 0
-udg_DEFENSE_TYPE_UNARMORED_Copy = 0
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_DefenseTypeDebugStr_Copy[i] = ""
-i = i + 1
-end
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_WeaponTypeDebugStr_Copy[i] = ""
-i = i + 1
-end
-udg_WEAPON_TYPE_NONE_Copy = 0
-udg_WEAPON_TYPE_ML_CHOP_Copy = 0
-udg_WEAPON_TYPE_MM_CHOP_Copy = 0
-udg_WEAPON_TYPE_MH_CHOP_Copy = 0
-udg_WEAPON_TYPE_ML_SLICE_Copy = 0
-udg_WEAPON_TYPE_MM_SLICE_Copy = 0
-udg_WEAPON_TYPE_MH_SLICE_Copy = 0
-udg_WEAPON_TYPE_MM_BASH_Copy = 0
-udg_WEAPON_TYPE_MH_BASH_Copy = 0
-udg_WEAPON_TYPE_MM_STAB_Copy = 0
-udg_WEAPON_TYPE_MH_STAB_Copy = 0
-udg_WEAPON_TYPE_WL_SLICE_Copy = 0
-udg_WEAPON_TYPE_WM_SLICE_Copy = 0
-udg_WEAPON_TYPE_WH_SLICE_Copy = 0
-udg_WEAPON_TYPE_WL_BASH_Copy = 0
-udg_WEAPON_TYPE_WM_BASH_Copy = 0
-udg_WEAPON_TYPE_WH_BASH_Copy = 0
-udg_WEAPON_TYPE_WL_STAB_Copy = 0
-udg_WEAPON_TYPE_WM_STAB_Copy = 0
-udg_WEAPON_TYPE_CL_SLICE_Copy = 0
-udg_WEAPON_TYPE_CM_SLICE_Copy = 0
-udg_WEAPON_TYPE_CH_SLICE_Copy = 0
-udg_WEAPON_TYPE_AM_CHOP_Copy = 0
-udg_WEAPON_TYPE_RH_BASH_Copy = 0
 udg_DamageEventUserAmt = 0.0
 i = 0
 while (true) do
@@ -1639,137 +1340,6 @@ udg_Integer_Array_BloodTrapChance[i] = 0
 i = i + 1
 end
 udg_Integer_TotalBloodTrapsBuilt = 0
-udg_DamageEventArmorPierced_Copy = 0.0
-udg_AfterDamageEvent_Copy = 0.0
-udg_DamageEventOverride_Copy = false
-udg_DamageEvent_Copy = 0.0
-udg_DamageModifierEvent_Copy = 0.0
-udg_DamageEventAmount_Copy = 0.0
-udg_DamageEventPrevAmt_Copy = 0.0
-udg_LethalDamageEvent_Copy = 0.0
-udg_LethalDamageHP_Copy = 0.0
-udg_AOEDamageEvent_Copy = 0.0
-udg_DamageEventAOE_Copy = 0
-udg_DamageEventAOEGroup_Copy = CreateGroup()
-udg_DamageEventLevel_Copy = 0
-udg_DamageEventType_Copy = 0
-udg_NextDamageType_Copy = 0
-udg_DamageScalingUser_Copy = 0.0
-udg_DamageScalingWC3_Copy = 0.0
-udg_DamageTypeBlocked_Copy_2 = 0
-udg_DamageTypeCriticalStrike_Copy_2 = 0
-udg_DamageTypeCode_Copy_2 = 0
-udg_DamageTypeExplosive_Copy_2 = 0
-udg_DamageTypeHeal_Copy_2 = 0
-udg_DamageTypePure_Copy_2 = 0
-udg_DamageTypePureExplosive_Copy_2 = 0
-udg_DamageTypeReduced_Copy_2 = 0
-udg_IsDamageCode_Copy = false
-udg_IsDamageMelee_Copy = false
-udg_IsDamageRanged_Copy = false
-udg_IsDamageSpell_Copy = false
-udg_DamageEventArmorT_Copy = 0
-udg_ARMOR_TYPE_NONE_Copy_2 = 0
-udg_ARMOR_TYPE_FLESH_Copy_2 = 0
-udg_ARMOR_TYPE_METAL_Copy_2 = 0
-udg_ARMOR_TYPE_WOOD_Copy_2 = 0
-udg_ARMOR_TYPE_ETHEREAL_Copy_2 = 0
-udg_ARMOR_TYPE_STONE_Copy_2 = 0
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_ArmorTypeDebugStr_Copy_2[i] = ""
-i = i + 1
-end
-udg_DamageEventAttackT_Copy = 0
-udg_ATTACK_TYPE_SPELLS_Copy_2 = 0
-udg_ATTACK_TYPE_NORMAL_Copy_2 = 0
-udg_ATTACK_TYPE_PIERCE_Copy_2 = 0
-udg_ATTACK_TYPE_SIEGE_Copy_2 = 0
-udg_ATTACK_TYPE_MAGIC_Copy_2 = 0
-udg_ATTACK_TYPE_CHAOS_Copy_2 = 0
-udg_ATTACK_TYPE_HERO_Copy_2 = 0
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_AttackTypeDebugStr_Copy_2[i] = ""
-i = i + 1
-end
-udg_DamageEventDamageT_Copy = 0
-udg_DAMAGE_TYPE_UNKNOWN_Copy_2 = 0
-udg_DAMAGE_TYPE_NORMAL_Copy_2 = 0
-udg_DAMAGE_TYPE_ENHANCED_Copy_2 = 0
-udg_DAMAGE_TYPE_FIRE_Copy_2 = 0
-udg_DAMAGE_TYPE_COLD_Copy_2 = 0
-udg_DAMAGE_TYPE_LIGHTNING_Copy_2 = 0
-udg_DAMAGE_TYPE_POISON_Copy_2 = 0
-udg_DAMAGE_TYPE_DISEASE_Copy_2 = 0
-udg_DAMAGE_TYPE_DIVINE_Copy_2 = 0
-udg_DAMAGE_TYPE_MAGIC_Copy_2 = 0
-udg_DAMAGE_TYPE_SONIC_Copy_2 = 0
-udg_DAMAGE_TYPE_ACID_Copy_2 = 0
-udg_DAMAGE_TYPE_FORCE_Copy_2 = 0
-udg_DAMAGE_TYPE_DEATH_Copy_2 = 0
-udg_DAMAGE_TYPE_MIND_Copy_2 = 0
-udg_DAMAGE_TYPE_PLANT_Copy_2 = 0
-udg_DAMAGE_TYPE_DEFENSIVE_Copy_2 = 0
-udg_DAMAGE_TYPE_DEMOLITION_Copy_2 = 0
-udg_DAMAGE_TYPE_SLOW_POISON_Copy_2 = 0
-udg_DAMAGE_TYPE_SPIRIT_LINK_Copy_2 = 0
-udg_DAMAGE_TYPE_SHADOW_STRIKE_Copy_2 = 0
-udg_DAMAGE_TYPE_UNIVERSAL_Copy_2 = 0
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_DamageTypeDebugStr_Copy_2[i] = ""
-i = i + 1
-end
-udg_DamageEventDefenseT_Copy = 0
-udg_DEFENSE_TYPE_LIGHT_Copy_2 = 0
-udg_DEFENSE_TYPE_MEDIUM_Copy_2 = 0
-udg_DEFENSE_TYPE_HEAVY_Copy_2 = 0
-udg_DEFENSE_TYPE_FORTIFIED_Copy_2 = 0
-udg_DEFENSE_TYPE_NORMAL_Copy_2 = 0
-udg_DEFENSE_TYPE_HERO_Copy_2 = 0
-udg_DEFENSE_TYPE_DIVINE_Copy_2 = 0
-udg_DEFENSE_TYPE_UNARMORED_Copy_2 = 0
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_DefenseTypeDebugStr_Copy_2[i] = ""
-i = i + 1
-end
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_WeaponTypeDebugStr_Copy_2[i] = ""
-i = i + 1
-end
-udg_WEAPON_TYPE_NONE_Copy_2 = 0
-udg_WEAPON_TYPE_ML_CHOP_Copy_2 = 0
-udg_WEAPON_TYPE_MM_CHOP_Copy_2 = 0
-udg_WEAPON_TYPE_MH_CHOP_Copy_2 = 0
-udg_WEAPON_TYPE_ML_SLICE_Copy_2 = 0
-udg_WEAPON_TYPE_MM_SLICE_Copy_2 = 0
-udg_WEAPON_TYPE_MH_SLICE_Copy_2 = 0
-udg_WEAPON_TYPE_MM_BASH_Copy_2 = 0
-udg_WEAPON_TYPE_MH_BASH_Copy_2 = 0
-udg_WEAPON_TYPE_MM_STAB_Copy_2 = 0
-udg_WEAPON_TYPE_MH_STAB_Copy_2 = 0
-udg_WEAPON_TYPE_WL_SLICE_Copy_2 = 0
-udg_WEAPON_TYPE_WM_SLICE_Copy_2 = 0
-udg_WEAPON_TYPE_WH_SLICE_Copy_2 = 0
-udg_WEAPON_TYPE_WL_BASH_Copy_2 = 0
-udg_WEAPON_TYPE_WM_BASH_Copy_2 = 0
-udg_WEAPON_TYPE_WH_BASH_Copy_2 = 0
-udg_WEAPON_TYPE_WL_STAB_Copy_2 = 0
-udg_WEAPON_TYPE_WM_STAB_Copy_2 = 0
-udg_WEAPON_TYPE_CL_SLICE_Copy_2 = 0
-udg_WEAPON_TYPE_CM_SLICE_Copy_2 = 0
-udg_WEAPON_TYPE_CH_SLICE_Copy_2 = 0
-udg_WEAPON_TYPE_AM_CHOP_Copy_2 = 0
-udg_WEAPON_TYPE_RH_BASH_Copy_2 = 0
-udg_DamageEventWeaponT_Copy = 0
 udg_Integer_DisTowerIncomeBonus = 5
 udg_Integer_GambleBonus = 0
 end
@@ -3014,151 +2584,6 @@ gg_trg_Damage_Engine_Config = CreateTrigger()
 TriggerAddAction(gg_trg_Damage_Engine_Config, Trig_Damage_Engine_Config_Actions)
 end
 
-function Trig_Kick_Blue_Func004002()
-KillUnit(GetEnumUnit())
-end
-
-function Trig_Kick_Blue_Actions()
-PlaySoundBJ(gg_snd_HeroLichPissed8)
-CustomDefeatBJ(Player(1), "TRIGSTR_2940")
-    bj_wantDestroyGroup = true
-ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(1)), Trig_Kick_Blue_Func004002)
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 3, (udg_String_Array_MultiBoardColours[2] .. ("-Kicked-" .. "|r")))
-end
-
-function InitTrig_Kick_Blue()
-gg_trg_Kick_Blue = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Kick_Blue, Player(0), "-kick blue", true)
-TriggerAddAction(gg_trg_Kick_Blue, Trig_Kick_Blue_Actions)
-end
-
-function Trig_Kick_Teal_Func004002()
-KillUnit(GetEnumUnit())
-end
-
-function Trig_Kick_Teal_Actions()
-PlaySoundBJ(gg_snd_HeroLichPissed8)
-CustomDefeatBJ(Player(2), "TRIGSTR_2939")
-    bj_wantDestroyGroup = true
-ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(2)), Trig_Kick_Teal_Func004002)
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 4, (udg_String_Array_MultiBoardColours[3] .. ("-Kicked-" .. "|r")))
-end
-
-function InitTrig_Kick_Teal()
-gg_trg_Kick_Teal = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Kick_Teal, Player(0), "-kick teal", true)
-TriggerAddAction(gg_trg_Kick_Teal, Trig_Kick_Teal_Actions)
-end
-
-function Trig_Kick_Purple_Func004002()
-KillUnit(GetEnumUnit())
-end
-
-function Trig_Kick_Purple_Actions()
-PlaySoundBJ(gg_snd_HeroLichPissed8)
-CustomDefeatBJ(Player(3), "TRIGSTR_2938")
-    bj_wantDestroyGroup = true
-ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(3)), Trig_Kick_Purple_Func004002)
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 5, (udg_String_Array_MultiBoardColours[4] .. ("-Kicked-" .. "|r")))
-end
-
-function InitTrig_Kick_Purple()
-gg_trg_Kick_Purple = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Kick_Purple, Player(0), "-kick purple", true)
-TriggerAddAction(gg_trg_Kick_Purple, Trig_Kick_Purple_Actions)
-end
-
-function Trig_Kick_Yellow_Func004002()
-KillUnit(GetEnumUnit())
-end
-
-function Trig_Kick_Yellow_Actions()
-PlaySoundBJ(gg_snd_HeroLichPissed8)
-CustomDefeatBJ(Player(4), "TRIGSTR_2831")
-    bj_wantDestroyGroup = true
-ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(4)), Trig_Kick_Yellow_Func004002)
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 6, (udg_String_Array_MultiBoardColours[5] .. ("-Kicked-" .. "|r")))
-end
-
-function InitTrig_Kick_Yellow()
-gg_trg_Kick_Yellow = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Kick_Yellow, Player(0), "-kick yellow", true)
-TriggerAddAction(gg_trg_Kick_Yellow, Trig_Kick_Yellow_Actions)
-end
-
-function Trig_Kick_Orange_Func005002()
-KillUnit(GetEnumUnit())
-end
-
-function Trig_Kick_Orange_Actions()
-PlaySoundBJ(gg_snd_HeroLichPissed8)
-CustomDefeatBJ(Player(5), "TRIGSTR_2487")
-    bj_wantDestroyGroup = true
-ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(5)), Trig_Kick_Orange_Func005002)
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 7, (udg_String_Array_MultiBoardColours[6] .. ("-Kicked-" .. "|r")))
-end
-
-function InitTrig_Kick_Orange()
-gg_trg_Kick_Orange = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Kick_Orange, Player(0), "-kick orange", true)
-TriggerAddAction(gg_trg_Kick_Orange, Trig_Kick_Orange_Actions)
-end
-
-function Trig_Kick_Green_Func004002()
-KillUnit(GetEnumUnit())
-end
-
-function Trig_Kick_Green_Actions()
-PlaySoundBJ(gg_snd_HeroLichPissed8)
-CustomDefeatBJ(Player(6), "TRIGSTR_2468")
-    bj_wantDestroyGroup = true
-ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(6)), Trig_Kick_Green_Func004002)
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 8, (udg_String_Array_MultiBoardColours[7] .. ("-Kicked-" .. "|r")))
-end
-
-function InitTrig_Kick_Green()
-gg_trg_Kick_Green = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Kick_Green, Player(0), "-kick green", true)
-TriggerAddAction(gg_trg_Kick_Green, Trig_Kick_Green_Actions)
-end
-
-function Trig_Kick_Pink_Func004002()
-KillUnit(GetEnumUnit())
-end
-
-function Trig_Kick_Pink_Actions()
-PlaySoundBJ(gg_snd_HeroLichPissed8)
-CustomDefeatBJ(Player(7), "TRIGSTR_1029")
-    bj_wantDestroyGroup = true
-ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(7)), Trig_Kick_Pink_Func004002)
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 9, (udg_String_Array_MultiBoardColours[8] .. ("-Kicked-" .. "|r")))
-end
-
-function InitTrig_Kick_Pink()
-gg_trg_Kick_Pink = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Kick_Pink, Player(0), "-kick pink", true)
-TriggerAddAction(gg_trg_Kick_Pink, Trig_Kick_Pink_Actions)
-end
-
-function Trig_Kick_Gray_Func004002()
-KillUnit(GetEnumUnit())
-end
-
-function Trig_Kick_Gray_Actions()
-PlaySoundBJ(gg_snd_HeroLichPissed8)
-CustomDefeatBJ(Player(8), "TRIGSTR_1028")
-    bj_wantDestroyGroup = true
-ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(8)), Trig_Kick_Gray_Func004002)
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 10, (udg_String_Array_MultiBoardColours[9] .. ("-Kicked-" .. "|r")))
-end
-
-function InitTrig_Kick_Gray()
-gg_trg_Kick_Gray = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Kick_Gray, Player(0), "-kick gray", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Kick_Gray, Player(0), "-kick grey", true)
-TriggerAddAction(gg_trg_Kick_Gray, Trig_Kick_Gray_Actions)
-end
-
 function Trig_Crit_System_Func001C()
 if (not (GetUnitAbilityLevelSwapped(FourCC("A00T"), udg_DamageEventSource) <= 19)) then
 return false
@@ -4054,6 +3479,43 @@ TriggerAddCondition(gg_trg_Bladestorm_Autocast, Condition(Trig_Bladestorm_Autoca
 TriggerAddAction(gg_trg_Bladestorm_Autocast, Trig_Bladestorm_Autocast_Actions)
 end
 
+function Trig_Void_Trap_Autocast_Conditions()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A001"), udg_DamageEventSource) >= 1)) then
+return false
+end
+return true
+end
+
+function Trig_Void_Trap_Autocast_Func002C()
+if (not (udg_Integer_Array_SlamTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (5 + udg_Integer_TotalSlamTrapsBuilt))) then
+return false
+end
+return true
+end
+
+function Trig_Void_Trap_Autocast_Actions()
+udg_Integer_Array_SlamTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomInt(1, 100)
+if (Trig_Void_Trap_Autocast_Func002C()) then
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
+UnitApplyTimedLifeBJ(6.00, FourCC("BTLF"), GetLastCreatedUnit())
+UnitAddAbilityBJ(FourCC("A04R"), GetLastCreatedUnit())
+SetUnitAbilityLevelSwapped(FourCC("A04R"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A001"), udg_DamageEventSource))
+IssueImmediateOrderBJ(GetLastCreatedUnit(), "whirlwind")
+AddSpecialEffectLocBJ(GetUnitLoc(GetLastCreatedUnit()), "war3mapImported\\SpinFX2.mdx")
+BlzSetSpecialEffectTimeScale(GetLastCreatedEffectBJ(), 2.00)
+BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 0.50)
+DestroyEffectBJ(GetLastCreatedEffectBJ())
+else
+end
+end
+
+function InitTrig_Void_Trap_Autocast()
+gg_trg_Void_Trap_Autocast = CreateTrigger()
+TriggerRegisterVariableEvent(gg_trg_Void_Trap_Autocast, "udg_DamageEvent", EQUAL, 1.00)
+TriggerAddCondition(gg_trg_Void_Trap_Autocast, Condition(Trig_Void_Trap_Autocast_Conditions))
+TriggerAddAction(gg_trg_Void_Trap_Autocast, Trig_Void_Trap_Autocast_Actions)
+end
+
 function Trig_Bloodtrap_Conditions()
 if (not (GetUnitTypeId(udg_DamageEventSource) == FourCC("n01H"))) then
 return false
@@ -4105,6 +3567,151 @@ gg_trg_Bloodtrap = CreateTrigger()
 TriggerRegisterVariableEvent(gg_trg_Bloodtrap, "udg_DamageEvent", EQUAL, 1.00)
 TriggerAddCondition(gg_trg_Bloodtrap, Condition(Trig_Bloodtrap_Conditions))
 TriggerAddAction(gg_trg_Bloodtrap, Trig_Bloodtrap_Actions)
+end
+
+function Trig_Kick_Blue_Func004002()
+KillUnit(GetEnumUnit())
+end
+
+function Trig_Kick_Blue_Actions()
+PlaySoundBJ(gg_snd_HeroLichPissed8)
+CustomDefeatBJ(Player(1), "TRIGSTR_2940")
+    bj_wantDestroyGroup = true
+ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(1)), Trig_Kick_Blue_Func004002)
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 3, (udg_String_Array_MultiBoardColours[2] .. ("-Kicked-" .. "|r")))
+end
+
+function InitTrig_Kick_Blue()
+gg_trg_Kick_Blue = CreateTrigger()
+TriggerRegisterPlayerChatEvent(gg_trg_Kick_Blue, Player(0), "-kick blue", true)
+TriggerAddAction(gg_trg_Kick_Blue, Trig_Kick_Blue_Actions)
+end
+
+function Trig_Kick_Teal_Func004002()
+KillUnit(GetEnumUnit())
+end
+
+function Trig_Kick_Teal_Actions()
+PlaySoundBJ(gg_snd_HeroLichPissed8)
+CustomDefeatBJ(Player(2), "TRIGSTR_2939")
+    bj_wantDestroyGroup = true
+ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(2)), Trig_Kick_Teal_Func004002)
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 4, (udg_String_Array_MultiBoardColours[3] .. ("-Kicked-" .. "|r")))
+end
+
+function InitTrig_Kick_Teal()
+gg_trg_Kick_Teal = CreateTrigger()
+TriggerRegisterPlayerChatEvent(gg_trg_Kick_Teal, Player(0), "-kick teal", true)
+TriggerAddAction(gg_trg_Kick_Teal, Trig_Kick_Teal_Actions)
+end
+
+function Trig_Kick_Purple_Func004002()
+KillUnit(GetEnumUnit())
+end
+
+function Trig_Kick_Purple_Actions()
+PlaySoundBJ(gg_snd_HeroLichPissed8)
+CustomDefeatBJ(Player(3), "TRIGSTR_2938")
+    bj_wantDestroyGroup = true
+ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(3)), Trig_Kick_Purple_Func004002)
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 5, (udg_String_Array_MultiBoardColours[4] .. ("-Kicked-" .. "|r")))
+end
+
+function InitTrig_Kick_Purple()
+gg_trg_Kick_Purple = CreateTrigger()
+TriggerRegisterPlayerChatEvent(gg_trg_Kick_Purple, Player(0), "-kick purple", true)
+TriggerAddAction(gg_trg_Kick_Purple, Trig_Kick_Purple_Actions)
+end
+
+function Trig_Kick_Yellow_Func004002()
+KillUnit(GetEnumUnit())
+end
+
+function Trig_Kick_Yellow_Actions()
+PlaySoundBJ(gg_snd_HeroLichPissed8)
+CustomDefeatBJ(Player(4), "TRIGSTR_2831")
+    bj_wantDestroyGroup = true
+ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(4)), Trig_Kick_Yellow_Func004002)
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 6, (udg_String_Array_MultiBoardColours[5] .. ("-Kicked-" .. "|r")))
+end
+
+function InitTrig_Kick_Yellow()
+gg_trg_Kick_Yellow = CreateTrigger()
+TriggerRegisterPlayerChatEvent(gg_trg_Kick_Yellow, Player(0), "-kick yellow", true)
+TriggerAddAction(gg_trg_Kick_Yellow, Trig_Kick_Yellow_Actions)
+end
+
+function Trig_Kick_Orange_Func005002()
+KillUnit(GetEnumUnit())
+end
+
+function Trig_Kick_Orange_Actions()
+PlaySoundBJ(gg_snd_HeroLichPissed8)
+CustomDefeatBJ(Player(5), "TRIGSTR_2487")
+    bj_wantDestroyGroup = true
+ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(5)), Trig_Kick_Orange_Func005002)
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 7, (udg_String_Array_MultiBoardColours[6] .. ("-Kicked-" .. "|r")))
+end
+
+function InitTrig_Kick_Orange()
+gg_trg_Kick_Orange = CreateTrigger()
+TriggerRegisterPlayerChatEvent(gg_trg_Kick_Orange, Player(0), "-kick orange", true)
+TriggerAddAction(gg_trg_Kick_Orange, Trig_Kick_Orange_Actions)
+end
+
+function Trig_Kick_Green_Func004002()
+KillUnit(GetEnumUnit())
+end
+
+function Trig_Kick_Green_Actions()
+PlaySoundBJ(gg_snd_HeroLichPissed8)
+CustomDefeatBJ(Player(6), "TRIGSTR_2468")
+    bj_wantDestroyGroup = true
+ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(6)), Trig_Kick_Green_Func004002)
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 8, (udg_String_Array_MultiBoardColours[7] .. ("-Kicked-" .. "|r")))
+end
+
+function InitTrig_Kick_Green()
+gg_trg_Kick_Green = CreateTrigger()
+TriggerRegisterPlayerChatEvent(gg_trg_Kick_Green, Player(0), "-kick green", true)
+TriggerAddAction(gg_trg_Kick_Green, Trig_Kick_Green_Actions)
+end
+
+function Trig_Kick_Pink_Func004002()
+KillUnit(GetEnumUnit())
+end
+
+function Trig_Kick_Pink_Actions()
+PlaySoundBJ(gg_snd_HeroLichPissed8)
+CustomDefeatBJ(Player(7), "TRIGSTR_1029")
+    bj_wantDestroyGroup = true
+ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(7)), Trig_Kick_Pink_Func004002)
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 9, (udg_String_Array_MultiBoardColours[8] .. ("-Kicked-" .. "|r")))
+end
+
+function InitTrig_Kick_Pink()
+gg_trg_Kick_Pink = CreateTrigger()
+TriggerRegisterPlayerChatEvent(gg_trg_Kick_Pink, Player(0), "-kick pink", true)
+TriggerAddAction(gg_trg_Kick_Pink, Trig_Kick_Pink_Actions)
+end
+
+function Trig_Kick_Gray_Func004002()
+KillUnit(GetEnumUnit())
+end
+
+function Trig_Kick_Gray_Actions()
+PlaySoundBJ(gg_snd_HeroLichPissed8)
+CustomDefeatBJ(Player(8), "TRIGSTR_1028")
+    bj_wantDestroyGroup = true
+ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(8)), Trig_Kick_Gray_Func004002)
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 10, (udg_String_Array_MultiBoardColours[9] .. ("-Kicked-" .. "|r")))
+end
+
+function InitTrig_Kick_Gray()
+gg_trg_Kick_Gray = CreateTrigger()
+TriggerRegisterPlayerChatEvent(gg_trg_Kick_Gray, Player(0), "-kick gray", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Kick_Gray, Player(0), "-kick grey", true)
+TriggerAddAction(gg_trg_Kick_Gray, Trig_Kick_Gray_Actions)
 end
 
 function Trig_Set_Variables_Func250001()
@@ -16942,14 +16549,6 @@ end
 
 function InitCustomTriggers()
 InitTrig_Damage_Engine_Config()
-InitTrig_Kick_Blue()
-InitTrig_Kick_Teal()
-InitTrig_Kick_Purple()
-InitTrig_Kick_Yellow()
-InitTrig_Kick_Orange()
-InitTrig_Kick_Green()
-InitTrig_Kick_Pink()
-InitTrig_Kick_Gray()
 InitTrig_Crit_System()
 InitTrig_Crit_Aura()
 InitTrig_Venom_Tower_Random_Target()
@@ -16969,7 +16568,16 @@ InitTrig_Darkness_Trap_Autocast()
 InitTrig_Doom_Autocast()
 InitTrig_Earth_Trap_Autocast()
 InitTrig_Bladestorm_Autocast()
+InitTrig_Void_Trap_Autocast()
 InitTrig_Bloodtrap()
+InitTrig_Kick_Blue()
+InitTrig_Kick_Teal()
+InitTrig_Kick_Purple()
+InitTrig_Kick_Yellow()
+InitTrig_Kick_Orange()
+InitTrig_Kick_Green()
+InitTrig_Kick_Pink()
+InitTrig_Kick_Gray()
 InitTrig_Set_Variables()
 InitTrig_Set_Random_Wave_Variables()
 InitTrig_Map_Start()

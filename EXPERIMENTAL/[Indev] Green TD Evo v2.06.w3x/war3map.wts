@@ -1504,6 +1504,12 @@ STRING 209
 E
 }
 
+STRING 210
+// Abilities: A04U (Void Contagion), Name (Name)
+{
+Void Contagion
+}
+
 STRING 211
 // Units: nbzk ([Air] Bronze Drake), Name (Name)
 {
@@ -4475,6 +4481,12 @@ STRING 697
 |c0077ff77[Z] |c0000ff00Upgrade To Aspect Of Blood, Ultimate.|r |cAAAAFFAASiege Tower 10.|r
 }
 
+STRING 698
+// Abilities: A04U (Void Contagion), EditorSuffix (Editor Suffix)
+{
+[Void Trap]
+}
+
 STRING 699
 // Units: h022 (Hydralisk, Ultimate Poison Tower), Tip (Tooltip - Basic)
 {
@@ -4503,6 +4515,12 @@ STRING 703
 // Units: n00O (Bronze Dragon, Ultimate Air Tower), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Bronze Dragon, Ultimate.|r |cAAAAFFAAAir Tower 10.|r
+}
+
+STRING 704
+// Abilities: A04X (Void Blast and Void Contagion), Name (Name)
+{
+Void Blast and Void Contagion
 }
 
 STRING 705
@@ -21275,10 +21293,66 @@ STRING 3160
 |c0077ff77[D]|r |c0000ff00Deactivate Blitz Mode
 }
 
+STRING 3161
+// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
+
+Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast, each time this effect triggers the void blast will become more powerful.|r
+
+
+|c0000ff00Ability:|r |c0077ff77Void Blast
+|c0000ff00Damage:|r |c0077ff77400
+|c0000ff00Units Hit:|r |c0077ff778
+|c0000ff00Cooldown:|r |c0077ff772 Seconds
+}
+
+STRING 3162
+// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
+
+Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast, each time this effect triggers the void blast will become more powerful.|r
+
+
+|c0000ff00Ability:|r |c0077ff77Void Blast
+|c0000ff00Damage:|r |c0077ff77400
+|c0000ff00Units Hit:|r |c0077ff778
+|c0000ff00Cooldown:|r |c0077ff772 Seconds
+}
+
+STRING 3163
+// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
+
+Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast, each time this effect triggers the void blast will become more powerful.|r
+
+
+|c0000ff00Ability:|r |c0077ff77Void Blast
+|c0000ff00Damage:|r |c0077ff77400
+|c0000ff00Units Hit:|r |c0077ff778
+|c0000ff00Cooldown:|r |c0077ff772 Seconds
+}
+
 STRING 3164
 // Abilities: A02T (Disable Poison Tower), Tip (Tooltip - Normal)
 {
 |c0077ff77[S]|r |c0000ff00Enable Poison Tower
+}
+
+STRING 3165
+// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
+
+Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast, each time this effect triggers the void blast will become more powerful.|r
+
+
+|c0000ff00Ability:|r |c0077ff77Void Blast
+|c0000ff00Damage:|r |c0077ff77400
+|c0000ff00Units Hit:|r |c0077ff778
+|c0000ff00Cooldown:|r |c0077ff772 Seconds
 }
 
 STRING 3166
@@ -21377,6 +21451,20 @@ STRING 3178
 Bloodtrap Level
 }
 
+STRING 3179
+// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
+
+Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast, each time this effect triggers the void blast will become more powerful.|r
+
+
+|c0000ff00Ability:|r |c0077ff77Void Blast
+|c0000ff00Damage:|r |c0077ff77400
+|c0000ff00Units Hit:|r |c0077ff778
+|c0000ff00Cooldown:|r |c0077ff772 Seconds
+}
+
 STRING 3180
 // Units: n01H (Blood Trap), Ubertip (Tooltip - Extended)
 {
@@ -21399,6 +21487,20 @@ STRING 3181
 |c0077ff77[A]|r |c0000ff00Enable Frost Tower
 }
 
+STRING 3182
+// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
+
+Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast, each time this effect triggers the void blast will become more powerful.|r
+
+
+|c0000ff00Ability:|r |c0077ff77Void Blast
+|c0000ff00Damage:|r |c0077ff77400
+|c0000ff00Units Hit:|r |c0077ff778
+|c0000ff00Cooldown:|r |c0077ff772 Seconds
+}
+
 STRING 3183
 // Abilities: A02J (Disable Spell Tower), Tip (Tooltip - Normal)
 {
@@ -21411,6 +21513,34 @@ STRING 3184
 |c0077ff77[Q]|r |c0000ff00Enable Siege Tower
 }
 
+STRING 3185
+// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
+
+Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast, each time this effect triggers the void blast will become more powerful.|r
+
+
+|c0000ff00Ability:|r |c0077ff77Void Blast
+|c0000ff00Damage:|r |c0077ff77400
+|c0000ff00Units Hit:|r |c0077ff778
+|c0000ff00Cooldown:|r |c0077ff772 Seconds
+}
+
+STRING 3186
+// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
+
+Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast, each time this effect triggers the void blast will become more powerful.|r
+
+
+|c0000ff00Ability:|r |c0077ff77Void Blast
+|c0000ff00Damage:|r |c0077ff77400
+|c0000ff00Units Hit:|r |c0077ff778
+|c0000ff00Cooldown:|r |c0077ff772 Seconds
+}
+
 STRING 3187
 // Abilities: A02P (Disable Traps), Tip (Tooltip - Normal)
 {
@@ -21421,6 +21551,20 @@ STRING 3188
 // Abilities: A024 (Hero Waves), Hotkey (Hotkey - Normal)
 {
 R
+}
+
+STRING 3189
+// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
+
+Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast, each time this effect triggers the void blast will become more powerful.|r
+
+
+|c0000ff00Ability:|r |c0077ff77Void Blast
+|c0000ff00Damage:|r |c0077ff77400
+|c0000ff00Units Hit:|r |c0077ff778
+|c0000ff00Cooldown:|r |c0077ff772 Seconds
 }
 
 STRING 3190
@@ -21439,6 +21583,20 @@ STRING 3192
 // Abilities: A036 (Endless Mode), Tip (Tooltip - Normal)
 {
 |c0077ff77[Q]|r |c0000ff00Deactivate Endless Mode
+}
+
+STRING 3193
+// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
+
+Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast, each time this effect triggers the void blast will become more powerful.|r
+
+
+|c0000ff00Ability:|r |c0077ff77Void Blast
+|c0000ff00Damage:|r |c0077ff77400
+|c0000ff00Units Hit:|r |c0077ff778
+|c0000ff00Cooldown:|r |c0077ff772 Seconds
 }
 
 STRING 3194
