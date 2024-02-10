@@ -4482,7 +4482,7 @@ STRING 697
 }
 
 STRING 698
-// Abilities: A04U (Void Contagion), EditorSuffix (Editor Suffix)
+// Abilities: A00P (Void Blast), EditorSuffix (Editor Suffix)
 {
 [Void Trap]
 }
@@ -4605,6 +4605,12 @@ STRING 714
 C
 }
 
+STRING 715
+// Abilities: A04X (Void Blast and Void Contagion), EditorSuffix (Editor Suffix)
+{
+[Void Trap]
+}
+
 STRING 716
 // Units: h024 (Chaos Tower 2: Chaos Elemental), Tip (Tooltip - Basic)
 {
@@ -4621,6 +4627,12 @@ STRING 718
 // Units: h01Y (Chaos Tower 4: Chaos Treant), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Chaos Treant.|r |cAAAAFFAAChaos Tower 4.|r
+}
+
+STRING 719
+// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+{
+Void Blast and Void Contagion - [Level 1]
 }
 
 STRING 720
@@ -4662,6 +4674,12 @@ STRING 725
 // Units: h02P (Chaos Tower 6: Chaos Stalker), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Chaos Stalker.|r |cAAAAFFAAChaos Tower 6.|r
+}
+
+STRING 726
+// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+{
+Void Blast and Void Contagion - [Level 2]
 }
 
 STRING 727
@@ -5713,6 +5731,12 @@ STRING 904
 STRING 905
 {
 v2.04 Release Date - 24/12/19
+}
+
+STRING 906
+// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+{
+Void Blast and Void Contagion - [Level 3]
 }
 
 STRING 907
@@ -10664,6 +10688,12 @@ STRING 1620
 Exp Bonus
 }
 
+STRING 1621
+// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+{
+Void Blast and Void Contagion - [Level 4]
+}
+
 STRING 1622
 // Abilities: A03O (Intelligence Bonus), Tip (Tooltip - Normal)
 {
@@ -14449,6 +14479,12 @@ STRING 2180
 // Units: h01G (Fel Tower 9: Warlock), Name (Name)
 {
 Fel Tower 9: Warlock
+}
+
+STRING 2181
+// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+{
+Void Blast and Void Contagion - [Level 5]
 }
 
 STRING 2182
@@ -21092,10 +21128,22 @@ STRING 3130
 S
 }
 
+STRING 3131
+// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+{
+Void Blast and Void Contagion - [Level 6]
+}
+
 STRING 3132
 // Abilities: A02R (Disable Bash Tower), Tip (Tooltip - Normal)
 {
 |c0077ff77[F]|r |c0000ff00Enable Bash Tower
+}
+
+STRING 3133
+// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+{
+Void Blast and Void Contagion - [Level 7]
 }
 
 STRING 3134
@@ -21271,6 +21319,12 @@ STRING 3154
 |c0000ff00Duration:|r |c0077ff775 Seconds
 }
 
+STRING 3155
+// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+{
+Void Blast and Void Contagion - [Level 8]
+}
+
 STRING 3156
 {
 [None]
@@ -21285,6 +21339,12 @@ STRING 3157
 STRING 3158
 {
 [Endless Creeps]
+}
+
+STRING 3159
+// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+{
+Void Blast and Void Contagion - [Level 9]
 }
 
 STRING 3160
@@ -21609,6 +21669,12 @@ STRING 3195
 // Abilities: A03U (Slam and Bladestorm), EditorSuffix (Editor Suffix)
 {
 [Earth Trap]
+}
+
+STRING 3196
+// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+{
+Void Blast and Void Contagion - [Level 10]
 }
 
 STRING 3197
@@ -26231,7 +26297,7 @@ STRING 9125
 }
 
 STRING 9130
-// Abilities: A00P (Void Blast), EditorSuffix (Editor Suffix)
+// Abilities: A04U (Void Contagion), EditorSuffix (Editor Suffix)
 {
 [Void Trap]
 }

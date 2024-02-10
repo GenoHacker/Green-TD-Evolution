@@ -340,12 +340,15 @@ udg_UNIT_CLASS_STRUCTURE = 0
 udg_UNIT_CLASS_DEAD = 0
 udg_UNIT_CLASS_HERO = 0
 udg_DamageEventUserAmt = 0.0
-udg_Integer_Array_SlamTrapChance = __jarray(0)
+udg_Integer_Array_EarthTrapChance = __jarray(0)
 udg_Integer_TotalSlamTrapsBuilt = 0
 udg_Integer_Array_BloodTrapChance = __jarray(0)
 udg_Integer_TotalBloodTrapsBuilt = 0
 udg_Integer_DisTowerIncomeBonus = 0
 udg_Integer_GambleBonus = 0
+udg_Integer_Array_VoidContChance = __jarray(0)
+udg_Integer_TotalVoidTrapsBuilt = 0
+udg_Integer_Array_VoidCBlastChance = __jarray(0)
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -425,14 +428,7 @@ gg_snd_Wave_Normal = nil
 gg_snd_Wave_Hero = nil
 gg_snd_Wave_Boss = nil
 gg_snd_HeroLichPissed8 = nil
-gg_trg_Kick_Blue = nil
-gg_trg_Kick_Teal = nil
-gg_trg_Kick_Purple = nil
-gg_trg_Kick_Yellow = nil
-gg_trg_Kick_Orange = nil
-gg_trg_Kick_Green = nil
-gg_trg_Kick_Pink = nil
-gg_trg_Kick_Gray = nil
+gg_trg_Damage_Engine_Config = nil
 gg_trg_Crit_System = nil
 gg_trg_Crit_Aura = nil
 gg_trg_Venom_Tower_Random_Target = nil
@@ -452,7 +448,16 @@ gg_trg_Darkness_Trap_Autocast = nil
 gg_trg_Doom_Autocast = nil
 gg_trg_Earth_Trap_Autocast = nil
 gg_trg_Bladestorm_Autocast = nil
+gg_trg_Void_Trap_Autocast = nil
 gg_trg_Bloodtrap = nil
+gg_trg_Kick_Blue = nil
+gg_trg_Kick_Teal = nil
+gg_trg_Kick_Purple = nil
+gg_trg_Kick_Yellow = nil
+gg_trg_Kick_Orange = nil
+gg_trg_Kick_Green = nil
+gg_trg_Kick_Pink = nil
+gg_trg_Kick_Gray = nil
 gg_trg_Set_Variables = nil
 gg_trg_Set_Random_Wave_Variables = nil
 gg_trg_Map_Start = nil
@@ -630,8 +635,8 @@ gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
-gg_trg_Damage_Engine_Config = nil
-gg_trg_Void_Trap_Autocast = nil
+gg_trg_Void_Contagion = nil
+gg_trg_Void_Contagion_Blast = nil
 function InitGlobals()
 local i = 0
 
@@ -1329,7 +1334,7 @@ udg_DamageEventUserAmt = 0.0
 i = 0
 while (true) do
 if ((i > 1)) then break end
-udg_Integer_Array_SlamTrapChance[i] = 0
+udg_Integer_Array_EarthTrapChance[i] = 0
 i = i + 1
 end
 udg_Integer_TotalSlamTrapsBuilt = 0
@@ -1342,6 +1347,19 @@ end
 udg_Integer_TotalBloodTrapsBuilt = 0
 udg_Integer_DisTowerIncomeBonus = 5
 udg_Integer_GambleBonus = 0
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Integer_Array_VoidContChance[i] = 0
+i = i + 1
+end
+udg_Integer_TotalVoidTrapsBuilt = 0
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Integer_Array_VoidCBlastChance[i] = 0
+i = i + 1
+end
 end
 
 --Global Initialization 1.1 also hooks the InitCustomTriggers and RunInitializationTriggers functions
@@ -3450,14 +3468,14 @@ return true
 end
 
 function Trig_Bladestorm_Autocast_Func002C()
-if (not (udg_Integer_Array_SlamTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (5 + udg_Integer_TotalSlamTrapsBuilt))) then
+if (not (udg_Integer_Array_EarthTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (5 + udg_Integer_TotalSlamTrapsBuilt))) then
 return false
 end
 return true
 end
 
 function Trig_Bladestorm_Autocast_Actions()
-udg_Integer_Array_SlamTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomInt(1, 100)
+udg_Integer_Array_EarthTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomInt(1, 100)
 if (Trig_Bladestorm_Autocast_Func002C()) then
 CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
 UnitApplyTimedLifeBJ(6.00, FourCC("BTLF"), GetLastCreatedUnit())
@@ -3480,33 +3498,18 @@ TriggerAddAction(gg_trg_Bladestorm_Autocast, Trig_Bladestorm_Autocast_Actions)
 end
 
 function Trig_Void_Trap_Autocast_Conditions()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A001"), udg_DamageEventSource) >= 1)) then
-return false
-end
-return true
-end
-
-function Trig_Void_Trap_Autocast_Func002C()
-if (not (udg_Integer_Array_SlamTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (5 + udg_Integer_TotalSlamTrapsBuilt))) then
+if (not (GetUnitAbilityLevelSwapped(FourCC("A04X"), udg_DamageEventSource) >= 1)) then
 return false
 end
 return true
 end
 
 function Trig_Void_Trap_Autocast_Actions()
-udg_Integer_Array_SlamTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomInt(1, 100)
-if (Trig_Void_Trap_Autocast_Func002C()) then
 CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
-UnitApplyTimedLifeBJ(6.00, FourCC("BTLF"), GetLastCreatedUnit())
-UnitAddAbilityBJ(FourCC("A04R"), GetLastCreatedUnit())
-SetUnitAbilityLevelSwapped(FourCC("A04R"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A001"), udg_DamageEventSource))
-IssueImmediateOrderBJ(GetLastCreatedUnit(), "whirlwind")
-AddSpecialEffectLocBJ(GetUnitLoc(GetLastCreatedUnit()), "war3mapImported\\SpinFX2.mdx")
-BlzSetSpecialEffectTimeScale(GetLastCreatedEffectBJ(), 2.00)
-BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 0.50)
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-else
-end
+UnitApplyTimedLifeBJ(2.00, FourCC("BTLF"), GetLastCreatedUnit())
+UnitAddAbilityBJ(FourCC("A00P"), GetLastCreatedUnit())
+SetUnitAbilityLevelSwapped(FourCC("A00P"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A04X"), udg_DamageEventSource))
+IssueTargetOrderBJ(GetLastCreatedUnit(), "forkedlightning", udg_DamageEventTarget)
 end
 
 function InitTrig_Void_Trap_Autocast()
@@ -3514,6 +3517,69 @@ gg_trg_Void_Trap_Autocast = CreateTrigger()
 TriggerRegisterVariableEvent(gg_trg_Void_Trap_Autocast, "udg_DamageEvent", EQUAL, 1.00)
 TriggerAddCondition(gg_trg_Void_Trap_Autocast, Condition(Trig_Void_Trap_Autocast_Conditions))
 TriggerAddAction(gg_trg_Void_Trap_Autocast, Trig_Void_Trap_Autocast_Actions)
+end
+
+function Trig_Void_Contagion_Conditions()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A00P"), udg_DamageEventSource) >= 1)) then
+return false
+end
+return true
+end
+
+function Trig_Void_Contagion_Func002C()
+if (not (udg_Integer_Array_VoidContChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (10 + udg_Integer_TotalVoidTrapsBuilt))) then
+return false
+end
+return true
+end
+
+function Trig_Void_Contagion_Actions()
+udg_Integer_Array_VoidContChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomInt(1, 100)
+if (Trig_Void_Contagion_Func002C()) then
+UnitAddAbilityBJ(FourCC("A04U"), udg_DamageEventTarget)
+SetUnitAbilityLevelSwapped(FourCC("A04U"), udg_DamageEventTarget, GetUnitAbilityLevelSwapped(FourCC("A00P"), udg_DamageEventSource))
+else
+end
+end
+
+function InitTrig_Void_Contagion()
+gg_trg_Void_Contagion = CreateTrigger()
+TriggerRegisterVariableEvent(gg_trg_Void_Contagion, "udg_DamageEvent", EQUAL, 1.00)
+TriggerAddCondition(gg_trg_Void_Contagion, Condition(Trig_Void_Contagion_Conditions))
+TriggerAddAction(gg_trg_Void_Contagion, Trig_Void_Contagion_Actions)
+end
+
+function Trig_Void_Contagion_Blast_Conditions()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A04U"), udg_DamageEventTarget) >= 1)) then
+return false
+end
+return true
+end
+
+function Trig_Void_Contagion_Blast_Func002C()
+if (not (udg_Integer_Array_VoidCBlastChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageFilterSource))] <= (10 + udg_Integer_TotalVoidTrapsBuilt))) then
+return false
+end
+return true
+end
+
+function Trig_Void_Contagion_Blast_Actions()
+udg_Integer_Array_VoidCBlastChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomInt(1, 100)
+if (Trig_Void_Contagion_Blast_Func002C()) then
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
+UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
+UnitAddAbilityBJ(FourCC("A00P"), GetLastCreatedUnit())
+SetUnitAbilityLevelSwapped(FourCC("A00P"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A04U"), udg_DamageEventTarget))
+IssueTargetOrderBJ(GetLastCreatedUnit(), "forkedlightning", udg_DamageEventTarget)
+else
+end
+end
+
+function InitTrig_Void_Contagion_Blast()
+gg_trg_Void_Contagion_Blast = CreateTrigger()
+TriggerRegisterVariableEvent(gg_trg_Void_Contagion_Blast, "udg_DamageEvent", EQUAL, 1.00)
+TriggerAddCondition(gg_trg_Void_Contagion_Blast, Condition(Trig_Void_Contagion_Blast_Conditions))
+TriggerAddAction(gg_trg_Void_Contagion_Blast, Trig_Void_Contagion_Blast_Actions)
 end
 
 function Trig_Bloodtrap_Conditions()
@@ -5929,6 +5995,28 @@ end
 return true
 end
 
+function Trig_Instant_Upgrade_Func007Func001Func001002003001002()
+return (GetUnitTypeId(GetFilterUnit()) == FourCC("n01K"))
+end
+
+function Trig_Instant_Upgrade_Func007Func001Func002001001002()
+return (GetUnitTypeId(GetFilterUnit()) == FourCC("n01K"))
+end
+
+function Trig_Instant_Upgrade_Func007Func001C()
+if (not (CountUnitsInGroup(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Instant_Upgrade_Func007Func001Func002001001002))) <= 10)) then
+return false
+end
+return true
+end
+
+function Trig_Instant_Upgrade_Func007C()
+if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("n01K"))) then
+return false
+end
+return true
+end
+
 function Trig_Instant_Upgrade_Actions()
 if (Trig_Instant_Upgrade_Func001C()) then
 ReplaceUnitBJ(GetTriggerUnit(), GetUnitTypeId(GetTriggerUnit()), bj_UNIT_STATE_METHOD_RELATIVE)
@@ -5980,7 +6068,14 @@ else
 end
 if (Trig_Instant_Upgrade_Func006C()) then
 if (Trig_Instant_Upgrade_Func006Func001C()) then
-udg_Integer_TotalDarkTrapsBuilt = (0 + CountUnitsInGroup(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Instant_Upgrade_Func006Func001Func001002003001002))))
+udg_Integer_TotalSlamTrapsBuilt = (0 + CountUnitsInGroup(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Instant_Upgrade_Func006Func001Func001002003001002))))
+else
+end
+else
+end
+if (Trig_Instant_Upgrade_Func007C()) then
+if (Trig_Instant_Upgrade_Func007Func001C()) then
+udg_Integer_TotalVoidTrapsBuilt = (0 + CountUnitsInGroup(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Instant_Upgrade_Func007Func001Func001002003001002))))
 else
 end
 else
@@ -16202,7 +16297,7 @@ return true
 end
 
 function Trig_Void_Trap_Func002Func005C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A00P"), GetTriggerUnit()) >= 10)) then
+if (not (GetUnitAbilityLevelSwapped(FourCC("A04X"), GetTriggerUnit()) >= 10)) then
 return false
 end
 return true
@@ -16216,13 +16311,13 @@ return true
 end
 
 function Trig_Void_Trap_Actions()
-SetUnitUserData(GetTriggerUnit(), udg_Integer_Array_TrapGoldCost[GetUnitAbilityLevelSwapped(FourCC("A00P"), GetTriggerUnit())])
+SetUnitUserData(GetTriggerUnit(), udg_Integer_Array_TrapGoldCost[GetUnitAbilityLevelSwapped(FourCC("A04X"), GetTriggerUnit())])
 if (Trig_Void_Trap_Func002C()) then
 CreateTextTagUnitBJ(("You Need " .. (I2S(GetUnitUserData(GetTriggerUnit())) .. " To Upgrade")), GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
 else
 CreateTextTagUnitBJ("TRIGSTR_9111", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
-IncUnitAbilityLevelSwapped(FourCC("A00P"), GetTriggerUnit())
-BlzSetUnitName(GetTriggerUnit(), ("Void Trap " .. I2S(GetUnitAbilityLevelSwapped(FourCC("A00P"), GetTriggerUnit()))))
+IncUnitAbilityLevelSwapped(FourCC("A04X"), GetTriggerUnit())
+BlzSetUnitName(GetTriggerUnit(), ("Void Trap " .. I2S(GetUnitAbilityLevelSwapped(FourCC("A04X"), GetTriggerUnit()))))
 SetPlayerStateBJ(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD, (GetPlayerState(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD) - GetUnitUserData(GetTriggerUnit())))
 if (Trig_Void_Trap_Func002Func005C()) then
 UnitRemoveAbilityBJ(FourCC("A023"), GetTriggerUnit())
@@ -16569,6 +16664,8 @@ InitTrig_Doom_Autocast()
 InitTrig_Earth_Trap_Autocast()
 InitTrig_Bladestorm_Autocast()
 InitTrig_Void_Trap_Autocast()
+InitTrig_Void_Contagion()
+InitTrig_Void_Contagion_Blast()
 InitTrig_Bloodtrap()
 InitTrig_Kick_Blue()
 InitTrig_Kick_Teal()
