@@ -1,5 +1,3 @@
-If you want you can add your version with your changes to this folder as a showcase of sorts
-
 [Indev] Green TD Evo v2.06.w3x
 
 - Static waves are now much easier due to reducing their health, health regen, armour and move speed, some have been reduced significantly. Health has mostly been reduced by 25%, armour by 50%, all waves whose unit had a health regen per second higher than 50 has been reduced to 50 and move speed has been reduced from between 25 to 100.
