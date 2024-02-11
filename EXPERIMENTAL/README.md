@@ -1,9 +1,13 @@
 [Indev] Green TD Evo v2.06.w3x
 
 -- Consolidated all emergency towers into 1 learnable abillity instead of each tower having its own.
+
 -- Switched from JASS scripting to LUA Scripting
+
 -- Added Bribes LUA Damage Engine
+
 -- Added Custom Crit System
+
 -- Added Critical Aura
 -- Added Crit Bonus to hero
 -- Added more easter eggs
