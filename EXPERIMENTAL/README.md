@@ -20,4 +20,4 @@
 -- Changes to Game Setup Unit ability tooltips
 -- Changes to multiple commands
 -- Changes to multiboard
-- Bribes Lua Damage Engine has been added to the map. https://www.hiveworkshop.com/threads/damage-engine-5-7-0-3.201016/
+-- Bribes Lua Damage Engine has been added to the map. https://www.hiveworkshop.com/threads/damage-engine-5-7-0-3.201016/
