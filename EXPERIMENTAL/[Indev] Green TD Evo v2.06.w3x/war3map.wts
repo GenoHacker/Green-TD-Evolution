@@ -33,19 +33,6 @@ STRING 6
 Aura Upgraded
 }
 
-STRING 7
-// Items: I003 (|c0000ff00Gamble|r), Ubertip (Tooltip - Extended)
-{
-|c0077ff77Gamble 50 gold for a chance to get more gold. The cost to gamble increases by 50 each time you lose gold, the cost stops increasing at 1500.
-
-75% chance to lose your gold and get nothing.
-15% chance to get your gold back.
-7% chance to get 2000 gold.
-3% chance to get the jackpot.
-
-The jackpot starts at 3000 Gold and increases an amount equal to the cost to gamble. You can use -jackpot to see what the current jackpot is.
-}
-
 STRING 8
 {
 |cff0080FFNext Wave In: |r
@@ -4313,12 +4300,6 @@ STRING 670
 Bouncing Tower 9: Shadow Wolf
 }
 
-STRING 671
-// Abilities: A030 (Random Waves), Ubertip (Tooltip - Normal - Extended)
-{
-|c0000ff00Status = |c00FF0000Deactivated
-}
-
 STRING 672
 // Units: n00B (Air Tower 2: Faerie Dragon), Tip (Tooltip - Basic)
 {
@@ -4606,7 +4587,7 @@ C
 }
 
 STRING 715
-// Abilities: A04X (Void Blast and Void Contagion), EditorSuffix (Editor Suffix)
+// Abilities: A04U (Void Contagion), EditorSuffix (Editor Suffix)
 {
 [Void Trap]
 }
@@ -4627,12 +4608,6 @@ STRING 718
 // Units: h01Y (Chaos Tower 4: Chaos Treant), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Chaos Treant.|r |cAAAAFFAAChaos Tower 4.|r
-}
-
-STRING 719
-// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
-{
-Void Blast and Void Contagion - [Level 1]
 }
 
 STRING 720
@@ -4674,12 +4649,6 @@ STRING 725
 // Units: h02P (Chaos Tower 6: Chaos Stalker), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Chaos Stalker.|r |cAAAAFFAAChaos Tower 6.|r
-}
-
-STRING 726
-// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
-{
-Void Blast and Void Contagion - [Level 2]
 }
 
 STRING 727
@@ -5667,17 +5636,11 @@ All traps will use its ability automatically.|r
 }
 
 STRING 900
-// Units: n01K (Void Trap), Ubertip (Tooltip - Extended)
+// Abilities: A00Y (Blitz Mode), Ubertip (Tooltip - Normal - Extended)
 {
-|c006969FF[Support Tower]|r
-|c0000ff00Attacks land and air units.|r
+|c0000ff00Status = |c00FF0000Deactivated
 
-|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Void Blast [Auto-Casted]
-|c0000ff00Damage:|r |c0077ff77400
-|c0000ff00Units Hit:|r |c0077ff778
-|c0000ff00Cooldown:|r |c0077ff772 Seconds
+|c0077ff77Waves will spawn after the timer reaches 0 instead of waiting for the current wave to be killed.
 }
 
 STRING 901
@@ -5734,9 +5697,11 @@ v2.04 Release Date - 24/12/19
 }
 
 STRING 906
-// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+// Abilities: A00Y (Blitz Mode), Ubertip (Tooltip - Normal - Extended)
 {
-Void Blast and Void Contagion - [Level 3]
+|c0000ff00Status = |c0077ff77Activated
+
+|c0077ff77Waves will spawn after the timer reaches 0 instead of waiting for the current wave to be killed.
 }
 
 STRING 907
@@ -10689,9 +10654,11 @@ Exp Bonus
 }
 
 STRING 1621
-// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+// Abilities: A033 (Speed Mode), Ubertip (Tooltip - Normal - Extended)
 {
-Void Blast and Void Contagion - [Level 4]
+|c0000ff00Status = |c00FF0000Deactivated
+
+|c0077ff77Time between wave spawns is reduced and creep movement speed is set to 500.
 }
 
 STRING 1622
@@ -14482,9 +14449,11 @@ Fel Tower 9: Warlock
 }
 
 STRING 2181
-// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+// Abilities: A033 (Speed Mode), Ubertip (Tooltip - Normal - Extended)
 {
-Void Blast and Void Contagion - [Level 5]
+|c0000ff00Status = |c0077ff77Activated
+
+|c0077ff77Time between wave spawns is reduced and creep movement speed is set to 500.
 }
 
 STRING 2182
@@ -17263,13 +17232,6 @@ STRING 2593
 Green TD Evolution uses some imported resources, most of them are existing images that i have
 }
 
-STRING 2594
-{
-|c0096FF96200% from Chaos
-|c0096FF9650% from Others
-|c0096FF96Spell/Magic Immune
-}
-
 STRING 2595
 {
 |c0096FF96200% from Siege
@@ -17294,13 +17256,6 @@ STRING 2597
 |c0096FF9650% from Chaos
 }
 
-STRING 2598
-{
-|c0096FF96200% from Chaos
-|c0096FF9650% from Others
-|c0096FF96Spell/Magic Immune
-}
-
 STRING 2599
 {
 |c0096FF96200% from Siege
@@ -17323,13 +17278,6 @@ STRING 2601
 |c0096FF96100% from Hero
 |c0096FF9675% from Pierce
 |c0096FF9650% from Chaos
-}
-
-STRING 2602
-{
-|c0096FF96200% from Chaos
-|c0096FF9650% from Others
-|c0096FF96Spell/Magic Immune
 }
 
 STRING 2603
@@ -17441,22 +17389,6 @@ STRING 2616
 |c0096FF9625% to Divine|r
 }
 
-STRING 2617
-{
-|c0096FF96200% to Heavy|r
-|c0096FF96125% to Light|r
-|c0096FF9675% to Others|r
-|c0096FF96Unable to attack Divine|r
-}
-
-STRING 2618
-{
-|c0096FF96200% to Light|r
-|c0096FF96125% Medium|r
-|c0096FF9675% to Others|r
-|c0096FF9625% to Divine|r
-}
-
 STRING 2619
 {
 |c0096FF96200% to Fortified|r
@@ -17481,23 +17413,6 @@ STRING 2621
 |c0096FF9625% to Divine|r
 }
 
-STRING 2622
-{
-|c0096FF96200% to Heavy|r
-|c0096FF96125% to Light|r
-|c0096FF9675% to Others|r
-|c0096FF96Unable to attack Divine|r
-}
-
-STRING 2623
-{
-|c0096FF96200% to Light|r
-|c0096FF96125% Medium|r
-|c0096FF9675% to Others|r
-|c0096FF9625% to Divine|r
-
-}
-
 STRING 2624
 {
 |c0096FF96200% to Fortified|r
@@ -17518,22 +17433,6 @@ STRING 2626
 {
 |c0096FF96200% to Medium|r
 |c0096FF96125% to Heavy|r
-|c0096FF9675% to Others|r
-|c0096FF9625% to Divine|r
-}
-
-STRING 2627
-{
-|c0096FF96200% to Heavy|r
-|c0096FF96125% to Light|r
-|c0096FF9675% to Others|r
-|c0096FF96Unable to attack Divine|r
-}
-
-STRING 2628
-{
-|c0096FF96200% to Light|r
-|c0096FF96125% Medium|r
 |c0096FF9675% to Others|r
 |c0096FF9625% to Divine|r
 }
@@ -21129,9 +21028,13 @@ S
 }
 
 STRING 3131
-// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+// Abilities: A02Z (Gold Rush Mode), Ubertip (Tooltip - Normal - Extended)
 {
-Void Blast and Void Contagion - [Level 6]
+|c0000ff00Status = |c00FF0000Deactivated
+
+|c0077ff77Creeps with more than 60% health have a 10% chance to enter a gold rush.
+
+Restoring health and Increasing Armour, Max Health, Movespeed, Bounty and increasing the number of lives it depletes.
 }
 
 STRING 3132
@@ -21141,9 +21044,13 @@ STRING 3132
 }
 
 STRING 3133
-// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+// Abilities: A02Z (Gold Rush Mode), Ubertip (Tooltip - Normal - Extended)
 {
-Void Blast and Void Contagion - [Level 7]
+|c0000ff00Status = |c0077ff77Activated
+
+|c0077ff77Creeps with more than 60% health have a 10% chance to enter a gold rush.
+
+Restoring health and Increasing Armour, Max Health, Movespeed, Bounty and increasing the number of lives it depletes.
 }
 
 STRING 3134
@@ -21320,9 +21227,13 @@ STRING 3154
 }
 
 STRING 3155
-// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+// Abilities: A030 (Random Waves), Ubertip (Tooltip - Normal - Extended)
 {
-Void Blast and Void Contagion - [Level 8]
+|c0000ff00Status = |c00FF0000Deactivated
+
+|c0077ff77Armour Type, Unit Type and Spawn Count of each wave is randomized. 
+
+Divine Waves are not immune and Boss waves have a chance of generating.
 }
 
 STRING 3156
@@ -21342,9 +21253,13 @@ STRING 3158
 }
 
 STRING 3159
-// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+// Abilities: A030 (Random Waves), Ubertip (Tooltip - Normal - Extended)
 {
-Void Blast and Void Contagion - [Level 9]
+|c0000ff00Status = |c0077ff77Activated
+
+|c0077ff77Armour Type, Unit Type and Spawn Count of each wave is randomized. 
+
+Divine Waves are not immune and Boss waves have a chance of generating.
 }
 
 STRING 3160
@@ -21354,45 +21269,38 @@ STRING 3160
 }
 
 STRING 3161
-// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A036 (Endless Mode), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
+|c0000ff00Status = |c00FF0000Deactivated
 
-Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast, each time this effect triggers the void blast will become more powerful.|r
+|c0077ff77Once you reach wave 60 the game will continuously spawn more waves until you lose the game, creeps gain 20% Health every wave.
 
-
-|c0000ff00Ability:|r |c0077ff77Void Blast
-|c0000ff00Damage:|r |c0077ff77400
-|c0000ff00Units Hit:|r |c0077ff778
-|c0000ff00Cooldown:|r |c0077ff772 Seconds
+When Random Waves is activated alongside Endless mode 300 waves are generated instead of 60.
 }
 
 STRING 3162
-// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A036 (Endless Mode), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
+|c0000ff00Status = |c0077ff77Activated
 
-Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast, each time this effect triggers the void blast will become more powerful.|r
+|c0077ff77Once you reach wave 60 the game will continuously spawn more waves until you lose the game, creeps gain 20% Health every wave.
 
-
-|c0000ff00Ability:|r |c0077ff77Void Blast
-|c0000ff00Damage:|r |c0077ff77400
-|c0000ff00Units Hit:|r |c0077ff778
-|c0000ff00Cooldown:|r |c0077ff772 Seconds
+When Random Waves is activated alongside Endless mode 300 waves are generated instead of 60. instead of 60.
 }
 
 STRING 3163
-// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
+// Items: I003 (|c0000ff00Gamble|r), Ubertip (Tooltip - Extended)
 {
-|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
+|c0077ff77Gamble 50 gold for a chance to get more gold. The cost to gamble increases by 50 each time you lose gold, the cost stops increasing at 1500.
 
-Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast, each time this effect triggers the void blast will become more powerful.|r
+Rolls a random number between [0 + Gamble Bonus] and 1000.
 
+75% chance to lose your gold and get nothing.
+15% chance to get your gold back.
+7% chance to get 2000 gold.
+3% chance to get the jackpot.
 
-|c0000ff00Ability:|r |c0077ff77Void Blast
-|c0000ff00Damage:|r |c0077ff77400
-|c0000ff00Units Hit:|r |c0077ff778
-|c0000ff00Cooldown:|r |c0077ff772 Seconds
+The jackpot starts at 3000 Gold and increases an amount equal to the cost to gamble. You can use -jackpot to see what the current jackpot is.
 }
 
 STRING 3164
@@ -21402,17 +21310,9 @@ STRING 3164
 }
 
 STRING 3165
-// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
-
-Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast, each time this effect triggers the void blast will become more powerful.|r
-
-
-|c0000ff00Ability:|r |c0077ff77Void Blast
-|c0000ff00Damage:|r |c0077ff77400
-|c0000ff00Units Hit:|r |c0077ff778
-|c0000ff00Cooldown:|r |c0077ff772 Seconds
+|c0096FF96200% from Chaos
+|c0096FF9625% from Others
 }
 
 STRING 3166
@@ -21512,17 +21412,9 @@ Bloodtrap Level
 }
 
 STRING 3179
-// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
-
-Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast, each time this effect triggers the void blast will become more powerful.|r
-
-
-|c0000ff00Ability:|r |c0077ff77Void Blast
-|c0000ff00Damage:|r |c0077ff77400
-|c0000ff00Units Hit:|r |c0077ff778
-|c0000ff00Cooldown:|r |c0077ff772 Seconds
+|c0096FF96200% from Chaos
+|c0096FF9625% from Others
 }
 
 STRING 3180
@@ -21548,17 +21440,9 @@ STRING 3181
 }
 
 STRING 3182
-// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
-
-Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast, each time this effect triggers the void blast will become more powerful.|r
-
-
-|c0000ff00Ability:|r |c0077ff77Void Blast
-|c0000ff00Damage:|r |c0077ff77400
-|c0000ff00Units Hit:|r |c0077ff778
-|c0000ff00Cooldown:|r |c0077ff772 Seconds
+|c0096FF96200% from Chaos
+|c0096FF9625% from Others
 }
 
 STRING 3183
@@ -21574,31 +21458,19 @@ STRING 3184
 }
 
 STRING 3185
-// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
-
-Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast, each time this effect triggers the void blast will become more powerful.|r
-
-
-|c0000ff00Ability:|r |c0077ff77Void Blast
-|c0000ff00Damage:|r |c0077ff77400
-|c0000ff00Units Hit:|r |c0077ff778
-|c0000ff00Cooldown:|r |c0077ff772 Seconds
+|c0096FF96200% to Heavy|r
+|c0096FF96125% to Light|r
+|c0096FF9675% to Others|r
+|c0096FF9625% to Divine
 }
 
 STRING 3186
-// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
-
-Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast, each time this effect triggers the void blast will become more powerful.|r
-
-
-|c0000ff00Ability:|r |c0077ff77Void Blast
-|c0000ff00Damage:|r |c0077ff77400
-|c0000ff00Units Hit:|r |c0077ff778
-|c0000ff00Cooldown:|r |c0077ff772 Seconds
+|c0096FF96200% to Light|r
+|c0096FF96125% to Medium|r
+|c0096FF9675% to Others|r
+|c0096FF9625% to Divine|r
 }
 
 STRING 3187
@@ -21614,17 +21486,11 @@ R
 }
 
 STRING 3189
-// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
-
-Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast, each time this effect triggers the void blast will become more powerful.|r
-
-
-|c0000ff00Ability:|r |c0077ff77Void Blast
-|c0000ff00Damage:|r |c0077ff77400
-|c0000ff00Units Hit:|r |c0077ff778
-|c0000ff00Cooldown:|r |c0077ff772 Seconds
+|c0096FF96200% to Heavy|r
+|c0096FF96125% to Light|r
+|c0096FF9675% to Others|r
+|c0096FF9625% to Divine
 }
 
 STRING 3190
@@ -21646,17 +21512,11 @@ STRING 3192
 }
 
 STRING 3193
-// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
-
-Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast, each time this effect triggers the void blast will become more powerful.|r
-
-
-|c0000ff00Ability:|r |c0077ff77Void Blast
-|c0000ff00Damage:|r |c0077ff77400
-|c0000ff00Units Hit:|r |c0077ff778
-|c0000ff00Cooldown:|r |c0077ff772 Seconds
+|c0096FF96200% to Light|r
+|c0096FF96125% to Medium|r
+|c0096FF9675% to Others|r
+|c0096FF9625% to Divine|r
 }
 
 STRING 3194
@@ -21672,9 +21532,11 @@ STRING 3195
 }
 
 STRING 3196
-// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
 {
-Void Blast and Void Contagion - [Level 10]
+|c0096FF96200% to Heavy|r
+|c0096FF96125% to Light|r
+|c0096FF9675% to Others|r
+|c0096FF9625% to Divine
 }
 
 STRING 3197
@@ -22187,6 +22049,36 @@ STRING 3243
 |c0077ff77[E]|r |c0000ff00Deactivate Swarm Mode
 }
 
+STRING 3244
+// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+{
+|c0000ff00Void Blast and Void Contagion - [Level 1]
+}
+
+STRING 3245
+// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
+
+Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast.|r
+
+|c0000ff00Ability:|r |c0077ff77Void Blast
+|c0000ff00Damage:|r |c0077ff77400
+|c0000ff00Base Cooldown:|r |c0077ff772 Seconds
+}
+
+STRING 3246
+// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
+
+Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast.|r
+
+|c0000ff00Ability:|r |c0077ff77Void Blast
+|c0000ff00Damage:|r |c0077ff77800
+|c0000ff00Base Cooldown:|r |c0077ff772 Seconds
+}
+
 STRING 3247
 // Abilities: A02J (Disable Spell Tower), Ubertip (Tooltip - Normal - Extended)
 {
@@ -22253,10 +22145,16 @@ STRING 3257
 |c0000ff00Tower Status = |c00FF0000Disabled
 }
 
-STRING 3258
-// Abilities: A030 (Random Waves), Ubertip (Tooltip - Normal - Extended)
+STRING 3259
+// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
 {
-|c0000ff00Status = |c0077ff77Activated
+|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
+
+Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast.|r
+
+|c0000ff00Ability:|r |c0077ff77Void Blast
+|c0000ff00Damage:|r |c0077ff771200
+|c0000ff00Base Cooldown:|r |c0077ff772 Seconds
 }
 
 STRING 3260
@@ -22265,10 +22163,46 @@ STRING 3260
 |c0077ff77[A]|r |c0000ff00Deactivate Headhunter Mode
 }
 
+STRING 3261
+// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
+
+Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast.|r
+
+|c0000ff00Ability:|r |c0077ff77Void Blast
+|c0000ff00Damage:|r |c0077ff772000
+|c0000ff00Base Cooldown:|r |c0077ff772 Seconds
+}
+
 STRING 3262
 // Abilities: A002 (Aura Upgrades), Hotkey (Hotkey - Normal)
 {
 R
+}
+
+STRING 3263
+// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
+
+Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast.|r
+
+|c0000ff00Ability:|r |c0077ff77Void Blast
+|c0000ff00Damage:|r |c0077ff773000
+|c0000ff00Base Cooldown:|r |c0077ff772 Seconds
+}
+
+STRING 3264
+// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
+
+Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast.|r
+
+|c0000ff00Ability:|r |c0077ff77Void Blast
+|c0000ff00Damage:|r |c0077ff775000
+|c0000ff00Base Cooldown:|r |c0077ff772 Seconds
 }
 
 STRING 3265
@@ -22287,6 +22221,30 @@ STRING 3267
 // Units: h00Z (Flak Tower 8), Hotkey (Hotkey)
 {
 Z
+}
+
+STRING 3268
+// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
+
+Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast.|r
+
+|c0000ff00Ability:|r |c0077ff77Void Blast
+|c0000ff00Damage:|r |c0077ff777000
+|c0000ff00Base Cooldown:|r |c0077ff772 Seconds
+}
+
+STRING 3269
+// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
+
+Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast.|r
+
+|c0000ff00Ability:|r |c0077ff77Void Blast
+|c0000ff00Damage:|r |c0077ff7710000
+|c0000ff00Base Cooldown:|r |c0077ff772 Seconds
 }
 
 STRING 3270
@@ -22309,22 +22267,6 @@ STRING 3272
 Income is increased by |cffFDD0175 Gold|c0077ff77 for each disabled tower.
 }
 
-STRING 3273
-// Abilities: A02Z (Gold Rush Mode), Ubertip (Tooltip - Normal - Extended)
-{
-|c0000ff00Status = |c00FF0000Deactivated
-
-|c0077ff77Creeps with more than 60% health have a 10% chance to enter a gold rush. Restoring health and Increasing Armour, Max Health, Movespeed, Bounty and increasing the number of lives it depletes.
-}
-
-STRING 3274
-// Abilities: A02Z (Gold Rush Mode), Ubertip (Tooltip - Normal - Extended)
-{
-|c0000ff00Status = |c0077ff77Activated
-
-|c0077ff77Creeps with more than 60% health have a 10% chance to enter a gold rush. Restoring health and Increasing Armour, Max Health, Movespeed, Bounty and increasing the number of lives it depletes.
-}
-
 STRING 3275
 // Abilities: A031 (Headhunter Mode), Ubertip (Tooltip - Normal - Extended)
 {
@@ -22339,22 +22281,6 @@ STRING 3276
 |c0000ff00Status = |c0077ff77Activated
 
 |c0077ff77Lets you spawn random bosses, they will give a gold bonus to all players if killed, if it reachs the end point it will deplete all lives and you will lose.
-}
-
-STRING 3277
-// Abilities: A033 (Speed Mode), Ubertip (Tooltip - Normal - Extended)
-{
-|c0000ff00Status = |c00FF0000Deactivated
-
-|c0077ff77Time between wave spawns is set to reduced and creep movement speed is maxed.
-}
-
-STRING 3278
-// Abilities: A033 (Speed Mode), Ubertip (Tooltip - Normal - Extended)
-{
-|c0000ff00Status = |c0077ff77Activated
-
-|c0077ff77Time between wave spawns is set to reduced and creep movement speed is maxed.
 }
 
 STRING 3279
@@ -22373,47 +22299,45 @@ STRING 3280
 |c0077ff77Total creeps spawned per wave is double, excluding bosses.
 }
 
-STRING 3281
-// Abilities: A036 (Endless Mode), Ubertip (Tooltip - Normal - Extended)
-{
-|c0000ff00Status = |c00FF0000Deactivated
-
-|c0077ff77Once you reach wave 60 the game will continuously spawn more waves until you lose the game, creeps gain 20% Health every wave, when Random Waves is activated alongside Endless mode 300 waves are generated instead of 60.
-}
-
-STRING 3282
-// Abilities: A036 (Endless Mode), Ubertip (Tooltip - Normal - Extended)
-{
-|c0000ff00Status = |c0077ff77Activated
-
-|c0077ff77Once you reach wave 60 the game will continuously spawn more waves until you lose the game, creeps gain 20% Health every wave, when random waves is activated alongside Endless mode 300 waves are generated instead of 60.
-}
-
-STRING 3283
-// Abilities: A00Y (Blitz Mode), Ubertip (Tooltip - Normal - Extended)
-{
-|c0000ff00Status = |c00FF0000Deactivated
-
-|c0000ff00Waves will spawn after the timer reaches 0 instead of waiting for the current wave to be killed.
-}
-
-STRING 3284
-// Abilities: A00Y (Blitz Mode), Ubertip (Tooltip - Normal - Extended)
-{
-|c0000ff00Status = |c0077ff77Activated
-
-|c0000ff00Waves will spawn after the timer reaches 0 instead of waiting for the current wave to be killed.
-}
-
 STRING 3285
 {
 Max Level Reached
+}
+
+STRING 3286
+// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
+
+Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast.|r
+
+|c0000ff00Ability:|r |c0077ff77Void Blast
+|c0000ff00Damage:|r |c0077ff7715000
+|c0000ff00Base Cooldown:|r |c0077ff772 Seconds
+}
+
+STRING 3287
+// Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
+
+Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast.|r
+
+|c0000ff00Ability:|r |c0077ff77Void Blast
+|c0000ff00Damage:|r |c0077ff7720000
+|c0000ff00Base Cooldown:|r |c0077ff772 Seconds
 }
 
 STRING 3288
 // Abilities: A03O (Intelligence Bonus), EditorSuffix (Editor Suffix)
 {
 [Learn]dsds
+}
+
+STRING 3289
+// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+{
+|c0000ff00Void Blast and Void Contagion - [Level 2]
 }
 
 STRING 3290
@@ -22437,6 +22361,77 @@ Rolls a random number between [0 + Gamble Bonus] and 1000.
 3% base chance to get the jackpot.
 
 The jackpot starts at 3000 Gold and increases an amount equal to the cost to gamble. You can use -jackpot to see what the current jackpot is.
+}
+
+STRING 3292
+// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+{
+|c0000ff00Void Blast and Void Contagion - [Level 3]
+}
+
+STRING 3293
+// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+{
+|c0000ff00Void Blast and Void Contagion - [Level 4]
+}
+
+STRING 3294
+// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+{
+|c0000ff00Void Blast and Void Contagion - [Level 5]
+}
+
+STRING 3295
+// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+{
+|c0000ff00Void Blast and Void Contagion - [Level 6]
+}
+
+STRING 3296
+// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+{
+|c0000ff00Void Blast and Void Contagion - [Level 7]
+}
+
+STRING 3297
+// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+{
+|c0000ff00Void Blast and Void Contagion - [Level 8]
+}
+
+STRING 3298
+// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+{
+|c0000ff00Void Blast and Void Contagion - [Level 9]
+}
+
+STRING 3299
+// Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
+{
+|c0000ff00Void Blast and Void Contagion - [Level 10]
+}
+
+STRING 3300
+// Units: n01K (Void Trap), Ubertip (Tooltip - Extended)
+{
+|c006969FF[Support Tower]|r
+|c0000ff00Attacks land and air units.|r
+
+|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
+
+Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast.|r
+
+|c0000ff00Ability:|r |c0077ff77Void Blast
+|c0000ff00Damage:|r |c0077ff77400
+|c0000ff00Base Cooldown:|r |c0077ff772 Seconds
+}
+
+STRING 3301
+{
+|c0096FF96200% to Light|r
+|c0096FF96125% to Medium|r
+|c0096FF9675% to Others|r
+|c0096FF9625% to Divine|r
 }
 
 STRING 3321
@@ -26297,7 +26292,7 @@ STRING 9125
 }
 
 STRING 9130
-// Abilities: A04U (Void Contagion), EditorSuffix (Editor Suffix)
+// Abilities: A04X (Void Blast and Void Contagion), EditorSuffix (Editor Suffix)
 {
 [Void Trap]
 }

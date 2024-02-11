@@ -270,7 +270,7 @@ udg_String_RWBossWaveText = ""
 udg_Real_Array_ShrapBlastChance = __jarray(0.0)
 udg_Integer_Array_FireTrapChance = __jarray(0)
 udg_Integer_TotalFireTrapsBuilt = 0
-udg_Integer_Array_Firetrap5050 = 0
+udg_Integer_Array_Firetrap5050 = __jarray(0)
 udg_Integer_Array_FrostTrapChance = __jarray(0)
 udg_Integer_TotalFrostTrapsBuilt = 0
 udg_Integer_Array_PoisTrapChance = __jarray(0)
@@ -349,6 +349,7 @@ udg_Integer_GambleBonus = 0
 udg_Integer_Array_VoidContChance = __jarray(0)
 udg_Integer_TotalVoidTrapsBuilt = 0
 udg_Integer_Array_VoidCBlastChance = __jarray(0)
+udg_Integer_GambleBonusLvl = 0
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -449,6 +450,8 @@ gg_trg_Doom_Autocast = nil
 gg_trg_Earth_Trap_Autocast = nil
 gg_trg_Bladestorm_Autocast = nil
 gg_trg_Void_Trap_Autocast = nil
+gg_trg_Void_Contagion = nil
+gg_trg_Void_Contagion_Blast = nil
 gg_trg_Bloodtrap = nil
 gg_trg_Kick_Blue = nil
 gg_trg_Kick_Teal = nil
@@ -635,8 +638,6 @@ gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
-gg_trg_Void_Contagion = nil
-gg_trg_Void_Contagion_Blast = nil
 function InitGlobals()
 local i = 0
 
@@ -1251,7 +1252,12 @@ udg_Integer_Array_FireTrapChance[i] = 0
 i = i + 1
 end
 udg_Integer_TotalFireTrapsBuilt = 0
-udg_Integer_Array_Firetrap5050 = 0
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Integer_Array_Firetrap5050[i] = 0
+i = i + 1
+end
 i = 0
 while (true) do
 if ((i > 1)) then break end
@@ -1360,6 +1366,7 @@ if ((i > 1)) then break end
 udg_Integer_Array_VoidCBlastChance[i] = 0
 i = i + 1
 end
+udg_Integer_GambleBonusLvl = 0
 end
 
 --Global Initialization 1.1 also hooks the InitCustomTriggers and RunInitializationTriggers functions
@@ -2213,47 +2220,6 @@ local life
 gg_unit_n00C_0019 = BlzCreateUnitWithSkin(p, FourCC("n00C"), -1792.0, 3392.0, 270.000, FourCC("n00C"))
 end
 
-function CreateUnitsForPlayer23()
-local p = Player(23)
-local u
-local unitID
-local t
-local life
-
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2043.6, 2549.1, 316.185, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2058.9, 2300.9, 25.083, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2040.6, 2050.1, 319.987, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2040.7, 1793.1, 29.334, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2011.7, 1557.7, 288.642, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2123.3, 2561.8, 316.185, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2138.7, 2313.6, 25.083, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2120.3, 2062.8, 319.987, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2120.4, 1805.8, 29.334, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2091.4, 1570.4, 288.642, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2123.0, 2486.1, 316.185, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2138.4, 2237.9, 25.083, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2120.1, 1987.1, 319.987, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2120.1, 1730.0, 29.334, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2091.2, 1494.6, 288.642, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2053.9, 2478.6, 316.185, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2069.3, 2230.5, 25.083, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2051.0, 1979.6, 319.987, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2051.0, 1722.6, 29.334, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2022.0, 1487.2, 288.642, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1451.8, 2653.4, 316.185, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1531.5, 2666.1, 316.185, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1531.2, 2590.4, 316.185, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1462.1, 2582.9, 316.185, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1141.5, 2126.6, 316.185, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1221.3, 2139.3, 316.185, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1221.0, 2063.5, 316.185, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1151.9, 2056.1, 316.185, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1440.3, 1556.6, 316.185, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1520.0, 1569.3, 316.185, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1519.7, 1493.6, 316.185, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1450.6, 1486.1, 316.185, FourCC("h01H"))
-end
-
 function CreateNeutralPassiveBuildings()
 local p = Player(PLAYER_NEUTRAL_PASSIVE)
 local u
@@ -2429,7 +2395,6 @@ CreateBuildingsForPlayer0()
 end
 
 function CreatePlayerUnits()
-CreateUnitsForPlayer23()
 end
 
 function CreateAllUnits()
@@ -3223,9 +3188,6 @@ return true
 end
 
 function Trig_Fire_Trap_Autocast_Func002Func002C()
-if (not (udg_Integer_Array_Firetrap5050 <= 50)) then
-return false
-end
 return true
 end
 
@@ -3239,7 +3201,6 @@ end
 function Trig_Fire_Trap_Autocast_Actions()
 udg_Integer_Array_FireTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomInt(1, 100)
 if (Trig_Fire_Trap_Autocast_Func002C()) then
-udg_Integer_Array_Firetrap5050 = GetRandomInt(1, 100)
 if (Trig_Fire_Trap_Autocast_Func002Func002C()) then
 CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
 UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
@@ -5657,15 +5618,8 @@ end
 return true
 end
 
-function Trig_Hero_Abilities_Func014Func001Func003C()
-if (not (udg_Integer_GambleBonus <= 4)) then
-return false
-end
-return true
-end
-
 function Trig_Hero_Abilities_Func014Func001C()
-if (not (udg_Integer_GambleBonus >= 76)) then
+if (not (udg_Integer_GambleBonusLvl <= 4)) then
 return false
 end
 return true
@@ -5761,15 +5715,12 @@ else
 end
 if (Trig_Hero_Abilities_Func014C()) then
 if (Trig_Hero_Abilities_Func014Func001C()) then
-udg_Integer_GambleBonus = 76
-CreateTextTagUnitBJ("TRIGSTR_3285", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
-else
-if (Trig_Hero_Abilities_Func014Func001Func003C()) then
 udg_Integer_GambleBonus = (udg_Integer_GambleBonus + 15)
+udg_Integer_GambleBonusLvl = (udg_Integer_GambleBonusLvl + 1)
 DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], (udg_String_Array_MultiBoardColours[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. " |c0000ff00has increased the overall success chance of gamble by 1.5%")))
 AdjustPlayerStateBJ(-1, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_LUMBER)
 else
-end
+CreateTextTagUnitBJ("TRIGSTR_3285", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
 end
 else
 end
