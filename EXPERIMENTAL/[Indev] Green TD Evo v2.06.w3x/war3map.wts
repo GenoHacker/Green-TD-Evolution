@@ -33,6 +33,12 @@ STRING 6
 Aura Upgraded
 }
 
+STRING 7
+// Abilities: A04Y (Fan of Knives), EditorSuffix (Editor Suffix)
+{
+[Shrapnel Tower]
+}
+
 STRING 8
 {
 |cff0080FFNext Wave In: |r
