@@ -638,12 +638,6 @@ gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
-gg_unit_h01H_0130 = nil
-gg_unit_h01H_0131 = nil
-gg_unit_h01H_0132 = nil
-gg_unit_h01H_0133 = nil
-gg_unit_h01H_0134 = nil
-gg_unit_h01H_0135 = nil
 function InitGlobals()
 local i = 0
 
@@ -2226,21 +2220,6 @@ local life
 gg_unit_n00C_0019 = BlzCreateUnitWithSkin(p, FourCC("n00C"), -1792.0, 3392.0, 270.000, FourCC("n00C"))
 end
 
-function CreateUnitsForPlayer23()
-local p = Player(23)
-local u
-local unitID
-local t
-local life
-
-gg_unit_h01H_0130 = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2240.4, 2750.6, 205.747, FourCC("h01H"))
-gg_unit_h01H_0131 = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2554.6, 2182.3, 305.847, FourCC("h01H"))
-gg_unit_h01H_0132 = BlzCreateUnitWithSkin(p, FourCC("h01H"), -2231.6, 1545.2, 155.505, FourCC("h01H"))
-gg_unit_h01H_0133 = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1714.0, 2777.4, 216.283, FourCC("h01H"))
-gg_unit_h01H_0134 = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1556.5, 2171.3, 24.017, FourCC("h01H"))
-gg_unit_h01H_0135 = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1744.8, 1551.3, 127.698, FourCC("h01H"))
-end
-
 function CreateNeutralPassiveBuildings()
 local p = Player(PLAYER_NEUTRAL_PASSIVE)
 local u
@@ -2416,7 +2395,6 @@ CreateBuildingsForPlayer0()
 end
 
 function CreatePlayerUnits()
-CreateUnitsForPlayer23()
 end
 
 function CreateAllUnits()
@@ -4425,7 +4403,7 @@ gg_trg_Set_Random_Wave_Variables = CreateTrigger()
 TriggerAddAction(gg_trg_Set_Random_Wave_Variables, Trig_Set_Random_Wave_Variables_Actions)
 end
 
-function Trig_Map_Start_Func018A()
+function Trig_Map_Start_Func012A()
 SetPlayerHandicapXPBJ(GetEnumPlayer(), 0.00)
 CreateFogModifierRectBJ(true, GetEnumPlayer(), FOG_OF_WAR_VISIBLE, GetPlayableMapRect())
 SetPlayerTechMaxAllowedSwap(FourCC("h00G"), 1, GetEnumPlayer())
@@ -4435,12 +4413,6 @@ SetPlayerStateBJ(GetEnumPlayer(), PLAYER_STATE_RESOURCE_LUMBER, 1)
 end
 
 function Trig_Map_Start_Actions()
-BlzSetUnitArmor(gg_unit_h01H_0130, 0.00)
-BlzSetUnitArmor(gg_unit_h01H_0131, 100.00)
-BlzSetUnitArmor(gg_unit_h01H_0132, 250.00)
-BlzSetUnitArmor(gg_unit_h01H_0133, 500.00)
-BlzSetUnitArmor(gg_unit_h01H_0134, 1000.00)
-BlzSetUnitArmor(gg_unit_h01H_0135, 2000.00)
 ShowUnitHide(gg_unit_n00D_0042)
 SetTimeOfDay(12.00)
 UseTimeOfDayBJ(false)
@@ -4451,7 +4423,7 @@ SetPlayerAllianceStateBJ(Player(23), Player(10), bj_ALLIANCE_ALLIED_VISION)
 SetPlayerAllianceStateBJ(Player(23), Player(11), bj_ALLIANCE_ALLIED_VISION)
 SetPlayerAllianceStateBJ(Player(11), Player(23), bj_ALLIANCE_ALLIED_VISION)
 SetPlayerAllianceStateBJ(Player(10), Player(23), bj_ALLIANCE_ALLIED_VISION)
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Map_Start_Func018A)
+ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Map_Start_Func012A)
 udg_Point_PntArray[11] = GetRectCenter(gg_rct_Tobaho)
 CreateImageBJ("war3mapImported\\wtiigreed.blp", 128.00, udg_Point_PntArray[11], 0.00, 2)
 udg_Image_Array_EasterEggImages[1] = GetLastCreatedImage()

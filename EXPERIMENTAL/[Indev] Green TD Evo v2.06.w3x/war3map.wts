@@ -34,7 +34,7 @@ Aura Upgraded
 }
 
 STRING 7
-// Abilities: A04Y (Fan of Knives), EditorSuffix (Editor Suffix)
+// Abilities: A04H (Bouncing Attack), EditorSuffix (Editor Suffix)
 {
 [Shrapnel Tower]
 }
@@ -18148,7 +18148,7 @@ Bouncing Attack
 }
 
 STRING 2720
-// Abilities: A04H (Bouncing Attack), EditorSuffix (Editor Suffix)
+// Abilities: A04I (Shrapnel Blast), EditorSuffix (Editor Suffix)
 {
 [Shrapnel Tower]
 }
@@ -18172,7 +18172,7 @@ Incinerate
 }
 
 STRING 2724
-// Abilities: A04I (Shrapnel Blast), EditorSuffix (Editor Suffix)
+// Abilities: A04Y (Fan of Knives), EditorSuffix (Editor Suffix)
 {
 [Shrapnel Tower]
 }
