@@ -350,6 +350,21 @@ udg_Integer_Array_VoidContChance = __jarray(0)
 udg_Integer_TotalVoidTrapsBuilt = 0
 udg_Integer_Array_VoidCBlastChance = __jarray(0)
 udg_Integer_GambleBonusLvl = 0
+udg_Point_EasterEgg = nil
+udg_Point_SellTower = nil
+udg_Point_LoseLifeAnim = nil
+udg_Point_Tabaho = nil
+udg_Point_Array_SoulTower = {}
+udg_Point_Array_Blink = {}
+udg_Point_Array_DebuggerOrange = {}
+udg_Point_Array_DebuggerGreen = {}
+udg_Point_Array_DebuggerPink = {}
+udg_Point_Array_DebuggerGray = {}
+udg_Point_Array_DebuggerRed = {}
+udg_Point_Array_DebuggerPurple = {}
+udg_Point_Array_DebuggerYellow = {}
+udg_Point_Array_DebuggerBlue = {}
+udg_Point_Array_DebuggerTeal = {}
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -414,7 +429,7 @@ gg_rct_Purple_Area_1 = nil
 gg_rct_Purple_Area_2 = nil
 gg_rct_Gray_Area = nil
 gg_rct_Green_Area = nil
-gg_rct_Tobaho = nil
+gg_rct_Tabaho = nil
 gg_rct_Red_Headhunter = nil
 gg_rct_HHBuilding = nil
 gg_rct_Magical_Village = nil
@@ -2471,7 +2486,7 @@ gg_rct_Purple_Area_1 = Rect(-7168.0, -2048.0, -3328.0, 768.0)
 gg_rct_Purple_Area_2 = Rect(-7168.0, -3328.0, -4608.0, -2048.0)
 gg_rct_Gray_Area = Rect(-256.0, 768.0, 3584.0, 4352.0)
 gg_rct_Green_Area = Rect(-256.0, 4352.0, 3584.0, 8192.0)
-gg_rct_Tobaho = Rect(-1952.0, 7776.0, -1888.0, 7840.0)
+gg_rct_Tabaho = Rect(-1952.0, 7808.0, -1888.0, 7872.0)
 gg_rct_Red_Headhunter = Rect(-1984.0, 5888.0, -1600.0, 6080.0)
 gg_rct_HHBuilding = Rect(-1856.0, -2112.0, -1728.0, -1984.0)
 gg_rct_Magical_Village = Rect(-3040.0, 6688.0, -544.0, 8160.0)
@@ -2911,8 +2926,8 @@ bj_forLoopAIndex = 1
 bj_forLoopAIndexEnd = 5
 while (true) do
 if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
-udg_Point_PntArray[GetForLoopIndexA()] = OffsetLocation(GetUnitLoc(udg_DamageEventSource), GetRandomReal(-300.00, 300.00), GetRandomReal(-300.00, 300.00))
-CreateNUnitsAtLoc(1, udg_UnitType_Array_SoulTowerUnits[GetRandomInt(1, 6)], GetOwningPlayer(udg_DamageEventSource), udg_Point_PntArray[GetForLoopIndexA()], bj_UNIT_FACING)
+udg_Point_Array_SoulTower[GetForLoopIndexA()] = OffsetLocation(GetUnitLoc(udg_DamageEventSource), GetRandomReal(-300.00, 300.00), GetRandomReal(-300.00, 300.00))
+CreateNUnitsAtLoc(1, udg_UnitType_Array_SoulTowerUnits[GetRandomInt(1, 6)], GetOwningPlayer(udg_DamageEventSource), udg_Point_Array_SoulTower[GetForLoopIndexA()], bj_UNIT_FACING)
 GroupAddUnitSimple(GetLastCreatedUnit(), udg_UnitGroup_Array_SoulTowerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
 BlzSetUnitBaseDamage(GetLastCreatedUnit(), (BlzGetUnitBaseDamage(GetLastCreatedUnit(), 0) + R2I(GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource))), 0)
 bj_forLoopAIndex = bj_forLoopAIndex + 1
@@ -3743,53 +3758,53 @@ TriggerRegisterPlayerChatEvent(gg_trg_Kick_Gray, Player(0), "-kick grey", true)
 TriggerAddAction(gg_trg_Kick_Gray, Trig_Kick_Gray_Actions)
 end
 
-function Trig_Set_Variables_Func250001()
+function Trig_Set_Variables_Func289001()
 return (GetPlayerSlotState(Player(0)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func251001()
+function Trig_Set_Variables_Func290001()
 return (GetPlayerSlotState(Player(1)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func252001()
+function Trig_Set_Variables_Func291001()
 return (GetPlayerSlotState(Player(2)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func253001()
+function Trig_Set_Variables_Func292001()
 return (GetPlayerSlotState(Player(3)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func254001()
+function Trig_Set_Variables_Func293001()
 return (GetPlayerSlotState(Player(4)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func255001()
+function Trig_Set_Variables_Func294001()
 return (GetPlayerSlotState(Player(5)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func256001()
+function Trig_Set_Variables_Func295001()
 return (GetPlayerSlotState(Player(6)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func257001()
+function Trig_Set_Variables_Func296001()
 return (GetPlayerSlotState(Player(7)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func258001()
+function Trig_Set_Variables_Func297001()
 return (GetPlayerSlotState(Player(8)) == PLAYER_SLOT_STATE_PLAYING)
 end
 
-function Trig_Set_Variables_Func259Func003C()
+function Trig_Set_Variables_Func298Func003C()
 if (not (GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_LEFT)) then
 return false
 end
 return true
 end
 
-function Trig_Set_Variables_Func259A()
+function Trig_Set_Variables_Func298A()
 udg_String_Array_PlayerNames[GetConvertedPlayerId(GetEnumPlayer())] = (udg_String_Array_MultiBoardColours[GetConvertedPlayerId(GetEnumPlayer())] .. (GetPlayerName(GetEnumPlayer()) .. "|r"))
 udg_Real_Array_CameraDistance[GetConvertedPlayerId(GetEnumPlayer())] = 2500.00
-if (Trig_Set_Variables_Func259Func003C()) then
+if (Trig_Set_Variables_Func298Func003C()) then
 ForceRemovePlayerSimple(GetEnumPlayer(), udg_PlayerGroup_PlyGrpArray[1])
 else
 udg_Integer_Players = (udg_Integer_Players + 1)
@@ -4032,6 +4047,44 @@ udg_Point_Array_HHSpawnPoint[6] = GetRectCenter(gg_rct_Orange_Spawn)
 udg_Point_Array_HHSpawnPoint[7] = GetRectCenter(gg_rct_Green_Spawn)
 udg_Point_Array_HHSpawnPoint[8] = GetRectCenter(gg_rct_Pink_Spawn)
 udg_Point_Array_HHSpawnPoint[9] = GetRectCenter(gg_rct_Gray_Spawn)
+udg_Point_Array_DebuggerOrange[1] = GetRectCenter(gg_rct_Orange_1)
+udg_Point_Array_DebuggerOrange[2] = GetRectCenter(gg_rct_Orange_2)
+udg_Point_Array_DebuggerOrange[3] = GetRectCenter(gg_rct_Orange_3)
+udg_Point_Array_DebuggerOrange[4] = GetRectCenter(gg_rct_Pink_2)
+udg_Point_Array_DebuggerGreen[1] = GetRectCenter(gg_rct_Green_1)
+udg_Point_Array_DebuggerGreen[2] = GetRectCenter(gg_rct_Green_2)
+udg_Point_Array_DebuggerGreen[3] = GetRectCenter(gg_rct_Green_3)
+udg_Point_Array_DebuggerGreen[4] = GetRectCenter(gg_rct_Gray_2)
+udg_Point_Array_DebuggerPink[1] = GetRectCenter(gg_rct_Pink_1)
+udg_Point_Array_DebuggerPink[2] = GetRectCenter(gg_rct_Pink_2)
+udg_Point_Array_DebuggerPink[3] = GetRectCenter(gg_rct_Red_1_A)
+udg_Point_Array_DebuggerGray[1] = GetRectCenter(gg_rct_Gray_1)
+udg_Point_Array_DebuggerGray[2] = GetRectCenter(gg_rct_Gray_2)
+udg_Point_Array_DebuggerGray[3] = GetRectCenter(gg_rct_Red_1_B)
+udg_Point_Array_DebuggerRed[1] = GetRectCenter(gg_rct_Red_1_A)
+udg_Point_Array_DebuggerRed[2] = GetRectCenter(gg_rct_Red_2_A)
+udg_Point_Array_DebuggerRed[3] = GetRectCenter(gg_rct_Red_4_A)
+udg_Point_Array_DebuggerRed[4] = GetRectCenter(gg_rct_Purple_2)
+udg_Point_Array_DebuggerRed[5] = GetRectCenter(gg_rct_Red_1_B)
+udg_Point_Array_DebuggerRed[6] = GetRectCenter(gg_rct_Red_2_B)
+udg_Point_Array_DebuggerRed[7] = GetRectCenter(gg_rct_Red_4_B)
+udg_Point_Array_DebuggerRed[8] = GetRectCenter(gg_rct_Yellow_1)
+udg_Point_Array_DebuggerPurple[1] = GetRectCenter(gg_rct_Purple_1)
+udg_Point_Array_DebuggerPurple[2] = GetRectCenter(gg_rct_Purple_2)
+udg_Point_Array_DebuggerPurple[3] = GetRectCenter(gg_rct_Purple_3)
+udg_Point_Array_DebuggerPurple[4] = GetRectCenter(gg_rct_Blue_3)
+udg_Point_Array_DebuggerYellow[1] = GetRectCenter(gg_rct_Yellow_1)
+udg_Point_Array_DebuggerYellow[2] = GetRectCenter(gg_rct_Yellow_2)
+udg_Point_Array_DebuggerYellow[3] = GetRectCenter(gg_rct_Yellow_3)
+udg_Point_Array_DebuggerYellow[4] = GetRectCenter(gg_rct_Blue_3)
+udg_Point_Array_DebuggerBlue[1] = GetRectCenter(gg_rct_Blue_1)
+udg_Point_Array_DebuggerBlue[2] = GetRectCenter(gg_rct_Blue_2)
+udg_Point_Array_DebuggerBlue[3] = GetRectCenter(gg_rct_Blue_3)
+udg_Point_Array_DebuggerBlue[4] = GetRectCenter(gg_rct_Life_Zone)
+udg_Point_Array_DebuggerTeal[1] = GetRectCenter(gg_rct_Teal_1)
+udg_Point_Array_DebuggerTeal[2] = GetRectCenter(gg_rct_Teal_2)
+udg_Point_Array_DebuggerTeal[3] = GetRectCenter(gg_rct_Teal_3)
+udg_Point_Array_DebuggerTeal[4] = GetRectCenter(gg_rct_Life_Zone)
 bj_forLoopAIndex = 1
 bj_forLoopAIndexEnd = 11
 while (true) do
@@ -4040,52 +4093,52 @@ udg_String_Array_TowerEnabled[GetForLoopIndexA()] = "|c0077ff77Enabled"
 udg_Integer_Array_TowerOption[GetForLoopIndexA()] = 1
 bj_forLoopAIndex = bj_forLoopAIndex + 1
 end
-if (Trig_Set_Variables_Func250001()) then
+if (Trig_Set_Variables_Func289001()) then
 ForceAddPlayerSimple(Player(0), udg_PlayerGroup_PlyGrpArray[1])
 else
 DoNothing()
 end
-if (Trig_Set_Variables_Func251001()) then
+if (Trig_Set_Variables_Func290001()) then
 ForceAddPlayerSimple(Player(1), udg_PlayerGroup_PlyGrpArray[1])
 else
 DoNothing()
 end
-if (Trig_Set_Variables_Func252001()) then
+if (Trig_Set_Variables_Func291001()) then
 ForceAddPlayerSimple(Player(2), udg_PlayerGroup_PlyGrpArray[1])
 else
 DoNothing()
 end
-if (Trig_Set_Variables_Func253001()) then
+if (Trig_Set_Variables_Func292001()) then
 ForceAddPlayerSimple(Player(3), udg_PlayerGroup_PlyGrpArray[1])
 else
 DoNothing()
 end
-if (Trig_Set_Variables_Func254001()) then
+if (Trig_Set_Variables_Func293001()) then
 ForceAddPlayerSimple(Player(4), udg_PlayerGroup_PlyGrpArray[1])
 else
 DoNothing()
 end
-if (Trig_Set_Variables_Func255001()) then
+if (Trig_Set_Variables_Func294001()) then
 ForceAddPlayerSimple(Player(5), udg_PlayerGroup_PlyGrpArray[1])
 else
 DoNothing()
 end
-if (Trig_Set_Variables_Func256001()) then
+if (Trig_Set_Variables_Func295001()) then
 ForceAddPlayerSimple(Player(6), udg_PlayerGroup_PlyGrpArray[1])
 else
 DoNothing()
 end
-if (Trig_Set_Variables_Func257001()) then
+if (Trig_Set_Variables_Func296001()) then
 ForceAddPlayerSimple(Player(7), udg_PlayerGroup_PlyGrpArray[1])
 else
 DoNothing()
 end
-if (Trig_Set_Variables_Func258001()) then
+if (Trig_Set_Variables_Func297001()) then
 ForceAddPlayerSimple(Player(8), udg_PlayerGroup_PlyGrpArray[1])
 else
 DoNothing()
 end
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Set_Variables_Func259A)
+ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Set_Variables_Func298A)
 udg_Real_Array_MessageTime[1] = 60.00
 end
 
@@ -4424,29 +4477,29 @@ SetPlayerAllianceStateBJ(Player(23), Player(11), bj_ALLIANCE_ALLIED_VISION)
 SetPlayerAllianceStateBJ(Player(11), Player(23), bj_ALLIANCE_ALLIED_VISION)
 SetPlayerAllianceStateBJ(Player(10), Player(23), bj_ALLIANCE_ALLIED_VISION)
 ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Map_Start_Func012A)
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Tobaho)
-CreateImageBJ("war3mapImported\\wtiigreed.blp", 128.00, udg_Point_PntArray[11], 0.00, 2)
+udg_Point_EasterEgg = GetRectCenter(gg_rct_Tabaho)
+CreateImageBJ("war3mapImported\\wtiigreed.blp", 128.00, udg_Point_EasterEgg, 0.00, 2)
 udg_Image_Array_EasterEggImages[1] = GetLastCreatedImage()
 ShowImageBJ(false, udg_Image_Array_EasterEggImages[1])
-CreateImageBJ("war3mapImported\\ossloth.blp", 128.00, udg_Point_PntArray[11], 0.00, 2)
+CreateImageBJ("war3mapImported\\ossloth.blp", 128.00, udg_Point_EasterEgg, 0.00, 2)
 udg_Image_Array_EasterEggImages[2] = GetLastCreatedImage()
 ShowImageBJ(false, udg_Image_Array_EasterEggImages[2])
-CreateImageBJ("war3mapImported\\skedog.blp", 128.00, udg_Point_PntArray[11], 0.00, 2)
+CreateImageBJ("war3mapImported\\skedog.blp", 128.00, udg_Point_EasterEgg, 0.00, 2)
 udg_Image_Array_EasterEggImages[3] = GetLastCreatedImage()
 ShowImageBJ(false, udg_Image_Array_EasterEggImages[3])
-CreateImageBJ("war3mapImported\\Maulbot.blp", 128.00, udg_Point_PntArray[11], 0.00, 2)
+CreateImageBJ("war3mapImported\\Maulbot.blp", 128.00, udg_Point_EasterEgg, 0.00, 2)
 udg_Image_Array_EasterEggImages[4] = GetLastCreatedImage()
 ShowImageBJ(false, udg_Image_Array_EasterEggImages[4])
-CreateImageBJ("war3mapImported\\hive.blp", 128.00, udg_Point_PntArray[11], 0.00, 2)
+CreateImageBJ("war3mapImported\\hive.blp", 128.00, udg_Point_EasterEgg, 0.00, 2)
 udg_Image_Array_EasterEggImages[5] = GetLastCreatedImage()
 ShowImageBJ(false, udg_Image_Array_EasterEggImages[5])
-CreateImageBJ("war3mapImported\\mapswar3reforged.blp", 128.00, udg_Point_PntArray[11], 0.00, 2)
+CreateImageBJ("war3mapImported\\mapswar3reforged.blp", 128.00, udg_Point_EasterEgg, 0.00, 2)
 udg_Image_Array_EasterEggImages[6] = GetLastCreatedImage()
 ShowImageBJ(false, udg_Image_Array_EasterEggImages[6])
-CreateImageBJ("war3mapImported\\vimp.blp", 128.00, udg_Point_PntArray[11], 0.00, 2)
+CreateImageBJ("war3mapImported\\vimp.blp", 128.00, udg_Point_EasterEgg, 0.00, 2)
 udg_Image_Array_EasterEggImages[7] = GetLastCreatedImage()
 ShowImageBJ(false, udg_Image_Array_EasterEggImages[7])
-    RemoveLocation(udg_Point_PntArray[11])
+    RemoveLocation(udg_Point_EasterEgg)
 end
 
 function InitTrig_Map_Start()
@@ -4660,7 +4713,7 @@ TriggerAddCondition(gg_trg_Remove_Hero, Condition(Trig_Remove_Hero_Conditions))
 TriggerAddAction(gg_trg_Remove_Hero, Trig_Remove_Hero_Actions)
 end
 
-function Trig_Selling_Towers_Func001Func001Func003C()
+function Trig_Selling_Towers_Func002Func001Func003C()
 if (GetUnitTypeId(GetSpellAbilityUnit()) == FourCC("n01H")) then
 return true
 end
@@ -4694,21 +4747,21 @@ end
 return false
 end
 
-function Trig_Selling_Towers_Func001Func001Func004C()
+function Trig_Selling_Towers_Func002Func001Func004C()
 if (not (udg_Integer_AuraTowerSell[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Selling_Towers_Func001Func001C()
-if (not Trig_Selling_Towers_Func001Func001Func003C()) then
+function Trig_Selling_Towers_Func002Func001C()
+if (not Trig_Selling_Towers_Func002Func001Func003C()) then
 return false
 end
 return true
 end
 
-function Trig_Selling_Towers_Func001Func002C()
+function Trig_Selling_Towers_Func002Func002C()
 if (GetSpellAbilityId() == FourCC("A00G")) then
 return true
 end
@@ -4718,24 +4771,23 @@ end
 return false
 end
 
-function Trig_Selling_Towers_Func001C()
-if (not Trig_Selling_Towers_Func001Func002C()) then
+function Trig_Selling_Towers_Func002C()
+if (not Trig_Selling_Towers_Func002Func002C()) then
 return false
 end
 return true
 end
 
 function Trig_Selling_Towers_Actions()
-if (Trig_Selling_Towers_Func001C()) then
-if (Trig_Selling_Towers_Func001Func001C()) then
-if (Trig_Selling_Towers_Func001Func001Func004C()) then
+udg_Point_SellTower = GetUnitLoc(GetTriggerUnit())
+if (Trig_Selling_Towers_Func002C()) then
+if (Trig_Selling_Towers_Func002Func001C()) then
+if (Trig_Selling_Towers_Func002Func001Func004C()) then
 udg_Integer_AuraTowerSell[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = 0
 AdjustPlayerStateBJ(((udg_Integer_SellPercent * GetUnitPointValue(GetSpellAbilityUnit())) // 100), GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_GOLD)
 CreateTextTagUnitBJ(("Tower Sold For " .. (I2S(((udg_Integer_SellPercent * GetUnitPointValue(GetSpellAbilityUnit())) // 100)) .. " Gold.")), GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
 RemoveUnit(GetSpellAbilityUnit())
-udg_Point_PntArray[3] = GetUnitLoc(GetTriggerUnit())
-AddSpecialEffectLocBJ(udg_Point_PntArray[3], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
-                RemoveLocation(udg_Point_PntArray[3])
+AddSpecialEffectLocBJ(udg_Point_SellTower, "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
 DestroyEffectBJ(GetLastCreatedEffectBJ())
 else
 CreateTextTagUnitBJ("TRIGSTR_165", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
@@ -4753,13 +4805,12 @@ else
 AdjustPlayerStateBJ(((udg_Integer_SellPercent * GetUnitPointValue(GetSpellAbilityUnit())) // 100), GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_GOLD)
 CreateTextTagUnitBJ(("Tower Sold For " .. (I2S(((udg_Integer_SellPercent * GetUnitPointValue(GetSpellAbilityUnit())) // 100)) .. " Gold.")), GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
 RemoveUnit(GetSpellAbilityUnit())
-udg_Point_PntArray[3] = GetUnitLoc(GetTriggerUnit())
-AddSpecialEffectLocBJ(udg_Point_PntArray[3], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
-            RemoveLocation(udg_Point_PntArray[3])
+AddSpecialEffectLocBJ(udg_Point_SellTower, "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
 DestroyEffectBJ(GetLastCreatedEffectBJ())
 end
 else
 end
+    RemoveLocation(udg_Point_SellTower)
 SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
 SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
 SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
@@ -5016,27 +5067,27 @@ return true
 end
 
 function Trig_Lose_Life_Animation_Effect_Actions()
-udg_Point_PntArray[100] = GetRectCenter(gg_rct_Life_Zone)
+udg_Point_LoseLifeAnim = GetRectCenter(gg_rct_Life_Zone)
 SetUnitVertexColorBJ(gg_unit_n015_0010, GetRandomReal(0, 100.00), GetRandomReal(0, 100.00), GetRandomReal(0, 100.00), 0)
 udg_Integer_LoseLifeEffectNumber = GetRandomInt(1, 5)
 if (Trig_Lose_Life_Animation_Effect_Func004C()) then
-AddSpecialEffectLocBJ(udg_Point_PntArray[100], "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl")
+AddSpecialEffectLocBJ(udg_Point_LoseLifeAnim, "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl")
 DestroyEffectBJ(GetLastCreatedEffectBJ())
 else
 if (Trig_Lose_Life_Animation_Effect_Func004Func001C()) then
-AddSpecialEffectLocBJ(udg_Point_PntArray[100], "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl")
+AddSpecialEffectLocBJ(udg_Point_LoseLifeAnim, "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl")
 DestroyEffectBJ(GetLastCreatedEffectBJ())
 else
 if (Trig_Lose_Life_Animation_Effect_Func004Func001Func004C()) then
-AddSpecialEffectLocBJ(udg_Point_PntArray[100], "Objects\\Spawnmodels\\NightElf\\NEDeathMedium\\NEDeath.mdl")
+AddSpecialEffectLocBJ(udg_Point_LoseLifeAnim, "Objects\\Spawnmodels\\NightElf\\NEDeathMedium\\NEDeath.mdl")
 DestroyEffectBJ(GetLastCreatedEffectBJ())
 else
 if (Trig_Lose_Life_Animation_Effect_Func004Func001Func004Func004C()) then
-AddSpecialEffectLocBJ(udg_Point_PntArray[100], "Abilities\\Spells\\Other\\Drain\\ManaDrainTarget.mdl")
+AddSpecialEffectLocBJ(udg_Point_LoseLifeAnim, "Abilities\\Spells\\Other\\Drain\\ManaDrainTarget.mdl")
 DestroyEffectBJ(GetLastCreatedEffectBJ())
 else
 if (Trig_Lose_Life_Animation_Effect_Func004Func001Func004Func004Func004C()) then
-AddSpecialEffectLocBJ(udg_Point_PntArray[100], "Abilities\\Spells\\NightElf\\Taunt\\TauntCaster.mdl")
+AddSpecialEffectLocBJ(udg_Point_LoseLifeAnim, "Abilities\\Spells\\NightElf\\Taunt\\TauntCaster.mdl")
 DestroyEffectBJ(GetLastCreatedEffectBJ())
 else
 end
@@ -5044,7 +5095,7 @@ end
 end
 end
 end
-    RemoveLocation(udg_Point_PntArray[100])
+    RemoveLocation(udg_Point_LoseLifeAnim)
 end
 
 function InitTrig_Lose_Life_Animation_Effect()
@@ -5125,11 +5176,11 @@ end
 
 function Trig_Tabaho_Actions()
 udg_Integer_RandomNumber = GetRandomInt(1, 7)
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Tobaho)
+udg_Point_Tabaho = GetRectCenter(gg_rct_Tabaho)
 if (Trig_Tabaho_Func003C()) then
 ShowImageBJ(true, udg_Image_Array_EasterEggImages[1])
 SetImageRenderAlways(udg_Image_Array_EasterEggImages[1], true)
-CreateTextTagLocBJ("TRIGSTR_122", udg_Point_PntArray[11], 200.00, 10, 0.00, 100, 0.00, 0)
+CreateTextTagLocBJ("TRIGSTR_122", udg_Point_Tabaho, 200.00, 10, 0.00, 100, 0.00, 0)
 SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
 SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
 SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
@@ -5140,7 +5191,7 @@ else
 if (Trig_Tabaho_Func003Func002C()) then
 ShowImageBJ(true, udg_Image_Array_EasterEggImages[2])
 SetImageRenderAlways(udg_Image_Array_EasterEggImages[2], true)
-CreateTextTagLocBJ("TRIGSTR_127", udg_Point_PntArray[11], 200.00, 10, 0.00, 100, 0.00, 0)
+CreateTextTagLocBJ("TRIGSTR_127", udg_Point_Tabaho, 200.00, 10, 0.00, 100, 0.00, 0)
 SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
 SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
 SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
@@ -5152,7 +5203,7 @@ if (Trig_Tabaho_Func003Func002Func002C()) then
 ShowImageBJ(true, udg_Image_Array_EasterEggImages[3])
 SetImageRenderAlways(udg_Image_Array_EasterEggImages[3], true)
 SetImageRenderAlways(GetLastCreatedImage(), true)
-CreateTextTagLocBJ("TRIGSTR_128", udg_Point_PntArray[11], 200.00, 10, 0.00, 100, 0.00, 0)
+CreateTextTagLocBJ("TRIGSTR_128", udg_Point_Tabaho, 200.00, 10, 0.00, 100, 0.00, 0)
 SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
 SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
 SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
@@ -5164,7 +5215,7 @@ if (Trig_Tabaho_Func003Func002Func002Func002C()) then
 ShowImageBJ(true, udg_Image_Array_EasterEggImages[4])
 SetImageRenderAlways(udg_Image_Array_EasterEggImages[4], true)
 SetImageRenderAlways(GetLastCreatedImage(), true)
-CreateTextTagLocBJ("TRIGSTR_129", udg_Point_PntArray[11], 200.00, 10, 0.00, 100, 0.00, 0)
+CreateTextTagLocBJ("TRIGSTR_129", udg_Point_Tabaho, 200.00, 10, 0.00, 100, 0.00, 0)
 SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
 SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
 SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
@@ -5176,7 +5227,7 @@ if (Trig_Tabaho_Func003Func002Func002Func002Func001C()) then
 ShowImageBJ(true, udg_Image_Array_EasterEggImages[5])
 SetImageRenderAlways(udg_Image_Array_EasterEggImages[5], true)
 SetImageRenderAlways(GetLastCreatedImage(), true)
-CreateTextTagLocBJ("TRIGSTR_2418", udg_Point_PntArray[11], 200.00, 10, 0.00, 100, 0.00, 0)
+CreateTextTagLocBJ("TRIGSTR_2418", udg_Point_Tabaho, 200.00, 10, 0.00, 100, 0.00, 0)
 SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
 SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
 SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
@@ -5188,7 +5239,7 @@ if (Trig_Tabaho_Func003Func002Func002Func002Func001Func001C()) then
 ShowImageBJ(true, udg_Image_Array_EasterEggImages[6])
 SetImageRenderAlways(udg_Image_Array_EasterEggImages[6], true)
 SetImageRenderAlways(GetLastCreatedImage(), true)
-CreateTextTagLocBJ("TRIGSTR_2419", udg_Point_PntArray[11], 200.00, 10, 0.00, 100, 0.00, 0)
+CreateTextTagLocBJ("TRIGSTR_2419", udg_Point_Tabaho, 200.00, 10, 0.00, 100, 0.00, 0)
 SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
 SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
 SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
@@ -5200,7 +5251,7 @@ if (Trig_Tabaho_Func003Func002Func002Func002Func001Func001Func001C()) then
 ShowImageBJ(true, udg_Image_Array_EasterEggImages[7])
 SetImageRenderAlways(udg_Image_Array_EasterEggImages[7], true)
 SetImageRenderAlways(GetLastCreatedImage(), true)
-CreateTextTagLocBJ("TRIGSTR_2427", udg_Point_PntArray[11], 200.00, 10, 0.00, 100, 0.00, 0)
+CreateTextTagLocBJ("TRIGSTR_2427", udg_Point_Tabaho, 200.00, 10, 0.00, 100, 0.00, 0)
 SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
 SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
 SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
@@ -5215,7 +5266,7 @@ end
 end
 end
 end
-    RemoveLocation(udg_Point_PntArray[11])
+    RemoveLocation(udg_Point_Tabaho)
 end
 
 function InitTrig_Tabaho()
@@ -14748,13 +14799,13 @@ return true
 end
 
 function Trig_Auto_Blink_Actions()
-udg_Point_PntArray[4] = GetUnitLoc(GetTriggerUnit())
-AddSpecialEffectLocBJ(udg_Point_PntArray[4], "Abilities\\Spells\\Items\\TomeOfRetraining\\TomeOfRetrainingCaster.mdl")
+udg_Point_Array_Blink[1] = GetUnitLoc(GetTriggerUnit())
+AddSpecialEffectLocBJ(udg_Point_Array_Blink[1], "Abilities\\Spells\\Items\\TomeOfRetraining\\TomeOfRetrainingCaster.mdl")
 DestroyEffectBJ(GetLastCreatedEffectBJ())
-    RemoveLocation(udg_Point_PntArray[4])
-udg_Point_PntArray[4] = GetOrderPointLoc()
-SetUnitPositionLoc(GetOrderedUnit(), udg_Point_PntArray[4])
-    RemoveLocation(udg_Point_PntArray[4])
+    RemoveLocation(udg_Point_Array_Blink[1])
+udg_Point_Array_Blink[2] = GetOrderPointLoc()
+SetUnitPositionLoc(GetOrderedUnit(), udg_Point_Array_Blink[2])
+    RemoveLocation(udg_Point_Array_Blink[2])
 AddSpecialEffectTargetUnitBJ("origin", GetTriggerUnit(), "Abilities\\Spells\\Items\\TomeOfRetraining\\TomeOfRetrainingCaster.mdl")
 DestroyEffectBJ(GetLastCreatedEffectBJ())
 end
@@ -14937,9 +14988,7 @@ end
 
 function Trig_Unit_Debugger_Func004A()
 if (Trig_Unit_Debugger_Func004Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Orange_1)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerOrange[1])
 else
 end
 end
@@ -14953,9 +15002,7 @@ end
 
 function Trig_Unit_Debugger_Func005A()
 if (Trig_Unit_Debugger_Func005Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Orange_2)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerOrange[2])
 else
 end
 end
@@ -14969,9 +15016,7 @@ end
 
 function Trig_Unit_Debugger_Func006A()
 if (Trig_Unit_Debugger_Func006Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Orange_3)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerOrange[3])
 else
 end
 end
@@ -14985,9 +15030,7 @@ end
 
 function Trig_Unit_Debugger_Func007A()
 if (Trig_Unit_Debugger_Func007Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Pink_2)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerOrange[4])
 else
 end
 end
@@ -15001,9 +15044,7 @@ end
 
 function Trig_Unit_Debugger_Func011A()
 if (Trig_Unit_Debugger_Func011Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Green_1)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerGreen[1])
 else
 end
 end
@@ -15017,9 +15058,7 @@ end
 
 function Trig_Unit_Debugger_Func012A()
 if (Trig_Unit_Debugger_Func012Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Green_2)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerGreen[2])
 else
 end
 end
@@ -15033,9 +15072,7 @@ end
 
 function Trig_Unit_Debugger_Func013A()
 if (Trig_Unit_Debugger_Func013Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Green_3)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerGreen[3])
 else
 end
 end
@@ -15049,9 +15086,7 @@ end
 
 function Trig_Unit_Debugger_Func014A()
 if (Trig_Unit_Debugger_Func014Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Gray_2)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerGreen[4])
 else
 end
 end
@@ -15065,9 +15100,7 @@ end
 
 function Trig_Unit_Debugger_Func018A()
 if (Trig_Unit_Debugger_Func018Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Pink_1)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerPink[1])
 else
 end
 end
@@ -15081,9 +15114,7 @@ end
 
 function Trig_Unit_Debugger_Func019A()
 if (Trig_Unit_Debugger_Func019Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Pink_2)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerPink[2])
 else
 end
 end
@@ -15097,9 +15128,7 @@ end
 
 function Trig_Unit_Debugger_Func020A()
 if (Trig_Unit_Debugger_Func020Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Red_1_A)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerPink[3])
 else
 end
 end
@@ -15113,9 +15142,7 @@ end
 
 function Trig_Unit_Debugger_Func024A()
 if (Trig_Unit_Debugger_Func024Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Gray_1)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerGray[1])
 else
 end
 end
@@ -15129,9 +15156,7 @@ end
 
 function Trig_Unit_Debugger_Func025A()
 if (Trig_Unit_Debugger_Func025Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Gray_2)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerGray[2])
 else
 end
 end
@@ -15145,9 +15170,7 @@ end
 
 function Trig_Unit_Debugger_Func026A()
 if (Trig_Unit_Debugger_Func026Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Red_1_B)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerGray[3])
 else
 end
 end
@@ -15161,9 +15184,7 @@ end
 
 function Trig_Unit_Debugger_Func030A()
 if (Trig_Unit_Debugger_Func030Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Red_1_A)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerRed[1])
 else
 end
 end
@@ -15177,9 +15198,7 @@ end
 
 function Trig_Unit_Debugger_Func031A()
 if (Trig_Unit_Debugger_Func031Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Red_2_A)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerRed[2])
 else
 end
 end
@@ -15193,9 +15212,7 @@ end
 
 function Trig_Unit_Debugger_Func032A()
 if (Trig_Unit_Debugger_Func032Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Red_4_A)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerRed[3])
 else
 end
 end
@@ -15209,9 +15226,7 @@ end
 
 function Trig_Unit_Debugger_Func033A()
 if (Trig_Unit_Debugger_Func033Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Purple_2)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerRed[4])
 else
 end
 end
@@ -15225,9 +15240,7 @@ end
 
 function Trig_Unit_Debugger_Func035A()
 if (Trig_Unit_Debugger_Func035Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Red_1_B)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerRed[5])
 else
 end
 end
@@ -15241,9 +15254,7 @@ end
 
 function Trig_Unit_Debugger_Func036A()
 if (Trig_Unit_Debugger_Func036Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Red_2_B)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerRed[6])
 else
 end
 end
@@ -15257,9 +15268,7 @@ end
 
 function Trig_Unit_Debugger_Func037A()
 if (Trig_Unit_Debugger_Func037Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Red_4_B)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerRed[7])
 else
 end
 end
@@ -15273,9 +15282,7 @@ end
 
 function Trig_Unit_Debugger_Func038A()
 if (Trig_Unit_Debugger_Func038Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Yellow_1)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerRed[8])
 else
 end
 end
@@ -15289,9 +15296,7 @@ end
 
 function Trig_Unit_Debugger_Func042A()
 if (Trig_Unit_Debugger_Func042Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Purple_1)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerPurple[1])
 else
 end
 end
@@ -15305,9 +15310,7 @@ end
 
 function Trig_Unit_Debugger_Func043A()
 if (Trig_Unit_Debugger_Func043Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Purple_2)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerPurple[2])
 else
 end
 end
@@ -15321,9 +15324,7 @@ end
 
 function Trig_Unit_Debugger_Func044A()
 if (Trig_Unit_Debugger_Func044Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Purple_3)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerPurple[3])
 else
 end
 end
@@ -15337,9 +15338,7 @@ end
 
 function Trig_Unit_Debugger_Func045A()
 if (Trig_Unit_Debugger_Func045Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Blue_3)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerPurple[4])
 else
 end
 end
@@ -15353,9 +15352,7 @@ end
 
 function Trig_Unit_Debugger_Func049A()
 if (Trig_Unit_Debugger_Func049Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Yellow_1)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerYellow[1])
 else
 end
 end
@@ -15369,9 +15366,7 @@ end
 
 function Trig_Unit_Debugger_Func050A()
 if (Trig_Unit_Debugger_Func050Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Yellow_2)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerYellow[2])
 else
 end
 end
@@ -15385,9 +15380,7 @@ end
 
 function Trig_Unit_Debugger_Func051A()
 if (Trig_Unit_Debugger_Func051Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Yellow_3)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerYellow[3])
 else
 end
 end
@@ -15401,9 +15394,7 @@ end
 
 function Trig_Unit_Debugger_Func052A()
 if (Trig_Unit_Debugger_Func052Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Blue_3)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerYellow[4])
 else
 end
 end
@@ -15417,9 +15408,7 @@ end
 
 function Trig_Unit_Debugger_Func056A()
 if (Trig_Unit_Debugger_Func056Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Blue_1)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerBlue[1])
 else
 end
 end
@@ -15433,9 +15422,7 @@ end
 
 function Trig_Unit_Debugger_Func057A()
 if (Trig_Unit_Debugger_Func057Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Blue_2)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerBlue[2])
 else
 end
 end
@@ -15449,9 +15436,7 @@ end
 
 function Trig_Unit_Debugger_Func058A()
 if (Trig_Unit_Debugger_Func058Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Blue_3)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerBlue[3])
 else
 end
 end
@@ -15465,9 +15450,7 @@ end
 
 function Trig_Unit_Debugger_Func059A()
 if (Trig_Unit_Debugger_Func059Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Life_Zone)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerBlue[4])
 else
 end
 end
@@ -15481,9 +15464,7 @@ end
 
 function Trig_Unit_Debugger_Func063A()
 if (Trig_Unit_Debugger_Func063Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Teal_1)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerTeal[1])
 else
 end
 end
@@ -15497,9 +15478,7 @@ end
 
 function Trig_Unit_Debugger_Func064A()
 if (Trig_Unit_Debugger_Func064Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Teal_2)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerTeal[2])
 else
 end
 end
@@ -15513,9 +15492,7 @@ end
 
 function Trig_Unit_Debugger_Func065A()
 if (Trig_Unit_Debugger_Func065Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Teal_3)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerTeal[3])
 else
 end
 end
@@ -15529,9 +15506,7 @@ end
 
 function Trig_Unit_Debugger_Func066A()
 if (Trig_Unit_Debugger_Func066Func001C()) then
-udg_Point_PntArray[11] = GetRectCenter(gg_rct_Life_Zone)
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_PntArray[11])
-        RemoveLocation(udg_Point_PntArray[11])
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerTeal[4])
 else
 end
 end
