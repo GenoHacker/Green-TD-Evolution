@@ -17,8 +17,7 @@ udg_Integer_DebugWave = 0
 udg_Integer_Array_WaveTimer = __jarray(0)
 udg_Integer_Array_Gamble = __jarray(0)
 udg_Integer_Jackpot = 0
-udg_Point_PntArray = {}
-udg_PlayerGroup_PlyGrpArray = {}
+udg_PlayerGroup_Permanent = {}
 udg_SpawnPoints_PntArray = {}
 udg_Player_Array_AntiBuild = {}
 udg_ChoosePoint_Pnt = nil
@@ -43,7 +42,6 @@ udg_Real_Array_ChaosHealthPerLow = __jarray(0.0)
 udg_Real_Array_ChaosHealthPerHigh = __jarray(0.0)
 udg_String_Array_ChaosMultiplier = __jarray("")
 udg_UnitGroup_GoldRushGrp = nil
-udg_PlayerGroup_GoldRush = nil
 udg_Integer_SpawnMax = 0
 udg_Integer_SwarmMode = 0
 udg_Integer_Array_GoldLostGambling = __jarray(0)
@@ -365,6 +363,13 @@ udg_Point_Array_DebuggerPurple = {}
 udg_Point_Array_DebuggerYellow = {}
 udg_Point_Array_DebuggerBlue = {}
 udg_Point_Array_DebuggerTeal = {}
+udg_Point_Goldrush = nil
+udg_Point_Array_DestroyTower = {}
+udg_Point_Array_IronTrap = {}
+udg_PlyGroup_Array_HeroAbilities = {}
+udg_PlayerGroup_StartMsg = nil
+udg_Integer_Array_GoblinBotChance = __jarray(0)
+udg_Integer_TotalIronTrapsBuilt = 0
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -708,7 +713,7 @@ udg_Integer_Jackpot = 3000
 i = 0
 while (true) do
 if ((i > 1)) then break end
-udg_PlayerGroup_PlyGrpArray[i] = CreateForce()
+udg_PlayerGroup_Permanent[i] = CreateForce()
 i = i + 1
 end
 udg_Integer_SpawnCount = 0
@@ -773,7 +778,6 @@ udg_String_Array_ChaosMultiplier[i] = ""
 i = i + 1
 end
 udg_UnitGroup_GoldRushGrp = CreateGroup()
-udg_PlayerGroup_GoldRush = CreateForce()
 udg_Integer_SpawnMax = 31
 udg_Integer_SwarmMode = 0
 i = 0
@@ -1382,6 +1386,20 @@ udg_Integer_Array_VoidCBlastChance[i] = 0
 i = i + 1
 end
 udg_Integer_GambleBonusLvl = 0
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_PlyGroup_Array_HeroAbilities[i] = CreateForce()
+i = i + 1
+end
+udg_PlayerGroup_StartMsg = CreateForce()
+i = 0
+while (true) do
+if ((i > 0)) then break end
+udg_Integer_Array_GoblinBotChance[i] = 0
+i = i + 1
+end
+udg_Integer_TotalIronTrapsBuilt = 0
 end
 
 --Global Initialization 1.1 also hooks the InitCustomTriggers and RunInitializationTriggers functions
@@ -3805,7 +3823,7 @@ function Trig_Set_Variables_Func298A()
 udg_String_Array_PlayerNames[GetConvertedPlayerId(GetEnumPlayer())] = (udg_String_Array_MultiBoardColours[GetConvertedPlayerId(GetEnumPlayer())] .. (GetPlayerName(GetEnumPlayer()) .. "|r"))
 udg_Real_Array_CameraDistance[GetConvertedPlayerId(GetEnumPlayer())] = 2500.00
 if (Trig_Set_Variables_Func298Func003C()) then
-ForceRemovePlayerSimple(GetEnumPlayer(), udg_PlayerGroup_PlyGrpArray[1])
+ForceRemovePlayerSimple(GetEnumPlayer(), udg_PlayerGroup_Permanent[1])
 else
 udg_Integer_Players = (udg_Integer_Players + 1)
 end
@@ -4094,51 +4112,51 @@ udg_Integer_Array_TowerOption[GetForLoopIndexA()] = 1
 bj_forLoopAIndex = bj_forLoopAIndex + 1
 end
 if (Trig_Set_Variables_Func289001()) then
-ForceAddPlayerSimple(Player(0), udg_PlayerGroup_PlyGrpArray[1])
+ForceAddPlayerSimple(Player(0), udg_PlayerGroup_Permanent[1])
 else
 DoNothing()
 end
 if (Trig_Set_Variables_Func290001()) then
-ForceAddPlayerSimple(Player(1), udg_PlayerGroup_PlyGrpArray[1])
+ForceAddPlayerSimple(Player(1), udg_PlayerGroup_Permanent[1])
 else
 DoNothing()
 end
 if (Trig_Set_Variables_Func291001()) then
-ForceAddPlayerSimple(Player(2), udg_PlayerGroup_PlyGrpArray[1])
+ForceAddPlayerSimple(Player(2), udg_PlayerGroup_Permanent[1])
 else
 DoNothing()
 end
 if (Trig_Set_Variables_Func292001()) then
-ForceAddPlayerSimple(Player(3), udg_PlayerGroup_PlyGrpArray[1])
+ForceAddPlayerSimple(Player(3), udg_PlayerGroup_Permanent[1])
 else
 DoNothing()
 end
 if (Trig_Set_Variables_Func293001()) then
-ForceAddPlayerSimple(Player(4), udg_PlayerGroup_PlyGrpArray[1])
+ForceAddPlayerSimple(Player(4), udg_PlayerGroup_Permanent[1])
 else
 DoNothing()
 end
 if (Trig_Set_Variables_Func294001()) then
-ForceAddPlayerSimple(Player(5), udg_PlayerGroup_PlyGrpArray[1])
+ForceAddPlayerSimple(Player(5), udg_PlayerGroup_Permanent[1])
 else
 DoNothing()
 end
 if (Trig_Set_Variables_Func295001()) then
-ForceAddPlayerSimple(Player(6), udg_PlayerGroup_PlyGrpArray[1])
+ForceAddPlayerSimple(Player(6), udg_PlayerGroup_Permanent[1])
 else
 DoNothing()
 end
 if (Trig_Set_Variables_Func296001()) then
-ForceAddPlayerSimple(Player(7), udg_PlayerGroup_PlyGrpArray[1])
+ForceAddPlayerSimple(Player(7), udg_PlayerGroup_Permanent[1])
 else
 DoNothing()
 end
 if (Trig_Set_Variables_Func297001()) then
-ForceAddPlayerSimple(Player(8), udg_PlayerGroup_PlyGrpArray[1])
+ForceAddPlayerSimple(Player(8), udg_PlayerGroup_Permanent[1])
 else
 DoNothing()
 end
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Set_Variables_Func298A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Set_Variables_Func298A)
 udg_Real_Array_MessageTime[1] = 60.00
 end
 
@@ -4476,7 +4494,7 @@ SetPlayerAllianceStateBJ(Player(23), Player(10), bj_ALLIANCE_ALLIED_VISION)
 SetPlayerAllianceStateBJ(Player(23), Player(11), bj_ALLIANCE_ALLIED_VISION)
 SetPlayerAllianceStateBJ(Player(11), Player(23), bj_ALLIANCE_ALLIED_VISION)
 SetPlayerAllianceStateBJ(Player(10), Player(23), bj_ALLIANCE_ALLIED_VISION)
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Map_Start_Func012A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Map_Start_Func012A)
 udg_Point_EasterEgg = GetRectCenter(gg_rct_Tabaho)
 CreateImageBJ("war3mapImported\\wtiigreed.blp", 128.00, udg_Point_EasterEgg, 0.00, 2)
 udg_Image_Array_EasterEggImages[1] = GetLastCreatedImage()
@@ -5110,7 +5128,7 @@ CustomVictoryBJ(GetEnumPlayer(), true, true)
 end
 
 function Trig_WinGame_Actions()
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_WinGame_Func001A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_WinGame_Func001A)
 end
 
 function InitTrig_WinGame()
@@ -5686,7 +5704,7 @@ return true
 end
 
 function Trig_Hero_Abilities_Actions()
-udg_PlayerGroup_PlyGrpArray[16] = GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit()))
+udg_PlyGroup_Array_HeroAbilities[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit()))
 if (Trig_Hero_Abilities_Func004C()) then
 if (Trig_Hero_Abilities_Func004Func001C()) then
 CreateTextTagUnitBJ("TRIGSTR_765", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
@@ -5782,8 +5800,8 @@ SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
 SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
 SetTextTagLifespanBJ(GetLastCreatedTextTag(), 3.00)
 ShowTextTagForceBJ(false, GetLastCreatedTextTag(), GetPlayersAll())
-ShowTextTagForceBJ(true, GetLastCreatedTextTag(), udg_PlayerGroup_PlyGrpArray[16])
-    DestroyForce(udg_PlayerGroup_PlyGrpArray[16])
+ShowTextTagForceBJ(true, GetLastCreatedTextTag(), udg_PlyGroup_Array_HeroAbilities[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))])
+    DestroyForce(udg_PlyGroup_Array_HeroAbilities[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))])
 end
 
 function InitTrig_Hero_Abilities()
@@ -6021,6 +6039,28 @@ end
 return true
 end
 
+function Trig_Instant_Upgrade_Func008Func001Func001002003001002()
+return (GetUnitTypeId(GetFilterUnit()) == FourCC("n01I"))
+end
+
+function Trig_Instant_Upgrade_Func008Func001Func002001001002()
+return (GetUnitTypeId(GetFilterUnit()) == FourCC("n01I"))
+end
+
+function Trig_Instant_Upgrade_Func008Func001C()
+if (not (CountUnitsInGroup(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Instant_Upgrade_Func008Func001Func002001001002))) <= 10)) then
+return false
+end
+return true
+end
+
+function Trig_Instant_Upgrade_Func008C()
+if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("n01I"))) then
+return false
+end
+return true
+end
+
 function Trig_Instant_Upgrade_Actions()
 if (Trig_Instant_Upgrade_Func001C()) then
 ReplaceUnitBJ(GetTriggerUnit(), GetUnitTypeId(GetTriggerUnit()), bj_UNIT_STATE_METHOD_RELATIVE)
@@ -6084,6 +6124,13 @@ else
 end
 else
 end
+if (Trig_Instant_Upgrade_Func008C()) then
+if (Trig_Instant_Upgrade_Func008Func001C()) then
+udg_Integer_TotalIronTrapsBuilt = (0 + CountUnitsInGroup(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Instant_Upgrade_Func008Func001Func001002003001002))))
+else
+end
+else
+end
 end
 
 function InitTrig_Instant_Upgrade()
@@ -6094,13 +6141,13 @@ end
 
 function Trig_Start_Messages_Actions()
 DisplayTimedTextToForce(bj_FORCE_PLAYER[0], 120.00, "TRIGSTR_4749")
-udg_PlayerGroup_PlyGrpArray[3] = GetPlayersAllies(Player(0))
-ForceRemovePlayerSimple(Player(0), udg_PlayerGroup_PlyGrpArray[3])
-DisplayTimedTextToForce(udg_PlayerGroup_PlyGrpArray[3], 120.00, (("|c0000ff00Welcome, To|r |c0077ff77Green TD Evolution.|r |c0000ff00Please wait whilst |r" .. udg_String_Array_PlayerNames[1]) .. " |c0000ff00Chooses what game options will be used.|r"))
-DisplayTimedTextToForce(udg_PlayerGroup_PlyGrpArray[3], 120.00, (("|c0000ff00If|r " .. udg_String_Array_PlayerNames[1]) .. " |c0000ff00does not pick any game options after|r |c0077ff77120 seconds|r|c0000ff00, then the game will default to|r |c0077ff77Normal Difficulty.|r "))
-DisplayTimedTextToForce(udg_PlayerGroup_PlyGrpArray[3], 120.00, (("|c0000ff00If|r " .. udg_String_Array_PlayerNames[1]) .. " |c0000ff00picks a game option but does not start the game then after|r |c0077ff77120 seconds|r|c0000ff00, any player may type |c0077ff77-rdy or -ready|r |c0000ff00to start the game.|r"))
-DisplayTimedTextToForce(udg_PlayerGroup_PlyGrpArray[3], 120.00, "TRIGSTR_2589")
-    DestroyForce(udg_PlayerGroup_PlyGrpArray[3])
+udg_PlayerGroup_StartMsg = GetPlayersAllies(Player(0))
+ForceRemovePlayerSimple(Player(0), udg_PlayerGroup_StartMsg)
+DisplayTimedTextToForce(udg_PlayerGroup_StartMsg, 120.00, (("|c0000ff00Welcome, To|r |c0077ff77Green TD Evolution.|r |c0000ff00Please wait whilst |r" .. udg_String_Array_PlayerNames[1]) .. " |c0000ff00Chooses what game options will be used.|r"))
+DisplayTimedTextToForce(udg_PlayerGroup_StartMsg, 120.00, (("|c0000ff00If|r " .. udg_String_Array_PlayerNames[1]) .. " |c0000ff00does not pick any game options after|r |c0077ff77120 seconds|r|c0000ff00, then the game will default to|r |c0077ff77Normal Difficulty.|r "))
+DisplayTimedTextToForce(udg_PlayerGroup_StartMsg, 120.00, (("|c0000ff00If|r " .. udg_String_Array_PlayerNames[1]) .. " |c0000ff00picks a game option but does not start the game then after|r |c0077ff77120 seconds|r|c0000ff00, any player may type |c0077ff77-rdy or -ready|r |c0000ff00to start the game.|r"))
+DisplayTimedTextToForce(udg_PlayerGroup_StartMsg, 120.00, "TRIGSTR_2589")
+    DestroyForce(udg_PlayerGroup_StartMsg)
 EnableTrigger(gg_trg_Timer)
 end
 
@@ -7179,7 +7226,7 @@ end
 end
 end
 end
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Random_Game_Modes_Func001Func010A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Random_Game_Modes_Func001Func010A)
 bj_forLoopAIndex = 1
 bj_forLoopAIndexEnd = 7
 while (true) do
@@ -7525,7 +7572,7 @@ end
 end
 end
 end
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Random_Game_Modes_and_Difficulty_Func001Func011A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Random_Game_Modes_and_Difficulty_Func001Func011A)
 bj_forLoopAIndex = 1
 bj_forLoopAIndexEnd = 7
 while (true) do
@@ -8106,7 +8153,7 @@ end
 end
 end
 end
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Random_Game_Modes_Difficulty_and_Towers_Func001Func027A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Random_Game_Modes_Difficulty_and_Towers_Func001Func027A)
 bj_forLoopAIndex = 1
 bj_forLoopAIndexEnd = 7
 while (true) do
@@ -8374,7 +8421,7 @@ end
 end
 end
 end
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Ready_Modes_Func010A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Ready_Modes_Func010A)
 if (Trig_Ready_Modes_Func017C()) then
 EnableTrigger(gg_trg_Gold_Rush_Mode)
 EnableTrigger(gg_trg_Gold_Rush_Bounty)
@@ -8861,9 +8908,10 @@ else
 udg_Integer_GoldRush = GetRandomInt(1, 10)
 if (Trig_Gold_Rush_Mode_Func001Func003C()) then
 GroupAddUnitSimple(GetAttackedUnitBJ(), udg_UnitGroup_GoldRushGrp)
-udg_Point_PntArray[13] = GetUnitLoc(GetAttackedUnitBJ())
+udg_Point_Goldrush = GetUnitLoc(GetAttackedUnitBJ())
 BlzSetUnitMaxHP(GetAttackedUnitBJ(), (BlzGetUnitMaxHP(GetAttackedUnitBJ()) + (BlzGetUnitMaxHP(GetAttackedUnitBJ()) * 2)))
-CreateNUnitsAtLoc(1, FourCC("o00H"), Player(23), udg_Point_PntArray[13], bj_UNIT_FACING)
+CreateNUnitsAtLoc(1, FourCC("o00H"), Player(23), udg_Point_Goldrush, bj_UNIT_FACING)
+            RemoveLocation(udg_Point_Goldrush)
 UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
 UnitAddAbilityBJ(FourCC("A02U"), GetLastCreatedUnit())
 IssueTargetOrderBJ(GetLastCreatedUnit(), "bloodlust", GetAttackedUnitBJ())
@@ -9416,7 +9464,7 @@ end
 
 function Trig_Headhunter_Reward_Actions()
 DisplayTimedTextToForce(GetPlayersAll(), 10.00, ("|c0000ff00A random boss has been defeated, you have been given |cffFDD017" .. (I2S(((50 * udg_Integer_WaveNumber) * udg_Integer_HHSpawnedAmount)) .. " Gold")))
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Headhunter_Reward_Func002A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Headhunter_Reward_Func002A)
 end
 
 function InitTrig_Headhunter_Reward()
@@ -9432,7 +9480,7 @@ AdjustPlayerStateBJ(udg_Integer_IncomeGold, GetEnumPlayer(), PLAYER_STATE_RESOUR
 end
 
 function Trig_Income_Actions()
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Income_Func001002)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Income_Func001002)
 end
 
 function InitTrig_Income()
@@ -9908,7 +9956,7 @@ StopSoundBJ(GetLastPlayedSound(), false)
 udg_Integer_WaveNumber = (udg_Integer_WaveNumber + 1)
 TriggerExecute(gg_trg_Generate_Next_Units)
 if (Trig_Start_Static_Waves_Func007C()) then
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func007Func001A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Start_Static_Waves_Func007Func001A)
 else
 end
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 14, "TRIGSTR_305")
@@ -9922,9 +9970,9 @@ TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update_Copy)
 if (Trig_Start_Static_Waves_Func011Func002C()) then
 udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
 if (Trig_Start_Static_Waves_Func011Func002Func002C()) then
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func011Func002Func002Func002A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Start_Static_Waves_Func011Func002Func002Func002A)
 else
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func011Func002Func002Func001A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Start_Static_Waves_Func011Func002Func002Func001A)
 end
 EnableTrigger(gg_trg_Static_Wave_Spawning_System)
 PlaySoundBJ(gg_snd_Wave_Normal)
@@ -9932,9 +9980,9 @@ else
 EnableTrigger(gg_trg_Timer)
 TriggerSleepAction(udg_Real_SpawnTime)
 if (Trig_Start_Static_Waves_Func011Func002Func007C()) then
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func011Func002Func007Func002A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Start_Static_Waves_Func011Func002Func007Func002A)
 else
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func011Func002Func007Func001A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Start_Static_Waves_Func011Func002Func007Func001A)
 end
 EnableTrigger(gg_trg_Static_Wave_Spawning_System)
 PlaySoundBJ(gg_snd_Wave_Normal)
@@ -9946,9 +9994,9 @@ TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update_Copy)
 if (Trig_Start_Static_Waves_Func013Func002C()) then
 udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
 if (Trig_Start_Static_Waves_Func013Func002Func002C()) then
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func013Func002Func002Func002A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Start_Static_Waves_Func013Func002Func002Func002A)
 else
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func013Func002Func002Func001A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Start_Static_Waves_Func013Func002Func002Func001A)
 end
 EnableTrigger(gg_trg_Static_Wave_Spawning_System)
 PlaySoundBJ(gg_snd_Wave_Air)
@@ -9956,9 +10004,9 @@ else
 EnableTrigger(gg_trg_Timer)
 TriggerSleepAction(udg_Real_SpawnTime)
 if (Trig_Start_Static_Waves_Func013Func002Func007C()) then
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func013Func002Func007Func002A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Start_Static_Waves_Func013Func002Func007Func002A)
 else
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func013Func002Func007Func001A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Start_Static_Waves_Func013Func002Func007Func001A)
 end
 EnableTrigger(gg_trg_Static_Wave_Spawning_System)
 PlaySoundBJ(gg_snd_Wave_Air)
@@ -9970,9 +10018,9 @@ TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update_Copy)
 if (Trig_Start_Static_Waves_Func015Func002C()) then
 udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
 if (Trig_Start_Static_Waves_Func015Func002Func002C()) then
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func015Func002Func002Func002A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Start_Static_Waves_Func015Func002Func002Func002A)
 else
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func015Func002Func002Func001A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Start_Static_Waves_Func015Func002Func002Func001A)
 end
 EnableTrigger(gg_trg_Static_Wave_Spawning_System)
 PlaySoundBJ(gg_snd_Wave_Immune)
@@ -9980,9 +10028,9 @@ else
 EnableTrigger(gg_trg_Timer)
 TriggerSleepAction(udg_Real_SpawnTime)
 if (Trig_Start_Static_Waves_Func015Func002Func007C()) then
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func015Func002Func007Func002A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Start_Static_Waves_Func015Func002Func007Func002A)
 else
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func015Func002Func007Func001A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Start_Static_Waves_Func015Func002Func007Func001A)
 end
 EnableTrigger(gg_trg_Static_Wave_Spawning_System)
 PlaySoundBJ(gg_snd_Wave_Immune)
@@ -9994,9 +10042,9 @@ TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update_Copy)
 udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
 if (Trig_Start_Static_Waves_Func017Func003C()) then
 if (Trig_Start_Static_Waves_Func017Func003Func001C()) then
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func017Func003Func001Func002A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Start_Static_Waves_Func017Func003Func001Func002A)
 else
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func017Func003Func001Func001A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Start_Static_Waves_Func017Func003Func001Func001A)
 end
 EnableTrigger(gg_trg_Static_Wave_Spawning_System)
 PlaySoundBJ(gg_snd_Wave_Hero)
@@ -10004,9 +10052,9 @@ else
 EnableTrigger(gg_trg_Timer)
 TriggerSleepAction(udg_Real_SpawnTime)
 if (Trig_Start_Static_Waves_Func017Func003Func006C()) then
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func017Func003Func006Func002A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Start_Static_Waves_Func017Func003Func006Func002A)
 else
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Static_Waves_Func017Func003Func006Func001A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Start_Static_Waves_Func017Func003Func006Func001A)
 end
 EnableTrigger(gg_trg_Static_Wave_Spawning_System)
 PlaySoundBJ(gg_snd_Wave_Hero)
@@ -10128,7 +10176,7 @@ udg_Integer_SpawnCount = 0
 StopSoundBJ(GetLastPlayedSound(), false)
 udg_Integer_WaveNumber = (udg_Integer_WaveNumber + 1)
 if (Trig_Start_Random_Waves_Func006C()) then
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Random_Waves_Func006Func001A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Start_Random_Waves_Func006Func001A)
 else
 end
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 14, "TRIGSTR_008")
@@ -10136,7 +10184,7 @@ TriggerExecute(gg_trg_Generate_Next_Units)
 TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update_Copy)
 udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
 if (Trig_Start_Random_Waves_Func011C()) then
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Start_Random_Waves_Func011Func001A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Start_Random_Waves_Func011Func001A)
 EnableTrigger(gg_trg_Random_Wave_Spawning_Sys)
 else
 EnableTrigger(gg_trg_Timer)
@@ -11239,7 +11287,7 @@ if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
 udg_Integer_TotalPlayerKills = (udg_Integer_TotalPlayerKills + udg_Integer_Array_Kills[GetForLoopIndexA()])
 bj_forLoopAIndex = bj_forLoopAIndex + 1
 end
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Gold_After_Wave_Func001Func006Func005A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Gold_After_Wave_Func001Func006Func005A)
 else
 end
 else
@@ -11253,7 +11301,7 @@ if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
 udg_Integer_TotalPlayerKills = (udg_Integer_TotalPlayerKills + udg_Integer_Array_Kills[GetForLoopIndexA()])
 bj_forLoopAIndex = bj_forLoopAIndex + 1
 end
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Gold_After_Wave_Func001Func005A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Gold_After_Wave_Func001Func005A)
 end
 end
 
@@ -13060,7 +13108,7 @@ MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 3, (GetConvertedPlayerId(Ge
 end
 
 function Trig_Gold_Update_Actions()
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Gold_Update_Func001A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Gold_Update_Func001A)
 end
 
 function InitTrig_Gold_Update()
@@ -13513,14 +13561,14 @@ EnableTrigger(gg_trg_Game_Setup_Ownership)
 else
 end
 udg_Integer_PlayerLeaveGold = GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD)
-ForceRemovePlayerSimple(GetTriggerPlayer(), udg_PlayerGroup_PlyGrpArray[1])
+ForceRemovePlayerSimple(GetTriggerPlayer(), udg_PlayerGroup_Permanent[1])
 ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), GetTriggerPlayer()), Trig_Player_Leave_Gold_Split_Func004002)
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, (GetConvertedPlayerId(GetTriggerPlayer()) + 1), (udg_String_Array_MultiBoardColours[GetConvertedPlayerId(GetTriggerPlayer())] .. "Left the Game|r"))
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, (GetConvertedPlayerId(GetTriggerPlayer()) + 1), ("|cffFDD017" .. "0"))
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 3, (GetConvertedPlayerId(GetTriggerPlayer()) + 1), ("|cffFDD017" .. "0"))
 udg_Integer_Array_Kills[GetConvertedPlayerId(GetTriggerPlayer())] = 0
 udg_Integer_Players = (udg_Integer_Players - 1)
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Player_Leave_Gold_Split_Func010A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Player_Leave_Gold_Split_Func010A)
 SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD, 0)
 end
 
@@ -13648,7 +13696,7 @@ end
 ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(10)), Trig_Restart_Func016002)
 ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(11)), Trig_Restart_Func017002)
 ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(12)), Trig_Restart_Func018002)
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Restart_Func019A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Restart_Func019A)
 DestroyLeaderboardBJ(GetLastCreatedLeaderboard())
 TriggerExecute(gg_trg_Set_Variables)
 TriggerExecute(gg_trg_Map_Start)
@@ -14606,7 +14654,7 @@ end
 end
 
 function Trig_Autoclear_Trigger_Actions()
-ForForce(udg_PlayerGroup_PlyGrpArray[1], Trig_Autoclear_Trigger_Func001A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Autoclear_Trigger_Func001A)
 end
 
 function InitTrig_Autoclear_Trigger()
@@ -15571,9 +15619,9 @@ end
 
 function Trig_Player_1_Actions()
 if (Trig_Player_1_Func001C()) then
-udg_Point_PntArray[5] = GetUnitLoc(GetTriggerUnit())
-AddSpecialEffectLocBJ(udg_Point_PntArray[5], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
-        RemoveLocation(udg_Point_PntArray[5])
+udg_Point_Array_DestroyTower[1] = GetUnitLoc(GetTriggerUnit())
+AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[1], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
+        RemoveLocation(udg_Point_DestroyTower[1])
 DestroyEffectBJ(GetLastCreatedEffectBJ())
 AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
 DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. " |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
@@ -15610,9 +15658,9 @@ end
 
 function Trig_Player_2_Actions()
 if (Trig_Player_2_Func001C()) then
-udg_Point_PntArray[5] = GetUnitLoc(GetTriggerUnit())
-AddSpecialEffectLocBJ(udg_Point_PntArray[5], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
-        RemoveLocation(udg_Point_PntArray[5])
+udg_Point_Array_DestroyTower[2] = GetUnitLoc(GetTriggerUnit())
+AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[2], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
+        RemoveLocation(udg_Point_DestroyTower[2])
 DestroyEffectBJ(GetLastCreatedEffectBJ())
 AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
 DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s|r |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. "|r |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
@@ -15649,9 +15697,9 @@ end
 
 function Trig_Player_3_Actions()
 if (Trig_Player_3_Func001C()) then
-udg_Point_PntArray[5] = GetUnitLoc(GetTriggerUnit())
-AddSpecialEffectLocBJ(udg_Point_PntArray[5], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
-        RemoveLocation(udg_Point_PntArray[5])
+udg_Point_Array_DestroyTower[3] = GetUnitLoc(GetTriggerUnit())
+AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[3], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
+        RemoveLocation(udg_Point_DestroyTower[3])
 DestroyEffectBJ(GetLastCreatedEffectBJ())
 AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
 DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s|r |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. "|r |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
@@ -15688,9 +15736,9 @@ end
 
 function Trig_Player_4_Actions()
 if (Trig_Player_4_Func001C()) then
-udg_Point_PntArray[5] = GetUnitLoc(GetTriggerUnit())
-AddSpecialEffectLocBJ(udg_Point_PntArray[5], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
-        RemoveLocation(udg_Point_PntArray[5])
+udg_Point_Array_DestroyTower[4] = GetUnitLoc(GetTriggerUnit())
+AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[4], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
+        RemoveLocation(udg_Point_DestroyTower[4])
 DestroyEffectBJ(GetLastCreatedEffectBJ())
 AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
 DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s|r |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. "|r |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
@@ -15727,9 +15775,9 @@ end
 
 function Trig_Player_5_Actions()
 if (Trig_Player_5_Func001C()) then
-udg_Point_PntArray[5] = GetUnitLoc(GetTriggerUnit())
-AddSpecialEffectLocBJ(udg_Point_PntArray[5], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
-        RemoveLocation(udg_Point_PntArray[5])
+udg_Point_Array_DestroyTower[5] = GetUnitLoc(GetTriggerUnit())
+AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[5], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
+        RemoveLocation(udg_Point_DestroyTower[5])
 DestroyEffectBJ(GetLastCreatedEffectBJ())
 AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
 DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s|r |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. "|r |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
@@ -15756,9 +15804,9 @@ end
 
 function Trig_Player_6_Actions()
 if (Trig_Player_6_Func001C()) then
-udg_Point_PntArray[5] = GetUnitLoc(GetTriggerUnit())
-AddSpecialEffectLocBJ(udg_Point_PntArray[5], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
-        RemoveLocation(udg_Point_PntArray[5])
+udg_Point_Array_DestroyTower[6] = GetUnitLoc(GetTriggerUnit())
+AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[6], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
+        RemoveLocation(udg_Point_DestroyTower[6])
 DestroyEffectBJ(GetLastCreatedEffectBJ())
 AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
 DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s|r |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. "|r |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
@@ -15785,9 +15833,9 @@ end
 
 function Trig_Player_7_Actions()
 if (Trig_Player_7_Func001C()) then
-udg_Point_PntArray[5] = GetUnitLoc(GetTriggerUnit())
-AddSpecialEffectLocBJ(udg_Point_PntArray[5], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
-        RemoveLocation(udg_Point_PntArray[5])
+udg_Point_Array_DestroyTower[7] = GetUnitLoc(GetTriggerUnit())
+AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[7], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
+        RemoveLocation(udg_Point_DestroyTower[7])
 DestroyEffectBJ(GetLastCreatedEffectBJ())
 AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
 DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s|r |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. "|r |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
@@ -15814,9 +15862,9 @@ end
 
 function Trig_Player_8_Actions()
 if (Trig_Player_8_Func001C()) then
-udg_Point_PntArray[5] = GetUnitLoc(GetTriggerUnit())
-AddSpecialEffectLocBJ(udg_Point_PntArray[5], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
-        RemoveLocation(udg_Point_PntArray[5])
+udg_Point_Array_DestroyTower[8] = GetUnitLoc(GetTriggerUnit())
+AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[8], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
+        RemoveLocation(udg_Point_DestroyTower[8])
 DestroyEffectBJ(GetLastCreatedEffectBJ())
 AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
 DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s|r |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. "|r |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
@@ -15843,9 +15891,9 @@ end
 
 function Trig_Player_9_Actions()
 if (Trig_Player_9_Func001C()) then
-udg_Point_PntArray[5] = GetUnitLoc(GetTriggerUnit())
-AddSpecialEffectLocBJ(udg_Point_PntArray[5], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
-        RemoveLocation(udg_Point_PntArray[5])
+udg_Point_Array_DestroyTower[9] = GetUnitLoc(GetTriggerUnit())
+AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[9], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
+        RemoveLocation(udg_Point_DestroyTower[9])
 DestroyEffectBJ(GetLastCreatedEffectBJ())
 AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
 DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s|r |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. "|r |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
@@ -15861,27 +15909,42 @@ TriggerAddAction(gg_trg_Player_9, Trig_Player_9_Actions)
 end
 
 function Trig_Iron_Trap_Autocast_Mine_Conditions()
-if (not (GetSpellAbilityId() == FourCC("A00O"))) then
+if (not (GetSpellAbilityId() == FourCC("A04Z"))) then
 return false
 end
 return true
 end
 
-function Trig_Iron_Trap_Autocast_Mine_Func001C()
+function Trig_Iron_Trap_Autocast_Mine_Func004C()
 if (not (CountUnitsInGroup(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), FourCC("n002"))) >= 5)) then
 return false
 end
 return true
 end
 
+function Trig_Iron_Trap_Autocast_Mine_Func005C()
+if (not (udg_Integer_Array_GoblinBotChance[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] <= (5 + udg_Integer_TotalIronTrapsBuilt))) then
+return false
+end
+return true
+end
+
 function Trig_Iron_Trap_Autocast_Mine_Actions()
-if (Trig_Iron_Trap_Autocast_Mine_Func001C()) then
+DisplayTextToForce(GetPlayersAll(), R2S(GetUnitStateSwap(UNIT_STATE_LIFE, GetSpellAbilityUnit())))
+udg_Integer_Array_GoblinBotChance[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = GetRandomInt(1, 100)
+udg_Point_Array_IronTrap[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = GetUnitLoc(GetTriggerUnit())
+if (Trig_Iron_Trap_Autocast_Mine_Func004C()) then
 else
-udg_Point_PntArray[14] = GetUnitLoc(GetTriggerUnit())
-CreateNUnitsAtLoc(1, FourCC("n002"), GetOwningPlayer(GetTriggerUnit()), OffsetLocation(udg_Point_PntArray[14], GetRandomReal(-250.00, 250.00), GetRandomReal(-250.00, 250.00)), bj_UNIT_FACING)
+CreateNUnitsAtLoc(1, FourCC("n002"), GetOwningPlayer(GetTriggerUnit()), OffsetLocation(udg_Point_Array_IronTrap[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))], GetRandomReal(-250.00, 250.00), GetRandomReal(-250.00, 250.00)), GetRandomDirectionDeg())
 SetUnitAbilityLevelSwapped(FourCC("A00C"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A00O"), GetTriggerUnit()))
 end
-    RemoveLocation(udg_Point_PntArray[14])
+if (Trig_Iron_Trap_Autocast_Mine_Func005C()) then
+CreateNUnitsAtLoc(1, FourCC("n024"), GetOwningPlayer(GetTriggerUnit()), OffsetLocation(udg_Point_Array_IronTrap[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))], GetRandomReal(-250.00, 250.00), GetRandomReal(-250.00, 250.00)), GetRandomDirectionDeg())
+BlzSetUnitBaseDamage(GetLastCreatedUnit(), (1500 * GetUnitAbilityLevelSwapped(FourCC("A04Z"), GetSpellAbilityUnit())), 0)
+SetUnitAbilityLevelSwapped(FourCC("A00C"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A00O"), GetTriggerUnit()))
+else
+end
+    RemoveLocation(udg_Point_Array_IronTrap[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))])
 end
 
 function InitTrig_Iron_Trap_Autocast_Mine()
@@ -16065,7 +16128,7 @@ return true
 end
 
 function Trig_Iron_Trap_Func002Func005C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A00O"), GetTriggerUnit()) >= 10)) then
+if (not (GetUnitAbilityLevelSwapped(FourCC("A04Z"), GetTriggerUnit()) >= 10)) then
 return false
 end
 return true
@@ -16079,13 +16142,13 @@ return true
 end
 
 function Trig_Iron_Trap_Actions()
-SetUnitUserData(GetTriggerUnit(), udg_Integer_Array_TrapGoldCost[GetUnitAbilityLevelSwapped(FourCC("A00O"), GetTriggerUnit())])
+SetUnitUserData(GetTriggerUnit(), udg_Integer_Array_TrapGoldCost[GetUnitAbilityLevelSwapped(FourCC("A04Z"), GetTriggerUnit())])
 if (Trig_Iron_Trap_Func002C()) then
 CreateTextTagUnitBJ(("You Need " .. (I2S(GetUnitUserData(GetTriggerUnit())) .. " To Upgrade")), GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
 else
 CreateTextTagUnitBJ("TRIGSTR_123", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
-IncUnitAbilityLevelSwapped(FourCC("A00O"), GetTriggerUnit())
-BlzSetUnitName(GetTriggerUnit(), ("Iron Trap " .. I2S(GetUnitAbilityLevelSwapped(FourCC("A00O"), GetTriggerUnit()))))
+IncUnitAbilityLevelSwapped(FourCC("A04Z"), GetTriggerUnit())
+BlzSetUnitName(GetTriggerUnit(), ("Iron Trap " .. I2S(GetUnitAbilityLevelSwapped(FourCC("A04Z"), GetTriggerUnit()))))
 SetPlayerStateBJ(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD, (GetPlayerState(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD) - GetUnitUserData(GetTriggerUnit())))
 if (Trig_Iron_Trap_Func002Func005C()) then
 UnitRemoveAbilityBJ(FourCC("A023"), GetTriggerUnit())
