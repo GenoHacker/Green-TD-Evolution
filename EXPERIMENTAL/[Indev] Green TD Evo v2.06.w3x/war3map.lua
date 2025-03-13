@@ -2396,7 +2396,7 @@ u = BlzCreateUnitWithSkin(p, FourCC("nrac"), -8654.4, 4842.9, 26.643, FourCC("nr
 u = BlzCreateUnitWithSkin(p, FourCC("nrac"), -8925.7, 5913.0, 27.807, FourCC("nrac"))
 u = BlzCreateUnitWithSkin(p, FourCC("nrac"), -8742.9, 7495.8, 107.483, FourCC("nrac"))
 u = BlzCreateUnitWithSkin(p, FourCC("npng"), -8891.6, 3654.3, 151.133, FourCC("npng"))
-gg_unit_n018_0091 = BlzCreateUnitWithSkin(p, FourCC("n018"), 5377.8, -2977.3, 179.062, FourCC("n018"))
+gg_unit_n018_0091 = BlzCreateUnitWithSkin(p, FourCC("n018"), 5452.4, -2981.0, 179.062, FourCC("n018"))
 u = BlzCreateUnitWithSkin(p, FourCC("nder"), -7442.9, -6286.3, 84.982, FourCC("nder"))
 u = BlzCreateUnitWithSkin(p, FourCC("nder"), -6318.3, -6790.2, 37.970, FourCC("nder"))
 u = BlzCreateUnitWithSkin(p, FourCC("nder"), -6793.3, -6849.6, 31.949, FourCC("nder"))
@@ -3139,7 +3139,7 @@ bj_forLoopAIndex = 1
 bj_forLoopAIndexEnd = 24
 while (true) do
 if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
-CreateNUnitsAtLoc(1, FourCC("u000"), GetOwningPlayer(udg_DamageEventSource), PolarProjectionBJ(GetUnitLoc(udg_DamageEventSource), 450.00, (I2R(GetForLoopIndexA()) * (360.00 / 36.00))), bj_UNIT_FACING)
+CreateNUnitsAtLoc(1, FourCC("u000"), GetOwningPlayer(udg_DamageEventSource), PolarProjectionBJ(GetUnitLoc(udg_DamageEventSource), 450.00, (I2R(GetForLoopIndexA()) * (360.00 / 24.00))), bj_UNIT_FACING)
 UnitApplyTimedLifeBJ(15.00, FourCC("BTLF"), GetLastCreatedUnit())
 bj_forLoopAIndex = bj_forLoopAIndex + 1
 end
