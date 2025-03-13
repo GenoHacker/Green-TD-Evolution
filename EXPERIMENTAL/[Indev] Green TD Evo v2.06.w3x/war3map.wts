@@ -1153,11 +1153,6 @@ STRING 154
 Food Bonus
 }
 
-STRING 155
-{
-[Divine Creeps]
-}
-
 STRING 156
 // Units: h016 (Fel Tower 5: Warlock), Name (Name)
 {
@@ -2724,11 +2719,6 @@ STRING 407
 [Light] Dark Troll High Priest
 }
 
-STRING 408
-{
-[Normal Creeps]
-}
-
 STRING 409
 // Units: ndtw ([Light] Dark Troll Warlord), Name (Name)
 {
@@ -3375,11 +3365,6 @@ STRING 516
 // Units: nfrb ([Medium] Furbolg Tracker), Name (Name)
 {
 [Medium] Furbolg Tracker
-}
-
-STRING 517
-{
-[Normal Creeps]
 }
 
 STRING 518
@@ -4306,6 +4291,12 @@ STRING 670
 Bouncing Tower 9: Shadow Wolf
 }
 
+STRING 671
+// Abilities: A03P (Winter Spirits), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Gains up to 5 + [50% of Wave Number] mana for each enemy unit hit when attacking, at full mana the tower summons a ring of Winter Spirits, the spirits have a frost attack and deal damage based on the targets current movement speed, slower movement speed equals more damage.
+}
+
 STRING 672
 // Units: n00B (Air Tower 2: Faerie Dragon), Tip (Tooltip - Basic)
 {
@@ -4980,610 +4971,10 @@ STRING 773
 Attribute Bonus - [|cffffcc00Level 5|r]
 }
 
-STRING 774
-{
-[Normal Creeps]
-}
-
-STRING 775
-{
-[Normal Creeps]
-}
-
-STRING 776
-{
-[Normal Creeps]
-}
-
-STRING 777
-{
-[Normal Creeps]
-}
-
-STRING 778
-{
-[Normal Creeps]
-}
-
-STRING 779
-{
-[Divine Creeps]
-}
-
-STRING 780
-{
-[Divine Creeps]
-}
-
-STRING 781
-{
-[Normal Creeps]
-}
-
-STRING 782
-{
-[Normal Creeps]
-}
-
-STRING 783
-{
-[Air Creeps]
-}
-
-STRING 784
-{
-[Air Creeps]
-}
-
-STRING 785
-{
-[Normal Creeps]
-}
-
-STRING 786
-{
-[Normal Creeps]
-}
-
-STRING 787
-{
-[Air Creeps]
-}
-
-STRING 788
-{
-[Air Creeps]
-}
-
 STRING 789
 // Abilities: A03I (Attribute Bonus), Ubertip (Tooltip - Normal - Extended)
 {
 Gives a total of 2 points to Intelligence
-}
-
-STRING 790
-{
-[Divine Creeps]
-}
-
-STRING 791
-{
-[Normal Creeps]
-}
-
-STRING 792
-{
-[Normal Creeps]
-}
-
-STRING 793
-{
-[Boss Creeps]
-}
-
-STRING 794
-{
-[Boss Creeps]
-}
-
-STRING 795
-{
-[Normal Creeps]
-}
-
-STRING 796
-{
-[Normal Creeps]
-}
-
-STRING 797
-{
-[Normal Creeps]
-}
-
-STRING 798
-{
-[Normal Creeps]
-}
-
-STRING 799
-{
-[Divine Creeps]
-}
-
-STRING 800
-{
-[Divine Creeps]
-}
-
-STRING 801
-{
-[Normal Creeps]
-}
-
-STRING 802
-{
-[Normal Creeps]
-}
-
-STRING 803
-{
-[Air Creeps]
-}
-
-STRING 804
-{
-[Air Creeps]
-}
-
-STRING 805
-{
-[Normal Creeps]
-}
-
-STRING 806
-{
-[Normal Creeps]
-}
-
-STRING 807
-{
-[Normal Creeps]
-}
-
-STRING 808
-{
-[Normal Creeps]
-}
-
-STRING 809
-{
-[Divine Creeps]
-}
-
-STRING 810
-{
-[Divine Creeps]
-}
-
-STRING 811
-{
-[Air Creeps]
-}
-
-STRING 812
-{
-[Air Creeps]
-}
-
-STRING 813
-{
-[Normal Creeps]
-}
-
-STRING 814
-{
-[Normal Creeps]
-}
-
-STRING 815
-{
-[Normal Creeps]
-}
-
-STRING 816
-{
-[Normal Creeps]
-}
-
-STRING 817
-{
-[Boss Creeps]
-}
-
-STRING 818
-{
-[Boss Creeps]
-}
-
-STRING 819
-{
-[Divine Creeps]
-}
-
-STRING 820
-{
-[Divine Creeps]
-}
-
-STRING 821
-{
-[Normal Creeps]
-}
-
-STRING 822
-{
-[Normal Creeps]
-}
-
-STRING 823
-{
-[Air Creeps]
-}
-
-STRING 824
-{
-[Air Creeps]
-}
-
-STRING 825
-{
-[Normal Creeps]
-}
-
-STRING 826
-{
-[Normal Creeps]
-}
-
-STRING 827
-{
-[Normal Creeps]
-}
-
-STRING 828
-{
-[Normal Creeps]
-}
-
-STRING 829
-{
-[Divine Creeps]
-}
-
-STRING 830
-{
-[Divine Creeps]
-}
-
-STRING 831
-{
-[Normal Creeps]
-}
-
-STRING 832
-{
-[Normal Creeps]
-}
-
-STRING 833
-{
-[Normal Creeps]
-}
-
-STRING 834
-{
-[Normal Creeps]
-}
-
-STRING 835
-{
-[Air Creeps]
-}
-
-STRING 836
-{
-[Air Creeps]
-}
-
-STRING 837
-{
-[Normal Creeps]
-}
-
-STRING 838
-{
-[Normal Creeps]
-}
-
-STRING 839
-{
-[Divine Creeps]
-}
-
-STRING 840
-{
-[Divine Creeps]
-}
-
-STRING 841
-{
-[Boss Creeps]
-}
-
-STRING 842
-{
-[Boss Creeps]
-}
-
-STRING 843
-{
-[Normal Creeps]
-}
-
-STRING 844
-{
-[Normal Creeps]
-}
-
-STRING 845
-{
-[Air Creeps]
-}
-
-STRING 846
-{
-[Air Creeps]
-}
-
-STRING 847
-{
-[Hero Creeps]
-}
-
-STRING 848
-{
-[Hero Creeps]
-}
-
-STRING 849
-{
-[Divine Creeps]
-}
-
-STRING 850
-{
-[Divine Creeps]
-}
-
-STRING 851
-{
-[Hero Creeps]
-}
-
-STRING 852
-{
-[Hero Creeps]
-}
-
-STRING 853
-{
-[Hero Creeps]
-}
-
-STRING 854
-{
-[Hero Creeps]
-}
-
-STRING 855
-{
-[Hero Creeps]
-}
-
-STRING 856
-{
-[Hero Creeps]
-}
-
-STRING 857
-{
-[Hero Creeps]
-}
-
-STRING 858
-{
-[Hero Creeps]
-}
-
-STRING 859
-{
-[Divine Creeps]
-}
-
-STRING 860
-{
-[Divine Creeps]
-}
-
-STRING 861
-{
-[Hero Creeps]
-}
-
-STRING 862
-{
-[Hero Creeps]
-}
-
-STRING 863
-{
-[Hero Creeps]
-}
-
-STRING 864
-{
-[Hero Creeps]
-}
-
-STRING 865
-{
-[Boss Creeps]
-}
-
-STRING 866
-{
-[Boss Creeps]
-}
-
-STRING 867
-{
-[Hero Creeps]
-}
-
-STRING 868
-{
-[Hero Creeps]
-}
-
-STRING 869
-{
-[Divine Creeps]
-}
-
-STRING 870
-{
-[Divine Creeps]
-}
-
-STRING 871
-{
-[Hero Creeps]
-}
-
-STRING 872
-{
-[Hero Creeps]
-}
-
-STRING 873
-{
-[Hero Creeps]
-}
-
-STRING 874
-{
-[Hero Creeps]
-}
-
-STRING 875
-{
-[Air Creeps]
-}
-
-STRING 876
-{
-[Air Creeps]
-}
-
-STRING 877
-{
-[Hero Creeps]
-}
-
-STRING 878
-{
-[Hero Creeps]
-}
-
-STRING 879
-{
-[Divine Creeps]
-}
-
-STRING 880
-{
-[Divine Creeps]
-}
-
-STRING 881
-{
-[Hero Creeps]
-}
-
-STRING 882
-{
-[Hero Creeps]
-}
-
-STRING 883
-{
-[Normal Creeps]
-}
-
-STRING 884
-{
-[Normal Creeps]
-}
-
-STRING 885
-{
-[Normal Creeps]
-}
-
-STRING 886
-{
-[Normal Creeps]
-}
-
-STRING 887
-{
-[Normal Creeps]
-}
-
-STRING 888
-{
-[Normal Creeps]
-}
-
-STRING 889
-{
-[Divine Creeps]
-}
-
-STRING 890
-{
-[Divine Creeps]
-}
-
-STRING 891
-{
-[Endless Creeps]
-}
-
-STRING 892
-{
-[None]
-}
-
-STRING 893
-{
-[Endless Creeps]
-}
-
-STRING 894
-{
-[Endless Creeps]
 }
 
 STRING 895
@@ -19941,12 +19332,6 @@ STRING 3001
 |c0077ff77Siege Damage|r |c0000ff00deals |c0077ff77200% |c0000ff00|c0000ff00to Air Units.
 }
 
-STRING 3002
-// Abilities: A03P (Winter Spirits), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Gains up to 10 + [Wave Number] mana for each enemy unit hit when attacking, at full mana the tower summons a ring of Winter Spirits, these slow units they attack and deal damage based on the targets current movement speed, slower movement speed equals more damage.
-}
-
 STRING 3003
 // Units: n00U (Frost Tower 6: Frosty Elemental), Name (Name)
 {
@@ -22510,7 +21895,7 @@ Has a chance create a Clockwerk Goblin that explodes after attacking 3 times. Do
 }
 
 STRING 3384
-// Abilities: A00C (Kaboom!), EditorSuffix (Editor Suffix)
+// Abilities: A056 (Mine Damage), EditorSuffix (Editor Suffix)
 {
 [Iron Trap]
 }
@@ -26394,7 +25779,7 @@ STRING 9130
 }
 
 STRING 9135
-// Abilities: A056 (Mine Damage), EditorSuffix (Editor Suffix)
+// Abilities: A053 (Minelayer), EditorSuffix (Editor Suffix)
 {
 [Iron Trap]
 }
@@ -26496,7 +25881,7 @@ STRING 9451
 }
 
 STRING 9461
-// Abilities: A053 (Minelayer), EditorSuffix (Editor Suffix)
+// Abilities: A00C (Kaboom!), EditorSuffix (Editor Suffix)
 {
 [Iron Trap]
 }

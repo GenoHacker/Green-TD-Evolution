@@ -590,7 +590,6 @@ gg_trg_Gold_Update = nil
 gg_trg_Wave_and_Lives_Update = nil
 gg_trg_Player_Update_Game_Start = nil
 gg_trg_Next_Wave_and_Current_Wave_Update = nil
-gg_trg_Next_Wave_and_Current_Wave_Update_Copy = nil
 gg_trg_Player_Leave_Gold_Split = nil
 gg_trg_Test_Trigger = nil
 gg_trg_Restart = nil
@@ -639,6 +638,7 @@ gg_trg_Player_7 = nil
 gg_trg_Player_8 = nil
 gg_trg_Player_9 = nil
 gg_trg_Iron_Trap_Autocast_Mine = nil
+gg_trg_Iron_Trap_Clockwerk_Kaboom = nil
 gg_trg_Fire_Trap = nil
 gg_trg_Frost_Trap = nil
 gg_trg_Darkness_Trap = nil
@@ -661,7 +661,6 @@ gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
-gg_trg_Iron_Trap_Clockwerk_Kaboom = nil
 function InitGlobals()
 local i = 0
 
@@ -3134,14 +3133,14 @@ end
 
 function Trig_Spirit_Tower_Actions()
 if (Trig_Spirit_Tower_Func001C()) then
-SetUnitManaBJ(udg_DamageEventSource, (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + GetRandomReal(1.00, (10.00 + I2R(udg_Integer_WaveNumber)))))
+SetUnitManaBJ(udg_DamageEventSource, (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + GetRandomReal(1.00, (5.00 + I2R((udg_Integer_WaveNumber // 50))))))
 if (Trig_Spirit_Tower_Func001Func003C()) then
 bj_forLoopAIndex = 1
-bj_forLoopAIndexEnd = 36
+bj_forLoopAIndexEnd = 24
 while (true) do
 if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
-CreateNUnitsAtLoc(1, FourCC("u000"), GetOwningPlayer(udg_DamageEventSource), PolarProjectionBJ(GetUnitLoc(udg_DamageEventSource), 600.00, (I2R(GetForLoopIndexA()) * (360.00 / 36.00))), bj_UNIT_FACING)
-UnitApplyTimedLifeBJ(30.00, FourCC("BTLF"), GetLastCreatedUnit())
+CreateNUnitsAtLoc(1, FourCC("u000"), GetOwningPlayer(udg_DamageEventSource), PolarProjectionBJ(GetUnitLoc(udg_DamageEventSource), 450.00, (I2R(GetForLoopIndexA()) * (360.00 / 36.00))), bj_UNIT_FACING)
+UnitApplyTimedLifeBJ(15.00, FourCC("BTLF"), GetLastCreatedUnit())
 bj_forLoopAIndex = bj_forLoopAIndex + 1
 end
 SetUnitManaBJ(udg_DamageEventSource, 0)
@@ -3950,10 +3949,10 @@ udg_Region_Array_RandomWaves[2] = gg_rct_Next_Wave_2
 udg_Region_Array_RandomWaves[3] = gg_rct_Next_Wave_3
 udg_Region_Array_RandomWaves[4] = gg_rct_Next_Wave_4
 udg_String_JackpotWinner = "Nobody"
-udg_String_Array_WaveType[1] = "Air/Fortified"
+udg_String_Array_WaveType[1] = "Fortified/Air"
 udg_String_Array_WaveType[2] = "Hero"
 udg_String_Array_WaveType[3] = "Divine/Immune"
-udg_String_Array_WaveType[4] = "Ground/Fortified"
+udg_String_Array_WaveType[4] = "Fortified/Ground"
 udg_String_Array_WaveType[5] = "Heavy"
 udg_String_Array_WaveType[6] = "Light"
 udg_String_Array_WaveType[7] = "Medium"
@@ -9978,7 +9977,7 @@ udg_String_Array_ChaosMultiplier[1] = R2S(udg_Real_CreepHealthMultiplier)
 else
 end
 if (Trig_Start_Static_Waves_Func011C()) then
-TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update_Copy)
+TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update)
 if (Trig_Start_Static_Waves_Func011Func002C()) then
 udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
 if (Trig_Start_Static_Waves_Func011Func002Func002C()) then
@@ -10002,7 +10001,7 @@ end
 else
 end
 if (Trig_Start_Static_Waves_Func013C()) then
-TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update_Copy)
+TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update)
 if (Trig_Start_Static_Waves_Func013Func002C()) then
 udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
 if (Trig_Start_Static_Waves_Func013Func002Func002C()) then
@@ -10026,7 +10025,7 @@ end
 else
 end
 if (Trig_Start_Static_Waves_Func015C()) then
-TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update_Copy)
+TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update)
 if (Trig_Start_Static_Waves_Func015Func002C()) then
 udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
 if (Trig_Start_Static_Waves_Func015Func002Func002C()) then
@@ -10050,7 +10049,7 @@ end
 else
 end
 if (Trig_Start_Static_Waves_Func017C()) then
-TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update_Copy)
+TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update)
 udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
 if (Trig_Start_Static_Waves_Func017Func003C()) then
 if (Trig_Start_Static_Waves_Func017Func003Func001C()) then
@@ -10075,7 +10074,7 @@ else
 end
 if (Trig_Start_Static_Waves_Func019C()) then
 udg_Integer_SpawnMax = 1
-TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update_Copy)
+TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update)
 udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
 if (Trig_Start_Static_Waves_Func019Func004C()) then
 EnableTrigger(gg_trg_Static_Wave_Spawning_System)
@@ -10091,7 +10090,7 @@ end
 if (Trig_Start_Static_Waves_Func021C()) then
 udg_Real_Array_Handicap[0] = (udg_Real_Array_Handicap[0] + 0.20)
 udg_Real_CreepHealthMultiplier = (udg_Real_CreepHealthMultiplier + udg_Real_Array_Handicap[0])
-TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update_Copy)
+TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update)
 udg_UnitType_Array_UnitsTypes[udg_Integer_WaveNumber] = udg_UnitType_Array_EndWaveArmor[GetRandomInt(1, 6)]
 udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
 if (Trig_Start_Static_Waves_Func021Func006C()) then
@@ -10108,7 +10107,7 @@ end
 else
 end
 if (Trig_Start_Static_Waves_Func023C()) then
-TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update_Copy)
+TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update)
 udg_Integer_Array_WaveTimer[1] = 60
 EnableTrigger(gg_trg_Timer)
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 14, "TRIGSTR_306")
@@ -10135,19 +10134,19 @@ end
 return true
 end
 
-function Trig_Start_Random_Waves_Func011Func001A()
-DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], ("|c0000ff00Current Wave: |c0077ff77" .. (I2S(udg_Integer_WaveNumber) .. (" - |c0000ff00Wave Type: |c0077ff77" .. (udg_String_Array_WaveType[udg_Integer_Array_RWUnitType[udg_Integer_WaveNumber]] .. (" - |c0000ff00Spawn Count: |c0077ff77" .. (I2S(udg_Integer_Array_WaveSpawnMax[udg_Integer_WaveNumber]) .. (" - |c0000ff00Bounty: |c0077ff77" .. I2S(udg_Integer_Array_RWBounty[udg_Integer_WaveNumber])))))))))
-DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], ("|c0000ff00Next Wave: |c0077ff77" .. (I2S((udg_Integer_WaveNumber + 1)) .. (" - |c0000ff00Wave Type: |c0077ff77" .. (udg_String_Array_WaveType[udg_Integer_Array_RWUnitType[(udg_Integer_WaveNumber + 1)]] .. (" - |c0000ff00Spawn Count: |c0077ff77" .. (I2S(udg_Integer_Array_WaveSpawnMax[(udg_Integer_WaveNumber + 1)]) .. (" - |c0000ff00Bounty: |c0077ff77" .. I2S(udg_Integer_Array_RWBounty[(udg_Integer_WaveNumber + 1)])))))))))
+function Trig_Start_Random_Waves_Func011A()
+DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], ("|c0000ff00Current Wave: |c0077ff77" .. (I2S(udg_Integer_WaveNumber) .. (" - |c0000ff00Wave Type: |c0077ff77" .. (udg_String_Array_WaveType[udg_Integer_WaveNumber] .. (" - |c0000ff00Spawn Count: |c0077ff77" .. (I2S(udg_Integer_Array_WaveSpawnMax[udg_Integer_WaveNumber]) .. (" - |c0000ff00Bounty: |c0077ff77" .. I2S(udg_Integer_Array_RWBounty[udg_Integer_WaveNumber])))))))))
+DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], ("|c0000ff00Next Wave: |c0077ff77" .. (I2S((udg_Integer_WaveNumber + 1)) .. (" - |c0000ff00Wave Type: |c0077ff77" .. (udg_String_Array_WaveType[(udg_Integer_WaveNumber + 1)] .. (" - |c0000ff00Spawn Count: |c0077ff77" .. (I2S(udg_Integer_Array_WaveSpawnMax[(udg_Integer_WaveNumber + 1)]) .. (" - |c0000ff00Bounty: |c0077ff77" .. I2S(udg_Integer_Array_RWBounty[(udg_Integer_WaveNumber + 1)])))))))))
 end
 
-function Trig_Start_Random_Waves_Func011C()
+function Trig_Start_Random_Waves_Func012C()
 if (not (udg_Integer_BlitzMode == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Start_Random_Waves_Func012Func001Func007C()
+function Trig_Start_Random_Waves_Func013Func001Func007C()
 if (not (udg_Integer_WaveNumber >= 301)) then
 return false
 end
@@ -10157,14 +10156,14 @@ end
 return true
 end
 
-function Trig_Start_Random_Waves_Func012Func001C()
-if (not Trig_Start_Random_Waves_Func012Func001Func007C()) then
+function Trig_Start_Random_Waves_Func013Func001C()
+if (not Trig_Start_Random_Waves_Func013Func001Func007C()) then
 return false
 end
 return true
 end
 
-function Trig_Start_Random_Waves_Func012Func008C()
+function Trig_Start_Random_Waves_Func013Func008C()
 if (not (udg_Integer_WaveNumber >= 61)) then
 return false
 end
@@ -10174,8 +10173,8 @@ end
 return true
 end
 
-function Trig_Start_Random_Waves_Func012C()
-if (not Trig_Start_Random_Waves_Func012Func008C()) then
+function Trig_Start_Random_Waves_Func013C()
+if (not Trig_Start_Random_Waves_Func013Func008C()) then
 return false
 end
 return true
@@ -10193,17 +10192,17 @@ else
 end
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 14, "TRIGSTR_008")
 TriggerExecute(gg_trg_Generate_Next_Units)
-TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update_Copy)
+TriggerExecute(gg_trg_Next_Wave_and_Current_Wave_Update)
 udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
-if (Trig_Start_Random_Waves_Func011C()) then
-ForForce(udg_PlayerGroup_Permanent[1], Trig_Start_Random_Waves_Func011Func001A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Start_Random_Waves_Func011A)
+if (Trig_Start_Random_Waves_Func012C()) then
 EnableTrigger(gg_trg_Random_Wave_Spawning_Sys)
 else
 EnableTrigger(gg_trg_Timer)
 TriggerSleepAction(udg_Real_SpawnTime)
 EnableTrigger(gg_trg_Random_Wave_Spawning_Sys)
 end
-if (Trig_Start_Random_Waves_Func012C()) then
+if (Trig_Start_Random_Waves_Func013C()) then
 udg_Integer_Array_WaveTimer[1] = 60
 EnableTrigger(gg_trg_Timer)
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 14, "TRIGSTR_307")
@@ -10211,7 +10210,7 @@ DisplayTimedTextToForce(GetPlayersAll(), 60.00, "TRIGSTR_370")
 TriggerSleepAction(60.00)
 TriggerExecute(gg_trg_WinGame)
 else
-if (Trig_Start_Random_Waves_Func012Func001C()) then
+if (Trig_Start_Random_Waves_Func013Func001C()) then
 udg_Integer_Array_WaveTimer[1] = 60
 EnableTrigger(gg_trg_Timer)
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 14, "TRIGSTR_2410")
@@ -11097,12 +11096,12 @@ end
 if (Trig_Generate_Random_Waves_Func001Func002C()) then
 udg_String_RWBossWaveText = (udg_String_RWBossWaveText .. (I2S(GetForLoopIndexA()) .. ","))
 udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()] = GetRandomInt(1, 4)
-udg_Real_Array_RandomWaveBounty[GetForLoopIndexA()] = (((I2R(GetForLoopIndexA()) + (15.00 + I2R(udg_Integer_WaveNumber))) * udg_Real_CreepHealthMultiplier) * 20.00)
+udg_Real_Array_RandomWaveBounty[GetForLoopIndexA()] = (((I2R(GetForLoopIndexA()) + (25.00 + I2R(udg_Integer_WaveNumber))) * udg_Real_CreepHealthMultiplier) * 40.00)
 udg_Integer_Array_RWBounty[GetForLoopIndexA()] = R2I(udg_Real_Array_RandomWaveBounty[GetForLoopIndexA()])
 udg_String_Array_MBWaveModifier[GetForLoopIndexA()] = " + Boss"
 else
 udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()] = GetRandomInt(10, 30)
-udg_Real_Array_RandomWaveBounty[GetForLoopIndexA()] = (((I2R(GetForLoopIndexA()) + 20.00) * udg_Real_CreepHealthMultiplier) * 10.00)
+udg_Real_Array_RandomWaveBounty[GetForLoopIndexA()] = (((I2R(GetForLoopIndexA()) + 15.00) * udg_Real_CreepHealthMultiplier) * 7.00)
 udg_Integer_Array_RWBounty[GetForLoopIndexA()] = R2I(udg_Real_Array_RandomWaveBounty[GetForLoopIndexA()])
 if (Trig_Generate_Random_Waves_Func001Func002Func010C()) then
 udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()] = (udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()] * 2)
@@ -11111,14 +11110,14 @@ else
 end
 end
 udg_Real_CreepHealth = (udg_Real_CreepHealth + (75.00 * I2R(GetForLoopIndexA())))
-udg_Real_CreepHealthTotal = (udg_Real_CreepHealth * 15.00)
+udg_Real_CreepHealthTotal = (udg_Real_CreepHealth * 10.00)
 if (Trig_Generate_Random_Waves_Func001Func005C()) then
 udg_Real_Array_HPMultiplierWaves[GetForLoopIndexA()] = GetRandomReal(udg_Real_Array_ChaosHealthPerLow[udg_Integer_ChaosMode], udg_Real_Array_ChaosHealthPerHigh[udg_Integer_ChaosMode])
 udg_Real_CreepHealthTotal = (udg_Real_CreepHealthTotal * udg_Real_Array_HPMultiplierWaves[GetForLoopIndexA()])
 else
 udg_Real_CreepHealthTotal = (udg_Real_CreepHealthTotal * udg_Real_CreepHealthMultiplier)
 end
-udg_Real_Array_RWArmour[GetForLoopIndexA()] = (udg_Real_Array_RWArmour[(GetForLoopIndexA() - 1)] + I2R(GetForLoopIndexA()))
+udg_Real_Array_RWArmour[GetForLoopIndexA()] = (udg_Real_Array_RWArmour[(GetForLoopIndexA() - 1)] + I2R((GetForLoopIndexA() // 3)))
 udg_Real_Array_RWArmourTotal[GetForLoopIndexA()] = (udg_Real_Array_RWArmour[GetForLoopIndexA()] / I2R(udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()]))
 udg_Real_Array_CreepHealthWaves[GetForLoopIndexA()] = (udg_Real_CreepHealthTotal / I2R(udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()]))
 udg_Integer_Array_RWUnitType[GetForLoopIndexA()] = GetRandomInt(1, 7)
@@ -13172,14 +13171,14 @@ gg_trg_Player_Update_Game_Start = CreateTrigger()
 TriggerAddAction(gg_trg_Player_Update_Game_Start, Trig_Player_Update_Game_Start_Actions)
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func006Func001C()
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func006Func001C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 0)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func006Func005C()
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func006Func005C()
 if (udg_Integer_WaveNumber == 12) then
 return true
 end
@@ -13195,24 +13194,24 @@ end
 return false
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func006C()
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func006C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 0)) then
 return false
 end
-if (not Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func006Func005C()) then
+if (not Trig_Next_Wave_and_Current_Wave_Update_Func001Func006Func005C()) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func007Func001C()
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func007Func001C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 0)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func007Func003C()
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func007Func003C()
 if (udg_Integer_WaveNumber == 11) then
 return true
 end
@@ -13228,52 +13227,52 @@ end
 return false
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func007C()
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func007C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 0)) then
 return false
 end
-if (not Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func007Func003C()) then
+if (not Trig_Next_Wave_and_Current_Wave_Update_Func001Func007Func003C()) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func011C()
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func011C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func012C()
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func012C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func016C()
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func016C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 2)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func017C()
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func017C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 2)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func021Func001C()
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func021Func001C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 3)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func021Func003C()
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func021Func003C()
 if (udg_Integer_WaveNumber == 7) then
 return true
 end
@@ -13301,24 +13300,24 @@ end
 return false
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func021C()
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func021C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 3)) then
 return false
 end
-if (not Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func021Func003C()) then
+if (not Trig_Next_Wave_and_Current_Wave_Update_Func001Func021Func003C()) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func022Func001C()
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func022Func001C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 3)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func022Func003C()
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func022Func003C()
 if (udg_Integer_WaveNumber == 6) then
 return true
 end
@@ -13346,45 +13345,45 @@ end
 return false
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func022C()
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func022C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 3)) then
 return false
 end
-if (not Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func022Func003C()) then
+if (not Trig_Next_Wave_and_Current_Wave_Update_Func001Func022Func003C()) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func026C()
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func026C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 5)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func027C()
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func027C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 5)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func037C()
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func037C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 6)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func038C()
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func038C()
 if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 6)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func042Func001Func001C()
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func042Func001Func001C()
 if (not (udg_Integer_EndlessMode == 1)) then
 return false
 end
@@ -13394,7 +13393,7 @@ end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func042Func001C()
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func042Func001C()
 if (not (udg_Integer_EndlessMode == 1)) then
 return false
 end
@@ -13404,7 +13403,7 @@ end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func042C()
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func042C()
 if (not (udg_Integer_EndlessMode == 0)) then
 return false
 end
@@ -13414,107 +13413,107 @@ end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001C()
+function Trig_Next_Wave_and_Current_Wave_Update_Func001C()
 if (not (udg_Integer_RWActivated == 0)) then
 return false
 end
 return true
 end
 
-function Trig_Next_Wave_and_Current_Wave_Update_Copy_Actions()
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001C()) then
+function Trig_Next_Wave_and_Current_Wave_Update_Actions()
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001C()) then
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, udg_String_Array_MBStatWavUniIcons[udg_Integer_WaveNumber])
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, udg_String_Array_MBStatWavUniIcons[(udg_Integer_WaveNumber + 1)])
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func006C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func006C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Light" .. "/Boss]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNLightArmour.blp")
 else
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func006Func001C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func006Func001C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Light" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNLightArmour.blp")
 else
 end
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func007C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func007C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Light" .. "/Boss]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNLightArmour.blp")
 else
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func007Func001C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func007Func001C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Light" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNLightArmour.blp")
 else
 end
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func011C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func011C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Medium" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNMediumArmour.blp")
 else
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func012C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func012C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Medium" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNMediumArmour.blp")
 else
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func016C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func016C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Heavy" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNHeavyArmour.blp")
 else
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func017C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func017C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Heavy" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNHeavyArmour.blp")
 else
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func021C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func021C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Fortified" .. "/Air]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
 else
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func021Func001C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func021Func001C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Fortified" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNArcaniteArchitecture.blp")
 else
 end
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func022C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func022C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Fortified" .. "/Air]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
 else
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func022Func001C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func022Func001C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Fortified" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNArcaniteArchitecture.blp")
 else
 end
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func026C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func026C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Hero" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
 else
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func027C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func027C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Hero" .. "]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
 else
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func037C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func037C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Divine" .. "/Immune]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNDivineArmour.blp")
 else
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func038C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func038C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Divine" .. "/Immune]"))
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNDivineArmour.blp")
 else
 end
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func042C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func042C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_3156")
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNAcorn.blp")
 else
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func042Func001C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func042Func001C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_3158")
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp")
 else
-if (Trig_Next_Wave_and_Current_Wave_Update_Copy_Func001Func042Func001Func001C()) then
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func042Func001Func001C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_1002")
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
 MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp")
@@ -13535,9 +13534,9 @@ MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\
 end
 end
 
-function InitTrig_Next_Wave_and_Current_Wave_Update_Copy()
-gg_trg_Next_Wave_and_Current_Wave_Update_Copy = CreateTrigger()
-TriggerAddAction(gg_trg_Next_Wave_and_Current_Wave_Update_Copy, Trig_Next_Wave_and_Current_Wave_Update_Copy_Actions)
+function InitTrig_Next_Wave_and_Current_Wave_Update()
+gg_trg_Next_Wave_and_Current_Wave_Update = CreateTrigger()
+TriggerAddAction(gg_trg_Next_Wave_and_Current_Wave_Update, Trig_Next_Wave_and_Current_Wave_Update_Actions)
 end
 
 function Trig_Player_Leave_Gold_Split_Func001C()
@@ -14261,7 +14260,7 @@ bj_forLoopAIndex = 0
 bj_forLoopAIndexEnd = 4
 while (true) do
 if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], ("|c0000ff00Wave: |c0077ff77" .. (I2S((udg_Integer_WaveNumber + GetForLoopIndexA())) .. (" - |c0000ff00Wave Type: |c0077ff77" .. (udg_String_Array_WaveType[udg_Integer_Array_RWUnitType[(udg_Integer_WaveNumber + GetForLoopIndexA())]] .. (" - |c0000ff00Spawn Count: |c0077ff77" .. (I2S(udg_Integer_Array_WaveSpawnMax[(udg_Integer_WaveNumber + GetForLoopIndexA())]) .. (" - |c0000ff00Bounty: |c0077ff77" .. I2S(udg_Integer_Array_RWBounty[(udg_Integer_WaveNumber + GetForLoopIndexA())])))))))))
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], ("|c0000ff00Wave: |c0077ff77" .. (I2S((udg_Integer_WaveNumber + GetForLoopIndexA())) .. (" - |c0000ff00Wave Type: |c0077ff77" .. (udg_String_Array_WaveType[(udg_Integer_WaveNumber + GetForLoopIndexA())] .. (" - |c0000ff00Spawn Count: |c0077ff77" .. (I2S(udg_Integer_Array_WaveSpawnMax[(udg_Integer_WaveNumber + GetForLoopIndexA())]) .. (" - |c0000ff00Bounty: |c0077ff77" .. I2S(udg_Integer_Array_RWBounty[(udg_Integer_WaveNumber + GetForLoopIndexA())])))))))))
 bj_forLoopAIndex = bj_forLoopAIndex + 1
 end
 else
@@ -16804,7 +16803,7 @@ InitTrig_Kill_Update()
 InitTrig_Gold_Update()
 InitTrig_Wave_and_Lives_Update()
 InitTrig_Player_Update_Game_Start()
-InitTrig_Next_Wave_and_Current_Wave_Update_Copy()
+InitTrig_Next_Wave_and_Current_Wave_Update()
 InitTrig_Player_Leave_Gold_Split()
 InitTrig_Restart()
 InitTrig_Game_Setup_Ownership()
