@@ -4306,22 +4306,6 @@ STRING 670
 Bouncing Tower 9: Shadow Wolf
 }
 
-STRING 671
-// Units: n01I (Iron Trap), Ubertip (Tooltip - Extended)
-{
-|c006969FF[Support Tower]|r
-|c0000ff00Attacks land units only.|r
-
-|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine. Has a chance create a Clockwerk Goblin. Does affect Immune Creeps, Does not affect Air Creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Minelayer [Auto-Casted]
-|c0000ff00Full Damage:|r |c0077ff77750
-|c0000ff00Area of Effect:|r |c0077ff77200
-|c0000ff00Partial Damage:|r |c0077ff77500
-|c0000ff00Area of Effect:|r |c0077ff77500
-|c0000ff00Cooldown:|r |c0077ff7710 Seconds
-}
-
 STRING 672
 // Units: n00B (Air Tower 2: Faerie Dragon), Tip (Tooltip - Basic)
 {
@@ -4633,7 +4617,7 @@ STRING 718
 }
 
 STRING 719
-// Abilities: A04Z (Minelayer), Name (Name)
+// Abilities: A053 (Minelayer), Name (Name)
 {
 Minelayer
 }
@@ -4680,7 +4664,7 @@ STRING 725
 }
 
 STRING 726
-// Abilities: A04Z (Minelayer), Tip (Tooltip - Normal)
+// Abilities: A053 (Minelayer), Tip (Tooltip - Normal)
 {
 |c0000ff00Minelayer - Level 1|r
 }
@@ -7733,106 +7717,6 @@ STRING 1144
 // Units: n00F (Skeletal Archer), Name (Name)
 {
 Skeletal Archer
-}
-
-STRING 1145
-// Abilities: A00O (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
-
-|c0000ff00Damage:|r |c0077ff77750
-|c0000ff00Area of Effect:|r |c0077ff77300
-|c0000ff00Cooldown:|r |c0077ff775 Seconds
-}
-
-STRING 1146
-// Abilities: A00O (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
-
-|c0000ff00Damage:|r |c0077ff771500
-|c0000ff00Area of Effect:|r |c0077ff77300
-|c0000ff00Cooldown:|r |c0077ff775 Seconds
-}
-
-STRING 1147
-// Abilities: A00O (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
-
-|c0000ff00Damage:|r |c0077ff772500
-|c0000ff00Area of Effect:|r |c0077ff77300
-|c0000ff00Cooldown:|r |c0077ff775 Seconds
-}
-
-STRING 1148
-// Abilities: A00O (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
-
-|c0000ff00Damage:|r |c0077ff774000
-|c0000ff00Area of Effect:|r |c0077ff77300
-|c0000ff00Cooldown:|r |c0077ff775 Seconds
-}
-
-STRING 1149
-// Abilities: A00O (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
-
-|c0000ff00Damage:|r |c0077ff776000
-|c0000ff00Area of Effect:|r |c0077ff77300
-|c0000ff00Cooldown:|r |c0077ff775 Seconds
-}
-
-STRING 1150
-// Abilities: A00O (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
-
-|c0000ff00Damage:|r |c0077ff778000
-|c0000ff00Area of Effect:|r |c0077ff77300
-|c0000ff00Cooldown:|r |c0077ff775 Seconds
-}
-
-STRING 1151
-// Abilities: A00O (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
-
-|c0000ff00Damage:|r |c0077ff7710000
-|c0000ff00Area of Effect:|r |c0077ff77300
-|c0000ff00Cooldown:|r |c0077ff775 Seconds
-}
-
-STRING 1152
-// Abilities: A00O (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
-
-|c0000ff00Damage:|r |c0077ff7715000
-|c0000ff00Area of Effect:|r |c0077ff77300
-|c0000ff00Cooldown:|r |c0077ff775 Seconds
-}
-
-STRING 1153
-// Abilities: A00O (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
-
-|c0000ff00Damage:|r |c0077ff7720000
-|c0000ff00Area of Effect:|r |c0077ff77300
-|c0000ff00Cooldown:|r |c0077ff775 Seconds
-}
-
-STRING 1154
-// Abilities: A00O (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
-
-|c0000ff00Damage:|r |c0077ff7725000
-|c0000ff00Area of Effect:|r |c0077ff77300
-|c0000ff00Cooldown:|r |c0077ff775 Seconds
 }
 
 STRING 1155
@@ -11357,62 +11241,56 @@ STRING 1734
 |c0000ff00Dark Bomb - Level 3|r
 }
 
-STRING 1735
-// Abilities: A00O (Minelayer), Tip (Tooltip - Normal)
-{
-|c0000ff00Minelayer - Level 1|r
-}
-
 STRING 1736
-// Abilities: A00O (Minelayer), Tip (Tooltip - Normal)
+// Abilities: A053 (Minelayer), Tip (Tooltip - Normal)
 {
 |c0000ff00Minelayer - Level 2|r
 }
 
 STRING 1737
-// Abilities: A00O (Minelayer), Tip (Tooltip - Normal)
+// Abilities: A053 (Minelayer), Tip (Tooltip - Normal)
 {
 |c0000ff00Minelayer - Level 3|r
 }
 
 STRING 1738
-// Abilities: A00O (Minelayer), Tip (Tooltip - Normal)
+// Abilities: A053 (Minelayer), Tip (Tooltip - Normal)
 {
 |c0000ff00Minelayer - Level 4|r
 }
 
 STRING 1739
-// Abilities: A00O (Minelayer), Tip (Tooltip - Normal)
+// Abilities: A053 (Minelayer), Tip (Tooltip - Normal)
 {
 |c0000ff00Minelayer - Level 5|r
 }
 
 STRING 1740
-// Abilities: A00O (Minelayer), Tip (Tooltip - Normal)
+// Abilities: A053 (Minelayer), Tip (Tooltip - Normal)
 {
 |c0000ff00Minelayer - Level 6|r
 }
 
 STRING 1741
-// Abilities: A00O (Minelayer), Tip (Tooltip - Normal)
+// Abilities: A053 (Minelayer), Tip (Tooltip - Normal)
 {
 |c0000ff00Minelayer - Level 7|r
 }
 
 STRING 1742
-// Abilities: A00O (Minelayer), Tip (Tooltip - Normal)
+// Abilities: A053 (Minelayer), Tip (Tooltip - Normal)
 {
 |c0000ff00Minelayer - Level 8|r
 }
 
 STRING 1743
-// Abilities: A00O (Minelayer), Tip (Tooltip - Normal)
+// Abilities: A053 (Minelayer), Tip (Tooltip - Normal)
 {
 |c0000ff00Minelayer - Level 9|r
 }
 
 STRING 1744
-// Abilities: A00O (Minelayer), Tip (Tooltip - Normal)
+// Abilities: A053 (Minelayer), Tip (Tooltip - Normal)
 {
 |c0000ff00Minelayer - Level 10|r
 }
@@ -17250,12 +17128,6 @@ STRING 2593
 Green TD Evolution uses some imported resources, most of them are existing images that i have
 }
 
-STRING 2594
-// Abilities: A04Z (Minelayer), Tip (Tooltip - Normal)
-{
-|c0000ff00Minelayer - Level 2|r
-}
-
 STRING 2595
 {
 |c0096FF96200% from Siege
@@ -17280,12 +17152,6 @@ STRING 2597
 |c0096FF9650% from Chaos
 }
 
-STRING 2598
-// Abilities: A04Z (Minelayer), Tip (Tooltip - Normal)
-{
-|c0000ff00Minelayer - Level 3|r
-}
-
 STRING 2599
 {
 |c0096FF96200% from Siege
@@ -17308,12 +17174,6 @@ STRING 2601
 |c0096FF96100% from Hero
 |c0096FF9675% from Pierce
 |c0096FF9650% from Chaos
-}
-
-STRING 2602
-// Abilities: A04Z (Minelayer), Tip (Tooltip - Normal)
-{
-|c0000ff00Minelayer - Level 4|r
 }
 
 STRING 2603
@@ -17425,18 +17285,6 @@ STRING 2616
 |c0096FF9625% to Divine|r
 }
 
-STRING 2617
-// Abilities: A04Z (Minelayer), Tip (Tooltip - Normal)
-{
-|c0000ff00Minelayer - Level 5|r
-}
-
-STRING 2618
-// Abilities: A04Z (Minelayer), Tip (Tooltip - Normal)
-{
-|c0000ff00Minelayer - Level 6|r
-}
-
 STRING 2619
 {
 |c0096FF96200% to Fortified|r
@@ -17461,18 +17309,6 @@ STRING 2621
 |c0096FF9625% to Divine|r
 }
 
-STRING 2622
-// Abilities: A04Z (Minelayer), Tip (Tooltip - Normal)
-{
-|c0000ff00Minelayer - Level 7|r
-}
-
-STRING 2623
-// Abilities: A04Z (Minelayer), Tip (Tooltip - Normal)
-{
-|c0000ff00Minelayer - Level 8|r
-}
-
 STRING 2624
 {
 |c0096FF96200% to Fortified|r
@@ -17495,18 +17331,6 @@ STRING 2626
 |c0096FF96125% to Heavy|r
 |c0096FF9675% to Others|r
 |c0096FF9625% to Divine|r
-}
-
-STRING 2627
-// Abilities: A04Z (Minelayer), Tip (Tooltip - Normal)
-{
-|c0000ff00Minelayer - Level 9|r
-}
-
-STRING 2628
-// Abilities: A04Z (Minelayer), Tip (Tooltip - Normal)
-{
-|c0000ff00Minelayer - Level 10|r
 }
 
 STRING 2629
@@ -21250,27 +21074,6 @@ STRING 3150
 Doom
 }
 
-STRING 3151
-// Units: n00A (Fire Trap), Ubertip (Tooltip - Extended)
-{
-|c006969FF[Support Tower]|r
-|c0000ff00Attacks land units only.|r
-
-|c0077ff77A trap that deals damage to enemys around it and has a chance to cast incinerate or flask of oil. Does not affect Immune or Air Creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Immolation [Auto-Casted]
-|c0000ff00Damage:|r |c0077ff77250 per second
-|c0000ff00Area of Effect:|r |c0077ff77400
-
-|c0000ff00Ability:|r |c0077ff77Incinerate [Auto-Casted]
-|c0000ff00Damage:|r |c0077ff77500
-
-|c0000ff00Ability:|r |c0077ff77Flask of Oil [Auto-Casted]
-|c0000ff00Damage:|r |c0077ff77250 per second if ignited
-|c0000ff00Area of Effect:|r |c0077ff77400
-|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
-}
-
 STRING 3152
 // Abilities: A04P (Doom), Tip (Tooltip - Normal)
 {
@@ -21393,25 +21196,6 @@ STRING 3166
 Doom
 }
 
-STRING 3167
-// Units: n017 (Frost Trap), Ubertip (Tooltip - Extended)
-{
-|c006969FF[Support Tower]|r
-|c0000ff00Attacks land units only.|r
-
-|c0077ff77Sends out a blast of frost in a cone towards the enemy dealing damage and damage over time. Has a chance to trigger ice cage when dealing damage. Does not affect Immune or Air Creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
-|c0000ff00Base Cooldown:|r |c0077ff772 Seconds
-|c0000ff00Damage:|r |c0077ff77150
-|c0000ff00Damage per second:|r |c0077ff77300
-
-|c0000ff00Ability:|r |c0077ff77Ice Cage [Auto-Casted]
-|c0000ff00Armour Decrease:|r |c0077ff77-2
-|c0000ff00Duration:|r |c0077ff775 Seconds
-
-}
-
 STRING 3168
 // Abilities: A04P (Doom), Tip (Tooltip - Normal)
 {
@@ -21487,22 +21271,6 @@ STRING 3179
 {
 |c0096FF96200% from Chaos
 |c0096FF9625% from Others
-}
-
-STRING 3180
-// Units: n01H (Blood Trap), Ubertip (Tooltip - Extended)
-{
-|c006969FF[Support Tower]|r
-|c0000ff00Attacks land units only.|r
-
-|c0077ff77A trap that gains attack speed each time it deals damage with a [20% - 1% for each bloodtrap built globally] chance to reset. Gains 100% bonus damage against a random armor type every 15 attacks. Does not affect Air Creeps.|r
-
-|c0000ff00Damage:|r |c0077ff77500
-|c0000ff00Attack Speed:|r |c0077ff771.00
-
-|c0000ff00Ability:|r |c0077ff77Bloodstrike
-|c0000ff00Attack Type: |c0077ff77Random
-|c0000ff00Bonus Damage:|r |c0077ff77100%
 }
 
 STRING 3181
@@ -21815,25 +21583,6 @@ STRING 3215
 |c0000ff00Damage/s:|r |c0077ff775600
 |c0000ff00Area of Effect:|r |c0077ff77300
 |c0000ff00Duration:|r |c0077ff775 Seconds
-}
-
-STRING 3216
-// Units: n01G (Darkness Trap), Ubertip (Tooltip - Extended)
-{
-|c006969FF[Support Tower]|r
-|c0000ff00Attacks land and air units.|r
-
-|c0077ff77A trap that launches dark bombs at nearby enemys, decreasing their armour and dealing damage over time. Has a chance to cast Doom when dealing damage. Does not affect Immune Creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Dark Bomb [Auto-Casted]
-|c0000ff00Armour Decrease:|r |c0077ff774
-|c0000ff00Primary Damage:|r |c0077ff77100
-|c0000ff00Secondary Damage:|r |c0077ff7750
-|c0000ff00Duration:|r |c0077ff7710 Seconds
-
-|c0000ff00Ability:|r |c0077ff77Doom
-|c0000ff00Damage/s:|r |c0077ff77250
-|c0000ff00Summoned on Death:|r |c0077ff77Tentacle
 }
 
 STRING 3217
@@ -22217,16 +21966,6 @@ STRING 3257
 |c0000ff00Tower Status = |c00FF0000Disabled
 }
 
-STRING 3258
-// Abilities: A04Z (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
-
-|c0000ff00Damage:|r |c0077ff77750
-|c0000ff00Area of Effect:|r |c0077ff77300
-|c0000ff00Cooldown:|r |c0077ff775 Seconds
-}
-
 STRING 3259
 // Abilities: A04X (Void Blast and Void Contagion), Ubertip (Tooltip - Normal - Extended)
 {
@@ -22349,26 +22088,6 @@ STRING 3272
 Income is increased by |cffFDD0175 Gold|c0077ff77 for each disabled tower.
 }
 
-STRING 3273
-// Abilities: A04Z (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
-
-|c0000ff00Damage:|r |c0077ff771500
-|c0000ff00Area of Effect:|r |c0077ff77300
-|c0000ff00Cooldown:|r |c0077ff775 Seconds
-}
-
-STRING 3274
-// Abilities: A04Z (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
-
-|c0000ff00Damage:|r |c0077ff772500
-|c0000ff00Area of Effect:|r |c0077ff77300
-|c0000ff00Cooldown:|r |c0077ff775 Seconds
-}
-
 STRING 3275
 // Abilities: A031 (Headhunter Mode), Ubertip (Tooltip - Normal - Extended)
 {
@@ -22385,26 +22104,6 @@ STRING 3276
 |c0077ff77Lets you spawn random bosses, they will give a gold bonus to all players if killed, if it reachs the end point it will deplete all lives and you will lose.
 }
 
-STRING 3277
-// Abilities: A04Z (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
-
-|c0000ff00Damage:|r |c0077ff774000
-|c0000ff00Area of Effect:|r |c0077ff77300
-|c0000ff00Cooldown:|r |c0077ff775 Seconds
-}
-
-STRING 3278
-// Abilities: A04Z (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
-
-|c0000ff00Damage:|r |c0077ff776000
-|c0000ff00Area of Effect:|r |c0077ff77300
-|c0000ff00Cooldown:|r |c0077ff775 Seconds
-}
-
 STRING 3279
 // Abilities: A035 (Swarm Mode), Ubertip (Tooltip - Normal - Extended)
 {
@@ -22419,46 +22118,6 @@ STRING 3280
 |c0000ff00Status = |c0077ff77Activated
 
 |c0077ff77Total creeps spawned per wave is double, excluding bosses.
-}
-
-STRING 3281
-// Abilities: A04Z (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
-
-|c0000ff00Damage:|r |c0077ff778000
-|c0000ff00Area of Effect:|r |c0077ff77300
-|c0000ff00Cooldown:|r |c0077ff775 Seconds
-}
-
-STRING 3282
-// Abilities: A04Z (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
-
-|c0000ff00Damage:|r |c0077ff7710000
-|c0000ff00Area of Effect:|r |c0077ff77300
-|c0000ff00Cooldown:|r |c0077ff775 Seconds
-}
-
-STRING 3283
-// Abilities: A04Z (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
-
-|c0000ff00Damage:|r |c0077ff7715000
-|c0000ff00Area of Effect:|r |c0077ff77300
-|c0000ff00Cooldown:|r |c0077ff775 Seconds
-}
-
-STRING 3284
-// Abilities: A04Z (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
-
-|c0000ff00Damage:|r |c0077ff7720000
-|c0000ff00Area of Effect:|r |c0077ff77300
-|c0000ff00Cooldown:|r |c0077ff775 Seconds
 }
 
 STRING 3285
@@ -22596,124 +22255,6 @@ STRING 3301
 |c0096FF9625% to Divine|r
 }
 
-STRING 3302
-// Abilities: A04Z (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
-
-|c0000ff00Damage:|r |c0077ff7725000
-|c0000ff00Area of Effect:|r |c0077ff77300
-|c0000ff00Cooldown:|r |c0077ff775 Seconds
-}
-
-STRING 3303
-// Abilities: A04Z (Minelayer), Untip (Tooltip - Turn Off)
-{
-|cffc3dbffRight-click to activate auto-casting.|r
-}
-
-STRING 3304
-// Abilities: A04Z (Minelayer), Untip (Tooltip - Turn Off)
-{
-|cffc3dbffRight-click to activate auto-casting.|r
-}
-
-STRING 3305
-// Abilities: A04Z (Minelayer), Untip (Tooltip - Turn Off)
-{
-|cffc3dbffRight-click to activate auto-casting.|r
-}
-
-STRING 3306
-// Abilities: A04Z (Minelayer), Untip (Tooltip - Turn Off)
-{
-|cffc3dbffRight-click to activate auto-casting.|r
-}
-
-STRING 3307
-// Abilities: A04Z (Minelayer), Untip (Tooltip - Turn Off)
-{
-|cffc3dbffRight-click to activate auto-casting.|r
-}
-
-STRING 3308
-// Abilities: A04Z (Minelayer), Untip (Tooltip - Turn Off)
-{
-|cffc3dbffRight-click to activate auto-casting.|r
-}
-
-STRING 3309
-// Abilities: A04Z (Minelayer), Untip (Tooltip - Turn Off)
-{
-|cffc3dbffRight-click to activate auto-casting.|r
-}
-
-STRING 3310
-// Abilities: A04Z (Minelayer), Untip (Tooltip - Turn Off)
-{
-|cffc3dbffRight-click to activate auto-casting.|r
-}
-
-STRING 3311
-// Abilities: A04Z (Minelayer), Untip (Tooltip - Turn Off)
-{
-|cffc3dbffRight-click to activate auto-casting.|r
-}
-
-STRING 3312
-// Abilities: A04Z (Minelayer), Unubertip (Tooltip - Turn Off - Extended)
-{
-|cffc3dbffRight-click to deactivate auto-casting.|r
-}
-
-STRING 3313
-// Abilities: A04Z (Minelayer), Unubertip (Tooltip - Turn Off - Extended)
-{
-|cffc3dbffRight-click to deactivate auto-casting.|r
-}
-
-STRING 3314
-// Abilities: A04Z (Minelayer), Unubertip (Tooltip - Turn Off - Extended)
-{
-|cffc3dbffRight-click to deactivate auto-casting.|r
-}
-
-STRING 3315
-// Abilities: A04Z (Minelayer), Unubertip (Tooltip - Turn Off - Extended)
-{
-|cffc3dbffRight-click to deactivate auto-casting.|r
-}
-
-STRING 3316
-// Abilities: A04Z (Minelayer), Unubertip (Tooltip - Turn Off - Extended)
-{
-|cffc3dbffRight-click to deactivate auto-casting.|r
-}
-
-STRING 3317
-// Abilities: A04Z (Minelayer), Unubertip (Tooltip - Turn Off - Extended)
-{
-|cffc3dbffRight-click to deactivate auto-casting.|r
-}
-
-STRING 3318
-// Abilities: A04Z (Minelayer), Unubertip (Tooltip - Turn Off - Extended)
-{
-|cffc3dbffRight-click to deactivate auto-casting.|r
-}
-
-STRING 3319
-// Abilities: A04Z (Minelayer), Unubertip (Tooltip - Turn Off - Extended)
-{
-|cffc3dbffRight-click to deactivate auto-casting.|r
-}
-
-STRING 3320
-// Abilities: A04Z (Minelayer), Unubertip (Tooltip - Turn Off - Extended)
-{
-|cffc3dbffRight-click to deactivate auto-casting.|r
-}
-
 STRING 3321
 // Abilities: A01T (Emergency Bouncing Tower), Hotkey (Hotkey - Normal)
 {
@@ -22733,13 +22274,13 @@ W
 }
 
 STRING 3326
-// Abilities: A04Z (Minelayer), Hotkey (Hotkey - Normal)
+// Abilities: A028 (Debug), Hotkey (Hotkey - Normal)
 {
 X
 }
 
 STRING 3327
-// Abilities: A04Z (Minelayer), Unhotkey (Hotkey - Turn Off)
+// Abilities: A02P (Disable Traps), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -22760,6 +22301,293 @@ STRING 3330
 // Upgrades: R006 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 W
+}
+
+STRING 3367
+// Abilities: A047 (Game Modes), Hotkey (Hotkey - Normal)
+{
+X
+}
+
+STRING 3368
+// Abilities: A049 (Random Game Modes + Difficulty), Hotkey (Hotkey - Normal)
+{
+X
+}
+
+STRING 3370
+// Units: n025 (Mine Dummy), Name (Name)
+{
+Mine Dummy
+}
+
+STRING 3373
+// Units: n01I (Iron Trap), Ubertip (Tooltip - Extended)
+{
+|c006969FF[Support Tower]|r
+|c0000ff00Attacks land units only.|r
+
+|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, dealing damage to creeps in an area around the mine. Has a chance create a Clockwerk Goblin that explodes after attacking 3 times. Does affect Immune Creeps, Does not affect Air Creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Minelayer
+|c0000ff00Damage:|r |c0077ff77750
+|c0000ff00Area of Effect:|r |c0077ff77275
+|c0000ff00Spawn Interval:|r |c0077ff775 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Clockwerk Goblin
+|c0000ff00Damage:|r |c0077ff771500 x [Level of Minelayer]
+|c0000ff00Spawn Chance:|r |c0077ff775% + [1% per Iron Trap built Globally]
+}
+
+STRING 3374
+// Abilities: A053 (Minelayer), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Spawns mines around the Iron Trap, Mines explode when an enemy is near.
+
+Has a chance create a Clockwerk Goblin that explodes after attacking 3 times. Does affect Immune Creeps, Does not affect Air Creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Minelayer
+|c0000ff00Damage:|r |c0077ff77750
+|c0000ff00Area of Effect:|r |c0077ff77275
+|c0000ff00Spawn Interval:|r |c0077ff775 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Clockwerk Goblin
+|c0000ff00Damage:|r |c0077ff771500 x [Level of Minelayer]
+|c0000ff00Spawn Chance:|r |c0077ff775% + [1% per Iron Trap built Globally]
+}
+
+STRING 3375
+// Abilities: A053 (Minelayer), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Spawns mines around the Iron Trap, Mines explode when an enemy is near.
+
+Has a chance create a Clockwerk Goblin that explodes after attacking 3 times. Does affect Immune Creeps, Does not affect Air Creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Minelayer
+|c0000ff00Damage:|r |c0077ff771500
+|c0000ff00Area of Effect:|r |c0077ff77300
+|c0000ff00Spawn Interval:|r |c0077ff775 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Clockwerk Goblin
+|c0000ff00Damage:|r |c0077ff771500 x [Level of Minelayer]
+|c0000ff00Spawn Chance:|r |c0077ff775% + [1% per Iron Trap built Globally]
+}
+
+STRING 3376
+// Abilities: A053 (Minelayer), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Spawns mines around the Iron Trap, Mines explode when an enemy is near.
+
+Has a chance create a Clockwerk Goblin that explodes after attacking 3 times. Does affect Immune Creeps, Does not affect Air Creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Minelayer
+|c0000ff00Damage:|r |c0077ff772500
+|c0000ff00Area of Effect:|r |c0077ff77325
+|c0000ff00Spawn Interval:|r |c0077ff775 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Clockwerk Goblin
+|c0000ff00Damage:|r |c0077ff771500 x [Level of Minelayer]
+|c0000ff00Spawn Chance:|r |c0077ff775% + [1% per Iron Trap built Globally]
+}
+
+STRING 3377
+// Abilities: A053 (Minelayer), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Spawns mines around the Iron Trap, Mines explode when an enemy is near.
+
+Has a chance create a Clockwerk Goblin that explodes after attacking 3 times. Does affect Immune Creeps, Does not affect Air Creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Minelayer
+|c0000ff00Damage:|r |c0077ff774000
+|c0000ff00Area of Effect:|r |c0077ff77350
+|c0000ff00Spawn Interval:|r |c0077ff775 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Clockwerk Goblin
+|c0000ff00Damage:|r |c0077ff771500 x [Level of Minelayer]
+|c0000ff00Spawn Chance:|r |c0077ff775% + [1% per Iron Trap built Globally]
+}
+
+STRING 3378
+// Abilities: A053 (Minelayer), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Spawns mines around the Iron Trap, Mines explode when an enemy is near.
+
+Has a chance create a Clockwerk Goblin that explodes after attacking 3 times. Does affect Immune Creeps, Does not affect Air Creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Minelayer
+|c0000ff00Damage:|r |c0077ff776000
+|c0000ff00Area of Effect:|r |c0077ff77375
+|c0000ff00Spawn Interval:|r |c0077ff775 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Clockwerk Goblin
+|c0000ff00Damage:|r |c0077ff771500 x [Level of Minelayer]
+|c0000ff00Spawn Chance:|r |c0077ff775% + [1% per Iron Trap built Globally]
+}
+
+STRING 3379
+// Abilities: A053 (Minelayer), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Spawns mines around the Iron Trap, Mines explode when an enemy is near.
+
+Has a chance create a Clockwerk Goblin that explodes after attacking 3 times. Does affect Immune Creeps, Does not affect Air Creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Minelayer
+|c0000ff00Damage:|r |c0077ff778000
+|c0000ff00Area of Effect:|r |c0077ff77400
+|c0000ff00Spawn Interval:|r |c0077ff775 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Clockwerk Goblin
+|c0000ff00Damage:|r |c0077ff771500 x [Level of Minelayer]
+|c0000ff00Spawn Chance:|r |c0077ff775% + [1% per Iron Trap built Globally]
+}
+
+STRING 3380
+// Abilities: A053 (Minelayer), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Spawns mines around the Iron Trap, Mines explode when an enemy is near.
+
+Has a chance create a Clockwerk Goblin that explodes after attacking 3 times. Does affect Immune Creeps, Does not affect Air Creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Minelayer
+|c0000ff00Damage:|r |c0077ff771000
+|c0000ff00Area of Effect:|r |c0077ff77425
+|c0000ff00Spawn Interval:|r |c0077ff775 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Clockwerk Goblin
+|c0000ff00Damage:|r |c0077ff771500 x [Level of Minelayer]
+|c0000ff00Spawn Chance:|r |c0077ff775% + [1% per Iron Trap built Globally]
+}
+
+STRING 3381
+// Abilities: A053 (Minelayer), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Spawns mines around the Iron Trap, Mines explode when an enemy is near.
+
+Has a chance create a Clockwerk Goblin that explodes after attacking 3 times. Does affect Immune Creeps, Does not affect Air Creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Minelayer
+|c0000ff00Damage:|r |c0077ff7715000
+|c0000ff00Area of Effect:|r |c0077ff77450
+|c0000ff00Spawn Interval:|r |c0077ff775 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Clockwerk Goblin
+|c0000ff00Damage:|r |c0077ff771500 x [Level of Minelayer]
+|c0000ff00Spawn Chance:|r |c0077ff775% + [1% per Iron Trap built Globally]
+}
+
+STRING 3382
+// Abilities: A053 (Minelayer), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Spawns mines around the Iron Trap, Mines explode when an enemy is near.
+
+Has a chance create a Clockwerk Goblin that explodes after attacking 3 times. Does affect Immune Creeps, Does not affect Air Creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Minelayer
+|c0000ff00Damage:|r |c0077ff7720000
+|c0000ff00Area of Effect:|r |c0077ff77475
+|c0000ff00Spawn Interval:|r |c0077ff775 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Clockwerk Goblin
+|c0000ff00Damage:|r |c0077ff771500 x [Level of Minelayer]
+|c0000ff00Spawn Chance:|r |c0077ff775% + [1% per Iron Trap built Globally]
+}
+
+STRING 3383
+// Abilities: A053 (Minelayer), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Spawns mines around the Iron Trap, Mines explode when an enemy is near.
+
+Has a chance create a Clockwerk Goblin that explodes after attacking 3 times. Does affect Immune Creeps, Does not affect Air Creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Minelayer
+|c0000ff00Damage:|r |c0077ff7725000
+|c0000ff00Area of Effect:|r |c0077ff77500
+|c0000ff00Spawn Interval:|r |c0077ff775 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Clockwerk Goblin
+|c0000ff00Damage:|r |c0077ff771500 x [Level of Minelayer]
+|c0000ff00Spawn Chance:|r |c0077ff775% + [1% per Iron Trap built Globally]
+}
+
+STRING 3384
+// Abilities: A00C (Kaboom!), EditorSuffix (Editor Suffix)
+{
+[Iron Trap]
+}
+
+STRING 3385
+// Units: n00A (Fire Trap), Ubertip (Tooltip - Extended)
+{
+|c006969FF[Support Tower]|r
+|c0000ff00Attacks land units only.|r
+
+|c0077ff77A trap that deals damage to enemys around it and has a [5% + 1% per fire trap built globally] chance to cast incinerate or flask of oil. Does not affect Immune or Air Creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Immolation [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff77250 per second
+|c0000ff00Area of Effect:|r |c0077ff77400
+
+|c0000ff00Ability:|r |c0077ff77Incinerate [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff77500
+
+|c0000ff00Ability:|r |c0077ff77Flask of Oil [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff77250 per second if ignited
+|c0000ff00Area of Effect:|r |c0077ff77400
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
+}
+
+STRING 3386
+// Units: n017 (Frost Trap), Ubertip (Tooltip - Extended)
+{
+|c006969FF[Support Tower]|r
+|c0000ff00Attacks land units only.|r
+
+|c0077ff77Sends out a blast of frost in a cone towards the enemy dealing damage and damage over time. Has a [5% + 1% per frost trap built globally] chance to trigger ice cage when dealing damage. Does not affect Immune or Air Creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
+|c0000ff00Base Cooldown:|r |c0077ff772 Seconds
+|c0000ff00Damage:|r |c0077ff77150
+|c0000ff00Damage per second:|r |c0077ff77300
+
+|c0000ff00Ability:|r |c0077ff77Ice Cage [Auto-Casted]
+|c0000ff00Armour Decrease:|r |c0077ff77-2
+|c0000ff00Duration:|r |c0077ff775 Seconds
+
+}
+
+STRING 3387
+// Units: n01G (Darkness Trap), Ubertip (Tooltip - Extended)
+{
+|c006969FF[Support Tower]|r
+|c0000ff00Attacks land and air units.|r
+
+|c0077ff77A trap that launches dark bombs at nearby enemys, decreasing their armour and dealing damage over time. Has a [5% + 1% per dark trap built globally] chance to cast Doom when dealing damage. Does not affect Immune Creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Dark Bomb [Auto-Casted]
+|c0000ff00Armour Decrease:|r |c0077ff774
+|c0000ff00Primary Damage:|r |c0077ff77100
+|c0000ff00Secondary Damage:|r |c0077ff7750
+|c0000ff00Duration:|r |c0077ff7710 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Doom
+|c0000ff00Damage/s:|r |c0077ff77250
+|c0000ff00Summoned on Death:|r |c0077ff77Tentacle
+}
+
+STRING 3388
+// Units: n01H (Blood Trap), Ubertip (Tooltip - Extended)
+{
+|c006969FF[Support Tower]|r
+|c0000ff00Attacks land units only.|r
+
+|c0077ff77A trap that gains 20% attack speed each time it deals damage with a [20% - 1% for each bloodtrap built globally] chance to reset. Gains 100% bonus damage against a random armor type every 15 attacks. Does not affect Air Creeps.|r
+
+|c0000ff00Damage:|r |c0077ff77500
+|c0000ff00Attack Speed:|r |c0077ff771.00
+
+|c0000ff00Ability:|r |c0077ff77Bloodstrike
+|c0000ff00Attack Type: |c0077ff77Random
+|c0000ff00Bonus Damage:|r |c0077ff77100%
 }
 
 STRING 3406
@@ -23302,12 +23130,6 @@ STRING 4335
 S
 }
 
-STRING 4338
-// Abilities: A028 (Debug), Hotkey (Hotkey - Normal)
-{
-X
-}
-
 STRING 4352
 // Units: n006 (Frost Tower 1: Wendigo), Name (Name)
 {
@@ -23395,24 +23217,6 @@ STRING 4471
 // Buffs/Effects: BEar (), Buffubertip (Tooltip - Extended)
 {
 This unit is under the effect of a Damage Aura, It has Increased Attack Damage.
-}
-
-STRING 4480
-// Abilities: A02P (Disable Traps), Hotkey (Hotkey - Normal)
-{
-X
-}
-
-STRING 4481
-// Abilities: A047 (Game Modes), Hotkey (Hotkey - Normal)
-{
-X
-}
-
-STRING 4484
-// Abilities: A049 (Random Game Modes + Difficulty), Hotkey (Hotkey - Normal)
-{
-X
 }
 
 STRING 4515
@@ -26590,7 +26394,7 @@ STRING 9130
 }
 
 STRING 9135
-// Abilities: A00C (Mine Damage), EditorSuffix (Editor Suffix)
+// Abilities: A056 (Mine Damage), EditorSuffix (Editor Suffix)
 {
 [Iron Trap]
 }
@@ -26692,21 +26496,15 @@ STRING 9451
 }
 
 STRING 9461
-// Abilities: A00O (Minelayer), EditorSuffix (Editor Suffix)
+// Abilities: A053 (Minelayer), EditorSuffix (Editor Suffix)
 {
 [Iron Trap]
 }
 
 STRING 9462
-// Abilities: A00C (Mine Damage), Name (Name)
+// Abilities: A056 (Mine Damage), Name (Name)
 {
 Mine Damage
-}
-
-STRING 9483
-// Abilities: A00O (Minelayer), Name (Name)
-{
-Minelayer
 }
 
 STRING 9497

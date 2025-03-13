@@ -370,6 +370,9 @@ udg_PlyGroup_Array_HeroAbilities = {}
 udg_PlayerGroup_StartMsg = nil
 udg_Integer_Array_GoblinBotChance = __jarray(0)
 udg_Integer_TotalIronTrapsBuilt = 0
+udg_Unit_Array_IronTraps = {}
+udg_Unit_Mine = nil
+udg_Integer_Array_MineDamageLevel = __jarray(0)
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -658,6 +661,7 @@ gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
+gg_trg_Iron_Trap_Clockwerk_Kaboom = nil
 function InitGlobals()
 local i = 0
 
@@ -1400,6 +1404,12 @@ udg_Integer_Array_GoblinBotChance[i] = 0
 i = i + 1
 end
 udg_Integer_TotalIronTrapsBuilt = 0
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Integer_Array_MineDamageLevel[i] = 0
+i = i + 1
+end
 end
 
 --Global Initialization 1.1 also hooks the InitCustomTriggers and RunInitializationTriggers functions
@@ -6039,16 +6049,16 @@ end
 return true
 end
 
-function Trig_Instant_Upgrade_Func008Func001Func001002003001002()
+function Trig_Instant_Upgrade_Func008Func003Func001002003001002()
 return (GetUnitTypeId(GetFilterUnit()) == FourCC("n01I"))
 end
 
-function Trig_Instant_Upgrade_Func008Func001Func002001001002()
+function Trig_Instant_Upgrade_Func008Func003Func002001001002()
 return (GetUnitTypeId(GetFilterUnit()) == FourCC("n01I"))
 end
 
-function Trig_Instant_Upgrade_Func008Func001C()
-if (not (CountUnitsInGroup(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Instant_Upgrade_Func008Func001Func002001001002))) <= 10)) then
+function Trig_Instant_Upgrade_Func008Func003C()
+if (not (CountUnitsInGroup(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Instant_Upgrade_Func008Func003Func002001001002))) <= 10)) then
 return false
 end
 return true
@@ -6125,8 +6135,10 @@ end
 else
 end
 if (Trig_Instant_Upgrade_Func008C()) then
-if (Trig_Instant_Upgrade_Func008Func001C()) then
-udg_Integer_TotalIronTrapsBuilt = (0 + CountUnitsInGroup(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Instant_Upgrade_Func008Func001Func001002003001002))))
+udg_Unit_Array_IronTraps[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] = GetTriggerUnit()
+udg_Integer_Array_MineDamageLevel[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] = 1
+if (Trig_Instant_Upgrade_Func008Func003C()) then
+udg_Integer_TotalIronTrapsBuilt = (0 + CountUnitsInGroup(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Instant_Upgrade_Func008Func003Func001002003001002))))
 else
 end
 else
@@ -15909,49 +15921,69 @@ TriggerAddAction(gg_trg_Player_9, Trig_Player_9_Actions)
 end
 
 function Trig_Iron_Trap_Autocast_Mine_Conditions()
-if (not (GetSpellAbilityId() == FourCC("A04Z"))) then
+if (not (GetUnitTypeId(GetEnteringUnit()) == FourCC("n025"))) then
 return false
 end
 return true
 end
 
 function Trig_Iron_Trap_Autocast_Mine_Func004C()
-if (not (CountUnitsInGroup(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), FourCC("n002"))) >= 5)) then
-return false
-end
-return true
-end
-
-function Trig_Iron_Trap_Autocast_Mine_Func005C()
-if (not (udg_Integer_Array_GoblinBotChance[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] <= (5 + udg_Integer_TotalIronTrapsBuilt))) then
+if (not (udg_Integer_Array_GoblinBotChance[GetConvertedPlayerId(GetOwningPlayer(udg_Unit_Mine))] <= (5 + udg_Integer_TotalIronTrapsBuilt))) then
 return false
 end
 return true
 end
 
 function Trig_Iron_Trap_Autocast_Mine_Actions()
-DisplayTextToForce(GetPlayersAll(), R2S(GetUnitStateSwap(UNIT_STATE_LIFE, GetSpellAbilityUnit())))
-udg_Integer_Array_GoblinBotChance[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = GetRandomInt(1, 100)
-udg_Point_Array_IronTrap[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = GetUnitLoc(GetTriggerUnit())
+udg_Unit_Mine = GetEnteringUnit()
+udg_Point_Array_IronTrap[GetConvertedPlayerId(GetOwningPlayer(udg_Unit_Mine))] = OffsetLocation(GetUnitLoc(udg_Unit_Mine), GetRandomReal(-150.00, 150.00), GetRandomReal(-150.00, 150.00))
+udg_Integer_Array_GoblinBotChance[GetConvertedPlayerId(GetOwningPlayer(udg_Unit_Mine))] = GetRandomInt(1, 100)
 if (Trig_Iron_Trap_Autocast_Mine_Func004C()) then
-else
-CreateNUnitsAtLoc(1, FourCC("n002"), GetOwningPlayer(GetTriggerUnit()), OffsetLocation(udg_Point_Array_IronTrap[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))], GetRandomReal(-250.00, 250.00), GetRandomReal(-250.00, 250.00)), GetRandomDirectionDeg())
-SetUnitAbilityLevelSwapped(FourCC("A00C"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A00O"), GetTriggerUnit()))
-end
-if (Trig_Iron_Trap_Autocast_Mine_Func005C()) then
-CreateNUnitsAtLoc(1, FourCC("n024"), GetOwningPlayer(GetTriggerUnit()), OffsetLocation(udg_Point_Array_IronTrap[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))], GetRandomReal(-250.00, 250.00), GetRandomReal(-250.00, 250.00)), GetRandomDirectionDeg())
-BlzSetUnitBaseDamage(GetLastCreatedUnit(), (1500 * GetUnitAbilityLevelSwapped(FourCC("A04Z"), GetSpellAbilityUnit())), 0)
-SetUnitAbilityLevelSwapped(FourCC("A00C"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A00O"), GetTriggerUnit()))
+CreateNUnitsAtLoc(1, FourCC("n024"), GetOwningPlayer(udg_Unit_Mine), udg_Point_Array_IronTrap[1], GetRandomDirectionDeg())
+BlzSetUnitBaseDamage(GetLastCreatedUnit(), (1500 * GetUnitAbilityLevelSwapped(FourCC("A053"), udg_Unit_Array_IronTraps[GetConvertedPlayerId(GetOwningPlayer(udg_Unit_Mine))])), 0)
+SetUnitAbilityLevelSwapped(FourCC("A056"), GetLastCreatedUnit(), udg_Integer_Array_MineDamageLevel[GetConvertedPlayerId(GetOwningPlayer(udg_Unit_Mine))])
 else
 end
-    RemoveLocation(udg_Point_Array_IronTrap[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))])
+CreateNUnitsAtLoc(1, FourCC("n002"), GetOwningPlayer(udg_Unit_Mine), udg_Point_Array_IronTrap[1], GetRandomDirectionDeg())
+SetUnitAbilityLevelSwapped(FourCC("A056"), GetLastCreatedUnit(), udg_Integer_Array_MineDamageLevel[GetConvertedPlayerId(GetOwningPlayer(udg_Unit_Mine))])
+UnitApplyTimedLifeBJ(30.00, FourCC("BTLF"), GetLastCreatedUnit())
+RemoveUnit(udg_Unit_Mine)
 end
 
 function InitTrig_Iron_Trap_Autocast_Mine()
 gg_trg_Iron_Trap_Autocast_Mine = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Iron_Trap_Autocast_Mine, EVENT_PLAYER_UNIT_SPELL_CAST)
+TriggerRegisterEnterRectSimple(gg_trg_Iron_Trap_Autocast_Mine, GetPlayableMapRect())
 TriggerAddCondition(gg_trg_Iron_Trap_Autocast_Mine, Condition(Trig_Iron_Trap_Autocast_Mine_Conditions))
 TriggerAddAction(gg_trg_Iron_Trap_Autocast_Mine, Trig_Iron_Trap_Autocast_Mine_Actions)
+end
+
+function Trig_Iron_Trap_Clockwerk_Kaboom_Conditions()
+if (not (GetUnitTypeId(GetAttacker()) == FourCC("n024"))) then
+return false
+end
+return true
+end
+
+function Trig_Iron_Trap_Clockwerk_Kaboom_Func002C()
+if (not (GetUnitStateSwap(UNIT_STATE_MANA, GetAttacker()) == 4.00)) then
+return false
+end
+return true
+end
+
+function Trig_Iron_Trap_Clockwerk_Kaboom_Actions()
+SetUnitManaBJ(GetAttacker(), (GetUnitStateSwap(UNIT_STATE_MANA, GetAttacker()) + 1))
+if (Trig_Iron_Trap_Clockwerk_Kaboom_Func002C()) then
+KillUnit(GetAttacker())
+else
+end
+end
+
+function InitTrig_Iron_Trap_Clockwerk_Kaboom()
+gg_trg_Iron_Trap_Clockwerk_Kaboom = CreateTrigger()
+TriggerRegisterAnyUnitEventBJ(gg_trg_Iron_Trap_Clockwerk_Kaboom, EVENT_PLAYER_UNIT_ATTACKED)
+TriggerAddCondition(gg_trg_Iron_Trap_Clockwerk_Kaboom, Condition(Trig_Iron_Trap_Clockwerk_Kaboom_Conditions))
+TriggerAddAction(gg_trg_Iron_Trap_Clockwerk_Kaboom, Trig_Iron_Trap_Clockwerk_Kaboom_Actions)
 end
 
 function Trig_Fire_Trap_Conditions()
@@ -16127,8 +16159,8 @@ end
 return true
 end
 
-function Trig_Iron_Trap_Func002Func005C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A04Z"), GetTriggerUnit()) >= 10)) then
+function Trig_Iron_Trap_Func002Func006C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A053"), GetTriggerUnit()) >= 10)) then
 return false
 end
 return true
@@ -16142,15 +16174,16 @@ return true
 end
 
 function Trig_Iron_Trap_Actions()
-SetUnitUserData(GetTriggerUnit(), udg_Integer_Array_TrapGoldCost[GetUnitAbilityLevelSwapped(FourCC("A04Z"), GetTriggerUnit())])
+SetUnitUserData(GetTriggerUnit(), udg_Integer_Array_TrapGoldCost[GetUnitAbilityLevelSwapped(FourCC("A053"), GetTriggerUnit())])
 if (Trig_Iron_Trap_Func002C()) then
 CreateTextTagUnitBJ(("You Need " .. (I2S(GetUnitUserData(GetTriggerUnit())) .. " To Upgrade")), GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
 else
 CreateTextTagUnitBJ("TRIGSTR_123", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
-IncUnitAbilityLevelSwapped(FourCC("A04Z"), GetTriggerUnit())
-BlzSetUnitName(GetTriggerUnit(), ("Iron Trap " .. I2S(GetUnitAbilityLevelSwapped(FourCC("A04Z"), GetTriggerUnit()))))
+IncUnitAbilityLevelSwapped(FourCC("A053"), GetTriggerUnit())
+udg_Integer_Array_MineDamageLevel[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] = GetUnitAbilityLevelSwapped(FourCC("A053"), GetTriggerUnit())
+BlzSetUnitName(GetTriggerUnit(), ("Iron Trap " .. I2S(GetUnitAbilityLevelSwapped(FourCC("A053"), GetTriggerUnit()))))
 SetPlayerStateBJ(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD, (GetPlayerState(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD) - GetUnitUserData(GetTriggerUnit())))
-if (Trig_Iron_Trap_Func002Func005C()) then
+if (Trig_Iron_Trap_Func002Func006C()) then
 UnitRemoveAbilityBJ(FourCC("A023"), GetTriggerUnit())
 else
 end
@@ -16819,6 +16852,7 @@ InitTrig_Player_7()
 InitTrig_Player_8()
 InitTrig_Player_9()
 InitTrig_Iron_Trap_Autocast_Mine()
+InitTrig_Iron_Trap_Clockwerk_Kaboom()
 InitTrig_Fire_Trap()
 InitTrig_Frost_Trap()
 InitTrig_Darkness_Trap()
