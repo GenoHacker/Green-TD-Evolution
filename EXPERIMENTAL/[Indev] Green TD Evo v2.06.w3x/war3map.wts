@@ -5010,6 +5010,14 @@ STRING 897
 
 }
 
+STRING 898
+// Abilities: A033 (Speed Mode), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Status = |c00FF0000Deactivated
+
+|c0077ff77Time between wave spawns is reduced and creep movement speed is set to 400.
+}
+
 STRING 899
 // Units: n01J (Trap Blueprint), Ubertip (Tooltip - Extended)
 {
@@ -7108,6 +7116,14 @@ STRING 1144
 // Units: n00F (Skeletal Archer), Name (Name)
 {
 Skeletal Archer
+}
+
+STRING 1145
+// Abilities: A033 (Speed Mode), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Status = |c0077ff77Activated
+
+|c0077ff77Time between wave spawns is reduced and creep movement speed is set to 400.
 }
 
 STRING 1155
@@ -9944,14 +9960,6 @@ STRING 1620
 // Abilities: A04V (Exp Bonus), Name (Name)
 {
 Exp Bonus
-}
-
-STRING 1621
-// Abilities: A033 (Speed Mode), Ubertip (Tooltip - Normal - Extended)
-{
-|c0000ff00Status = |c00FF0000Deactivated
-
-|c0077ff77Time between wave spawns is reduced and creep movement speed is set to 500.
 }
 
 STRING 1622
@@ -13733,14 +13741,6 @@ STRING 2180
 // Units: h01G (Fel Tower 9: Warlock), Name (Name)
 {
 Fel Tower 9: Warlock
-}
-
-STRING 2181
-// Abilities: A033 (Speed Mode), Ubertip (Tooltip - Normal - Extended)
-{
-|c0000ff00Status = |c0077ff77Activated
-
-|c0077ff77Time between wave spawns is reduced and creep movement speed is set to 500.
 }
 
 STRING 2182
