@@ -17490,12 +17490,11 @@ Changelog -- v2.06
 
 STRING 2730
 {
+-- Potentially fixed the crashing issue
 -- Consolidated all emergency towers into 1 learnable abillity instead of each tower having its own.
 -- Switched from JASS scripting to LUA Scripting
 -- Added Bribes LUA Damage Engine
--- Added Custom Crit System
--- Added Critical Aura
--- Added Crit Bonus to hero
+-- Added Custom Crit System, Critical Aura, Crit Bonus
 -- Added more easter eggs
 -- Added several new towers
 -- Added many new abilities to all traps
@@ -17507,14 +17506,18 @@ STRING 2730
 -- Fixed -wave command only being available to player 1
 -- Fixed Game Setup Unit being removed when its owner leaves
 -- Fixed Game Setup Units ability tooltips not changing
+-- Fixed random wave game messages showing incorrect wave type
 -- Changes to Game Setup Unit ability tooltips
 -- Changes to multiple commands
 -- Changes to multiboard
+-- Changes to random wave units
+-- Changes to gambling
+-- Changes to terrain and doodads
 }
 
 STRING 2731
 {
-v2.06 Indev Release Date - 02/08/20
+v2.06 Release Date - XX/XX/XX
 }
 
 STRING 2732
