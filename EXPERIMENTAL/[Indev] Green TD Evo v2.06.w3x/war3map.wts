@@ -335,7 +335,7 @@ Discord Links
 STRING 53
 {
 Maulbot Discord - https://discord.gg/nkamska
-GenoHackers Discord - https://discord.gg/dzbHsCc
+Green TD: Evolution Discord - https://discord.gg/dzbHsCc
 }
 
 STRING 54
@@ -14705,7 +14705,7 @@ Hellfire Tower 5: Hell Shrine
 
 STRING 2312
 {
-|c0000FF00GenoHacker|r
+|c0000FF00GenoHacker#2987|r
 }
 
 STRING 2313
@@ -17569,6 +17569,7 @@ STRING 2730
 -- Added Custom Crit System, Critical Aura, Crit Bonus
 -- Added more easter eggs
 -- Added several new towers
+-- Added new abilities to existing towers
 -- Added many new abilities to all traps
 -- Added bosses to random waves
 -- Removed food cost from aura tower and trap blueprints
@@ -23290,7 +23291,7 @@ STRING 5927
 
 STRING 5931
 {
-|c0000ff00-------------------------------------
+|c0000ff00---------------------------------------
 }
 
 STRING 5934
@@ -25522,16 +25523,6 @@ STRING 8705
 STRING 8706
 {
 |Cff00ff00Gold:
-}
-
-STRING 8707
-{
-|cAAAAFFAAOne or more workers aren't earning their keep.
-}
-
-STRING 8710
-{
-|cAAAAFFAAMap made and maintained by GenoHacker.
 }
 
 STRING 8712

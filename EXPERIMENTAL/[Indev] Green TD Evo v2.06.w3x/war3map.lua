@@ -372,6 +372,10 @@ udg_Integer_TotalIronTrapsBuilt = 0
 udg_Unit_Array_IronTraps = {}
 udg_Unit_Mine = nil
 udg_Integer_Array_MineDamageLevel = __jarray(0)
+udg_TempPlayer = nil
+udg_TempString = __jarray("")
+udg_NameLoop = 0
+udg_PlayerName = __jarray("")
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -454,9 +458,8 @@ gg_snd_HeroLichPissed8 = nil
 gg_trg_Damage_Engine_Config = nil
 gg_trg_Crit_System = nil
 gg_trg_Crit_Aura = nil
-gg_trg_Armor_Break = nil
+gg_trg_Flak_Tower_Armor_Break = nil
 gg_trg_Venom_Tower_Random_Target = nil
-gg_trg_Ballista_Tower_Enchanted_Bolts = nil
 gg_trg_Shrapnel_Tower_Shrapnel_Blast = nil
 gg_trg_Soul_Tower_Soul_Extraction = nil
 gg_trg_Soul_Tower_Minion_Remove_From_Group = nil
@@ -583,6 +586,7 @@ gg_trg_Path_Teal_Spawn = nil
 gg_trg_Path_Teal_1 = nil
 gg_trg_Path_Teal_2 = nil
 gg_trg_Path_Teal_3 = nil
+gg_trg_Name_Fix = nil
 gg_trg_Create_the_Multiboard = nil
 gg_trg_Timer = nil
 gg_trg_Kill_Update = nil
@@ -661,6 +665,7 @@ gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
+gg_trg_Ballista_Tower_Enchanted_Bolts = nil
 function InitGlobals()
 local i = 0
 
@@ -1407,6 +1412,18 @@ i = 0
 while (true) do
 if ((i > 1)) then break end
 udg_Integer_Array_MineDamageLevel[i] = 0
+i = i + 1
+end
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_TempString[i] = ""
+i = i + 1
+end
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_PlayerName[i] = ""
 i = i + 1
 end
 end
@@ -2260,20 +2277,6 @@ local t
 local life
 
 gg_unit_n00C_0019 = BlzCreateUnitWithSkin(p, FourCC("n00C"), -1792.0, 3392.0, 270.000, FourCC("n00C"))
-u = BlzCreateUnitWithSkin(p, FourCC("h00Q"), -1216.0, 2368.0, 270.000, FourCC("h00Q"))
-end
-
-function CreateUnitsForPlayer10()
-local p = Player(10)
-local u
-local unitID
-local t
-local life
-
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1806.4, 2529.8, 100.956, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1863.7, 2395.3, 308.132, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1850.5, 2238.2, 159.933, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1754.5, 2133.0, 151.990, FourCC("h01H"))
 end
 
 function CreateNeutralPassiveBuildings()
@@ -2451,7 +2454,6 @@ CreateBuildingsForPlayer0()
 end
 
 function CreatePlayerUnits()
-CreateUnitsForPlayer10()
 end
 
 function CreateAllUnits()
@@ -2818,38 +2820,38 @@ TriggerRegisterAnyUnitEventBJ(gg_trg_Crit_Aura, EVENT_PLAYER_UNIT_ATTACKED)
 TriggerAddAction(gg_trg_Crit_Aura, Trig_Crit_Aura_Actions)
 end
 
-function Trig_Armor_Break_Conditions()
+function Trig_Flak_Tower_Armor_Break_Conditions()
 if (not (GetUnitAbilityLevelSwapped(FourCC("A00O"), udg_AOEDamageSource) == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Armor_Break_Func002Func001A()
+function Trig_Flak_Tower_Armor_Break_Func002Func001A()
 BlzSetUnitArmor(GetEnumUnit(), (BlzGetUnitArmor(GetEnumUnit()) - (1.00 + (I2R(udg_Integer_WaveNumber) / 4.00))))
 end
 
-function Trig_Armor_Break_Func002C()
+function Trig_Flak_Tower_Armor_Break_Func002C()
 if (not (GetUnitStateSwap(UNIT_STATE_MANA, udg_AOEDamageSource) >= 5.00)) then
 return false
 end
 return true
 end
 
-function Trig_Armor_Break_Actions()
+function Trig_Flak_Tower_Armor_Break_Actions()
 SetUnitManaBJ(udg_AOEDamageSource, (GetUnitStateSwap(UNIT_STATE_MANA, udg_AOEDamageSource) + 1.00))
-if (Trig_Armor_Break_Func002C()) then
-ForGroupBJ(udg_DamageEventAOEGroup, Trig_Armor_Break_Func002Func001A)
+if (Trig_Flak_Tower_Armor_Break_Func002C()) then
+ForGroupBJ(udg_DamageEventAOEGroup, Trig_Flak_Tower_Armor_Break_Func002Func001A)
 SetUnitManaBJ(udg_AOEDamageSource, 0.00)
 else
 end
 end
 
-function InitTrig_Armor_Break()
-gg_trg_Armor_Break = CreateTrigger()
-TriggerRegisterVariableEvent(gg_trg_Armor_Break, "udg_AOEDamageEvent", EQUAL, 1.00)
-TriggerAddCondition(gg_trg_Armor_Break, Condition(Trig_Armor_Break_Conditions))
-TriggerAddAction(gg_trg_Armor_Break, Trig_Armor_Break_Actions)
+function InitTrig_Flak_Tower_Armor_Break()
+gg_trg_Flak_Tower_Armor_Break = CreateTrigger()
+TriggerRegisterVariableEvent(gg_trg_Flak_Tower_Armor_Break, "udg_AOEDamageEvent", EQUAL, 1.00)
+TriggerAddCondition(gg_trg_Flak_Tower_Armor_Break, Condition(Trig_Flak_Tower_Armor_Break_Conditions))
+TriggerAddAction(gg_trg_Flak_Tower_Armor_Break, Trig_Flak_Tower_Armor_Break_Actions)
 end
 
 function Trig_Ballista_Tower_Enchanted_Bolts_Conditions()
@@ -12851,6 +12853,61 @@ TriggerAddCondition(gg_trg_Path_Teal_3, Condition(Trig_Path_Teal_3_Conditions))
 TriggerAddAction(gg_trg_Path_Teal_3, Trig_Path_Teal_3_Actions)
 end
 
+function Trig_Name_Fix_Func001Func003Func001Func003Func002C()
+if (not (udg_TempString[1] == "#")) then
+return false
+end
+return true
+end
+
+function Trig_Name_Fix_Func001Func003Func001C()
+if (not (GetPlayerName(GetEnumPlayer()) == "GenoHacker#2987")) then
+return false
+end
+return true
+end
+
+function Trig_Name_Fix_Func001Func003A()
+if (Trig_Name_Fix_Func001Func003Func001C()) then
+udg_PlayerName[GetConvertedPlayerId(GetEnumPlayer())] = ("[DEV] " .. "GenoHacker")
+else
+udg_TempPlayer = GetEnumPlayer()
+udg_TempString[0] = GetPlayerName(udg_TempPlayer)
+udg_NameLoop = 1
+while (true) do
+if (udg_NameLoop > StringLength(udg_TempString[0])) then break end
+udg_TempString[1] = SubStringBJ(udg_TempString[0], udg_NameLoop, udg_NameLoop)
+if (Trig_Name_Fix_Func001Func003Func001Func003Func002C()) then
+udg_PlayerName[GetConvertedPlayerId(udg_TempPlayer)] = SubStringBJ(udg_TempString[0], 1, (udg_NameLoop - 1))
+else
+udg_PlayerName[GetConvertedPlayerId(udg_TempPlayer)] = GetPlayerName(udg_TempPlayer)
+end
+udg_NameLoop = udg_NameLoop + 1
+end
+end
+end
+
+function Trig_Name_Fix_Func001C()
+if (not (GetPlayerName(Player(0)) == "WorldEdit")) then
+return false
+end
+return true
+end
+
+function Trig_Name_Fix_Actions()
+if (Trig_Name_Fix_Func001C()) then
+udg_PlayerName[1] = "WorldEdit"
+else
+ForForce(GetPlayersAll(), Trig_Name_Fix_Func001Func003A)
+end
+end
+
+function InitTrig_Name_Fix()
+gg_trg_Name_Fix = CreateTrigger()
+TriggerRegisterTimerEventSingle(gg_trg_Name_Fix, 0.50)
+TriggerAddAction(gg_trg_Name_Fix, Trig_Name_Fix_Actions)
+end
+
 function Trig_Create_the_Multiboard_Func014C()
 if (not (GetPlayerSlotState(Player(0)) == PLAYER_SLOT_STATE_LEFT)) then
 return false
@@ -12935,55 +12992,55 @@ bj_forLoopAIndex = 1
 bj_forLoopAIndexEnd = 10
 while (true) do
 if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
-MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 1, GetForLoopIndexA(), 9.00)
-MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 2, GetForLoopIndexA(), 5.00)
-MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 3, GetForLoopIndexA(), 5.00)
+MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 1, GetForLoopIndexA(), 11.00)
+MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 2, GetForLoopIndexA(), 4.00)
+MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 3, GetForLoopIndexA(), 4.50)
 bj_forLoopAIndex = bj_forLoopAIndex + 1
 end
 if (Trig_Create_the_Multiboard_Func014C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 2, (udg_String_Array_MultiBoardColours[1] .. "Left the Game|r"))
 else
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 2, (udg_String_Array_MultiBoardColours[1] .. ("#1 " .. (GetPlayerName(Player(0)) .. "|r"))))
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 2, (udg_String_Array_MultiBoardColours[1] .. ("1 " .. (udg_PlayerName[1] .. "|r"))))
 end
 if (Trig_Create_the_Multiboard_Func015C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 3, (udg_String_Array_MultiBoardColours[2] .. "Left the Game|r"))
 else
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 3, (udg_String_Array_MultiBoardColours[2] .. ("#2 " .. (GetPlayerName(Player(1)) .. "|r"))))
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 3, (udg_String_Array_MultiBoardColours[2] .. ("2 " .. (udg_PlayerName[2] .. "|r"))))
 end
 if (Trig_Create_the_Multiboard_Func016C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 4, (udg_String_Array_MultiBoardColours[3] .. "Left the Game|r"))
 else
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 4, (udg_String_Array_MultiBoardColours[3] .. ("#3 " .. (GetPlayerName(Player(2)) .. "|r"))))
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 4, (udg_String_Array_MultiBoardColours[3] .. ("3 " .. (udg_PlayerName[3] .. "|r"))))
 end
 if (Trig_Create_the_Multiboard_Func017C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 5, (udg_String_Array_MultiBoardColours[4] .. "Left the Game|r"))
 else
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 5, (udg_String_Array_MultiBoardColours[4] .. ("#4 " .. (GetPlayerName(Player(3)) .. "|r"))))
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 5, (udg_String_Array_MultiBoardColours[4] .. ("4 " .. (udg_PlayerName[4] .. "|r"))))
 end
 if (Trig_Create_the_Multiboard_Func018C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 6, (udg_String_Array_MultiBoardColours[5] .. "Left the Game|r"))
 else
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 6, (udg_String_Array_MultiBoardColours[5] .. ("#5 " .. (GetPlayerName(Player(4)) .. "|r"))))
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 6, (udg_String_Array_MultiBoardColours[5] .. ("5 " .. (udg_PlayerName[5] .. "|r"))))
 end
 if (Trig_Create_the_Multiboard_Func019C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 7, (udg_String_Array_MultiBoardColours[6] .. "Left the Game|r"))
 else
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 7, (udg_String_Array_MultiBoardColours[6] .. ("#6 " .. (GetPlayerName(Player(5)) .. "|r"))))
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 7, (udg_String_Array_MultiBoardColours[6] .. ("6 " .. (udg_PlayerName[6] .. "|r"))))
 end
 if (Trig_Create_the_Multiboard_Func020C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 8, (udg_String_Array_MultiBoardColours[7] .. "Left the Game|r"))
 else
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 8, (udg_String_Array_MultiBoardColours[7] .. ("#7 " .. (GetPlayerName(Player(6)) .. "|r"))))
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 8, (udg_String_Array_MultiBoardColours[7] .. ("7 " .. (udg_PlayerName[7] .. "|r"))))
 end
 if (Trig_Create_the_Multiboard_Func021C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 9, (udg_String_Array_MultiBoardColours[8] .. "Left the Game|r"))
 else
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 9, (udg_String_Array_MultiBoardColours[8] .. ("#8 " .. (GetPlayerName(Player(7)) .. "|r"))))
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 9, (udg_String_Array_MultiBoardColours[8] .. ("8 " .. (udg_PlayerName[8] .. "|r"))))
 end
 if (Trig_Create_the_Multiboard_Func022C()) then
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 10, (udg_String_Array_MultiBoardColours[9] .. "Left the Game|r"))
 else
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 10, (udg_String_Array_MultiBoardColours[9] .. ("#9 " .. (GetPlayerName(Player(8)) .. "|r"))))
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 10, (udg_String_Array_MultiBoardColours[9] .. ("9 " .. (udg_PlayerName[9] .. "|r"))))
 end
 bj_forLoopAIndex = 2
 bj_forLoopAIndexEnd = 10
@@ -16722,7 +16779,7 @@ function InitCustomTriggers()
 InitTrig_Damage_Engine_Config()
 InitTrig_Crit_System()
 InitTrig_Crit_Aura()
-InitTrig_Armor_Break()
+InitTrig_Flak_Tower_Armor_Break()
 InitTrig_Ballista_Tower_Enchanted_Bolts()
 InitTrig_Venom_Tower_Random_Target()
 InitTrig_Shrapnel_Tower_Shrapnel_Blast()
@@ -16851,6 +16908,7 @@ InitTrig_Path_Teal_Spawn()
 InitTrig_Path_Teal_1()
 InitTrig_Path_Teal_2()
 InitTrig_Path_Teal_3()
+InitTrig_Name_Fix()
 InitTrig_Create_the_Multiboard()
 InitTrig_Timer()
 InitTrig_Kill_Update()
