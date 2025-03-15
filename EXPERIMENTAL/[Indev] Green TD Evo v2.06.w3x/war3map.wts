@@ -583,7 +583,7 @@ STRING 93
 |c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
 |c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (both)|r
-
+|c0000ff00Ability (2):|r |c0077ff77Armor Break; Every 5 attacks will cause enemies to lose 1 + [Wave Number/4] armor.
 }
 
 STRING 94
@@ -4336,7 +4336,7 @@ STRING 677
 |c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
 |c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (both)|r
-
+|c0000ff00Ability (2):|r |c0077ff77Armor Break; Every 5 attacks will cause enemies to lose 1 + [Wave Number/4] armor.
 }
 
 STRING 678
@@ -4971,6 +4971,90 @@ STRING 773
 Attribute Bonus - [|cffffcc00Level 5|r]
 }
 
+STRING 778
+// Abilities: A00O (Armor Break), Name (Name)
+{
+Armor Break
+}
+
+STRING 779
+// Abilities: A00O (Armor Break), EditorSuffix (Editor Suffix)
+{
+[Flak Tower]
+}
+
+STRING 780
+// Abilities: A00O (Armor Break), Tip (Tooltip - Normal)
+{
+|c0000ff00Armor Break
+}
+
+STRING 782
+// Units: h00T (Flak Tower 6), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
+|c0000ff00Damage:|r |c0077ff775500 (both)
+|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
+|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (both)|r
+|c0000ff00Ability (2):|r |c0077ff77Armor Break; Every 5 attacks will cause enemies to lose 1 + [Wave Number/4] armor.
+}
+
+STRING 783
+// Units: h00Y (Flak Tower 7), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
+|c0000ff00Damage:|r |c0077ff778500 (both)
+|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
+|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (both)|r
+|c0000ff00Ability (2):|r |c0077ff77Armor Break; Every 5 attacks will cause enemies to lose 1 + [Wave Number/4] armor.
+}
+
+STRING 784
+// Units: h00Z (Flak Tower 8), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
+|c0000ff00Damage:|r |c0077ff7712250 (both)
+|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
+|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (both)|r
+|c0000ff00Ability (2):|r |c0077ff77Armor Break; Every 5 attacks will cause enemies to lose 1 + [Wave Number/4] armor.
+}
+
+STRING 785
+// Units: h010 (Flak Tower 9), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
+|c0000ff00Damage:|r |c0077ff7716500 (both)
+|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
+|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (both)|r
+|c0000ff00Ability (2):|r |c0077ff77Armor Break; Every 5 attacks will cause enemies to lose 1 + [Wave Number/4] armor.
+}
+
+STRING 786
+// Units: h011 (Mortar Team, Ultimate Flak Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
+|c0000ff00Damage:|r |c0077ff7721500 (both)
+|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
+|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 350 (both)|r
+|c0000ff00Ability (2):|r |c0077ff77Armor Break; Every 5 attacks will cause enemies to lose 1 + [Wave Number/4] armor.
+}
+
+STRING 787
+// Abilities: A00O (Armor Break), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Armor Break; Every 5 attacks will cause enemies to lose 1 + [Wave Number/4] armor.
+}
+
 STRING 789
 // Abilities: A03I (Attribute Bonus), Ubertip (Tooltip - Normal - Extended)
 {
@@ -4996,18 +5080,6 @@ STRING 896
 |c0000ff00Ability:|r |c0077ff77Ice Cage [Auto-Casted]
 |c0000ff00Armour Decrease:|r |c0077ff77-8
 |c0000ff00Duration:|r |c0077ff775 Seconds
-}
-
-STRING 897
-// Units: h00T (Flak Tower 6), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
-|c0000ff00Damage:|r |c0077ff775500 (both)
-|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
-|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (both)|r
-
 }
 
 STRING 898
@@ -20239,18 +20311,6 @@ STRING 3119
 |c0000ff00Frost Blast and Ice Cage - Level 1
 }
 
-STRING 3120
-// Units: h00Y (Flak Tower 7), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
-|c0000ff00Damage:|r |c0077ff778500 (both)
-|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
-|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (both)|r
-
-}
-
 STRING 3121
 // Abilities: A04N (Frost Blast and Ice Cage), Tip (Tooltip - Normal)
 {
@@ -20377,30 +20437,6 @@ STRING 3140
 // Abilities: A04M (Ice Cage), EditorSuffix (Editor Suffix)
 {
 [Frost Trap]
-}
-
-STRING 3141
-// Units: h00Z (Flak Tower 8), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
-|c0000ff00Damage:|r |c0077ff7712250 (both)
-|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
-|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (both)|r
-
-}
-
-STRING 3142
-// Units: h010 (Flak Tower 9), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
-|c0000ff00Damage:|r |c0077ff7716500 (both)
-|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
-|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (both)|r
-
 }
 
 STRING 3143
@@ -20588,17 +20624,6 @@ STRING 3168
 // Abilities: A04P (Doom), Tip (Tooltip - Normal)
 {
 Doom
-}
-
-STRING 3169
-// Units: h011 (Mortar Team, Ultimate Flak Tower), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
-|c0000ff00Damage:|r |c0077ff7721500 (both)
-|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
-|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 350 (both)|r
 }
 
 STRING 3170

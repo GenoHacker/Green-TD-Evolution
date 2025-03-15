@@ -128,7 +128,6 @@ udg_DamageEventTarget = nil
 udg_DamageEventPrevAmt = 0.0
 udg_LethalDamageEvent = 0.0
 udg_LethalDamageHP = 0.0
-udg_AOEDamageEvent = 0.0
 udg_AOEDamageSource = nil
 udg_DamageEventAOE = 0
 udg_DamageEventAOEGroup = nil
@@ -455,6 +454,7 @@ gg_snd_HeroLichPissed8 = nil
 gg_trg_Damage_Engine_Config = nil
 gg_trg_Crit_System = nil
 gg_trg_Crit_Aura = nil
+gg_trg_Armor_Break = nil
 gg_trg_Venom_Tower_Random_Target = nil
 gg_trg_Ballista_Tower_Enchanted_Bolts = nil
 gg_trg_Shrapnel_Tower_Shrapnel_Blast = nil
@@ -983,7 +983,7 @@ udg_DamageEventAmount = 0.0
 udg_DamageEventPrevAmt = 0.0
 udg_LethalDamageEvent = 0.0
 udg_LethalDamageHP = 0.0
-udg_AOEDamageEvent = 0.0
+globals.udg_AOEDamageEvent = 0.0
 udg_DamageEventAOE = 0
 udg_DamageEventAOEGroup = CreateGroup()
 udg_DamageEventLevel = 0
@@ -2260,6 +2260,20 @@ local t
 local life
 
 gg_unit_n00C_0019 = BlzCreateUnitWithSkin(p, FourCC("n00C"), -1792.0, 3392.0, 270.000, FourCC("n00C"))
+u = BlzCreateUnitWithSkin(p, FourCC("h00Q"), -1216.0, 2368.0, 270.000, FourCC("h00Q"))
+end
+
+function CreateUnitsForPlayer10()
+local p = Player(10)
+local u
+local unitID
+local t
+local life
+
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1806.4, 2529.8, 100.956, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1863.7, 2395.3, 308.132, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1850.5, 2238.2, 159.933, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1754.5, 2133.0, 151.990, FourCC("h01H"))
 end
 
 function CreateNeutralPassiveBuildings()
@@ -2437,6 +2451,7 @@ CreateBuildingsForPlayer0()
 end
 
 function CreatePlayerUnits()
+CreateUnitsForPlayer10()
 end
 
 function CreateAllUnits()
@@ -2803,6 +2818,74 @@ TriggerRegisterAnyUnitEventBJ(gg_trg_Crit_Aura, EVENT_PLAYER_UNIT_ATTACKED)
 TriggerAddAction(gg_trg_Crit_Aura, Trig_Crit_Aura_Actions)
 end
 
+function Trig_Armor_Break_Conditions()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A00O"), udg_AOEDamageSource) == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Armor_Break_Func002Func001A()
+BlzSetUnitArmor(GetEnumUnit(), (BlzGetUnitArmor(GetEnumUnit()) - (1.00 + (I2R(udg_Integer_WaveNumber) / 4.00))))
+end
+
+function Trig_Armor_Break_Func002C()
+if (not (GetUnitStateSwap(UNIT_STATE_MANA, udg_AOEDamageSource) >= 5.00)) then
+return false
+end
+return true
+end
+
+function Trig_Armor_Break_Actions()
+SetUnitManaBJ(udg_AOEDamageSource, (GetUnitStateSwap(UNIT_STATE_MANA, udg_AOEDamageSource) + 1.00))
+if (Trig_Armor_Break_Func002C()) then
+ForGroupBJ(udg_DamageEventAOEGroup, Trig_Armor_Break_Func002Func001A)
+SetUnitManaBJ(udg_AOEDamageSource, 0.00)
+else
+end
+end
+
+function InitTrig_Armor_Break()
+gg_trg_Armor_Break = CreateTrigger()
+TriggerRegisterVariableEvent(gg_trg_Armor_Break, "udg_AOEDamageEvent", EQUAL, 1.00)
+TriggerAddCondition(gg_trg_Armor_Break, Condition(Trig_Armor_Break_Conditions))
+TriggerAddAction(gg_trg_Armor_Break, Trig_Armor_Break_Actions)
+end
+
+function Trig_Ballista_Tower_Enchanted_Bolts_Conditions()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A03N"), udg_AOEDamageSource) == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Ballista_Tower_Enchanted_Bolts_Func003Func001A()
+udg_Real_Array_BallistaDistance[GetConvertedPlayerId(GetOwningPlayer(udg_AOEDamageSource))] = DistanceBetweenPoints(GetUnitLoc(udg_AOEDamageSource), GetUnitLoc(GetEnumUnit()))
+UnitDamageTargetBJ(udg_AOEDamageSource, GetEnumUnit(), (udg_Real_Array_BallistaDistance[GetConvertedPlayerId(GetOwningPlayer(udg_AOEDamageSource))] * I2R(udg_Integer_WaveNumber)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+end
+
+function Trig_Ballista_Tower_Enchanted_Bolts_Func003C()
+if (not (udg_Real_Array_EnchantedBoltChance[GetConvertedPlayerId(GetOwningPlayer(udg_AOEDamageSource))] <= 35.00)) then
+return false
+end
+return true
+end
+
+function Trig_Ballista_Tower_Enchanted_Bolts_Actions()
+udg_Real_Array_EnchantedBoltChance[GetConvertedPlayerId(GetOwningPlayer(udg_AOEDamageSource))] = GetRandomReal(0, 100.00)
+if (Trig_Ballista_Tower_Enchanted_Bolts_Func003C()) then
+ForGroupBJ(udg_DamageEventAOEGroup, Trig_Ballista_Tower_Enchanted_Bolts_Func003Func001A)
+else
+end
+end
+
+function InitTrig_Ballista_Tower_Enchanted_Bolts()
+gg_trg_Ballista_Tower_Enchanted_Bolts = CreateTrigger()
+TriggerRegisterVariableEvent(gg_trg_Ballista_Tower_Enchanted_Bolts, "udg_AOEDamageEvent", EQUAL, 1.00)
+TriggerAddCondition(gg_trg_Ballista_Tower_Enchanted_Bolts, Condition(Trig_Ballista_Tower_Enchanted_Bolts_Conditions))
+TriggerAddAction(gg_trg_Ballista_Tower_Enchanted_Bolts, Trig_Ballista_Tower_Enchanted_Bolts_Actions)
+end
+
 function Trig_Venom_Tower_Random_Target_Func001002002()
 return (GetUnitAbilityLevelSwapped(FourCC("A00Z"), GetFilterUnit()) == 1)
 end
@@ -2842,36 +2925,6 @@ TriggerRegisterTimerEventPeriodic(gg_trg_Venom_Tower_Random_Target, 0.50)
 TriggerAddAction(gg_trg_Venom_Tower_Random_Target, Trig_Venom_Tower_Random_Target_Actions)
 end
 
-function Trig_Ballista_Tower_Enchanted_Bolts_Conditions()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A03N"), udg_DamageEventSource) == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Ballista_Tower_Enchanted_Bolts_Func003C()
-if (not (udg_Real_Array_EnchantedBoltChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= 35.00)) then
-return false
-end
-return true
-end
-
-function Trig_Ballista_Tower_Enchanted_Bolts_Actions()
-udg_Real_Array_EnchantedBoltChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
-if (Trig_Ballista_Tower_Enchanted_Bolts_Func003C()) then
-udg_Real_Array_BallistaDistance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = DistanceBetweenPoints(GetUnitLoc(udg_DamageEventSource), GetUnitLoc(udg_DamageEventTarget))
-UnitDamageTargetBJ(udg_DamageEventSource, udg_DamageEventTarget, (udg_Real_Array_BallistaDistance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] * I2R(udg_Integer_WaveNumber)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
-else
-end
-end
-
-function InitTrig_Ballista_Tower_Enchanted_Bolts()
-gg_trg_Ballista_Tower_Enchanted_Bolts = CreateTrigger()
-TriggerRegisterVariableEvent(gg_trg_Ballista_Tower_Enchanted_Bolts, "udg_DamageEvent", EQUAL, 1.00)
-TriggerAddCondition(gg_trg_Ballista_Tower_Enchanted_Bolts, Condition(Trig_Ballista_Tower_Enchanted_Bolts_Conditions))
-TriggerAddAction(gg_trg_Ballista_Tower_Enchanted_Bolts, Trig_Ballista_Tower_Enchanted_Bolts_Actions)
-end
-
 function Trig_Shrapnel_Tower_Shrapnel_Blast_Conditions()
 if (not (GetUnitAbilityLevelSwapped(FourCC("A04I"), udg_DamageEventSource) == 1)) then
 return false
@@ -2890,7 +2943,7 @@ function Trig_Shrapnel_Tower_Shrapnel_Blast_Actions()
 udg_Real_Array_ShrapBlastChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0.00, 1000.00)
 if (Trig_Shrapnel_Tower_Shrapnel_Blast_Func002C()) then
 CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventTarget), bj_UNIT_FACING)
-UnitDamagePointLoc(GetLastCreatedUnit(), 0, 300.00, GetUnitLoc(udg_DamageEventTarget), (250.00 * (1 + BlzGetUnitArmor(udg_DamageEventTarget))), ATTACK_TYPE_PIERCE, DAMAGE_TYPE_NORMAL)
+UnitDamagePointLoc(GetLastCreatedUnit(), 0, 300.00, GetUnitLoc(udg_DamageEventTarget), (500.00 * (1 + BlzGetUnitArmor(udg_DamageEventTarget))), ATTACK_TYPE_PIERCE, DAMAGE_TYPE_NORMAL)
 UnitApplyTimedLifeBJ(0.50, FourCC("BTLF"), GetLastCreatedUnit())
 AddSpecialEffectLocBJ(GetUnitLoc(GetLastCreatedUnit()), "Abilities\\Spells\\NightElf\\FanOfKnives\\FanOfKnivesCaster.mdl")
 BlzSetSpecialEffectTimeScale(GetLastCreatedEffectBJ(), 2.00)
@@ -16669,8 +16722,9 @@ function InitCustomTriggers()
 InitTrig_Damage_Engine_Config()
 InitTrig_Crit_System()
 InitTrig_Crit_Aura()
-InitTrig_Venom_Tower_Random_Target()
+InitTrig_Armor_Break()
 InitTrig_Ballista_Tower_Enchanted_Bolts()
+InitTrig_Venom_Tower_Random_Target()
 InitTrig_Shrapnel_Tower_Shrapnel_Blast()
 InitTrig_Soul_Tower_Soul_Extraction()
 InitTrig_Soul_Tower_Minion_Remove_From_Group()
@@ -17073,5 +17127,6 @@ end
 globals(function(_ENV)
 udg_DamageEvent = 0.0
 udg_DamageModifierEvent = 0.0
+udg_AOEDamageEvent = 0.0
 end)
 
