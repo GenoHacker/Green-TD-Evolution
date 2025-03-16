@@ -575,7 +575,7 @@ STRING 92
 }
 
 STRING 93
-// Units: h00V (Flak Tower 4), Ubertip (Tooltip - Extended)
+// Units: h00V (Flak Tower 4: Mortar Team), Ubertip (Tooltip - Extended)
 {
 |c0000ff00Attack:|r |c0077ff77Siege
 |c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
@@ -1151,6 +1151,12 @@ STRING 154
 // Abilities: A034 (Food Bonus), Name (Name)
 {
 Food Bonus
+}
+
+STRING 155
+// Units: h00I (Enchanted Machine, Ultimate Glaive Tower ), Name (Name)
+{
+Enchanted Machine, Ultimate Glaive Tower 
 }
 
 STRING 156
@@ -2719,6 +2725,18 @@ STRING 407
 [Light] Dark Troll High Priest
 }
 
+STRING 408
+// Units: h00I (Enchanted Machine, Ultimate Glaive Tower ), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff7743000
+|c0000ff00Range:|r |c0077ff771000 (ground only)
+|c0000ff00Efficiency:|r |c0077ff771.73 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (ground only)|r
+|c0000ff00Ability (2):|r |c0077ff77Enchanted Glaives: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
+}
+
 STRING 409
 // Units: ndtw ([Light] Dark Troll Warlord), Name (Name)
 {
@@ -3365,6 +3383,12 @@ STRING 516
 // Units: nfrb ([Medium] Furbolg Tracker), Name (Name)
 {
 [Medium] Furbolg Tracker
+}
+
+STRING 517
+// Units: h00I (Enchanted Machine, Ultimate Glaive Tower ), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade to Enchanted Machine, Ultimate Glaive Tower.|r |cAAAAFFAAGlaive Tower 10.|r
 }
 
 STRING 518
@@ -4328,7 +4352,7 @@ Siege Tower 5: Skeletal Grunt
 }
 
 STRING 677
-// Units: h00J (Flak Tower 5), Ubertip (Tooltip - Extended)
+// Units: h00J (Flak Tower 5: Mortar Team), Ubertip (Tooltip - Extended)
 {
 |c0000ff00Attack:|r |c0077ff77Siege
 |c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
@@ -4971,6 +4995,36 @@ STRING 773
 Attribute Bonus - [|cffffcc00Level 5|r]
 }
 
+STRING 774
+// Units: h00L (Glaive Tower 7: Enchanted Machine), Name (Name)
+{
+Glaive Tower 7: Enchanted Machine
+}
+
+STRING 775
+// Units: h00L (Glaive Tower 7: Enchanted Machine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff7717000
+|c0000ff00Range:|r |c0077ff771000 (ground only)
+|c0000ff00Efficiency:|r |c0077ff771.50 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
+|c0000ff00Ability (2):|r |c0077ff77Enchanted Glaives: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
+}
+
+STRING 776
+// Units: h00L (Glaive Tower 7: Enchanted Machine), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade to Enchanted Machine.|r |cAAAAFFAAGlaive Tower 7.|r
+}
+
+STRING 777
+// Units: h00O (Glaive Tower 6: Enchanted Machine), Name (Name)
+{
+Glaive Tower 6: Enchanted Machine
+}
+
 STRING 778
 // Abilities: A00O (Armor Break), Name (Name)
 {
@@ -4989,8 +5043,20 @@ STRING 780
 |c0000ff00Armor Break
 }
 
+STRING 781
+// Units: h00O (Glaive Tower 6: Enchanted Machine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff7711000
+|c0000ff00Range:|r |c0077ff771000 (ground only)
+|c0000ff00Efficiency:|r |c0077ff771.41 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
+|c0000ff00Ability (2):|r |c0077ff77Enchanted Glaives: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
+}
+
 STRING 782
-// Units: h00T (Flak Tower 6), Ubertip (Tooltip - Extended)
+// Units: h00T (Flak Tower 6: Mortar Team), Ubertip (Tooltip - Extended)
 {
 |c0000ff00Attack:|r |c0077ff77Siege
 |c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
@@ -5002,7 +5068,7 @@ STRING 782
 }
 
 STRING 783
-// Units: h00Y (Flak Tower 7), Ubertip (Tooltip - Extended)
+// Units: h00Y (Flak Tower 7: Mortar Team), Ubertip (Tooltip - Extended)
 {
 |c0000ff00Attack:|r |c0077ff77Siege
 |c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
@@ -5014,7 +5080,7 @@ STRING 783
 }
 
 STRING 784
-// Units: h00Z (Flak Tower 8), Ubertip (Tooltip - Extended)
+// Units: h00Z (Flak Tower 8: Mortar Team), Ubertip (Tooltip - Extended)
 {
 |c0000ff00Attack:|r |c0077ff77Siege
 |c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
@@ -5026,7 +5092,7 @@ STRING 784
 }
 
 STRING 785
-// Units: h010 (Flak Tower 9), Ubertip (Tooltip - Extended)
+// Units: h010 (Flak Tower 9: Mortar Team), Ubertip (Tooltip - Extended)
 {
 |c0000ff00Attack:|r |c0077ff77Siege
 |c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
@@ -5055,10 +5121,166 @@ STRING 787
 |c0077ff77Armor Break; Every 5 attacks will cause enemies to lose 1 + [Wave Number/4] armor.
 }
 
+STRING 788
+// Units: h00O (Glaive Tower 6: Enchanted Machine), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade to Enchanted Machine.|r |cAAAAFFAAGlaive Tower 6.|r
+}
+
 STRING 789
 // Abilities: A03I (Attribute Bonus), Ubertip (Tooltip - Normal - Extended)
 {
 Gives a total of 2 points to Intelligence
+}
+
+STRING 790
+// Units: h00P (Glaive Tower 5: Enchanted Machine), Name (Name)
+{
+Glaive Tower 5: Enchanted Machine
+}
+
+STRING 791
+// Units: h00P (Glaive Tower 5: Enchanted Machine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff777000
+|c0000ff00Range:|r |c0077ff771000 (ground only)
+|c0000ff00Efficiency:|r |c0077ff771.32 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
+|c0000ff00Ability (2):|r |c0077ff77Enchanted Glaives: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
+}
+
+STRING 792
+// Units: h00P (Glaive Tower 5: Enchanted Machine), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade to Enchanted Machine.|r |cAAAAFFAAGlaive Tower 5.|r
+}
+
+STRING 793
+// Units: h00Q (Glaive Tower 4: Enchanted Machine), Name (Name)
+{
+Glaive Tower 4: Enchanted Machine
+}
+
+STRING 794
+// Units: h00Q (Glaive Tower 4: Enchanted Machine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff774000
+|c0000ff00Range:|r |c0077ff771000 (ground only)
+|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200 (ground only)|r
+|c0000ff00Ability (2):|r |c0077ff77Enchanted Glaives: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
+}
+
+STRING 795
+// Units: h00Q (Glaive Tower 4: Enchanted Machine), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade to Enchanted Machine.|r |cAAAAFFAAGlaive Tower 4.|r
+}
+
+STRING 796
+// Units: h00R (Glaive Tower 8: Enchanted Machine), Name (Name)
+{
+Glaive Tower 8: Enchanted Machine
+}
+
+STRING 797
+// Units: h00R (Glaive Tower 8: Enchanted Machine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff7724500
+|c0000ff00Range:|r |c0077ff771000 (ground only)
+|c0000ff00Efficiency:|r |c0077ff771.60 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
+|c0000ff00Ability (2):|r |c0077ff77Enchanted Glaives: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
+}
+
+STRING 798
+// Units: h00R (Glaive Tower 8: Enchanted Machine), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade to Enchanted Machine.|r |cAAAAFFAAGlaive Tower 8.|r
+}
+
+STRING 799
+// Units: h00S (Glaive Tower 9: Enchanted Machine), Name (Name)
+{
+Glaive Tower 9: Enchanted Machine
+}
+
+STRING 800
+// Units: h00S (Glaive Tower 9: Enchanted Machine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff7733000
+|c0000ff00Range:|r |c0077ff771000 (ground only)
+|c0000ff00Efficiency:|r |c0077ff771.67 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
+|c0000ff00Ability (2):|r |c0077ff77Enchanted Glaives: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
+}
+
+STRING 801
+// Units: h00S (Glaive Tower 9: Enchanted Machine), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade to Enchanted Machine.|r |cAAAAFFAAGlaive Tower 9.|r
+}
+
+STRING 802
+// Units: h00V (Flak Tower 4: Mortar Team), Name (Name)
+{
+Flak Tower 4: Mortar Team
+}
+
+STRING 803
+// Units: h00J (Flak Tower 5: Mortar Team), Name (Name)
+{
+Flak Tower 5: Mortar Team
+}
+
+STRING 804
+// Units: h00T (Flak Tower 6: Mortar Team), Name (Name)
+{
+Flak Tower 6: Mortar Team
+}
+
+STRING 805
+// Units: h00Y (Flak Tower 7: Mortar Team), Name (Name)
+{
+Flak Tower 7: Mortar Team
+}
+
+STRING 806
+// Units: h00Z (Flak Tower 8: Mortar Team), Name (Name)
+{
+Flak Tower 8: Mortar Team
+}
+
+STRING 807
+// Units: h010 (Flak Tower 9: Mortar Team), Name (Name)
+{
+Flak Tower 9: Mortar Team
+}
+
+STRING 808
+// Abilities: A03N (Enchanted Glaives), Name (Name)
+{
+Enchanted Glaives
+}
+
+STRING 809
+// Abilities: A03N (Enchanted Glaives), Tip (Tooltip - Normal)
+{
+|c0000ff00Enchanted Glaives
+}
+
+STRING 810
+// Abilities: A03N (Enchanted Glaives), EditorSuffix (Editor Suffix)
+{
+[Glaive Tower]
 }
 
 STRING 895
@@ -5674,18 +5896,6 @@ STRING 957
 
 }
 
-STRING 958
-// Units: h00L (Ballista Tower 7), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.50
-|c0000ff00Damage:|r |c0077ff7717000
-|c0000ff00Range:|r |c0077ff771000 (ground only)
-|c0000ff00Efficiency:|r |c0077ff771.50 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Enchanted Bolts: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
-}
-
 STRING 959
 // Abilities: A03K (Game Mode Descriptions), Ubertip (Tooltip - Normal - Extended)
 {
@@ -5702,18 +5912,6 @@ STRING 959
 |c0000ff00Speed Mode: |c0077ff77Movement speed for all enemy units is set to 500 and wave spawn timer is reduced by 5 seconds.
 
 |c0000ff00Blitz Mode: |c0077ff77Waves will spawn after the timer reaches 0 instead of waiting for the current wave to be killed.
-}
-
-STRING 960
-// Units: h00O (Ballista Tower 6), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.50
-|c0000ff00Damage:|r |c0077ff7711000
-|c0000ff00Range:|r |c0077ff771000 (ground only)
-|c0000ff00Efficiency:|r |c0077ff771.41 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Enchanted Bolts: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
 }
 
 STRING 961
@@ -6306,35 +6504,11 @@ STRING 1034
 Increases Attack Damage By 500
 }
 
-STRING 1035
-// Units: h00P (Ballista Tower 5), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.50
-|c0000ff00Damage:|r |c0077ff777000
-|c0000ff00Range:|r |c0077ff771000 (ground only)
-|c0000ff00Efficiency:|r |c0077ff771.32 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Enchanted Bolts: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
-}
-
 STRING 1036
 {
 Up to 3 towers can be disabled, each disabled tower increases Income by 2 Gold
 
 Different towers have different attack types, these attack types deal more damage to certain armour types.
-}
-
-STRING 1037
-// Units: h00Q (Ballista Tower 4), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.50
-|c0000ff00Damage:|r |c0077ff774000
-|c0000ff00Range:|r |c0077ff771000 (ground only)
-|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Enchanted Bolts: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
 }
 
 STRING 1038
@@ -6499,30 +6673,6 @@ STRING 1063
 STRING 1064
 {
 Below is a description of what towers do
-}
-
-STRING 1065
-// Units: h00R (Ballista Tower 8), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.50
-|c0000ff00Damage:|r |c0077ff7724500
-|c0000ff00Range:|r |c0077ff771000 (ground only)
-|c0000ff00Efficiency:|r |c0077ff771.60 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Enchanted Bolts: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
-}
-
-STRING 1066
-// Units: h00S (Ballista Tower 9), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.50
-|c0000ff00Damage:|r |c0077ff7733000
-|c0000ff00Range:|r |c0077ff771000 (ground only)
-|c0000ff00Efficiency:|r |c0077ff771.67 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Enchanted Bolts: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
 }
 
 STRING 1067
@@ -6825,7 +6975,7 @@ STRING 1098
 }
 
 STRING 1099
-// Abilities: A03N (Enchanted Bolts), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A03N (Enchanted Glaives), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff7735% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
 }
@@ -14899,7 +15049,7 @@ Blood Trap Attack Speed
 }
 
 STRING 2341
-// Units: h00V (Flak Tower 4), Tip (Tooltip - Basic)
+// Units: h00V (Flak Tower 4: Mortar Team), Tip (Tooltip - Basic)
 {
 |c0077ff77[C] |c0000ff00Upgrade To Mortar Team.|r |cAAAAFFAAFlak Tower 4.|r
 }
@@ -14936,12 +15086,6 @@ STRING 2343
 |c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
 }
 
-STRING 2344
-// Units: h00L (Ballista Tower 7), Name (Name)
-{
-Ballista Tower 7
-}
-
 STRING 2345
 // Units: e007 (Bouncing Tower 4: Makrura Tidal Lord), Hotkey (Hotkey)
 {
@@ -14952,12 +15096,6 @@ STRING 2346
 // Units: h017 (Venom Tower 5: Lizard), Name (Name)
 {
 Venom Tower 5: Lizard
-}
-
-STRING 2347
-// Units: h00O (Ballista Tower 6), Name (Name)
-{
-Ballista Tower 6
 }
 
 STRING 2348
@@ -14972,12 +15110,6 @@ STRING 2349
 |c0077ff77[X] |c0000ff00Upgrade To Frozen Obelisk.|r |cAAAAFFAAShard Tower 4.|r
 }
 
-STRING 2350
-// Units: h00P (Ballista Tower 5), Name (Name)
-{
-Ballista Tower 5
-}
-
 STRING 2351
 // Units: h01M (Venom Tower 6: Lizard), Name (Name)
 {
@@ -14988,12 +15120,6 @@ STRING 2352
 // Units: h01M (Venom Tower 6: Lizard), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Lizard.|r |cAAAAFFAAVenom Tower 6.|r
-}
-
-STRING 2353
-// Units: h00Q (Ballista Tower 4), Name (Name)
-{
-Ballista Tower 4
 }
 
 STRING 2354
@@ -15008,12 +15134,6 @@ STRING 2355
 Venom Tower 7: Lizard
 }
 
-STRING 2356
-// Units: h00R (Ballista Tower 8), Name (Name)
-{
-Ballista Tower 8
-}
-
 STRING 2357
 // Units: h01P (Venom Tower 7: Lizard), Tip (Tooltip - Basic)
 {
@@ -15024,12 +15144,6 @@ STRING 2358
 // Units: h02K (Hellfire Tower 6: Hell Shrine), Name (Name)
 {
 Hellfire Tower 6: Hell Shrine
-}
-
-STRING 2359
-// Units: h00S (Ballista Tower 9), Name (Name)
-{
-Ballista Tower 9
 }
 
 STRING 2360
@@ -15122,18 +15236,6 @@ STRING 2374
 Z
 }
 
-STRING 2375
-// Abilities: A03N (Enchanted Bolts), Name (Name)
-{
-Enchanted Bolts
-}
-
-STRING 2376
-// Units: h00V (Flak Tower 4), Name (Name)
-{
-Flak Tower 4
-}
-
 STRING 2377
 // Abilities: A01L (Venom 3), Tip (Tooltip - Normal)
 {
@@ -15147,27 +15249,15 @@ Z
 }
 
 STRING 2379
-// Units: h00J (Flak Tower 5), Tip (Tooltip - Basic)
+// Units: h00J (Flak Tower 5: Mortar Team), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Mortar Team.|r |cAAAAFFAAFlak Tower 5.|r
-}
-
-STRING 2380
-// Units: h00J (Flak Tower 5), Name (Name)
-{
-Flak Tower 5
 }
 
 STRING 2381
 // Abilities: A04T (Bloodstrike), Tip (Tooltip - Normal)
 {
 |c0000ff00Bloodstrike - Light
-}
-
-STRING 2382
-// Units: h00T (Flak Tower 6), Name (Name)
-{
-Flak Tower 6
 }
 
 STRING 2383
@@ -15177,15 +15267,9 @@ STRING 2383
 }
 
 STRING 2384
-// Units: h00T (Flak Tower 6), Tip (Tooltip - Basic)
+// Units: h00T (Flak Tower 6: Mortar Team), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Mortar Team.|r |cAAAAFFAAFlak Tower 6.|r
-}
-
-STRING 2385
-// Units: h00Y (Flak Tower 7), Name (Name)
-{
-Flak Tower 7
 }
 
 STRING 2386
@@ -15195,15 +15279,9 @@ STRING 2386
 }
 
 STRING 2387
-// Units: h00Y (Flak Tower 7), Tip (Tooltip - Basic)
+// Units: h00Y (Flak Tower 7: Mortar Team), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Mortar Team.|r |cAAAAFFAAFlak Tower 7.|r
-}
-
-STRING 2388
-// Units: h00Z (Flak Tower 8), Name (Name)
-{
-Flak Tower 8
 }
 
 STRING 2389
@@ -15213,15 +15291,9 @@ STRING 2389
 }
 
 STRING 2390
-// Units: h00Z (Flak Tower 8), Tip (Tooltip - Basic)
+// Units: h00Z (Flak Tower 8: Mortar Team), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Mortar Team.|r |cAAAAFFAAFlak Tower 8.|r
-}
-
-STRING 2391
-// Units: h010 (Flak Tower 9), Name (Name)
-{
-Flak Tower 9
 }
 
 STRING 2392
@@ -15231,7 +15303,7 @@ STRING 2392
 }
 
 STRING 2393
-// Units: h010 (Flak Tower 9), Tip (Tooltip - Basic)
+// Units: h010 (Flak Tower 9: Mortar Team), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Mortar Team.|r |cAAAAFFAAFlak Tower 9.|r
 }
@@ -15255,51 +15327,9 @@ STRING 2395
 }
 
 STRING 2396
-// Units: h00Q (Ballista Tower 4), Hotkey (Hotkey)
+// Units: h00Q (Glaive Tower 4: Enchanted Machine), Hotkey (Hotkey)
 {
 X
-}
-
-STRING 2397
-// Units: h00I (Watch Tower, Ultimate Ballista Tower), Tip (Tooltip - Basic)
-{
-|c0077ff77[Z] |c0000ff00Upgrade to Watch Tower, Ultimate Ballista Tower.|r |cAAAAFFAABallista Tower 10.|r
-}
-
-STRING 2398
-// Units: h00L (Ballista Tower 7), Tip (Tooltip - Basic)
-{
-|c0077ff77[Z] |c0000ff00Upgrade to Watch Tower.|r |cAAAAFFAABallista Tower 7.|r
-}
-
-STRING 2399
-// Units: h00O (Ballista Tower 6), Tip (Tooltip - Basic)
-{
-|c0077ff77[Z] |c0000ff00Upgrade to Watch Tower.|r |cAAAAFFAABallista Tower 6.|r
-}
-
-STRING 2400
-// Units: h00P (Ballista Tower 5), Tip (Tooltip - Basic)
-{
-|c0077ff77[Z] |c0000ff00Upgrade to Watch Tower.|r |cAAAAFFAABallista Tower 5.|r
-}
-
-STRING 2401
-// Units: h00Q (Ballista Tower 4), Tip (Tooltip - Basic)
-{
-|c0077ff77[X] |c0000ff00Upgrade to Watch Tower.|r |cAAAAFFAABallista Tower 4.|r
-}
-
-STRING 2402
-// Units: h00R (Ballista Tower 8), Tip (Tooltip - Basic)
-{
-|c0077ff77[Z] |c0000ff00Upgrade to Watch Tower.|r |cAAAAFFAABallista Tower 8.|r
-}
-
-STRING 2403
-// Units: h00S (Ballista Tower 9), Tip (Tooltip - Basic)
-{
-|c0077ff77[Z] |c0000ff00Upgrade to Watch Tower.|r |cAAAAFFAABallista Tower 9.|r
 }
 
 STRING 2404
@@ -15406,28 +15436,10 @@ STRING 2419
 maps.w3reforged.com
 }
 
-STRING 2420
-// Abilities: A03N (Enchanted Bolts), Tip (Tooltip - Normal)
-{
-|c0000ff00Enchanted Bolts
-}
-
 STRING 2421
 // Abilities: A04E (Multishot), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77The Shard Tower is able to attack 3 Enemies in one Attack.|r
-}
-
-STRING 2422
-// Units: h00I (Watch Tower, Ultimate Ballista Tower), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.50
-|c0000ff00Damage:|r |c0077ff7743000
-|c0000ff00Range:|r |c0077ff771000 (ground only)
-|c0000ff00Efficiency:|r |c0077ff771.73 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Enchanted Bolts: 35% Chance on hit to deal damage equal to 200% of the distance between the tower and the target as spell damage.
 }
 
 STRING 2423
@@ -16405,12 +16417,6 @@ STRING 2565
 // Units: n020 (Rocket Tower 4: War Machine), Tip (Tooltip - Basic)
 {
 |c0077ff77[X] |c0000ff00Upgrade To War Machine.|r |cAAAAFFAARocket Tower 4.|r
-}
-
-STRING 2566
-// Units: h00I (Watch Tower, Ultimate Ballista Tower), Name (Name)
-{
-Watch Tower, Ultimate Ballista Tower
 }
 
 STRING 2567
@@ -17586,6 +17592,7 @@ STRING 2730
 -- Changes to random wave units
 -- Changes to gambling
 -- Changes to terrain and doodads
+-- Changes to static wave units
 }
 
 STRING 2731
@@ -18979,12 +18986,6 @@ STRING 2935
 Z
 }
 
-STRING 2936
-// Abilities: A03N (Enchanted Bolts), EditorSuffix (Editor Suffix)
-{
-[Ballista Tower]
-}
-
 STRING 2937
 // Abilities: A04D (Frost Nova), EditorSuffix (Editor Suffix)
 {
@@ -19629,7 +19630,7 @@ Z
 }
 
 STRING 3035
-// Units: h00I (Watch Tower, Ultimate Ballista Tower), Hotkey (Hotkey)
+// Units: h00I (Enchanted Machine, Ultimate Glaive Tower ), Hotkey (Hotkey)
 {
 Z
 }
@@ -19851,13 +19852,13 @@ STRING 3064
 }
 
 STRING 3065
-// Units: h00L (Ballista Tower 7), Hotkey (Hotkey)
+// Units: h00L (Glaive Tower 7: Enchanted Machine), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 3066
-// Units: h00O (Ballista Tower 6), Hotkey (Hotkey)
+// Units: h00O (Glaive Tower 6: Enchanted Machine), Hotkey (Hotkey)
 {
 Z
 }
@@ -19869,19 +19870,19 @@ Rocket Damage
 }
 
 STRING 3068
-// Units: h00P (Ballista Tower 5), Hotkey (Hotkey)
+// Units: h00P (Glaive Tower 5: Enchanted Machine), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 3069
-// Units: h00R (Ballista Tower 8), Hotkey (Hotkey)
+// Units: h00R (Glaive Tower 8: Enchanted Machine), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 3070
-// Units: h00S (Ballista Tower 9), Hotkey (Hotkey)
+// Units: h00S (Glaive Tower 9: Enchanted Machine), Hotkey (Hotkey)
 {
 Z
 }
@@ -19893,7 +19894,7 @@ Increased Damage from Overdrive
 }
 
 STRING 3072
-// Units: h00J (Flak Tower 5), Hotkey (Hotkey)
+// Units: h00J (Flak Tower 5: Mortar Team), Hotkey (Hotkey)
 {
 Z
 }
@@ -20880,7 +20881,7 @@ STRING 3206
 }
 
 STRING 3207
-// Units: h00T (Flak Tower 6), Hotkey (Hotkey)
+// Units: h00T (Flak Tower 6: Mortar Team), Hotkey (Hotkey)
 {
 Z
 }
@@ -21447,13 +21448,13 @@ D
 }
 
 STRING 3266
-// Units: h00Y (Flak Tower 7), Hotkey (Hotkey)
+// Units: h00Y (Flak Tower 7: Mortar Team), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 3267
-// Units: h00Z (Flak Tower 8), Hotkey (Hotkey)
+// Units: h00Z (Flak Tower 8: Mortar Team), Hotkey (Hotkey)
 {
 Z
 }
@@ -22655,7 +22656,7 @@ STRING 4749
 {
 |c0000ff00Use the |c0077ff77Game Setup|r |c0000ff00unit to setup what gamemodes will be used.|r
 
-|c0000ff00Type |c0077ff77Use the ready ability on the Game Setup unit|r |c0000ff00when you have finished choosing gamemodes.|r
+|c0000ff00Use the |c0077ff77Ready|r |c0000ff00ability on the |c0077ff77Game Setup|r |c0000ff00unit when you have finished choosing gamemodes.|r
 }
 
 STRING 4807
@@ -23046,7 +23047,7 @@ V
 }
 
 STRING 5619
-// Units: h010 (Flak Tower 9), Hotkey (Hotkey)
+// Units: h010 (Flak Tower 9: Mortar Team), Hotkey (Hotkey)
 {
 Z
 }

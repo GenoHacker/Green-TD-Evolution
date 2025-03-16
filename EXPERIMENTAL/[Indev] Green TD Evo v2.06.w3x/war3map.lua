@@ -245,8 +245,8 @@ udg_Real_Array_SkillCritDamage = __jarray(0.0)
 udg_Integer_Array_HeroCritLevel = __jarray(0)
 udg_UnitGroup_VenomGroup = nil
 udg_UnitGroup_VenomRandomUnit = nil
-udg_Real_Array_BallistaDistance = __jarray(0.0)
-udg_Real_Array_EnchantedBoltChance = __jarray(0.0)
+udg_Real_Array_GlaiveDistance = __jarray(0.0)
+udg_Real_Array_EnchantGlaiveChance = __jarray(0.0)
 udg_Real_Array_SoulTowerChance = __jarray(0.0)
 udg_Real_Array_SoulTowerDamage = __jarray(0.0)
 udg_UnitGroup_Array_SoulTowerUnits = {}
@@ -459,6 +459,7 @@ gg_trg_Damage_Engine_Config = nil
 gg_trg_Crit_System = nil
 gg_trg_Crit_Aura = nil
 gg_trg_Flak_Tower_Armor_Break = nil
+gg_trg_Glaive_Tower_Enchanted_Glaives = nil
 gg_trg_Venom_Tower_Random_Target = nil
 gg_trg_Shrapnel_Tower_Shrapnel_Blast = nil
 gg_trg_Soul_Tower_Soul_Extraction = nil
@@ -665,7 +666,6 @@ gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
-gg_trg_Ballista_Tower_Enchanted_Bolts = nil
 function InitGlobals()
 local i = 0
 
@@ -1185,13 +1185,13 @@ udg_UnitGroup_VenomRandomUnit = CreateGroup()
 i = 0
 while (true) do
 if ((i > 1)) then break end
-udg_Real_Array_BallistaDistance[i] = 0.0
+udg_Real_Array_GlaiveDistance[i] = 0.0
 i = i + 1
 end
 i = 0
 while (true) do
 if ((i > 1)) then break end
-udg_Real_Array_EnchantedBoltChance[i] = 0.0
+udg_Real_Array_EnchantGlaiveChance[i] = 0.0
 i = i + 1
 end
 i = 0
@@ -2854,38 +2854,38 @@ TriggerAddCondition(gg_trg_Flak_Tower_Armor_Break, Condition(Trig_Flak_Tower_Arm
 TriggerAddAction(gg_trg_Flak_Tower_Armor_Break, Trig_Flak_Tower_Armor_Break_Actions)
 end
 
-function Trig_Ballista_Tower_Enchanted_Bolts_Conditions()
+function Trig_Glaive_Tower_Enchanted_Glaives_Conditions()
 if (not (GetUnitAbilityLevelSwapped(FourCC("A03N"), udg_AOEDamageSource) == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Ballista_Tower_Enchanted_Bolts_Func003Func001A()
-udg_Real_Array_BallistaDistance[GetConvertedPlayerId(GetOwningPlayer(udg_AOEDamageSource))] = DistanceBetweenPoints(GetUnitLoc(udg_AOEDamageSource), GetUnitLoc(GetEnumUnit()))
-UnitDamageTargetBJ(udg_AOEDamageSource, GetEnumUnit(), (udg_Real_Array_BallistaDistance[GetConvertedPlayerId(GetOwningPlayer(udg_AOEDamageSource))] * I2R(udg_Integer_WaveNumber)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+function Trig_Glaive_Tower_Enchanted_Glaives_Func003Func001A()
+udg_Real_Array_GlaiveDistance[GetConvertedPlayerId(GetOwningPlayer(udg_AOEDamageSource))] = DistanceBetweenPoints(GetUnitLoc(udg_AOEDamageSource), GetUnitLoc(GetEnumUnit()))
+UnitDamageTargetBJ(udg_AOEDamageSource, GetEnumUnit(), (udg_Real_Array_GlaiveDistance[GetConvertedPlayerId(GetOwningPlayer(udg_AOEDamageSource))] * I2R(udg_Integer_WaveNumber)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
 end
 
-function Trig_Ballista_Tower_Enchanted_Bolts_Func003C()
-if (not (udg_Real_Array_EnchantedBoltChance[GetConvertedPlayerId(GetOwningPlayer(udg_AOEDamageSource))] <= 35.00)) then
+function Trig_Glaive_Tower_Enchanted_Glaives_Func003C()
+if (not (udg_Real_Array_EnchantGlaiveChance[GetConvertedPlayerId(GetOwningPlayer(udg_AOEDamageSource))] <= 35.00)) then
 return false
 end
 return true
 end
 
-function Trig_Ballista_Tower_Enchanted_Bolts_Actions()
-udg_Real_Array_EnchantedBoltChance[GetConvertedPlayerId(GetOwningPlayer(udg_AOEDamageSource))] = GetRandomReal(0, 100.00)
-if (Trig_Ballista_Tower_Enchanted_Bolts_Func003C()) then
-ForGroupBJ(udg_DamageEventAOEGroup, Trig_Ballista_Tower_Enchanted_Bolts_Func003Func001A)
+function Trig_Glaive_Tower_Enchanted_Glaives_Actions()
+udg_Real_Array_EnchantGlaiveChance[GetConvertedPlayerId(GetOwningPlayer(udg_AOEDamageSource))] = GetRandomReal(0, 100.00)
+if (Trig_Glaive_Tower_Enchanted_Glaives_Func003C()) then
+ForGroupBJ(udg_DamageEventAOEGroup, Trig_Glaive_Tower_Enchanted_Glaives_Func003Func001A)
 else
 end
 end
 
-function InitTrig_Ballista_Tower_Enchanted_Bolts()
-gg_trg_Ballista_Tower_Enchanted_Bolts = CreateTrigger()
-TriggerRegisterVariableEvent(gg_trg_Ballista_Tower_Enchanted_Bolts, "udg_AOEDamageEvent", EQUAL, 1.00)
-TriggerAddCondition(gg_trg_Ballista_Tower_Enchanted_Bolts, Condition(Trig_Ballista_Tower_Enchanted_Bolts_Conditions))
-TriggerAddAction(gg_trg_Ballista_Tower_Enchanted_Bolts, Trig_Ballista_Tower_Enchanted_Bolts_Actions)
+function InitTrig_Glaive_Tower_Enchanted_Glaives()
+gg_trg_Glaive_Tower_Enchanted_Glaives = CreateTrigger()
+TriggerRegisterVariableEvent(gg_trg_Glaive_Tower_Enchanted_Glaives, "udg_AOEDamageEvent", EQUAL, 1.00)
+TriggerAddCondition(gg_trg_Glaive_Tower_Enchanted_Glaives, Condition(Trig_Glaive_Tower_Enchanted_Glaives_Conditions))
+TriggerAddAction(gg_trg_Glaive_Tower_Enchanted_Glaives, Trig_Glaive_Tower_Enchanted_Glaives_Actions)
 end
 
 function Trig_Venom_Tower_Random_Target_Func001002002()
@@ -3840,53 +3840,24 @@ TriggerRegisterPlayerChatEvent(gg_trg_Kick_Gray, Player(0), "-kick grey", true)
 TriggerAddAction(gg_trg_Kick_Gray, Trig_Kick_Gray_Actions)
 end
 
-function Trig_Set_Variables_Func289001()
-return (GetPlayerSlotState(Player(0)) == PLAYER_SLOT_STATE_PLAYING)
+function Trig_Set_Variables_Func289Func001C()
+if (not (GetPlayerSlotState(ConvertedPlayer(GetForLoopIndexA())) == PLAYER_SLOT_STATE_PLAYING)) then
+return false
+end
+return true
 end
 
-function Trig_Set_Variables_Func290001()
-return (GetPlayerSlotState(Player(1)) == PLAYER_SLOT_STATE_PLAYING)
-end
-
-function Trig_Set_Variables_Func291001()
-return (GetPlayerSlotState(Player(2)) == PLAYER_SLOT_STATE_PLAYING)
-end
-
-function Trig_Set_Variables_Func292001()
-return (GetPlayerSlotState(Player(3)) == PLAYER_SLOT_STATE_PLAYING)
-end
-
-function Trig_Set_Variables_Func293001()
-return (GetPlayerSlotState(Player(4)) == PLAYER_SLOT_STATE_PLAYING)
-end
-
-function Trig_Set_Variables_Func294001()
-return (GetPlayerSlotState(Player(5)) == PLAYER_SLOT_STATE_PLAYING)
-end
-
-function Trig_Set_Variables_Func295001()
-return (GetPlayerSlotState(Player(6)) == PLAYER_SLOT_STATE_PLAYING)
-end
-
-function Trig_Set_Variables_Func296001()
-return (GetPlayerSlotState(Player(7)) == PLAYER_SLOT_STATE_PLAYING)
-end
-
-function Trig_Set_Variables_Func297001()
-return (GetPlayerSlotState(Player(8)) == PLAYER_SLOT_STATE_PLAYING)
-end
-
-function Trig_Set_Variables_Func298Func003C()
+function Trig_Set_Variables_Func290Func003C()
 if (not (GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_LEFT)) then
 return false
 end
 return true
 end
 
-function Trig_Set_Variables_Func298A()
+function Trig_Set_Variables_Func290A()
 udg_String_Array_PlayerNames[GetConvertedPlayerId(GetEnumPlayer())] = (udg_String_Array_MultiBoardColours[GetConvertedPlayerId(GetEnumPlayer())] .. (GetPlayerName(GetEnumPlayer()) .. "|r"))
 udg_Real_Array_CameraDistance[GetConvertedPlayerId(GetEnumPlayer())] = 2500.00
-if (Trig_Set_Variables_Func298Func003C()) then
+if (Trig_Set_Variables_Func290Func003C()) then
 ForceRemovePlayerSimple(GetEnumPlayer(), udg_PlayerGroup_Permanent[1])
 else
 udg_Integer_Players = (udg_Integer_Players + 1)
@@ -4175,52 +4146,18 @@ udg_String_Array_TowerEnabled[GetForLoopIndexA()] = "|c0077ff77Enabled"
 udg_Integer_Array_TowerOption[GetForLoopIndexA()] = 1
 bj_forLoopAIndex = bj_forLoopAIndex + 1
 end
-if (Trig_Set_Variables_Func289001()) then
-ForceAddPlayerSimple(Player(0), udg_PlayerGroup_Permanent[1])
+bj_forLoopAIndex = 1
+bj_forLoopAIndexEnd = 9
+while (true) do
+if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
+if (Trig_Set_Variables_Func289Func001C()) then
+ForceAddPlayerSimple(ConvertedPlayer(GetForLoopIndexA()), udg_PlayerGroup_Permanent[1])
 else
-DoNothing()
+udg_PlayerName[GetForLoopIndexA()] = "N/A"
 end
-if (Trig_Set_Variables_Func290001()) then
-ForceAddPlayerSimple(Player(1), udg_PlayerGroup_Permanent[1])
-else
-DoNothing()
+bj_forLoopAIndex = bj_forLoopAIndex + 1
 end
-if (Trig_Set_Variables_Func291001()) then
-ForceAddPlayerSimple(Player(2), udg_PlayerGroup_Permanent[1])
-else
-DoNothing()
-end
-if (Trig_Set_Variables_Func292001()) then
-ForceAddPlayerSimple(Player(3), udg_PlayerGroup_Permanent[1])
-else
-DoNothing()
-end
-if (Trig_Set_Variables_Func293001()) then
-ForceAddPlayerSimple(Player(4), udg_PlayerGroup_Permanent[1])
-else
-DoNothing()
-end
-if (Trig_Set_Variables_Func294001()) then
-ForceAddPlayerSimple(Player(5), udg_PlayerGroup_Permanent[1])
-else
-DoNothing()
-end
-if (Trig_Set_Variables_Func295001()) then
-ForceAddPlayerSimple(Player(6), udg_PlayerGroup_Permanent[1])
-else
-DoNothing()
-end
-if (Trig_Set_Variables_Func296001()) then
-ForceAddPlayerSimple(Player(7), udg_PlayerGroup_Permanent[1])
-else
-DoNothing()
-end
-if (Trig_Set_Variables_Func297001()) then
-ForceAddPlayerSimple(Player(8), udg_PlayerGroup_Permanent[1])
-else
-DoNothing()
-end
-ForForce(udg_PlayerGroup_Permanent[1], Trig_Set_Variables_Func298A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Set_Variables_Func290A)
 udg_Real_Array_MessageTime[1] = 60.00
 end
 
@@ -6207,6 +6144,7 @@ end
 
 function Trig_Start_Messages_Actions()
 DisplayTimedTextToForce(bj_FORCE_PLAYER[0], 120.00, "TRIGSTR_4749")
+SelectUnitAddForPlayer(gg_unit_n00C_0019, Player(0))
 udg_PlayerGroup_StartMsg = GetPlayersAllies(Player(0))
 ForceRemovePlayerSimple(Player(0), udg_PlayerGroup_StartMsg)
 DisplayTimedTextToForce(udg_PlayerGroup_StartMsg, 120.00, (("|c0000ff00Welcome, To|r |c0077ff77Green TD Evolution.|r |c0000ff00Please wait whilst |r" .. udg_String_Array_PlayerNames[1]) .. " |c0000ff00Chooses what game options will be used.|r"))
@@ -12853,22 +12791,22 @@ TriggerAddCondition(gg_trg_Path_Teal_3, Condition(Trig_Path_Teal_3_Conditions))
 TriggerAddAction(gg_trg_Path_Teal_3, Trig_Path_Teal_3_Actions)
 end
 
-function Trig_Name_Fix_Func001Func003Func001Func003Func002C()
+function Trig_Name_Fix_Func001Func001Func003Func002C()
 if (not (udg_TempString[1] == "#")) then
 return false
 end
 return true
 end
 
-function Trig_Name_Fix_Func001Func003Func001C()
+function Trig_Name_Fix_Func001Func001C()
 if (not (GetPlayerName(GetEnumPlayer()) == "GenoHacker#2987")) then
 return false
 end
 return true
 end
 
-function Trig_Name_Fix_Func001Func003A()
-if (Trig_Name_Fix_Func001Func003Func001C()) then
+function Trig_Name_Fix_Func001A()
+if (Trig_Name_Fix_Func001Func001C()) then
 udg_PlayerName[GetConvertedPlayerId(GetEnumPlayer())] = ("[DEV] " .. "GenoHacker")
 else
 udg_TempPlayer = GetEnumPlayer()
@@ -12877,34 +12815,23 @@ udg_NameLoop = 1
 while (true) do
 if (udg_NameLoop > StringLength(udg_TempString[0])) then break end
 udg_TempString[1] = SubStringBJ(udg_TempString[0], udg_NameLoop, udg_NameLoop)
-if (Trig_Name_Fix_Func001Func003Func001Func003Func002C()) then
+if (Trig_Name_Fix_Func001Func001Func003Func002C()) then
 udg_PlayerName[GetConvertedPlayerId(udg_TempPlayer)] = SubStringBJ(udg_TempString[0], 1, (udg_NameLoop - 1))
 else
-udg_PlayerName[GetConvertedPlayerId(udg_TempPlayer)] = GetPlayerName(udg_TempPlayer)
+udg_PlayerName[GetConvertedPlayerId(udg_TempPlayer)] = udg_TempString[0]
 end
 udg_NameLoop = udg_NameLoop + 1
 end
 end
 end
 
-function Trig_Name_Fix_Func001C()
-if (not (GetPlayerName(Player(0)) == "WorldEdit")) then
-return false
-end
-return true
-end
-
 function Trig_Name_Fix_Actions()
-if (Trig_Name_Fix_Func001C()) then
-udg_PlayerName[1] = "WorldEdit"
-else
-ForForce(GetPlayersAll(), Trig_Name_Fix_Func001Func003A)
-end
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Name_Fix_Func001A)
 end
 
 function InitTrig_Name_Fix()
 gg_trg_Name_Fix = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Name_Fix, 0.50)
+TriggerRegisterTimerEventSingle(gg_trg_Name_Fix, 0.10)
 TriggerAddAction(gg_trg_Name_Fix, Trig_Name_Fix_Actions)
 end
 
@@ -13267,7 +13194,7 @@ end
 
 function Trig_Player_Update_Game_Start_Func001A()
 if (Trig_Player_Update_Game_Start_Func001Func001C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, (GetConvertedPlayerId(GetEnumPlayer()) + 1), (udg_String_Array_MultiBoardColours[GetConvertedPlayerId(GetEnumPlayer())] .. "Not Playing|r"))
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, (GetConvertedPlayerId(GetEnumPlayer()) + 1), (udg_String_Array_MultiBoardColours[GetConvertedPlayerId(GetEnumPlayer())] .. "N/A|r"))
 else
 end
 end
@@ -16780,7 +16707,7 @@ InitTrig_Damage_Engine_Config()
 InitTrig_Crit_System()
 InitTrig_Crit_Aura()
 InitTrig_Flak_Tower_Armor_Break()
-InitTrig_Ballista_Tower_Enchanted_Bolts()
+InitTrig_Glaive_Tower_Enchanted_Glaives()
 InitTrig_Venom_Tower_Random_Target()
 InitTrig_Shrapnel_Tower_Shrapnel_Blast()
 InitTrig_Soul_Tower_Soul_Extraction()
