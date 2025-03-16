@@ -220,11 +220,6 @@ STRING 36
 Endless Mode
 }
 
-STRING 37
-{
-|cff0080FFChoose Modes: |r
-}
-
 STRING 38
 // Units: nbzw ([Air] Bronze Dragon Whelp), Name (Name)
 {
@@ -5283,6 +5278,48 @@ STRING 810
 [Glaive Tower]
 }
 
+STRING 818
+// Abilities: A04Z (Gold Bonus), Name (Name)
+{
+Gold Bonus
+}
+
+STRING 819
+// Abilities: A04Z (Gold Bonus), Tip (Tooltip - Normal)
+{
+|c0077ff77[D]|r |c0000ff00Gold Bonus
+}
+
+STRING 820
+// Abilities: A04Z (Gold Bonus), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Gives all players |cffFDD017[100 x Wave Number]|c0077ff77 Gold
+
+Base amount reduced by |cffFDD01710|c0077ff77 each time this bonus is taken. Can be taken up to |cffFDD0175|c0077ff77 times across all players.
+}
+
+STRING 821
+// Abilities: A03R (Income Bonus), EditorSuffix (Editor Suffix)
+{
+[Learn]
+}
+
+STRING 822
+// Abilities: A01M (Raise Dead), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 823
+{
+Max Level Reached
+}
+
+STRING 824
+{
+|cff0080FFChoose Modes: |r
+}
+
 STRING 895
 // Abilities: A01V (Emergency Bouncing Tower), EditorSuffix (Editor Suffix)
 {
@@ -5648,7 +5685,7 @@ STRING 931
 }
 
 STRING 932
-// Abilities: A01M (Raise Dead), Hotkey (Hotkey - Normal)
+// Abilities: A01M (Raise Dead), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -7202,7 +7239,7 @@ A
 }
 
 STRING 1123
-// Abilities: A03R (Income Bonus), EditorSuffix (Editor Suffix)
+// Abilities: A03T (Emergency Towers), EditorSuffix (Editor Suffix)
 {
 [Learn]
 }
@@ -7231,7 +7268,7 @@ STRING 1127
 }
 
 STRING 1128
-// Abilities: A03T (Emergency Towers), EditorSuffix (Editor Suffix)
+// Abilities: A04V (Exp Bonus), EditorSuffix (Editor Suffix)
 {
 [Learn]
 }
@@ -7499,7 +7536,7 @@ STRING 1179
 }
 
 STRING 1180
-// Abilities: A04V (Exp Bonus), EditorSuffix (Editor Suffix)
+// Abilities: A04W (Gamble Bonus), EditorSuffix (Editor Suffix)
 {
 [Learn]
 }
@@ -10173,7 +10210,7 @@ Gamble Bonus
 }
 
 STRING 1619
-// Abilities: A04W (Gamble Bonus), EditorSuffix (Editor Suffix)
+// Abilities: A04Z (Gold Bonus), EditorSuffix (Editor Suffix)
 {
 [Learn]
 }
@@ -13493,7 +13530,7 @@ STRING 2119
 }
 
 STRING 2120
-// Abilities: A01M (Raise Dead), Unhotkey (Hotkey - Turn Off)
+// Abilities: A015 (Emergency Frost Tower), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -13871,13 +13908,13 @@ STRING 2165
 }
 
 STRING 2166
-// Abilities: A015 (Emergency Frost Tower), Hotkey (Hotkey - Normal)
+// Abilities: A01X (Emergency Frost Tower), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 2167
-// Abilities: A01X (Emergency Frost Tower), Hotkey (Hotkey - Normal)
+// Abilities: A025 (Clear), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -13895,19 +13932,19 @@ Z
 }
 
 STRING 2170
-// Abilities: A025 (Clear), Hotkey (Hotkey - Normal)
-{
-D
-}
-
-STRING 2171
 // Abilities: A02E (Very Hard Mode), Hotkey (Hotkey - Normal)
 {
 D
 }
 
-STRING 2172
+STRING 2171
 // Abilities: A02X (Disable Research Tower), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 2172
+// Abilities: A00Y (Blitz Mode), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -17573,6 +17610,7 @@ STRING 2730
 -- Switched from JASS scripting to LUA Scripting
 -- Added Bribes LUA Damage Engine
 -- Added Custom Crit System, Critical Aura, Crit Bonus
+-- Added Gold Bonus
 -- Added more easter eggs
 -- Added several new towers
 -- Added new abilities to existing towers
@@ -20362,7 +20400,7 @@ STRING 3128
 }
 
 STRING 3129
-// Abilities: A00Y (Blitz Mode), Hotkey (Hotkey - Normal)
+// Abilities: A04V (Exp Bonus), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -20406,7 +20444,7 @@ STRING 3134
 }
 
 STRING 3135
-// Abilities: A04V (Exp Bonus), Hotkey (Hotkey - Normal)
+// Abilities: A04Z (Gold Bonus), Hotkey (Hotkey - Normal)
 {
 D
 }
