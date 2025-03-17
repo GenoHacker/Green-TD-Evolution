@@ -564,11 +564,6 @@ STRING 91
 HH Damage Reduction Aura Passive
 }
 
-STRING 92
-{
-|cff0080FFGame Ends In: |r
-}
-
 STRING 93
 // Units: h00V (Flak Tower 4: Mortar Team), Ubertip (Tooltip - Extended)
 {
@@ -1219,11 +1214,6 @@ F
 STRING 167
 {
 Aura Upgraded
-}
-
-STRING 168
-{
-|c0000ff00You Have |c00FF0000Lost!|r |c0000ff00Game will end in 60 seconds, you may also type |c0077ff77-restart|r |c0000ff00to restart the game.|r
 }
 
 STRING 169
@@ -5318,6 +5308,26 @@ Max Level Reached
 STRING 824
 {
 |cff0080FFChoose Modes: |r
+}
+
+STRING 825
+{
+|cff0080FFGame Ends In: |r
+}
+
+STRING 826
+{
+|c0000ff00You Have |c00FF0000Lost!|r |c0000ff00Game will end in 60 seconds, you may also type |c0077ff77-restart|r |c0000ff00to restart the game.|r
+}
+
+STRING 827
+{
+|cff0080FFGame Ends In: |r
+}
+
+STRING 828
+{
+|c0000ff00You Have |c00FF0000Lost!|r |c0000ff00Game will end in 60 seconds, you may also type |c0077ff77-restart|r |c0000ff00to restart the game.|r
 }
 
 STRING 895
@@ -17631,6 +17641,7 @@ STRING 2730
 -- Changes to gambling
 -- Changes to terrain and doodads
 -- Changes to static wave units
+-- Changes to life system
 }
 
 STRING 2731
