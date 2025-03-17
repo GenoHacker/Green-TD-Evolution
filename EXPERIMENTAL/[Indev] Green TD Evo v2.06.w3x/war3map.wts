@@ -5330,6 +5330,154 @@ STRING 828
 |c0000ff00You Have |c00FF0000Lost!|r |c0000ff00Game will end in 60 seconds, you may also type |c0077ff77-restart|r |c0000ff00to restart the game.|r
 }
 
+STRING 829
+{
+No more Upgrades
+}
+
+STRING 830
+{
+Aura Upgraded
+}
+
+STRING 831
+// Abilities: A050 (Gold Aura), Tip (Tooltip - Normal)
+{
+|c00FF0000Inactive |c0000ff00Gold Aura
+}
+
+STRING 832
+// Abilities: A050 (Gold Aura), Name (Name)
+{
+Gold Aura
+}
+
+STRING 833
+// Abilities: A050 (Gold Aura), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Gold Aura is currently |c00FF0000Inactive
+}
+
+STRING 834
+// Abilities: A050 (Gold Aura), Tip (Tooltip - Normal)
+{
+|c0000ff00Gold Aura 1
+}
+
+STRING 835
+// Abilities: A050 (Gold Aura), Tip (Tooltip - Normal)
+{
+|c0000ff00Gold Aura 2
+}
+
+STRING 836
+// Abilities: A050 (Gold Aura), Tip (Tooltip - Normal)
+{
+|c0000ff00Gold Aura 3
+}
+
+STRING 837
+// Abilities: A050 (Gold Aura), Tip (Tooltip - Normal)
+{
+|c0000ff00Gold Aura 4
+}
+
+STRING 838
+// Abilities: A050 (Gold Aura), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff7720% chance for enemies affected by this aura to give an extra 1 to 5 gold when killed
+}
+
+STRING 839
+// Abilities: A050 (Gold Aura), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff7730% chance for enemies affected by this aura to give an extra 2 to 10 gold when killed
+}
+
+STRING 840
+// Abilities: A050 (Gold Aura), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff7740% chance for enemies affected by this aura to give an extra 4 to 15 gold when killed
+}
+
+STRING 841
+// Abilities: A050 (Gold Aura), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff7750% chance for enemies affected by this aura to give an extra 8 to 20 gold when killed
+}
+
+STRING 842
+// Abilities: A050 (Gold Aura), EditorSuffix (Editor Suffix)
+{
+[Aura Tower]
+}
+
+STRING 843
+// Abilities: A051 (Upgrade Gold Aura), Name (Name)
+{
+Upgrade Gold Aura
+}
+
+STRING 844
+// Abilities: A051 (Upgrade Gold Aura), Tip (Tooltip - Normal)
+{
+|c0077ff77[S]|r |c0000ff00Upgrade Gold Aura
+}
+
+STRING 845
+// Abilities: A051 (Upgrade Gold Aura), Ubertip (Tooltip - Normal - Extended)
+{
+|c0000ff00Upgrades the Speed Aura.
+
+|c0000ff00Gold Cost / Chance / Extra Gold
+|c0000ff00Level 1: |c0077ff77500 / 20% / 1 to 5
+|c0000ff00Level 2: |c0077ff772000 / 30% / 2 to 10
+|c0000ff00Level 3: |c0077ff773500 / 40% / 4 to 15
+|c0000ff00Level 4: |c0077ff776000 / 50% / 8 to 20
+}
+
+STRING 846
+// Abilities: A051 (Upgrade Gold Aura), EditorSuffix (Editor Suffix)
+{
+[Aura Spellbook]
+}
+
+STRING 847
+// Buffs/Effects: B004 (), Bufftip (Tooltip)
+{
+Gold Aura
+}
+
+STRING 848
+// Buffs/Effects: B004 (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Gold Aura; it has a chance to give extra gold when killed.
+}
+
+STRING 849
+// Upgrades: R006 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 850
+// Units: h048 (Chipped Amethyst), EditorSuffix (Name - Editor Suffix)
+{
+Gem TD Easter Egg
+}
+
+STRING 851
+// Abilities: A002 (Aura Upgrades), Tip (Tooltip - Normal)
+{
+|c0077ff77[V] |c0000ff00Aura Upgrades
+}
+
+STRING 852
+// Abilities: A002 (Aura Upgrades), Hotkey (Hotkey - Normal)
+{
+V
+}
+
 STRING 895
 // Abilities: A01V (Emergency Bouncing Tower), EditorSuffix (Editor Suffix)
 {
@@ -7317,12 +7465,6 @@ STRING 1134
 {
 Changelog -- v2.04a
 
-}
-
-STRING 1135
-// Abilities: A002 (Aura Upgrades), Tip (Tooltip - Normal)
-{
-|c0077ff77[R] |c0000ff00Aura Upgrades
 }
 
 STRING 1136
@@ -21461,7 +21603,7 @@ Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict 
 }
 
 STRING 3262
-// Abilities: A002 (Aura Upgrades), Hotkey (Hotkey - Normal)
+// Abilities: A005 (Upgrade Crippling Aura), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -23440,7 +23582,7 @@ STRING 6094
 }
 
 STRING 6364
-// Abilities: A005 (Upgrade Crippling Aura), Hotkey (Hotkey - Normal)
+// Abilities: A02G (Normal - Chaos Mode), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -25186,7 +25328,7 @@ Emergency Air Tower
 }
 
 STRING 8190
-// Abilities: A02G (Normal - Chaos Mode), Hotkey (Hotkey - Normal)
+// Abilities: A02S (Disable Chaos Tower), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -25426,7 +25568,7 @@ STRING 8238
 }
 
 STRING 8239
-// Upgrades: R006 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A051 (Upgrade Gold Aura), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -25474,7 +25616,7 @@ STRING 8246
 }
 
 STRING 8247
-// Abilities: A02S (Disable Chaos Tower), Hotkey (Hotkey - Normal)
+// Abilities: A030 (Random Waves), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -25606,12 +25748,6 @@ STRING 8717
 }
 
 STRING 8739
-// Abilities: A030 (Random Waves), Hotkey (Hotkey - Normal)
-{
-R
-}
-
-STRING 8743
 // Abilities: A034 (Food Bonus), Hotkey (Hotkey - Normal)
 {
 R

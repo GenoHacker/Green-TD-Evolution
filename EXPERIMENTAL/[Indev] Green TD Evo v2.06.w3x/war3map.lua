@@ -671,6 +671,7 @@ gg_trg_Lose_Life_New = nil
 gg_trg_Lose_Condition_New = nil
 gg_trg_Lose_Life = nil
 gg_trg_Lose_Condition = nil
+gg_trg_Gold_Aura = nil
 function InitGlobals()
 local i = 0
 
@@ -2285,17 +2286,7 @@ local t
 local life
 
 gg_unit_n00C_0019 = BlzCreateUnitWithSkin(p, FourCC("n00C"), -1792.0, 3392.0, 270.000, FourCC("n00C"))
-u = BlzCreateUnitWithSkin(p, FourCC("h034"), -1280.0, 1856.0, 270.000, FourCC("h034"))
-end
-
-function CreateUnitsForPlayer10()
-local p = Player(10)
-local u
-local unitID
-local t
-local life
-
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1761.6, 1814.2, 80.100, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h00G"), -1408.0, 2880.0, 270.000, FourCC("h00G"))
 end
 
 function CreateNeutralPassiveBuildings()
@@ -2473,7 +2464,6 @@ CreateBuildingsForPlayer0()
 end
 
 function CreatePlayerUnits()
-CreateUnitsForPlayer10()
 end
 
 function CreateAllUnits()
@@ -13219,7 +13209,7 @@ TriggerAddAction(gg_trg_Gold_Update, Trig_Gold_Update_Actions)
 end
 
 function Trig_Wave_and_Lives_Update_Actions()
-MultiboardSetTitleText(GetLastCreatedMultiboard(), (("[Wave = " .. (I2S(udg_Integer_WaveNumber) .. "] - ")) .. ("[Lives Left = " .. (R2S(udg_Real_Lives) .. "%]"))))
+MultiboardSetTitleText(GetLastCreatedMultiboard(), (("[Wave = " .. (I2S(udg_Integer_WaveNumber) .. "] - ")) .. ("[Lives = " .. (R2S(udg_Real_Lives) .. "%]"))))
 end
 
 function InitTrig_Wave_and_Lives_Update()
@@ -16760,6 +16750,56 @@ TriggerAddCondition(gg_trg_Critical_Aura, Condition(Trig_Critical_Aura_Condition
 TriggerAddAction(gg_trg_Critical_Aura, Trig_Critical_Aura_Actions)
 end
 
+function Trig_Gold_Aura_Conditions()
+if (not (GetSpellAbilityId() == FourCC("A051"))) then
+return false
+end
+return true
+end
+
+function Trig_Gold_Aura_Func003Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A050"), GetTriggerUnit()) >= 5)) then
+return false
+end
+return true
+end
+
+function Trig_Gold_Aura_Func003C()
+if (not (GetPlayerState(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD) < GetUnitUserData(GetTriggerUnit()))) then
+return false
+end
+return true
+end
+
+function Trig_Gold_Aura_Actions()
+SetUnitUserData(GetTriggerUnit(), udg_Integer_Array_AuraGoldCost[GetUnitAbilityLevelSwapped(FourCC("A050"), GetTriggerUnit())])
+if (Trig_Gold_Aura_Func003C()) then
+CreateTextTagUnitBJ(("You Need " .. (I2S(GetUnitUserData(GetTriggerUnit())) .. " To Upgrade")), GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
+else
+if (Trig_Gold_Aura_Func003Func001C()) then
+CreateTextTagUnitBJ("TRIGSTR_829", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
+else
+IncUnitAbilityLevelSwapped(FourCC("A050"), GetTriggerUnit())
+SetPlayerStateBJ(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD, (GetPlayerState(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD) - GetUnitUserData(GetTriggerUnit())))
+SetUnitUserData(GetTriggerUnit(), udg_Integer_Array_AuraGoldCost[GetUnitAbilityLevelSwapped(FourCC("A050"), GetTriggerUnit())])
+CreateTextTagUnitBJ("TRIGSTR_830", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
+end
+end
+SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
+SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
+SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
+SetTextTagLifespanBJ(GetLastCreatedTextTag(), 3.00)
+ShowTextTagForceBJ(false, GetLastCreatedTextTag(), GetPlayersAll())
+ShowTextTagForceBJ(true, GetLastCreatedTextTag(), GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())))
+end
+
+function InitTrig_Gold_Aura()
+gg_trg_Gold_Aura = CreateTrigger()
+TriggerRegisterAnyUnitEventBJ(gg_trg_Gold_Aura, EVENT_PLAYER_UNIT_SPELL_CAST)
+TriggerAddCondition(gg_trg_Gold_Aura, Condition(Trig_Gold_Aura_Conditions))
+TriggerAddAction(gg_trg_Gold_Aura, Trig_Gold_Aura_Actions)
+end
+
 function InitCustomTriggers()
 InitTrig_Damage_Engine_Config()
 InitTrig_Crit_System()
@@ -16962,6 +17002,7 @@ InitTrig_Armor_Aura()
 InitTrig_Crippling_Aura()
 InitTrig_Speed_Aura()
 InitTrig_Critical_Aura()
+InitTrig_Gold_Aura()
 end
 
 function RunInitializationTriggers()
