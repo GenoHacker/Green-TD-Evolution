@@ -5268,6 +5268,48 @@ STRING 810
 [Glaive Tower]
 }
 
+STRING 811
+// Buffs/Effects: B004 (Gold Aura 4), EditorName (Name (Editor Only))
+{
+Gold Aura 4
+}
+
+STRING 812
+// Buffs/Effects: B005 (Gold Aura 1), Bufftip (Tooltip)
+{
+Gold Aura
+}
+
+STRING 813
+// Buffs/Effects: B005 (Gold Aura 1), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Gold Aura; it has a chance to give extra gold when killed.
+}
+
+STRING 814
+// Buffs/Effects: B005 (Gold Aura 1), EditorName (Name (Editor Only))
+{
+Gold Aura 1
+}
+
+STRING 815
+// Buffs/Effects: B006 (Gold Aura 2), Bufftip (Tooltip)
+{
+Gold Aura
+}
+
+STRING 816
+// Buffs/Effects: B006 (Gold Aura 2), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Gold Aura; it has a chance to give extra gold when killed.
+}
+
+STRING 817
+// Buffs/Effects: B006 (Gold Aura 2), EditorName (Name (Editor Only))
+{
+Gold Aura 2
+}
+
 STRING 818
 // Abilities: A04Z (Gold Bonus), Name (Name)
 {
@@ -5341,73 +5383,67 @@ Aura Upgraded
 }
 
 STRING 831
-// Abilities: A050 (Gold Aura), Tip (Tooltip - Normal)
+// Abilities: A052 (Gold Aura), Tip (Tooltip - Normal)
 {
 |c00FF0000Inactive |c0000ff00Gold Aura
 }
 
 STRING 832
-// Abilities: A050 (Gold Aura), Name (Name)
+// Abilities: A052 (Gold Aura), Name (Name)
 {
 Gold Aura
 }
 
 STRING 833
-// Abilities: A050 (Gold Aura), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A052 (Gold Aura), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Gold Aura is currently |c00FF0000Inactive
 }
 
 STRING 834
-// Abilities: A050 (Gold Aura), Tip (Tooltip - Normal)
+// Abilities: A052 (Gold Aura), Tip (Tooltip - Normal)
 {
 |c0000ff00Gold Aura 1
 }
 
 STRING 835
-// Abilities: A050 (Gold Aura), Tip (Tooltip - Normal)
+// Abilities: A052 (Gold Aura), Tip (Tooltip - Normal)
 {
 |c0000ff00Gold Aura 2
 }
 
 STRING 836
-// Abilities: A050 (Gold Aura), Tip (Tooltip - Normal)
+// Abilities: A052 (Gold Aura), Tip (Tooltip - Normal)
 {
 |c0000ff00Gold Aura 3
 }
 
-STRING 837
-// Abilities: A050 (Gold Aura), Tip (Tooltip - Normal)
-{
-|c0000ff00Gold Aura 4
-}
-
 STRING 838
-// Abilities: A050 (Gold Aura), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A052 (Gold Aura), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff7720% chance for enemies affected by this aura to give an extra 1 to 5 gold when killed
 }
 
 STRING 839
-// Abilities: A050 (Gold Aura), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A052 (Gold Aura), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff7730% chance for enemies affected by this aura to give an extra 2 to 10 gold when killed
 }
 
 STRING 840
-// Abilities: A050 (Gold Aura), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A052 (Gold Aura), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff7740% chance for enemies affected by this aura to give an extra 4 to 15 gold when killed
 }
 
 STRING 841
-// Abilities: A050 (Gold Aura), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A052 (Gold Aura), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff7750% chance for enemies affected by this aura to give an extra 8 to 20 gold when killed
 }
 
 STRING 842
-// Abilities: A050 (Gold Aura), EditorSuffix (Editor Suffix)
+// Abilities: A00D (Speed Aura), EditorSuffix (Editor Suffix)
 {
 [Aura Tower]
 }
@@ -5437,25 +5473,25 @@ STRING 845
 }
 
 STRING 846
-// Abilities: A051 (Upgrade Gold Aura), EditorSuffix (Editor Suffix)
+// Abilities: A00F (Upgrade Speed Aura), EditorSuffix (Editor Suffix)
 {
 [Aura Spellbook]
 }
 
 STRING 847
-// Buffs/Effects: B004 (), Bufftip (Tooltip)
+// Buffs/Effects: B004 (Gold Aura 4), Bufftip (Tooltip)
 {
 Gold Aura
 }
 
 STRING 848
-// Buffs/Effects: B004 (), Buffubertip (Tooltip - Extended)
+// Buffs/Effects: B004 (Gold Aura 4), Buffubertip (Tooltip - Extended)
 {
 This unit is under the effects of Gold Aura; it has a chance to give extra gold when killed.
 }
 
 STRING 849
-// Upgrades: R006 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A01W (Emergency Chaos Tower), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -5473,9 +5509,33 @@ STRING 851
 }
 
 STRING 852
-// Abilities: A002 (Aura Upgrades), Hotkey (Hotkey - Normal)
+// Abilities: A01T (Emergency Bouncing Tower), Hotkey (Hotkey - Normal)
 {
 V
+}
+
+STRING 853
+// Buffs/Effects: B007 (Gold Aura 3), Bufftip (Tooltip)
+{
+Gold Aura
+}
+
+STRING 854
+// Buffs/Effects: B007 (Gold Aura 3), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Gold Aura; it has a chance to give extra gold when killed.
+}
+
+STRING 855
+// Buffs/Effects: B007 (Gold Aura 3), EditorName (Name (Editor Only))
+{
+Gold Aura 3
+}
+
+STRING 857
+// Abilities: A052 (Gold Aura), Tip (Tooltip - Normal)
+{
+|c0000ff00Gold Aura 3
 }
 
 STRING 895
@@ -13751,7 +13811,7 @@ STRING 2127
 }
 
 STRING 2128
-// Abilities: A01W (Emergency Chaos Tower), Hotkey (Hotkey - Normal)
+// Abilities: A029 (Boss Waves), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -18336,19 +18396,19 @@ STRING 2820
 }
 
 STRING 2821
-// Abilities: A00D (Speed Aura), EditorSuffix (Editor Suffix)
-{
-[Aura Tower]
-}
-
-STRING 2822
 // Abilities: A014 (Damage Aura), EditorSuffix (Editor Suffix)
 {
 [Aura Tower]
 }
 
-STRING 2823
+STRING 2822
 // Abilities: A017 (Armour Aura), EditorSuffix (Editor Suffix)
+{
+[Aura Tower]
+}
+
+STRING 2823
+// Abilities: A02C (Crippling Aura), EditorSuffix (Editor Suffix)
 {
 [Aura Tower]
 }
@@ -18623,7 +18683,7 @@ STRING 2863
 }
 
 STRING 2864
-// Abilities: A02C (Crippling Aura), EditorSuffix (Editor Suffix)
+// Abilities: A002 (Aura Upgrades), EditorSuffix (Editor Suffix)
 {
 [Aura Tower]
 }
@@ -18653,13 +18713,13 @@ STRING 2867
 }
 
 STRING 2868
-// Abilities: A002 (Aura Upgrades), EditorSuffix (Editor Suffix)
+// Abilities: A00Q (Critical Aura), EditorSuffix (Editor Suffix)
 {
 [Aura Tower]
 }
 
 STRING 2869
-// Abilities: A00F (Upgrade Speed Aura), EditorSuffix (Editor Suffix)
+// Abilities: A005 (Upgrade Crippling Aura), EditorSuffix (Editor Suffix)
 {
 [Aura Spellbook]
 }
@@ -18671,13 +18731,13 @@ Spirit Tower 7: Winter Beacon
 }
 
 STRING 2871
-// Abilities: A005 (Upgrade Crippling Aura), EditorSuffix (Editor Suffix)
+// Abilities: A00H (Upgrade Armor Aura), EditorSuffix (Editor Suffix)
 {
 [Aura Spellbook]
 }
 
 STRING 2872
-// Abilities: A00H (Upgrade Armor Aura), EditorSuffix (Editor Suffix)
+// Abilities: A00I (Upgrade Damage Aura), EditorSuffix (Editor Suffix)
 {
 [Aura Spellbook]
 }
@@ -18689,7 +18749,7 @@ Spirit Tower 8: Winter Beacon
 }
 
 STRING 2874
-// Abilities: A00I (Upgrade Damage Aura), EditorSuffix (Editor Suffix)
+// Abilities: A00R (Upgrade Critical Aura), EditorSuffix (Editor Suffix)
 {
 [Aura Spellbook]
 }
@@ -19046,7 +19106,7 @@ Q
 }
 
 STRING 2921
-// Abilities: A00Q (Critical Aura), EditorSuffix (Editor Suffix)
+// Abilities: A052 (Gold Aura), EditorSuffix (Editor Suffix)
 {
 [Aura Tower]
 }
@@ -19064,7 +19124,7 @@ Q
 }
 
 STRING 2924
-// Abilities: A00R (Upgrade Critical Aura), EditorSuffix (Editor Suffix)
+// Abilities: A051 (Upgrade Gold Aura), EditorSuffix (Editor Suffix)
 {
 [Aura Spellbook]
 }
@@ -20559,7 +20619,7 @@ D
 }
 
 STRING 3130
-// Abilities: A029 (Boss Waves), Hotkey (Hotkey - Normal)
+// Abilities: A02T (Disable Poison Tower), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -21862,7 +21922,7 @@ STRING 3301
 }
 
 STRING 3321
-// Abilities: A01T (Emergency Bouncing Tower), Hotkey (Hotkey - Normal)
+// Abilities: A01V (Emergency Bouncing Tower), Hotkey (Hotkey - Normal)
 {
 V
 }
@@ -22725,13 +22785,13 @@ Unstuck
 }
 
 STRING 4334
-// Abilities: A02T (Disable Poison Tower), Hotkey (Hotkey - Normal)
+// Abilities: A033 (Speed Mode), Hotkey (Hotkey - Normal)
 {
 S
 }
 
 STRING 4335
-// Abilities: A033 (Speed Mode), Hotkey (Hotkey - Normal)
+// Abilities: A032 (Hard - Chaos Mode), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -23208,13 +23268,13 @@ Spell Tower 2: Shaman
 }
 
 STRING 5597
-// Abilities: A032 (Hard - Chaos Mode), Hotkey (Hotkey - Normal)
+// Abilities: A04W (Gamble Bonus), Hotkey (Hotkey - Normal)
 {
 S
 }
 
 STRING 5598
-// Abilities: A04W (Gamble Bonus), Hotkey (Hotkey - Normal)
+// Abilities: A051 (Upgrade Gold Aura), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -23232,7 +23292,7 @@ F
 }
 
 STRING 5611
-// Abilities: A01V (Emergency Bouncing Tower), Hotkey (Hotkey - Normal)
+// Abilities: A002 (Aura Upgrades), Hotkey (Hotkey - Normal)
 {
 V
 }
@@ -25568,7 +25628,7 @@ STRING 8238
 }
 
 STRING 8239
-// Abilities: A051 (Upgrade Gold Aura), Hotkey (Hotkey - Normal)
+// Upgrades: R006 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 S
 }

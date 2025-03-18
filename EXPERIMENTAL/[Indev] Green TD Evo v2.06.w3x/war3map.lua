@@ -126,7 +126,6 @@ udg_DamageEventAmount = 0.0
 udg_DamageEventSource = nil
 udg_DamageEventTarget = nil
 udg_DamageEventPrevAmt = 0.0
-udg_LethalDamageEvent = 0.0
 udg_LethalDamageHP = 0.0
 udg_AOEDamageSource = nil
 udg_DamageEventAOE = 0
@@ -379,6 +378,10 @@ udg_PlayerName = __jarray("")
 udg_Integer_GoldBonus = 0
 udg_Real_HealthToLives = 0.0
 udg_Real_Lives = 0.0
+udg_Integer_Array_GoldAuraChance = __jarray(0)
+udg_Integer_GoldAuraPlayerNumber = 0
+udg_Player_GoldAuraPlayer = nil
+udg_Integer_GoldAuraAmount = 0
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -503,7 +506,11 @@ gg_trg_Make_Creeps_Vulnerable = nil
 gg_trg_Remove_Hero = nil
 gg_trg_Selling_Towers = nil
 gg_trg_Add_Sell_Ability = nil
+gg_trg_Lose_Condition = nil
+gg_trg_Lose_Condition_New = nil
 gg_trg_Defeat_Timer = nil
+gg_trg_Lose_Life = nil
+gg_trg_Lose_Life_New = nil
 gg_trg_Lose_Life_Animation_Effect = nil
 gg_trg_WinGame = nil
 gg_trg_Tabaho = nil
@@ -598,6 +605,7 @@ gg_trg_Player_Update_Game_Start = nil
 gg_trg_Next_Wave_and_Current_Wave_Update = nil
 gg_trg_Player_Leave_Gold_Split = nil
 gg_trg_Test_Trigger = nil
+gg_trg_Restart = nil
 gg_trg_Game_Setup_Ownership = nil
 gg_trg_Camera_Zoom_Command = nil
 gg_trg_Camera_Zoom_Increments = nil
@@ -657,6 +665,7 @@ gg_trg_Armor_Aura = nil
 gg_trg_Crippling_Aura = nil
 gg_trg_Speed_Aura = nil
 gg_trg_Critical_Aura = nil
+gg_trg_Gold_Aura = nil
 gg_unit_n00C_0019 = nil
 gg_unit_n015_0010 = nil
 gg_unit_n00D_0042 = nil
@@ -666,12 +675,7 @@ gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
-gg_trg_Restart = nil
-gg_trg_Lose_Life_New = nil
-gg_trg_Lose_Condition_New = nil
-gg_trg_Lose_Life = nil
-gg_trg_Lose_Condition = nil
-gg_trg_Gold_Aura = nil
+gg_trg_Gold_Aura_Extra_Gold = nil
 function InitGlobals()
 local i = 0
 
@@ -992,7 +996,7 @@ globals.udg_DamageEvent = 0.0
 globals.udg_DamageModifierEvent = 0.0
 udg_DamageEventAmount = 0.0
 udg_DamageEventPrevAmt = 0.0
-udg_LethalDamageEvent = 0.0
+globals.udg_LethalDamageEvent = 0.0
 udg_LethalDamageHP = 0.0
 globals.udg_AOEDamageEvent = 0.0
 udg_DamageEventAOE = 0
@@ -1435,6 +1439,14 @@ end
 udg_Integer_GoldBonus = 100
 udg_Real_HealthToLives = 0.0
 udg_Real_Lives = 100.00
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Integer_Array_GoldAuraChance[i] = 0
+i = i + 1
+end
+udg_Integer_GoldAuraPlayerNumber = 0
+udg_Integer_GoldAuraAmount = 0
 end
 
 --Global Initialization 1.1 also hooks the InitCustomTriggers and RunInitializationTriggers functions
@@ -16070,6 +16082,116 @@ TriggerAddCondition(gg_trg_Iron_Trap_Clockwerk_Kaboom, Condition(Trig_Iron_Trap_
 TriggerAddAction(gg_trg_Iron_Trap_Clockwerk_Kaboom, Trig_Iron_Trap_Clockwerk_Kaboom_Actions)
 end
 
+function Trig_Gold_Aura_Extra_Gold_Func006C()
+if (UnitHasBuffBJ(udg_DamageEventTarget, FourCC("B005")) == true) then
+return true
+end
+if (UnitHasBuffBJ(udg_DamageEventTarget, FourCC("B006")) == true) then
+return true
+end
+if (UnitHasBuffBJ(udg_DamageEventTarget, FourCC("B007")) == true) then
+return true
+end
+if (UnitHasBuffBJ(udg_DamageEventTarget, FourCC("B004")) == true) then
+return true
+end
+return false
+end
+
+function Trig_Gold_Aura_Extra_Gold_Conditions()
+if (not Trig_Gold_Aura_Extra_Gold_Func006C()) then
+return false
+end
+return true
+end
+
+function Trig_Gold_Aura_Extra_Gold_Func004Func001Func001Func001C()
+if (not (UnitHasBuffBJ(udg_DamageEventTarget, FourCC("B004")) == true)) then
+return false
+end
+if (not (udg_Integer_Array_GoldAuraChance[udg_Integer_GoldAuraPlayerNumber] <= 50)) then
+return false
+end
+return true
+end
+
+function Trig_Gold_Aura_Extra_Gold_Func004Func001Func001C()
+if (not (UnitHasBuffBJ(udg_DamageEventTarget, FourCC("B007")) == true)) then
+return false
+end
+if (not (udg_Integer_Array_GoldAuraChance[udg_Integer_GoldAuraPlayerNumber] <= 40)) then
+return false
+end
+return true
+end
+
+function Trig_Gold_Aura_Extra_Gold_Func004Func001C()
+if (not (UnitHasBuffBJ(udg_DamageEventTarget, FourCC("B006")) == true)) then
+return false
+end
+if (not (udg_Integer_Array_GoldAuraChance[udg_Integer_GoldAuraPlayerNumber] <= 30)) then
+return false
+end
+return true
+end
+
+function Trig_Gold_Aura_Extra_Gold_Func004C()
+if (not (UnitHasBuffBJ(udg_DamageEventTarget, FourCC("B005")) == true)) then
+return false
+end
+if (not (udg_Integer_Array_GoldAuraChance[udg_Integer_GoldAuraPlayerNumber] <= 20)) then
+return false
+end
+return true
+end
+
+function Trig_Gold_Aura_Extra_Gold_Func005C()
+if (not (udg_Integer_GoldAuraAmount >= 1)) then
+return false
+end
+return true
+end
+
+function Trig_Gold_Aura_Extra_Gold_Actions()
+udg_Integer_GoldAuraPlayerNumber = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
+udg_Player_GoldAuraPlayer = ConvertedPlayer(udg_Integer_GoldAuraPlayerNumber)
+udg_Integer_Array_GoldAuraChance[udg_Integer_GoldAuraPlayerNumber] = GetRandomInt(1, 100)
+if (Trig_Gold_Aura_Extra_Gold_Func004C()) then
+udg_Integer_GoldAuraAmount = GetRandomInt(1, 5)
+else
+if (Trig_Gold_Aura_Extra_Gold_Func004Func001C()) then
+udg_Integer_GoldAuraAmount = GetRandomInt(2, 10)
+else
+if (Trig_Gold_Aura_Extra_Gold_Func004Func001Func001C()) then
+udg_Integer_GoldAuraAmount = GetRandomInt(4, 15)
+else
+if (Trig_Gold_Aura_Extra_Gold_Func004Func001Func001Func001C()) then
+udg_Integer_GoldAuraAmount = GetRandomInt(8, 20)
+else
+end
+end
+end
+end
+if (Trig_Gold_Aura_Extra_Gold_Func005C()) then
+AdjustPlayerStateBJ(udg_Integer_GoldAuraAmount, udg_Player_GoldAuraPlayer, PLAYER_STATE_RESOURCE_GOLD)
+CreateTextTagUnitBJ(("+" .. I2S(udg_Integer_GoldAuraAmount)), udg_DamageEventTarget, 0, 10.00, 100.00, 100, 0.00, 0)
+SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
+SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
+SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
+SetTextTagLifespanBJ(GetLastCreatedTextTag(), 3.00)
+ShowTextTagForceBJ(false, GetLastCreatedTextTag(), GetPlayersAll())
+ShowTextTagForceBJ(true, GetLastCreatedTextTag(), GetForceOfPlayer(udg_Player_GoldAuraPlayer))
+else
+end
+end
+
+function InitTrig_Gold_Aura_Extra_Gold()
+gg_trg_Gold_Aura_Extra_Gold = CreateTrigger()
+TriggerRegisterVariableEvent(gg_trg_Gold_Aura_Extra_Gold, "udg_LethalDamageEvent", EQUAL, 1.00)
+TriggerAddCondition(gg_trg_Gold_Aura_Extra_Gold, Condition(Trig_Gold_Aura_Extra_Gold_Conditions))
+TriggerAddAction(gg_trg_Gold_Aura_Extra_Gold, Trig_Gold_Aura_Extra_Gold_Actions)
+end
+
 function Trig_Fire_Trap_Conditions()
 if (not (GetSpellAbilityId() == FourCC("A023"))) then
 return false
@@ -16758,7 +16880,7 @@ return true
 end
 
 function Trig_Gold_Aura_Func003Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A050"), GetTriggerUnit()) >= 5)) then
+if (not (GetUnitAbilityLevelSwapped(FourCC("A052"), GetTriggerUnit()) >= 5)) then
 return false
 end
 return true
@@ -16772,16 +16894,16 @@ return true
 end
 
 function Trig_Gold_Aura_Actions()
-SetUnitUserData(GetTriggerUnit(), udg_Integer_Array_AuraGoldCost[GetUnitAbilityLevelSwapped(FourCC("A050"), GetTriggerUnit())])
+SetUnitUserData(GetTriggerUnit(), udg_Integer_Array_AuraGoldCost[GetUnitAbilityLevelSwapped(FourCC("A052"), GetTriggerUnit())])
 if (Trig_Gold_Aura_Func003C()) then
 CreateTextTagUnitBJ(("You Need " .. (I2S(GetUnitUserData(GetTriggerUnit())) .. " To Upgrade")), GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
 else
 if (Trig_Gold_Aura_Func003Func001C()) then
 CreateTextTagUnitBJ("TRIGSTR_829", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
 else
-IncUnitAbilityLevelSwapped(FourCC("A050"), GetTriggerUnit())
+IncUnitAbilityLevelSwapped(FourCC("A052"), GetTriggerUnit())
 SetPlayerStateBJ(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD, (GetPlayerState(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD) - GetUnitUserData(GetTriggerUnit())))
-SetUnitUserData(GetTriggerUnit(), udg_Integer_Array_AuraGoldCost[GetUnitAbilityLevelSwapped(FourCC("A050"), GetTriggerUnit())])
+SetUnitUserData(GetTriggerUnit(), udg_Integer_Array_AuraGoldCost[GetUnitAbilityLevelSwapped(FourCC("A052"), GetTriggerUnit())])
 CreateTextTagUnitBJ("TRIGSTR_830", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
 end
 end
@@ -16989,6 +17111,7 @@ InitTrig_Player_8()
 InitTrig_Player_9()
 InitTrig_Iron_Trap_Autocast_Mine()
 InitTrig_Iron_Trap_Clockwerk_Kaboom()
+InitTrig_Gold_Aura_Extra_Gold()
 InitTrig_Fire_Trap()
 InitTrig_Frost_Trap()
 InitTrig_Darkness_Trap()
@@ -17211,6 +17334,7 @@ end
 globals(function(_ENV)
 udg_DamageEvent = 0.0
 udg_DamageModifierEvent = 0.0
+udg_LethalDamageEvent = 0.0
 udg_AOEDamageEvent = 0.0
 end)
 
