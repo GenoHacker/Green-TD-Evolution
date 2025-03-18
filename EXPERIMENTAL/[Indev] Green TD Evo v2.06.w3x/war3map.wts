@@ -17822,6 +17822,7 @@ STRING 2730
 -- Switched from JASS scripting to LUA Scripting
 -- Added Bribes LUA Damage Engine
 -- Added Custom Crit System, Critical Aura, Crit Bonus
+-- Added Gold Aura
 -- Added Gold Bonus
 -- Added more easter eggs
 -- Added several new towers

@@ -382,6 +382,8 @@ udg_Integer_Array_GoldAuraChance = __jarray(0)
 udg_Integer_GoldAuraPlayerNumber = 0
 udg_Player_GoldAuraPlayer = nil
 udg_Integer_GoldAuraAmount = 0
+udg_Integer_CritSystemPlayerNum = 0
+udg_Integer_CritAuraPlayerNum = 0
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -676,6 +678,7 @@ gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
 gg_trg_Gold_Aura_Extra_Gold = nil
+gg_trg_Crit_System_Backup = nil
 function InitGlobals()
 local i = 0
 
@@ -1447,6 +1450,8 @@ i = i + 1
 end
 udg_Integer_GoldAuraPlayerNumber = 0
 udg_Integer_GoldAuraAmount = 0
+udg_Integer_CritSystemPlayerNum = 0
+udg_Integer_CritAuraPlayerNum = 0
 end
 
 --Global Initialization 1.1 also hooks the InitCustomTriggers and RunInitializationTriggers functions
@@ -2655,8 +2660,8 @@ end
 return true
 end
 
-function Trig_Crit_System_Func005Func004C()
-if (not (udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (10.00 + udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))]))) then
+function Trig_Crit_System_Func005Func005C()
+if (not (udg_Real_Array_CritChance[udg_Integer_CritSystemPlayerNum] <= (10.00 + udg_Real_Array_BonusCritChance[udg_Integer_CritSystemPlayerNum]))) then
 return false
 end
 return true
@@ -2670,7 +2675,7 @@ return true
 end
 
 function Trig_Crit_System_Func009Func004C()
-if (not (udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (50.00 + udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))]))) then
+if (not (udg_Real_Array_CritChance[udg_Integer_CritSystemPlayerNum] <= (50.00 + udg_Real_Array_BonusCritChance[udg_Integer_CritSystemPlayerNum]))) then
 return false
 end
 return true
@@ -2684,7 +2689,7 @@ return true
 end
 
 function Trig_Crit_System_Func013Func004C()
-if (not (udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (5.00 + udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))]))) then
+if (not (udg_Real_Array_CritChance[udg_Integer_CritSystemPlayerNum] <= (5.00 + udg_Real_Array_BonusCritChance[udg_Integer_CritSystemPlayerNum]))) then
 return false
 end
 return true
@@ -2703,11 +2708,12 @@ IncUnitAbilityLevelSwapped(FourCC("A00T"), udg_DamageEventSource)
 else
 end
 if (Trig_Crit_System_Func005C()) then
-udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_SkillCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraChances[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + I2R(GetUnitAbilityLevelSwapped(FourCC("A00T"), udg_DamageEventSource))))
-udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_RangedCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (udg_Real_Array_SkillCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (I2R(GetUnitAbilityLevelSwapped(FourCC("A00T"), udg_DamageEventSource)) + 0.00))))
-udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
-if (Trig_Crit_System_Func005Func004C()) then
-udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
+udg_Integer_CritSystemPlayerNum = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
+udg_Real_Array_BonusCritChance[udg_Integer_CritSystemPlayerNum] = (udg_Real_Array_SkillCritChance[udg_Integer_CritSystemPlayerNum] + (udg_Real_Array_CritAuraChances[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + I2R(GetUnitAbilityLevelSwapped(FourCC("A00T"), udg_DamageEventSource))))
+udg_Real_Array_BonusCritDamage[udg_Integer_CritSystemPlayerNum] = (udg_Real_Array_RangedCritDamage[udg_Integer_CritSystemPlayerNum] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (udg_Real_Array_SkillCritDamage[udg_Integer_CritSystemPlayerNum] + (I2R(GetUnitAbilityLevelSwapped(FourCC("A00T"), udg_DamageEventSource)) + 0.00))))
+udg_Real_Array_CritChance[udg_Integer_CritSystemPlayerNum] = GetRandomReal(0, 100.00)
+if (Trig_Crit_System_Func005Func005C()) then
+udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_BonusCritDamage[udg_Integer_CritSystemPlayerNum])
 SetUnitAbilityLevelSwapped(FourCC("A00T"), udg_DamageEventSource, 1)
 udg_ReportLife = GetUnitStateSwap(UNIT_STATE_LIFE, udg_DamageEventTarget)
 udg_DmgStr = "|cffffffff"
@@ -2718,11 +2724,11 @@ end
 else
 end
 if (Trig_Crit_System_Func009C()) then
-udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_SkillCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + udg_Real_Array_CritAuraChances[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)])
-udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_MeleeCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (udg_Real_Array_SkillCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + 0.00)))
-udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
+udg_Real_Array_BonusCritChance[udg_Integer_CritSystemPlayerNum] = (udg_Real_Array_SkillCritChance[udg_Integer_CritSystemPlayerNum] + udg_Real_Array_CritAuraChances[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)])
+udg_Real_Array_BonusCritDamage[udg_Integer_CritSystemPlayerNum] = (udg_Real_Array_MeleeCritDamage[udg_Integer_CritSystemPlayerNum] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (udg_Real_Array_SkillCritDamage[udg_Integer_CritSystemPlayerNum] + 0.00)))
+udg_Real_Array_CritChance[udg_Integer_CritSystemPlayerNum] = GetRandomReal(0, 100.00)
 if (Trig_Crit_System_Func009Func004C()) then
-udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
+udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_BonusCritDamage[udg_Integer_CritSystemPlayerNum])
 udg_ReportLife = GetUnitStateSwap(UNIT_STATE_LIFE, udg_DamageEventTarget)
 udg_DmgStr = "|cffffffff"
 udg_DmgStr = ("|cffffff00" .. (I2S(R2I(udg_DamageEventAmount)) .. "!|r"))
@@ -2732,11 +2738,11 @@ end
 else
 end
 if (Trig_Crit_System_Func013C()) then
-udg_Real_Array_BonusCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_SkillCritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + udg_Real_Array_CritAuraChances[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)])
-udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (udg_Real_Array_SpellCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (udg_Real_Array_SkillCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] + 0.00)))
-udg_Real_Array_CritChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
+udg_Real_Array_BonusCritChance[udg_Integer_CritSystemPlayerNum] = (udg_Real_Array_SkillCritChance[udg_Integer_CritSystemPlayerNum] + udg_Real_Array_CritAuraChances[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)])
+udg_Real_Array_BonusCritDamage[udg_Integer_CritSystemPlayerNum] = (udg_Real_Array_SpellCritDamage[udg_Integer_CritSystemPlayerNum] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (udg_Real_Array_SkillCritDamage[udg_Integer_CritSystemPlayerNum] + 0.00)))
+udg_Real_Array_CritChance[udg_Integer_CritSystemPlayerNum] = GetRandomReal(0, 100.00)
 if (Trig_Crit_System_Func013Func004C()) then
-udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_BonusCritDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
+udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_BonusCritDamage[udg_Integer_CritSystemPlayerNum])
 udg_ReportLife = GetUnitStateSwap(UNIT_STATE_LIFE, udg_DamageEventTarget)
 udg_DmgStr = "|cffffffff"
 udg_DmgStr = ("|cff3264c8" .. (I2S(R2I(udg_DamageEventAmount)) .. "!|r"))
@@ -2753,80 +2759,81 @@ TriggerRegisterVariableEvent(gg_trg_Crit_System, "udg_DamageModifierEvent", EQUA
 TriggerAddAction(gg_trg_Crit_System, Trig_Crit_System_Actions)
 end
 
-function Trig_Crit_Aura_Func001Func001Func002Func002Func002C()
+function Trig_Crit_Aura_Func002Func001Func002Func002Func002C()
 if (not (UnitHasBuffBJ(GetAttacker(), FourCC("BOac")) == true)) then
 return false
 end
-if (not (GetUnitAbilityLevelSwapped(FourCC("A00Q"), udg_Unit_AuraTower[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))]) == 5)) then
+if (not (GetUnitAbilityLevelSwapped(FourCC("A00Q"), udg_Unit_AuraTower[udg_Integer_CritAuraPlayerNum]) == 5)) then
 return false
 end
 return true
 end
 
-function Trig_Crit_Aura_Func001Func001Func002Func002C()
+function Trig_Crit_Aura_Func002Func001Func002Func002C()
 if (not (UnitHasBuffBJ(GetAttacker(), FourCC("BOac")) == true)) then
 return false
 end
-if (not (GetUnitAbilityLevelSwapped(FourCC("A00Q"), udg_Unit_AuraTower[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))]) == 4)) then
+if (not (GetUnitAbilityLevelSwapped(FourCC("A00Q"), udg_Unit_AuraTower[udg_Integer_CritAuraPlayerNum]) == 4)) then
 return false
 end
 return true
 end
 
-function Trig_Crit_Aura_Func001Func001Func002C()
+function Trig_Crit_Aura_Func002Func001Func002C()
 if (not (UnitHasBuffBJ(GetAttacker(), FourCC("BOac")) == true)) then
 return false
 end
-if (not (GetUnitAbilityLevelSwapped(FourCC("A00Q"), udg_Unit_AuraTower[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))]) == 3)) then
+if (not (GetUnitAbilityLevelSwapped(FourCC("A00Q"), udg_Unit_AuraTower[udg_Integer_CritAuraPlayerNum]) == 3)) then
 return false
 end
 return true
 end
 
-function Trig_Crit_Aura_Func001Func001C()
+function Trig_Crit_Aura_Func002Func001C()
 if (not (UnitHasBuffBJ(GetAttacker(), FourCC("BOac")) == true)) then
 return false
 end
-if (not (GetUnitAbilityLevelSwapped(FourCC("A00Q"), udg_Unit_AuraTower[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))]) == 2)) then
+if (not (GetUnitAbilityLevelSwapped(FourCC("A00Q"), udg_Unit_AuraTower[udg_Integer_CritAuraPlayerNum]) == 2)) then
 return false
 end
 return true
 end
 
-function Trig_Crit_Aura_Func001Func004C()
-if (GetUnitAbilityLevelSwapped(FourCC("A00Q"), udg_Unit_AuraTower[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))]) == 0) then
+function Trig_Crit_Aura_Func002Func004C()
+if (GetUnitAbilityLevelSwapped(FourCC("A00Q"), udg_Unit_AuraTower[udg_Integer_CritAuraPlayerNum]) == 0) then
 return true
 end
-if (GetUnitAbilityLevelSwapped(FourCC("A00Q"), udg_Unit_AuraTower[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))]) == 1) then
+if (GetUnitAbilityLevelSwapped(FourCC("A00Q"), udg_Unit_AuraTower[udg_Integer_CritAuraPlayerNum]) == 1) then
 return true
 end
 return false
 end
 
-function Trig_Crit_Aura_Func001C()
+function Trig_Crit_Aura_Func002C()
 if (not (UnitHasBuffBJ(GetAttacker(), FourCC("BOac")) == false)) then
 return false
 end
-if (not Trig_Crit_Aura_Func001Func004C()) then
+if (not Trig_Crit_Aura_Func002Func004C()) then
 return false
 end
 return true
 end
 
 function Trig_Crit_Aura_Actions()
-if (Trig_Crit_Aura_Func001C()) then
+udg_Integer_CritAuraPlayerNum = GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))
+if (Trig_Crit_Aura_Func002C()) then
 SetUnitAbilityLevelSwapped(FourCC("A004"), GetAttacker(), 1)
 else
-if (Trig_Crit_Aura_Func001Func001C()) then
+if (Trig_Crit_Aura_Func002Func001C()) then
 SetUnitAbilityLevelSwapped(FourCC("A004"), GetAttacker(), 2)
 else
-if (Trig_Crit_Aura_Func001Func001Func002C()) then
+if (Trig_Crit_Aura_Func002Func001Func002C()) then
 SetUnitAbilityLevelSwapped(FourCC("A004"), GetAttacker(), 3)
 else
-if (Trig_Crit_Aura_Func001Func001Func002Func002C()) then
+if (Trig_Crit_Aura_Func002Func001Func002Func002C()) then
 SetUnitAbilityLevelSwapped(FourCC("A004"), GetAttacker(), 4)
 else
-if (Trig_Crit_Aura_Func001Func001Func002Func002Func002C()) then
+if (Trig_Crit_Aura_Func002Func001Func002Func002Func002C()) then
 SetUnitAbilityLevelSwapped(FourCC("A004"), GetAttacker(), 5)
 else
 end
