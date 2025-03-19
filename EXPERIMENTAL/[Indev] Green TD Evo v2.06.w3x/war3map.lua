@@ -3501,17 +3501,20 @@ end
 return true
 end
 
-function Trig_Ice_Cage_Autocast_Func002C()
-if (not (udg_Integer_Array_FrostTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (5 + udg_Integer_TotalFrostTrapsBuilt))) then
+function Trig_Ice_Cage_Autocast_Func003C()
+if (not (udg_Integer_Array_FrostTrapChance[udg_Integer_FrostTrapCagePlyNum] <= (5 + udg_Integer_TotalFrostTrapsBuilt))) then
 return false
 end
 return true
 end
 
 function Trig_Ice_Cage_Autocast_Actions()
-udg_Integer_Array_FrostTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomInt(1, 100)
-if (Trig_Ice_Cage_Autocast_Func002C()) then
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
+udg_Integer_FrostTrapCagePlyNum = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
+udg_Integer_Array_FrostTrapChance[udg_Integer_FrostTrapCagePlyNum] = GetRandomInt(1, 100)
+if (Trig_Ice_Cage_Autocast_Func003C()) then
+udg_Point_Array_FrostTrapCage[udg_Integer_FrostTrapCagePlyNum] = GetUnitLoc(udg_DamageEventSource)
+CreateNUnitsAtLoc(1, FourCC("o00H"), ConvertedPlayer(udg_Integer_FrostTrapCagePlyNum), udg_Point_Array_FrostTrapCage[udg_Integer_FrostTrapCagePlyNum], bj_UNIT_FACING)
+        RemoveLocation(udg_Point_Array_FrostTrapCage[Integer_FrostTrapCagePlyNum])
 UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
 UnitAddAbilityBJ(FourCC("A04M"), GetLastCreatedUnit())
 SetUnitAbilityLevelSwapped(FourCC("A04M"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A00A"), udg_DamageEventSource))
