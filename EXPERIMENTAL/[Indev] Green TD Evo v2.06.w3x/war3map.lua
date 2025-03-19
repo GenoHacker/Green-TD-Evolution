@@ -388,7 +388,7 @@ udg_Point_Array_GlaiveTowerTarget = {}
 udg_Point_Array_GlaiveTower = {}
 udg_Integer_GlaiveTowerPlyNum = 0
 udg_Point_Array_VenomTower = {}
-udg_Point_Array_PoisonTrap = {}
+udg_Point_Array_PoisonTrapTarget = {}
 udg_Integer_VenomPoisonPlyNum = 0
 udg_Integer_ShrapTowerPlyNum = 0
 udg_Point_Array_ShrapTower = {}
@@ -408,6 +408,24 @@ udg_Point_Array_FrostTrapCage = {}
 udg_Integer_FrostTrapCagePlyNum = 0
 udg_Integer_FrostTrapBreathPlyNum = 0
 udg_Point_Array_FrostTrapBreathTar = {}
+udg_Point_Array_PoisonTrapCascade = {}
+udg_Integer_PoisonTrapCasadePlyNum = 0
+udg_Integer_PoisonTrapPlyNum = 0
+udg_Point_Array_PoisonTrap = {}
+udg_Point_Array_DarknessTrap = {}
+udg_Integer_DarknessTrapPlyNum = 0
+udg_Integer_DarkTrapDoomPlyNum = 0
+udg_Point_Array_DarkTrapDoom = {}
+udg_Point_Array_EarthTrap = {}
+udg_Integer_EarthTrapPlyNum = 0
+udg_Point_Array_EarthTrapStorm = {}
+udg_Integer_EarthTrapStormPlyNum = 0
+udg_Point_Array_VoidTrap = {}
+udg_Integer_VoidTrapPlyNum = 0
+udg_Integer_VoidTrapConPlyNum = 0
+udg_Point_Array_VoidTrapConB = {}
+udg_Integer_VoidTrapConBPlyNum = 0
+udg_Integer_BloodTrapPlyNum = 0
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -1487,6 +1505,16 @@ udg_Integer_SpiritTowerPlyNum = 0
 udg_Integer_FireTrapPlyNum = 0
 udg_Integer_FrostTrapCagePlyNum = 0
 udg_Integer_FrostTrapBreathPlyNum = 0
+udg_Integer_PoisonTrapCasadePlyNum = 0
+udg_Integer_PoisonTrapPlyNum = 0
+udg_Integer_DarknessTrapPlyNum = 0
+udg_Integer_DarkTrapDoomPlyNum = 0
+udg_Integer_EarthTrapPlyNum = 0
+udg_Integer_EarthTrapStormPlyNum = 0
+udg_Integer_VoidTrapPlyNum = 0
+udg_Integer_VoidTrapConPlyNum = 0
+udg_Integer_VoidTrapConBPlyNum = 0
+udg_Integer_BloodTrapPlyNum = 0
 end
 
 --Global Initialization 1.1 also hooks the InitCustomTriggers and RunInitializationTriggers functions
@@ -2340,33 +2368,6 @@ local life
 gg_unit_n00C_0019 = BlzCreateUnitWithSkin(p, FourCC("n00C"), -1792.0, 3392.0, 270.000, FourCC("n00C"))
 end
 
-function CreateUnitsForPlayer10()
-local p = Player(10)
-local u
-local unitID
-local t
-local life
-
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1657.6, 2762.2, 34.026, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1655.4, 2840.8, 34.026, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1652.8, 2921.8, 34.026, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1795.1, 2534.1, 34.026, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1792.9, 2612.7, 34.026, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1929.5, 2921.4, 34.026, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1932.1, 2840.4, 34.026, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1934.4, 2761.7, 34.026, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1862.3, 2148.6, 34.026, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1864.9, 2067.5, 34.026, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1867.1, 1988.9, 34.026, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1880.8, 1467.5, 34.026, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1883.4, 1386.5, 34.026, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1885.7, 1307.9, 34.026, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1790.3, 2693.7, 34.026, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1790.8, 2988.4, 34.026, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1788.5, 3067.0, 34.026, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1785.9, 3148.0, 34.026, FourCC("h01H"))
-end
-
 function CreateNeutralPassiveBuildings()
 local p = Player(PLAYER_NEUTRAL_PASSIVE)
 local u
@@ -2542,7 +2543,6 @@ CreateBuildingsForPlayer0()
 end
 
 function CreatePlayerUnits()
-CreateUnitsForPlayer10()
 end
 
 function CreateAllUnits()
@@ -2922,6 +2922,7 @@ function Trig_Flak_Tower_Armor_Break_Func002Func001A()
 BlzSetUnitArmor(GetEnumUnit(), (BlzGetUnitArmor(GetEnumUnit()) - (1.00 + (I2R(udg_Integer_WaveNumber) / 4.00))))
 AddSpecialEffectTargetUnitBJ("overhead", GetEnumUnit(), "Abilities\\Weapons\\FlyingMachine\\FlyingMachineImpact.mdl")
 BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 1.50)
+DestroyEffectBJ(GetLastCreatedEffectBJ())
 end
 
 function Trig_Flak_Tower_Armor_Break_Func002C()
@@ -2970,6 +2971,7 @@ udg_Point_Array_GlaiveTowerTarget[udg_Integer_GlaiveTowerPlyNum] = GetUnitLoc(ud
 udg_Real_Array_GlaiveDistance[udg_Integer_GlaiveTowerPlyNum] = DistanceBetweenPoints(udg_Point_Array_GlaiveTower[udg_Integer_GlaiveTowerPlyNum], udg_Point_Array_GlaiveTowerTarget[udg_Integer_GlaiveTowerPlyNum])
 UnitDamagePointLoc(udg_AOEDamageSource, 0, 300.00, udg_Point_Array_GlaiveTowerTarget[udg_Integer_GlaiveTowerPlyNum], (udg_Real_Array_GlaiveDistance[udg_Integer_GlaiveTowerPlyNum] * I2R(udg_Integer_WaveNumber)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
 AddSpecialEffectLocBJ(udg_Point_Array_GlaiveTowerTarget[udg_Integer_GlaiveTowerPlyNum], "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl")
+DestroyEffectBJ(GetLastCreatedEffectBJ())
         RemoveLocation(udg_Point_Array_GlaiveTower[Integer_GlaiveTowerPlyNum])
         RemoveLocation(udg_Point_Array_GlaiveTowerTarget[Integer_GlaiveTowerPlyNum])
 else
@@ -3032,8 +3034,8 @@ IssueTargetOrderBJ(udg_DamageEventSource, "attack", GroupPickRandomUnit(udg_Unit
 else
 end
 if (Trig_Venom_Tower_Random_Target_Func003C()) then
-udg_Point_Array_PoisonTrap[udg_Integer_VenomPoisonPlyNum] = GetUnitLoc(udg_DamageEventTarget)
-udg_UnitGroup_PoisonTrapRandomUnit = GetUnitsInRangeOfLocMatching(400.00, udg_Point_Array_PoisonTrap[udg_Integer_VenomPoisonPlyNum], Condition(Trig_Venom_Tower_Random_Target_Func003Func002002003))
+udg_Point_Array_PoisonTrapTarget[udg_Integer_VenomPoisonPlyNum] = GetUnitLoc(udg_DamageEventTarget)
+udg_UnitGroup_PoisonTrapRandomUnit = GetUnitsInRangeOfLocMatching(400.00, udg_Point_Array_PoisonTrapTarget[udg_Integer_VenomPoisonPlyNum], Condition(Trig_Venom_Tower_Random_Target_Func003Func002002003))
 IssueTargetOrderBJ(udg_DamageEventSource, "attack", GroupPickRandomUnit(udg_UnitGroup_PoisonTrapRandomUnit))
         RemoveLocation(udg_Point_Array_PoisonTrap[Integer_VenomPoisonPlyNum])
 else
@@ -3083,6 +3085,7 @@ AddSpecialEffectLocBJ(udg_Point_Array_ShrapTower[udg_Integer_ShrapTowerPlyNum], 
         RemoveLocation(udg_Point_Array_ShrapTower[Integer_ShrapTowerPlyNum])
 BlzSetSpecialEffectTimeScale(GetLastCreatedEffectBJ(), 2.00)
 BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 0.50)
+DestroyEffectBJ(GetLastCreatedEffectBJ())
 else
 end
 end
@@ -3537,31 +3540,34 @@ end
 return true
 end
 
-function Trig_Poison_Cascade_Autocast_Func002Func002002002003()
-return (IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_DamageEventSource)) == true)
+function Trig_Poison_Cascade_Autocast_Func003Func003002002003()
+return (IsUnitEnemy(GetEnumUnit(), ConvertedPlayer(udg_Integer_PoisonTrapCasadePlyNum)) == true)
 end
 
-function Trig_Poison_Cascade_Autocast_Func002Func003A()
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
+function Trig_Poison_Cascade_Autocast_Func003Func004A()
+CreateNUnitsAtLoc(1, FourCC("o00H"), ConvertedPlayer(udg_Integer_PoisonTrapCasadePlyNum), udg_Point_Array_PoisonTrapCascade[udg_Integer_PoisonTrapCasadePlyNum], bj_UNIT_FACING)
 UnitApplyTimedLifeBJ(5.50, FourCC("BTLF"), GetLastCreatedUnit())
 UnitAddAbilityBJ(FourCC("A009"), GetLastCreatedUnit())
 SetUnitAbilityLevelSwapped(FourCC("A009"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A009"), udg_DamageEventSource))
 IssueTargetOrderBJ(GetLastCreatedUnit(), "shadowstrike", GetEnumUnit())
 end
 
-function Trig_Poison_Cascade_Autocast_Func002C()
-if (not (udg_Integer_Array_PoisTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (5 + udg_Integer_TotalPoisonTrapsBuilt))) then
+function Trig_Poison_Cascade_Autocast_Func003C()
+if (not (udg_Integer_Array_PoisTrapChance[udg_Integer_PoisonTrapCasadePlyNum] <= (5 + udg_Integer_TotalPoisonTrapsBuilt))) then
 return false
 end
 return true
 end
 
 function Trig_Poison_Cascade_Autocast_Actions()
-udg_Integer_Array_PoisTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomInt(1, 100)
-if (Trig_Poison_Cascade_Autocast_Func002C()) then
+udg_Integer_PoisonTrapCasadePlyNum = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
+udg_Integer_Array_PoisTrapChance[udg_Integer_PoisonTrapCasadePlyNum] = GetRandomInt(1, 100)
+if (Trig_Poison_Cascade_Autocast_Func003C()) then
 udg_Integer_PoisonCascadeNum = GetRandomInt(1, 6)
-udg_UnitGroup_Array_PoisCasGroup[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomSubGroup(udg_Integer_PoisonCascadeNum, GetUnitsInRangeOfLocMatching(400.00, GetUnitLoc(udg_DamageEventSource), Condition(Trig_Poison_Cascade_Autocast_Func002Func002002002003)))
-ForGroupBJ(udg_UnitGroup_Array_PoisCasGroup[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))], Trig_Poison_Cascade_Autocast_Func002Func003A)
+udg_Point_Array_PoisonTrapCascade[udg_Integer_PoisonTrapCasadePlyNum] = GetUnitLoc(udg_DamageEventSource)
+udg_UnitGroup_Array_PoisCasGroup[udg_Integer_PoisonTrapCasadePlyNum] = GetRandomSubGroup(udg_Integer_PoisonCascadeNum, GetUnitsInRangeOfLocMatching(400.00, udg_Point_Array_PoisonTrapCascade[udg_Integer_PoisonTrapCasadePlyNum], Condition(Trig_Poison_Cascade_Autocast_Func003Func003002002003)))
+ForGroupBJ(udg_UnitGroup_Array_PoisCasGroup[udg_Integer_PoisonTrapCasadePlyNum], Trig_Poison_Cascade_Autocast_Func003Func004A)
+        RemoveLocation(udg_Point_Array_PoisonTrapCascade[Integer_PoisonTrapCascadePlyNum])
 else
 end
 end
@@ -3581,7 +3587,10 @@ return true
 end
 
 function Trig_Poison_Trap_Autocast_Actions()
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
+udg_Integer_PoisonTrapPlyNum = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
+udg_Point_Array_PoisonTrap[udg_Integer_PoisonTrapPlyNum] = GetUnitLoc(udg_DamageEventSource)
+CreateNUnitsAtLoc(1, FourCC("o00H"), ConvertedPlayer(udg_Integer_PoisonTrapPlyNum), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
+    RemoveLocation(udg_Point_Array_PoisonTrap[Integer_PoisonTrapPlyNum])
 UnitApplyTimedLifeBJ(5.50, FourCC("BTLF"), GetLastCreatedUnit())
 UnitAddAbilityBJ(FourCC("A009"), GetLastCreatedUnit())
 SetUnitAbilityLevelSwapped(FourCC("A009"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A04O"), udg_DamageEventSource))
@@ -3603,7 +3612,10 @@ return true
 end
 
 function Trig_Darkness_Trap_Autocast_Actions()
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
+udg_Integer_DarknessTrapPlyNum = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
+udg_Point_Array_DarknessTrap[udg_Integer_DarknessTrapPlyNum] = GetUnitLoc(udg_DamageEventSource)
+CreateNUnitsAtLoc(1, FourCC("o00H"), ConvertedPlayer(udg_Integer_DarknessTrapPlyNum), udg_Point_Array_DarknessTrap[udg_Integer_DarknessTrapPlyNum], bj_UNIT_FACING)
+    RemoveLocation(udg_Point_Array_DarknessTrap[Integer_DarknessTrapPlyNum])
 UnitApplyTimedLifeBJ(11.00, FourCC("BTLF"), GetLastCreatedUnit())
 UnitAddAbilityBJ(FourCC("A00B"), GetLastCreatedUnit())
 SetUnitAbilityLevelSwapped(FourCC("A00B"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A04Q"), udg_DamageEventSource))
@@ -3624,17 +3636,20 @@ end
 return true
 end
 
-function Trig_Doom_Autocast_Func002C()
-if (not (udg_Integer_Array_DarkTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (5 + udg_Integer_TotalDarkTrapsBuilt))) then
+function Trig_Doom_Autocast_Func003C()
+if (not (udg_Integer_Array_DarkTrapChance[udg_Integer_DarkTrapDoomPlyNum] <= (5 + udg_Integer_TotalDarkTrapsBuilt))) then
 return false
 end
 return true
 end
 
 function Trig_Doom_Autocast_Actions()
-udg_Integer_Array_DarkTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomInt(1, 100)
-if (Trig_Doom_Autocast_Func002C()) then
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
+udg_Integer_DarkTrapDoomPlyNum = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
+udg_Integer_Array_DarkTrapChance[udg_Integer_DarkTrapDoomPlyNum] = GetRandomInt(1, 100)
+if (Trig_Doom_Autocast_Func003C()) then
+udg_Point_Array_DarkTrapDoom[udg_Integer_DarkTrapDoomPlyNum] = GetUnitLoc(udg_DamageEventSource)
+CreateNUnitsAtLoc(1, FourCC("o00H"), ConvertedPlayer(udg_Integer_DarkTrapDoomPlyNum), udg_Point_Array_DarkTrapDoom[udg_Integer_DarkTrapDoomPlyNum], bj_UNIT_FACING)
+        RemoveLocation(udg_Point_Array_DarkTrapDoom[Integer_DarkTrapDoomPlyNum])
 UnitApplyTimedLifeBJ(30.00, FourCC("BTLF"), GetLastCreatedUnit())
 UnitAddAbilityBJ(FourCC("A04P"), GetLastCreatedUnit())
 SetUnitAbilityLevelSwapped(FourCC("A04P"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A00B"), udg_DamageEventSource))
@@ -3658,7 +3673,10 @@ return true
 end
 
 function Trig_Earth_Trap_Autocast_Actions()
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
+udg_Integer_EarthTrapPlyNum = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
+udg_Point_Array_EarthTrap[udg_Integer_EarthTrapPlyNum] = GetUnitLoc(udg_DamageEventSource)
+CreateNUnitsAtLoc(1, FourCC("o00H"), ConvertedPlayer(udg_Integer_EarthTrapPlyNum), udg_Point_Array_EarthTrap[udg_Integer_EarthTrapPlyNum], bj_UNIT_FACING)
+    RemoveLocation(udg_Point_Array_EarthTrap[Integer_EarthTrapPlyNum])
 UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
 UnitAddAbilityBJ(FourCC("A001"), GetLastCreatedUnit())
 SetUnitAbilityLevelSwapped(FourCC("A001"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A03U"), udg_DamageEventSource))
@@ -3679,22 +3697,25 @@ end
 return true
 end
 
-function Trig_Bladestorm_Autocast_Func002C()
-if (not (udg_Integer_Array_EarthTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (5 + udg_Integer_TotalSlamTrapsBuilt))) then
+function Trig_Bladestorm_Autocast_Func003C()
+if (not (udg_Integer_Array_EarthTrapChance[udg_Integer_EarthTrapStormPlyNum] <= (5 + udg_Integer_TotalSlamTrapsBuilt))) then
 return false
 end
 return true
 end
 
 function Trig_Bladestorm_Autocast_Actions()
-udg_Integer_Array_EarthTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomInt(1, 100)
-if (Trig_Bladestorm_Autocast_Func002C()) then
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
+udg_Integer_EarthTrapStormPlyNum = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
+udg_Integer_Array_EarthTrapChance[udg_Integer_EarthTrapStormPlyNum] = GetRandomInt(1, 100)
+if (Trig_Bladestorm_Autocast_Func003C()) then
+udg_Point_Array_EarthTrapStorm[udg_Integer_EarthTrapStormPlyNum] = GetUnitLoc(udg_DamageEventSource)
+CreateNUnitsAtLoc(1, FourCC("o00H"), ConvertedPlayer(udg_Integer_EarthTrapStormPlyNum), udg_Point_Array_EarthTrapStorm[udg_Integer_EarthTrapStormPlyNum], bj_UNIT_FACING)
 UnitApplyTimedLifeBJ(6.00, FourCC("BTLF"), GetLastCreatedUnit())
 UnitAddAbilityBJ(FourCC("A04R"), GetLastCreatedUnit())
 SetUnitAbilityLevelSwapped(FourCC("A04R"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A001"), udg_DamageEventSource))
 IssueImmediateOrderBJ(GetLastCreatedUnit(), "whirlwind")
-AddSpecialEffectLocBJ(GetUnitLoc(GetLastCreatedUnit()), "war3mapImported\\SpinFX2.mdx")
+AddSpecialEffectLocBJ(udg_Point_Array_EarthTrapStorm[udg_Integer_EarthTrapStormPlyNum], "war3mapImported\\SpinFX2.mdx")
+        RemoveLocation(udg_Point_Array_EarthTrapStorm[Integer_EarthTrapStormPlyNum])
 BlzSetSpecialEffectTimeScale(GetLastCreatedEffectBJ(), 2.00)
 BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 0.50)
 DestroyEffectBJ(GetLastCreatedEffectBJ())
@@ -3717,7 +3738,10 @@ return true
 end
 
 function Trig_Void_Trap_Autocast_Actions()
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
+udg_Integer_VoidTrapPlyNum = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
+udg_Point_Array_VoidTrap[udg_Integer_VoidTrapPlyNum] = GetUnitLoc(udg_DamageEventSource)
+CreateNUnitsAtLoc(1, FourCC("o00H"), ConvertedPlayer(udg_Integer_VoidTrapPlyNum), udg_Point_Array_VoidTrap[udg_Integer_VoidTrapPlyNum], bj_UNIT_FACING)
+    RemoveLocation(udg_Point_Array_VoidTrap[Integer_VoidTrapPlyNum])
 UnitApplyTimedLifeBJ(2.00, FourCC("BTLF"), GetLastCreatedUnit())
 UnitAddAbilityBJ(FourCC("A00P"), GetLastCreatedUnit())
 SetUnitAbilityLevelSwapped(FourCC("A00P"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A04X"), udg_DamageEventSource))
@@ -3738,16 +3762,17 @@ end
 return true
 end
 
-function Trig_Void_Contagion_Func002C()
-if (not (udg_Integer_Array_VoidContChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (10 + udg_Integer_TotalVoidTrapsBuilt))) then
+function Trig_Void_Contagion_Func003C()
+if (not (udg_Integer_Array_VoidContChance[udg_Integer_VoidTrapConPlyNum] <= (10 + udg_Integer_TotalVoidTrapsBuilt))) then
 return false
 end
 return true
 end
 
 function Trig_Void_Contagion_Actions()
-udg_Integer_Array_VoidContChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomInt(1, 100)
-if (Trig_Void_Contagion_Func002C()) then
+udg_Integer_VoidTrapConPlyNum = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
+udg_Integer_Array_VoidContChance[udg_Integer_VoidTrapConPlyNum] = GetRandomInt(1, 100)
+if (Trig_Void_Contagion_Func003C()) then
 UnitAddAbilityBJ(FourCC("A04U"), udg_DamageEventTarget)
 SetUnitAbilityLevelSwapped(FourCC("A04U"), udg_DamageEventTarget, GetUnitAbilityLevelSwapped(FourCC("A00P"), udg_DamageEventSource))
 else
@@ -3768,17 +3793,20 @@ end
 return true
 end
 
-function Trig_Void_Contagion_Blast_Func002C()
-if (not (udg_Integer_Array_VoidCBlastChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageFilterSource))] <= (10 + udg_Integer_TotalVoidTrapsBuilt))) then
+function Trig_Void_Contagion_Blast_Func003C()
+if (not (udg_Integer_Array_VoidCBlastChance[udg_Integer_VoidTrapConBPlyNum] <= (10 + udg_Integer_TotalVoidTrapsBuilt))) then
 return false
 end
 return true
 end
 
 function Trig_Void_Contagion_Blast_Actions()
-udg_Integer_Array_VoidCBlastChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomInt(1, 100)
-if (Trig_Void_Contagion_Blast_Func002C()) then
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
+udg_Integer_VoidTrapConBPlyNum = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
+udg_Integer_Array_VoidCBlastChance[udg_Integer_VoidTrapConBPlyNum] = GetRandomInt(1, 100)
+if (Trig_Void_Contagion_Blast_Func003C()) then
+udg_Point_Array_VoidTrapConB[udg_Integer_VoidTrapConBPlyNum] = GetUnitLoc(udg_DamageEventSource)
+CreateNUnitsAtLoc(1, FourCC("o00H"), ConvertedPlayer(udg_Integer_VoidTrapConBPlyNum), udg_Point_Array_VoidTrapConB[udg_Integer_VoidTrapConBPlyNum], bj_UNIT_FACING)
+        RemoveLocation(udg_Point_Array_VoidTrapConB[Integer_VoidTrapConBPlyNum])
 UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
 UnitAddAbilityBJ(FourCC("A00P"), GetLastCreatedUnit())
 SetUnitAbilityLevelSwapped(FourCC("A00P"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A04U"), udg_DamageEventTarget))
@@ -3801,21 +3829,21 @@ end
 return true
 end
 
-function Trig_Bloodtrap_Func002C()
-if (not (udg_Integer_Array_BloodTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (20 - udg_Integer_TotalBloodTrapsBuilt))) then
-return false
-end
-return true
-end
-
-function Trig_Bloodtrap_Func004C()
-if (not (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) >= 15.00)) then
+function Trig_Bloodtrap_Func003C()
+if (not (udg_Integer_Array_BloodTrapChance[udg_Integer_BloodTrapPlyNum] <= (20 - udg_Integer_TotalBloodTrapsBuilt))) then
 return false
 end
 return true
 end
 
 function Trig_Bloodtrap_Func005C()
+if (not (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) >= 15.00)) then
+return false
+end
+return true
+end
+
+function Trig_Bloodtrap_Func006C()
 if (not (GetUnitAbilityLevelSwapped(FourCC("A04S"), udg_DamageEventSource) <= 19)) then
 return false
 end
@@ -3823,18 +3851,19 @@ return true
 end
 
 function Trig_Bloodtrap_Actions()
-udg_Integer_Array_BloodTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomInt(1, 100)
-if (Trig_Bloodtrap_Func002C()) then
+udg_Integer_BloodTrapPlyNum = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
+udg_Integer_Array_BloodTrapChance[udg_Integer_BloodTrapPlyNum] = GetRandomInt(1, 100)
+if (Trig_Bloodtrap_Func003C()) then
 SetUnitAbilityLevelSwapped(FourCC("A04S"), udg_DamageEventSource, 1)
 else
 end
 SetUnitManaBJ(udg_DamageEventSource, (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + 1))
-if (Trig_Bloodtrap_Func004C()) then
+if (Trig_Bloodtrap_Func005C()) then
 SetUnitAbilityLevelSwapped(FourCC("A04T"), udg_DamageEventSource, GetRandomInt(1, 6))
 SetUnitManaBJ(udg_DamageEventSource, 0.00)
 else
 end
-if (Trig_Bloodtrap_Func005C()) then
+if (Trig_Bloodtrap_Func006C()) then
 IncUnitAbilityLevelSwapped(FourCC("A04S"), udg_DamageEventSource)
 else
 end
