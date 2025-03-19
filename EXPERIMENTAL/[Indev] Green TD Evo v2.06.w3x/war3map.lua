@@ -384,6 +384,30 @@ udg_Player_GoldAuraPlayer = nil
 udg_Integer_GoldAuraAmount = 0
 udg_Integer_CritSystemPlayerNum = 0
 udg_Integer_CritAuraPlayerNum = 0
+udg_Point_Array_GlaiveTowerTarget = {}
+udg_Point_Array_GlaiveTower = {}
+udg_Integer_GlaiveTowerPlyNum = 0
+udg_Point_Array_VenomTower = {}
+udg_Point_Array_PoisonTrap = {}
+udg_Integer_VenomPoisonPlyNum = 0
+udg_Integer_ShrapTowerPlyNum = 0
+udg_Point_Array_ShrapTower = {}
+udg_Real_ShrapTowerUnitArm = 0.0
+udg_Point_Array_FlakTower = {}
+udg_Integer_FlakTowerPlyNum = 0
+udg_Integer_SoulTowerPlyNum = 0
+udg_Point_Array_ShardTower = {}
+udg_Integer_ShardTowerPlyNum = 0
+udg_Integer_SpiritTowerPlyNum = 0
+udg_Point_Array_SpiritTower = {}
+udg_Point_Array_FireTrap = {}
+udg_Integer_FireTrapPlyNum = 0
+udg_Point_Array_FireTrapBreath = {}
+udg_Point_Array_FrostTrapBreath = {}
+udg_Point_Array_FrostTrapCage = {}
+udg_Integer_FrostTrapCagePlyNum = 0
+udg_Integer_FrostTrapBreathPlyNum = 0
+udg_Point_Array_FrostTrapBreathTar = {}
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -465,6 +489,7 @@ gg_snd_Wave_Boss = nil
 gg_snd_HeroLichPissed8 = nil
 gg_trg_Damage_Engine_Config = nil
 gg_trg_Crit_System = nil
+gg_trg_Crit_System_Backup = nil
 gg_trg_Crit_Aura = nil
 gg_trg_Flak_Tower_Armor_Break = nil
 gg_trg_Glaive_Tower_Enchanted_Glaives = nil
@@ -654,6 +679,7 @@ gg_trg_Player_8 = nil
 gg_trg_Player_9 = nil
 gg_trg_Iron_Trap_Autocast_Mine = nil
 gg_trg_Iron_Trap_Clockwerk_Kaboom = nil
+gg_trg_Gold_Aura_Extra_Gold = nil
 gg_trg_Fire_Trap = nil
 gg_trg_Frost_Trap = nil
 gg_trg_Darkness_Trap = nil
@@ -677,8 +703,6 @@ gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
-gg_trg_Gold_Aura_Extra_Gold = nil
-gg_trg_Crit_System_Backup = nil
 function InitGlobals()
 local i = 0
 
@@ -1452,6 +1476,17 @@ udg_Integer_GoldAuraPlayerNumber = 0
 udg_Integer_GoldAuraAmount = 0
 udg_Integer_CritSystemPlayerNum = 0
 udg_Integer_CritAuraPlayerNum = 0
+udg_Integer_GlaiveTowerPlyNum = 0
+udg_Integer_VenomPoisonPlyNum = 0
+udg_Integer_ShrapTowerPlyNum = 0
+udg_Real_ShrapTowerUnitArm = 0.0
+udg_Integer_FlakTowerPlyNum = 0
+udg_Integer_SoulTowerPlyNum = 0
+udg_Integer_ShardTowerPlyNum = 0
+udg_Integer_SpiritTowerPlyNum = 0
+udg_Integer_FireTrapPlyNum = 0
+udg_Integer_FrostTrapCagePlyNum = 0
+udg_Integer_FrostTrapBreathPlyNum = 0
 end
 
 --Global Initialization 1.1 also hooks the InitCustomTriggers and RunInitializationTriggers functions
@@ -2303,7 +2338,33 @@ local t
 local life
 
 gg_unit_n00C_0019 = BlzCreateUnitWithSkin(p, FourCC("n00C"), -1792.0, 3392.0, 270.000, FourCC("n00C"))
-u = BlzCreateUnitWithSkin(p, FourCC("h00G"), -1408.0, 2880.0, 270.000, FourCC("h00G"))
+end
+
+function CreateUnitsForPlayer10()
+local p = Player(10)
+local u
+local unitID
+local t
+local life
+
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1657.6, 2762.2, 34.026, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1655.4, 2840.8, 34.026, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1652.8, 2921.8, 34.026, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1795.1, 2534.1, 34.026, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1792.9, 2612.7, 34.026, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1929.5, 2921.4, 34.026, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1932.1, 2840.4, 34.026, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1934.4, 2761.7, 34.026, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1862.3, 2148.6, 34.026, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1864.9, 2067.5, 34.026, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1867.1, 1988.9, 34.026, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1880.8, 1467.5, 34.026, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1883.4, 1386.5, 34.026, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1885.7, 1307.9, 34.026, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1790.3, 2693.7, 34.026, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1790.8, 2988.4, 34.026, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1788.5, 3067.0, 34.026, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1785.9, 3148.0, 34.026, FourCC("h01H"))
 end
 
 function CreateNeutralPassiveBuildings()
@@ -2481,6 +2542,7 @@ CreateBuildingsForPlayer0()
 end
 
 function CreatePlayerUnits()
+CreateUnitsForPlayer10()
 end
 
 function CreateAllUnits()
@@ -2858,6 +2920,8 @@ end
 
 function Trig_Flak_Tower_Armor_Break_Func002Func001A()
 BlzSetUnitArmor(GetEnumUnit(), (BlzGetUnitArmor(GetEnumUnit()) - (1.00 + (I2R(udg_Integer_WaveNumber) / 4.00))))
+AddSpecialEffectTargetUnitBJ("overhead", GetEnumUnit(), "Abilities\\Weapons\\FlyingMachine\\FlyingMachineImpact.mdl")
+BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 1.50)
 end
 
 function Trig_Flak_Tower_Armor_Break_Func002C()
@@ -2890,22 +2954,24 @@ end
 return true
 end
 
-function Trig_Glaive_Tower_Enchanted_Glaives_Func003Func001A()
-udg_Real_Array_GlaiveDistance[GetConvertedPlayerId(GetOwningPlayer(udg_AOEDamageSource))] = DistanceBetweenPoints(GetUnitLoc(udg_AOEDamageSource), GetUnitLoc(GetEnumUnit()))
-UnitDamageTargetBJ(udg_AOEDamageSource, GetEnumUnit(), (udg_Real_Array_GlaiveDistance[GetConvertedPlayerId(GetOwningPlayer(udg_AOEDamageSource))] * I2R(udg_Integer_WaveNumber)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
-end
-
-function Trig_Glaive_Tower_Enchanted_Glaives_Func003C()
-if (not (udg_Real_Array_EnchantGlaiveChance[GetConvertedPlayerId(GetOwningPlayer(udg_AOEDamageSource))] <= 35.00)) then
+function Trig_Glaive_Tower_Enchanted_Glaives_Func004C()
+if (not (udg_Real_Array_EnchantGlaiveChance[udg_Integer_GlaiveTowerPlyNum] <= 35.00)) then
 return false
 end
 return true
 end
 
 function Trig_Glaive_Tower_Enchanted_Glaives_Actions()
-udg_Real_Array_EnchantGlaiveChance[GetConvertedPlayerId(GetOwningPlayer(udg_AOEDamageSource))] = GetRandomReal(0, 100.00)
-if (Trig_Glaive_Tower_Enchanted_Glaives_Func003C()) then
-ForGroupBJ(udg_DamageEventAOEGroup, Trig_Glaive_Tower_Enchanted_Glaives_Func003Func001A)
+udg_Integer_GlaiveTowerPlyNum = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
+udg_Real_Array_EnchantGlaiveChance[udg_Integer_GlaiveTowerPlyNum] = GetRandomReal(0, 100.00)
+if (Trig_Glaive_Tower_Enchanted_Glaives_Func004C()) then
+udg_Point_Array_GlaiveTower[udg_Integer_GlaiveTowerPlyNum] = GetUnitLoc(udg_AOEDamageSource)
+udg_Point_Array_GlaiveTowerTarget[udg_Integer_GlaiveTowerPlyNum] = GetUnitLoc(udg_DamageEventTarget)
+udg_Real_Array_GlaiveDistance[udg_Integer_GlaiveTowerPlyNum] = DistanceBetweenPoints(udg_Point_Array_GlaiveTower[udg_Integer_GlaiveTowerPlyNum], udg_Point_Array_GlaiveTowerTarget[udg_Integer_GlaiveTowerPlyNum])
+UnitDamagePointLoc(udg_AOEDamageSource, 0, 300.00, udg_Point_Array_GlaiveTowerTarget[udg_Integer_GlaiveTowerPlyNum], (udg_Real_Array_GlaiveDistance[udg_Integer_GlaiveTowerPlyNum] * I2R(udg_Integer_WaveNumber)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+AddSpecialEffectLocBJ(udg_Point_Array_GlaiveTowerTarget[udg_Integer_GlaiveTowerPlyNum], "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl")
+        RemoveLocation(udg_Point_Array_GlaiveTower[Integer_GlaiveTowerPlyNum])
+        RemoveLocation(udg_Point_Array_GlaiveTowerTarget[Integer_GlaiveTowerPlyNum])
 else
 end
 end
@@ -2917,42 +2983,67 @@ TriggerAddCondition(gg_trg_Glaive_Tower_Enchanted_Glaives, Condition(Trig_Glaive
 TriggerAddAction(gg_trg_Glaive_Tower_Enchanted_Glaives, Trig_Glaive_Tower_Enchanted_Glaives_Actions)
 end
 
-function Trig_Venom_Tower_Random_Target_Func001002002()
-return (GetUnitAbilityLevelSwapped(FourCC("A00Z"), GetFilterUnit()) == 1)
+function Trig_Venom_Tower_Random_Target_Func004C()
+if (GetUnitAbilityLevelSwapped(FourCC("A00Z"), udg_DamageEventSource) == 1) then
+return true
+end
+if (GetUnitAbilityLevelSwapped(FourCC("A04O"), udg_DamageEventSource) == 1) then
+return true
+end
+return false
 end
 
-function Trig_Venom_Tower_Random_Target_Func002002002()
-return (GetUnitAbilityLevelSwapped(FourCC("A04O"), GetFilterUnit()) >= 1)
+function Trig_Venom_Tower_Random_Target_Conditions()
+if (not Trig_Venom_Tower_Random_Target_Func004C()) then
+return false
+end
+return true
 end
 
-function Trig_Venom_Tower_Random_Target_Func003Func001002003()
-return (IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(GetEnumUnit())) == true)
+function Trig_Venom_Tower_Random_Target_Func002Func002002003()
+return (IsUnitEnemy(GetFilterUnit(), ConvertedPlayer(udg_Integer_VenomPoisonPlyNum)) == true)
 end
 
-function Trig_Venom_Tower_Random_Target_Func003A()
-udg_UnitGroup_VenomRandomUnit = GetUnitsInRangeOfLocMatching(400.00, GetUnitLoc(GetEnumUnit()), Condition(Trig_Venom_Tower_Random_Target_Func003Func001002003))
-IssueTargetOrderBJ(GetEnumUnit(), "attack", GroupPickRandomUnit(udg_UnitGroup_VenomRandomUnit))
+function Trig_Venom_Tower_Random_Target_Func002C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A00Z"), udg_DamageEventSource) == 1)) then
+return false
+end
+return true
 end
 
-function Trig_Venom_Tower_Random_Target_Func004Func001002003()
-return (IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(GetEnumUnit())) == true)
+function Trig_Venom_Tower_Random_Target_Func003Func002002003()
+return (IsUnitEnemy(GetFilterUnit(), ConvertedPlayer(udg_Integer_VenomPoisonPlyNum)) == true)
 end
 
-function Trig_Venom_Tower_Random_Target_Func004A()
-udg_UnitGroup_PoisonTrapRandomUnit = GetUnitsInRangeOfLocMatching(400.00, GetUnitLoc(GetEnumUnit()), Condition(Trig_Venom_Tower_Random_Target_Func004Func001002003))
-IssueTargetOrderBJ(GetEnumUnit(), "attack", GroupPickRandomUnit(udg_UnitGroup_PoisonTrapRandomUnit))
+function Trig_Venom_Tower_Random_Target_Func003C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A04O"), udg_DamageEventSource) == 1)) then
+return false
+end
+return true
 end
 
 function Trig_Venom_Tower_Random_Target_Actions()
-udg_UnitGroup_VenomGroup = GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Venom_Tower_Random_Target_Func001002002))
-udg_UnitGroup_PoisonTrapGroup = GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Venom_Tower_Random_Target_Func002002002))
-ForGroupBJ(udg_UnitGroup_VenomGroup, Trig_Venom_Tower_Random_Target_Func003A)
-ForGroupBJ(udg_UnitGroup_PoisonTrapGroup, Trig_Venom_Tower_Random_Target_Func004A)
+udg_Integer_VenomPoisonPlyNum = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
+if (Trig_Venom_Tower_Random_Target_Func002C()) then
+udg_Point_Array_VenomTower[udg_Integer_VenomPoisonPlyNum] = GetUnitLoc(udg_DamageEventTarget)
+udg_UnitGroup_VenomRandomUnit = GetUnitsInRangeOfLocMatching(400.00, udg_Point_Array_VenomTower[udg_Integer_VenomPoisonPlyNum], Condition(Trig_Venom_Tower_Random_Target_Func002Func002002003))
+IssueTargetOrderBJ(udg_DamageEventSource, "attack", GroupPickRandomUnit(udg_UnitGroup_VenomRandomUnit))
+        RemoveLocation(udg_Point_Array_VenomTower[Integer_VenomPoisonPlyNum])
+else
+end
+if (Trig_Venom_Tower_Random_Target_Func003C()) then
+udg_Point_Array_PoisonTrap[udg_Integer_VenomPoisonPlyNum] = GetUnitLoc(udg_DamageEventTarget)
+udg_UnitGroup_PoisonTrapRandomUnit = GetUnitsInRangeOfLocMatching(400.00, udg_Point_Array_PoisonTrap[udg_Integer_VenomPoisonPlyNum], Condition(Trig_Venom_Tower_Random_Target_Func003Func002002003))
+IssueTargetOrderBJ(udg_DamageEventSource, "attack", GroupPickRandomUnit(udg_UnitGroup_PoisonTrapRandomUnit))
+        RemoveLocation(udg_Point_Array_PoisonTrap[Integer_VenomPoisonPlyNum])
+else
+end
 end
 
 function InitTrig_Venom_Tower_Random_Target()
 gg_trg_Venom_Tower_Random_Target = CreateTrigger()
-TriggerRegisterTimerEventPeriodic(gg_trg_Venom_Tower_Random_Target, 0.50)
+TriggerRegisterVariableEvent(gg_trg_Venom_Tower_Random_Target, "udg_DamageEvent", EQUAL, 1.00)
+TriggerAddCondition(gg_trg_Venom_Tower_Random_Target, Condition(Trig_Venom_Tower_Random_Target_Conditions))
 TriggerAddAction(gg_trg_Venom_Tower_Random_Target, Trig_Venom_Tower_Random_Target_Actions)
 end
 
@@ -2963,20 +3054,33 @@ end
 return true
 end
 
-function Trig_Shrapnel_Tower_Shrapnel_Blast_Func002C()
-if (not (udg_Real_Array_ShrapBlastChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (100.00 + BlzGetUnitArmor(udg_DamageEventTarget)))) then
+function Trig_Shrapnel_Tower_Shrapnel_Blast_Func003Func001C()
+if (not (BlzGetUnitArmor(udg_DamageEventTarget) <= 0.00)) then
+return false
+end
+return true
+end
+
+function Trig_Shrapnel_Tower_Shrapnel_Blast_Func003C()
+if (not (udg_Real_Array_ShrapBlastChance[udg_Integer_ShrapTowerPlyNum] <= (100.00 + BlzGetUnitArmor(udg_DamageEventTarget)))) then
 return false
 end
 return true
 end
 
 function Trig_Shrapnel_Tower_Shrapnel_Blast_Actions()
-udg_Real_Array_ShrapBlastChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0.00, 1000.00)
-if (Trig_Shrapnel_Tower_Shrapnel_Blast_Func002C()) then
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventTarget), bj_UNIT_FACING)
-UnitDamagePointLoc(GetLastCreatedUnit(), 0, 300.00, GetUnitLoc(udg_DamageEventTarget), (500.00 * (1 + BlzGetUnitArmor(udg_DamageEventTarget))), ATTACK_TYPE_PIERCE, DAMAGE_TYPE_NORMAL)
-UnitApplyTimedLifeBJ(0.50, FourCC("BTLF"), GetLastCreatedUnit())
-AddSpecialEffectLocBJ(GetUnitLoc(GetLastCreatedUnit()), "Abilities\\Spells\\NightElf\\FanOfKnives\\FanOfKnivesCaster.mdl")
+udg_Integer_ShrapTowerPlyNum = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
+udg_Real_Array_ShrapBlastChance[udg_Integer_ShrapTowerPlyNum] = GetRandomReal(0.00, 1000.00)
+if (Trig_Shrapnel_Tower_Shrapnel_Blast_Func003C()) then
+if (Trig_Shrapnel_Tower_Shrapnel_Blast_Func003Func001C()) then
+else
+udg_Real_ShrapTowerUnitArm = BlzGetUnitArmor(udg_DamageEventTarget)
+end
+udg_Point_Array_ShrapTower[udg_Integer_ShrapTowerPlyNum] = GetUnitLoc(udg_DamageEventTarget)
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), udg_Point_Array_ShrapTower[udg_Integer_ShrapTowerPlyNum], bj_UNIT_FACING)
+UnitDamagePointLoc(GetLastCreatedUnit(), 0, 300.00, udg_Point_Array_ShrapTower[udg_Integer_ShrapTowerPlyNum], (500.00 * (1 + udg_Real_ShrapTowerUnitArm)), ATTACK_TYPE_PIERCE, DAMAGE_TYPE_NORMAL)
+AddSpecialEffectLocBJ(udg_Point_Array_ShrapTower[udg_Integer_ShrapTowerPlyNum], "Abilities\\Spells\\NightElf\\FanOfKnives\\FanOfKnivesCaster.mdl")
+        RemoveLocation(udg_Point_Array_ShrapTower[Integer_ShrapTowerPlyNum])
 BlzSetSpecialEffectTimeScale(GetLastCreatedEffectBJ(), 2.00)
 BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 0.50)
 else
@@ -2997,41 +3101,42 @@ end
 return true
 end
 
-function Trig_Soul_Tower_Soul_Extraction_Func002Func004Func001Func002A()
+function Trig_Soul_Tower_Soul_Extraction_Func003Func004Func001Func002A()
 BlzSetUnitBaseDamage(GetEnumUnit(), (BlzGetUnitBaseDamage(GetEnumUnit(), 0) + R2I((GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + 0.25))), 0)
 SetUnitLifeBJ(GetEnumUnit(), (GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) + (GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) / 0.50)))
 end
 
-function Trig_Soul_Tower_Soul_Extraction_Func002Func004Func001C()
-if (not (CountUnitsInGroup(udg_UnitGroup_Array_SoulTowerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))]) == 5)) then
+function Trig_Soul_Tower_Soul_Extraction_Func003Func004Func001C()
+if (not (CountUnitsInGroup(udg_UnitGroup_Array_SoulTowerUnits[udg_Integer_SoulTowerPlyNum]) == 5)) then
 return false
 end
 return true
 end
 
-function Trig_Soul_Tower_Soul_Extraction_Func002Func004C()
+function Trig_Soul_Tower_Soul_Extraction_Func003Func004C()
 if (not (GetUnitManaPercent(udg_DamageEventSource) >= 75.00)) then
 return false
 end
 return true
 end
 
-function Trig_Soul_Tower_Soul_Extraction_Func002C()
-if (not (udg_Real_Array_SoulTowerChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= 10)) then
+function Trig_Soul_Tower_Soul_Extraction_Func003C()
+if (not (udg_Real_Array_SoulTowerChance[udg_Integer_SoulTowerPlyNum] <= 10)) then
 return false
 end
 return true
 end
 
 function Trig_Soul_Tower_Soul_Extraction_Actions()
+udg_Integer_SoulTowerPlyNum = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
 udg_Real_Array_SoulTowerChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
-if (Trig_Soul_Tower_Soul_Extraction_Func002C()) then
-udg_Real_Array_SoulTowerDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = (GetUnitStateSwap(UNIT_STATE_LIFE, udg_DamageEventTarget) * 0.05)
-UnitDamageTargetBJ(udg_DamageEventSource, udg_DamageEventTarget, udg_Real_Array_SoulTowerDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))], ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL)
-SetUnitManaBJ(udg_DamageEventSource, ((GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + 5.00) + udg_Real_Array_SoulTowerDamage[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))]))
-if (Trig_Soul_Tower_Soul_Extraction_Func002Func004C()) then
-if (Trig_Soul_Tower_Soul_Extraction_Func002Func004Func001C()) then
-ForGroupBJ(udg_UnitGroup_Array_SoulTowerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))], Trig_Soul_Tower_Soul_Extraction_Func002Func004Func001Func002A)
+if (Trig_Soul_Tower_Soul_Extraction_Func003C()) then
+udg_Real_Array_SoulTowerDamage[udg_Integer_SoulTowerPlyNum] = (GetUnitStateSwap(UNIT_STATE_LIFE, udg_DamageEventTarget) * 0.05)
+UnitDamageTargetBJ(udg_DamageEventSource, udg_DamageEventTarget, udg_Real_Array_SoulTowerDamage[udg_Integer_SoulTowerPlyNum], ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL)
+SetUnitManaBJ(udg_DamageEventSource, ((GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + 5.00) + udg_Real_Array_SoulTowerDamage[udg_Integer_SoulTowerPlyNum]))
+if (Trig_Soul_Tower_Soul_Extraction_Func003Func004C()) then
+if (Trig_Soul_Tower_Soul_Extraction_Func003Func004Func001C()) then
+ForGroupBJ(udg_UnitGroup_Array_SoulTowerUnits[udg_Integer_SoulTowerPlyNum], Trig_Soul_Tower_Soul_Extraction_Func003Func004Func001Func002A)
 else
 bj_forLoopAIndex = 1
 bj_forLoopAIndexEnd = 5
@@ -3041,6 +3146,7 @@ udg_Point_Array_SoulTower[GetForLoopIndexA()] = OffsetLocation(GetUnitLoc(udg_Da
 CreateNUnitsAtLoc(1, udg_UnitType_Array_SoulTowerUnits[GetRandomInt(1, 6)], GetOwningPlayer(udg_DamageEventSource), udg_Point_Array_SoulTower[GetForLoopIndexA()], bj_UNIT_FACING)
 GroupAddUnitSimple(GetLastCreatedUnit(), udg_UnitGroup_Array_SoulTowerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
 BlzSetUnitBaseDamage(GetLastCreatedUnit(), (BlzGetUnitBaseDamage(GetLastCreatedUnit(), 0) + R2I(GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource))), 0)
+                    RemoveLocation(udg_Point_Array_SoulTower[GetForLoopIndexA()])
 bj_forLoopAIndex = bj_forLoopAIndex + 1
 end
 end
@@ -3102,9 +3208,6 @@ function Trig_Shard_Tower_Abilities_Func001Func003C()
 if (not (UnitHasBuffBJ(udg_DamageEventTarget, FourCC("Bfro")) == true)) then
 return false
 end
-if (not (udg_IsDamageRanged == true)) then
-return false
-end
 return true
 end
 
@@ -3128,8 +3231,8 @@ end
 return true
 end
 
-function Trig_Shard_Tower_Abilities_Func003Func003C()
-if (not (udg_Real_Array_ShardTowerChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= 50.00)) then
+function Trig_Shard_Tower_Abilities_Func003Func004C()
+if (not (udg_Real_Array_ShardTowerChance[udg_Integer_ShardTowerPlyNum] <= 50.00)) then
 return false
 end
 return true
@@ -3157,11 +3260,14 @@ SetUnitAbilityLevelSwapped(FourCC("A04E"), udg_DamageEventSource, 2)
 else
 end
 if (Trig_Shard_Tower_Abilities_Func003C()) then
-udg_Real_Array_ShardTowerChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
-if (Trig_Shard_Tower_Abilities_Func003Func003C()) then
+udg_Integer_ShardTowerPlyNum = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
+udg_Real_Array_ShardTowerChance[udg_Integer_ShardTowerPlyNum] = GetRandomReal(0, 100.00)
+if (Trig_Shard_Tower_Abilities_Func003Func004C()) then
+udg_Point_Array_ShardTower[udg_Integer_ShardTowerPlyNum] = GetUnitLoc(udg_DamageEventTarget)
 SetUnitManaBJ(udg_DamageEventSource, (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + (10.00 * I2R(udg_Integer_WaveNumber))))
-UnitDamageTargetBJ(udg_DamageEventSource, udg_DamageEventTarget, (I2R(BlzGetUnitBaseDamage(udg_DamageEventSource, 0)) * 0.25), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventTarget), bj_UNIT_FACING)
+CreateNUnitsAtLoc(1, FourCC("o00H"), ConvertedPlayer(udg_Integer_ShardTowerPlyNum), udg_Point_Array_ShardTower[udg_Integer_ShardTowerPlyNum], bj_UNIT_FACING)
+            RemoveLocation(udg_Point_Array_ShardTower[Integer_ShardTowerPlyNum])
+UnitDamageTargetBJ(GetLastCreatedUnit(), udg_DamageEventTarget, (I2R(BlzGetUnitBaseDamage(udg_DamageEventSource, 0)) * 0.25), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
 UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
 UnitAddAbilityBJ(FourCC("A04D"), GetLastCreatedUnit())
 IssueTargetOrderBJ(GetLastCreatedUnit(), "frostnova", udg_DamageEventTarget)
@@ -3177,7 +3283,7 @@ TriggerRegisterVariableEvent(gg_trg_Shard_Tower_Abilities, "udg_DamageModifierEv
 TriggerAddAction(gg_trg_Shard_Tower_Abilities, Trig_Shard_Tower_Abilities_Actions)
 end
 
-function Trig_Spirit_Tower_Func001Func003C()
+function Trig_Spirit_Tower_Func001Func005C()
 if (not (GetUnitManaPercent(udg_DamageEventSource) >= 100.00)) then
 return false
 end
@@ -3217,13 +3323,17 @@ end
 
 function Trig_Spirit_Tower_Actions()
 if (Trig_Spirit_Tower_Func001C()) then
+udg_Integer_SpiritTowerPlyNum = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
+udg_Integer_SpiritTowerPlyNum = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
 SetUnitManaBJ(udg_DamageEventSource, (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + GetRandomReal(1.00, (5.00 + I2R((udg_Integer_WaveNumber // 50))))))
-if (Trig_Spirit_Tower_Func001Func003C()) then
+if (Trig_Spirit_Tower_Func001Func005C()) then
 bj_forLoopAIndex = 1
 bj_forLoopAIndexEnd = 24
 while (true) do
 if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
-CreateNUnitsAtLoc(1, FourCC("u000"), GetOwningPlayer(udg_DamageEventSource), PolarProjectionBJ(GetUnitLoc(udg_DamageEventSource), 450.00, (I2R(GetForLoopIndexA()) * (360.00 / 24.00))), bj_UNIT_FACING)
+udg_Point_Array_SpiritTower[udg_Integer_SpiritTowerPlyNum] = PolarProjectionBJ(GetUnitLoc(udg_DamageEventSource), 450.00, (I2R(GetForLoopIndexA()) * (360.00 / 24.00)))
+CreateNUnitsAtLoc(1, FourCC("u000"), ConvertedPlayer(udg_Integer_SpiritTowerPlyNum), udg_Point_Array_SpiritTower[udg_Integer_SpiritTowerPlyNum], bj_UNIT_FACING)
+                RemoveLocation(udg_Point_Array_SpiritTower[Integer_SpiritTowerPlyNum])
 UnitApplyTimedLifeBJ(15.00, FourCC("BTLF"), GetLastCreatedUnit())
 bj_forLoopAIndex = bj_forLoopAIndex + 1
 end
@@ -3311,36 +3421,41 @@ end
 return true
 end
 
-function Trig_Fire_Trap_Autocast_Func002Func002C()
-if (not (udg_Integer_Array_Firetrap5050[GetConvertedPlayerId(GetOwningPlayer(udg_DamageFilterSource))] <= 50)) then
+function Trig_Fire_Trap_Autocast_Func003Func003C()
+if (not (udg_Integer_Array_Firetrap5050[udg_Integer_FireTrapPlyNum] <= 50)) then
 return false
 end
 return true
 end
 
-function Trig_Fire_Trap_Autocast_Func002C()
-if (not (udg_Integer_Array_FireTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] <= (5 + udg_Integer_TotalFireTrapsBuilt))) then
+function Trig_Fire_Trap_Autocast_Func003C()
+if (not (udg_Integer_Array_FireTrapChance[udg_Integer_FireTrapPlyNum] <= (5 + udg_Integer_TotalFireTrapsBuilt))) then
 return false
 end
 return true
 end
 
 function Trig_Fire_Trap_Autocast_Actions()
-udg_Integer_Array_FireTrapChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomInt(1, 100)
-if (Trig_Fire_Trap_Autocast_Func002C()) then
-udg_Integer_Array_Firetrap5050[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomInt(1, 100)
-if (Trig_Fire_Trap_Autocast_Func002Func002C()) then
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
+udg_Integer_FireTrapPlyNum = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
+udg_Integer_Array_FireTrapChance[udg_Integer_FireTrapPlyNum] = GetRandomInt(1, 100)
+if (Trig_Fire_Trap_Autocast_Func003C()) then
+udg_Integer_Array_Firetrap5050[udg_Integer_FireTrapPlyNum] = GetRandomInt(1, 100)
+udg_Point_Array_FireTrap[udg_Integer_FireTrapPlyNum] = GetUnitLoc(udg_DamageEventSource)
+if (Trig_Fire_Trap_Autocast_Func003Func003C()) then
+CreateNUnitsAtLoc(1, FourCC("o00H"), ConvertedPlayer(udg_Integer_FireTrapPlyNum), udg_Point_Array_FireTrap[udg_Integer_FireTrapPlyNum], bj_UNIT_FACING)
 UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
 UnitAddAbilityBJ(FourCC("A04K"), GetLastCreatedUnit())
 IssueTargetOrderBJ(GetLastCreatedUnit(), "drunkenhaze", udg_DamageEventTarget)
 else
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
+CreateNUnitsAtLoc(1, FourCC("o00H"), ConvertedPlayer(udg_Integer_FireTrapPlyNum), udg_Point_Array_FireTrap[udg_Integer_FlakTowerPlyNum], bj_UNIT_FACING)
 UnitApplyTimedLifeBJ(3.50, FourCC("BTLF"), GetLastCreatedUnit())
 UnitAddAbilityBJ(FourCC("A04J"), GetLastCreatedUnit())
 SetUnitAbilityLevelSwapped(FourCC("A04J"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A04L"), udg_DamageEventSource))
-IssuePointOrderLocBJ(GetLastCreatedUnit(), "breathoffire", GetUnitLoc(udg_DamageEventTarget))
+udg_Point_Array_FireTrapBreath[udg_Integer_FireTrapPlyNum] = GetUnitLoc(udg_DamageEventTarget)
+IssuePointOrderLocBJ(GetLastCreatedUnit(), "breathoffire", udg_Point_Array_FireTrapBreath[udg_Integer_FireTrapPlyNum])
+            RemoveLocation(udg_Point_Array_FireTrapBreath[Integer_FireTrapPlyNum])
 end
+        RemoveLocation(udg_Point_Array_FireTrap[Integer_FireTrapPlyNum])
 else
 end
 end
@@ -3360,11 +3475,16 @@ return true
 end
 
 function Trig_Frost_Trap_Autocast_Actions()
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), GetUnitLoc(udg_DamageEventSource), bj_UNIT_FACING)
+udg_Integer_FrostTrapBreathPlyNum = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
+udg_Point_Array_FrostTrapBreath[udg_Integer_FrostTrapBreathPlyNum] = GetUnitLoc(udg_DamageEventSource)
+CreateNUnitsAtLoc(1, FourCC("o00H"), ConvertedPlayer(udg_Integer_FrostTrapBreathPlyNum), udg_Point_Array_FrostTrapBreath[udg_Integer_FrostTrapBreathPlyNum], bj_UNIT_FACING)
+    RemoveLocation(udg_Point_Array_FrostTrapBreath[Integer_FrostTrapBreathPlyNum])
 UnitApplyTimedLifeBJ(5.50, FourCC("BTLF"), GetLastCreatedUnit())
 UnitAddAbilityBJ(FourCC("A00A"), GetLastCreatedUnit())
 SetUnitAbilityLevelSwapped(FourCC("A00A"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A04N"), udg_DamageEventSource))
-IssuePointOrderLocBJ(GetLastCreatedUnit(), "breathoffrost", GetUnitLoc(udg_DamageEventTarget))
+udg_Point_Array_FrostTrapBreathTar[udg_Integer_FrostTrapBreathPlyNum] = GetUnitLoc(udg_DamageEventTarget)
+IssuePointOrderLocBJ(GetLastCreatedUnit(), "breathoffrost", udg_Point_Array_FrostTrapBreathTar[udg_Integer_FrostTrapBreathPlyNum])
+    RemoveLocation(udg_Point_Array_FrostTrapBreathTar[Integer_FrostTrapBreathPlyNum])
 end
 
 function InitTrig_Frost_Trap_Autocast()

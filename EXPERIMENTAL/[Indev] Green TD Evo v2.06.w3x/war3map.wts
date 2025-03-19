@@ -220,6 +220,12 @@ STRING 36
 Endless Mode
 }
 
+STRING 37
+// Abilities: A04I (Shrapnel Blast), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Hits on enemies have a [10% + 0.1% per armour of hit unit] chance to trigger a shrapnel blast dealing piercing damage to nearby units equaling to [500 x armor of hit unit].
+}
+
 STRING 38
 // Units: nbzw ([Air] Bronze Dragon Whelp), Name (Name)
 {
@@ -5275,13 +5281,13 @@ Gold Aura 4
 }
 
 STRING 812
-// Buffs/Effects: B005 (Gold Aura 1), Bufftip (Tooltip)
+// Abilities: A052 (Gold Aura), Name (Name)
 {
 Gold Aura
 }
 
 STRING 813
-// Buffs/Effects: B005 (Gold Aura 1), Buffubertip (Tooltip - Extended)
+// Buffs/Effects: B004 (Gold Aura 4), Buffubertip (Tooltip - Extended)
 {
 This unit is under the effects of Gold Aura; it has a chance to give extra gold when killed.
 }
@@ -5293,13 +5299,13 @@ Gold Aura 1
 }
 
 STRING 815
-// Buffs/Effects: B006 (Gold Aura 2), Bufftip (Tooltip)
+// Buffs/Effects: B004 (Gold Aura 4), Bufftip (Tooltip)
 {
 Gold Aura
 }
 
 STRING 816
-// Buffs/Effects: B006 (Gold Aura 2), Buffubertip (Tooltip - Extended)
+// Buffs/Effects: B005 (Gold Aura 1), Buffubertip (Tooltip - Extended)
 {
 This unit is under the effects of Gold Aura; it has a chance to give extra gold when killed.
 }
@@ -5389,7 +5395,7 @@ STRING 831
 }
 
 STRING 832
-// Abilities: A052 (Gold Aura), Name (Name)
+// Buffs/Effects: B005 (Gold Aura 1), Bufftip (Tooltip)
 {
 Gold Aura
 }
@@ -5479,13 +5485,13 @@ STRING 846
 }
 
 STRING 847
-// Buffs/Effects: B004 (Gold Aura 4), Bufftip (Tooltip)
+// Buffs/Effects: B006 (Gold Aura 2), Bufftip (Tooltip)
 {
 Gold Aura
 }
 
 STRING 848
-// Buffs/Effects: B004 (Gold Aura 4), Buffubertip (Tooltip - Extended)
+// Buffs/Effects: B006 (Gold Aura 2), Buffubertip (Tooltip - Extended)
 {
 This unit is under the effects of Gold Aura; it has a chance to give extra gold when killed.
 }
@@ -17779,12 +17785,6 @@ STRING 2723
 Incinerate
 }
 
-STRING 2724
-// Abilities: A04Y (Fan of Knives), EditorSuffix (Editor Suffix)
-{
-[Shrapnel Tower]
-}
-
 STRING 2725
 // Abilities: A04B (Frostbite), Ubertip (Tooltip - Normal - Extended)
 {
@@ -20149,12 +20149,6 @@ STRING 3072
 // Units: h00J (Flak Tower 5: Mortar Team), Hotkey (Hotkey)
 {
 Z
-}
-
-STRING 3073
-// Abilities: A04I (Shrapnel Blast), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Hits on enemies have a [10% + 0.1% per armour of hit unit] chance to trigger a shrapnel blast dealing piercing damage to near by units equaling to [250 x armor of hit unit].
 }
 
 STRING 3074
