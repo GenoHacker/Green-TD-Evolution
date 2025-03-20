@@ -4021,24 +4021,24 @@ TriggerRegisterPlayerChatEvent(gg_trg_Kick_Gray, Player(0), "-kick grey", true)
 TriggerAddAction(gg_trg_Kick_Gray, Trig_Kick_Gray_Actions)
 end
 
-function Trig_Set_Variables_Func289Func001C()
+function Trig_Set_Variables_Func291Func001C()
 if (not (GetPlayerSlotState(ConvertedPlayer(GetForLoopIndexA())) == PLAYER_SLOT_STATE_PLAYING)) then
 return false
 end
 return true
 end
 
-function Trig_Set_Variables_Func290Func003C()
+function Trig_Set_Variables_Func292Func003C()
 if (not (GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_LEFT)) then
 return false
 end
 return true
 end
 
-function Trig_Set_Variables_Func290A()
+function Trig_Set_Variables_Func292A()
 udg_String_Array_PlayerNames[GetConvertedPlayerId(GetEnumPlayer())] = (udg_String_Array_MultiBoardColours[GetConvertedPlayerId(GetEnumPlayer())] .. (GetPlayerName(GetEnumPlayer()) .. "|r"))
 udg_Real_Array_CameraDistance[GetConvertedPlayerId(GetEnumPlayer())] = 2500.00
-if (Trig_Set_Variables_Func290Func003C()) then
+if (Trig_Set_Variables_Func292Func003C()) then
 ForceRemovePlayerSimple(GetEnumPlayer(), udg_PlayerGroup_Permanent[1])
 else
 udg_Integer_Players = (udg_Integer_Players + 1)
@@ -4108,6 +4108,8 @@ udg_String_Array_MBStatWavUniIcons[57] = "ReplaceableTextures\\CommandButtons\\B
 udg_String_Array_MBStatWavUniIcons[58] = "ReplaceableTextures\\CommandButtons\\BTNNagaMyrmidonRoyalGuard.blp"
 udg_String_Array_MBStatWavUniIcons[59] = "ReplaceableTextures\\CommandButtons\\BTNSeaWitch.blp"
 udg_String_Array_MBStatWavUniIcons[60] = "ReplaceableTextures\\CommandButtons\\BTNNagaMyrmidon.blp"
+udg_String_Array_MBStatWavUniIcons[61] = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
+udg_String_Array_MBStatWavUniIcons[62] = "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp"
 udg_String_Array_Alpharius[1] = "I am Alpharius"
 udg_String_Array_Alpharius[2] = "We are Alpharius"
 udg_String_Array_Alpharius[3] = "You are Alpharius"
@@ -4331,14 +4333,14 @@ bj_forLoopAIndex = 1
 bj_forLoopAIndexEnd = 9
 while (true) do
 if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
-if (Trig_Set_Variables_Func289Func001C()) then
+if (Trig_Set_Variables_Func291Func001C()) then
 ForceAddPlayerSimple(ConvertedPlayer(GetForLoopIndexA()), udg_PlayerGroup_Permanent[1])
 else
 udg_PlayerName[GetForLoopIndexA()] = "N/A"
 end
 bj_forLoopAIndex = bj_forLoopAIndex + 1
 end
-ForForce(udg_PlayerGroup_Permanent[1], Trig_Set_Variables_Func290A)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Set_Variables_Func292A)
 udg_Real_Array_MessageTime[1] = 60.00
 end
 

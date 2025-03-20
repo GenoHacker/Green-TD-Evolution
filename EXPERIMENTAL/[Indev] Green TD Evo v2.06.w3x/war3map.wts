@@ -570,6 +570,12 @@ STRING 91
 HH Damage Reduction Aura Passive
 }
 
+STRING 92
+// Abilities: A052 (Gold Aura), Tip (Tooltip - Normal)
+{
+|c0000ff00Gold Aura 4
+}
+
 STRING 93
 // Units: h00V (Flak Tower 4: Mortar Team), Ubertip (Tooltip - Extended)
 {
@@ -1220,6 +1226,11 @@ F
 STRING 167
 {
 Aura Upgraded
+}
+
+STRING 168
+{
+|Cff00ff00Map made and maintained by GenoHacker#2987
 }
 
 STRING 169
@@ -5536,12 +5547,6 @@ STRING 855
 // Buffs/Effects: B007 (Gold Aura 3), EditorName (Name (Editor Only))
 {
 Gold Aura 3
-}
-
-STRING 857
-// Abilities: A052 (Gold Aura), Tip (Tooltip - Normal)
-{
-|c0000ff00Gold Aura 3
 }
 
 STRING 895
