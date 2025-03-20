@@ -393,7 +393,6 @@ udg_Integer_VenomPoisonPlyNum = 0
 udg_Integer_ShrapTowerPlyNum = 0
 udg_Point_Array_ShrapTower = {}
 udg_Real_ShrapTowerUnitArm = 0.0
-udg_Point_Array_FlakTower = {}
 udg_Integer_FlakTowerPlyNum = 0
 udg_Integer_SoulTowerPlyNum = 0
 udg_Point_Array_ShardTower = {}
@@ -10561,21 +10560,21 @@ TriggerAddCondition(gg_trg_Blitz_Spawning, Condition(Trig_Blitz_Spawning_Conditi
 TriggerAddAction(gg_trg_Blitz_Spawning, Trig_Blitz_Spawning_Actions)
 end
 
-function Trig_Static_Wave_Spawning_System_Func002Func002Func004Func001C()
+function Trig_Static_Wave_Spawning_System_Func002Func002Func002Func001C()
 if (not (udg_Integer_Player1SpawnDivider == 0)) then
 return false
 end
 return true
 end
 
-function Trig_Static_Wave_Spawning_System_Func002Func002Func004Func002C()
+function Trig_Static_Wave_Spawning_System_Func002Func002Func002Func002C()
 if (not (udg_Integer_SpeedMode == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Static_Wave_Spawning_System_Func002Func002Func004Func003C()
+function Trig_Static_Wave_Spawning_System_Func002Func002Func002Func003C()
 if (udg_Integer_WaveNumber == 12) then
 return true
 end
@@ -10591,22 +10590,22 @@ end
 return false
 end
 
-function Trig_Static_Wave_Spawning_System_Func002Func002Func004Func008C()
+function Trig_Static_Wave_Spawning_System_Func002Func002Func002Func010C()
 if (not (udg_Integer_SpeedMode == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Static_Wave_Spawning_System_Func002Func002Func004Func012C()
+function Trig_Static_Wave_Spawning_System_Func002Func002Func002Func016C()
 if (not (udg_Integer_SpeedMode == 1)) then
 return false
 end
 return true
 end
 
-function Trig_Static_Wave_Spawning_System_Func002Func002Func004C()
-if (not Trig_Static_Wave_Spawning_System_Func002Func002Func004Func003C()) then
+function Trig_Static_Wave_Spawning_System_Func002Func002Func002C()
+if (not Trig_Static_Wave_Spawning_System_Func002Func002Func002Func003C()) then
 return false
 end
 return true
@@ -10622,7 +10621,7 @@ end
 return true
 end
 
-function Trig_Static_Wave_Spawning_System_Func002Func004Func005C()
+function Trig_Static_Wave_Spawning_System_Func002Func004Func006C()
 if (not (udg_Integer_SpeedMode == 1)) then
 return false
 end
@@ -10639,7 +10638,7 @@ end
 return true
 end
 
-function Trig_Static_Wave_Spawning_System_Func002Func006Func005C()
+function Trig_Static_Wave_Spawning_System_Func002Func006Func006C()
 if (not (udg_Integer_SpeedMode == 1)) then
 return false
 end
@@ -10656,7 +10655,7 @@ end
 return true
 end
 
-function Trig_Static_Wave_Spawning_System_Func002Func008Func005C()
+function Trig_Static_Wave_Spawning_System_Func002Func008Func006C()
 if (not (udg_Integer_SpeedMode == 1)) then
 return false
 end
@@ -10673,7 +10672,7 @@ end
 return true
 end
 
-function Trig_Static_Wave_Spawning_System_Func002Func010Func005C()
+function Trig_Static_Wave_Spawning_System_Func002Func010Func006C()
 if (not (udg_Integer_SpeedMode == 1)) then
 return false
 end
@@ -10690,7 +10689,7 @@ end
 return true
 end
 
-function Trig_Static_Wave_Spawning_System_Func002Func012Func005C()
+function Trig_Static_Wave_Spawning_System_Func002Func012Func006C()
 if (not (udg_Integer_SpeedMode == 1)) then
 return false
 end
@@ -10707,7 +10706,7 @@ end
 return true
 end
 
-function Trig_Static_Wave_Spawning_System_Func002Func014Func005C()
+function Trig_Static_Wave_Spawning_System_Func002Func014Func006C()
 if (not (udg_Integer_SpeedMode == 1)) then
 return false
 end
@@ -10724,7 +10723,7 @@ end
 return true
 end
 
-function Trig_Static_Wave_Spawning_System_Func002Func016Func007C()
+function Trig_Static_Wave_Spawning_System_Func002Func016Func008C()
 if (not (udg_Integer_SpeedMode == 1)) then
 return false
 end
@@ -10741,7 +10740,7 @@ end
 return true
 end
 
-function Trig_Static_Wave_Spawning_System_Func002Func018Func007C()
+function Trig_Static_Wave_Spawning_System_Func002Func018Func008C()
 if (not (udg_Integer_SpeedMode == 1)) then
 return false
 end
@@ -10772,37 +10771,43 @@ DisableTrigger(GetTriggeringTrigger())
 else
 if (Trig_Static_Wave_Spawning_System_Func002Func002C()) then
 udg_Integer_Player1SpawnDivider = GetRandomInt(0, 1)
+if (Trig_Static_Wave_Spawning_System_Func002Func002Func002C()) then
 udg_SpawnPoints_PntArray[0] = GetRectCenter(gg_rct_Red_Spawn_A)
+CreateNUnitsAtLoc(1, udg_UnitType_Array_UnitsTypes[udg_Integer_WaveNumber], Player(10), udg_SpawnPoints_PntArray[0], bj_UNIT_FACING)
+                RemoveLocation(udg_SpawnPoints_PntArray[0])
+udg_Real_Array_RWHealth[0] = (I2R(BlzGetUnitMaxHP(GetLastCreatedUnit())) * udg_Real_CreepHealthMultiplier)
+BlzSetUnitMaxHP(GetLastCreatedUnit(), R2I(udg_Real_Array_RWHealth[0]))
+SetUnitLifePercentBJ(GetLastCreatedUnit(), 100)
+if (Trig_Static_Wave_Spawning_System_Func002Func002Func002Func010C()) then
+SetUnitMoveSpeed(GetLastCreatedUnit(), 400.00)
+else
+end
 udg_SpawnPoints_PntArray[1] = GetRectCenter(gg_rct_Red_Spawn_B)
-if (Trig_Static_Wave_Spawning_System_Func002Func002Func004C()) then
-CreateNUnitsAtLoc(1, udg_UnitType_Array_UnitsTypes[udg_Integer_WaveNumber], Player(10), udg_SpawnPoints_PntArray[0], bj_UNIT_FACING)
-udg_Real_Array_RWHealth[0] = (I2R(BlzGetUnitMaxHP(GetLastCreatedUnit())) * udg_Real_CreepHealthMultiplier)
-BlzSetUnitMaxHP(GetLastCreatedUnit(), R2I(udg_Real_Array_RWHealth[0]))
-SetUnitLifePercentBJ(GetLastCreatedUnit(), 100)
-if (Trig_Static_Wave_Spawning_System_Func002Func002Func004Func008C()) then
-SetUnitMoveSpeed(GetLastCreatedUnit(), 400.00)
-else
-end
 CreateNUnitsAtLoc(1, udg_UnitType_Array_UnitsTypes[udg_Integer_WaveNumber], Player(11), udg_SpawnPoints_PntArray[1], bj_UNIT_FACING)
+                RemoveLocation(udg_SpawnPoints_PntArray[1])
 udg_Real_Array_RWHealth[0] = (I2R(BlzGetUnitMaxHP(GetLastCreatedUnit())) * udg_Real_CreepHealthMultiplier)
 BlzSetUnitMaxHP(GetLastCreatedUnit(), R2I(udg_Real_Array_RWHealth[0]))
-if (Trig_Static_Wave_Spawning_System_Func002Func002Func004Func012C()) then
+if (Trig_Static_Wave_Spawning_System_Func002Func002Func002Func016C()) then
 SetUnitMoveSpeed(GetLastCreatedUnit(), 400.00)
 else
 end
 else
-if (Trig_Static_Wave_Spawning_System_Func002Func002Func004Func001C()) then
+if (Trig_Static_Wave_Spawning_System_Func002Func002Func002Func001C()) then
+udg_SpawnPoints_PntArray[0] = GetRectCenter(gg_rct_Red_Spawn_A)
 CreateNUnitsAtLoc(1, udg_UnitType_Array_UnitsTypes[udg_Integer_WaveNumber], Player(10), udg_SpawnPoints_PntArray[0], bj_UNIT_FACING)
+                    RemoveLocation(udg_SpawnPoints_PntArray[0])
 udg_Real_Array_RWHealth[0] = (I2R(BlzGetUnitMaxHP(GetLastCreatedUnit())) * udg_Real_CreepHealthMultiplier)
 BlzSetUnitMaxHP(GetLastCreatedUnit(), R2I(udg_Real_Array_RWHealth[0]))
 SetUnitLifePercentBJ(GetLastCreatedUnit(), 100)
 else
+udg_SpawnPoints_PntArray[1] = GetRectCenter(gg_rct_Red_Spawn_B)
 CreateNUnitsAtLoc(1, udg_UnitType_Array_UnitsTypes[udg_Integer_WaveNumber], Player(11), udg_SpawnPoints_PntArray[1], bj_UNIT_FACING)
+                    RemoveLocation(udg_SpawnPoints_PntArray[1])
 udg_Real_Array_RWHealth[0] = (I2R(BlzGetUnitMaxHP(GetLastCreatedUnit())) * udg_Real_CreepHealthMultiplier)
 BlzSetUnitMaxHP(GetLastCreatedUnit(), R2I(udg_Real_Array_RWHealth[0]))
 SetUnitLifePercentBJ(GetLastCreatedUnit(), 100)
 end
-if (Trig_Static_Wave_Spawning_System_Func002Func002Func004Func002C()) then
+if (Trig_Static_Wave_Spawning_System_Func002Func002Func002Func002C()) then
 SetUnitMoveSpeed(GetLastCreatedUnit(), 400.00)
 else
 end
@@ -10812,9 +10817,10 @@ end
 if (Trig_Static_Wave_Spawning_System_Func002Func004C()) then
 udg_SpawnPoints_PntArray[2] = GetRectCenter(gg_rct_Blue_Spawn)
 CreateNUnitsAtLoc(1, udg_UnitType_Array_UnitsTypes[udg_Integer_WaveNumber], Player(11), udg_SpawnPoints_PntArray[2], bj_UNIT_FACING)
+            RemoveLocation(udg_SpawnPoints_PntArray[2])
 udg_Real_Array_RWHealth[0] = (I2R(BlzGetUnitMaxHP(GetLastCreatedUnit())) * udg_Real_CreepHealthMultiplier)
 BlzSetUnitMaxHP(GetLastCreatedUnit(), R2I(udg_Real_Array_RWHealth[0]))
-if (Trig_Static_Wave_Spawning_System_Func002Func004Func005C()) then
+if (Trig_Static_Wave_Spawning_System_Func002Func004Func006C()) then
 SetUnitMoveSpeed(GetLastCreatedUnit(), 400.00)
 else
 end
@@ -10823,9 +10829,10 @@ end
 if (Trig_Static_Wave_Spawning_System_Func002Func006C()) then
 udg_SpawnPoints_PntArray[3] = GetRectCenter(gg_rct_Teal_Spawn)
 CreateNUnitsAtLoc(1, udg_UnitType_Array_UnitsTypes[udg_Integer_WaveNumber], Player(11), udg_SpawnPoints_PntArray[3], bj_UNIT_FACING)
+            RemoveLocation(udg_SpawnPoints_PntArray[3])
 udg_Real_Array_RWHealth[0] = (I2R(BlzGetUnitMaxHP(GetLastCreatedUnit())) * udg_Real_CreepHealthMultiplier)
 BlzSetUnitMaxHP(GetLastCreatedUnit(), R2I(udg_Real_Array_RWHealth[0]))
-if (Trig_Static_Wave_Spawning_System_Func002Func006Func005C()) then
+if (Trig_Static_Wave_Spawning_System_Func002Func006Func006C()) then
 SetUnitMoveSpeed(GetLastCreatedUnit(), 400.00)
 else
 end
@@ -10834,9 +10841,10 @@ end
 if (Trig_Static_Wave_Spawning_System_Func002Func008C()) then
 udg_SpawnPoints_PntArray[4] = GetRectCenter(gg_rct_Purple_Spawn)
 CreateNUnitsAtLoc(1, udg_UnitType_Array_UnitsTypes[udg_Integer_WaveNumber], Player(11), udg_SpawnPoints_PntArray[4], bj_UNIT_FACING)
+            RemoveLocation(udg_SpawnPoints_PntArray[4])
 udg_Real_Array_RWHealth[0] = (I2R(BlzGetUnitMaxHP(GetLastCreatedUnit())) * udg_Real_CreepHealthMultiplier)
 BlzSetUnitMaxHP(GetLastCreatedUnit(), R2I(udg_Real_Array_RWHealth[0]))
-if (Trig_Static_Wave_Spawning_System_Func002Func008Func005C()) then
+if (Trig_Static_Wave_Spawning_System_Func002Func008Func006C()) then
 SetUnitMoveSpeed(GetLastCreatedUnit(), 400.00)
 else
 end
@@ -10845,9 +10853,10 @@ end
 if (Trig_Static_Wave_Spawning_System_Func002Func010C()) then
 udg_SpawnPoints_PntArray[5] = GetRectCenter(gg_rct_Yellow_Spawn)
 CreateNUnitsAtLoc(1, udg_UnitType_Array_UnitsTypes[udg_Integer_WaveNumber], Player(11), udg_SpawnPoints_PntArray[5], bj_UNIT_FACING)
+            RemoveLocation(udg_SpawnPoints_PntArray[5])
 udg_Real_Array_RWHealth[0] = (I2R(BlzGetUnitMaxHP(GetLastCreatedUnit())) * udg_Real_CreepHealthMultiplier)
 BlzSetUnitMaxHP(GetLastCreatedUnit(), R2I(udg_Real_Array_RWHealth[0]))
-if (Trig_Static_Wave_Spawning_System_Func002Func010Func005C()) then
+if (Trig_Static_Wave_Spawning_System_Func002Func010Func006C()) then
 SetUnitMoveSpeed(GetLastCreatedUnit(), 400.00)
 else
 end
@@ -10856,9 +10865,10 @@ end
 if (Trig_Static_Wave_Spawning_System_Func002Func012C()) then
 udg_SpawnPoints_PntArray[6] = GetRectCenter(gg_rct_Orange_Spawn)
 CreateNUnitsAtLoc(1, udg_UnitType_Array_UnitsTypes[udg_Integer_WaveNumber], Player(10), udg_SpawnPoints_PntArray[6], bj_UNIT_FACING)
+            RemoveLocation(udg_SpawnPoints_PntArray[6])
 udg_Real_Array_RWHealth[0] = (I2R(BlzGetUnitMaxHP(GetLastCreatedUnit())) * udg_Real_CreepHealthMultiplier)
 BlzSetUnitMaxHP(GetLastCreatedUnit(), R2I(udg_Real_Array_RWHealth[0]))
-if (Trig_Static_Wave_Spawning_System_Func002Func012Func005C()) then
+if (Trig_Static_Wave_Spawning_System_Func002Func012Func006C()) then
 SetUnitMoveSpeed(GetLastCreatedUnit(), 400.00)
 else
 end
@@ -10867,9 +10877,10 @@ end
 if (Trig_Static_Wave_Spawning_System_Func002Func014C()) then
 udg_SpawnPoints_PntArray[7] = GetRectCenter(gg_rct_Green_Spawn)
 CreateNUnitsAtLoc(1, udg_UnitType_Array_UnitsTypes[udg_Integer_WaveNumber], Player(10), udg_SpawnPoints_PntArray[7], bj_UNIT_FACING)
+            RemoveLocation(udg_SpawnPoints_PntArray[7])
 udg_Real_Array_RWHealth[0] = (I2R(BlzGetUnitMaxHP(GetLastCreatedUnit())) * udg_Real_CreepHealthMultiplier)
 BlzSetUnitMaxHP(GetLastCreatedUnit(), R2I(udg_Real_Array_RWHealth[0]))
-if (Trig_Static_Wave_Spawning_System_Func002Func014Func005C()) then
+if (Trig_Static_Wave_Spawning_System_Func002Func014Func006C()) then
 SetUnitMoveSpeed(GetLastCreatedUnit(), 400.00)
 else
 end
@@ -10878,9 +10889,10 @@ end
 if (Trig_Static_Wave_Spawning_System_Func002Func016C()) then
 udg_SpawnPoints_PntArray[8] = GetRectCenter(gg_rct_Pink_Spawn)
 CreateNUnitsAtLoc(1, udg_UnitType_Array_UnitsTypes[udg_Integer_WaveNumber], Player(10), udg_SpawnPoints_PntArray[8], bj_UNIT_FACING)
+            RemoveLocation(udg_SpawnPoints_PntArray[8])
 udg_Real_Array_RWHealth[0] = (I2R(BlzGetUnitMaxHP(GetLastCreatedUnit())) * udg_Real_CreepHealthMultiplier)
 BlzSetUnitMaxHP(GetLastCreatedUnit(), R2I(udg_Real_Array_RWHealth[0]))
-if (Trig_Static_Wave_Spawning_System_Func002Func016Func007C()) then
+if (Trig_Static_Wave_Spawning_System_Func002Func016Func008C()) then
 SetUnitMoveSpeed(GetLastCreatedUnit(), 400.00)
 else
 end
@@ -10889,9 +10901,10 @@ end
 if (Trig_Static_Wave_Spawning_System_Func002Func018C()) then
 udg_SpawnPoints_PntArray[9] = GetRectCenter(gg_rct_Gray_Spawn)
 CreateNUnitsAtLoc(1, udg_UnitType_Array_UnitsTypes[udg_Integer_WaveNumber], Player(10), udg_SpawnPoints_PntArray[9], bj_UNIT_FACING)
+            RemoveLocation(udg_SpawnPoints_PntArray[9])
 udg_Real_Array_RWHealth[0] = (I2R(BlzGetUnitMaxHP(GetLastCreatedUnit())) * udg_Real_CreepHealthMultiplier)
 BlzSetUnitMaxHP(GetLastCreatedUnit(), R2I(udg_Real_Array_RWHealth[0]))
-if (Trig_Static_Wave_Spawning_System_Func002Func018Func007C()) then
+if (Trig_Static_Wave_Spawning_System_Func002Func018Func008C()) then
 SetUnitMoveSpeed(GetLastCreatedUnit(), 400.00)
 else
 end
@@ -10907,14 +10920,14 @@ TriggerRegisterTimerEventPeriodic(gg_trg_Static_Wave_Spawning_System, 0.25)
 TriggerAddAction(gg_trg_Static_Wave_Spawning_System, Trig_Static_Wave_Spawning_System_Actions)
 end
 
-function Trig_Random_Wave_Spawning_Sys_Func002Func002Func006C()
+function Trig_Random_Wave_Spawning_Sys_Func002Func002Func004C()
 if (not (udg_Integer_Player1SpawnDivider == 0)) then
 return false
 end
 return true
 end
 
-function Trig_Random_Wave_Spawning_Sys_Func002Func002Func007C()
+function Trig_Random_Wave_Spawning_Sys_Func002Func002Func005C()
 if (not (udg_Integer_SpeedMode == 1)) then
 return false
 end
@@ -10931,7 +10944,7 @@ end
 return true
 end
 
-function Trig_Random_Wave_Spawning_Sys_Func002Func004Func006C()
+function Trig_Random_Wave_Spawning_Sys_Func002Func004Func007C()
 if (not (udg_Integer_SpeedMode == 1)) then
 return false
 end
@@ -10948,7 +10961,7 @@ end
 return true
 end
 
-function Trig_Random_Wave_Spawning_Sys_Func002Func006Func006C()
+function Trig_Random_Wave_Spawning_Sys_Func002Func006Func007C()
 if (not (udg_Integer_SpeedMode == 1)) then
 return false
 end
@@ -10965,7 +10978,7 @@ end
 return true
 end
 
-function Trig_Random_Wave_Spawning_Sys_Func002Func008Func004C()
+function Trig_Random_Wave_Spawning_Sys_Func002Func008Func005C()
 if (not (udg_Integer_SpeedMode == 1)) then
 return false
 end
@@ -10982,7 +10995,7 @@ end
 return true
 end
 
-function Trig_Random_Wave_Spawning_Sys_Func002Func010Func006C()
+function Trig_Random_Wave_Spawning_Sys_Func002Func010Func007C()
 if (not (udg_Integer_SpeedMode == 1)) then
 return false
 end
@@ -10999,7 +11012,7 @@ end
 return true
 end
 
-function Trig_Random_Wave_Spawning_Sys_Func002Func012Func006C()
+function Trig_Random_Wave_Spawning_Sys_Func002Func012Func007C()
 if (not (udg_Integer_SpeedMode == 1)) then
 return false
 end
@@ -11016,7 +11029,7 @@ end
 return true
 end
 
-function Trig_Random_Wave_Spawning_Sys_Func002Func014Func006C()
+function Trig_Random_Wave_Spawning_Sys_Func002Func014Func007C()
 if (not (udg_Integer_SpeedMode == 1)) then
 return false
 end
@@ -11033,7 +11046,7 @@ end
 return true
 end
 
-function Trig_Random_Wave_Spawning_Sys_Func002Func016Func006C()
+function Trig_Random_Wave_Spawning_Sys_Func002Func016Func007C()
 if (not (udg_Integer_SpeedMode == 1)) then
 return false
 end
@@ -11050,7 +11063,7 @@ end
 return true
 end
 
-function Trig_Random_Wave_Spawning_Sys_Func002Func018Func006C()
+function Trig_Random_Wave_Spawning_Sys_Func002Func018Func007C()
 if (not (udg_Integer_SpeedMode == 1)) then
 return false
 end
@@ -11081,22 +11094,24 @@ DisableTrigger(GetTriggeringTrigger())
 else
 if (Trig_Random_Wave_Spawning_Sys_Func002Func002C()) then
 udg_Integer_Player1SpawnDivider = GetRandomInt(0, 1)
+if (Trig_Random_Wave_Spawning_Sys_Func002Func002Func004C()) then
 udg_SpawnPoints_PntArray[0] = GetRectCenter(gg_rct_Red_Spawn_A)
-udg_SpawnPoints_PntArray[1] = GetRectCenter(gg_rct_Red_Spawn_B)
-if (Trig_Random_Wave_Spawning_Sys_Func002Func002Func006C()) then
 CreateNUnitsAtLoc(1, udg_UnitType_Array_RWSpawnUnit[udg_Integer_WaveNumber], Player(10), udg_SpawnPoints_PntArray[0], bj_UNIT_FACING)
+                RemoveLocation(udg_SpawnPoints_PntArray[0])
 SetUnitUserData(GetLastCreatedUnit(), (udg_Integer_Array_RWBounty[udg_Integer_WaveNumber] // udg_Integer_Array_WaveSpawnMax[udg_Integer_WaveNumber]))
 BlzSetUnitMaxHP(GetLastCreatedUnit(), R2I(udg_Real_Array_CreepHealthWaves[udg_Integer_WaveNumber]))
 SetUnitLifePercentBJ(GetLastCreatedUnit(), 100)
 BlzSetUnitArmor(GetLastCreatedUnit(), udg_Real_Array_RWArmourTotal[udg_Integer_WaveNumber])
 else
+udg_SpawnPoints_PntArray[1] = GetRectCenter(gg_rct_Red_Spawn_B)
 CreateNUnitsAtLoc(1, udg_UnitType_Array_RWSpawnUnit[udg_Integer_WaveNumber], Player(11), udg_SpawnPoints_PntArray[1], bj_UNIT_FACING)
+                RemoveLocation(udg_SpawnPoints_PntArray[1])
 SetUnitUserData(GetLastCreatedUnit(), (udg_Integer_Array_RWBounty[udg_Integer_WaveNumber] // udg_Integer_Array_WaveSpawnMax[udg_Integer_WaveNumber]))
 BlzSetUnitMaxHP(GetLastCreatedUnit(), R2I(udg_Real_Array_CreepHealthWaves[udg_Integer_WaveNumber]))
 SetUnitLifePercentBJ(GetLastCreatedUnit(), 100)
 BlzSetUnitArmor(GetLastCreatedUnit(), udg_Real_Array_RWArmourTotal[udg_Integer_WaveNumber])
 end
-if (Trig_Random_Wave_Spawning_Sys_Func002Func002Func007C()) then
+if (Trig_Random_Wave_Spawning_Sys_Func002Func002Func005C()) then
 SetUnitMoveSpeed(GetLastCreatedUnit(), 400.00)
 else
 end
@@ -11105,8 +11120,9 @@ end
 if (Trig_Random_Wave_Spawning_Sys_Func002Func004C()) then
 udg_SpawnPoints_PntArray[2] = GetRectCenter(gg_rct_Blue_Spawn)
 CreateNUnitsAtLoc(1, udg_UnitType_Array_RWSpawnUnit[udg_Integer_WaveNumber], Player(11), udg_SpawnPoints_PntArray[2], bj_UNIT_FACING)
+            RemoveLocation(udg_SpawnPoints_PntArray[2])
 SetUnitUserData(GetLastCreatedUnit(), (udg_Integer_Array_RWBounty[udg_Integer_WaveNumber] // udg_Integer_Array_WaveSpawnMax[udg_Integer_WaveNumber]))
-if (Trig_Random_Wave_Spawning_Sys_Func002Func004Func006C()) then
+if (Trig_Random_Wave_Spawning_Sys_Func002Func004Func007C()) then
 SetUnitMoveSpeed(GetLastCreatedUnit(), 400.00)
 else
 end
@@ -11118,8 +11134,9 @@ end
 if (Trig_Random_Wave_Spawning_Sys_Func002Func006C()) then
 udg_SpawnPoints_PntArray[3] = GetRectCenter(gg_rct_Teal_Spawn)
 CreateNUnitsAtLoc(1, udg_UnitType_Array_RWSpawnUnit[udg_Integer_WaveNumber], Player(11), udg_SpawnPoints_PntArray[3], bj_UNIT_FACING)
+            RemoveLocation(udg_SpawnPoints_PntArray[3])
 SetUnitUserData(GetLastCreatedUnit(), (udg_Integer_Array_RWBounty[udg_Integer_WaveNumber] // udg_Integer_Array_WaveSpawnMax[udg_Integer_WaveNumber]))
-if (Trig_Random_Wave_Spawning_Sys_Func002Func006Func006C()) then
+if (Trig_Random_Wave_Spawning_Sys_Func002Func006Func007C()) then
 SetUnitMoveSpeed(GetLastCreatedUnit(), 400.00)
 else
 end
@@ -11131,8 +11148,9 @@ end
 if (Trig_Random_Wave_Spawning_Sys_Func002Func008C()) then
 udg_SpawnPoints_PntArray[4] = GetRectCenter(gg_rct_Purple_Spawn)
 CreateNUnitsAtLoc(1, udg_UnitType_Array_RWSpawnUnit[udg_Integer_WaveNumber], Player(11), udg_SpawnPoints_PntArray[4], bj_UNIT_FACING)
+            RemoveLocation(udg_SpawnPoints_PntArray[4])
 SetUnitUserData(GetLastCreatedUnit(), (udg_Integer_Array_RWBounty[udg_Integer_WaveNumber] // udg_Integer_Array_WaveSpawnMax[udg_Integer_WaveNumber]))
-if (Trig_Random_Wave_Spawning_Sys_Func002Func008Func004C()) then
+if (Trig_Random_Wave_Spawning_Sys_Func002Func008Func005C()) then
 SetUnitMoveSpeed(GetLastCreatedUnit(), 400.00)
 else
 end
@@ -11144,8 +11162,9 @@ end
 if (Trig_Random_Wave_Spawning_Sys_Func002Func010C()) then
 udg_SpawnPoints_PntArray[5] = GetRectCenter(gg_rct_Yellow_Spawn)
 CreateNUnitsAtLoc(1, udg_UnitType_Array_RWSpawnUnit[udg_Integer_WaveNumber], Player(11), udg_SpawnPoints_PntArray[5], bj_UNIT_FACING)
+            RemoveLocation(udg_SpawnPoints_PntArray[5])
 SetUnitUserData(GetLastCreatedUnit(), (udg_Integer_Array_RWBounty[udg_Integer_WaveNumber] // udg_Integer_Array_WaveSpawnMax[udg_Integer_WaveNumber]))
-if (Trig_Random_Wave_Spawning_Sys_Func002Func010Func006C()) then
+if (Trig_Random_Wave_Spawning_Sys_Func002Func010Func007C()) then
 SetUnitMoveSpeed(GetLastCreatedUnit(), 400.00)
 else
 end
@@ -11157,8 +11176,9 @@ end
 if (Trig_Random_Wave_Spawning_Sys_Func002Func012C()) then
 udg_SpawnPoints_PntArray[6] = GetRectCenter(gg_rct_Orange_Spawn)
 CreateNUnitsAtLoc(1, udg_UnitType_Array_RWSpawnUnit[udg_Integer_WaveNumber], Player(10), udg_SpawnPoints_PntArray[6], bj_UNIT_FACING)
+            RemoveLocation(udg_SpawnPoints_PntArray[6])
 SetUnitUserData(GetLastCreatedUnit(), (udg_Integer_Array_RWBounty[udg_Integer_WaveNumber] // udg_Integer_Array_WaveSpawnMax[udg_Integer_WaveNumber]))
-if (Trig_Random_Wave_Spawning_Sys_Func002Func012Func006C()) then
+if (Trig_Random_Wave_Spawning_Sys_Func002Func012Func007C()) then
 SetUnitMoveSpeed(GetLastCreatedUnit(), 400.00)
 else
 end
@@ -11170,8 +11190,9 @@ end
 if (Trig_Random_Wave_Spawning_Sys_Func002Func014C()) then
 udg_SpawnPoints_PntArray[7] = GetRectCenter(gg_rct_Green_Spawn)
 CreateNUnitsAtLoc(1, udg_UnitType_Array_RWSpawnUnit[udg_Integer_WaveNumber], Player(10), udg_SpawnPoints_PntArray[7], bj_UNIT_FACING)
+            RemoveLocation(udg_SpawnPoints_PntArray[7])
 SetUnitUserData(GetLastCreatedUnit(), (udg_Integer_Array_RWBounty[udg_Integer_WaveNumber] // udg_Integer_Array_WaveSpawnMax[udg_Integer_WaveNumber]))
-if (Trig_Random_Wave_Spawning_Sys_Func002Func014Func006C()) then
+if (Trig_Random_Wave_Spawning_Sys_Func002Func014Func007C()) then
 SetUnitMoveSpeed(GetLastCreatedUnit(), 400.00)
 else
 end
@@ -11183,8 +11204,9 @@ end
 if (Trig_Random_Wave_Spawning_Sys_Func002Func016C()) then
 udg_SpawnPoints_PntArray[8] = GetRectCenter(gg_rct_Pink_Spawn)
 CreateNUnitsAtLoc(1, udg_UnitType_Array_RWSpawnUnit[udg_Integer_WaveNumber], Player(10), udg_SpawnPoints_PntArray[8], bj_UNIT_FACING)
+            RemoveLocation(udg_SpawnPoints_PntArray[8])
 SetUnitUserData(GetLastCreatedUnit(), (udg_Integer_Array_RWBounty[udg_Integer_WaveNumber] // udg_Integer_Array_WaveSpawnMax[udg_Integer_WaveNumber]))
-if (Trig_Random_Wave_Spawning_Sys_Func002Func016Func006C()) then
+if (Trig_Random_Wave_Spawning_Sys_Func002Func016Func007C()) then
 SetUnitMoveSpeed(GetLastCreatedUnit(), 400.00)
 else
 end
@@ -11196,8 +11218,9 @@ end
 if (Trig_Random_Wave_Spawning_Sys_Func002Func018C()) then
 udg_SpawnPoints_PntArray[9] = GetRectCenter(gg_rct_Gray_Spawn)
 CreateNUnitsAtLoc(1, udg_UnitType_Array_RWSpawnUnit[udg_Integer_WaveNumber], Player(10), udg_SpawnPoints_PntArray[9], bj_UNIT_FACING)
+            RemoveLocation(udg_SpawnPoints_PntArray[9])
 SetUnitUserData(GetLastCreatedUnit(), (udg_Integer_Array_RWBounty[udg_Integer_WaveNumber] // udg_Integer_Array_WaveSpawnMax[udg_Integer_WaveNumber]))
-if (Trig_Random_Wave_Spawning_Sys_Func002Func018Func006C()) then
+if (Trig_Random_Wave_Spawning_Sys_Func002Func018Func007C()) then
 SetUnitMoveSpeed(GetLastCreatedUnit(), 400.00)
 else
 end

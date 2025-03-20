@@ -5435,6 +5435,12 @@ STRING 836
 |c0000ff00Gold Aura 3
 }
 
+STRING 837
+// Units: h018 (Warlock, Ultimate Fel Tower), Name (Name)
+{
+Warlock, Ultimate Fel Tower
+}
+
 STRING 838
 // Abilities: A052 (Gold Aura), Ubertip (Tooltip - Normal - Extended)
 {
@@ -5547,6 +5553,30 @@ STRING 855
 // Buffs/Effects: B007 (Gold Aura 3), EditorName (Name (Editor Only))
 {
 Gold Aura 3
+}
+
+STRING 856
+// Units: h01S (Lizard, Ultimate Venom Tower), Name (Name)
+{
+Lizard, Ultimate Venom Tower
+}
+
+STRING 857
+// Units: h01S (Lizard, Ultimate Venom Tower), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade To Lizard.|r |cAAAAFFAAVenom Tower 10.|r
+}
+
+STRING 858
+// Units: h02D (Hell Shrine, Ultimate Hellfire Tower), Name (Name)
+{
+Hell Shrine, Ultimate Hellfire Tower
+}
+
+STRING 859
+// Units: h047 (Runic Crystal, Ultimate Soul Tower), Name (Name)
+{
+Runic Crystal, Ultimate Soul Tower
 }
 
 STRING 895
@@ -7288,12 +7318,6 @@ STRING 1105
 // Units: n00F (Skeletal Archer), EditorSuffix (Name - Editor Suffix)
 {
 [Magic Damage]
-}
-
-STRING 1106
-// Units: h018 (Ultimate Fel Tower), Name (Name)
-{
-Ultimate Fel Tower
 }
 
 STRING 1107
@@ -15083,12 +15107,6 @@ STRING 2306
 |c0077ff77[Z] |c0000ff00Upgrade To Hell Shrine.|r |cAAAAFFAAHellfire Tower 9.|r
 }
 
-STRING 2307
-// Units: h02D (Ultimate Hellfire Tower), Name (Name)
-{
-Ultimate Hellfire Tower
-}
-
 STRING 2308
 // Units: n009 (Air Tower 8: Voidwalker), Hotkey (Hotkey)
 {
@@ -15102,7 +15120,7 @@ STRING 2309
 }
 
 STRING 2310
-// Units: h02D (Ultimate Hellfire Tower), Tip (Tooltip - Basic)
+// Units: h02D (Hell Shrine, Ultimate Hellfire Tower), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Hell Shrine.|r |cAAAAFFAAHellfire Tower 10.|r
 }
@@ -15125,7 +15143,7 @@ Z
 }
 
 STRING 2314
-// Units: h018 (Ultimate Fel Tower), Tip (Tooltip - Basic)
+// Units: h018 (Warlock, Ultimate Fel Tower), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Warlock, Ultimate Fel Tower.|r |cAAAAFFAAFel Tower 10.|r
 }
@@ -15412,12 +15430,6 @@ STRING 2360
 Multishot
 }
 
-STRING 2361
-// Units: h01S (Ultimate Venom Tower), Tip (Tooltip - Basic)
-{
-|c0077ff77[Z] |c0000ff00Upgrade To Lizard.|r |cAAAAFFAAVenom Tower 5.|r
-}
-
 STRING 2362
 // Units: h02K (Hellfire Tower 6: Hell Shrine), Tip (Tooltip - Basic)
 {
@@ -15666,12 +15678,6 @@ STRING 2414
 -- Fixed Ballista Tower 8 having incorrect damage
 -- Fixed Flak Tower 8 having incorrect damage
 -- Spell Immunity icon is now hidden
-}
-
-STRING 2415
-// Units: h01S (Ultimate Venom Tower), Name (Name)
-{
-Ultimate Venom Tower
 }
 
 STRING 2416
@@ -16054,12 +16060,6 @@ STRING 2477
 |c0000ff00Ability (2):|r |c0077ff77Soul Extraction; attacks have a 10% chance to deal 5% of an enemy units current health as chaos damage, the tower gains mana equal to the damage dealt. When above 75% mana tower has a 10% chance to use all mana to summon 5 minions.|r
 }
 
-STRING 2478
-// Units: h047 (Ultimate Soul Tower), Name (Name)
-{
-Ultimate Soul Tower
-}
-
 STRING 2479
 // Abilities: A046 (Multishot), Ubertip (Tooltip - Normal - Extended)
 {
@@ -16067,7 +16067,7 @@ STRING 2479
 }
 
 STRING 2480
-// Units: h047 (Ultimate Soul Tower), Tip (Tooltip - Basic)
+// Units: h047 (Runic Crystal, Ultimate Soul Tower), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Runic Crystal, Ultimate Soul Tower.|r |cAAAAFFAASoul Tower 10.|r
 }
@@ -16176,7 +16176,7 @@ Hellfire 5
 }
 
 STRING 2495
-// Units: h01S (Ultimate Venom Tower), Ubertip (Tooltip - Extended)
+// Units: h01S (Lizard, Ultimate Venom Tower), Ubertip (Tooltip - Extended)
 {
 |c0000ff00Attack:|r |c0077ff77Pierce
 |c0000ff00Cooldown:|r |c0077ff770.25
@@ -17822,7 +17822,6 @@ Changelog -- v2.06
 
 STRING 2730
 {
--- Potentially fixed the crashing issue
 -- Consolidated all emergency towers into 1 learnable abillity instead of each tower having its own.
 -- Switched from JASS scripting to LUA Scripting
 -- Added Bribes LUA Damage Engine
@@ -17858,7 +17857,7 @@ v2.06 Release Date - XX/XX/XX
 }
 
 STRING 2732
-// Units: h047 (Ultimate Soul Tower), Ubertip (Tooltip - Extended)
+// Units: h047 (Runic Crystal, Ultimate Soul Tower), Ubertip (Tooltip - Extended)
 {
 |c0000ff00Attack:|r |c0077ff77Chaos
 |c0000ff00Cooldown:|r |c0077ff770.25
@@ -18938,7 +18937,7 @@ STRING 2896
 }
 
 STRING 2897
-// Units: h018 (Ultimate Fel Tower), Ubertip (Tooltip - Extended)
+// Units: h018 (Warlock, Ultimate Fel Tower), Ubertip (Tooltip - Extended)
 {
 |c0000ff00Attack:|r |c0077ff77Chaos
 |c0000ff00Cooldown:|r |c0077ff771.25
@@ -20205,7 +20204,7 @@ STRING 3078
 }
 
 STRING 3079
-// Units: h02D (Ultimate Hellfire Tower), Ubertip (Tooltip - Extended)
+// Units: h02D (Hell Shrine, Ultimate Hellfire Tower), Ubertip (Tooltip - Extended)
 {
 |c0000ff00Attack:|r |c0077ff77Chaos
 |c0000ff00Cooldown:|r |c0077ff771.25
@@ -24320,7 +24319,7 @@ Sell - 20% Gold Return
 }
 
 STRING 6994
-// Units: h018 (Ultimate Fel Tower), Hotkey (Hotkey)
+// Units: h018 (Warlock, Ultimate Fel Tower), Hotkey (Hotkey)
 {
 Z
 }
@@ -24380,7 +24379,7 @@ Z
 }
 
 STRING 7020
-// Units: h01S (Ultimate Venom Tower), Hotkey (Hotkey)
+// Units: h01S (Lizard, Ultimate Venom Tower), Hotkey (Hotkey)
 {
 Z
 }
@@ -24398,7 +24397,7 @@ Z
 }
 
 STRING 7025
-// Units: h02D (Ultimate Hellfire Tower), Hotkey (Hotkey)
+// Units: h02D (Hell Shrine, Ultimate Hellfire Tower), Hotkey (Hotkey)
 {
 Z
 }
@@ -24452,7 +24451,7 @@ Z
 }
 
 STRING 7038
-// Units: h047 (Ultimate Soul Tower), Hotkey (Hotkey)
+// Units: h047 (Runic Crystal, Ultimate Soul Tower), Hotkey (Hotkey)
 {
 Z
 }
