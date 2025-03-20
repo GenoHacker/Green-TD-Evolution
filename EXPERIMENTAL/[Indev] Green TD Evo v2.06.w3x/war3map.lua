@@ -6005,6 +6005,7 @@ if (Trig_Hero_Abilities_Func016Func001C()) then
 DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], (udg_String_Array_MultiBoardColours[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. (" |c0000ff00has given everyone a |cffFDD017Gold |c0000ff00bonus of |cffFDD017" .. (I2S((udg_Integer_GoldBonus * udg_Integer_WaveNumber)) .. "")))))
 ForForce(udg_PlayerGroup_Permanent[1], Trig_Hero_Abilities_Func016Func001Func002A)
 udg_Integer_GoldBonus = (udg_Integer_GoldBonus - 10)
+AdjustPlayerStateBJ(-1, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_LUMBER)
 else
 CreateTextTagUnitBJ("TRIGSTR_823", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
 end
