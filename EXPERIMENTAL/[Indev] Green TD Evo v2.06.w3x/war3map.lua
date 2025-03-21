@@ -242,7 +242,6 @@ udg_Real_OrkColour = 0.0
 udg_Real_Array_SkillCritChance = __jarray(0.0)
 udg_Real_Array_SkillCritDamage = __jarray(0.0)
 udg_Integer_Array_HeroCritLevel = __jarray(0)
-udg_UnitGroup_VenomGroup = nil
 udg_UnitGroup_VenomRandomUnit = nil
 udg_Real_Array_GlaiveDistance = __jarray(0.0)
 udg_Real_Array_EnchantGlaiveChance = __jarray(0.0)
@@ -273,7 +272,6 @@ udg_Integer_Array_PoisTrapChance = __jarray(0)
 udg_Integer_TotalPoisonTrapsBuilt = 0
 udg_UnitGroup_Array_PoisCasGroup = {}
 udg_Integer_PoisonCascadeNum = 0
-udg_UnitGroup_PoisonTrapGroup = nil
 udg_UnitGroup_PoisonTrapRandomUnit = nil
 udg_Integer_Array_DarkTrapChance = __jarray(0)
 udg_Integer_TotalDarkTrapsBuilt = 0
@@ -425,6 +423,7 @@ udg_Integer_VoidTrapConPlyNum = 0
 udg_Point_Array_VoidTrapConB = {}
 udg_Integer_VoidTrapConBPlyNum = 0
 udg_Integer_BloodTrapPlyNum = 0
+udg_UnitGroup_Array_CascadePreG = {}
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -1234,7 +1233,6 @@ if ((i > 1)) then break end
 udg_Integer_Array_HeroCritLevel[i] = 0
 i = i + 1
 end
-udg_UnitGroup_VenomGroup = CreateGroup()
 udg_UnitGroup_VenomRandomUnit = CreateGroup()
 i = 0
 while (true) do
@@ -1360,7 +1358,6 @@ udg_UnitGroup_Array_PoisCasGroup[i] = CreateGroup()
 i = i + 1
 end
 udg_Integer_PoisonCascadeNum = 0
-udg_UnitGroup_PoisonTrapGroup = CreateGroup()
 udg_UnitGroup_PoisonTrapRandomUnit = CreateGroup()
 i = 0
 while (true) do
@@ -1514,6 +1511,12 @@ udg_Integer_VoidTrapPlyNum = 0
 udg_Integer_VoidTrapConPlyNum = 0
 udg_Integer_VoidTrapConBPlyNum = 0
 udg_Integer_BloodTrapPlyNum = 0
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_UnitGroup_Array_CascadePreG[i] = CreateGroup()
+i = i + 1
+end
 end
 
 --Global Initialization 1.1 also hooks the InitCustomTriggers and RunInitializationTriggers functions
@@ -3030,6 +3033,7 @@ udg_Point_Array_VenomTower[udg_Integer_VenomPoisonPlyNum] = GetUnitLoc(udg_Damag
 udg_UnitGroup_VenomRandomUnit = GetUnitsInRangeOfLocMatching(400.00, udg_Point_Array_VenomTower[udg_Integer_VenomPoisonPlyNum], Condition(Trig_Venom_Tower_Random_Target_Func002Func002002003))
 IssueTargetOrderBJ(udg_DamageEventSource, "attack", GroupPickRandomUnit(udg_UnitGroup_VenomRandomUnit))
         RemoveLocation(udg_Point_Array_VenomTower[Integer_VenomPoisonPlyNum])
+        DestroyGroup(udg_UnitGroup_VenomRandomUnit)
 else
 end
 if (Trig_Venom_Tower_Random_Target_Func003C()) then
@@ -3037,6 +3041,7 @@ udg_Point_Array_PoisonTrapTarget[udg_Integer_VenomPoisonPlyNum] = GetUnitLoc(udg
 udg_UnitGroup_PoisonTrapRandomUnit = GetUnitsInRangeOfLocMatching(400.00, udg_Point_Array_PoisonTrapTarget[udg_Integer_VenomPoisonPlyNum], Condition(Trig_Venom_Tower_Random_Target_Func003Func002002003))
 IssueTargetOrderBJ(udg_DamageEventSource, "attack", GroupPickRandomUnit(udg_UnitGroup_PoisonTrapRandomUnit))
         RemoveLocation(udg_Point_Array_PoisonTrap[Integer_VenomPoisonPlyNum])
+        DestroyGroup(udg_UnitGroup_PoisonTrapRandomUnit)
 else
 end
 end
@@ -3146,7 +3151,7 @@ while (true) do
 if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
 udg_Point_Array_SoulTower[GetForLoopIndexA()] = OffsetLocation(GetUnitLoc(udg_DamageEventSource), GetRandomReal(-300.00, 300.00), GetRandomReal(-300.00, 300.00))
 CreateNUnitsAtLoc(1, udg_UnitType_Array_SoulTowerUnits[GetRandomInt(1, 6)], GetOwningPlayer(udg_DamageEventSource), udg_Point_Array_SoulTower[GetForLoopIndexA()], bj_UNIT_FACING)
-GroupAddUnitSimple(GetLastCreatedUnit(), udg_UnitGroup_Array_SoulTowerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))])
+GroupAddUnitSimple(GetLastCreatedUnit(), udg_UnitGroup_Array_SoulTowerUnits[udg_Integer_SoulTowerPlyNum])
 BlzSetUnitBaseDamage(GetLastCreatedUnit(), (BlzGetUnitBaseDamage(GetLastCreatedUnit(), 0) + R2I(GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource))), 0)
                     RemoveLocation(udg_Point_Array_SoulTower[GetForLoopIndexA()])
 bj_forLoopAIndex = bj_forLoopAIndex + 1
@@ -3539,16 +3544,17 @@ end
 return true
 end
 
-function Trig_Poison_Cascade_Autocast_Func003Func003002002003()
-return (IsUnitEnemy(GetEnumUnit(), ConvertedPlayer(udg_Integer_PoisonTrapCasadePlyNum)) == true)
+function Trig_Poison_Cascade_Autocast_Func003Func003002003()
+return (IsUnitEnemy(GetFilterUnit(), ConvertedPlayer(udg_Integer_PoisonTrapCasadePlyNum)) == true)
 end
 
-function Trig_Poison_Cascade_Autocast_Func003Func004A()
+function Trig_Poison_Cascade_Autocast_Func003Func005A()
 CreateNUnitsAtLoc(1, FourCC("o00H"), ConvertedPlayer(udg_Integer_PoisonTrapCasadePlyNum), udg_Point_Array_PoisonTrapCascade[udg_Integer_PoisonTrapCasadePlyNum], bj_UNIT_FACING)
 UnitApplyTimedLifeBJ(5.50, FourCC("BTLF"), GetLastCreatedUnit())
 UnitAddAbilityBJ(FourCC("A009"), GetLastCreatedUnit())
 SetUnitAbilityLevelSwapped(FourCC("A009"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A009"), udg_DamageEventSource))
 IssueTargetOrderBJ(GetLastCreatedUnit(), "shadowstrike", GetEnumUnit())
+GroupRemoveUnitSimple(GetEnumUnit(), udg_UnitGroup_Array_PoisCasGroup[udg_Integer_PoisonTrapCasadePlyNum])
 end
 
 function Trig_Poison_Cascade_Autocast_Func003C()
@@ -3564,8 +3570,10 @@ udg_Integer_Array_PoisTrapChance[udg_Integer_PoisonTrapCasadePlyNum] = GetRandom
 if (Trig_Poison_Cascade_Autocast_Func003C()) then
 udg_Integer_PoisonCascadeNum = GetRandomInt(1, 6)
 udg_Point_Array_PoisonTrapCascade[udg_Integer_PoisonTrapCasadePlyNum] = GetUnitLoc(udg_DamageEventSource)
-udg_UnitGroup_Array_PoisCasGroup[udg_Integer_PoisonTrapCasadePlyNum] = GetRandomSubGroup(udg_Integer_PoisonCascadeNum, GetUnitsInRangeOfLocMatching(400.00, udg_Point_Array_PoisonTrapCascade[udg_Integer_PoisonTrapCasadePlyNum], Condition(Trig_Poison_Cascade_Autocast_Func003Func003002002003)))
-ForGroupBJ(udg_UnitGroup_Array_PoisCasGroup[udg_Integer_PoisonTrapCasadePlyNum], Trig_Poison_Cascade_Autocast_Func003Func004A)
+udg_UnitGroup_Array_CascadePreG[udg_Integer_PoisonTrapCasadePlyNum] = GetUnitsInRangeOfLocMatching(400.00, udg_Point_Array_PoisonTrapCascade[udg_Integer_PoisonTrapCasadePlyNum], Condition(Trig_Poison_Cascade_Autocast_Func003Func003002003))
+udg_UnitGroup_Array_PoisCasGroup[udg_Integer_PoisonTrapCasadePlyNum] = GetRandomSubGroup(udg_Integer_PoisonCascadeNum, udg_UnitGroup_Array_CascadePreG[udg_Integer_PoisonTrapCasadePlyNum])
+ForGroupBJ(udg_UnitGroup_Array_PoisCasGroup[udg_Integer_PoisonTrapCasadePlyNum], Trig_Poison_Cascade_Autocast_Func003Func005A)
+        DestroyGroup(udg_UnitGroup_CascadePreG[Integer_PoisonTrapCascadePlyNum])
         RemoveLocation(udg_Point_Array_PoisonTrapCascade[Integer_PoisonTrapCascadePlyNum])
 else
 end
