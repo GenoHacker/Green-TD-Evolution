@@ -7083,7 +7083,7 @@ SetPlayerUnitAvailableBJ(FourCC("h01I"), true, GetEnumPlayer())
 end
 
 function Trig_Choose_Mode_Towers_Func019Func002Func008Func006A()
-SetPlayerUnitAvailableBJ(FourCC("h01I"), true, GetEnumPlayer())
+SetPlayerUnitAvailableBJ(FourCC("h01I"), false, GetEnumPlayer())
 end
 
 function Trig_Choose_Mode_Towers_Func019Func002Func008C()
