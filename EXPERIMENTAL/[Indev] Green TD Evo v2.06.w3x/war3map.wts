@@ -5580,7 +5580,7 @@ Runic Crystal, Ultimate Soul Tower
 }
 
 STRING 860
-// Abilities: A04Y (Sell Tower), Name (Name)
+// Abilities: A00G (Sell Tower), Name (Name)
 {
 Sell Tower
 }
@@ -5594,7 +5594,7 @@ STRING 861
 }
 
 STRING 862
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Sell this tower to get 80% gold back.|r
 
@@ -5602,7 +5602,7 @@ STRING 862
 }
 
 STRING 863
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Sell this tower to get 60% gold back.|r
 
@@ -5610,7 +5610,7 @@ STRING 863
 }
 
 STRING 864
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Sell this tower to get 40% gold back.|r
 
@@ -5618,7 +5618,7 @@ STRING 864
 }
 
 STRING 865
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Sell this tower to get 20% gold back.|r
 
@@ -5626,7 +5626,7 @@ STRING 865
 }
 
 STRING 866
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 100% gold back.
 
@@ -5634,7 +5634,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 867
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 80% gold back.
 
@@ -5642,7 +5642,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 868
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 60% gold back.
 
@@ -5650,7 +5650,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 869
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 40% gold back.
 
@@ -5658,7 +5658,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 870
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 20% gold back.
 
@@ -5666,7 +5666,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 871
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 100% gold back.
 
@@ -5674,7 +5674,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 872
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 80% gold back.
 
@@ -5682,7 +5682,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 873
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 60% gold back.
 
@@ -5690,7 +5690,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 874
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 40% gold back.
 
@@ -5698,7 +5698,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 875
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 20% gold back.
 
@@ -5706,7 +5706,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 876
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 160% gold back.
 
@@ -5714,7 +5714,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 877
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 170% gold back.
 
@@ -5722,7 +5722,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 878
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 180% gold back.
 
@@ -5730,7 +5730,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 879
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 190% gold back.
 
@@ -5738,7 +5738,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 880
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 200% gold back.
 
@@ -5776,55 +5776,55 @@ STRING 885
 }
 
 STRING 886
-// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 100% Gold Return
 }
 
 STRING 887
-// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 100% Gold Return
 }
 
 STRING 888
-// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 80% Gold Return
 }
 
 STRING 889
-// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 80% Gold Return
 }
 
 STRING 890
-// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 60% Gold Return
 }
 
 STRING 891
-// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 60% Gold Return
 }
 
 STRING 892
-// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 40% Gold Return
 }
 
 STRING 893
-// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 40% Gold Return
 }
 
 STRING 894
-// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 20% Gold Return
 }
@@ -5851,7 +5851,7 @@ STRING 896
 }
 
 STRING 897
-// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 20% Gold Return
 }
@@ -6449,7 +6449,7 @@ STRING 957
 }
 
 STRING 958
-// Abilities: A04Y (Sell Tower), EditorSuffix (Editor Suffix)
+// Abilities: A014 (Damage Aura), EditorSuffix (Editor Suffix)
 {
 [Aura Tower]
 }
@@ -6473,7 +6473,7 @@ STRING 959
 }
 
 STRING 960
-// Abilities: A04Y (Sell Tower), Hotkey (Hotkey - Normal)
+// Units: h00U (Poison Tower 5: Shaman), Hotkey (Hotkey)
 {
 Z
 }
@@ -6533,7 +6533,7 @@ STRING 968
 }
 
 STRING 969
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Sell this tower to get 80% gold back.|r
 
@@ -7088,7 +7088,7 @@ STRING 1037
 }
 
 STRING 1038
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Sell this tower to get 60% gold back.|r
 
@@ -7096,7 +7096,7 @@ STRING 1038
 }
 
 STRING 1039
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Sell this tower to get 40% gold back.|r
 
@@ -7104,7 +7104,7 @@ STRING 1039
 }
 
 STRING 1040
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Sell this tower to get 20% gold back.|r
 
@@ -7258,7 +7258,7 @@ Hellfire
 }
 
 STRING 1066
-// Abilities: A054 (Hellfire), Tip (Tooltip - Normal)
+// Abilities: A03Z (Hellfire 7), Tip (Tooltip - Normal)
 {
 |c0000ff00Hellfire
 }
@@ -7766,7 +7766,7 @@ Emergency Frost Tower
 }
 
 STRING 1120
-// Units: h00U (Poison Tower 5: Shaman), Hotkey (Hotkey)
+// Units: h00W (Siege Tower 6: Lord Garithos), Hotkey (Hotkey)
 {
 Z
 }
@@ -7855,7 +7855,7 @@ Changelog -- v2.04a
 }
 
 STRING 1135
-// Abilities: A054 (Hellfire), EditorSuffix (Editor Suffix)
+// Abilities: A012 (Emergency Siege Tower), EditorSuffix (Editor Suffix)
 {
 [Dummy]
 }
@@ -14561,7 +14561,7 @@ Hellfire Tower 8: Hell Shrine
 }
 
 STRING 2169
-// Units: h00W (Siege Tower 6: Lord Garithos), Hotkey (Hotkey)
+// Units: n008 (Air Tower 7: Frost Wrym), Hotkey (Hotkey)
 {
 Z
 }
@@ -14591,13 +14591,13 @@ rlev
 }
 
 STRING 2174
-// Units: n008 (Air Tower 7: Frost Wrym), Hotkey (Hotkey)
+// Units: h012 (Poison Tower 6: Poisoned Quilboar), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2175
-// Units: h012 (Poison Tower 6: Poisoned Quilboar), Hotkey (Hotkey)
+// Units: n00J (Air Tower 6: Chimaera), Hotkey (Hotkey)
 {
 Z
 }
@@ -14609,7 +14609,7 @@ Hellfire Tower 4: Hell Shrine
 }
 
 STRING 2177
-// Units: n00J (Air Tower 6: Chimaera), Hotkey (Hotkey)
+// Units: n00K (Frost Tower 3: Hydromancer), Hotkey (Hotkey)
 {
 Z
 }
@@ -15265,7 +15265,7 @@ v2.01 Release Date - 21/07/2019
 }
 
 STRING 2266
-// Units: n00K (Frost Tower 3: Hydromancer), Hotkey (Hotkey)
+// Units: h01B (Siege Tower 7: Admiral Proudmoore), Hotkey (Hotkey)
 {
 Z
 }
@@ -15478,7 +15478,7 @@ Skeletal Archer
 }
 
 STRING 2304
-// Units: h01B (Siege Tower 7: Admiral Proudmoore), Hotkey (Hotkey)
+// Units: n009 (Air Tower 8: Voidwalker), Hotkey (Hotkey)
 {
 Z
 }
@@ -15496,7 +15496,7 @@ STRING 2306
 }
 
 STRING 2308
-// Units: n009 (Air Tower 8: Voidwalker), Hotkey (Hotkey)
+// Units: h01K (Poison Tower 8: Poison Blasting Space Marine), Hotkey (Hotkey)
 {
 Z
 }
@@ -15525,7 +15525,7 @@ STRING 2312
 }
 
 STRING 2313
-// Units: h01K (Poison Tower 8: Poison Blasting Space Marine), Hotkey (Hotkey)
+// Units: h01L (Aspect Of Blood, Ultimate Siege Tower), Hotkey (Hotkey)
 {
 Z
 }
@@ -15549,37 +15549,37 @@ STRING 2316
 }
 
 STRING 2317
-// Units: h01L (Aspect Of Blood, Ultimate Siege Tower), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 2318
 // Units: h01N (Poison Tower 7: Farseer), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 2319
+STRING 2318
 // Units: h01O (Poison Tower 9: Death Revenant), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 2320
+STRING 2319
 // Units: h01U (Siege Tower 9: Firelord), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 2321
+STRING 2320
 // Units: h020 (Chaos Tower 3: Chaos Golem), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 2322
+STRING 2321
 // Units: h022 (Hydralisk, Ultimate Poison Tower), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 2322
+// Units: h024 (Chaos Tower 2: Chaos Elemental), Hotkey (Hotkey)
 {
 Z
 }
@@ -15605,31 +15605,31 @@ The damage gain from Overdrive will also reset.
 }
 
 STRING 2326
-// Units: h024 (Chaos Tower 2: Chaos Elemental), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 2327
 // Units: h01Y (Chaos Tower 4: Chaos Treant), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 2328
+STRING 2327
 // Units: n00S (Air Tower 9: Emerald Dragon), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 2329
+STRING 2328
 // Units: n00O (Bronze Dragon, Ultimate Air Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 2330
+STRING 2329
 // Units: n00R (Frost Tower 5: Frost Lich), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 2330
+// Units: e007 (Bouncing Tower 4: Makrura Tidal Lord), Hotkey (Hotkey)
 {
 Z
 }
@@ -15753,7 +15753,7 @@ STRING 2343
 }
 
 STRING 2345
-// Units: e007 (Bouncing Tower 4: Makrura Tidal Lord), Hotkey (Hotkey)
+// Units: e00A (Bouncing Tower 2: Nerubian Queen), Hotkey (Hotkey)
 {
 Z
 }
@@ -15837,19 +15837,19 @@ STRING 2364
 }
 
 STRING 2365
-// Units: e00A (Bouncing Tower 2: Nerubian Queen), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 2366
 // Units: e00B (Bouncing Tower 3: Overlord Arachnathid), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 2367
+STRING 2366
 // Units: e00F (Bouncing Tower 6: Infernal Juggernaut), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 2367
+// Units: h026 (Bash Tower 3: Goblin Basher), Hotkey (Hotkey)
 {
 Z
 }
@@ -15861,37 +15861,37 @@ X
 }
 
 STRING 2369
-// Units: h026 (Bash Tower 3: Goblin Basher), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 2370
 // Units: h027 (Bash Tower 2: Royal Guard), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 2371
+STRING 2370
 // Units: h028 (Bash Tower 4: Mountain Smasher), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 2372
+STRING 2371
 // Units: h029 (Bash Tower 5: Mortar Tank), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 2373
+STRING 2372
 // Units: e00G (Bouncing Tower 7: Faceless Deathbringer), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 2374
+STRING 2373
 // Units: n00U (Frost Tower 6: Frosty Elemental), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 2374
+// Units: h00X (Siege Tower 8: Deathlord), Hotkey (Hotkey)
 {
 Z
 }
@@ -15903,7 +15903,7 @@ STRING 2377
 }
 
 STRING 2378
-// Units: h00X (Siege Tower 8: Deathlord), Hotkey (Hotkey)
+// Units: h015 (Bash Tower 7: Bloodfiend), Hotkey (Hotkey)
 {
 Z
 }
@@ -16047,7 +16047,7 @@ STRING 2411
 }
 
 STRING 2412
-// Units: h015 (Bash Tower 7: Bloodfiend), Hotkey (Hotkey)
+// Units: h01E (Chaos Orb, Ultimate Chaos Tower), Hotkey (Hotkey)
 {
 Z
 }
@@ -16075,7 +16075,7 @@ STRING 2416
 }
 
 STRING 2417
-// Units: h01E (Chaos Orb, Ultimate Chaos Tower), Hotkey (Hotkey)
+// Units: n00L (Frost Tower 7: Frost Revenant), Hotkey (Hotkey)
 {
 Z
 }
@@ -16330,7 +16330,7 @@ STRING 2459
 }
 
 STRING 2460
-// Units: n00L (Frost Tower 7: Frost Revenant), Hotkey (Hotkey)
+// Units: h02B (Uther, Ultimate Research Tower), Hotkey (Hotkey)
 {
 Z
 }
@@ -16461,31 +16461,31 @@ STRING 2480
 }
 
 STRING 2481
-// Units: h02B (Uther, Ultimate Research Tower), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 2482
 // Units: n00I (Frost Tower 2: Tuskarr Chieftain), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 2483
+STRING 2482
 // Units: n00N (Frost Tower 8: Snowy Owl), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 2484
+STRING 2483
 // Units: n00V (Frost Tower 9: Frost Warrior), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 2485
+STRING 2484
 // Units: e00H (Bouncing Tower 8: Berserking Wildkin), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 2485
+// Units: e00I (Bouncing Tower 9: Shadow Wolf), Hotkey (Hotkey)
 {
 Z
 }
@@ -16552,7 +16552,7 @@ STRING 2492
 }
 
 STRING 2493
-// Abilities: A03Z (Hellfire 7), Tip (Tooltip - Normal)
+// Abilities: A040 (Hellfire 5), Tip (Tooltip - Normal)
 {
 |c0000ff00Hellfire
 }
@@ -16575,7 +16575,7 @@ STRING 2495
 }
 
 STRING 2496
-// Abilities: A040 (Hellfire 5), Tip (Tooltip - Normal)
+// Abilities: A041 (Hellfire 6), Tip (Tooltip - Normal)
 {
 |c0000ff00Hellfire
 }
@@ -16603,7 +16603,7 @@ STRING 2498
 }
 
 STRING 2499
-// Abilities: A041 (Hellfire 6), Tip (Tooltip - Normal)
+// Abilities: A042 (Hellfire 1), Tip (Tooltip - Normal)
 {
 |c0000ff00Hellfire
 }
@@ -16627,7 +16627,7 @@ STRING 2501
 }
 
 STRING 2502
-// Abilities: A042 (Hellfire 1), Tip (Tooltip - Normal)
+// Abilities: A043 (Hellfire 3), Tip (Tooltip - Normal)
 {
 |c0000ff00Hellfire
 }
@@ -16645,7 +16645,7 @@ Tower 2
 }
 
 STRING 2505
-// Abilities: A043 (Hellfire 3), Tip (Tooltip - Normal)
+// Abilities: A044 (Hellfire 2), Tip (Tooltip - Normal)
 {
 |c0000ff00Hellfire
 }
@@ -16663,7 +16663,7 @@ Tower 3
 }
 
 STRING 2508
-// Abilities: A044 (Hellfire 2), Tip (Tooltip - Normal)
+// Abilities: A045 (Hellfire 4), Tip (Tooltip - Normal)
 {
 |c0000ff00Hellfire
 }
@@ -16681,7 +16681,7 @@ Vimperious Extravatinker
 }
 
 STRING 2511
-// Abilities: A045 (Hellfire 4), Tip (Tooltip - Normal)
+// Abilities: A054 (Hellfire), Tip (Tooltip - Normal)
 {
 |c0000ff00Hellfire
 }
@@ -18790,19 +18790,19 @@ STRING 2820
 }
 
 STRING 2821
-// Abilities: A014 (Damage Aura), EditorSuffix (Editor Suffix)
-{
-[Aura Tower]
-}
-
-STRING 2822
 // Abilities: A017 (Armour Aura), EditorSuffix (Editor Suffix)
 {
 [Aura Tower]
 }
 
-STRING 2823
+STRING 2822
 // Abilities: A02C (Crippling Aura), EditorSuffix (Editor Suffix)
+{
+[Aura Tower]
+}
+
+STRING 2823
+// Abilities: A002 (Aura Upgrades), EditorSuffix (Editor Suffix)
 {
 [Aura Tower]
 }
@@ -19005,31 +19005,31 @@ Brainfreeze
 }
 
 STRING 2852
-// Units: e00I (Bouncing Tower 9: Shadow Wolf), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 2853
 // Units: h02N (Chaos Tower 9: Chaos Soul), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 2854
+STRING 2853
 // Units: h02P (Chaos Tower 6: Chaos Stalker), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 2855
+STRING 2854
 // Units: h02Q (Chaos Tower 7: Chaos Heretic), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 2856
+STRING 2855
 // Units: h02R (Chaos Tower 8: Chaos Revenant), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 2856
+// Units: h02A (Chaos Tower 5: Chaos Infernal), Hotkey (Hotkey)
 {
 Z
 }
@@ -19077,7 +19077,7 @@ STRING 2863
 }
 
 STRING 2864
-// Abilities: A002 (Aura Upgrades), EditorSuffix (Editor Suffix)
+// Abilities: A00Q (Critical Aura), EditorSuffix (Editor Suffix)
 {
 [Aura Tower]
 }
@@ -19089,7 +19089,7 @@ Spirit Tower 6: Winter Beacon
 }
 
 STRING 2866
-// Units: h02A (Chaos Tower 5: Chaos Infernal), Hotkey (Hotkey)
+// Units: h032 (Bash Tower 6: Siege Golem), Hotkey (Hotkey)
 {
 Z
 }
@@ -19107,7 +19107,7 @@ STRING 2867
 }
 
 STRING 2868
-// Abilities: A00Q (Critical Aura), EditorSuffix (Editor Suffix)
+// Abilities: A052 (Gold Aura), EditorSuffix (Editor Suffix)
 {
 [Aura Tower]
 }
@@ -19440,7 +19440,7 @@ STRING 2910
 }
 
 STRING 2911
-// Units: h032 (Bash Tower 6: Siege Golem), Hotkey (Hotkey)
+// Units: h03V (Research Tower 4: Ancient of Wind), Hotkey (Hotkey)
 {
 Z
 }
@@ -19500,7 +19500,7 @@ Q
 }
 
 STRING 2921
-// Abilities: A052 (Gold Aura), EditorSuffix (Editor Suffix)
+// Abilities: A04Y (Sell Tower), EditorSuffix (Editor Suffix)
 {
 [Aura Tower]
 }
@@ -19562,7 +19562,7 @@ STRING 2928
 }
 
 STRING 2929
-// Units: h03V (Research Tower 4: Ancient of Wind), Hotkey (Hotkey)
+// Units: h03W (Research Tower 3: Hydra), Hotkey (Hotkey)
 {
 Z
 }
@@ -19594,7 +19594,7 @@ STRING 2931
 }
 
 STRING 2932
-// Units: h03W (Research Tower 3: Hydra), Hotkey (Hotkey)
+// Units: h03X (Research Tower 6: Wildkin), Hotkey (Hotkey)
 {
 Z
 }
@@ -19626,7 +19626,7 @@ STRING 2934
 }
 
 STRING 2935
-// Units: h03X (Research Tower 6: Wildkin), Hotkey (Hotkey)
+// Units: h03Y (Research Tower 7: Ancient Sasquatch), Hotkey (Hotkey)
 {
 Z
 }
@@ -19658,19 +19658,19 @@ STRING 2941
 }
 
 STRING 2942
-// Units: h03Y (Research Tower 7: Ancient Sasquatch), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 2943
 // Units: h03Z (Research Tower 9: Albatross), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 2944
+STRING 2943
 // Units: h040 (Research Tower 2: Tinker), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 2944
+// Units: h041 (Research Tower 5: Bandit Lord), Hotkey (Hotkey)
 {
 Z
 }
@@ -19682,7 +19682,7 @@ Q
 }
 
 STRING 2946
-// Units: h041 (Research Tower 5: Bandit Lord), Hotkey (Hotkey)
+// Units: h042 (Research Tower 8: Naga Myrmidon), Hotkey (Hotkey)
 {
 Z
 }
@@ -19694,13 +19694,13 @@ Q
 }
 
 STRING 2948
-// Units: h042 (Research Tower 8: Naga Myrmidon), Hotkey (Hotkey)
+// Units: n01C (Earth Trap), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2949
-// Units: n01C (Earth Trap), Hotkey (Hotkey)
+// Units: h00G (Aura Tower), Hotkey (Hotkey)
 {
 Z
 }
@@ -20038,7 +20038,7 @@ STRING 2998
 }
 
 STRING 2999
-// Units: h00G (Aura Tower), Hotkey (Hotkey)
+// Units: n001 (Banshee, Ultimate Frost Tower), Hotkey (Hotkey)
 {
 Z
 }
@@ -20159,7 +20159,7 @@ X
 }
 
 STRING 3017
-// Units: n001 (Banshee, Ultimate Frost Tower), Hotkey (Hotkey)
+// Units: h003 (Siege Tower 5: Skeletal Grunt), Hotkey (Hotkey)
 {
 Z
 }
@@ -20171,7 +20171,7 @@ X
 }
 
 STRING 3019
-// Units: h003 (Siege Tower 5: Skeletal Grunt), Hotkey (Hotkey)
+// Units: e006 (Bouncing Tower 5: Spellbreaker), Hotkey (Hotkey)
 {
 Z
 }
@@ -20245,7 +20245,7 @@ STRING 3029
 }
 
 STRING 3030
-// Units: e006 (Bouncing Tower 5: Spellbreaker), Hotkey (Hotkey)
+// Units: e008 (Naisha, Ultimate Bouncing Tower), Hotkey (Hotkey)
 {
 Z
 }
@@ -20257,7 +20257,7 @@ W
 }
 
 STRING 3032
-// Units: e008 (Naisha, Ultimate Bouncing Tower), Hotkey (Hotkey)
+// Units: h005 (Flesh Golem, Ultimate Bash Tower), Hotkey (Hotkey)
 {
 Z
 }
@@ -20269,13 +20269,13 @@ W
 }
 
 STRING 3034
-// Units: h005 (Flesh Golem, Ultimate Bash Tower), Hotkey (Hotkey)
+// Units: h00I (Enchanted Machine, Ultimate Glaive Tower ), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 3035
-// Units: h00I (Enchanted Machine, Ultimate Glaive Tower ), Hotkey (Hotkey)
+// Units: h00L (Glaive Tower 7: Enchanted Machine), Hotkey (Hotkey)
 {
 Z
 }
@@ -20497,13 +20497,13 @@ STRING 3064
 }
 
 STRING 3065
-// Units: h00L (Glaive Tower 7: Enchanted Machine), Hotkey (Hotkey)
+// Units: h00O (Glaive Tower 6: Enchanted Machine), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 3066
-// Units: h00O (Glaive Tower 6: Enchanted Machine), Hotkey (Hotkey)
+// Units: h00P (Glaive Tower 5: Enchanted Machine), Hotkey (Hotkey)
 {
 Z
 }
@@ -20515,19 +20515,19 @@ Rocket Damage
 }
 
 STRING 3068
-// Units: h00P (Glaive Tower 5: Enchanted Machine), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 3069
 // Units: h00R (Glaive Tower 8: Enchanted Machine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 3070
+STRING 3069
 // Units: h00S (Glaive Tower 9: Enchanted Machine), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 3070
+// Units: h00J (Flak Tower 5: Mortar Team), Hotkey (Hotkey)
 {
 Z
 }
@@ -20539,7 +20539,7 @@ Increased Damage from Overdrive
 }
 
 STRING 3072
-// Units: h00J (Flak Tower 5: Mortar Team), Hotkey (Hotkey)
+// Units: h00T (Flak Tower 6: Mortar Team), Hotkey (Hotkey)
 {
 Z
 }
@@ -21436,7 +21436,7 @@ STRING 3206
 }
 
 STRING 3207
-// Units: h00T (Flak Tower 6: Mortar Team), Hotkey (Hotkey)
+// Units: h00Y (Flak Tower 7: Mortar Team), Hotkey (Hotkey)
 {
 Z
 }
@@ -22003,13 +22003,13 @@ D
 }
 
 STRING 3266
-// Units: h00Y (Flak Tower 7: Mortar Team), Hotkey (Hotkey)
+// Units: h00Z (Flak Tower 8: Mortar Team), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 3267
-// Units: h00Z (Flak Tower 8: Mortar Team), Hotkey (Hotkey)
+// Units: h010 (Flak Tower 9: Mortar Team), Hotkey (Hotkey)
 {
 Z
 }
@@ -23602,7 +23602,7 @@ V
 }
 
 STRING 5619
-// Units: h010 (Flak Tower 9: Mortar Team), Hotkey (Hotkey)
+// Units: h011 (Mortar Team, Ultimate Flak Tower), Hotkey (Hotkey)
 {
 Z
 }
@@ -23892,7 +23892,7 @@ C
 }
 
 STRING 5968
-// Units: h011 (Mortar Team, Ultimate Flak Tower), Hotkey (Hotkey)
+// Units: h016 (Fel Tower 5: Warlock), Hotkey (Hotkey)
 {
 Z
 }
@@ -24240,13 +24240,13 @@ Magical Frog
 }
 
 STRING 6874
-// Abilities: A00G (Sell Tower), Name (Name)
+// Abilities: A00K (Sell Tower), Name (Name)
 {
 Sell Tower
 }
 
 STRING 6875
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 100% gold back.
 
@@ -24254,7 +24254,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6876
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 80% gold back.
 
@@ -24262,7 +24262,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6877
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 60% gold back.
 
@@ -24270,7 +24270,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6878
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 40% gold back.
 
@@ -24278,7 +24278,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6879
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 20% gold back.
 
@@ -24286,7 +24286,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6880
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 100% gold back.
 
@@ -24294,7 +24294,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6881
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 80% gold back.
 
@@ -24302,7 +24302,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6882
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 60% gold back.
 
@@ -24310,7 +24310,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6883
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 40% gold back.
 
@@ -24318,7 +24318,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6884
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 20% gold back.
 
@@ -24326,7 +24326,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6885
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 100% gold back.
 
@@ -24334,7 +24334,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6886
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 80% gold back.
 
@@ -24342,7 +24342,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6887
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 60% gold back.
 
@@ -24350,7 +24350,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6888
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 40% gold back.
 
@@ -24358,7 +24358,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6889
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 20% gold back.
 
@@ -24366,7 +24366,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6890
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 160% gold back.
 
@@ -24374,7 +24374,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6891
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 170% gold back.
 
@@ -24382,7 +24382,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6892
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 180% gold back.
 
@@ -24390,7 +24390,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6893
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 190% gold back.
 
@@ -24398,7 +24398,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6894
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 200% gold back.
 
@@ -24406,97 +24406,97 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6895
-// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 100% Gold Return
 }
 
 STRING 6896
-// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 80% Gold Return
 }
 
 STRING 6897
-// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 60% Gold Return
 }
 
 STRING 6898
-// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 40% Gold Return
 }
 
 STRING 6899
-// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 20% Gold Return
 }
 
 STRING 6900
-// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 100% Gold Return
 }
 
 STRING 6901
-// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 100% Gold Return
 }
 
 STRING 6902
-// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 80% Gold Return
 }
 
 STRING 6903
-// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 80% Gold Return
 }
 
 STRING 6904
-// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 60% Gold Return
 }
 
 STRING 6905
-// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 60% Gold Return
 }
 
 STRING 6906
-// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 40% Gold Return
 }
 
 STRING 6907
-// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 40% Gold Return
 }
 
 STRING 6908
-// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
-{
-Sell - 20% Gold Return
-}
-
-STRING 6909
 // Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 20% Gold Return
 }
 
+STRING 6909
+// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+{
+Sell - 20% Gold Return
+}
+
 STRING 6917
-// Units: h016 (Fel Tower 5: Warlock), Hotkey (Hotkey)
+// Units: h018 (Warlock, Ultimate Fel Tower), Hotkey (Hotkey)
 {
 Z
 }
@@ -24508,13 +24508,13 @@ STRING 6918
 }
 
 STRING 6919
-// Abilities: A00K (Sell Tower), Name (Name)
+// Abilities: A04Y (Sell Tower), Name (Name)
 {
 Sell Tower
 }
 
 STRING 6920
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 100% gold back.
 
@@ -24522,7 +24522,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6921
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 80% gold back.
 
@@ -24530,7 +24530,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6922
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 60% gold back.
 
@@ -24538,7 +24538,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6923
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 40% gold back.
 
@@ -24546,7 +24546,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6924
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 20% gold back.
 
@@ -24554,7 +24554,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6935
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 160% gold back.
 
@@ -24562,7 +24562,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6936
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 170% gold back.
 
@@ -24570,7 +24570,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6937
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 180% gold back.
 
@@ -24578,7 +24578,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6938
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 190% gold back.
 
@@ -24586,7 +24586,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6939
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 200% gold back.
 
@@ -24594,355 +24594,355 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6940
-// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 100% Gold Return
 }
 
 STRING 6941
-// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 80% Gold Return
 }
 
 STRING 6942
-// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 60% Gold Return
 }
 
 STRING 6943
-// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 40% Gold Return
 }
 
 STRING 6944
-// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 20% Gold Return
 }
 
 STRING 6994
-// Units: h018 (Warlock, Ultimate Fel Tower), Hotkey (Hotkey)
-{
-Z
-}
-
-STRING 6995
 // Units: h01A (Fel Tower 7: Warlock), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 6996
+STRING 6995
 // Units: h01D (Fel Tower 8: Warlock), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 6997
+STRING 6996
 // Units: h01F (Fel Tower 6: Warlock), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 6998
+STRING 6997
 // Units: h01G (Fel Tower 9: Warlock), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7010
+STRING 6998
 // Units: h017 (Venom Tower 5: Lizard), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7012
+STRING 7010
 // Units: h01M (Venom Tower 6: Lizard), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7014
+STRING 7012
 // Units: h01P (Venom Tower 7: Lizard), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7016
+STRING 7014
 // Units: h01Q (Venom Tower 8: Lizard), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7018
+STRING 7016
 // Units: h01R (Venom Tower 9: Lizard), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7020
+STRING 7018
 // Units: h01S (Lizard, Ultimate Venom Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7021
+STRING 7020
 // Units: h01Z (Hellfire Tower 8: Hell Shrine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7023
+STRING 7021
 // Units: h02C (Hellfire Tower 9: Hell Shrine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7025
+STRING 7023
 // Units: h02D (Hell Shrine, Ultimate Hellfire Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7027
+STRING 7025
 // Units: h02E (Hellfire Tower 5: Hell Shrine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7029
+STRING 7027
 // Units: h02H (Hellfire Tower 7: Hell Shrine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7031
+STRING 7029
 // Units: h02K (Hellfire Tower 6: Hell Shrine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7033
+STRING 7031
 // Units: h02M (Soul Tower 7: Runic Crystal), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7034
+STRING 7033
 // Units: h043 (Soul Tower 6: Runic Crystal), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7035
+STRING 7034
 // Units: h044 (Soul Tower 5: Runic Crystal), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7036
+STRING 7035
 // Units: h045 (Soul Tower 8: Runic Crystal), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7037
+STRING 7036
 // Units: h046 (Soul Tower 9: Runic Crystal), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7038
+STRING 7037
 // Units: h047 (Runic Crystal, Ultimate Soul Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7039
+STRING 7038
 // Units: n01E (Shard Tower 5: Frozen Obelisk), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7040
+STRING 7039
 // Units: n01F (Shard Tower 6: Frozen Obelisk), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7041
+STRING 7040
 // Units: n01L (Shard Tower 7: Frozen Obelisk), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7063
+STRING 7041
 // Units: n01M (Shard Tower 8: Frozen Obelisk), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7064
+STRING 7063
 // Units: n01N (Shard Tower 9: Frozen Obelisk), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7065
+STRING 7064
 // Units: n01O (Frozen Obelisk, UIltimate Shard Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7066
+STRING 7065
 // Units: n01Q (Spirit Tower 5: Winter Beacon), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7067
+STRING 7066
 // Units: n01R (Spirit Tower 6: Winter Beacon), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7068
+STRING 7067
 // Units: n01S (Spirit Tower 7: Winter Beacon), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7069
+STRING 7068
 // Units: n01T (Spirit Tower 8: Winter Beacon), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7071
+STRING 7069
 // Units: n01U (Spirit Tower 9: Winter Beacon), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7072
+STRING 7071
 // Units: n01V (Winter Beacon, Ultimate Spirit Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7073
+STRING 7072
 // Units: n01W (War Machine, Ultimate Rocket Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7075
+STRING 7073
 // Units: n01X (Rocket Tower 7: War Machine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7077
+STRING 7075
 // Units: n01Y (Rocket Tower 6: War Machine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7078
+STRING 7077
 // Units: n01Z (Rocket Tower 5: War Machine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7079
+STRING 7078
 // Units: n021 (Rocket Tower 8: War Machine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7080
+STRING 7079
 // Units: n022 (Rocket Tower 9: War Machine), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7081
+STRING 7080
 // Units: e00C (Goblin Shredder, Ultimate Shrapnel Tower), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7082
+STRING 7081
 // Units: e00D (Shrapnel Tower 9: Goblin Shredder), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7083
+STRING 7082
 // Units: e00S (Shrapnel Tower 8: Goblin Shredder), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7084
+STRING 7083
 // Units: e00T (Shrapnel Tower 7: Goblin Shredder), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7085
+STRING 7084
 // Units: e00U (Shrapnel Tower 6: Goblin Shredder), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7086
+STRING 7085
 // Units: e00V (Shrapnel Tower 5: Goblin Shredder), Hotkey (Hotkey)
 {
 Z
 }
 
-STRING 7087
+STRING 7086
 // Abilities: A01J (Slow), Hotkey (Hotkey - Normal)
 {
 Z
 }
 
-STRING 7088
+STRING 7087
 // Abilities: A01J (Slow), Unhotkey (Hotkey - Turn Off)
 {
 Z
 }
 
-STRING 7089
+STRING 7088
 // Abilities: A023 (Upgrade Trap Ability), Hotkey (Hotkey - Normal)
 {
 Z
 }
 
-STRING 7090
+STRING 7089
 // Abilities: A020 (3 - Decrease Zoom), Hotkey (Hotkey - Normal)
 {
 Z
 }
 
-STRING 7091
+STRING 7090
 // Abilities: A02M (Chaos Mode), Hotkey (Hotkey - Normal)
 {
 Z
 }
 
-STRING 7092
+STRING 7091
 // Abilities: A02Q (Disable Aura Tower), Hotkey (Hotkey - Normal)
 {
 Z
 }
 
-STRING 7093
+STRING 7092
 // Abilities: A048 (Random Game Modes), Hotkey (Hotkey - Normal)
+{
+Z
+}
+
+STRING 7093
+// Abilities: A04Y (Sell Tower), Hotkey (Hotkey - Normal)
 {
 Z
 }
@@ -25950,31 +25950,31 @@ Dummy
 }
 
 STRING 8242
-// Abilities: A012 (Emergency Siege Tower), EditorSuffix (Editor Suffix)
-{
-[Dummy]
-}
-
-STRING 8243
 // Abilities: A00L (Emergency Chaos Tower), EditorSuffix (Editor Suffix)
 {
 [Dummy]
 }
 
-STRING 8244
+STRING 8243
 // Abilities: A015 (Emergency Frost Tower), EditorSuffix (Editor Suffix)
 {
 [Dummy]
 }
 
-STRING 8245
+STRING 8244
 // Abilities: A016 (Emergency Air Tower), EditorSuffix (Editor Suffix)
 {
 [Dummy]
 }
 
-STRING 8246
+STRING 8245
 // Abilities: A01T (Emergency Bouncing Tower), EditorSuffix (Editor Suffix)
+{
+[Dummy]
+}
+
+STRING 8246
+// Abilities: A054 (Hellfire), EditorSuffix (Editor Suffix)
 {
 [Dummy]
 }
