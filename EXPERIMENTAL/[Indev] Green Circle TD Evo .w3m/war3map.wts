@@ -221,9 +221,8 @@ Endless Mode
 }
 
 STRING 37
-// Abilities: A04I (Shrapnel Blast), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff77Hits on enemies have a [10% + 0.1% per armour of hit unit] chance to trigger a shrapnel blast dealing piercing damage to nearby units equaling to [500 x armor of hit unit].
+|cff0080FFChoose Modes: |r
 }
 
 STRING 38
@@ -336,7 +335,7 @@ Discord Links
 STRING 53
 {
 Maulbot Discord - https://discord.gg/nkamska
-Green TD: Evolution Discord - https://discord.gg/dzbHsCc
+GenoHackers Discord - https://discord.gg/dzbHsCc
 }
 
 STRING 54
@@ -571,13 +570,12 @@ HH Damage Reduction Aura Passive
 }
 
 STRING 92
-// Abilities: A052 (Gold Aura), Tip (Tooltip - Normal)
 {
-|c0000ff00Gold Aura 4
+|cff0080FFGame Ends In: |r
 }
 
 STRING 93
-// Units: h00V (Flak Tower 4: Mortar Team), Ubertip (Tooltip - Extended)
+// Units: h00V (Flak Tower 4), Ubertip (Tooltip - Extended)
 {
 |c0000ff00Attack:|r |c0077ff77Siege
 |c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
@@ -585,7 +583,7 @@ STRING 93
 |c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
 |c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (both)|r
-|c0000ff00Ability (2):|r |c0077ff77Armor Break; Every 5 attacks will cause enemies to lose 1 + [Wave Number/4] armor.
+
 }
 
 STRING 94
@@ -923,7 +921,7 @@ Dooood!
 
 STRING 129
 {
-MaulBot.com (RIP)
+MaulBot.com
 }
 
 STRING 130
@@ -1156,9 +1154,8 @@ Food Bonus
 }
 
 STRING 155
-// Units: h00I (Enchanted Machine, Ultimate Glaive Tower ), Name (Name)
 {
-Enchanted Machine, Ultimate Glaive Tower 
+[Divine Creeps]
 }
 
 STRING 156
@@ -1190,7 +1187,7 @@ STRING 160
 }
 
 STRING 161
-// Units: n01K (Void Trap 1), Hotkey (Hotkey)
+// Units: n01K (Void Trap), Hotkey (Hotkey)
 {
 V
 }
@@ -1230,7 +1227,7 @@ Aura Upgraded
 
 STRING 168
 {
-|Cff00ff00Map made and maintained by GenoHacker#2987
+|c0000ff00You Have |c00FF0000Lost!|r |c0000ff00Game will end in 60 seconds, you may also type |c0077ff77-restart|r |c0000ff00to restart the game.|r
 }
 
 STRING 169
@@ -1306,7 +1303,7 @@ STRING 180
 }
 
 STRING 181
-// Units: n01G (Darkness Trap 1), Hotkey (Hotkey)
+// Units: n01G (Darkness Trap), Hotkey (Hotkey)
 {
 F
 }
@@ -1703,7 +1700,7 @@ STRING 243
 }
 
 STRING 244
-// Units: n01A (Poison Trap 1), Hotkey (Hotkey)
+// Units: n01A (Poison Trap), Hotkey (Hotkey)
 {
 D
 }
@@ -1721,7 +1718,7 @@ Q
 }
 
 STRING 247
-// Units: n00A (Fire Trap 1), Hotkey (Hotkey)
+// Units: n00A (Fire Trap), Hotkey (Hotkey)
 {
 A
 }
@@ -1733,7 +1730,7 @@ Z
 }
 
 STRING 249
-// Units: n017 (Frost Trap 1), Hotkey (Hotkey)
+// Units: n017 (Frost Trap), Hotkey (Hotkey)
 {
 S
 }
@@ -2728,15 +2725,8 @@ STRING 407
 }
 
 STRING 408
-// Units: h00I (Enchanted Machine, Ultimate Glaive Tower ), Ubertip (Tooltip - Extended)
 {
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.50
-|c0000ff00Damage:|r |c0077ff7743000
-|c0000ff00Range:|r |c0077ff771000 (ground only)
-|c0000ff00Efficiency:|r |c0077ff771.73 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Enchanted Glaives: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
+[Normal Creeps]
 }
 
 STRING 409
@@ -3388,9 +3378,8 @@ STRING 516
 }
 
 STRING 517
-// Units: h00I (Enchanted Machine, Ultimate Glaive Tower ), Tip (Tooltip - Basic)
 {
-|c0077ff77[Z] |c0000ff00Upgrade to Enchanted Machine, Ultimate Glaive Tower.|r |cAAAAFFAAGlaive Tower 10.|r
+[Normal Creeps]
 }
 
 STRING 518
@@ -4282,7 +4271,7 @@ STRING 664
 }
 
 STRING 665
-// Units: n01H (Blood Trap 1), Hotkey (Hotkey)
+// Units: n01H (Blood Trap), Hotkey (Hotkey)
 {
 X
 }
@@ -4317,12 +4306,6 @@ STRING 670
 Bouncing Tower 9: Shadow Wolf
 }
 
-STRING 671
-// Abilities: A03P (Winter Spirits), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Gains up to 5 + [50% of Wave Number] mana for each enemy unit hit when attacking, at full mana the tower summons a ring of Winter Spirits, the spirits have a frost attack and deal damage based on the targets current movement speed, slower movement speed equals more damage.
-}
-
 STRING 672
 // Units: n00B (Air Tower 2: Faerie Dragon), Tip (Tooltip - Basic)
 {
@@ -4354,7 +4337,7 @@ Siege Tower 5: Skeletal Grunt
 }
 
 STRING 677
-// Units: h00J (Flak Tower 5: Mortar Team), Ubertip (Tooltip - Extended)
+// Units: h00J (Flak Tower 5), Ubertip (Tooltip - Extended)
 {
 |c0000ff00Attack:|r |c0077ff77Siege
 |c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
@@ -4362,7 +4345,7 @@ STRING 677
 |c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
 |c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (both)|r
-|c0000ff00Ability (2):|r |c0077ff77Armor Break; Every 5 attacks will cause enemies to lose 1 + [Wave Number/4] armor.
+
 }
 
 STRING 678
@@ -4633,12 +4616,6 @@ STRING 718
 |c0077ff77[Z] |c0000ff00Upgrade To Chaos Treant.|r |cAAAAFFAAChaos Tower 4.|r
 }
 
-STRING 719
-// Abilities: A053 (Minelayer), Name (Name)
-{
-Minelayer
-}
-
 STRING 720
 // Units: h01E (Chaos Orb, Ultimate Chaos Tower), Tip (Tooltip - Basic)
 {
@@ -4678,12 +4655,6 @@ STRING 725
 // Units: h02P (Chaos Tower 6: Chaos Stalker), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Chaos Stalker.|r |cAAAAFFAAChaos Tower 6.|r
-}
-
-STRING 726
-// Abilities: A053 (Minelayer), Tip (Tooltip - Normal)
-{
-|c0000ff00Minelayer - Level 1|r
 }
 
 STRING 727
@@ -4998,135 +4969,78 @@ Attribute Bonus - [|cffffcc00Level 5|r]
 }
 
 STRING 774
-// Units: h00L (Glaive Tower 7: Enchanted Machine), Name (Name)
 {
-Glaive Tower 7: Enchanted Machine
+[Normal Creeps]
 }
 
 STRING 775
-// Units: h00L (Glaive Tower 7: Enchanted Machine), Ubertip (Tooltip - Extended)
 {
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.50
-|c0000ff00Damage:|r |c0077ff7717000
-|c0000ff00Range:|r |c0077ff771000 (ground only)
-|c0000ff00Efficiency:|r |c0077ff771.50 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Enchanted Glaives: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
+[Normal Creeps]
 }
 
 STRING 776
-// Units: h00L (Glaive Tower 7: Enchanted Machine), Tip (Tooltip - Basic)
 {
-|c0077ff77[Z] |c0000ff00Upgrade to Enchanted Machine.|r |cAAAAFFAAGlaive Tower 7.|r
+[Normal Creeps]
 }
 
 STRING 777
-// Units: h00O (Glaive Tower 6: Enchanted Machine), Name (Name)
 {
-Glaive Tower 6: Enchanted Machine
+[Normal Creeps]
 }
 
 STRING 778
-// Abilities: A00O (Armor Break), Name (Name)
 {
-Armor Break
+[Normal Creeps]
 }
 
 STRING 779
-// Abilities: A00O (Armor Break), EditorSuffix (Editor Suffix)
 {
-[Flak Tower]
+[Divine Creeps]
 }
 
 STRING 780
-// Abilities: A00O (Armor Break), Tip (Tooltip - Normal)
 {
-|c0000ff00Armor Break
+[Divine Creeps]
 }
 
 STRING 781
-// Units: h00O (Glaive Tower 6: Enchanted Machine), Ubertip (Tooltip - Extended)
 {
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.50
-|c0000ff00Damage:|r |c0077ff7711000
-|c0000ff00Range:|r |c0077ff771000 (ground only)
-|c0000ff00Efficiency:|r |c0077ff771.41 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Enchanted Glaives: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
+[Normal Creeps]
 }
 
 STRING 782
-// Units: h00T (Flak Tower 6: Mortar Team), Ubertip (Tooltip - Extended)
 {
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
-|c0000ff00Damage:|r |c0077ff775500 (both)
-|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
-|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (both)|r
-|c0000ff00Ability (2):|r |c0077ff77Armor Break; Every 5 attacks will cause enemies to lose 1 + [Wave Number/4] armor.
+[Normal Creeps]
 }
 
 STRING 783
-// Units: h00Y (Flak Tower 7: Mortar Team), Ubertip (Tooltip - Extended)
 {
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
-|c0000ff00Damage:|r |c0077ff778500 (both)
-|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
-|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (both)|r
-|c0000ff00Ability (2):|r |c0077ff77Armor Break; Every 5 attacks will cause enemies to lose 1 + [Wave Number/4] armor.
+[Air Creeps]
 }
 
 STRING 784
-// Units: h00Z (Flak Tower 8: Mortar Team), Ubertip (Tooltip - Extended)
 {
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
-|c0000ff00Damage:|r |c0077ff7712250 (both)
-|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
-|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (both)|r
-|c0000ff00Ability (2):|r |c0077ff77Armor Break; Every 5 attacks will cause enemies to lose 1 + [Wave Number/4] armor.
+[Air Creeps]
 }
 
 STRING 785
-// Units: h010 (Flak Tower 9: Mortar Team), Ubertip (Tooltip - Extended)
 {
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
-|c0000ff00Damage:|r |c0077ff7716500 (both)
-|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
-|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (both)|r
-|c0000ff00Ability (2):|r |c0077ff77Armor Break; Every 5 attacks will cause enemies to lose 1 + [Wave Number/4] armor.
+[Normal Creeps]
 }
 
 STRING 786
-// Units: h011 (Mortar Team, Ultimate Flak Tower), Ubertip (Tooltip - Extended)
 {
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
-|c0000ff00Damage:|r |c0077ff7721500 (both)
-|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
-|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 350 (both)|r
-|c0000ff00Ability (2):|r |c0077ff77Armor Break; Every 5 attacks will cause enemies to lose 1 + [Wave Number/4] armor.
+[Normal Creeps]
 }
 
 STRING 787
-// Abilities: A00O (Armor Break), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff77Armor Break; Every 5 attacks will cause enemies to lose 1 + [Wave Number/4] armor.
+[Air Creeps]
 }
 
 STRING 788
-// Units: h00O (Glaive Tower 6: Enchanted Machine), Tip (Tooltip - Basic)
 {
-|c0077ff77[Z] |c0000ff00Upgrade to Enchanted Machine.|r |cAAAAFFAAGlaive Tower 6.|r
+[Air Creeps]
 }
 
 STRING 789
@@ -5136,697 +5050,528 @@ Gives a total of 2 points to Intelligence
 }
 
 STRING 790
-// Units: h00P (Glaive Tower 5: Enchanted Machine), Name (Name)
 {
-Glaive Tower 5: Enchanted Machine
+[Divine Creeps]
 }
 
 STRING 791
-// Units: h00P (Glaive Tower 5: Enchanted Machine), Ubertip (Tooltip - Extended)
 {
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.50
-|c0000ff00Damage:|r |c0077ff777000
-|c0000ff00Range:|r |c0077ff771000 (ground only)
-|c0000ff00Efficiency:|r |c0077ff771.32 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Enchanted Glaives: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
+[Normal Creeps]
 }
 
 STRING 792
-// Units: h00P (Glaive Tower 5: Enchanted Machine), Tip (Tooltip - Basic)
 {
-|c0077ff77[Z] |c0000ff00Upgrade to Enchanted Machine.|r |cAAAAFFAAGlaive Tower 5.|r
+[Normal Creeps]
 }
 
 STRING 793
-// Units: h00Q (Glaive Tower 4: Enchanted Machine), Name (Name)
 {
-Glaive Tower 4: Enchanted Machine
+[Boss Creeps]
 }
 
 STRING 794
-// Units: h00Q (Glaive Tower 4: Enchanted Machine), Ubertip (Tooltip - Extended)
 {
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.50
-|c0000ff00Damage:|r |c0077ff774000
-|c0000ff00Range:|r |c0077ff771000 (ground only)
-|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Enchanted Glaives: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
+[Boss Creeps]
 }
 
 STRING 795
-// Units: h00Q (Glaive Tower 4: Enchanted Machine), Tip (Tooltip - Basic)
 {
-|c0077ff77[Z] |c0000ff00Upgrade to Enchanted Machine.|r |cAAAAFFAAGlaive Tower 4.|r
+[Normal Creeps]
 }
 
 STRING 796
-// Units: h00R (Glaive Tower 8: Enchanted Machine), Name (Name)
 {
-Glaive Tower 8: Enchanted Machine
+[Normal Creeps]
 }
 
 STRING 797
-// Units: h00R (Glaive Tower 8: Enchanted Machine), Ubertip (Tooltip - Extended)
 {
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.50
-|c0000ff00Damage:|r |c0077ff7724500
-|c0000ff00Range:|r |c0077ff771000 (ground only)
-|c0000ff00Efficiency:|r |c0077ff771.60 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Enchanted Glaives: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
+[Normal Creeps]
 }
 
 STRING 798
-// Units: h00R (Glaive Tower 8: Enchanted Machine), Tip (Tooltip - Basic)
 {
-|c0077ff77[Z] |c0000ff00Upgrade to Enchanted Machine.|r |cAAAAFFAAGlaive Tower 8.|r
+[Normal Creeps]
 }
 
 STRING 799
-// Units: h00S (Glaive Tower 9: Enchanted Machine), Name (Name)
 {
-Glaive Tower 9: Enchanted Machine
+[Divine Creeps]
 }
 
 STRING 800
-// Units: h00S (Glaive Tower 9: Enchanted Machine), Ubertip (Tooltip - Extended)
 {
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.50
-|c0000ff00Damage:|r |c0077ff7733000
-|c0000ff00Range:|r |c0077ff771000 (ground only)
-|c0000ff00Efficiency:|r |c0077ff771.67 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
-|c0000ff00Ability (2):|r |c0077ff77Enchanted Glaives: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
+[Divine Creeps]
 }
 
 STRING 801
-// Units: h00S (Glaive Tower 9: Enchanted Machine), Tip (Tooltip - Basic)
 {
-|c0077ff77[Z] |c0000ff00Upgrade to Enchanted Machine.|r |cAAAAFFAAGlaive Tower 9.|r
+[Normal Creeps]
 }
 
 STRING 802
-// Units: h00V (Flak Tower 4: Mortar Team), Name (Name)
 {
-Flak Tower 4: Mortar Team
+[Normal Creeps]
 }
 
 STRING 803
-// Units: h00J (Flak Tower 5: Mortar Team), Name (Name)
 {
-Flak Tower 5: Mortar Team
+[Air Creeps]
 }
 
 STRING 804
-// Units: h00T (Flak Tower 6: Mortar Team), Name (Name)
 {
-Flak Tower 6: Mortar Team
+[Air Creeps]
 }
 
 STRING 805
-// Units: h00Y (Flak Tower 7: Mortar Team), Name (Name)
 {
-Flak Tower 7: Mortar Team
+[Normal Creeps]
 }
 
 STRING 806
-// Units: h00Z (Flak Tower 8: Mortar Team), Name (Name)
 {
-Flak Tower 8: Mortar Team
+[Normal Creeps]
 }
 
 STRING 807
-// Units: h010 (Flak Tower 9: Mortar Team), Name (Name)
 {
-Flak Tower 9: Mortar Team
+[Normal Creeps]
 }
 
 STRING 808
-// Abilities: A03N (Enchanted Glaives), Name (Name)
 {
-Enchanted Glaives
+[Normal Creeps]
 }
 
 STRING 809
-// Abilities: A03N (Enchanted Glaives), Tip (Tooltip - Normal)
 {
-|c0000ff00Enchanted Glaives
+[Divine Creeps]
 }
 
 STRING 810
-// Abilities: A03N (Enchanted Glaives), EditorSuffix (Editor Suffix)
 {
-[Glaive Tower]
+[Divine Creeps]
 }
 
 STRING 811
-// Buffs/Effects: B004 (Gold Aura 4), EditorName (Name (Editor Only))
 {
-Gold Aura 4
+[Air Creeps]
 }
 
 STRING 812
-// Abilities: A052 (Gold Aura), Name (Name)
 {
-Gold Aura
+[Air Creeps]
 }
 
 STRING 813
-// Buffs/Effects: B004 (Gold Aura 4), Buffubertip (Tooltip - Extended)
 {
-This unit is under the effects of Gold Aura; it has a chance to give extra gold when killed.
+[Normal Creeps]
 }
 
 STRING 814
-// Buffs/Effects: B005 (Gold Aura 1), EditorName (Name (Editor Only))
 {
-Gold Aura 1
+[Normal Creeps]
 }
 
 STRING 815
-// Buffs/Effects: B004 (Gold Aura 4), Bufftip (Tooltip)
 {
-Gold Aura
+[Normal Creeps]
 }
 
 STRING 816
-// Buffs/Effects: B005 (Gold Aura 1), Buffubertip (Tooltip - Extended)
 {
-This unit is under the effects of Gold Aura; it has a chance to give extra gold when killed.
+[Normal Creeps]
 }
 
 STRING 817
-// Buffs/Effects: B006 (Gold Aura 2), EditorName (Name (Editor Only))
 {
-Gold Aura 2
+[Boss Creeps]
 }
 
 STRING 818
-// Abilities: A04Z (Gold Bonus), Name (Name)
 {
-Gold Bonus
+[Boss Creeps]
 }
 
 STRING 819
-// Abilities: A04Z (Gold Bonus), Tip (Tooltip - Normal)
 {
-|c0077ff77[D]|r |c0000ff00Gold Bonus
+[Divine Creeps]
 }
 
 STRING 820
-// Abilities: A04Z (Gold Bonus), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff77Gives all players |cffFDD017[100 x Wave Number]|c0077ff77 Gold
-
-Base amount reduced by |cffFDD01710|c0077ff77 each time this bonus is taken. Can be taken up to |cffFDD0175|c0077ff77 times across all players.
+[Divine Creeps]
 }
 
 STRING 821
-// Abilities: A03R (Income Bonus), EditorSuffix (Editor Suffix)
 {
-[Learn]
+[Normal Creeps]
 }
 
 STRING 822
-// Abilities: A01M (Raise Dead), Hotkey (Hotkey - Normal)
 {
-D
+[Normal Creeps]
 }
 
 STRING 823
 {
-Max Level Reached
+[Air Creeps]
 }
 
 STRING 824
 {
-|cff0080FFChoose Modes: |r
+[Air Creeps]
 }
 
 STRING 825
 {
-|cff0080FFGame Ends In: |r
+[Normal Creeps]
 }
 
 STRING 826
 {
-|c0000ff00You Have |c00FF0000Lost!|r |c0000ff00Game will end in 60 seconds, you may also type |c0077ff77-restart|r |c0000ff00to restart the game.|r
+[Normal Creeps]
 }
 
 STRING 827
 {
-|cff0080FFGame Ends In: |r
+[Normal Creeps]
 }
 
 STRING 828
 {
-|c0000ff00You Have |c00FF0000Lost!|r |c0000ff00Game will end in 60 seconds, you may also type |c0077ff77-restart|r |c0000ff00to restart the game.|r
+[Normal Creeps]
 }
 
 STRING 829
 {
-No more Upgrades
+[Divine Creeps]
 }
 
 STRING 830
 {
-Aura Upgraded
+[Divine Creeps]
 }
 
 STRING 831
-// Abilities: A052 (Gold Aura), Tip (Tooltip - Normal)
 {
-|c00FF0000Inactive |c0000ff00Gold Aura
+[Normal Creeps]
 }
 
 STRING 832
-// Buffs/Effects: B005 (Gold Aura 1), Bufftip (Tooltip)
 {
-Gold Aura
+[Normal Creeps]
 }
 
 STRING 833
-// Abilities: A052 (Gold Aura), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff77Gold Aura is currently |c00FF0000Inactive
+[Normal Creeps]
 }
 
 STRING 834
-// Abilities: A052 (Gold Aura), Tip (Tooltip - Normal)
 {
-|c0000ff00Gold Aura 1
+[Normal Creeps]
 }
 
 STRING 835
-// Abilities: A052 (Gold Aura), Tip (Tooltip - Normal)
 {
-|c0000ff00Gold Aura 2
+[Air Creeps]
 }
 
 STRING 836
-// Abilities: A052 (Gold Aura), Tip (Tooltip - Normal)
 {
-|c0000ff00Gold Aura 3
+[Air Creeps]
 }
 
 STRING 837
-// Units: h018 (Warlock, Ultimate Fel Tower), Name (Name)
 {
-Warlock, Ultimate Fel Tower
+[Normal Creeps]
 }
 
 STRING 838
-// Abilities: A052 (Gold Aura), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff7720% chance for enemies affected by this aura to give an extra 1 to 5 gold when killed
+[Normal Creeps]
 }
 
 STRING 839
-// Abilities: A052 (Gold Aura), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff7730% chance for enemies affected by this aura to give an extra 2 to 10 gold when killed
+[Divine Creeps]
 }
 
 STRING 840
-// Abilities: A052 (Gold Aura), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff7740% chance for enemies affected by this aura to give an extra 4 to 15 gold when killed
+[Divine Creeps]
 }
 
 STRING 841
-// Abilities: A052 (Gold Aura), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff7750% chance for enemies affected by this aura to give an extra 8 to 20 gold when killed
+[Boss Creeps]
 }
 
 STRING 842
-// Abilities: A00D (Speed Aura), EditorSuffix (Editor Suffix)
 {
-[Aura Tower]
+[Boss Creeps]
 }
 
 STRING 843
-// Abilities: A051 (Upgrade Gold Aura), Name (Name)
 {
-Upgrade Gold Aura
+[Normal Creeps]
 }
 
 STRING 844
-// Abilities: A051 (Upgrade Gold Aura), Tip (Tooltip - Normal)
 {
-|c0077ff77[S]|r |c0000ff00Upgrade Gold Aura
+[Normal Creeps]
 }
 
 STRING 845
-// Abilities: A051 (Upgrade Gold Aura), Ubertip (Tooltip - Normal - Extended)
 {
-|c0000ff00Upgrades the Speed Aura.
-
-|c0000ff00Gold Cost / Chance / Extra Gold
-|c0000ff00Level 1: |c0077ff77500 / 20% / 1 to 5
-|c0000ff00Level 2: |c0077ff772000 / 30% / 2 to 10
-|c0000ff00Level 3: |c0077ff773500 / 40% / 4 to 15
-|c0000ff00Level 4: |c0077ff776000 / 50% / 8 to 20
+[Air Creeps]
 }
 
 STRING 846
-// Abilities: A00F (Upgrade Speed Aura), EditorSuffix (Editor Suffix)
 {
-[Aura Spellbook]
+[Air Creeps]
 }
 
 STRING 847
-// Buffs/Effects: B006 (Gold Aura 2), Bufftip (Tooltip)
 {
-Gold Aura
+[Hero Creeps]
 }
 
 STRING 848
-// Buffs/Effects: B006 (Gold Aura 2), Buffubertip (Tooltip - Extended)
 {
-This unit is under the effects of Gold Aura; it has a chance to give extra gold when killed.
+[Hero Creeps]
 }
 
 STRING 849
-// Abilities: A01W (Emergency Chaos Tower), Hotkey (Hotkey - Normal)
 {
-S
+[Divine Creeps]
 }
 
 STRING 850
-// Units: h048 (Chipped Amethyst), EditorSuffix (Name - Editor Suffix)
 {
-Gem TD Easter Egg
+[Divine Creeps]
 }
 
 STRING 851
-// Abilities: A002 (Aura Upgrades), Tip (Tooltip - Normal)
 {
-|c0077ff77[V] |c0000ff00Aura Upgrades
+[Hero Creeps]
 }
 
 STRING 852
-// Abilities: A01T (Emergency Bouncing Tower), Hotkey (Hotkey - Normal)
 {
-V
+[Hero Creeps]
 }
 
 STRING 853
-// Buffs/Effects: B007 (Gold Aura 3), Bufftip (Tooltip)
 {
-Gold Aura
+[Hero Creeps]
 }
 
 STRING 854
-// Buffs/Effects: B007 (Gold Aura 3), Buffubertip (Tooltip - Extended)
 {
-This unit is under the effects of Gold Aura; it has a chance to give extra gold when killed.
+[Hero Creeps]
 }
 
 STRING 855
-// Buffs/Effects: B007 (Gold Aura 3), EditorName (Name (Editor Only))
 {
-Gold Aura 3
+[Hero Creeps]
 }
 
 STRING 856
-// Units: h01S (Lizard, Ultimate Venom Tower), Name (Name)
 {
-Lizard, Ultimate Venom Tower
+[Hero Creeps]
 }
 
 STRING 857
-// Units: h01S (Lizard, Ultimate Venom Tower), Tip (Tooltip - Basic)
 {
-|c0077ff77[Z] |c0000ff00Upgrade To Lizard.|r |cAAAAFFAAVenom Tower 10.|r
+[Hero Creeps]
 }
 
 STRING 858
-// Units: h02D (Hell Shrine, Ultimate Hellfire Tower), Name (Name)
 {
-Hell Shrine, Ultimate Hellfire Tower
+[Hero Creeps]
 }
 
 STRING 859
-// Units: h047 (Runic Crystal, Ultimate Soul Tower), Name (Name)
 {
-Runic Crystal, Ultimate Soul Tower
+[Divine Creeps]
 }
 
 STRING 860
-// Abilities: A00G (Sell Tower), Name (Name)
 {
-Sell Tower
+[Divine Creeps]
 }
 
 STRING 861
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff77Sell this tower to get 100% gold back.|r
-
-|c0000ff00This map has a varied Sell Percentage that depends on the difficulty that was selected|r.
+[Hero Creeps]
 }
 
 STRING 862
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff77Sell this tower to get 80% gold back.|r
-
-|c0000ff00This map has a varied Sell Percentage that depends on the difficulty that was selected|r.
+[Hero Creeps]
 }
 
 STRING 863
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff77Sell this tower to get 60% gold back.|r
-
-|c0000ff00This map has a varied Sell Percentage that depends on the difficulty that was selected|r.
+[Hero Creeps]
 }
 
 STRING 864
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff77Sell this tower to get 40% gold back.|r
-
-|c0000ff00This map has a varied Sell Percentage that depends on the difficulty that was selected|r.
+[Hero Creeps]
 }
 
 STRING 865
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff77Sell this tower to get 20% gold back.|r
-
-|c0000ff00This map has a varied Sell Percentage that depends on the difficulty that was selected|r.
+[Boss Creeps]
 }
 
 STRING 866
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
-Sell this tower to get 100% gold back.
-
-This map has a varied Sell value that depends on the difficulty.
+[Boss Creeps]
 }
 
 STRING 867
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
-Sell this tower to get 80% gold back.
-
-This map has a varied Sell value that depends on the difficulty.
+[Hero Creeps]
 }
 
 STRING 868
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
-Sell this tower to get 60% gold back.
-
-This map has a varied Sell value that depends on the difficulty.
+[Hero Creeps]
 }
 
 STRING 869
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
-Sell this tower to get 40% gold back.
-
-This map has a varied Sell value that depends on the difficulty.
+[Divine Creeps]
 }
 
 STRING 870
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
-Sell this tower to get 20% gold back.
-
-This map has a varied Sell value that depends on the difficulty.
+[Divine Creeps]
 }
 
 STRING 871
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
-Sell this tower to get 100% gold back.
-
-This map has a varied Sell value that depends on the difficulty.
+[Hero Creeps]
 }
 
 STRING 872
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
-Sell this tower to get 80% gold back.
-
-This map has a varied Sell value that depends on the difficulty.
+[Hero Creeps]
 }
 
 STRING 873
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
-Sell this tower to get 60% gold back.
-
-This map has a varied Sell value that depends on the difficulty.
+[Hero Creeps]
 }
 
 STRING 874
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
-Sell this tower to get 40% gold back.
-
-This map has a varied Sell value that depends on the difficulty.
+[Hero Creeps]
 }
 
 STRING 875
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
-Sell this tower to get 20% gold back.
-
-This map has a varied Sell value that depends on the difficulty.
+[Air Creeps]
 }
 
 STRING 876
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
-Sell this tower to get 160% gold back.
-
-This map has a varied Sell value that depends on the difficulty.
+[Air Creeps]
 }
 
 STRING 877
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
-Sell this tower to get 170% gold back.
-
-This map has a varied Sell value that depends on the difficulty.
+[Hero Creeps]
 }
 
 STRING 878
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
-Sell this tower to get 180% gold back.
-
-This map has a varied Sell value that depends on the difficulty.
+[Hero Creeps]
 }
 
 STRING 879
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
-Sell this tower to get 190% gold back.
-
-This map has a varied Sell value that depends on the difficulty.
+[Divine Creeps]
 }
 
 STRING 880
-// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
-Sell this tower to get 200% gold back.
-
-This map has a varied Sell value that depends on the difficulty.
+[Divine Creeps]
 }
 
 STRING 881
-// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
 {
-|c0077ff77[Z]|r |c0000ff00Sell - 100% Gold Return
+[Hero Creeps]
 }
 
 STRING 882
-// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
 {
-|c0077ff77[Z]|r |c0000ff00Sell - 80% Gold Return
+[Hero Creeps]
 }
 
 STRING 883
-// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
 {
-|c0077ff77[Z]|r |c0000ff00Sell - 60% Gold Return
+[Normal Creeps]
 }
 
 STRING 884
-// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
 {
-|c0077ff77[Z]|r |c0000ff00Sell - 40% Gold Return
+[Normal Creeps]
 }
 
 STRING 885
-// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
 {
-|c0077ff77[Z]|r |c0000ff00Sell - 20% Gold Return
+[Normal Creeps]
 }
 
 STRING 886
-// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
-Sell - 100% Gold Return
+[Normal Creeps]
 }
 
 STRING 887
-// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
-Sell - 100% Gold Return
+[Normal Creeps]
 }
 
 STRING 888
-// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
-Sell - 80% Gold Return
+[Normal Creeps]
 }
 
 STRING 889
-// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
-Sell - 80% Gold Return
+[Divine Creeps]
 }
 
 STRING 890
-// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
-Sell - 60% Gold Return
+[Divine Creeps]
 }
 
 STRING 891
-// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
-Sell - 60% Gold Return
+[Endless Creeps]
 }
 
 STRING 892
-// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
-Sell - 40% Gold Return
+[None]
 }
 
 STRING 893
-// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
-Sell - 40% Gold Return
+[Endless Creeps]
 }
 
 STRING 894
-// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
-Sell - 20% Gold Return
+[Endless Creeps]
 }
 
 STRING 895
@@ -5851,17 +5596,31 @@ STRING 896
 }
 
 STRING 897
-// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
+// Units: h00T (Flak Tower 6), Ubertip (Tooltip - Extended)
 {
-Sell - 20% Gold Return
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
+|c0000ff00Damage:|r |c0077ff775500 (both)
+|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
+|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (both)|r
+
 }
 
 STRING 898
-// Abilities: A033 (Speed Mode), Ubertip (Tooltip - Normal - Extended)
+// Units: n01I (Iron Trap), Ubertip (Tooltip - Extended)
 {
-|c0000ff00Status = |c00FF0000Deactivated
+|c006969FF[Support Tower]|r
+|c0000ff00Attacks land units only.|r
 
-|c0077ff77Time between wave spawns is reduced and creep movement speed is set to 400.
+|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine. Does affect Immune Creeps, Does not affect Air Creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Minelayer [Auto-Casted]
+|c0000ff00Full Damage:|r |c0077ff77750
+|c0000ff00Area of Effect:|r |c0077ff77200
+|c0000ff00Partial Damage:|r |c0077ff77500
+|c0000ff00Area of Effect:|r |c0077ff77500
+|c0000ff00Cooldown:|r |c0077ff7710 Seconds
 }
 
 STRING 899
@@ -6200,7 +5959,7 @@ STRING 931
 }
 
 STRING 932
-// Abilities: A01M (Raise Dead), Unhotkey (Hotkey - Turn Off)
+// Abilities: A01M (Raise Dead), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -6449,9 +6208,15 @@ STRING 957
 }
 
 STRING 958
-// Abilities: A014 (Damage Aura), EditorSuffix (Editor Suffix)
+// Units: h00L (Ballista Tower 7), Ubertip (Tooltip - Extended)
 {
-[Aura Tower]
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff7717000
+|c0000ff00Range:|r |c0077ff771000 (ground only)
+|c0000ff00Efficiency:|r |c0077ff771.50 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
+|c0000ff00Ability (2):|r |c0077ff77Enchanted Bolts: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
 }
 
 STRING 959
@@ -6473,9 +6238,15 @@ STRING 959
 }
 
 STRING 960
-// Units: h00U (Poison Tower 5: Shaman), Hotkey (Hotkey)
+// Units: h00O (Ballista Tower 6), Ubertip (Tooltip - Extended)
 {
-Z
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff7711000
+|c0000ff00Range:|r |c0077ff771000 (ground only)
+|c0000ff00Efficiency:|r |c0077ff771.41 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
+|c0000ff00Ability (2):|r |c0077ff77Enchanted Bolts: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
 }
 
 STRING 961
@@ -6533,7 +6304,7 @@ STRING 968
 }
 
 STRING 969
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Sell this tower to get 80% gold back.|r
 
@@ -7069,9 +6840,15 @@ Increases Attack Damage By 500
 }
 
 STRING 1035
-// Abilities: A050 (Hellfire), Name (Name)
+// Units: h00P (Ballista Tower 5), Ubertip (Tooltip - Extended)
 {
-Hellfire
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff777000
+|c0000ff00Range:|r |c0077ff771000 (ground only)
+|c0000ff00Efficiency:|r |c0077ff771.32 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
+|c0000ff00Ability (2):|r |c0077ff77Enchanted Bolts: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
 }
 
 STRING 1036
@@ -7082,13 +6859,19 @@ Different towers have different attack types, these attack types deal more damag
 }
 
 STRING 1037
-// Abilities: A050 (Hellfire), EditorSuffix (Editor Suffix)
+// Units: h00Q (Ballista Tower 4), Ubertip (Tooltip - Extended)
 {
-[Spell]
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff774000
+|c0000ff00Range:|r |c0077ff771000 (ground only)
+|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 200 (ground only)|r
+|c0000ff00Ability (2):|r |c0077ff77Enchanted Bolts: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
 }
 
 STRING 1038
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Sell this tower to get 60% gold back.|r
 
@@ -7096,7 +6879,7 @@ STRING 1038
 }
 
 STRING 1039
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Sell this tower to get 40% gold back.|r
 
@@ -7104,7 +6887,7 @@ STRING 1039
 }
 
 STRING 1040
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77Sell this tower to get 20% gold back.|r
 
@@ -7252,15 +7035,27 @@ Below is a description of what towers do
 }
 
 STRING 1065
-// Abilities: A054 (Hellfire), Name (Name)
+// Units: h00R (Ballista Tower 8), Ubertip (Tooltip - Extended)
 {
-Hellfire
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff7724500
+|c0000ff00Range:|r |c0077ff771000 (ground only)
+|c0000ff00Efficiency:|r |c0077ff771.60 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
+|c0000ff00Ability (2):|r |c0077ff77Enchanted Bolts: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
 }
 
 STRING 1066
-// Abilities: A03Z (Hellfire 7), Tip (Tooltip - Normal)
+// Units: h00S (Ballista Tower 9), Ubertip (Tooltip - Extended)
 {
-|c0000ff00Hellfire
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff7733000
+|c0000ff00Range:|r |c0077ff771000 (ground only)
+|c0000ff00Efficiency:|r |c0077ff771.67 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250 (ground only)|r
+|c0000ff00Ability (2):|r |c0077ff77Enchanted Bolts: 35% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
 }
 
 STRING 1067
@@ -7563,7 +7358,7 @@ STRING 1098
 }
 
 STRING 1099
-// Abilities: A03N (Enchanted Glaives), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A03N (Enchanted Bolts), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff7735% Chance on hit to deal damage equal to [Wave Number x Distance Between Tower and Target] as spell damage.
 }
@@ -7613,9 +7408,9 @@ STRING 1105
 }
 
 STRING 1106
-// Units: n00A (Fire Trap 1), Name (Name)
+// Units: h018 (Ultimate Fel Tower), Name (Name)
 {
-Fire Trap 1
+Ultimate Fel Tower
 }
 
 STRING 1107
@@ -7772,7 +7567,7 @@ Emergency Frost Tower
 }
 
 STRING 1120
-// Units: h00W (Siege Tower 6: Lord Garithos), Hotkey (Hotkey)
+// Units: h00U (Poison Tower 5: Shaman), Hotkey (Hotkey)
 {
 Z
 }
@@ -7790,7 +7585,7 @@ A
 }
 
 STRING 1123
-// Abilities: A03T (Emergency Towers), EditorSuffix (Editor Suffix)
+// Abilities: A03R (Income Bonus), EditorSuffix (Editor Suffix)
 {
 [Learn]
 }
@@ -7819,7 +7614,7 @@ STRING 1127
 }
 
 STRING 1128
-// Abilities: A04V (Exp Bonus), EditorSuffix (Editor Suffix)
+// Abilities: A03T (Emergency Towers), EditorSuffix (Editor Suffix)
 {
 [Learn]
 }
@@ -7861,9 +7656,9 @@ Changelog -- v2.04a
 }
 
 STRING 1135
-// Abilities: A012 (Emergency Siege Tower), EditorSuffix (Editor Suffix)
+// Abilities: A002 (Aura Upgrades), Tip (Tooltip - Normal)
 {
-[Dummy]
+|c0077ff77[R] |c0000ff00Aura Upgrades
 }
 
 STRING 1136
@@ -7929,107 +7724,103 @@ Skeletal Archer
 }
 
 STRING 1145
-// Abilities: A033 (Speed Mode), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00O (Minelayer), Ubertip (Tooltip - Normal - Extended)
 {
-|c0000ff00Status = |c0077ff77Activated
+|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
 
-|c0077ff77Time between wave spawns is reduced and creep movement speed is set to 400.
+|c0000ff00Damage:|r |c0077ff77750
+|c0000ff00Area of Effect:|r |c0077ff77300
+|c0000ff00Cooldown:|r |c0077ff775 Seconds
 }
 
 STRING 1146
-// Units: h01Z (Hellfire Tower 8: Hell Shrine), Ubertip (Tooltip - Extended)
+// Abilities: A00O (Minelayer), Ubertip (Tooltip - Normal - Extended)
 {
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff7712500
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff770.76 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
-|c0000ff00Ability (2):|r |c0077ff77Hellfire: 50% chance to trigger hellfire.|r
+|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
+
+|c0000ff00Damage:|r |c0077ff771500
+|c0000ff00Area of Effect:|r |c0077ff77300
+|c0000ff00Cooldown:|r |c0077ff775 Seconds
 }
 
 STRING 1147
-// Units: h02C (Hellfire Tower 9: Hell Shrine), Ubertip (Tooltip - Extended)
+// Abilities: A00O (Minelayer), Ubertip (Tooltip - Normal - Extended)
 {
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff7716500
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff770.77 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
-|c0000ff00Ability (2):|r |c0077ff77Hellfire: 50% chance to trigger hellfire.|r
+|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
+
+|c0000ff00Damage:|r |c0077ff772500
+|c0000ff00Area of Effect:|r |c0077ff77300
+|c0000ff00Cooldown:|r |c0077ff775 Seconds
 }
 
 STRING 1148
-// Units: h02D (Hell Shrine, Ultimate Hellfire Tower), Ubertip (Tooltip - Extended)
+// Abilities: A00O (Minelayer), Ubertip (Tooltip - Normal - Extended)
 {
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff7721250
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff770.79 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
-|c0000ff00Ability (2):|r |c0077ff77Hellfire: 50% chance to trigger hellfire.|r
+|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
+
+|c0000ff00Damage:|r |c0077ff774000
+|c0000ff00Area of Effect:|r |c0077ff77300
+|c0000ff00Cooldown:|r |c0077ff775 Seconds
 }
 
 STRING 1149
-// Units: h02E (Hellfire Tower 5: Hell Shrine), Ubertip (Tooltip - Extended)
+// Abilities: A00O (Minelayer), Ubertip (Tooltip - Normal - Extended)
 {
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff774250
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff770.61 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
-|c0000ff00Ability (2):|r |c0077ff77Hellfire: 50% chance to trigger hellfire.|r
+|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
+
+|c0000ff00Damage:|r |c0077ff776000
+|c0000ff00Area of Effect:|r |c0077ff77300
+|c0000ff00Cooldown:|r |c0077ff775 Seconds
 }
 
 STRING 1150
-// Units: h02H (Hellfire Tower 7: Hell Shrine), Ubertip (Tooltip - Extended)
+// Abilities: A00O (Minelayer), Ubertip (Tooltip - Normal - Extended)
 {
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff779000
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff770.72 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
-|c0000ff00Ability (2):|r |c0077ff77Hellfire: 50% chance to trigger hellfire.|r
+|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
+
+|c0000ff00Damage:|r |c0077ff778000
+|c0000ff00Area of Effect:|r |c0077ff77300
+|c0000ff00Cooldown:|r |c0077ff775 Seconds
 }
 
 STRING 1151
-// Units: h02K (Hellfire Tower 6: Hell Shrine), Ubertip (Tooltip - Extended)
+// Abilities: A00O (Minelayer), Ubertip (Tooltip - Normal - Extended)
 {
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff776000
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff770.63 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
-|c0000ff00Ability (2):|r |c0077ff77Hellfire: 50% chance to trigger hellfire.|r
+|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
+
+|c0000ff00Damage:|r |c0077ff7710000
+|c0000ff00Area of Effect:|r |c0077ff77300
+|c0000ff00Cooldown:|r |c0077ff775 Seconds
 }
 
 STRING 1152
-// Units: h02L (Hellfire Tower 4: Hell Shrine), Ubertip (Tooltip - Extended)
+// Abilities: A00O (Minelayer), Ubertip (Tooltip - Normal - Extended)
 {
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff772250
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff770.45 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
-|c0000ff00Ability (2):|r |c0077ff77Hellfire: 50% chance to trigger hellfire.|r
+|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
+
+|c0000ff00Damage:|r |c0077ff7715000
+|c0000ff00Area of Effect:|r |c0077ff77300
+|c0000ff00Cooldown:|r |c0077ff775 Seconds
 }
 
 STRING 1153
-// Abilities: A054 (Hellfire), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00O (Minelayer), Ubertip (Tooltip - Normal - Extended)
 {
-|c0077ff7750% chance to trigger hellfire causing a piller of flame to erupt from an enemy dealing damage to enemy units that pass through it.
+|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
+
+|c0000ff00Damage:|r |c0077ff7720000
+|c0000ff00Area of Effect:|r |c0077ff77300
+|c0000ff00Cooldown:|r |c0077ff775 Seconds
 }
 
 STRING 1154
-// Units: n017 (Frost Trap 1), Name (Name)
+// Abilities: A00O (Minelayer), Ubertip (Tooltip - Normal - Extended)
 {
-Frost Trap 1
+|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, it dealing damage to creeps in an area around the mine.
+
+|c0000ff00Damage:|r |c0077ff7725000
+|c0000ff00Area of Effect:|r |c0077ff77300
+|c0000ff00Cooldown:|r |c0077ff775 Seconds
 }
 
 STRING 1155
@@ -8183,7 +7974,7 @@ STRING 1179
 }
 
 STRING 1180
-// Abilities: A04W (Gamble Bonus), EditorSuffix (Editor Suffix)
+// Abilities: A04V (Exp Bonus), EditorSuffix (Editor Suffix)
 {
 [Learn]
 }
@@ -8242,26 +8033,50 @@ STRING 1189
 A
 }
 
+STRING 1190
+// Units: n00A (Fire Trap), Name (Name)
+{
+Fire Trap
+}
+
 STRING 1191
-// Units: n00A (Fire Trap 1), Tip (Tooltip - Basic)
+// Units: n00A (Fire Trap), Tip (Tooltip - Basic)
 {
 |c0077ff77[A] |c0000ff00Upgrade to Fire Trap.|r
 }
 
+STRING 1192
+// Units: n017 (Frost Trap), Name (Name)
+{
+Frost Trap
+}
+
 STRING 1193
-// Units: n017 (Frost Trap 1), Tip (Tooltip - Basic)
+// Units: n017 (Frost Trap), Tip (Tooltip - Basic)
 {
 |c0077ff77[S] |c0000ff00Upgrade to Frost Trap.|r
 }
 
+STRING 1194
+// Units: n01A (Poison Trap), Name (Name)
+{
+Poison Trap
+}
+
 STRING 1195
-// Units: n01A (Poison Trap 1), Tip (Tooltip - Basic)
+// Units: n01A (Poison Trap), Tip (Tooltip - Basic)
 {
 |c0077ff77[D] |c0000ff00Upgrade to Poison Trap.|r
 }
 
+STRING 1196
+// Units: n01C (Earth Trap), Name (Name)
+{
+Earth Trap
+}
+
 STRING 1197
-// Units: n01C (Earth Trap 1), Tip (Tooltip - Basic)
+// Units: n01C (Earth Trap), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade to Earth Trap.|r
 }
@@ -9478,26 +9293,50 @@ STRING 1399
 B
 }
 
+STRING 1400
+// Units: n01G (Darkness Trap), Name (Name)
+{
+Darkness Trap
+}
+
 STRING 1401
-// Units: n01G (Darkness Trap 1), Tip (Tooltip - Basic)
+// Units: n01G (Darkness Trap), Tip (Tooltip - Basic)
 {
 |c0077ff77[F] |c0000ff00Upgrade to Darkness Trap.|r
 }
 
+STRING 1402
+// Units: n01H (Blood Trap), Name (Name)
+{
+Blood Trap
+}
+
 STRING 1403
-// Units: n01H (Blood Trap 1), Tip (Tooltip - Basic)
+// Units: n01H (Blood Trap), Tip (Tooltip - Basic)
 {
 |c0077ff77[X] |c0000ff00Upgrade to Blood Trap.|r
 }
 
+STRING 1404
+// Units: n01I (Iron Trap), Name (Name)
+{
+Iron Trap
+}
+
 STRING 1405
-// Units: n01I (Iron Trap 1), Tip (Tooltip - Basic)
+// Units: n01I (Iron Trap), Tip (Tooltip - Basic)
 {
 |c0077ff77[C] |c0000ff00Upgrade to Iron Trap.|r
 }
 
+STRING 1406
+// Units: n01K (Void Trap), Name (Name)
+{
+Void Trap
+}
+
 STRING 1407
-// Units: n01K (Void Trap 1), Tip (Tooltip - Basic)
+// Units: n01K (Void Trap), Tip (Tooltip - Basic)
 {
 |c0077ff77[V] |c0000ff00Upgrade to Void Trap.|r
 }
@@ -10809,7 +10648,7 @@ Gamble Bonus
 }
 
 STRING 1619
-// Abilities: A04Z (Gold Bonus), EditorSuffix (Editor Suffix)
+// Abilities: A04W (Gamble Bonus), EditorSuffix (Editor Suffix)
 {
 [Learn]
 }
@@ -10821,9 +10660,11 @@ Exp Bonus
 }
 
 STRING 1621
-// Units: n01A (Poison Trap 1), Name (Name)
+// Abilities: A033 (Speed Mode), Ubertip (Tooltip - Normal - Extended)
 {
-Poison Trap 1
+|c0000ff00Status = |c00FF0000Deactivated
+
+|c0077ff77Time between wave spawns is reduced and creep movement speed is set to 500.
 }
 
 STRING 1622
@@ -11505,61 +11346,61 @@ STRING 1734
 }
 
 STRING 1735
-// Units: n01C (Earth Trap 1), Name (Name)
+// Abilities: A00O (Minelayer), Tip (Tooltip - Normal)
 {
-Earth Trap 1
+|c0000ff00Minelayer - Level 1|r
 }
 
 STRING 1736
-// Abilities: A053 (Minelayer), Tip (Tooltip - Normal)
+// Abilities: A00O (Minelayer), Tip (Tooltip - Normal)
 {
 |c0000ff00Minelayer - Level 2|r
 }
 
 STRING 1737
-// Abilities: A053 (Minelayer), Tip (Tooltip - Normal)
+// Abilities: A00O (Minelayer), Tip (Tooltip - Normal)
 {
 |c0000ff00Minelayer - Level 3|r
 }
 
 STRING 1738
-// Abilities: A053 (Minelayer), Tip (Tooltip - Normal)
+// Abilities: A00O (Minelayer), Tip (Tooltip - Normal)
 {
 |c0000ff00Minelayer - Level 4|r
 }
 
 STRING 1739
-// Abilities: A053 (Minelayer), Tip (Tooltip - Normal)
+// Abilities: A00O (Minelayer), Tip (Tooltip - Normal)
 {
 |c0000ff00Minelayer - Level 5|r
 }
 
 STRING 1740
-// Abilities: A053 (Minelayer), Tip (Tooltip - Normal)
+// Abilities: A00O (Minelayer), Tip (Tooltip - Normal)
 {
 |c0000ff00Minelayer - Level 6|r
 }
 
 STRING 1741
-// Abilities: A053 (Minelayer), Tip (Tooltip - Normal)
+// Abilities: A00O (Minelayer), Tip (Tooltip - Normal)
 {
 |c0000ff00Minelayer - Level 7|r
 }
 
 STRING 1742
-// Abilities: A053 (Minelayer), Tip (Tooltip - Normal)
+// Abilities: A00O (Minelayer), Tip (Tooltip - Normal)
 {
 |c0000ff00Minelayer - Level 8|r
 }
 
 STRING 1743
-// Abilities: A053 (Minelayer), Tip (Tooltip - Normal)
+// Abilities: A00O (Minelayer), Tip (Tooltip - Normal)
 {
 |c0000ff00Minelayer - Level 9|r
 }
 
 STRING 1744
-// Abilities: A053 (Minelayer), Tip (Tooltip - Normal)
+// Abilities: A00O (Minelayer), Tip (Tooltip - Normal)
 {
 |c0000ff00Minelayer - Level 10|r
 }
@@ -14141,7 +13982,7 @@ STRING 2119
 }
 
 STRING 2120
-// Abilities: A015 (Emergency Frost Tower), Hotkey (Hotkey - Normal)
+// Abilities: A01M (Raise Dead), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -14210,7 +14051,7 @@ STRING 2127
 }
 
 STRING 2128
-// Abilities: A029 (Boss Waves), Hotkey (Hotkey - Normal)
+// Abilities: A01W (Emergency Chaos Tower), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -14519,13 +14360,13 @@ STRING 2165
 }
 
 STRING 2166
-// Abilities: A01X (Emergency Frost Tower), Hotkey (Hotkey - Normal)
+// Abilities: A015 (Emergency Frost Tower), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 2167
-// Abilities: A025 (Clear), Hotkey (Hotkey - Normal)
+// Abilities: A01X (Emergency Frost Tower), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -14537,25 +14378,25 @@ Hellfire Tower 8: Hell Shrine
 }
 
 STRING 2169
-// Units: n008 (Air Tower 7: Frost Wrym), Hotkey (Hotkey)
+// Units: h00W (Siege Tower 6: Lord Garithos), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2170
-// Abilities: A02E (Very Hard Mode), Hotkey (Hotkey - Normal)
+// Abilities: A025 (Clear), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 2171
-// Abilities: A02X (Disable Research Tower), Hotkey (Hotkey - Normal)
+// Abilities: A02E (Very Hard Mode), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 2172
-// Abilities: A00Y (Blitz Mode), Hotkey (Hotkey - Normal)
+// Abilities: A02X (Disable Research Tower), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -14567,13 +14408,13 @@ rlev
 }
 
 STRING 2174
-// Units: h012 (Poison Tower 6: Poisoned Quilboar), Hotkey (Hotkey)
+// Units: n008 (Air Tower 7: Frost Wrym), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2175
-// Units: n00J (Air Tower 6: Chimaera), Hotkey (Hotkey)
+// Units: h012 (Poison Tower 6: Poisoned Quilboar), Hotkey (Hotkey)
 {
 Z
 }
@@ -14585,7 +14426,7 @@ Hellfire Tower 4: Hell Shrine
 }
 
 STRING 2177
-// Units: n00K (Frost Tower 3: Hydromancer), Hotkey (Hotkey)
+// Units: n00J (Air Tower 6: Chimaera), Hotkey (Hotkey)
 {
 Z
 }
@@ -14614,9 +14455,11 @@ Fel Tower 9: Warlock
 }
 
 STRING 2181
-// Units: n01G (Darkness Trap 1), Name (Name)
+// Abilities: A033 (Speed Mode), Ubertip (Tooltip - Normal - Extended)
 {
-Darkness Trap 1
+|c0000ff00Status = |c0077ff77Activated
+
+|c0077ff77Time between wave spawns is reduced and creep movement speed is set to 500.
 }
 
 STRING 2182
@@ -15247,7 +15090,7 @@ v2.01 Release Date - 21/07/2019
 }
 
 STRING 2266
-// Units: h01B (Siege Tower 7: Admiral Proudmoore), Hotkey (Hotkey)
+// Units: n00K (Frost Tower 3: Hydromancer), Hotkey (Hotkey)
 {
 Z
 }
@@ -15460,7 +15303,7 @@ Skeletal Archer
 }
 
 STRING 2304
-// Units: n009 (Air Tower 8: Voidwalker), Hotkey (Hotkey)
+// Units: h01B (Siege Tower 7: Admiral Proudmoore), Hotkey (Hotkey)
 {
 Z
 }
@@ -15478,13 +15321,13 @@ STRING 2306
 }
 
 STRING 2307
-// Units: n01H (Blood Trap 1), Name (Name)
+// Units: h02D (Ultimate Hellfire Tower), Name (Name)
 {
-Blood Trap 1
+Ultimate Hellfire Tower
 }
 
 STRING 2308
-// Units: h01K (Poison Tower 8: Poison Blasting Space Marine), Hotkey (Hotkey)
+// Units: n009 (Air Tower 8: Voidwalker), Hotkey (Hotkey)
 {
 Z
 }
@@ -15496,7 +15339,7 @@ STRING 2309
 }
 
 STRING 2310
-// Units: h02D (Hell Shrine, Ultimate Hellfire Tower), Tip (Tooltip - Basic)
+// Units: h02D (Ultimate Hellfire Tower), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Hell Shrine.|r |cAAAAFFAAHellfire Tower 10.|r
 }
@@ -15509,17 +15352,17 @@ Hellfire Tower 5: Hell Shrine
 
 STRING 2312
 {
-|c0000FF00GenoHacker#2987|r
+|c0000FF00GenoHacker|r
 }
 
 STRING 2313
-// Units: h01L (Aspect Of Blood, Ultimate Siege Tower), Hotkey (Hotkey)
+// Units: h01K (Poison Tower 8: Poison Blasting Space Marine), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2314
-// Units: h018 (Warlock, Ultimate Fel Tower), Tip (Tooltip - Basic)
+// Units: h018 (Ultimate Fel Tower), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Warlock, Ultimate Fel Tower.|r |cAAAAFFAAFel Tower 10.|r
 }
@@ -15537,37 +15380,37 @@ STRING 2316
 }
 
 STRING 2317
-// Units: h01N (Poison Tower 7: Farseer), Hotkey (Hotkey)
+// Units: h01L (Aspect Of Blood, Ultimate Siege Tower), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2318
-// Units: h01O (Poison Tower 9: Death Revenant), Hotkey (Hotkey)
+// Units: h01N (Poison Tower 7: Farseer), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2319
-// Units: h01U (Siege Tower 9: Firelord), Hotkey (Hotkey)
+// Units: h01O (Poison Tower 9: Death Revenant), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2320
-// Units: h020 (Chaos Tower 3: Chaos Golem), Hotkey (Hotkey)
+// Units: h01U (Siege Tower 9: Firelord), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2321
-// Units: h022 (Hydralisk, Ultimate Poison Tower), Hotkey (Hotkey)
+// Units: h020 (Chaos Tower 3: Chaos Golem), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2322
-// Units: h024 (Chaos Tower 2: Chaos Elemental), Hotkey (Hotkey)
+// Units: h022 (Hydralisk, Ultimate Poison Tower), Hotkey (Hotkey)
 {
 Z
 }
@@ -15593,31 +15436,31 @@ The damage gain from Overdrive will also reset.
 }
 
 STRING 2326
-// Units: h01Y (Chaos Tower 4: Chaos Treant), Hotkey (Hotkey)
+// Units: h024 (Chaos Tower 2: Chaos Elemental), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2327
-// Units: n00S (Air Tower 9: Emerald Dragon), Hotkey (Hotkey)
+// Units: h01Y (Chaos Tower 4: Chaos Treant), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2328
-// Units: n00O (Bronze Dragon, Ultimate Air Tower), Hotkey (Hotkey)
+// Units: n00S (Air Tower 9: Emerald Dragon), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2329
-// Units: n00R (Frost Tower 5: Frost Lich), Hotkey (Hotkey)
+// Units: n00O (Bronze Dragon, Ultimate Air Tower), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2330
-// Units: e007 (Bouncing Tower 4: Makrura Tidal Lord), Hotkey (Hotkey)
+// Units: n00R (Frost Tower 5: Frost Lich), Hotkey (Hotkey)
 {
 Z
 }
@@ -15703,7 +15546,7 @@ Blood Trap Attack Speed
 }
 
 STRING 2341
-// Units: h00V (Flak Tower 4: Mortar Team), Tip (Tooltip - Basic)
+// Units: h00V (Flak Tower 4), Tip (Tooltip - Basic)
 {
 |c0077ff77[C] |c0000ff00Upgrade To Mortar Team.|r |cAAAAFFAAFlak Tower 4.|r
 }
@@ -15741,13 +15584,13 @@ STRING 2343
 }
 
 STRING 2344
-// Units: n01I (Iron Trap 1), Name (Name)
+// Units: h00L (Ballista Tower 7), Name (Name)
 {
-Iron Trap 1
+Ballista Tower 7
 }
 
 STRING 2345
-// Units: e00A (Bouncing Tower 2: Nerubian Queen), Hotkey (Hotkey)
+// Units: e007 (Bouncing Tower 4: Makrura Tidal Lord), Hotkey (Hotkey)
 {
 Z
 }
@@ -15759,9 +15602,9 @@ Venom Tower 5: Lizard
 }
 
 STRING 2347
-// Units: n01K (Void Trap 1), Name (Name)
+// Units: h00O (Ballista Tower 6), Name (Name)
 {
-Void Trap 1
+Ballista Tower 6
 }
 
 STRING 2348
@@ -15776,6 +15619,12 @@ STRING 2349
 |c0077ff77[X] |c0000ff00Upgrade To Frozen Obelisk.|r |cAAAAFFAAShard Tower 4.|r
 }
 
+STRING 2350
+// Units: h00P (Ballista Tower 5), Name (Name)
+{
+Ballista Tower 5
+}
+
 STRING 2351
 // Units: h01M (Venom Tower 6: Lizard), Name (Name)
 {
@@ -15786,6 +15635,12 @@ STRING 2352
 // Units: h01M (Venom Tower 6: Lizard), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Lizard.|r |cAAAAFFAAVenom Tower 6.|r
+}
+
+STRING 2353
+// Units: h00Q (Ballista Tower 4), Name (Name)
+{
+Ballista Tower 4
 }
 
 STRING 2354
@@ -15800,6 +15655,12 @@ STRING 2355
 Venom Tower 7: Lizard
 }
 
+STRING 2356
+// Units: h00R (Ballista Tower 8), Name (Name)
+{
+Ballista Tower 8
+}
+
 STRING 2357
 // Units: h01P (Venom Tower 7: Lizard), Tip (Tooltip - Basic)
 {
@@ -15812,10 +15673,22 @@ STRING 2358
 Hellfire Tower 6: Hell Shrine
 }
 
+STRING 2359
+// Units: h00S (Ballista Tower 9), Name (Name)
+{
+Ballista Tower 9
+}
+
 STRING 2360
 // Abilities: A013 (Multishot), Name (Name)
 {
 Multishot
+}
+
+STRING 2361
+// Units: h01S (Ultimate Venom Tower), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade To Lizard.|r |cAAAAFFAAVenom Tower 5.|r
 }
 
 STRING 2362
@@ -15837,19 +15710,19 @@ STRING 2364
 }
 
 STRING 2365
-// Units: e00B (Bouncing Tower 3: Overlord Arachnathid), Hotkey (Hotkey)
+// Units: e00A (Bouncing Tower 2: Nerubian Queen), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2366
-// Units: e00F (Bouncing Tower 6: Infernal Juggernaut), Hotkey (Hotkey)
+// Units: e00B (Bouncing Tower 3: Overlord Arachnathid), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2367
-// Units: h026 (Bash Tower 3: Goblin Basher), Hotkey (Hotkey)
+// Units: e00F (Bouncing Tower 6: Infernal Juggernaut), Hotkey (Hotkey)
 {
 Z
 }
@@ -15861,39 +15734,51 @@ X
 }
 
 STRING 2369
-// Units: h027 (Bash Tower 2: Royal Guard), Hotkey (Hotkey)
+// Units: h026 (Bash Tower 3: Goblin Basher), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2370
-// Units: h028 (Bash Tower 4: Mountain Smasher), Hotkey (Hotkey)
+// Units: h027 (Bash Tower 2: Royal Guard), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2371
-// Units: h029 (Bash Tower 5: Mortar Tank), Hotkey (Hotkey)
+// Units: h028 (Bash Tower 4: Mountain Smasher), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2372
-// Units: e00G (Bouncing Tower 7: Faceless Deathbringer), Hotkey (Hotkey)
+// Units: h029 (Bash Tower 5: Mortar Tank), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2373
-// Units: n00U (Frost Tower 6: Frosty Elemental), Hotkey (Hotkey)
+// Units: e00G (Bouncing Tower 7: Faceless Deathbringer), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2374
-// Units: h00X (Siege Tower 8: Deathlord), Hotkey (Hotkey)
+// Units: n00U (Frost Tower 6: Frosty Elemental), Hotkey (Hotkey)
 {
 Z
+}
+
+STRING 2375
+// Abilities: A03N (Enchanted Bolts), Name (Name)
+{
+Enchanted Bolts
+}
+
+STRING 2376
+// Units: h00V (Flak Tower 4), Name (Name)
+{
+Flak Tower 4
 }
 
 STRING 2377
@@ -15903,21 +15788,33 @@ STRING 2377
 }
 
 STRING 2378
-// Units: h015 (Bash Tower 7: Bloodfiend), Hotkey (Hotkey)
+// Units: h00X (Siege Tower 8: Deathlord), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2379
-// Units: h00J (Flak Tower 5: Mortar Team), Tip (Tooltip - Basic)
+// Units: h00J (Flak Tower 5), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Mortar Team.|r |cAAAAFFAAFlak Tower 5.|r
+}
+
+STRING 2380
+// Units: h00J (Flak Tower 5), Name (Name)
+{
+Flak Tower 5
 }
 
 STRING 2381
 // Abilities: A04T (Bloodstrike), Tip (Tooltip - Normal)
 {
 |c0000ff00Bloodstrike - Light
+}
+
+STRING 2382
+// Units: h00T (Flak Tower 6), Name (Name)
+{
+Flak Tower 6
 }
 
 STRING 2383
@@ -15927,9 +15824,15 @@ STRING 2383
 }
 
 STRING 2384
-// Units: h00T (Flak Tower 6: Mortar Team), Tip (Tooltip - Basic)
+// Units: h00T (Flak Tower 6), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Mortar Team.|r |cAAAAFFAAFlak Tower 6.|r
+}
+
+STRING 2385
+// Units: h00Y (Flak Tower 7), Name (Name)
+{
+Flak Tower 7
 }
 
 STRING 2386
@@ -15939,9 +15842,15 @@ STRING 2386
 }
 
 STRING 2387
-// Units: h00Y (Flak Tower 7: Mortar Team), Tip (Tooltip - Basic)
+// Units: h00Y (Flak Tower 7), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Mortar Team.|r |cAAAAFFAAFlak Tower 7.|r
+}
+
+STRING 2388
+// Units: h00Z (Flak Tower 8), Name (Name)
+{
+Flak Tower 8
 }
 
 STRING 2389
@@ -15951,9 +15860,15 @@ STRING 2389
 }
 
 STRING 2390
-// Units: h00Z (Flak Tower 8: Mortar Team), Tip (Tooltip - Basic)
+// Units: h00Z (Flak Tower 8), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Mortar Team.|r |cAAAAFFAAFlak Tower 8.|r
+}
+
+STRING 2391
+// Units: h010 (Flak Tower 9), Name (Name)
+{
+Flak Tower 9
 }
 
 STRING 2392
@@ -15963,7 +15878,7 @@ STRING 2392
 }
 
 STRING 2393
-// Units: h010 (Flak Tower 9: Mortar Team), Tip (Tooltip - Basic)
+// Units: h010 (Flak Tower 9), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Mortar Team.|r |cAAAAFFAAFlak Tower 9.|r
 }
@@ -15987,9 +15902,51 @@ STRING 2395
 }
 
 STRING 2396
-// Units: h00Q (Glaive Tower 4: Enchanted Machine), Hotkey (Hotkey)
+// Units: h00Q (Ballista Tower 4), Hotkey (Hotkey)
 {
 X
+}
+
+STRING 2397
+// Units: h00I (Watch Tower, Ultimate Ballista Tower), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade to Watch Tower, Ultimate Ballista Tower.|r |cAAAAFFAABallista Tower 10.|r
+}
+
+STRING 2398
+// Units: h00L (Ballista Tower 7), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade to Watch Tower.|r |cAAAAFFAABallista Tower 7.|r
+}
+
+STRING 2399
+// Units: h00O (Ballista Tower 6), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade to Watch Tower.|r |cAAAAFFAABallista Tower 6.|r
+}
+
+STRING 2400
+// Units: h00P (Ballista Tower 5), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade to Watch Tower.|r |cAAAAFFAABallista Tower 5.|r
+}
+
+STRING 2401
+// Units: h00Q (Ballista Tower 4), Tip (Tooltip - Basic)
+{
+|c0077ff77[X] |c0000ff00Upgrade to Watch Tower.|r |cAAAAFFAABallista Tower 4.|r
+}
+
+STRING 2402
+// Units: h00R (Ballista Tower 8), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade to Watch Tower.|r |cAAAAFFAABallista Tower 8.|r
+}
+
+STRING 2403
+// Units: h00S (Ballista Tower 9), Tip (Tooltip - Basic)
+{
+|c0077ff77[Z] |c0000ff00Upgrade to Watch Tower.|r |cAAAAFFAABallista Tower 9.|r
 }
 
 STRING 2404
@@ -16047,7 +16004,7 @@ STRING 2411
 }
 
 STRING 2412
-// Units: h01E (Chaos Orb, Ultimate Chaos Tower), Hotkey (Hotkey)
+// Units: h015 (Bash Tower 7: Bloodfiend), Hotkey (Hotkey)
 {
 Z
 }
@@ -16068,6 +16025,12 @@ STRING 2414
 -- Spell Immunity icon is now hidden
 }
 
+STRING 2415
+// Units: h01S (Ultimate Venom Tower), Name (Name)
+{
+Ultimate Venom Tower
+}
+
 STRING 2416
 // Abilities: A023 (Upgrade Trap Ability), Tip (Tooltip - Normal)
 {
@@ -16075,7 +16038,7 @@ STRING 2416
 }
 
 STRING 2417
-// Units: n00L (Frost Tower 7: Frost Revenant), Hotkey (Hotkey)
+// Units: h01E (Chaos Orb, Ultimate Chaos Tower), Hotkey (Hotkey)
 {
 Z
 }
@@ -16090,10 +16053,28 @@ STRING 2419
 maps.w3reforged.com
 }
 
+STRING 2420
+// Abilities: A03N (Enchanted Bolts), Tip (Tooltip - Normal)
+{
+|c0000ff00Enchanted Bolts
+}
+
 STRING 2421
 // Abilities: A04E (Multishot), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77The Shard Tower is able to attack 3 Enemies in one Attack.|r
+}
+
+STRING 2422
+// Units: h00I (Watch Tower, Ultimate Ballista Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.50
+|c0000ff00Damage:|r |c0077ff7743000
+|c0000ff00Range:|r |c0077ff771000 (ground only)
+|c0000ff00Efficiency:|r |c0077ff771.73 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (ground only)|r
+|c0000ff00Ability (2):|r |c0077ff77Enchanted Bolts: 35% Chance on hit to deal damage equal to 200% of the distance between the tower and the target as spell damage.
 }
 
 STRING 2423
@@ -16330,7 +16311,7 @@ STRING 2459
 }
 
 STRING 2460
-// Units: h02B (Uther, Ultimate Research Tower), Hotkey (Hotkey)
+// Units: n00L (Frost Tower 7: Frost Revenant), Hotkey (Hotkey)
 {
 Z
 }
@@ -16448,6 +16429,12 @@ STRING 2477
 |c0000ff00Ability (2):|r |c0077ff77Soul Extraction; attacks have a 10% chance to deal 5% of an enemy units current health as chaos damage, the tower gains mana equal to the damage dealt. When above 75% mana tower has a 10% chance to use all mana to summon 5 minions.|r
 }
 
+STRING 2478
+// Units: h047 (Ultimate Soul Tower), Name (Name)
+{
+Ultimate Soul Tower
+}
+
 STRING 2479
 // Abilities: A046 (Multishot), Ubertip (Tooltip - Normal - Extended)
 {
@@ -16455,37 +16442,37 @@ STRING 2479
 }
 
 STRING 2480
-// Units: h047 (Runic Crystal, Ultimate Soul Tower), Tip (Tooltip - Basic)
+// Units: h047 (Ultimate Soul Tower), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Runic Crystal, Ultimate Soul Tower.|r |cAAAAFFAASoul Tower 10.|r
 }
 
 STRING 2481
-// Units: n00I (Frost Tower 2: Tuskarr Chieftain), Hotkey (Hotkey)
+// Units: h02B (Uther, Ultimate Research Tower), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2482
-// Units: n00N (Frost Tower 8: Snowy Owl), Hotkey (Hotkey)
+// Units: n00I (Frost Tower 2: Tuskarr Chieftain), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2483
-// Units: n00V (Frost Tower 9: Frost Warrior), Hotkey (Hotkey)
+// Units: n00N (Frost Tower 8: Snowy Owl), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2484
-// Units: e00H (Bouncing Tower 8: Berserking Wildkin), Hotkey (Hotkey)
+// Units: n00V (Frost Tower 9: Frost Warrior), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2485
-// Units: e00I (Bouncing Tower 9: Shadow Wolf), Hotkey (Hotkey)
+// Units: e00H (Bouncing Tower 8: Berserking Wildkin), Hotkey (Hotkey)
 {
 Z
 }
@@ -16552,7 +16539,7 @@ STRING 2492
 }
 
 STRING 2493
-// Abilities: A040 (Hellfire 5), Tip (Tooltip - Normal)
+// Abilities: A03Z (Hellfire 7), Tip (Tooltip - Normal)
 {
 |c0000ff00Hellfire
 }
@@ -16564,7 +16551,7 @@ Hellfire 5
 }
 
 STRING 2495
-// Units: h01S (Lizard, Ultimate Venom Tower), Ubertip (Tooltip - Extended)
+// Units: h01S (Ultimate Venom Tower), Ubertip (Tooltip - Extended)
 {
 |c0000ff00Attack:|r |c0077ff77Pierce
 |c0000ff00Cooldown:|r |c0077ff770.25
@@ -16575,7 +16562,7 @@ STRING 2495
 }
 
 STRING 2496
-// Abilities: A041 (Hellfire 6), Tip (Tooltip - Normal)
+// Abilities: A040 (Hellfire 5), Tip (Tooltip - Normal)
 {
 |c0000ff00Hellfire
 }
@@ -16603,7 +16590,7 @@ STRING 2498
 }
 
 STRING 2499
-// Abilities: A042 (Hellfire 1), Tip (Tooltip - Normal)
+// Abilities: A041 (Hellfire 6), Tip (Tooltip - Normal)
 {
 |c0000ff00Hellfire
 }
@@ -16627,7 +16614,7 @@ STRING 2501
 }
 
 STRING 2502
-// Abilities: A043 (Hellfire 3), Tip (Tooltip - Normal)
+// Abilities: A042 (Hellfire 1), Tip (Tooltip - Normal)
 {
 |c0000ff00Hellfire
 }
@@ -16645,7 +16632,7 @@ Tower 2
 }
 
 STRING 2505
-// Abilities: A044 (Hellfire 2), Tip (Tooltip - Normal)
+// Abilities: A043 (Hellfire 3), Tip (Tooltip - Normal)
 {
 |c0000ff00Hellfire
 }
@@ -16663,7 +16650,7 @@ Tower 3
 }
 
 STRING 2508
-// Abilities: A045 (Hellfire 4), Tip (Tooltip - Normal)
+// Abilities: A044 (Hellfire 2), Tip (Tooltip - Normal)
 {
 |c0000ff00Hellfire
 }
@@ -16681,7 +16668,7 @@ Vimperious Extravatinker
 }
 
 STRING 2511
-// Abilities: A054 (Hellfire), Tip (Tooltip - Normal)
+// Abilities: A045 (Hellfire 4), Tip (Tooltip - Normal)
 {
 |c0000ff00Hellfire
 }
@@ -17067,6 +17054,12 @@ STRING 2565
 |c0077ff77[X] |c0000ff00Upgrade To War Machine.|r |cAAAAFFAARocket Tower 4.|r
 }
 
+STRING 2566
+// Units: h00I (Watch Tower, Ultimate Ballista Tower), Name (Name)
+{
+Watch Tower, Ultimate Ballista Tower
+}
+
 STRING 2567
 // Units: n00X (Shard Tower 4: Frozen Obelisk), Hotkey (Hotkey)
 {
@@ -17238,10 +17231,6 @@ STRING 2592
 -- BTNDice and DISBTNDice, Downloaded from HiveWorkshop, Created by Amigurumi. Used for Random Game Modes icon.
 -- BTNdieroll01 and DISBTNdieroll01, Downloaded from HiveWorkshop, Created by LifeguardLeroy. Used for Random Game Modes + Difficulty icon.
 -- BTNMysteryPot2 and DISBTNMysteryPot2, Downloaded from HiveWorkshop, Created by kola. Used for Random Game Modes, Difficulty + Towers icon.
--- LUA Damage Engine by Bride
--- Arcing Text Tag by Maker
--- Button Manager to create various passive icons
--- BLP Lab to convert to a usable image format
 }
 
 STRING 2593
@@ -18182,6 +18171,12 @@ STRING 2723
 Incinerate
 }
 
+STRING 2724
+// Abilities: A04Y (Fan of Knives), EditorSuffix (Editor Suffix)
+{
+[Shrapnel Tower]
+}
+
 STRING 2725
 // Abilities: A04B (Frostbite), Ubertip (Tooltip - Normal - Extended)
 {
@@ -18214,44 +18209,35 @@ Changelog -- v2.06
 
 STRING 2730
 {
--- Potentially fixed the crashing issue
 -- Consolidated all emergency towers into 1 learnable abillity instead of each tower having its own.
 -- Switched from JASS scripting to LUA Scripting
 -- Added Bribes LUA Damage Engine
--- Added Custom Crit System, Critical Aura, Crit Bonus
--- Added Gold Aura
--- Added Gold Bonus
+-- Added Custom Crit System
+-- Added Critical Aura
+-- Added Crit Bonus to hero
 -- Added more easter eggs
 -- Added several new towers
--- Added new abilities to existing towers
 -- Added many new abilities to all traps
 -- Added bosses to random waves
 -- Removed food cost from aura tower and trap blueprints
 -- Reduced Health, Armour and Movement Speed of non-random waves
--- Traps now limited to 1 per type
 -- Fixed Endless Mode and Random Waves not being compatible
 -- Fixed chaos mode difficultys still being active after changing to a non-chaos mode difficulty during game setup
 -- Fixed -wave command only being available to player 1
 -- Fixed Game Setup Unit being removed when its owner leaves
 -- Fixed Game Setup Units ability tooltips not changing
--- Fixed random wave game messages showing incorrect wave type
 -- Changes to Game Setup Unit ability tooltips
 -- Changes to multiple commands
 -- Changes to multiboard
--- Changes to random wave units
--- Changes to gambling
--- Changes to terrain and doodads
--- Changes to static wave units
--- Changes to life system
 }
 
 STRING 2731
 {
-v2.06 Release Date - XX/XX/XX
+v2.06 Indev Release Date - 02/08/20
 }
 
 STRING 2732
-// Units: h047 (Runic Crystal, Ultimate Soul Tower), Ubertip (Tooltip - Extended)
+// Units: h047 (Ultimate Soul Tower), Ubertip (Tooltip - Extended)
 {
 |c0000ff00Attack:|r |c0077ff77Chaos
 |c0000ff00Cooldown:|r |c0077ff770.25
@@ -18795,19 +18781,19 @@ STRING 2820
 }
 
 STRING 2821
-// Abilities: A017 (Armour Aura), EditorSuffix (Editor Suffix)
+// Abilities: A00D (Speed Aura), EditorSuffix (Editor Suffix)
 {
 [Aura Tower]
 }
 
 STRING 2822
-// Abilities: A02C (Crippling Aura), EditorSuffix (Editor Suffix)
+// Abilities: A014 (Damage Aura), EditorSuffix (Editor Suffix)
 {
 [Aura Tower]
 }
 
 STRING 2823
-// Abilities: A002 (Aura Upgrades), EditorSuffix (Editor Suffix)
+// Abilities: A017 (Armour Aura), EditorSuffix (Editor Suffix)
 {
 [Aura Tower]
 }
@@ -19010,31 +18996,31 @@ Brainfreeze
 }
 
 STRING 2852
-// Units: h02N (Chaos Tower 9: Chaos Soul), Hotkey (Hotkey)
+// Units: e00I (Bouncing Tower 9: Shadow Wolf), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2853
-// Units: h02P (Chaos Tower 6: Chaos Stalker), Hotkey (Hotkey)
+// Units: h02N (Chaos Tower 9: Chaos Soul), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2854
-// Units: h02Q (Chaos Tower 7: Chaos Heretic), Hotkey (Hotkey)
+// Units: h02P (Chaos Tower 6: Chaos Stalker), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2855
-// Units: h02R (Chaos Tower 8: Chaos Revenant), Hotkey (Hotkey)
+// Units: h02Q (Chaos Tower 7: Chaos Heretic), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2856
-// Units: h02A (Chaos Tower 5: Chaos Infernal), Hotkey (Hotkey)
+// Units: h02R (Chaos Tower 8: Chaos Revenant), Hotkey (Hotkey)
 {
 Z
 }
@@ -19082,7 +19068,7 @@ STRING 2863
 }
 
 STRING 2864
-// Abilities: A00Q (Critical Aura), EditorSuffix (Editor Suffix)
+// Abilities: A02C (Crippling Aura), EditorSuffix (Editor Suffix)
 {
 [Aura Tower]
 }
@@ -19094,7 +19080,7 @@ Spirit Tower 6: Winter Beacon
 }
 
 STRING 2866
-// Units: h032 (Bash Tower 6: Siege Golem), Hotkey (Hotkey)
+// Units: h02A (Chaos Tower 5: Chaos Infernal), Hotkey (Hotkey)
 {
 Z
 }
@@ -19112,13 +19098,13 @@ STRING 2867
 }
 
 STRING 2868
-// Abilities: A052 (Gold Aura), EditorSuffix (Editor Suffix)
+// Abilities: A002 (Aura Upgrades), EditorSuffix (Editor Suffix)
 {
 [Aura Tower]
 }
 
 STRING 2869
-// Abilities: A005 (Upgrade Crippling Aura), EditorSuffix (Editor Suffix)
+// Abilities: A00F (Upgrade Speed Aura), EditorSuffix (Editor Suffix)
 {
 [Aura Spellbook]
 }
@@ -19130,13 +19116,13 @@ Spirit Tower 7: Winter Beacon
 }
 
 STRING 2871
-// Abilities: A00H (Upgrade Armor Aura), EditorSuffix (Editor Suffix)
+// Abilities: A005 (Upgrade Crippling Aura), EditorSuffix (Editor Suffix)
 {
 [Aura Spellbook]
 }
 
 STRING 2872
-// Abilities: A00I (Upgrade Damage Aura), EditorSuffix (Editor Suffix)
+// Abilities: A00H (Upgrade Armor Aura), EditorSuffix (Editor Suffix)
 {
 [Aura Spellbook]
 }
@@ -19148,7 +19134,7 @@ Spirit Tower 8: Winter Beacon
 }
 
 STRING 2874
-// Abilities: A00R (Upgrade Critical Aura), EditorSuffix (Editor Suffix)
+// Abilities: A00I (Upgrade Damage Aura), EditorSuffix (Editor Suffix)
 {
 [Aura Spellbook]
 }
@@ -19331,7 +19317,7 @@ STRING 2896
 }
 
 STRING 2897
-// Units: h018 (Warlock, Ultimate Fel Tower), Ubertip (Tooltip - Extended)
+// Units: h018 (Ultimate Fel Tower), Ubertip (Tooltip - Extended)
 {
 |c0000ff00Attack:|r |c0077ff77Chaos
 |c0000ff00Cooldown:|r |c0077ff771.25
@@ -19445,7 +19431,7 @@ STRING 2910
 }
 
 STRING 2911
-// Units: h03V (Research Tower 4: Ancient of Wind), Hotkey (Hotkey)
+// Units: h032 (Bash Tower 6: Siege Golem), Hotkey (Hotkey)
 {
 Z
 }
@@ -19505,7 +19491,7 @@ Q
 }
 
 STRING 2921
-// Abilities: A04Y (Sell Tower), EditorSuffix (Editor Suffix)
+// Abilities: A00Q (Critical Aura), EditorSuffix (Editor Suffix)
 {
 [Aura Tower]
 }
@@ -19523,7 +19509,7 @@ Q
 }
 
 STRING 2924
-// Abilities: A051 (Upgrade Gold Aura), EditorSuffix (Editor Suffix)
+// Abilities: A00R (Upgrade Critical Aura), EditorSuffix (Editor Suffix)
 {
 [Aura Spellbook]
 }
@@ -19567,7 +19553,7 @@ STRING 2928
 }
 
 STRING 2929
-// Units: h03W (Research Tower 3: Hydra), Hotkey (Hotkey)
+// Units: h03V (Research Tower 4: Ancient of Wind), Hotkey (Hotkey)
 {
 Z
 }
@@ -19599,7 +19585,7 @@ STRING 2931
 }
 
 STRING 2932
-// Units: h03X (Research Tower 6: Wildkin), Hotkey (Hotkey)
+// Units: h03W (Research Tower 3: Hydra), Hotkey (Hotkey)
 {
 Z
 }
@@ -19631,9 +19617,15 @@ STRING 2934
 }
 
 STRING 2935
-// Units: h03Y (Research Tower 7: Ancient Sasquatch), Hotkey (Hotkey)
+// Units: h03X (Research Tower 6: Wildkin), Hotkey (Hotkey)
 {
 Z
+}
+
+STRING 2936
+// Abilities: A03N (Enchanted Bolts), EditorSuffix (Editor Suffix)
+{
+[Ballista Tower]
 }
 
 STRING 2937
@@ -19663,19 +19655,19 @@ STRING 2941
 }
 
 STRING 2942
-// Units: h03Z (Research Tower 9: Albatross), Hotkey (Hotkey)
+// Units: h03Y (Research Tower 7: Ancient Sasquatch), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2943
-// Units: h040 (Research Tower 2: Tinker), Hotkey (Hotkey)
+// Units: h03Z (Research Tower 9: Albatross), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2944
-// Units: h041 (Research Tower 5: Bandit Lord), Hotkey (Hotkey)
+// Units: h040 (Research Tower 2: Tinker), Hotkey (Hotkey)
 {
 Z
 }
@@ -19687,7 +19679,7 @@ Q
 }
 
 STRING 2946
-// Units: h042 (Research Tower 8: Naga Myrmidon), Hotkey (Hotkey)
+// Units: h041 (Research Tower 5: Bandit Lord), Hotkey (Hotkey)
 {
 Z
 }
@@ -19699,13 +19691,13 @@ Q
 }
 
 STRING 2948
-// Units: n01C (Earth Trap 1), Hotkey (Hotkey)
+// Units: h042 (Research Tower 8: Naga Myrmidon), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 2949
-// Units: h00G (Aura Tower), Hotkey (Hotkey)
+// Units: n01C (Earth Trap), Hotkey (Hotkey)
 {
 Z
 }
@@ -20043,7 +20035,7 @@ STRING 2998
 }
 
 STRING 2999
-// Units: n001 (Banshee, Ultimate Frost Tower), Hotkey (Hotkey)
+// Units: h00G (Aura Tower), Hotkey (Hotkey)
 {
 Z
 }
@@ -20057,6 +20049,12 @@ Rocket Tower 6: War Machine
 STRING 3001
 {
 |c0077ff77Siege Damage|r |c0000ff00deals |c0077ff77200% |c0000ff00|c0000ff00to Air Units.
+}
+
+STRING 3002
+// Abilities: A03P (Winter Spirits), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Gains up to 10 + [Wave Number] mana for each enemy unit hit when attacking, at full mana the tower summons a ring of Winter Spirits, these slow units they attack and deal damage based on the targets current movement speed, slower movement speed equals more damage.
 }
 
 STRING 3003
@@ -20164,7 +20162,7 @@ X
 }
 
 STRING 3017
-// Units: h003 (Siege Tower 5: Skeletal Grunt), Hotkey (Hotkey)
+// Units: n001 (Banshee, Ultimate Frost Tower), Hotkey (Hotkey)
 {
 Z
 }
@@ -20176,7 +20174,7 @@ X
 }
 
 STRING 3019
-// Units: e006 (Bouncing Tower 5: Spellbreaker), Hotkey (Hotkey)
+// Units: h003 (Siege Tower 5: Skeletal Grunt), Hotkey (Hotkey)
 {
 Z
 }
@@ -20250,7 +20248,7 @@ STRING 3029
 }
 
 STRING 3030
-// Units: e008 (Naisha, Ultimate Bouncing Tower), Hotkey (Hotkey)
+// Units: e006 (Bouncing Tower 5: Spellbreaker), Hotkey (Hotkey)
 {
 Z
 }
@@ -20262,7 +20260,7 @@ W
 }
 
 STRING 3032
-// Units: h005 (Flesh Golem, Ultimate Bash Tower), Hotkey (Hotkey)
+// Units: e008 (Naisha, Ultimate Bouncing Tower), Hotkey (Hotkey)
 {
 Z
 }
@@ -20274,13 +20272,13 @@ W
 }
 
 STRING 3034
-// Units: h00I (Enchanted Machine, Ultimate Glaive Tower ), Hotkey (Hotkey)
+// Units: h005 (Flesh Golem, Ultimate Bash Tower), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 3035
-// Units: h00L (Glaive Tower 7: Enchanted Machine), Hotkey (Hotkey)
+// Units: h00I (Watch Tower, Ultimate Ballista Tower), Hotkey (Hotkey)
 {
 Z
 }
@@ -20502,13 +20500,13 @@ STRING 3064
 }
 
 STRING 3065
-// Units: h00O (Glaive Tower 6: Enchanted Machine), Hotkey (Hotkey)
+// Units: h00L (Ballista Tower 7), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 3066
-// Units: h00P (Glaive Tower 5: Enchanted Machine), Hotkey (Hotkey)
+// Units: h00O (Ballista Tower 6), Hotkey (Hotkey)
 {
 Z
 }
@@ -20520,19 +20518,19 @@ Rocket Damage
 }
 
 STRING 3068
-// Units: h00R (Glaive Tower 8: Enchanted Machine), Hotkey (Hotkey)
+// Units: h00P (Ballista Tower 5), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 3069
-// Units: h00S (Glaive Tower 9: Enchanted Machine), Hotkey (Hotkey)
+// Units: h00R (Ballista Tower 8), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 3070
-// Units: h00J (Flak Tower 5: Mortar Team), Hotkey (Hotkey)
+// Units: h00S (Ballista Tower 9), Hotkey (Hotkey)
 {
 Z
 }
@@ -20544,9 +20542,15 @@ Increased Damage from Overdrive
 }
 
 STRING 3072
-// Units: h00T (Flak Tower 6: Mortar Team), Hotkey (Hotkey)
+// Units: h00J (Flak Tower 5), Hotkey (Hotkey)
 {
 Z
+}
+
+STRING 3073
+// Abilities: A04I (Shrapnel Blast), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Hits on enemies have a [10% + 0.1% per armour of hit unit] chance to trigger a shrapnel blast dealing piercing damage to near by units equaling to [250 x armor of hit unit].
 }
 
 STRING 3074
@@ -20571,6 +20575,90 @@ STRING 3076
 // Abilities: A04I (Shrapnel Blast), Tip (Tooltip - Normal)
 {
 |c0000ff00Shrapnel Blast
+}
+
+STRING 3077
+// Units: h01Z (Hellfire Tower 8: Hell Shrine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff7712500
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff770.76 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
+|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 10000 damage per second to non-immune creeps walking through it.|r
+}
+
+STRING 3078
+// Units: h02C (Hellfire Tower 9: Hell Shrine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff7716500
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff770.77 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
+|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 17500 damage per second to non-immune creeps walking through it.|r
+}
+
+STRING 3079
+// Units: h02D (Ultimate Hellfire Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff7721250
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff770.79 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
+|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 25000 damage per second to non-immune creeps walking through it.|r
+}
+
+STRING 3080
+// Units: h02E (Hellfire Tower 5: Hell Shrine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff774250
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff770.61 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
+|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 3000 damage per second to non-immune creeps walking through it.|r
+}
+
+STRING 3081
+// Units: h02H (Hellfire Tower 7: Hell Shrine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff779000
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff770.72 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
+|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 7500 damage per second to non-immune creeps walking through it.|r
+}
+
+STRING 3082
+// Units: h02K (Hellfire Tower 6: Hell Shrine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff776000
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff770.63 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
+|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 6000 damage per second to non-immune creeps walking through it.|r
+}
+
+STRING 3083
+// Units: h02L (Hellfire Tower 4: Hell Shrine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff772250
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff770.45 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
+|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 1500 damage per second to non-immune creeps walking through it.|r
 }
 
 STRING 3084
@@ -20873,6 +20961,18 @@ STRING 3119
 |c0000ff00Frost Blast and Ice Cage - Level 1
 }
 
+STRING 3120
+// Units: h00Y (Flak Tower 7), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
+|c0000ff00Damage:|r |c0077ff778500 (both)
+|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
+|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (both)|r
+
+}
+
 STRING 3121
 // Abilities: A04N (Frost Blast and Ice Cage), Tip (Tooltip - Normal)
 {
@@ -20922,13 +21022,13 @@ STRING 3128
 }
 
 STRING 3129
-// Abilities: A04V (Exp Bonus), Hotkey (Hotkey - Normal)
+// Abilities: A00Y (Blitz Mode), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 3130
-// Abilities: A02T (Disable Poison Tower), Hotkey (Hotkey - Normal)
+// Abilities: A029 (Boss Waves), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -20966,7 +21066,7 @@ STRING 3134
 }
 
 STRING 3135
-// Abilities: A04Z (Gold Bonus), Hotkey (Hotkey - Normal)
+// Abilities: A04V (Exp Bonus), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -21001,8 +21101,32 @@ STRING 3140
 [Frost Trap]
 }
 
+STRING 3141
+// Units: h00Z (Flak Tower 8), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
+|c0000ff00Damage:|r |c0077ff7712250 (both)
+|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
+|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (both)|r
+
+}
+
+STRING 3142
+// Units: h010 (Flak Tower 9), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
+|c0000ff00Damage:|r |c0077ff7716500 (both)
+|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
+|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (both)|r
+
+}
+
 STRING 3143
-// Units: n01A (Poison Trap 1), Ubertip (Tooltip - Extended)
+// Units: n01A (Poison Trap), Ubertip (Tooltip - Extended)
 {
 |c006969FF[Support Tower]|r
 |c0000ff00Attacks land and air units.|r
@@ -21058,6 +21182,27 @@ STRING 3150
 // Abilities: A04P (Doom), Tip (Tooltip - Normal)
 {
 Doom
+}
+
+STRING 3151
+// Units: n00A (Fire Trap), Ubertip (Tooltip - Extended)
+{
+|c006969FF[Support Tower]|r
+|c0000ff00Attacks land units only.|r
+
+|c0077ff77A trap that deals damage to enemys around it and has a chance to cast incinerate or flask of oil. Does not affect Immune or Air Creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Immolation [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff77250 per second
+|c0000ff00Area of Effect:|r |c0077ff77400
+
+|c0000ff00Ability:|r |c0077ff77Incinerate [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff77500
+
+|c0000ff00Ability:|r |c0077ff77Flask of Oil [Auto-Casted]
+|c0000ff00Damage:|r |c0077ff77250 per second if ignited
+|c0000ff00Area of Effect:|r |c0077ff77400
+|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
 }
 
 STRING 3152
@@ -21182,10 +21327,40 @@ STRING 3166
 Doom
 }
 
+STRING 3167
+// Units: n017 (Frost Trap), Ubertip (Tooltip - Extended)
+{
+|c006969FF[Support Tower]|r
+|c0000ff00Attacks land units only.|r
+
+|c0077ff77Sends out a blast of frost in a cone towards the enemy dealing damage and damage over time. Has a chance to trigger ice cage when dealing damage. Does not affect Immune or Air Creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
+|c0000ff00Base Cooldown:|r |c0077ff772 Seconds
+|c0000ff00Damage:|r |c0077ff77150
+|c0000ff00Damage per second:|r |c0077ff77300
+
+|c0000ff00Ability:|r |c0077ff77Ice Cage [Auto-Casted]
+|c0000ff00Armour Decrease:|r |c0077ff77-2
+|c0000ff00Duration:|r |c0077ff775 Seconds
+
+}
+
 STRING 3168
 // Abilities: A04P (Doom), Tip (Tooltip - Normal)
 {
 Doom
+}
+
+STRING 3169
+// Units: h011 (Mortar Team, Ultimate Flak Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff771.25 (ground) / |c0077ff770.50 (air)
+|c0000ff00Damage:|r |c0077ff7721500 (both)
+|c0000ff00Range:|r |c0077ff77600 (ground) / 1200 (air)
+|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 350 (both)|r
 }
 
 STRING 3170
@@ -21246,6 +21421,22 @@ STRING 3179
 {
 |c0096FF96200% from Chaos
 |c0096FF9625% from Others
+}
+
+STRING 3180
+// Units: n01H (Blood Trap), Ubertip (Tooltip - Extended)
+{
+|c006969FF[Support Tower]|r
+|c0000ff00Attacks land units only.|r
+
+|c0077ff77A trap that gains attack speed each time it deals damage with a [20% - 1% for each bloodtrap built globally] chance to reset. Gains 100% bonus damage against a random armor type every 15 attacks. Does not affect Air Creeps.|r
+
+|c0000ff00Damage:|r |c0077ff77500
+|c0000ff00Attack Speed:|r |c0077ff771.00
+
+|c0000ff00Ability:|r |c0077ff77Bloodstrike
+|c0000ff00Attack Type: |c0077ff77Random
+|c0000ff00Bonus Damage:|r |c0077ff77100%
 }
 
 STRING 3181
@@ -21355,7 +21546,7 @@ STRING 3196
 }
 
 STRING 3197
-// Units: n01C (Earth Trap 1), Ubertip (Tooltip - Extended)
+// Units: n01C (Earth Trap), Ubertip (Tooltip - Extended)
 {
 |c006969FF[Support Tower]|r
 |c0000ff00Attacks land units only.|r
@@ -21441,7 +21632,7 @@ STRING 3206
 }
 
 STRING 3207
-// Units: h00Y (Flak Tower 7: Mortar Team), Hotkey (Hotkey)
+// Units: h00T (Flak Tower 6), Hotkey (Hotkey)
 {
 Z
 }
@@ -21558,6 +21749,25 @@ STRING 3215
 |c0000ff00Damage/s:|r |c0077ff775600
 |c0000ff00Area of Effect:|r |c0077ff77300
 |c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
+STRING 3216
+// Units: n01G (Darkness Trap), Ubertip (Tooltip - Extended)
+{
+|c006969FF[Support Tower]|r
+|c0000ff00Attacks land and air units.|r
+
+|c0077ff77A trap that launches dark bombs at nearby enemys, decreasing their armour and dealing damage over time. Has a chance to cast Doom when dealing damage. Does not affect Immune Creeps.|r
+
+|c0000ff00Ability:|r |c0077ff77Dark Bomb [Auto-Casted]
+|c0000ff00Armour Decrease:|r |c0077ff774
+|c0000ff00Primary Damage:|r |c0077ff77100
+|c0000ff00Secondary Damage:|r |c0077ff7750
+|c0000ff00Duration:|r |c0077ff7710 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Doom
+|c0000ff00Damage/s:|r |c0077ff77250
+|c0000ff00Summoned on Death:|r |c0077ff77Tentacle
 }
 
 STRING 3217
@@ -21972,7 +22182,7 @@ Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict 
 }
 
 STRING 3262
-// Abilities: A005 (Upgrade Crippling Aura), Hotkey (Hotkey - Normal)
+// Abilities: A002 (Aura Upgrades), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -22008,13 +22218,13 @@ D
 }
 
 STRING 3266
-// Units: h00Z (Flak Tower 8: Mortar Team), Hotkey (Hotkey)
+// Units: h00Y (Flak Tower 7), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 3267
-// Units: h010 (Flak Tower 9: Mortar Team), Hotkey (Hotkey)
+// Units: h00Z (Flak Tower 8), Hotkey (Hotkey)
 {
 Z
 }
@@ -22208,7 +22418,7 @@ STRING 3299
 }
 
 STRING 3300
-// Units: n01K (Void Trap 1), Ubertip (Tooltip - Extended)
+// Units: n01K (Void Trap), Ubertip (Tooltip - Extended)
 {
 |c006969FF[Support Tower]|r
 |c0000ff00Attacks land and air units.|r
@@ -22231,7 +22441,7 @@ STRING 3301
 }
 
 STRING 3321
-// Abilities: A01V (Emergency Bouncing Tower), Hotkey (Hotkey - Normal)
+// Abilities: A01T (Emergency Bouncing Tower), Hotkey (Hotkey - Normal)
 {
 V
 }
@@ -22246,18 +22456,6 @@ STRING 3325
 // Upgrades: R006 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 W
-}
-
-STRING 3326
-// Abilities: A028 (Debug), Hotkey (Hotkey - Normal)
-{
-X
-}
-
-STRING 3327
-// Abilities: A02P (Disable Traps), Hotkey (Hotkey - Normal)
-{
-X
 }
 
 STRING 3328
@@ -22276,293 +22474,6 @@ STRING 3330
 // Upgrades: R006 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 W
-}
-
-STRING 3367
-// Abilities: A047 (Game Modes), Hotkey (Hotkey - Normal)
-{
-X
-}
-
-STRING 3368
-// Abilities: A049 (Random Game Modes + Difficulty), Hotkey (Hotkey - Normal)
-{
-X
-}
-
-STRING 3370
-// Units: n025 (Mine Dummy), Name (Name)
-{
-Mine Dummy
-}
-
-STRING 3373
-// Units: n01I (Iron Trap 1), Ubertip (Tooltip - Extended)
-{
-|c006969FF[Support Tower]|r
-|c0000ff00Attacks land units only.|r
-
-|c0077ff77A trap that places Land Mines around itself. The mines explode when an enemy comes near, dealing damage to creeps in an area around the mine. Has a chance create a Clockwerk Goblin that explodes after attacking 3 times. Does affect Immune Creeps, Does not affect Air Creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Minelayer
-|c0000ff00Damage:|r |c0077ff77750
-|c0000ff00Area of Effect:|r |c0077ff77275
-|c0000ff00Spawn Interval:|r |c0077ff775 Seconds
-
-|c0000ff00Ability:|r |c0077ff77Clockwerk Goblin
-|c0000ff00Damage:|r |c0077ff771500 x [Level of Minelayer]
-|c0000ff00Spawn Chance:|r |c0077ff775% + [1% per Iron Trap built Globally]
-}
-
-STRING 3374
-// Abilities: A053 (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Spawns mines around the Iron Trap, Mines explode when an enemy is near.
-
-Has a chance create a Clockwerk Goblin that explodes after attacking 3 times. Does affect Immune Creeps, Does not affect Air Creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Minelayer
-|c0000ff00Damage:|r |c0077ff77750
-|c0000ff00Area of Effect:|r |c0077ff77275
-|c0000ff00Spawn Interval:|r |c0077ff775 Seconds
-
-|c0000ff00Ability:|r |c0077ff77Clockwerk Goblin
-|c0000ff00Damage:|r |c0077ff771500 x [Level of Minelayer]
-|c0000ff00Spawn Chance:|r |c0077ff775% + [1% per Iron Trap built Globally]
-}
-
-STRING 3375
-// Abilities: A053 (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Spawns mines around the Iron Trap, Mines explode when an enemy is near.
-
-Has a chance create a Clockwerk Goblin that explodes after attacking 3 times. Does affect Immune Creeps, Does not affect Air Creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Minelayer
-|c0000ff00Damage:|r |c0077ff771500
-|c0000ff00Area of Effect:|r |c0077ff77300
-|c0000ff00Spawn Interval:|r |c0077ff775 Seconds
-
-|c0000ff00Ability:|r |c0077ff77Clockwerk Goblin
-|c0000ff00Damage:|r |c0077ff771500 x [Level of Minelayer]
-|c0000ff00Spawn Chance:|r |c0077ff775% + [1% per Iron Trap built Globally]
-}
-
-STRING 3376
-// Abilities: A053 (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Spawns mines around the Iron Trap, Mines explode when an enemy is near.
-
-Has a chance create a Clockwerk Goblin that explodes after attacking 3 times. Does affect Immune Creeps, Does not affect Air Creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Minelayer
-|c0000ff00Damage:|r |c0077ff772500
-|c0000ff00Area of Effect:|r |c0077ff77325
-|c0000ff00Spawn Interval:|r |c0077ff775 Seconds
-
-|c0000ff00Ability:|r |c0077ff77Clockwerk Goblin
-|c0000ff00Damage:|r |c0077ff771500 x [Level of Minelayer]
-|c0000ff00Spawn Chance:|r |c0077ff775% + [1% per Iron Trap built Globally]
-}
-
-STRING 3377
-// Abilities: A053 (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Spawns mines around the Iron Trap, Mines explode when an enemy is near.
-
-Has a chance create a Clockwerk Goblin that explodes after attacking 3 times. Does affect Immune Creeps, Does not affect Air Creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Minelayer
-|c0000ff00Damage:|r |c0077ff774000
-|c0000ff00Area of Effect:|r |c0077ff77350
-|c0000ff00Spawn Interval:|r |c0077ff775 Seconds
-
-|c0000ff00Ability:|r |c0077ff77Clockwerk Goblin
-|c0000ff00Damage:|r |c0077ff771500 x [Level of Minelayer]
-|c0000ff00Spawn Chance:|r |c0077ff775% + [1% per Iron Trap built Globally]
-}
-
-STRING 3378
-// Abilities: A053 (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Spawns mines around the Iron Trap, Mines explode when an enemy is near.
-
-Has a chance create a Clockwerk Goblin that explodes after attacking 3 times. Does affect Immune Creeps, Does not affect Air Creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Minelayer
-|c0000ff00Damage:|r |c0077ff776000
-|c0000ff00Area of Effect:|r |c0077ff77375
-|c0000ff00Spawn Interval:|r |c0077ff775 Seconds
-
-|c0000ff00Ability:|r |c0077ff77Clockwerk Goblin
-|c0000ff00Damage:|r |c0077ff771500 x [Level of Minelayer]
-|c0000ff00Spawn Chance:|r |c0077ff775% + [1% per Iron Trap built Globally]
-}
-
-STRING 3379
-// Abilities: A053 (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Spawns mines around the Iron Trap, Mines explode when an enemy is near.
-
-Has a chance create a Clockwerk Goblin that explodes after attacking 3 times. Does affect Immune Creeps, Does not affect Air Creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Minelayer
-|c0000ff00Damage:|r |c0077ff778000
-|c0000ff00Area of Effect:|r |c0077ff77400
-|c0000ff00Spawn Interval:|r |c0077ff775 Seconds
-
-|c0000ff00Ability:|r |c0077ff77Clockwerk Goblin
-|c0000ff00Damage:|r |c0077ff771500 x [Level of Minelayer]
-|c0000ff00Spawn Chance:|r |c0077ff775% + [1% per Iron Trap built Globally]
-}
-
-STRING 3380
-// Abilities: A053 (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Spawns mines around the Iron Trap, Mines explode when an enemy is near.
-
-Has a chance create a Clockwerk Goblin that explodes after attacking 3 times. Does affect Immune Creeps, Does not affect Air Creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Minelayer
-|c0000ff00Damage:|r |c0077ff771000
-|c0000ff00Area of Effect:|r |c0077ff77425
-|c0000ff00Spawn Interval:|r |c0077ff775 Seconds
-
-|c0000ff00Ability:|r |c0077ff77Clockwerk Goblin
-|c0000ff00Damage:|r |c0077ff771500 x [Level of Minelayer]
-|c0000ff00Spawn Chance:|r |c0077ff775% + [1% per Iron Trap built Globally]
-}
-
-STRING 3381
-// Abilities: A053 (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Spawns mines around the Iron Trap, Mines explode when an enemy is near.
-
-Has a chance create a Clockwerk Goblin that explodes after attacking 3 times. Does affect Immune Creeps, Does not affect Air Creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Minelayer
-|c0000ff00Damage:|r |c0077ff7715000
-|c0000ff00Area of Effect:|r |c0077ff77450
-|c0000ff00Spawn Interval:|r |c0077ff775 Seconds
-
-|c0000ff00Ability:|r |c0077ff77Clockwerk Goblin
-|c0000ff00Damage:|r |c0077ff771500 x [Level of Minelayer]
-|c0000ff00Spawn Chance:|r |c0077ff775% + [1% per Iron Trap built Globally]
-}
-
-STRING 3382
-// Abilities: A053 (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Spawns mines around the Iron Trap, Mines explode when an enemy is near.
-
-Has a chance create a Clockwerk Goblin that explodes after attacking 3 times. Does affect Immune Creeps, Does not affect Air Creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Minelayer
-|c0000ff00Damage:|r |c0077ff7720000
-|c0000ff00Area of Effect:|r |c0077ff77475
-|c0000ff00Spawn Interval:|r |c0077ff775 Seconds
-
-|c0000ff00Ability:|r |c0077ff77Clockwerk Goblin
-|c0000ff00Damage:|r |c0077ff771500 x [Level of Minelayer]
-|c0000ff00Spawn Chance:|r |c0077ff775% + [1% per Iron Trap built Globally]
-}
-
-STRING 3383
-// Abilities: A053 (Minelayer), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Spawns mines around the Iron Trap, Mines explode when an enemy is near.
-
-Has a chance create a Clockwerk Goblin that explodes after attacking 3 times. Does affect Immune Creeps, Does not affect Air Creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Minelayer
-|c0000ff00Damage:|r |c0077ff7725000
-|c0000ff00Area of Effect:|r |c0077ff77500
-|c0000ff00Spawn Interval:|r |c0077ff775 Seconds
-
-|c0000ff00Ability:|r |c0077ff77Clockwerk Goblin
-|c0000ff00Damage:|r |c0077ff771500 x [Level of Minelayer]
-|c0000ff00Spawn Chance:|r |c0077ff775% + [1% per Iron Trap built Globally]
-}
-
-STRING 3384
-// Abilities: A056 (Mine Damage), EditorSuffix (Editor Suffix)
-{
-[Iron Trap]
-}
-
-STRING 3385
-// Units: n00A (Fire Trap 1), Ubertip (Tooltip - Extended)
-{
-|c006969FF[Support Tower]|r
-|c0000ff00Attacks land units only.|r
-
-|c0077ff77A trap that deals damage to enemys around it and has a [5% + 1% per fire trap built globally] chance to cast incinerate or flask of oil. Does not affect Immune or Air Creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Immolation [Auto-Casted]
-|c0000ff00Damage:|r |c0077ff77250 per second
-|c0000ff00Area of Effect:|r |c0077ff77400
-
-|c0000ff00Ability:|r |c0077ff77Incinerate [Auto-Casted]
-|c0000ff00Damage:|r |c0077ff77500
-
-|c0000ff00Ability:|r |c0077ff77Flask of Oil [Auto-Casted]
-|c0000ff00Damage:|r |c0077ff77250 per second if ignited
-|c0000ff00Area of Effect:|r |c0077ff77400
-|c0000ff00Effect:|r |c0077ff77Enemies are slowed by 75% for 3 seconds
-}
-
-STRING 3386
-// Units: n017 (Frost Trap 1), Ubertip (Tooltip - Extended)
-{
-|c006969FF[Support Tower]|r
-|c0000ff00Attacks land units only.|r
-
-|c0077ff77Sends out a blast of frost in a cone towards the enemy dealing damage and damage over time. Has a [5% + 1% per frost trap built globally] chance to trigger ice cage when dealing damage. Does not affect Immune or Air Creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Frost Blast [Auto-Casted]
-|c0000ff00Base Cooldown:|r |c0077ff772 Seconds
-|c0000ff00Damage:|r |c0077ff77150
-|c0000ff00Damage per second:|r |c0077ff77300
-
-|c0000ff00Ability:|r |c0077ff77Ice Cage [Auto-Casted]
-|c0000ff00Armour Decrease:|r |c0077ff77-2
-|c0000ff00Duration:|r |c0077ff775 Seconds
-
-}
-
-STRING 3387
-// Units: n01G (Darkness Trap 1), Ubertip (Tooltip - Extended)
-{
-|c006969FF[Support Tower]|r
-|c0000ff00Attacks land and air units.|r
-
-|c0077ff77A trap that launches dark bombs at nearby enemys, decreasing their armour and dealing damage over time. Has a [5% + 1% per dark trap built globally] chance to cast Doom when dealing damage. Does not affect Immune Creeps.|r
-
-|c0000ff00Ability:|r |c0077ff77Dark Bomb [Auto-Casted]
-|c0000ff00Armour Decrease:|r |c0077ff774
-|c0000ff00Primary Damage:|r |c0077ff77100
-|c0000ff00Secondary Damage:|r |c0077ff7750
-|c0000ff00Duration:|r |c0077ff7710 Seconds
-
-|c0000ff00Ability:|r |c0077ff77Doom
-|c0000ff00Damage/s:|r |c0077ff77250
-|c0000ff00Summoned on Death:|r |c0077ff77Tentacle
-}
-
-STRING 3388
-// Units: n01H (Blood Trap 1), Ubertip (Tooltip - Extended)
-{
-|c006969FF[Support Tower]|r
-|c0000ff00Attacks land units only.|r
-
-|c0077ff77A trap that gains 20% attack speed each time it deals damage with a [20% - 1% for each bloodtrap built globally] chance to reset. Gains 100% bonus damage against a random armor type every 15 attacks. Does not affect Air Creeps.|r
-
-|c0000ff00Damage:|r |c0077ff77500
-|c0000ff00Attack Speed:|r |c0077ff771.00
-
-|c0000ff00Ability:|r |c0077ff77Bloodstrike
-|c0000ff00Attack Type: |c0077ff77Random
-|c0000ff00Bonus Damage:|r |c0077ff77100%
 }
 
 STRING 3406
@@ -23094,15 +23005,21 @@ Unstuck
 }
 
 STRING 4334
-// Abilities: A033 (Speed Mode), Hotkey (Hotkey - Normal)
+// Abilities: A02T (Disable Poison Tower), Hotkey (Hotkey - Normal)
 {
 S
 }
 
 STRING 4335
-// Abilities: A032 (Hard - Chaos Mode), Hotkey (Hotkey - Normal)
+// Abilities: A033 (Speed Mode), Hotkey (Hotkey - Normal)
 {
 S
+}
+
+STRING 4338
+// Abilities: A028 (Debug), Hotkey (Hotkey - Normal)
+{
+X
 }
 
 STRING 4352
@@ -23194,6 +23111,24 @@ STRING 4471
 This unit is under the effect of a Damage Aura, It has Increased Attack Damage.
 }
 
+STRING 4480
+// Abilities: A02P (Disable Traps), Hotkey (Hotkey - Normal)
+{
+X
+}
+
+STRING 4481
+// Abilities: A047 (Game Modes), Hotkey (Hotkey - Normal)
+{
+X
+}
+
+STRING 4484
+// Abilities: A049 (Random Game Modes + Difficulty), Hotkey (Hotkey - Normal)
+{
+X
+}
+
 STRING 4515
 // Abilities: A017 (Armour Aura), Name (Name)
 {
@@ -23216,7 +23151,7 @@ STRING 4749
 {
 |c0000ff00Use the |c0077ff77Game Setup|r |c0000ff00unit to setup what gamemodes will be used.|r
 
-|c0000ff00Use the |c0077ff77Ready|r |c0000ff00ability on the |c0077ff77Game Setup|r |c0000ff00unit when you have finished choosing gamemodes.|r
+|c0000ff00Type |c0077ff77Use the ready ability on the Game Setup unit|r |c0000ff00when you have finished choosing gamemodes.|r
 }
 
 STRING 4807
@@ -23559,7 +23494,7 @@ Bash Tower 8
 }
 
 STRING 5590
-// Units: n01I (Iron Trap 1), Hotkey (Hotkey)
+// Units: n01I (Iron Trap), Hotkey (Hotkey)
 {
 C
 }
@@ -23577,13 +23512,13 @@ Spell Tower 2: Shaman
 }
 
 STRING 5597
-// Abilities: A04W (Gamble Bonus), Hotkey (Hotkey - Normal)
+// Abilities: A032 (Hard - Chaos Mode), Hotkey (Hotkey - Normal)
 {
 S
 }
 
 STRING 5598
-// Abilities: A051 (Upgrade Gold Aura), Hotkey (Hotkey - Normal)
+// Abilities: A04W (Gamble Bonus), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -23601,13 +23536,13 @@ F
 }
 
 STRING 5611
-// Abilities: A002 (Aura Upgrades), Hotkey (Hotkey - Normal)
+// Abilities: A01V (Emergency Bouncing Tower), Hotkey (Hotkey - Normal)
 {
 V
 }
 
 STRING 5619
-// Units: h011 (Mortar Team, Ultimate Flak Tower), Hotkey (Hotkey)
+// Units: h010 (Flak Tower 9), Hotkey (Hotkey)
 {
 Z
 }
@@ -23852,7 +23787,7 @@ STRING 5927
 
 STRING 5931
 {
-|c0000ff00---------------------------------------
+|c0000ff00-------------------------------------
 }
 
 STRING 5934
@@ -23897,7 +23832,7 @@ C
 }
 
 STRING 5968
-// Units: h016 (Fel Tower 5: Warlock), Hotkey (Hotkey)
+// Units: h011 (Mortar Team, Ultimate Flak Tower), Hotkey (Hotkey)
 {
 Z
 }
@@ -23951,7 +23886,7 @@ STRING 6094
 }
 
 STRING 6364
-// Abilities: A02G (Normal - Chaos Mode), Hotkey (Hotkey - Normal)
+// Abilities: A005 (Upgrade Crippling Aura), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -24245,13 +24180,13 @@ Magical Frog
 }
 
 STRING 6874
-// Abilities: A00K (Sell Tower), Name (Name)
+// Abilities: A00G (Sell Tower), Name (Name)
 {
 Sell Tower
 }
 
 STRING 6875
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 100% gold back.
 
@@ -24259,7 +24194,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6876
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 80% gold back.
 
@@ -24267,7 +24202,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6877
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 60% gold back.
 
@@ -24275,7 +24210,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6878
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 40% gold back.
 
@@ -24283,7 +24218,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6879
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 20% gold back.
 
@@ -24291,7 +24226,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6880
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 100% gold back.
 
@@ -24299,7 +24234,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6881
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 80% gold back.
 
@@ -24307,7 +24242,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6882
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 60% gold back.
 
@@ -24315,7 +24250,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6883
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 40% gold back.
 
@@ -24323,7 +24258,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6884
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 20% gold back.
 
@@ -24331,7 +24266,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6885
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 100% gold back.
 
@@ -24339,7 +24274,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6886
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 80% gold back.
 
@@ -24347,7 +24282,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6887
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 60% gold back.
 
@@ -24355,7 +24290,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6888
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 40% gold back.
 
@@ -24363,7 +24298,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6889
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 20% gold back.
 
@@ -24371,7 +24306,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6890
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 160% gold back.
 
@@ -24379,7 +24314,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6891
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 170% gold back.
 
@@ -24387,7 +24322,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6892
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 180% gold back.
 
@@ -24395,7 +24330,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6893
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 190% gold back.
 
@@ -24403,7 +24338,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6894
-// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 200% gold back.
 
@@ -24411,97 +24346,97 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6895
-// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 100% Gold Return
 }
 
 STRING 6896
-// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 80% Gold Return
 }
 
 STRING 6897
-// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 60% Gold Return
 }
 
 STRING 6898
-// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 40% Gold Return
 }
 
 STRING 6899
-// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 20% Gold Return
 }
 
 STRING 6900
-// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 100% Gold Return
 }
 
 STRING 6901
-// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 100% Gold Return
 }
 
 STRING 6902
-// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 80% Gold Return
 }
 
 STRING 6903
-// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 80% Gold Return
 }
 
 STRING 6904
-// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 60% Gold Return
 }
 
 STRING 6905
-// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 60% Gold Return
 }
 
 STRING 6906
-// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 40% Gold Return
 }
 
 STRING 6907
-// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 40% Gold Return
 }
 
 STRING 6908
-// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00G (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 20% Gold Return
 }
 
 STRING 6909
-// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 20% Gold Return
 }
 
 STRING 6917
-// Units: h018 (Warlock, Ultimate Fel Tower), Hotkey (Hotkey)
+// Units: h016 (Fel Tower 5: Warlock), Hotkey (Hotkey)
 {
 Z
 }
@@ -24513,13 +24448,13 @@ STRING 6918
 }
 
 STRING 6919
-// Abilities: A04Y (Sell Tower), Name (Name)
+// Abilities: A00K (Sell Tower), Name (Name)
 {
 Sell Tower
 }
 
 STRING 6920
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 100% gold back.
 
@@ -24527,7 +24462,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6921
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 80% gold back.
 
@@ -24535,7 +24470,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6922
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 60% gold back.
 
@@ -24543,7 +24478,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6923
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 40% gold back.
 
@@ -24551,7 +24486,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6924
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 20% gold back.
 
@@ -24559,7 +24494,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6935
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 160% gold back.
 
@@ -24567,7 +24502,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6936
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 170% gold back.
 
@@ -24575,7 +24510,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6937
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 180% gold back.
 
@@ -24583,7 +24518,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6938
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 190% gold back.
 
@@ -24591,7 +24526,7 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6939
-// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00K (Sell Tower), Ubertip (Tooltip - Normal - Extended)
 {
 Sell this tower to get 200% gold back.
 
@@ -24599,355 +24534,355 @@ This map has a varied Sell value that depends on the difficulty.
 }
 
 STRING 6940
-// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 100% Gold Return
 }
 
 STRING 6941
-// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 80% Gold Return
 }
 
 STRING 6942
-// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 60% Gold Return
 }
 
 STRING 6943
-// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 40% Gold Return
 }
 
 STRING 6944
-// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+// Abilities: A00K (Sell Tower), Tip (Tooltip - Normal)
 {
 Sell - 20% Gold Return
 }
 
 STRING 6994
-// Units: h01A (Fel Tower 7: Warlock), Hotkey (Hotkey)
+// Units: h018 (Ultimate Fel Tower), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 6995
-// Units: h01D (Fel Tower 8: Warlock), Hotkey (Hotkey)
+// Units: h01A (Fel Tower 7: Warlock), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 6996
-// Units: h01F (Fel Tower 6: Warlock), Hotkey (Hotkey)
+// Units: h01D (Fel Tower 8: Warlock), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 6997
-// Units: h01G (Fel Tower 9: Warlock), Hotkey (Hotkey)
+// Units: h01F (Fel Tower 6: Warlock), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 6998
-// Units: h017 (Venom Tower 5: Lizard), Hotkey (Hotkey)
+// Units: h01G (Fel Tower 9: Warlock), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7010
-// Units: h01M (Venom Tower 6: Lizard), Hotkey (Hotkey)
+// Units: h017 (Venom Tower 5: Lizard), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7012
-// Units: h01P (Venom Tower 7: Lizard), Hotkey (Hotkey)
+// Units: h01M (Venom Tower 6: Lizard), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7014
-// Units: h01Q (Venom Tower 8: Lizard), Hotkey (Hotkey)
+// Units: h01P (Venom Tower 7: Lizard), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7016
-// Units: h01R (Venom Tower 9: Lizard), Hotkey (Hotkey)
+// Units: h01Q (Venom Tower 8: Lizard), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7018
-// Units: h01S (Lizard, Ultimate Venom Tower), Hotkey (Hotkey)
+// Units: h01R (Venom Tower 9: Lizard), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7020
-// Units: h01Z (Hellfire Tower 8: Hell Shrine), Hotkey (Hotkey)
+// Units: h01S (Ultimate Venom Tower), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7021
-// Units: h02C (Hellfire Tower 9: Hell Shrine), Hotkey (Hotkey)
+// Units: h01Z (Hellfire Tower 8: Hell Shrine), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7023
-// Units: h02D (Hell Shrine, Ultimate Hellfire Tower), Hotkey (Hotkey)
+// Units: h02C (Hellfire Tower 9: Hell Shrine), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7025
-// Units: h02E (Hellfire Tower 5: Hell Shrine), Hotkey (Hotkey)
+// Units: h02D (Ultimate Hellfire Tower), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7027
-// Units: h02H (Hellfire Tower 7: Hell Shrine), Hotkey (Hotkey)
+// Units: h02E (Hellfire Tower 5: Hell Shrine), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7029
-// Units: h02K (Hellfire Tower 6: Hell Shrine), Hotkey (Hotkey)
+// Units: h02H (Hellfire Tower 7: Hell Shrine), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7031
-// Units: h02M (Soul Tower 7: Runic Crystal), Hotkey (Hotkey)
+// Units: h02K (Hellfire Tower 6: Hell Shrine), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7033
-// Units: h043 (Soul Tower 6: Runic Crystal), Hotkey (Hotkey)
+// Units: h02M (Soul Tower 7: Runic Crystal), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7034
-// Units: h044 (Soul Tower 5: Runic Crystal), Hotkey (Hotkey)
+// Units: h043 (Soul Tower 6: Runic Crystal), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7035
-// Units: h045 (Soul Tower 8: Runic Crystal), Hotkey (Hotkey)
+// Units: h044 (Soul Tower 5: Runic Crystal), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7036
-// Units: h046 (Soul Tower 9: Runic Crystal), Hotkey (Hotkey)
+// Units: h045 (Soul Tower 8: Runic Crystal), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7037
-// Units: h047 (Runic Crystal, Ultimate Soul Tower), Hotkey (Hotkey)
+// Units: h046 (Soul Tower 9: Runic Crystal), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7038
-// Units: n01E (Shard Tower 5: Frozen Obelisk), Hotkey (Hotkey)
+// Units: h047 (Ultimate Soul Tower), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7039
-// Units: n01F (Shard Tower 6: Frozen Obelisk), Hotkey (Hotkey)
+// Units: n01E (Shard Tower 5: Frozen Obelisk), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7040
-// Units: n01L (Shard Tower 7: Frozen Obelisk), Hotkey (Hotkey)
+// Units: n01F (Shard Tower 6: Frozen Obelisk), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7041
-// Units: n01M (Shard Tower 8: Frozen Obelisk), Hotkey (Hotkey)
+// Units: n01L (Shard Tower 7: Frozen Obelisk), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7063
-// Units: n01N (Shard Tower 9: Frozen Obelisk), Hotkey (Hotkey)
+// Units: n01M (Shard Tower 8: Frozen Obelisk), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7064
-// Units: n01O (Frozen Obelisk, UIltimate Shard Tower), Hotkey (Hotkey)
+// Units: n01N (Shard Tower 9: Frozen Obelisk), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7065
-// Units: n01Q (Spirit Tower 5: Winter Beacon), Hotkey (Hotkey)
+// Units: n01O (Frozen Obelisk, UIltimate Shard Tower), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7066
-// Units: n01R (Spirit Tower 6: Winter Beacon), Hotkey (Hotkey)
+// Units: n01Q (Spirit Tower 5: Winter Beacon), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7067
-// Units: n01S (Spirit Tower 7: Winter Beacon), Hotkey (Hotkey)
+// Units: n01R (Spirit Tower 6: Winter Beacon), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7068
-// Units: n01T (Spirit Tower 8: Winter Beacon), Hotkey (Hotkey)
+// Units: n01S (Spirit Tower 7: Winter Beacon), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7069
-// Units: n01U (Spirit Tower 9: Winter Beacon), Hotkey (Hotkey)
+// Units: n01T (Spirit Tower 8: Winter Beacon), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7071
-// Units: n01V (Winter Beacon, Ultimate Spirit Tower), Hotkey (Hotkey)
+// Units: n01U (Spirit Tower 9: Winter Beacon), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7072
-// Units: n01W (War Machine, Ultimate Rocket Tower), Hotkey (Hotkey)
+// Units: n01V (Winter Beacon, Ultimate Spirit Tower), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7073
-// Units: n01X (Rocket Tower 7: War Machine), Hotkey (Hotkey)
+// Units: n01W (War Machine, Ultimate Rocket Tower), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7075
-// Units: n01Y (Rocket Tower 6: War Machine), Hotkey (Hotkey)
+// Units: n01X (Rocket Tower 7: War Machine), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7077
-// Units: n01Z (Rocket Tower 5: War Machine), Hotkey (Hotkey)
+// Units: n01Y (Rocket Tower 6: War Machine), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7078
-// Units: n021 (Rocket Tower 8: War Machine), Hotkey (Hotkey)
+// Units: n01Z (Rocket Tower 5: War Machine), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7079
-// Units: n022 (Rocket Tower 9: War Machine), Hotkey (Hotkey)
+// Units: n021 (Rocket Tower 8: War Machine), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7080
-// Units: e00C (Goblin Shredder, Ultimate Shrapnel Tower), Hotkey (Hotkey)
+// Units: n022 (Rocket Tower 9: War Machine), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7081
-// Units: e00D (Shrapnel Tower 9: Goblin Shredder), Hotkey (Hotkey)
+// Units: e00C (Goblin Shredder, Ultimate Shrapnel Tower), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7082
-// Units: e00S (Shrapnel Tower 8: Goblin Shredder), Hotkey (Hotkey)
+// Units: e00D (Shrapnel Tower 9: Goblin Shredder), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7083
-// Units: e00T (Shrapnel Tower 7: Goblin Shredder), Hotkey (Hotkey)
+// Units: e00S (Shrapnel Tower 8: Goblin Shredder), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7084
-// Units: e00U (Shrapnel Tower 6: Goblin Shredder), Hotkey (Hotkey)
+// Units: e00T (Shrapnel Tower 7: Goblin Shredder), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7085
-// Units: e00V (Shrapnel Tower 5: Goblin Shredder), Hotkey (Hotkey)
+// Units: e00U (Shrapnel Tower 6: Goblin Shredder), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7086
-// Abilities: A01J (Slow), Hotkey (Hotkey - Normal)
+// Units: e00V (Shrapnel Tower 5: Goblin Shredder), Hotkey (Hotkey)
 {
 Z
 }
 
 STRING 7087
-// Abilities: A01J (Slow), Unhotkey (Hotkey - Turn Off)
+// Abilities: A01J (Slow), Hotkey (Hotkey - Normal)
 {
 Z
 }
 
 STRING 7088
-// Abilities: A023 (Upgrade Trap Ability), Hotkey (Hotkey - Normal)
+// Abilities: A01J (Slow), Unhotkey (Hotkey - Turn Off)
 {
 Z
 }
 
 STRING 7089
-// Abilities: A020 (3 - Decrease Zoom), Hotkey (Hotkey - Normal)
+// Abilities: A023 (Upgrade Trap Ability), Hotkey (Hotkey - Normal)
 {
 Z
 }
 
 STRING 7090
-// Abilities: A02M (Chaos Mode), Hotkey (Hotkey - Normal)
+// Abilities: A020 (3 - Decrease Zoom), Hotkey (Hotkey - Normal)
 {
 Z
 }
 
 STRING 7091
-// Abilities: A02Q (Disable Aura Tower), Hotkey (Hotkey - Normal)
+// Abilities: A02M (Chaos Mode), Hotkey (Hotkey - Normal)
 {
 Z
 }
 
 STRING 7092
-// Abilities: A048 (Random Game Modes), Hotkey (Hotkey - Normal)
+// Abilities: A02Q (Disable Aura Tower), Hotkey (Hotkey - Normal)
 {
 Z
 }
 
 STRING 7093
-// Abilities: A04Y (Sell Tower), Hotkey (Hotkey - Normal)
+// Abilities: A048 (Random Game Modes), Hotkey (Hotkey - Normal)
 {
 Z
 }
@@ -25697,7 +25632,7 @@ Emergency Air Tower
 }
 
 STRING 8190
-// Abilities: A02S (Disable Chaos Tower), Hotkey (Hotkey - Normal)
+// Abilities: A02G (Normal - Chaos Mode), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -25955,37 +25890,37 @@ Dummy
 }
 
 STRING 8242
-// Abilities: A00L (Emergency Chaos Tower), EditorSuffix (Editor Suffix)
+// Abilities: A012 (Emergency Siege Tower), EditorSuffix (Editor Suffix)
 {
 [Dummy]
 }
 
 STRING 8243
-// Abilities: A015 (Emergency Frost Tower), EditorSuffix (Editor Suffix)
+// Abilities: A00L (Emergency Chaos Tower), EditorSuffix (Editor Suffix)
 {
 [Dummy]
 }
 
 STRING 8244
-// Abilities: A016 (Emergency Air Tower), EditorSuffix (Editor Suffix)
+// Abilities: A015 (Emergency Frost Tower), EditorSuffix (Editor Suffix)
 {
 [Dummy]
 }
 
 STRING 8245
-// Abilities: A01T (Emergency Bouncing Tower), EditorSuffix (Editor Suffix)
+// Abilities: A016 (Emergency Air Tower), EditorSuffix (Editor Suffix)
 {
 [Dummy]
 }
 
 STRING 8246
-// Abilities: A054 (Hellfire), EditorSuffix (Editor Suffix)
+// Abilities: A01T (Emergency Bouncing Tower), EditorSuffix (Editor Suffix)
 {
 [Dummy]
 }
 
 STRING 8247
-// Abilities: A030 (Random Waves), Hotkey (Hotkey - Normal)
+// Abilities: A02S (Disable Chaos Tower), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -26086,6 +26021,16 @@ STRING 8706
 |Cff00ff00Gold:
 }
 
+STRING 8707
+{
+|cAAAAFFAAOne or more workers aren't earning their keep.
+}
+
+STRING 8710
+{
+|cAAAAFFAAMap made and maintained by GenoHacker.
+}
+
 STRING 8712
 {
 |cAAAAFFAAThis is the current time of day.
@@ -26117,6 +26062,12 @@ STRING 8717
 }
 
 STRING 8739
+// Abilities: A030 (Random Waves), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 8743
 // Abilities: A034 (Food Bonus), Hotkey (Hotkey - Normal)
 {
 R
@@ -26237,13 +26188,13 @@ Aspect Of Blood, Ultimate Siege Tower
 }
 
 STRING 9022
-// Units: n01C (Earth Trap 1), EditorSuffix (Name - Editor Suffix)
+// Units: n01C (Earth Trap), EditorSuffix (Name - Editor Suffix)
 {
 [Slam]
 }
 
 STRING 9039
-// Units: n01I (Iron Trap 1), EditorSuffix (Name - Editor Suffix)
+// Units: n01I (Iron Trap), EditorSuffix (Name - Editor Suffix)
 {
 [Mines]
 }
@@ -26255,19 +26206,19 @@ Trap Blueprint
 }
 
 STRING 9049
-// Units: n00A (Fire Trap 1), EditorSuffix (Name - Editor Suffix)
+// Units: n00A (Fire Trap), EditorSuffix (Name - Editor Suffix)
 {
 [Immolation]
 }
 
 STRING 9055
-// Units: n01A (Poison Trap 1), EditorSuffix (Name - Editor Suffix)
+// Units: n01A (Poison Trap), EditorSuffix (Name - Editor Suffix)
 {
 [Poison Bolt]
 }
 
 STRING 9058
-// Units: n01G (Darkness Trap 1), EditorSuffix (Name - Editor Suffix)
+// Units: n01G (Darkness Trap), EditorSuffix (Name - Editor Suffix)
 {
 [Dark Bomb]
 }
@@ -26285,7 +26236,7 @@ D
 }
 
 STRING 9070
-// Units: n01K (Void Trap 1), EditorSuffix (Name - Editor Suffix)
+// Units: n01K (Void Trap), EditorSuffix (Name - Editor Suffix)
 {
 [Void Blast]
 }
@@ -26353,7 +26304,7 @@ STRING 9130
 }
 
 STRING 9135
-// Abilities: A053 (Minelayer), EditorSuffix (Editor Suffix)
+// Abilities: A00C (Mine Damage), EditorSuffix (Editor Suffix)
 {
 [Iron Trap]
 }
@@ -26389,7 +26340,7 @@ Frost Blast
 }
 
 STRING 9395
-// Units: n017 (Frost Trap 1), EditorSuffix (Name - Editor Suffix)
+// Units: n017 (Frost Trap), EditorSuffix (Name - Editor Suffix)
 {
 [Frost Blast]
 }
@@ -26449,21 +26400,27 @@ Dark Bomb
 }
 
 STRING 9451
-// Units: n01H (Blood Trap 1), EditorSuffix (Name - Editor Suffix)
+// Units: n01H (Blood Trap), EditorSuffix (Name - Editor Suffix)
 {
 [Bloodstrike]
 }
 
 STRING 9461
-// Abilities: A00C (Kaboom!), EditorSuffix (Editor Suffix)
+// Abilities: A00O (Minelayer), EditorSuffix (Editor Suffix)
 {
 [Iron Trap]
 }
 
 STRING 9462
-// Abilities: A056 (Mine Damage), Name (Name)
+// Abilities: A00C (Mine Damage), Name (Name)
 {
 Mine Damage
+}
+
+STRING 9483
+// Abilities: A00O (Minelayer), Name (Name)
+{
+Minelayer
 }
 
 STRING 9497

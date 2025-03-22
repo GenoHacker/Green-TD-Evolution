@@ -1,22 +1,31 @@
 [Indev] Green TD Evo v2.06.w3x
 
+-- Potentially fixed the crashing issue
 -- Consolidated all emergency towers into 1 learnable abillity instead of each tower having its own.
 -- Switched from JASS scripting to LUA Scripting
 -- Added Bribes LUA Damage Engine
--- Added Custom Crit System
--- Added Critical Aura
--- Added Crit Bonus to hero
+-- Added Custom Crit System, Critical Aura, Crit Bonus
+-- Added Gold Aura
+-- Added Gold Bonus
 -- Added more easter eggs
 -- Added several new towers
+-- Added new abilities to existing towers
 -- Added many new abilities to all traps
 -- Added bosses to random waves
 -- Removed food cost from aura tower and trap blueprints
 -- Reduced Health, Armour and Movement Speed of non-random waves
+-- Traps now limited to 1 per type
 -- Fixed Endless Mode and Random Waves not being compatible
 -- Fixed chaos mode difficultys still being active after changing to a non-chaos mode difficulty during game setup
 -- Fixed -wave command only being available to player 1
 -- Fixed Game Setup Unit being removed when its owner leaves
 -- Fixed Game Setup Units ability tooltips not changing
+-- Fixed random wave game messages showing incorrect wave type
 -- Changes to Game Setup Unit ability tooltips
 -- Changes to multiple commands
 -- Changes to multiboard
+-- Changes to random wave units
+-- Changes to gambling
+-- Changes to terrain and doodads
+-- Changes to static wave units
+-- Changes to life system
