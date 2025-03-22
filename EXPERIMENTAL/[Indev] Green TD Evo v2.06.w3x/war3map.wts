@@ -5579,6 +5579,256 @@ STRING 859
 Runic Crystal, Ultimate Soul Tower
 }
 
+STRING 860
+// Abilities: A04Y (Sell Tower), Name (Name)
+{
+Sell Tower
+}
+
+STRING 861
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Sell this tower to get 100% gold back.|r
+
+|c0000ff00This map has a varied Sell Percentage that depends on the difficulty that was selected|r.
+}
+
+STRING 862
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Sell this tower to get 80% gold back.|r
+
+|c0000ff00This map has a varied Sell Percentage that depends on the difficulty that was selected|r.
+}
+
+STRING 863
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Sell this tower to get 60% gold back.|r
+
+|c0000ff00This map has a varied Sell Percentage that depends on the difficulty that was selected|r.
+}
+
+STRING 864
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Sell this tower to get 40% gold back.|r
+
+|c0000ff00This map has a varied Sell Percentage that depends on the difficulty that was selected|r.
+}
+
+STRING 865
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Sell this tower to get 20% gold back.|r
+
+|c0000ff00This map has a varied Sell Percentage that depends on the difficulty that was selected|r.
+}
+
+STRING 866
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+{
+Sell this tower to get 100% gold back.
+
+This map has a varied Sell value that depends on the difficulty.
+}
+
+STRING 867
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+{
+Sell this tower to get 80% gold back.
+
+This map has a varied Sell value that depends on the difficulty.
+}
+
+STRING 868
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+{
+Sell this tower to get 60% gold back.
+
+This map has a varied Sell value that depends on the difficulty.
+}
+
+STRING 869
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+{
+Sell this tower to get 40% gold back.
+
+This map has a varied Sell value that depends on the difficulty.
+}
+
+STRING 870
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+{
+Sell this tower to get 20% gold back.
+
+This map has a varied Sell value that depends on the difficulty.
+}
+
+STRING 871
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+{
+Sell this tower to get 100% gold back.
+
+This map has a varied Sell value that depends on the difficulty.
+}
+
+STRING 872
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+{
+Sell this tower to get 80% gold back.
+
+This map has a varied Sell value that depends on the difficulty.
+}
+
+STRING 873
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+{
+Sell this tower to get 60% gold back.
+
+This map has a varied Sell value that depends on the difficulty.
+}
+
+STRING 874
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+{
+Sell this tower to get 40% gold back.
+
+This map has a varied Sell value that depends on the difficulty.
+}
+
+STRING 875
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+{
+Sell this tower to get 20% gold back.
+
+This map has a varied Sell value that depends on the difficulty.
+}
+
+STRING 876
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+{
+Sell this tower to get 160% gold back.
+
+This map has a varied Sell value that depends on the difficulty.
+}
+
+STRING 877
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+{
+Sell this tower to get 170% gold back.
+
+This map has a varied Sell value that depends on the difficulty.
+}
+
+STRING 878
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+{
+Sell this tower to get 180% gold back.
+
+This map has a varied Sell value that depends on the difficulty.
+}
+
+STRING 879
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+{
+Sell this tower to get 190% gold back.
+
+This map has a varied Sell value that depends on the difficulty.
+}
+
+STRING 880
+// Abilities: A04Y (Sell Tower), Ubertip (Tooltip - Normal - Extended)
+{
+Sell this tower to get 200% gold back.
+
+This map has a varied Sell value that depends on the difficulty.
+}
+
+STRING 881
+// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+{
+|c0077ff77[Z]|r |c0000ff00Sell - 100% Gold Return
+}
+
+STRING 882
+// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+{
+|c0077ff77[Z]|r |c0000ff00Sell - 80% Gold Return
+}
+
+STRING 883
+// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+{
+|c0077ff77[Z]|r |c0000ff00Sell - 60% Gold Return
+}
+
+STRING 884
+// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+{
+|c0077ff77[Z]|r |c0000ff00Sell - 40% Gold Return
+}
+
+STRING 885
+// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+{
+|c0077ff77[Z]|r |c0000ff00Sell - 20% Gold Return
+}
+
+STRING 886
+// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+{
+Sell - 100% Gold Return
+}
+
+STRING 887
+// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+{
+Sell - 100% Gold Return
+}
+
+STRING 888
+// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+{
+Sell - 80% Gold Return
+}
+
+STRING 889
+// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+{
+Sell - 80% Gold Return
+}
+
+STRING 890
+// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+{
+Sell - 60% Gold Return
+}
+
+STRING 891
+// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+{
+Sell - 60% Gold Return
+}
+
+STRING 892
+// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+{
+Sell - 40% Gold Return
+}
+
+STRING 893
+// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+{
+Sell - 40% Gold Return
+}
+
+STRING 894
+// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+{
+Sell - 20% Gold Return
+}
+
 STRING 895
 // Abilities: A01V (Emergency Bouncing Tower), EditorSuffix (Editor Suffix)
 {
@@ -5598,6 +5848,12 @@ STRING 896
 |c0000ff00Ability:|r |c0077ff77Ice Cage [Auto-Casted]
 |c0000ff00Armour Decrease:|r |c0077ff77-8
 |c0000ff00Duration:|r |c0077ff775 Seconds
+}
+
+STRING 897
+// Abilities: A04Y (Sell Tower), Tip (Tooltip - Normal)
+{
+Sell - 20% Gold Return
 }
 
 STRING 898
@@ -6192,6 +6448,12 @@ STRING 957
 
 }
 
+STRING 958
+// Abilities: A04Y (Sell Tower), EditorSuffix (Editor Suffix)
+{
+[Aura Tower]
+}
+
 STRING 959
 // Abilities: A03K (Game Mode Descriptions), Ubertip (Tooltip - Normal - Extended)
 {
@@ -6208,6 +6470,12 @@ STRING 959
 |c0000ff00Speed Mode: |c0077ff77Movement speed for all enemy units is set to 500 and wave spawn timer is reduced by 5 seconds.
 
 |c0000ff00Blitz Mode: |c0077ff77Waves will spawn after the timer reaches 0 instead of waiting for the current wave to be killed.
+}
+
+STRING 960
+// Abilities: A04Y (Sell Tower), Hotkey (Hotkey - Normal)
+{
+Z
 }
 
 STRING 961
@@ -6800,11 +7068,23 @@ STRING 1034
 Increases Attack Damage By 500
 }
 
+STRING 1035
+// Abilities: A050 (Hellfire), Name (Name)
+{
+Hellfire
+}
+
 STRING 1036
 {
 Up to 3 towers can be disabled, each disabled tower increases Income by 2 Gold
 
 Different towers have different attack types, these attack types deal more damage to certain armour types.
+}
+
+STRING 1037
+// Abilities: A050 (Hellfire), EditorSuffix (Editor Suffix)
+{
+[Spell]
 }
 
 STRING 1038
@@ -6969,6 +7249,18 @@ STRING 1063
 STRING 1064
 {
 Below is a description of what towers do
+}
+
+STRING 1065
+// Abilities: A054 (Hellfire), Name (Name)
+{
+Hellfire
+}
+
+STRING 1066
+// Abilities: A054 (Hellfire), Tip (Tooltip - Normal)
+{
+|c0000ff00Hellfire
 }
 
 STRING 1067
@@ -7562,6 +7854,12 @@ Changelog -- v2.04a
 
 }
 
+STRING 1135
+// Abilities: A054 (Hellfire), EditorSuffix (Editor Suffix)
+{
+[Dummy]
+}
+
 STRING 1136
 // Upgrades: R007 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
 {
@@ -7630,6 +7928,96 @@ STRING 1145
 |c0000ff00Status = |c0077ff77Activated
 
 |c0077ff77Time between wave spawns is reduced and creep movement speed is set to 400.
+}
+
+STRING 1146
+// Units: h01Z (Hellfire Tower 8: Hell Shrine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff7712500
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff770.76 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
+|c0000ff00Ability (2):|r |c0077ff77Hellfire: 50% chance to trigger hellfire.|r
+}
+
+STRING 1147
+// Units: h02C (Hellfire Tower 9: Hell Shrine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff7716500
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff770.77 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
+|c0000ff00Ability (2):|r |c0077ff77Hellfire: 50% chance to trigger hellfire.|r
+}
+
+STRING 1148
+// Units: h02D (Hell Shrine, Ultimate Hellfire Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff7721250
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff770.79 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
+|c0000ff00Ability (2):|r |c0077ff77Hellfire: 50% chance to trigger hellfire.|r
+}
+
+STRING 1149
+// Units: h02E (Hellfire Tower 5: Hell Shrine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff774250
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff770.61 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
+|c0000ff00Ability (2):|r |c0077ff77Hellfire: 50% chance to trigger hellfire.|r
+}
+
+STRING 1150
+// Units: h02H (Hellfire Tower 7: Hell Shrine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff779000
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff770.72 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
+|c0000ff00Ability (2):|r |c0077ff77Hellfire: 50% chance to trigger hellfire.|r
+}
+
+STRING 1151
+// Units: h02K (Hellfire Tower 6: Hell Shrine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff776000
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff770.63 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
+|c0000ff00Ability (2):|r |c0077ff77Hellfire: 50% chance to trigger hellfire.|r
+}
+
+STRING 1152
+// Units: h02L (Hellfire Tower 4: Hell Shrine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff772250
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff770.45 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
+|c0000ff00Ability (2):|r |c0077ff77Hellfire: 50% chance to trigger hellfire.|r
+}
+
+STRING 1153
+// Abilities: A054 (Hellfire), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff7750% chance to trigger hellfire causing a piller of flame to erupt from an enemy dealing damage to enemy units that pass through it.
 }
 
 STRING 1155
@@ -17822,6 +18210,7 @@ Changelog -- v2.06
 
 STRING 2730
 {
+-- Potentially fixed the crashing issue
 -- Consolidated all emergency towers into 1 learnable abillity instead of each tower having its own.
 -- Switched from JASS scripting to LUA Scripting
 -- Added Bribes LUA Damage Engine
@@ -20177,90 +20566,6 @@ STRING 3076
 // Abilities: A04I (Shrapnel Blast), Tip (Tooltip - Normal)
 {
 |c0000ff00Shrapnel Blast
-}
-
-STRING 3077
-// Units: h01Z (Hellfire Tower 8: Hell Shrine), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff7712500
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff770.76 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
-|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 10000 damage per second to non-immune creeps walking through it.|r
-}
-
-STRING 3078
-// Units: h02C (Hellfire Tower 9: Hell Shrine), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff7716500
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff770.77 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
-|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 17500 damage per second to non-immune creeps walking through it.|r
-}
-
-STRING 3079
-// Units: h02D (Hell Shrine, Ultimate Hellfire Tower), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff7721250
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff770.79 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
-|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 25000 damage per second to non-immune creeps walking through it.|r
-}
-
-STRING 3080
-// Units: h02E (Hellfire Tower 5: Hell Shrine), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff774250
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff770.61 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
-|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 3000 damage per second to non-immune creeps walking through it.|r
-}
-
-STRING 3081
-// Units: h02H (Hellfire Tower 7: Hell Shrine), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff779000
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff770.72 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
-|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 7500 damage per second to non-immune creeps walking through it.|r
-}
-
-STRING 3082
-// Units: h02K (Hellfire Tower 6: Hell Shrine), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff776000
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff770.63 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
-|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 6000 damage per second to non-immune creeps walking through it.|r
-}
-
-STRING 3083
-// Units: h02L (Hellfire Tower 4: Hell Shrine), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff772250
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff770.45 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 250|r
-|c0000ff00Ability (2):|r |c0077ff77Hellfire: Leaves a patch of burning hellfire on the ground, dealing 1500 damage per second to non-immune creeps walking through it.|r
 }
 
 STRING 3084

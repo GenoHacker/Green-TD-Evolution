@@ -424,6 +424,9 @@ udg_Point_Array_VoidTrapConB = {}
 udg_Integer_VoidTrapConBPlyNum = 0
 udg_Integer_BloodTrapPlyNum = 0
 udg_UnitGroup_Array_CascadePreG = {}
+udg_Integer_HellfirePlyNum = 0
+udg_Point_Array_HellfireTower = {}
+udg_Integer_Array_HellfireChance = __jarray(0)
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -719,6 +722,7 @@ gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
+gg_trg_Hellfire_Tower = nil
 function InitGlobals()
 local i = 0
 
@@ -1515,6 +1519,13 @@ i = 0
 while (true) do
 if ((i > 1)) then break end
 udg_UnitGroup_Array_CascadePreG[i] = CreateGroup()
+i = i + 1
+end
+udg_Integer_HellfirePlyNum = 0
+i = 0
+while (true) do
+if ((i > 0)) then break end
+udg_Integer_Array_HellfireChance[i] = 0
 i = i + 1
 end
 end
@@ -2621,7 +2632,7 @@ gg_rct_Purple_Area_1 = Rect(-7168.0, -2048.0, -3328.0, 768.0)
 gg_rct_Purple_Area_2 = Rect(-7168.0, -3328.0, -4608.0, -2048.0)
 gg_rct_Gray_Area = Rect(-256.0, 768.0, 3584.0, 4352.0)
 gg_rct_Green_Area = Rect(-256.0, 4352.0, 3584.0, 8192.0)
-gg_rct_Tabaho = Rect(-1952.0, 7808.0, -1888.0, 7872.0)
+gg_rct_Tabaho = Rect(-1952.0, 7776.0, -1888.0, 7840.0)
 gg_rct_Red_Headhunter = Rect(-1984.0, 5888.0, -1600.0, 6080.0)
 gg_rct_HHBuilding = Rect(-1856.0, -2112.0, -1728.0, -1984.0)
 gg_rct_Magical_Village = Rect(-3040.0, 6688.0, -544.0, 8160.0)
@@ -2717,49 +2728,56 @@ gg_trg_Damage_Engine_Config = CreateTrigger()
 TriggerAddAction(gg_trg_Damage_Engine_Config, Trig_Damage_Engine_Config_Actions)
 end
 
-function Trig_Crit_System_Func001C()
+function Trig_Crit_System_Conditions()
+if (not (udg_DamageEventAmount >= 50.00)) then
+return false
+end
+return true
+end
+
+function Trig_Crit_System_Func002C()
 if (not (GetUnitAbilityLevelSwapped(FourCC("A00T"), udg_DamageEventSource) <= 19)) then
 return false
 end
 return true
 end
 
-function Trig_Crit_System_Func005Func005C()
+function Trig_Crit_System_Func006Func005C()
 if (not (udg_Real_Array_CritChance[udg_Integer_CritSystemPlayerNum] <= (10.00 + udg_Real_Array_BonusCritChance[udg_Integer_CritSystemPlayerNum]))) then
 return false
 end
 return true
 end
 
-function Trig_Crit_System_Func005C()
+function Trig_Crit_System_Func006C()
 if (not (udg_IsDamageRanged == true)) then
 return false
 end
 return true
 end
 
-function Trig_Crit_System_Func009Func004C()
+function Trig_Crit_System_Func010Func004C()
 if (not (udg_Real_Array_CritChance[udg_Integer_CritSystemPlayerNum] <= (50.00 + udg_Real_Array_BonusCritChance[udg_Integer_CritSystemPlayerNum]))) then
 return false
 end
 return true
 end
 
-function Trig_Crit_System_Func009C()
+function Trig_Crit_System_Func010C()
 if (not (udg_IsDamageMelee == true)) then
 return false
 end
 return true
 end
 
-function Trig_Crit_System_Func013Func004C()
+function Trig_Crit_System_Func014Func004C()
 if (not (udg_Real_Array_CritChance[udg_Integer_CritSystemPlayerNum] <= (5.00 + udg_Real_Array_BonusCritChance[udg_Integer_CritSystemPlayerNum]))) then
 return false
 end
 return true
 end
 
-function Trig_Crit_System_Func013C()
+function Trig_Crit_System_Func014C()
 if (not (udg_IsDamageSpell == true)) then
 return false
 end
@@ -2767,16 +2785,16 @@ return true
 end
 
 function Trig_Crit_System_Actions()
-if (Trig_Crit_System_Func001C()) then
+if (Trig_Crit_System_Func002C()) then
 IncUnitAbilityLevelSwapped(FourCC("A00T"), udg_DamageEventSource)
 else
 end
-if (Trig_Crit_System_Func005C()) then
+if (Trig_Crit_System_Func006C()) then
 udg_Integer_CritSystemPlayerNum = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
 udg_Real_Array_BonusCritChance[udg_Integer_CritSystemPlayerNum] = (udg_Real_Array_SkillCritChance[udg_Integer_CritSystemPlayerNum] + (udg_Real_Array_CritAuraChances[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + I2R(GetUnitAbilityLevelSwapped(FourCC("A00T"), udg_DamageEventSource))))
 udg_Real_Array_BonusCritDamage[udg_Integer_CritSystemPlayerNum] = (udg_Real_Array_RangedCritDamage[udg_Integer_CritSystemPlayerNum] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (udg_Real_Array_SkillCritDamage[udg_Integer_CritSystemPlayerNum] + (I2R(GetUnitAbilityLevelSwapped(FourCC("A00T"), udg_DamageEventSource)) + 0.00))))
 udg_Real_Array_CritChance[udg_Integer_CritSystemPlayerNum] = GetRandomReal(0, 100.00)
-if (Trig_Crit_System_Func005Func005C()) then
+if (Trig_Crit_System_Func006Func005C()) then
 udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_BonusCritDamage[udg_Integer_CritSystemPlayerNum])
 SetUnitAbilityLevelSwapped(FourCC("A00T"), udg_DamageEventSource, 1)
 udg_ReportLife = GetUnitStateSwap(UNIT_STATE_LIFE, udg_DamageEventTarget)
@@ -2787,11 +2805,11 @@ else
 end
 else
 end
-if (Trig_Crit_System_Func009C()) then
+if (Trig_Crit_System_Func010C()) then
 udg_Real_Array_BonusCritChance[udg_Integer_CritSystemPlayerNum] = (udg_Real_Array_SkillCritChance[udg_Integer_CritSystemPlayerNum] + udg_Real_Array_CritAuraChances[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)])
 udg_Real_Array_BonusCritDamage[udg_Integer_CritSystemPlayerNum] = (udg_Real_Array_MeleeCritDamage[udg_Integer_CritSystemPlayerNum] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (udg_Real_Array_SkillCritDamage[udg_Integer_CritSystemPlayerNum] + 0.00)))
 udg_Real_Array_CritChance[udg_Integer_CritSystemPlayerNum] = GetRandomReal(0, 100.00)
-if (Trig_Crit_System_Func009Func004C()) then
+if (Trig_Crit_System_Func010Func004C()) then
 udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_BonusCritDamage[udg_Integer_CritSystemPlayerNum])
 udg_ReportLife = GetUnitStateSwap(UNIT_STATE_LIFE, udg_DamageEventTarget)
 udg_DmgStr = "|cffffffff"
@@ -2801,11 +2819,11 @@ else
 end
 else
 end
-if (Trig_Crit_System_Func013C()) then
+if (Trig_Crit_System_Func014C()) then
 udg_Real_Array_BonusCritChance[udg_Integer_CritSystemPlayerNum] = (udg_Real_Array_SkillCritChance[udg_Integer_CritSystemPlayerNum] + udg_Real_Array_CritAuraChances[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)])
 udg_Real_Array_BonusCritDamage[udg_Integer_CritSystemPlayerNum] = (udg_Real_Array_SpellCritDamage[udg_Integer_CritSystemPlayerNum] + (udg_Real_Array_CritAuraDamage[GetUnitAbilityLevelSwapped(FourCC("A004"), udg_DamageEventSource)] + (udg_Real_Array_SkillCritDamage[udg_Integer_CritSystemPlayerNum] + 0.00)))
 udg_Real_Array_CritChance[udg_Integer_CritSystemPlayerNum] = GetRandomReal(0, 100.00)
-if (Trig_Crit_System_Func013Func004C()) then
+if (Trig_Crit_System_Func014Func004C()) then
 udg_DamageEventAmount = (udg_DamageEventAmount * udg_Real_Array_BonusCritDamage[udg_Integer_CritSystemPlayerNum])
 udg_ReportLife = GetUnitStateSwap(UNIT_STATE_LIFE, udg_DamageEventTarget)
 udg_DmgStr = "|cffffffff"
@@ -2820,6 +2838,7 @@ end
 function InitTrig_Crit_System()
 gg_trg_Crit_System = CreateTrigger()
 TriggerRegisterVariableEvent(gg_trg_Crit_System, "udg_DamageModifierEvent", EQUAL, 1.00)
+TriggerAddCondition(gg_trg_Crit_System, Condition(Trig_Crit_System_Conditions))
 TriggerAddAction(gg_trg_Crit_System, Trig_Crit_System_Actions)
 end
 
@@ -2985,6 +3004,42 @@ gg_trg_Glaive_Tower_Enchanted_Glaives = CreateTrigger()
 TriggerRegisterVariableEvent(gg_trg_Glaive_Tower_Enchanted_Glaives, "udg_AOEDamageEvent", EQUAL, 1.00)
 TriggerAddCondition(gg_trg_Glaive_Tower_Enchanted_Glaives, Condition(Trig_Glaive_Tower_Enchanted_Glaives_Conditions))
 TriggerAddAction(gg_trg_Glaive_Tower_Enchanted_Glaives, Trig_Glaive_Tower_Enchanted_Glaives_Actions)
+end
+
+function Trig_Hellfire_Tower_Conditions()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A054"), udg_AOEDamageSource) == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Hellfire_Tower_Func003C()
+if (not (udg_Integer_Array_HellfireChance[udg_Integer_HellfirePlyNum] <= 50)) then
+return false
+end
+return true
+end
+
+function Trig_Hellfire_Tower_Actions()
+udg_Integer_HellfirePlyNum = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
+udg_Integer_Array_HellfireChance[udg_Integer_HellfirePlyNum] = GetRandomInt(1, 100)
+if (Trig_Hellfire_Tower_Func003C()) then
+udg_Point_Array_HellfireTower[udg_Integer_HellfirePlyNum] = GetUnitLoc(udg_DamageEventTarget)
+CreateNUnitsAtLoc(1, FourCC("o00H"), ConvertedPlayer(udg_Integer_HellfirePlyNum), udg_Point_Array_HellfireTower[udg_Integer_HellfirePlyNum], bj_UNIT_FACING)
+UnitApplyTimedLifeBJ(6.00, FourCC("BTLF"), GetLastCreatedUnit())
+UnitAddAbilityBJ(FourCC("A050"), GetLastCreatedUnit())
+SetUnitAbilityLevelSwapped(FourCC("A050"), GetLastCreatedUnit(), R2I(BlzGetUnitRealField(udg_AOEDamageSource, UNIT_RF_PRIORITY)))
+IssuePointOrderLocBJ(GetLastCreatedUnit(), "flamestrike", udg_Point_Array_HellfireTower[udg_Integer_HellfirePlyNum])
+        RemoveLocation(udg_Point_Array_HellfireTower[Integer_HellfirePlyNum])
+else
+end
+end
+
+function InitTrig_Hellfire_Tower()
+gg_trg_Hellfire_Tower = CreateTrigger()
+TriggerRegisterVariableEvent(gg_trg_Hellfire_Tower, "udg_AOEDamageEvent", EQUAL, 1.00)
+TriggerAddCondition(gg_trg_Hellfire_Tower, Condition(Trig_Hellfire_Tower_Conditions))
+TriggerAddAction(gg_trg_Hellfire_Tower, Trig_Hellfire_Tower_Actions)
 end
 
 function Trig_Venom_Tower_Random_Target_Func004C()
@@ -4977,6 +5032,9 @@ end
 if (GetSpellAbilityId() == FourCC("A00K")) then
 return true
 end
+if (GetSpellAbilityId() == FourCC("A04Y")) then
+return true
+end
 return false
 end
 
@@ -5034,8 +5092,15 @@ TriggerRegisterAnyUnitEventBJ(gg_trg_Selling_Towers, EVENT_PLAYER_UNIT_SPELL_FIN
 TriggerAddAction(gg_trg_Selling_Towers, Trig_Selling_Towers_Actions)
 end
 
-function Trig_Add_Sell_Ability_Func001C()
+function Trig_Add_Sell_Ability_Func001Func003C()
 if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("h034"))) then
+return false
+end
+return true
+end
+
+function Trig_Add_Sell_Ability_Func001C()
+if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("h00G"))) then
 return false
 end
 return true
@@ -5043,11 +5108,16 @@ end
 
 function Trig_Add_Sell_Ability_Actions()
 if (Trig_Add_Sell_Ability_Func001C()) then
+UnitAddAbilityBJ(FourCC("A04Y"), GetTriggerUnit())
+SetUnitAbilityLevelSwapped(FourCC("A04Y"), GetTriggerUnit(), udg_Integer_Difficulty)
+else
+if (Trig_Add_Sell_Ability_Func001Func003C()) then
 UnitAddAbilityBJ(FourCC("A00K"), GetTriggerUnit())
 SetUnitAbilityLevelSwapped(FourCC("A00K"), GetTriggerUnit(), udg_Integer_Difficulty)
 else
 UnitAddAbilityBJ(FourCC("A00G"), GetTriggerUnit())
 SetUnitAbilityLevelSwapped(FourCC("A00G"), GetTriggerUnit(), udg_Integer_Difficulty)
+end
 end
 end
 
@@ -14017,7 +14087,6 @@ EnableTrigger(gg_trg_Ready_Modes)
 EnableTrigger(gg_trg_Start_Gamemode_Indicator)
 EnableTrigger(gg_trg_Turn_on_RedAfk_Restart)
 EnableTrigger(gg_trg_Default_Gamemode_Restart)
-EnableTrigger(gg_trg_Lose_Condition_New)
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 14, "TRIGSTR_824")
 BlzSetAbilityTooltip(FourCC("A03E"), ("|c0000ff00Gold Cost: |c0077ff77" .. (I2S(udg_Integer_HHCost) .. (" / " .. ("|c0000ff00Bosses Spawned: |c0077ff77" .. I2S(udg_Integer_HHSpawnedAmount))))), 1)
 ShowUnitShow(gg_unit_n00C_0019)
@@ -17121,6 +17190,7 @@ InitTrig_Crit_System()
 InitTrig_Crit_Aura()
 InitTrig_Flak_Tower_Armor_Break()
 InitTrig_Glaive_Tower_Enchanted_Glaives()
+InitTrig_Hellfire_Tower()
 InitTrig_Venom_Tower_Random_Target()
 InitTrig_Shrapnel_Tower_Shrapnel_Blast()
 InitTrig_Soul_Tower_Soul_Extraction()
