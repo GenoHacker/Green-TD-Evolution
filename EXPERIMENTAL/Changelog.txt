@@ -24,9 +24,8 @@
 -- Changes to Gambling
 -- Changes to multiple commands
 -- Changes to multiboard
--- Changes to random wave units
+-- Changes to random and static wave units
 -- Changes to gambling
 -- Changes to terrain and doodads
--- Changes to static wave units
 -- Changes to life system
 -- Changes to various tooltips
