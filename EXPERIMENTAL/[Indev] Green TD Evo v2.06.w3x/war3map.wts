@@ -18191,10 +18191,9 @@ STRING 2730
 -- Changes to Gambling
 -- Changes to multiple commands
 -- Changes to multiboard
--- Changes to random wave units
+-- Changes to random and static wave units
 -- Changes to gambling
 -- Changes to terrain and doodads
--- Changes to static wave units
 -- Changes to life system
 -- Changes to various tooltips
 }
@@ -20573,6 +20572,42 @@ STRING 3077
 [Gem TD Easter Egg]
 }
 
+STRING 3078
+// Units: n01A (Poison Trap 1), Ubertip (Tooltip - Extended)
+{
+|c006969FF[Support Tower]|r
+|c0000ff00Attacks land and air units.|r
+
+|c0077ff77Attacks random targets with a poison bolt, dealing damage and damage over time and slowing an enemy, when poison bolt deals damage their is a [5% + 1% per poison trap built globally] chance to unleash a poison cascade, launching up to 6 poison bolts at nearby enemy units. Does not affect Immune creeps.|r
+
+
+|c0000ff00Ability:|r |c0077ff77Poison Bolt [Auto-Casted]
+|c0000ff00Base Cooldown:|r |c0077ff770.50 Seconds
+|c0000ff00Damage:|r |c0077ff77500
+|c0000ff00Damage Over Time:|r |c0077ff77250
+|c0000ff00Duration:|r |c0077ff775 Seconds
+|c0000ff00Slow Amount:|r |c0077ff7720%
+
+|c0000ff00Ability:|r |c0077ff77Poison Cascade
+}
+
+STRING 3079
+// Units: n01K (Void Trap 1), Ubertip (Tooltip - Extended)
+{
+|c006969FF[Support Tower]|r
+|c0000ff00Attacks land and air units.|r
+
+|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
+
+Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast.|r
+
+|c0000ff00Ability:|r |c0077ff77Void Blast
+|c0000ff00Damage:|r |c0077ff77400
+|c0000ff00Base Cooldown:|r |c0077ff772 Seconds
+
+|c0000ff00Ability:|r |c0077ff77Void Contagion
+}
+
 STRING 3084
 // Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
 {
@@ -20999,23 +21034,6 @@ STRING 3140
 // Abilities: A04M (Ice Cage), EditorSuffix (Editor Suffix)
 {
 [Frost Trap]
-}
-
-STRING 3143
-// Units: n01A (Poison Trap 1), Ubertip (Tooltip - Extended)
-{
-|c006969FF[Support Tower]|r
-|c0000ff00Attacks land and air units.|r
-
-|c0077ff77Attacks random targets with a poison bolt, dealing damage and damage over time and slowing an enemy, when poison bolt deals damage their is a [5% + 1% per poison trap built globally] chance to unleash a poison cascade, launching up to 6 poison bolts at nearby enemy units. Does not affect Immune creeps.|r
-
-
-|c0000ff00Ability:|r |c0077ff77Poison Bolt [Auto-Casted]
-|c0000ff00Base Cooldown:|r |c0077ff770.50 Seconds
-|c0000ff00Damage:|r |c0077ff77500
-|c0000ff00Damage Over Time:|r |c0077ff77250
-|c0000ff00Duration:|r |c0077ff775 Seconds
-|c0000ff00Slow Amount:|r |c0077ff7720%
 }
 
 STRING 3144
@@ -22205,21 +22223,6 @@ STRING 3299
 // Abilities: A04X (Void Blast and Void Contagion), Tip (Tooltip - Normal)
 {
 |c0000ff00Void Blast and Void Contagion - [Level 10]
-}
-
-STRING 3300
-// Units: n01K (Void Trap 1), Ubertip (Tooltip - Extended)
-{
-|c006969FF[Support Tower]|r
-|c0000ff00Attacks land and air units.|r
-
-|c0077ff77A trap that calls forth void lightning to strike at multiple enemys dealing damage. Does not affect Immune Creeps.
-
-Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict the affected unit permanently with void contagion, this will cause attacks to have a chance to trigger void blast.|r
-
-|c0000ff00Ability:|r |c0077ff77Void Blast
-|c0000ff00Damage:|r |c0077ff77400
-|c0000ff00Base Cooldown:|r |c0077ff772 Seconds
 }
 
 STRING 3301
