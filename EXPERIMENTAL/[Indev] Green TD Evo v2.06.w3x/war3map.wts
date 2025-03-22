@@ -1190,7 +1190,7 @@ STRING 160
 }
 
 STRING 161
-// Units: n01K (Void Trap), Hotkey (Hotkey)
+// Units: n01K (Void Trap 1), Hotkey (Hotkey)
 {
 V
 }
@@ -1306,7 +1306,7 @@ STRING 180
 }
 
 STRING 181
-// Units: n01G (Darkness Trap), Hotkey (Hotkey)
+// Units: n01G (Darkness Trap 1), Hotkey (Hotkey)
 {
 F
 }
@@ -1703,7 +1703,7 @@ STRING 243
 }
 
 STRING 244
-// Units: n01A (Poison Trap), Hotkey (Hotkey)
+// Units: n01A (Poison Trap 1), Hotkey (Hotkey)
 {
 D
 }
@@ -1721,7 +1721,7 @@ Q
 }
 
 STRING 247
-// Units: n00A (Fire Trap), Hotkey (Hotkey)
+// Units: n00A (Fire Trap 1), Hotkey (Hotkey)
 {
 A
 }
@@ -1733,7 +1733,7 @@ Z
 }
 
 STRING 249
-// Units: n017 (Frost Trap), Hotkey (Hotkey)
+// Units: n017 (Frost Trap 1), Hotkey (Hotkey)
 {
 S
 }
@@ -4282,7 +4282,7 @@ STRING 664
 }
 
 STRING 665
-// Units: n01H (Blood Trap), Hotkey (Hotkey)
+// Units: n01H (Blood Trap 1), Hotkey (Hotkey)
 {
 X
 }
@@ -7612,6 +7612,12 @@ STRING 1105
 [Magic Damage]
 }
 
+STRING 1106
+// Units: n00A (Fire Trap 1), Name (Name)
+{
+Fire Trap 1
+}
+
 STRING 1107
 // Units: h01Y (Chaos Tower 4: Chaos Treant), Ubertip (Tooltip - Extended)
 {
@@ -8020,6 +8026,12 @@ STRING 1153
 |c0077ff7750% chance to trigger hellfire causing a piller of flame to erupt from an enemy dealing damage to enemy units that pass through it.
 }
 
+STRING 1154
+// Units: n017 (Frost Trap 1), Name (Name)
+{
+Frost Trap 1
+}
+
 STRING 1155
 // Abilities: A00Z (Random Attack), Name (Name)
 {
@@ -8230,50 +8242,26 @@ STRING 1189
 A
 }
 
-STRING 1190
-// Units: n00A (Fire Trap), Name (Name)
-{
-Fire Trap
-}
-
 STRING 1191
-// Units: n00A (Fire Trap), Tip (Tooltip - Basic)
+// Units: n00A (Fire Trap 1), Tip (Tooltip - Basic)
 {
 |c0077ff77[A] |c0000ff00Upgrade to Fire Trap.|r
 }
 
-STRING 1192
-// Units: n017 (Frost Trap), Name (Name)
-{
-Frost Trap
-}
-
 STRING 1193
-// Units: n017 (Frost Trap), Tip (Tooltip - Basic)
+// Units: n017 (Frost Trap 1), Tip (Tooltip - Basic)
 {
 |c0077ff77[S] |c0000ff00Upgrade to Frost Trap.|r
 }
 
-STRING 1194
-// Units: n01A (Poison Trap), Name (Name)
-{
-Poison Trap
-}
-
 STRING 1195
-// Units: n01A (Poison Trap), Tip (Tooltip - Basic)
+// Units: n01A (Poison Trap 1), Tip (Tooltip - Basic)
 {
 |c0077ff77[D] |c0000ff00Upgrade to Poison Trap.|r
 }
 
-STRING 1196
-// Units: n01C (Earth Trap), Name (Name)
-{
-Earth Trap
-}
-
 STRING 1197
-// Units: n01C (Earth Trap), Tip (Tooltip - Basic)
+// Units: n01C (Earth Trap 1), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade to Earth Trap.|r
 }
@@ -9490,50 +9478,26 @@ STRING 1399
 B
 }
 
-STRING 1400
-// Units: n01G (Darkness Trap), Name (Name)
-{
-Darkness Trap
-}
-
 STRING 1401
-// Units: n01G (Darkness Trap), Tip (Tooltip - Basic)
+// Units: n01G (Darkness Trap 1), Tip (Tooltip - Basic)
 {
 |c0077ff77[F] |c0000ff00Upgrade to Darkness Trap.|r
 }
 
-STRING 1402
-// Units: n01H (Blood Trap), Name (Name)
-{
-Blood Trap
-}
-
 STRING 1403
-// Units: n01H (Blood Trap), Tip (Tooltip - Basic)
+// Units: n01H (Blood Trap 1), Tip (Tooltip - Basic)
 {
 |c0077ff77[X] |c0000ff00Upgrade to Blood Trap.|r
 }
 
-STRING 1404
-// Units: n01I (Iron Trap), Name (Name)
-{
-Iron Trap
-}
-
 STRING 1405
-// Units: n01I (Iron Trap), Tip (Tooltip - Basic)
+// Units: n01I (Iron Trap 1), Tip (Tooltip - Basic)
 {
 |c0077ff77[C] |c0000ff00Upgrade to Iron Trap.|r
 }
 
-STRING 1406
-// Units: n01K (Void Trap), Name (Name)
-{
-Void Trap
-}
-
 STRING 1407
-// Units: n01K (Void Trap), Tip (Tooltip - Basic)
+// Units: n01K (Void Trap 1), Tip (Tooltip - Basic)
 {
 |c0077ff77[V] |c0000ff00Upgrade to Void Trap.|r
 }
@@ -10856,6 +10820,12 @@ STRING 1620
 Exp Bonus
 }
 
+STRING 1621
+// Units: n01A (Poison Trap 1), Name (Name)
+{
+Poison Trap 1
+}
+
 STRING 1622
 // Abilities: A03O (Intelligence Bonus), Tip (Tooltip - Normal)
 {
@@ -11532,6 +11502,12 @@ STRING 1734
 // Abilities: A00B (Dark Bomb), Tip (Tooltip - Normal)
 {
 |c0000ff00Dark Bomb - Level 3|r
+}
+
+STRING 1735
+// Units: n01C (Earth Trap 1), Name (Name)
+{
+Earth Trap 1
 }
 
 STRING 1736
@@ -14637,6 +14613,12 @@ STRING 2180
 Fel Tower 9: Warlock
 }
 
+STRING 2181
+// Units: n01G (Darkness Trap 1), Name (Name)
+{
+Darkness Trap 1
+}
+
 STRING 2182
 // Upgrades: R006 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), effect2 (Effect 2)
 {
@@ -15495,6 +15477,12 @@ STRING 2306
 |c0077ff77[Z] |c0000ff00Upgrade To Hell Shrine.|r |cAAAAFFAAHellfire Tower 9.|r
 }
 
+STRING 2307
+// Units: n01H (Blood Trap 1), Name (Name)
+{
+Blood Trap 1
+}
+
 STRING 2308
 // Units: h01K (Poison Tower 8: Poison Blasting Space Marine), Hotkey (Hotkey)
 {
@@ -15752,6 +15740,12 @@ STRING 2343
 |c0000ff00Effect:|r |c0077ff77Enemies are slowed by 25% for 3 seconds
 }
 
+STRING 2344
+// Units: n01I (Iron Trap 1), Name (Name)
+{
+Iron Trap 1
+}
+
 STRING 2345
 // Units: e00A (Bouncing Tower 2: Nerubian Queen), Hotkey (Hotkey)
 {
@@ -15762,6 +15756,12 @@ STRING 2346
 // Units: h017 (Venom Tower 5: Lizard), Name (Name)
 {
 Venom Tower 5: Lizard
+}
+
+STRING 2347
+// Units: n01K (Void Trap 1), Name (Name)
+{
+Void Trap 1
 }
 
 STRING 2348
@@ -19694,7 +19694,7 @@ Q
 }
 
 STRING 2948
-// Units: n01C (Earth Trap), Hotkey (Hotkey)
+// Units: n01C (Earth Trap 1), Hotkey (Hotkey)
 {
 Z
 }
@@ -20997,7 +20997,7 @@ STRING 3140
 }
 
 STRING 3143
-// Units: n01A (Poison Trap), Ubertip (Tooltip - Extended)
+// Units: n01A (Poison Trap 1), Ubertip (Tooltip - Extended)
 {
 |c006969FF[Support Tower]|r
 |c0000ff00Attacks land and air units.|r
@@ -21350,7 +21350,7 @@ STRING 3196
 }
 
 STRING 3197
-// Units: n01C (Earth Trap), Ubertip (Tooltip - Extended)
+// Units: n01C (Earth Trap 1), Ubertip (Tooltip - Extended)
 {
 |c006969FF[Support Tower]|r
 |c0000ff00Attacks land units only.|r
@@ -22203,7 +22203,7 @@ STRING 3299
 }
 
 STRING 3300
-// Units: n01K (Void Trap), Ubertip (Tooltip - Extended)
+// Units: n01K (Void Trap 1), Ubertip (Tooltip - Extended)
 {
 |c006969FF[Support Tower]|r
 |c0000ff00Attacks land and air units.|r
@@ -22292,7 +22292,7 @@ Mine Dummy
 }
 
 STRING 3373
-// Units: n01I (Iron Trap), Ubertip (Tooltip - Extended)
+// Units: n01I (Iron Trap 1), Ubertip (Tooltip - Extended)
 {
 |c006969FF[Support Tower]|r
 |c0000ff00Attacks land units only.|r
@@ -22486,7 +22486,7 @@ STRING 3384
 }
 
 STRING 3385
-// Units: n00A (Fire Trap), Ubertip (Tooltip - Extended)
+// Units: n00A (Fire Trap 1), Ubertip (Tooltip - Extended)
 {
 |c006969FF[Support Tower]|r
 |c0000ff00Attacks land units only.|r
@@ -22507,7 +22507,7 @@ STRING 3385
 }
 
 STRING 3386
-// Units: n017 (Frost Trap), Ubertip (Tooltip - Extended)
+// Units: n017 (Frost Trap 1), Ubertip (Tooltip - Extended)
 {
 |c006969FF[Support Tower]|r
 |c0000ff00Attacks land units only.|r
@@ -22526,7 +22526,7 @@ STRING 3386
 }
 
 STRING 3387
-// Units: n01G (Darkness Trap), Ubertip (Tooltip - Extended)
+// Units: n01G (Darkness Trap 1), Ubertip (Tooltip - Extended)
 {
 |c006969FF[Support Tower]|r
 |c0000ff00Attacks land and air units.|r
@@ -22545,7 +22545,7 @@ STRING 3387
 }
 
 STRING 3388
-// Units: n01H (Blood Trap), Ubertip (Tooltip - Extended)
+// Units: n01H (Blood Trap 1), Ubertip (Tooltip - Extended)
 {
 |c006969FF[Support Tower]|r
 |c0000ff00Attacks land units only.|r
@@ -23554,7 +23554,7 @@ Bash Tower 8
 }
 
 STRING 5590
-// Units: n01I (Iron Trap), Hotkey (Hotkey)
+// Units: n01I (Iron Trap 1), Hotkey (Hotkey)
 {
 C
 }
@@ -26232,13 +26232,13 @@ Aspect Of Blood, Ultimate Siege Tower
 }
 
 STRING 9022
-// Units: n01C (Earth Trap), EditorSuffix (Name - Editor Suffix)
+// Units: n01C (Earth Trap 1), EditorSuffix (Name - Editor Suffix)
 {
 [Slam]
 }
 
 STRING 9039
-// Units: n01I (Iron Trap), EditorSuffix (Name - Editor Suffix)
+// Units: n01I (Iron Trap 1), EditorSuffix (Name - Editor Suffix)
 {
 [Mines]
 }
@@ -26250,19 +26250,19 @@ Trap Blueprint
 }
 
 STRING 9049
-// Units: n00A (Fire Trap), EditorSuffix (Name - Editor Suffix)
+// Units: n00A (Fire Trap 1), EditorSuffix (Name - Editor Suffix)
 {
 [Immolation]
 }
 
 STRING 9055
-// Units: n01A (Poison Trap), EditorSuffix (Name - Editor Suffix)
+// Units: n01A (Poison Trap 1), EditorSuffix (Name - Editor Suffix)
 {
 [Poison Bolt]
 }
 
 STRING 9058
-// Units: n01G (Darkness Trap), EditorSuffix (Name - Editor Suffix)
+// Units: n01G (Darkness Trap 1), EditorSuffix (Name - Editor Suffix)
 {
 [Dark Bomb]
 }
@@ -26280,7 +26280,7 @@ D
 }
 
 STRING 9070
-// Units: n01K (Void Trap), EditorSuffix (Name - Editor Suffix)
+// Units: n01K (Void Trap 1), EditorSuffix (Name - Editor Suffix)
 {
 [Void Blast]
 }
@@ -26384,7 +26384,7 @@ Frost Blast
 }
 
 STRING 9395
-// Units: n017 (Frost Trap), EditorSuffix (Name - Editor Suffix)
+// Units: n017 (Frost Trap 1), EditorSuffix (Name - Editor Suffix)
 {
 [Frost Blast]
 }
@@ -26444,7 +26444,7 @@ Dark Bomb
 }
 
 STRING 9451
-// Units: n01H (Blood Trap), EditorSuffix (Name - Editor Suffix)
+// Units: n01H (Blood Trap 1), EditorSuffix (Name - Editor Suffix)
 {
 [Bloodstrike]
 }
