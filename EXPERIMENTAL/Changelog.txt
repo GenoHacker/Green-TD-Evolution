@@ -5,8 +5,8 @@
 -- Switched from JASS scripting to LUA Scripting
 -- Added Bribes LUA Damage Engine
 -- Added Custom Crit System, Critical Aura, Crit Bonus
--- Added Gold Aura
--- Added Gold Bonus
+-- Added Gold Aura and Gold Bonus
+-- Added Gamble Bonus
 -- Added more easter eggs
 -- Added several new towers
 -- Added new abilities to existing towers
@@ -21,7 +21,7 @@
 -- Fixed Game Setup Unit being removed when its owner leaves
 -- Fixed Game Setup Units ability tooltips not changing
 -- Fixed random wave game messages showing incorrect wave type
--- Changes to Game Setup Unit ability tooltips
+-- Changes to Gambling
 -- Changes to multiple commands
 -- Changes to multiboard
 -- Changes to random wave units
@@ -29,3 +29,4 @@
 -- Changes to terrain and doodads
 -- Changes to static wave units
 -- Changes to life system
+-- Changes to various tooltips
