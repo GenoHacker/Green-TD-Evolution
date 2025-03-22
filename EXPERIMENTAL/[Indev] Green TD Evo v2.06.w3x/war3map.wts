@@ -5864,24 +5864,6 @@ STRING 898
 |c0077ff77Time between wave spawns is reduced and creep movement speed is set to 400.
 }
 
-STRING 899
-// Units: n01J (Trap Blueprint), Ubertip (Tooltip - Extended)
-{
-|c006969FF[Support Tower]|r
-
-|c0077ff77A Tower that can be upgraded into several traps. This tower does not deal damage,  it must be upgraded.
-
-All traps will use its ability automatically.|r
-
-|c0000ff00Fire Trap:      |r |c0077ff77Immolation|r
-|c0000ff00Frost Trap:    |r |c0077ff77Frost Blast|r
-|c0000ff00Poison Trap: |r |c0077ff77Poison Bolt|r
-|c0000ff00Dark Trap:    |r |c0077ff77Dark Bomb|r
-|c0000ff00Earth Trap:   |r |c0077ff77Slam|r
-|c0000ff00Blood Trap:  |r |c0077ff77Bloodstrike|r
-|c0000ff00Iron Trap:     |r |c0077ff77Land Mines|r
-}
-
 STRING 900
 // Abilities: A00Y (Blitz Mode), Ubertip (Tooltip - Normal - Extended)
 {
@@ -15918,6 +15900,22 @@ STRING 2381
 // Abilities: A04T (Bloodstrike), Tip (Tooltip - Normal)
 {
 |c0000ff00Bloodstrike - Light
+}
+
+STRING 2382
+// Units: n01J (Trap Blueprint), Ubertip (Tooltip - Extended)
+{
+|c006969FF[Support Tower]|r
+
+|c0077ff77A Tower that can be upgraded into several traps. This tower does not deal damage, it must be upgraded.|r
+
+|c0000ff00Fire Trap:|r |c0077ff77Immolation|r
+|c0000ff00Frost Trap:|r |c0077ff77Frost Blast|r
+|c0000ff00Poison Trap:|r |c0077ff77Poison Bolt|r
+|c0000ff00Dark Trap:|r |c0077ff77Dark Bomb|r
+|c0000ff00Earth Trap:|r |c0077ff77Slam|r
+|c0000ff00Blood Trap:|r |c0077ff77Bloodstrike|r
+|c0000ff00Iron Trap:|r |c0077ff77Land Mines|r
 }
 
 STRING 2383

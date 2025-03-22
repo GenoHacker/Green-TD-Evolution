@@ -508,7 +508,7 @@ gg_snd_Wave_Boss = nil
 gg_snd_HeroLichPissed8 = nil
 gg_trg_Damage_Engine_Config = nil
 gg_trg_Crit_System = nil
-gg_trg_Crit_System_Backup = nil
+gg_trg_Crit_System_Old_Ver_Backup = nil
 gg_trg_Crit_Aura = nil
 gg_trg_Flak_Tower_Armor_Break = nil
 gg_trg_Glaive_Tower_Enchanted_Glaives = nil
@@ -579,6 +579,7 @@ gg_trg_Random_Game_Modes_and_Difficulty = nil
 gg_trg_Random_Game_Modes_Difficulty_and_Towers = nil
 gg_trg_Ready_Modes = nil
 gg_trg_RedAfk_Ready = nil
+gg_trg_Red_Inactive = nil
 gg_trg_Start_Gamemode_Indicator = nil
 gg_trg_Turn_On_RedAfk_Ready = nil
 gg_trg_Turn_on_RedAfk_Restart = nil
@@ -723,7 +724,7 @@ gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
-gg_trg_Red_Inactive = nil
+gg_trg_Crit_System_Add = nil
 function InitGlobals()
 local i = 0
 
@@ -2841,6 +2842,79 @@ gg_trg_Crit_System = CreateTrigger()
 TriggerRegisterVariableEvent(gg_trg_Crit_System, "udg_DamageModifierEvent", EQUAL, 1.00)
 TriggerAddCondition(gg_trg_Crit_System, Condition(Trig_Crit_System_Conditions))
 TriggerAddAction(gg_trg_Crit_System, Trig_Crit_System_Actions)
+end
+
+function Trig_Crit_System_Add_Func002C()
+if (GetOwningPlayer(GetTriggerUnit()) == Player(0)) then
+return true
+end
+if (GetOwningPlayer(GetTriggerUnit()) == Player(1)) then
+return true
+end
+if (GetOwningPlayer(GetTriggerUnit()) == Player(2)) then
+return true
+end
+if (GetOwningPlayer(GetTriggerUnit()) == Player(3)) then
+return true
+end
+if (GetOwningPlayer(GetTriggerUnit()) == Player(4)) then
+return true
+end
+if (GetOwningPlayer(GetTriggerUnit()) == Player(5)) then
+return true
+end
+if (GetOwningPlayer(GetTriggerUnit()) == Player(6)) then
+return true
+end
+if (GetOwningPlayer(GetTriggerUnit()) == Player(7)) then
+return true
+end
+if (GetOwningPlayer(GetTriggerUnit()) == Player(8)) then
+return true
+end
+return false
+end
+
+function Trig_Crit_System_Add_Conditions()
+if (not Trig_Crit_System_Add_Func002C()) then
+return false
+end
+return true
+end
+
+function Trig_Crit_System_Add_Func001Func003C()
+if (GetUnitTypeId(GetTriggerUnit()) == FourCC("U00E")) then
+return true
+end
+if (GetUnitTypeId(GetTriggerUnit()) == FourCC("n01J")) then
+return true
+end
+if (GetUnitAbilityLevelSwapped(FourCC("A004"), GetTriggerUnit()) >= 1) then
+return true
+end
+return false
+end
+
+function Trig_Crit_System_Add_Func001C()
+if (not Trig_Crit_System_Add_Func001Func003C()) then
+return false
+end
+return true
+end
+
+function Trig_Crit_System_Add_Actions()
+if (Trig_Crit_System_Add_Func001C()) then
+else
+UnitAddAbilityBJ(FourCC("A004"), GetTriggerUnit())
+BlzUnitHideAbility(GetTriggerUnit(), FourCC("A004"), true)
+end
+end
+
+function InitTrig_Crit_System_Add()
+gg_trg_Crit_System_Add = CreateTrigger()
+TriggerRegisterEnterRectSimple(gg_trg_Crit_System_Add, GetEntireMapRect())
+TriggerAddCondition(gg_trg_Crit_System_Add, Condition(Trig_Crit_System_Add_Conditions))
+TriggerAddAction(gg_trg_Crit_System_Add, Trig_Crit_System_Add_Actions)
 end
 
 function Trig_Crit_Aura_Func002Func001Func002Func002Func002C()
@@ -6116,6 +6190,13 @@ TriggerAddAction(gg_trg_Hero_Abilities, Trig_Hero_Abilities_Actions)
 end
 
 function Trig_Finish_Build_Func004C()
+if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("h034"))) then
+return false
+end
+return true
+end
+
+function Trig_Finish_Build_Func005C()
 if (not (GetUnitTypeId(GetConstructingStructure()) == FourCC("h00G"))) then
 return false
 end
@@ -6127,6 +6208,10 @@ TriggerSleepAction(0.00)
 BlzUnitHideAbility(GetTriggerUnit(), FourCC("Amim"), true)
 UnitSetConstructionProgress(GetConstructingStructure(), 99)
 if (Trig_Finish_Build_Func004C()) then
+BlzUnitHideAbility(GetTriggerUnit(), FourCC("A004"), true)
+else
+end
+if (Trig_Finish_Build_Func005C()) then
 udg_Unit_AuraTower[GetConvertedPlayerId(GetOwningPlayer(GetConstructingStructure()))] = GetConstructingStructure()
 else
 end
@@ -6141,6 +6226,7 @@ end
 function Trig_Finish_Upgrade_Actions()
 TriggerSleepAction(0.00)
 BlzUnitHideAbility(GetTriggerUnit(), FourCC("Amim"), true)
+BlzUnitHideAbility(GetTriggerUnit(), FourCC("A004"), true)
 UnitSetUpgradeProgress(GetTriggerUnit(), 99)
 end
 
@@ -6150,7 +6236,14 @@ TriggerRegisterAnyUnitEventBJ(gg_trg_Finish_Upgrade, EVENT_PLAYER_UNIT_UPGRADE_S
 TriggerAddAction(gg_trg_Finish_Upgrade, Trig_Finish_Upgrade_Actions)
 end
 
-function Trig_Instant_Upgrade_Func001Func011Func001C()
+function Trig_Instant_Upgrade_Func001Func007C()
+if (not (GetUnitTypeId(GetLastReplacedUnitBJ()) == FourCC("h037"))) then
+return false
+end
+return true
+end
+
+function Trig_Instant_Upgrade_Func001Func015Func001C()
 if (GetUnitTypeId(GetTriggerUnit()) == FourCC("n01J")) then
 return true
 end
@@ -6181,14 +6274,14 @@ end
 return false
 end
 
-function Trig_Instant_Upgrade_Func001Func011C()
-if (not Trig_Instant_Upgrade_Func001Func011Func001C()) then
+function Trig_Instant_Upgrade_Func001Func015C()
+if (not Trig_Instant_Upgrade_Func001Func015Func001C()) then
 return false
 end
 return true
 end
 
-function Trig_Instant_Upgrade_Func001Func013C()
+function Trig_Instant_Upgrade_Func001Func016C()
 if (GetUnitTypeId(GetTriggerUnit()) == FourCC("h037")) then
 return true
 end
@@ -6205,7 +6298,7 @@ return false
 end
 
 function Trig_Instant_Upgrade_Func001C()
-if (not Trig_Instant_Upgrade_Func001Func013C()) then
+if (not Trig_Instant_Upgrade_Func001Func016C()) then
 return false
 end
 return true
@@ -6372,17 +6465,23 @@ UnitAddAbilityBJ(FourCC("A00K"), GetLastReplacedUnitBJ())
 SetUnitAbilityLevelSwapped(FourCC("A00K"), GetLastReplacedUnitBJ(), udg_Integer_Difficulty)
 SelectUnitForPlayerSingle(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
 SetUnitInvulnerable(GetLastReplacedUnitBJ(), true)
+BlzUnitHideAbility(GetLastReplacedUnitBJ(), FourCC("A004"), true)
+if (Trig_Instant_Upgrade_Func001Func007C()) then
+UnitAddAbilityBJ(FourCC("A00U"), GetLastReplacedUnitBJ())
+else
+end
 else
 ReplaceUnitBJ(GetTriggerUnit(), GetUnitTypeId(GetTriggerUnit()), bj_UNIT_STATE_METHOD_RELATIVE)
 UnitAddAbilityBJ(FourCC("A00G"), GetLastReplacedUnitBJ())
 SetUnitAbilityLevelSwapped(FourCC("A00G"), GetLastReplacedUnitBJ(), udg_Integer_Difficulty)
 SelectUnitForPlayerSingle(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
 SetUnitInvulnerable(GetLastReplacedUnitBJ(), true)
-if (Trig_Instant_Upgrade_Func001Func011C()) then
+BlzUnitHideAbility(GetLastReplacedUnitBJ(), FourCC("Amim"), true)
+BlzUnitHideAbility(GetLastReplacedUnitBJ(), FourCC("A004"), true)
+if (Trig_Instant_Upgrade_Func001Func015C()) then
 else
 UnitAddAbilityBJ(FourCC("A00U"), GetLastReplacedUnitBJ())
 end
-BlzUnitHideAbility(GetLastReplacedUnitBJ(), FourCC("Amim"), true)
 end
 if (Trig_Instant_Upgrade_Func002C()) then
 BlzUnitHideAbility(GetTriggerUnit(), FourCC("Amim"), true)
@@ -16501,7 +16600,7 @@ end
 return true
 end
 
-function Trig_Fire_Trap_Func002Func009C()
+function Trig_Fire_Trap_Func002Func008C()
 if (not (GetUnitAbilityLevelSwapped(FourCC("A01K"), GetTriggerUnit()) >= 10)) then
 return false
 end
@@ -16524,11 +16623,10 @@ CreateTextTagUnitBJ("TRIGSTR_9646", GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 
 IssueImmediateOrderBJ(GetTriggerUnit(), "unimmolation")
 IncUnitAbilityLevelSwapped(FourCC("A01K"), GetTriggerUnit())
 IncUnitAbilityLevelSwapped(FourCC("A04L"), GetTriggerUnit())
-DisplayTextToForce(GetPlayersAll(), I2S(udg_Integer_TotalFireTrapsBuilt))
 IssueImmediateOrderBJ(GetTriggerUnit(), "immolation")
 BlzSetUnitName(GetTriggerUnit(), ("Fire Trap " .. I2S(GetUnitAbilityLevelSwapped(FourCC("A01K"), GetTriggerUnit()))))
 SetPlayerStateBJ(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD, (GetPlayerState(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD) - GetUnitUserData(GetTriggerUnit())))
-if (Trig_Fire_Trap_Func002Func009C()) then
+if (Trig_Fire_Trap_Func002Func008C()) then
 UnitRemoveAbilityBJ(FourCC("A023"), GetTriggerUnit())
 else
 end
@@ -17224,6 +17322,7 @@ end
 function InitCustomTriggers()
 InitTrig_Damage_Engine_Config()
 InitTrig_Crit_System()
+InitTrig_Crit_System_Add()
 InitTrig_Crit_Aura()
 InitTrig_Flak_Tower_Armor_Break()
 InitTrig_Glaive_Tower_Enchanted_Glaives()
