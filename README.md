@@ -13,9 +13,15 @@ The latest release can always be downloaded from https://www.hiveworkshop.com/th
 Credits
 
 -- BTNDice and DISBTNDice, Downloaded from HiveWorkshop, Created by Amigurumi. Used for Random Game Modes icon.
+
 -- BTNdieroll01 and DISBTNdieroll01, Downloaded from HiveWorkshop, Created by LifeguardLeroy. Used for Random Game Modes + Difficulty icon.
+
 -- BTNMysteryPot2 and DISBTNMysteryPot2, Downloaded from HiveWorkshop, Created by kola. Used for Random Game Modes, Difficulty + Towers icon.
+
 -- LUA Damage Engine by Bride
+
 -- Arcing Text Tag by Maker
+
 -- Button Manager to create various passive icons
+
 -- BLP Lab to convert to a usable image format
