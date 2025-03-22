@@ -508,6 +508,7 @@ gg_snd_Wave_Boss = nil
 gg_snd_HeroLichPissed8 = nil
 gg_trg_Damage_Engine_Config = nil
 gg_trg_Crit_System = nil
+gg_trg_Crit_System_Add = nil
 gg_trg_Crit_System_Old_Ver_Backup = nil
 gg_trg_Crit_Aura = nil
 gg_trg_Flak_Tower_Armor_Break = nil
@@ -724,7 +725,6 @@ gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
-gg_trg_Crit_System_Add = nil
 function InitGlobals()
 local i = 0
 

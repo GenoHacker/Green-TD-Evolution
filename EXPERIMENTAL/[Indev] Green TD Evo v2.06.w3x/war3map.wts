@@ -4562,17 +4562,6 @@ STRING 708
 v2.05 Release Date - 01/07/20
 }
 
-STRING 709
-// Units: h00B (Poison Tower 2: Gnoll Assassin), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff770.50
-|c0000ff00Damage:|r |c0077ff77425
-|c0000ff00Range:|r |c0077ff771000
-|c0000ff00Efficiency:|r |c0077ff771.06 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Slow Poison; reduces enemy movement by 30%
-}
-
 STRING 710
 // Units: h01B (Siege Tower 7: Admiral Proudmoore), Ubertip (Tooltip - Extended)
 {
@@ -4775,49 +4764,16 @@ STRING 741
 HH Snow Owls Active
 }
 
-STRING 742
-// Units: h00N (Poison Tower 4: Skeletal Mage), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff770.50
-|c0000ff00Damage:|r |c0077ff772500
-|c0000ff00Range:|r |c0077ff771000
-|c0000ff00Efficiency:|r |c0077ff771.14 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Slow Poison; reduces enemy movement by 30%
-}
-
 STRING 743
 // Units: h007 (Uther, Ultimate Research Tower), Tip (Tooltip - Basic)
 {
 |c0077ff77[C] |c0000ff00Upgrade To Uther, Ultimate.|r |cAAAAFFAAResearch Tower 10.|r
 }
 
-STRING 744
-// Units: h00U (Poison Tower 5: Shaman), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff770.50
-|c0000ff00Damage:|r |c0077ff774400
-|c0000ff00Range:|r |c0077ff771000
-|c0000ff00Efficiency:|r |c0077ff771.16 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Slow Poison; reduces enemy movement by 30%
-}
-
 STRING 745
 // Units: h041 (Research Tower 5: Bandit Lord), Name (Name)
 {
 Research Tower 5: Bandit Lord
-}
-
-STRING 746
-// Units: h012 (Poison Tower 6: Poisoned Quilboar), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff770.50
-|c0000ff00Damage:|r |c0077ff777000
-|c0000ff00Range:|r |c0077ff771000
-|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Slow Poison; reduces enemy movement by 30%
 }
 
 STRING 747
@@ -5864,6 +5820,24 @@ STRING 898
 |c0077ff77Time between wave spawns is reduced and creep movement speed is set to 400.
 }
 
+STRING 899
+// Units: h000 (Siege Tower 1: Footman), Ubertip (Tooltip - Extended)
+{
+|c00FF0000[Primary Tower]|r
+
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff77300
+|c0000ff00Range:|r |c0077ff77800 (ground only)
+|c0000ff00Efficiency:|r |c0077ff771 Damage per Gold (Total Gold Value)
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (ground only)|r
+
+|c0000ff00200% |c0077ff77vs Fortified Armour.
+|c0000ff00125% |c0077ff77vs Other Armours.
+|c0000ff0075% |c0077ff77vs Hero Armour.
+|c0000ff0025% |c0077ff77vs Divine Armour.
+}
+
 STRING 900
 // Abilities: A00Y (Blitz Mode), Ubertip (Tooltip - Normal - Extended)
 {
@@ -6065,51 +6039,6 @@ STRING 921
 
 }
 
-STRING 922
-// Units: h007 (Uther, Ultimate Research Tower), Ubertip (Tooltip - Extended)
-{
-|c0000ff00[Upgrade Shortcut]
-|c0000ff00Attack:|r |c0077ff77Hero
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Base Damage:|r |c0077ff7733000
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Improvements:|r |c0077ff774
-|c0000ff00Efficiency:|r |c0077ff771.65 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Level 1 Multishot, can be improved via research|r
-|c0000ff00Ability (2):|r |c0077ff77Improvements; can research improvements|r
-
-|c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
-}
-
-STRING 923
-// Units: h040 (Research Tower 2: Tinker), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Hero
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Base Damage:|r |c0077ff77900
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Improvements:|r |c0077ff771
-|c0000ff00Efficiency:|r |c0077ff771.13 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Level 1 Multishot, can be improved via research|r
-|c0000ff00Ability (2):|r |c0077ff77Improvements; can research improvements|r
-}
-
-STRING 924
-// Units: h00A (Research Tower 5: Bandit Lord), Ubertip (Tooltip - Extended)
-{
-|c0000ff00[Upgrade Shortcut]
-|c0000ff00Attack:|r |c0077ff77Hero
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Base Damage:|r |c0077ff775700
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Improvements:|r |c0077ff772
-|c0000ff00Efficiency:|r |c0077ff771.29 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Level 1 Multishot, can be improved via research|r
-|c0000ff00Ability (2):|r |c0077ff77Improvements; can research improvements|r
-
-|c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
-}
-
 STRING 925
 // Units: h00H (Random Boss), Tip (Tooltip - Basic)
 {
@@ -6120,17 +6049,6 @@ STRING 926
 // Abilities: A00M (Transmute), Hotkey (Hotkey - Normal)
 {
 F
-}
-
-STRING 927
-// Units: h01K (Poison Tower 8: Poison Blasting Space Marine), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff770.50
-|c0000ff00Damage:|r |c0077ff7717000
-|c0000ff00Range:|r |c0077ff771000
-|c0000ff00Efficiency:|r |c0077ff771.31 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Slow Poison; reduces enemy movement by 30%
 }
 
 STRING 928
@@ -6148,69 +6066,10 @@ STRING 928
 |c0000ff00Duration:|r |c0077ff775 Seconds
 }
 
-STRING 929
-// Units: h01N (Poison Tower 7: Farseer), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff770.50
-|c0000ff00Damage:|r |c0077ff7711250
-|c0000ff00Range:|r |c0077ff771000
-|c0000ff00Efficiency:|r |c0077ff771.25 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Slow Poison; reduces enemy movement by 30%
-}
-
-STRING 930
-// Units: h01O (Poison Tower 9: Death Revenant), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff770.50
-|c0000ff00Damage:|r |c0077ff7723000
-|c0000ff00Range:|r |c0077ff771000
-|c0000ff00Efficiency:|r |c0077ff771.35 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Slow Poison; reduces enemy movement by 30%
-}
-
-STRING 931
-// Units: h022 (Hydralisk, Ultimate Poison Tower), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff770.50
-|c0000ff00Damage:|r |c0077ff7730000
-|c0000ff00Range:|r |c0077ff771000
-|c0000ff00Efficiency:|r |c0077ff771.36 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Slow Poison; reduces enemy movement by 30%
-}
-
 STRING 932
 // Abilities: A01M (Raise Dead), Unhotkey (Hotkey - Turn Off)
 {
 D
-}
-
-STRING 933
-// Units: h00C (Poison Tower 5: Shaman), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff770.50
-|c0000ff00Damage:|r |c0077ff774400
-|c0000ff00Range:|r |c0077ff771000
-|c0000ff00Efficiency:|r |c0077ff771.16 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Slow Poison; reduces enemy movement by 30%
-
-|c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
-}
-
-STRING 934
-// Units: h00D (Hydralisk, Ultimate Poison Tower), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff770.50
-|c0000ff00Damage:|r |c0077ff7730000
-|c0000ff00Range:|r |c0077ff771000
-|c0000ff00Efficiency:|r |c0077ff771.36 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Slow Poison; reduces enemy movement by 30%
-
-|c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
 }
 
 STRING 935
@@ -6222,109 +6081,6 @@ STRING 936
 // Buffs/Effects: B001 (), Buffubertip (Tooltip - Extended)
 {
 This unit is under the effects of Crippling Aura; it has a decreased movement speed.
-}
-
-STRING 937
-// Units: h026 (Bash Tower 3: Goblin Basher), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Damage:|r |c0077ff778000
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff771.33 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Bash; 70% chance to stun and deal extra damage|r
-}
-
-STRING 938
-// Units: h027 (Bash Tower 2: Royal Guard), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Damage:|r |c0077ff774000
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff771.25 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Bash; 70% chance to stun and deal extra damage|r
-}
-
-STRING 939
-// Units: h028 (Bash Tower 4: Mountain Smasher), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Damage:|r |c0077ff7714000
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff771.40 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Bash; 70% chance to stun and deal extra damage|r
-}
-
-STRING 940
-// Units: h029 (Bash Tower 5: Mortar Tank), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Damage:|r |c0077ff7722000
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff771.47 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Bash; 70% chance to stun and deal extra damage|r
-}
-
-STRING 941
-// Units: h015 (Bash Tower 7: Bloodfiend), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Damage:|r |c0077ff7750000
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff771.67 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Bash; 70% chance to stun and deal extra damage|r
-}
-
-STRING 942
-// Units: h032 (Bash Tower 6: Siege Golem), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Damage:|r |c0077ff7735000
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff771.56 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Bash; 70% chance to stun and deal extra damage|r
-}
-
-STRING 943
-// Units: h005 (Flesh Golem, Ultimate Bash Tower), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Damage:|r |c0077ff7770000
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff771.75 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Bash; 70% chance to stun and deal extra damage|r
-}
-
-STRING 944
-// Units: h025 (Flesh Golem, Ultimate Bash Tower), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Damage:|r |c0077ff7770000
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff771.75 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Bash; 70% chance to stun and deal extra damage|r
-
-|c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
-}
-
-STRING 945
-// Units: h006 (Bash Tower 4: Mountain Smasher), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Damage:|r |c0077ff7714000
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff771.40 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Bash; 70% chance to stun and deal extra damage|r
-
-|c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
 }
 
 STRING 946
@@ -6600,21 +6356,6 @@ STRING 978
 |c0077ff77[Z] |c0000ff00Upgrade To Frost Revenant.|r |cAAAAFFAAFrost Tower 7.|r
 }
 
-STRING 979
-// Units: h002 (Aspect Of Blood, Ultimate Siege Tower), Ubertip (Tooltip - Extended)
-{
-|c0000ff00[Upgrade Shortcut]
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff7743000
-|c0000ff00Range:|r |c0077ff77800 (ground only)
-|c0000ff00Efficiency:|r |c0077ff771.73 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 500 (ground only)|r
-
-
-|c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
-}
-
 STRING 980
 // Units: n00I (Frost Tower 2: Tuskarr Chieftain), Tip (Tooltip - Basic)
 {
@@ -6637,21 +6378,6 @@ STRING 982
 // Units: n00N (Frost Tower 8: Snowy Owl), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Snowy Owl.|r |cAAAAFFAAFrost Tower 8.|r
-}
-
-STRING 983
-// Units: h00M (Siege Tower 5: Skeletal Grunt), Ubertip (Tooltip - Extended)
-{
-|c0000ff00[Upgrade Shortcut]
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff777000
-|c0000ff00Range:|r |c0077ff77800 (ground only)
-|c0000ff00Efficiency:|r |c0077ff771.32 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (ground only)|r
-
-
-|c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
 }
 
 STRING 984
@@ -8224,10 +7950,41 @@ STRING 1189
 A
 }
 
+STRING 1190
+// Units: h008 (Poison Tower 1: Elven Archer), Ubertip (Tooltip - Extended)
+{
+|c00FFFF00[Secondary Tower]|r
+
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff77100
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff771 Damage per Gold (Total Gold Value)
+|c0000ff00Ability:|r |c0077ff77Slow Poison; 30% reduced move speed
+
+|c0000ff00200% |c0077ff77vs Light Armour.
+|c0000ff00125% |c0077ff77vs Medium Armour.
+|c0000ff0075% |c0077ff77vs Other Armours.
+|c0000ff0025% |c0077ff77vs Divine Armour.
+}
+
 STRING 1191
 // Units: n00A (Fire Trap 1), Tip (Tooltip - Basic)
 {
 |c0077ff77[A] |c0000ff00Upgrade to Fire Trap.|r
+}
+
+STRING 1192
+// Units: h009 (Poison Tower 3: Necromancer), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Can be upgraded into Poison, Venom or Fel Towers.|r
+
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff771100
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff771.10 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Slow Poison; 30% reduced move speed
 }
 
 STRING 1193
@@ -8236,10 +7993,32 @@ STRING 1193
 |c0077ff77[S] |c0000ff00Upgrade to Frost Trap.|r
 }
 
+STRING 1194
+// Units: h00B (Poison Tower 2: Gnoll Assassin), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff77425
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff771.06 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Slow Poison; 30% reduced move speed
+}
+
 STRING 1195
 // Units: n01A (Poison Trap 1), Tip (Tooltip - Basic)
 {
 |c0077ff77[D] |c0000ff00Upgrade to Poison Trap.|r
+}
+
+STRING 1196
+// Units: h00N (Poison Tower 4: Skeletal Mage), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff772500
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff771.14 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Slow Poison; 30% reduced move speed
 }
 
 STRING 1197
@@ -9460,10 +9239,32 @@ STRING 1399
 B
 }
 
+STRING 1400
+// Units: h00U (Poison Tower 5: Shaman), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff774400
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff771.16 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Slow Poison; 30% reduced move speed
+}
+
 STRING 1401
 // Units: n01G (Darkness Trap 1), Tip (Tooltip - Basic)
 {
 |c0077ff77[F] |c0000ff00Upgrade to Darkness Trap.|r
+}
+
+STRING 1402
+// Units: h012 (Poison Tower 6: Poisoned Quilboar), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff777000
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Slow Poison; 30% reduced move speed
 }
 
 STRING 1403
@@ -9472,10 +9273,45 @@ STRING 1403
 |c0077ff77[X] |c0000ff00Upgrade to Blood Trap.|r
 }
 
+STRING 1404
+// Units: n00M (Air Tower 1: Centaur Archer), Ubertip (Tooltip - Extended)
+{
+|c00FF0000[Primary Tower]|r
+
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Damage:|r |c0077ff77500
+|c0000ff00Range:|r |c0077ff771200 (air only)
+|c0000ff00Efficiency:|r |c0077ff771 Damage per Gold (Total Gold Value)
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (air only)|r
+
+|c0000ff00200% |c0077ff77vs Fortified Armour.
+|c0000ff0025% |c0077ff77vs Divine Armour.
+}
+
 STRING 1405
 // Units: n01I (Iron Trap 1), Tip (Tooltip - Basic)
 {
 |c0077ff77[C] |c0000ff00Upgrade to Iron Trap.|r
+}
+
+STRING 1406
+// Units: h01I (Research Tower 1: Demon Hunter), Ubertip (Tooltip - Extended)
+{
+|c00FFFF00[Secondary Tower]|r
+
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Base Damage:|r |c0077ff77400
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Improvements:|r |c0077ff771
+|c0000ff00Efficiency:|r |c0077ff771 Damage per Gold (Total Gold Value)
+|c0000ff00Ability:|r |c0077ff77Level 1 Multishot, can be improved|r
+|c0000ff00Ability (2):|r |c0077ff77Improvements; research improvements|r
+
+|c0000ff00200% |c0077ff77vs Hero Armour.
+|c0000ff00100% |c0077ff77vs Other Armours.
+|c0000ff0025% |c0077ff77vs Divine Armours.
 }
 
 STRING 1407
@@ -14355,36 +14191,6 @@ STRING 2150
 |c0000ff00Damage: |c0077ff77+2000
 }
 
-STRING 2151
-// Units: n019 (Air Tower 5: Nether Drake), Ubertip (Tooltip - Extended)
-{
-|c0000ff00[Upgrade Shortcut]
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Damage:|r |c0077ff778000
-|c0000ff00Range:|r |c0077ff771200 (air only)
-|c0000ff00Efficiency:|r |c0077ff771.33 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (air only)|r
-
-
-|c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
-}
-
-STRING 2152
-// Units: n01B (Bronze Dragon, Ultimate Air Tower), Ubertip (Tooltip - Extended)
-{
-|c0000ff00[Upgrade Shortcut]
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Damage:|r |c0077ff7735000
-|c0000ff00Range:|r |c0077ff771200 (air only)
-|c0000ff00Efficiency:|r |c0077ff771.59 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (air only)|r
-
-
-|c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
-}
-
 STRING 2153
 // Abilities: A00J (Hero Abilities), Ubertip (Tooltip - Normal - Extended)
 {
@@ -14421,32 +14227,6 @@ STRING 2158
 |c0077ff77[C]|r |c0000ff00Emergency Air Tower - [|cffffcc00Level 4|r|c0000ff00]
 }
 
-STRING 2159
-// Units: h03V (Research Tower 4: Ancient of Wind), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Hero
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Base Damage:|r |c0077ff773400
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Improvements:|r |c0077ff772
-|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Level 1 Multishot, can be improved via research|r
-|c0000ff00Ability (2):|r |c0077ff77Improvements; can research improvements|r
-}
-
-STRING 2160
-// Units: h03W (Research Tower 3: Hydra), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Hero
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Base Damage:|r |c0077ff771800
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Improvements:|r |c0077ff771
-|c0000ff00Efficiency:|r |c0077ff771.16 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Level 1 Multishot, can be improved via research|r
-|c0000ff00Ability (2):|r |c0077ff77Improvements; can research improvements|r
-}
-
 STRING 2161
 // Units: h035 (Spell Tower 4: Druid), Ubertip (Tooltip - Extended)
 {
@@ -14457,19 +14237,6 @@ STRING 2161
 |c0000ff00Mana:|r |c0077ff77200 + 8/s
 |c0000ff00Efficiency:|r |c0077ff772 Damage per Gold
 |c0000ff00Spells Added:|r |c0077ff77Roar and Faerie Fire|r
-}
-
-STRING 2162
-// Units: h03X (Research Tower 6: Wildkin), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Hero
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Base Damage:|r |c0077ff778800
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Improvements:|r |c0077ff772
-|c0000ff00Efficiency:|r |c0077ff771.37 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Level 1 Multishot, can be improved via research|r
-|c0000ff00Ability (2):|r |c0077ff77Improvements; can research improvements|r
 }
 
 STRING 2163
@@ -14665,90 +14432,10 @@ STRING 2191
 Unlocked on Wave 15
 }
 
-STRING 2192
-// Units: h041 (Research Tower 5: Bandit Lord), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Hero
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Base Damage:|r |c0077ff775700
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Improvements:|r |c0077ff772
-|c0000ff00Efficiency:|r |c0077ff771.29 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Level 1 Multishot, can be improved via research|r
-|c0000ff00Ability (2):|r |c0077ff77Improvements; can research improvements|r
-}
-
-STRING 2193
-// Units: h02B (Uther, Ultimate Research Tower), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Hero
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Base Damage:|r |c0077ff7733000
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Improvements:|r |c0077ff774
-|c0000ff00Efficiency:|r |c0077ff771.65 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Level 1 Multishot, can be improved via research|r
-|c0000ff00Ability (2):|r |c0077ff77Improvements; can research improvements|r
-}
-
-STRING 2194
-// Units: h00E (Chaos Tower 5: Chaos Infernal), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Damage:|r |c0077ff778500
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficency:|r |c0077ff771.13 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 500|r
-
-
-|c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
-}
-
-STRING 2195
-// Units: h00F (Chaos Orb, Ultimate Chaos Tower), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Damage:|r |c0077ff7742500
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficency:|r |c0077ff771.31 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 500|r
-
-
-|c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
-}
-
-STRING 2196
-// Units: h03Y (Research Tower 7: Ancient Sasquatch), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Hero
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Base Damage:|r |c0077ff7713000
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Improvements:|r |c0077ff773
-|c0000ff00Efficiency:|r |c0077ff771.44 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Level 1 Multishot, can be improved via research|r
-|c0000ff00Ability (2):|r |c0077ff77Improvements; can research improvements|r
-}
-
 STRING 2197
 // Units: n00H (Skeletal Archer), Name (Name)
 {
 Skeletal Archer
-}
-
-STRING 2198
-// Units: h03Z (Research Tower 9: Albatross), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Hero
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Base Damage:|r |c0077ff7726000
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Improvements:|r |c0077ff773
-|c0000ff00Efficiency:|r |c0077ff771.62 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Level 1 Multishot, can be improved via research|r
-|c0000ff00Ability (2):|r |c0077ff77Improvements; can research improvements|r
 }
 
 STRING 2199
@@ -14761,19 +14448,6 @@ STRING 2199
 |c0000ff00Efficiency:|r |c0077ff771.03 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 500|r
 
-}
-
-STRING 2200
-// Units: h042 (Research Tower 8: Naga Myrmidon), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Hero
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Base Damage:|r |c0077ff7719500
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Improvements:|r |c0077ff773
-|c0000ff00Efficiency:|r |c0077ff771.56 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Level 1 Multishot, can be improved via research|r
-|c0000ff00Ability (2):|r |c0077ff77Improvements; can research improvements|r
 }
 
 STRING 2201
@@ -15189,21 +14863,6 @@ Boosto!
 STRING 2262
 {
 Changelog -- v2.01
-}
-
-STRING 2263
-// Units: h00G (Aura Tower), Ubertip (Tooltip - Extended)
-{
-|c006969FF[Support Tower]|r
-
-|c0077ff77Tower that allows you to unlock several Auras, some affect your towers whilst others affect creeps.
-
-|c0000ff00Speed Aura:       |c0077ff77Increased Speed|r
-|c0000ff00Damage Aura:   |c0077ff77Increased Damage|r
-|c0000ff00Armour Aura:    |c00FF0000Decreased Armour|r
-|c0000ff00Crippling Aura: |c00FF0000Decreased Move Speed|r
-
-|c0077ff77This tower does not come with any active auras, you must unlock them with gold.|r
 }
 
 STRING 2264
@@ -15758,6 +15417,17 @@ STRING 2349
 |c0077ff77[X] |c0000ff00Upgrade To Frozen Obelisk.|r |cAAAAFFAAShard Tower 4.|r
 }
 
+STRING 2350
+// Units: h01K (Poison Tower 8: Poison Blasting Space Marine), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff7717000
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff771.31 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Slow Poison; 30% reduced move speed
+}
+
 STRING 2351
 // Units: h01M (Venom Tower 6: Lizard), Name (Name)
 {
@@ -15768,6 +15438,17 @@ STRING 2352
 // Units: h01M (Venom Tower 6: Lizard), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Lizard.|r |cAAAAFFAAVenom Tower 6.|r
+}
+
+STRING 2353
+// Units: h01N (Poison Tower 7: Farseer), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff7711250
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff771.25 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Slow Poison; 30% reduced move speed
 }
 
 STRING 2354
@@ -15782,6 +15463,17 @@ STRING 2355
 Venom Tower 7: Lizard
 }
 
+STRING 2356
+// Units: h01O (Poison Tower 9: Death Revenant), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff7723000
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff771.35 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Slow Poison; 30% reduced move speed
+}
+
 STRING 2357
 // Units: h01P (Venom Tower 7: Lizard), Tip (Tooltip - Basic)
 {
@@ -15794,10 +15486,37 @@ STRING 2358
 Hellfire Tower 6: Hell Shrine
 }
 
+STRING 2359
+// Units: h022 (Hydralisk, Ultimate Poison Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff7730000
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff771.36 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Slow Poison; 30% reduced move speed
+}
+
 STRING 2360
 // Abilities: A013 (Multishot), Name (Name)
 {
 Multishot
+}
+
+STRING 2361
+// Units: h023 (Chaos Tower 1: Chaos Skeleton), Ubertip (Tooltip - Extended)
+{
+|c00FF0000[Primary Tower]|r
+
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Damage:|r |c0077ff77600
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff771 Damage per Gold (Total Gold Value)
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 500|r
+
+|c0000ff00200% |c0077ff77vs Divine Armour.
+|c0000ff0050% |c0077ff77vs Other Armours.
 }
 
 STRING 2362
@@ -15878,6 +15597,37 @@ STRING 2374
 Z
 }
 
+STRING 2375
+// Units: h021 (Bash Tower 1: Storm Panda), Ubertip (Tooltip - Extended)
+{
+|c00FFFF00[Secondary Tower]|r
+
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Damage:|r |c0077ff771000
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff771 Damage per Gold (Total Gold Value)
+|c0000ff00Ability:|r |c0077ff77Bash; chance to stun and deal extra damage|r
+
+|c0000ff00200% |c0077ff77vs Light
+|c0000ff00125% |c0077ff77vs Medium
+|c0000ff0075% |c0077ff77vs Other
+|c0000ff0025% |c0077ff77vs Divine
+}
+
+STRING 2376
+// Units: h025 (Flesh Golem, Ultimate Bash Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Damage:|r |c0077ff7770000
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff771.75 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Bash; chance to stun and deal extra damage|r
+
+|c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
+}
+
 STRING 2377
 // Abilities: A01L (Venom 3), Tip (Tooltip - Normal)
 {
@@ -15896,26 +15646,21 @@ STRING 2379
 |c0077ff77[Z] |c0000ff00Upgrade To Mortar Team.|r |cAAAAFFAAFlak Tower 5.|r
 }
 
+STRING 2380
+// Units: h026 (Bash Tower 3: Goblin Basher), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Damage:|r |c0077ff778000
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff771.33 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Bash; chance to stun and deal extra damage|r
+}
+
 STRING 2381
 // Abilities: A04T (Bloodstrike), Tip (Tooltip - Normal)
 {
 |c0000ff00Bloodstrike - Light
-}
-
-STRING 2382
-// Units: n01J (Trap Blueprint), Ubertip (Tooltip - Extended)
-{
-|c006969FF[Support Tower]|r
-
-|c0077ff77A Tower that can be upgraded into several traps. This tower does not deal damage, it must be upgraded.|r
-
-|c0000ff00Fire Trap:|r |c0077ff77Immolation|r
-|c0000ff00Frost Trap:|r |c0077ff77Frost Blast|r
-|c0000ff00Poison Trap:|r |c0077ff77Poison Bolt|r
-|c0000ff00Dark Trap:|r |c0077ff77Dark Bomb|r
-|c0000ff00Earth Trap:|r |c0077ff77Slam|r
-|c0000ff00Blood Trap:|r |c0077ff77Bloodstrike|r
-|c0000ff00Iron Trap:|r |c0077ff77Land Mines|r
 }
 
 STRING 2383
@@ -15930,6 +15675,17 @@ STRING 2384
 |c0077ff77[Z] |c0000ff00Upgrade To Mortar Team.|r |cAAAAFFAAFlak Tower 6.|r
 }
 
+STRING 2385
+// Units: h027 (Bash Tower 2: Royal Guard), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Damage:|r |c0077ff774000
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff771.25 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Bash; chance to stun and deal extra damage|r
+}
+
 STRING 2386
 // Abilities: A04T (Bloodstrike), Tip (Tooltip - Normal)
 {
@@ -15942,6 +15698,17 @@ STRING 2387
 |c0077ff77[Z] |c0000ff00Upgrade To Mortar Team.|r |cAAAAFFAAFlak Tower 7.|r
 }
 
+STRING 2388
+// Units: h028 (Bash Tower 4: Mountain Smasher), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Damage:|r |c0077ff7714000
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff771.40 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Bash; chance to stun and deal extra damage|r
+}
+
 STRING 2389
 // Abilities: A04T (Bloodstrike), Tip (Tooltip - Normal)
 {
@@ -15952,6 +15719,17 @@ STRING 2390
 // Units: h00Z (Flak Tower 8: Mortar Team), Tip (Tooltip - Basic)
 {
 |c0077ff77[Z] |c0000ff00Upgrade To Mortar Team.|r |cAAAAFFAAFlak Tower 8.|r
+}
+
+STRING 2391
+// Units: h029 (Bash Tower 5: Mortar Tank), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Damage:|r |c0077ff7722000
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff771.47 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Bash; chance to stun and deal extra damage|r
 }
 
 STRING 2392
@@ -15988,6 +15766,93 @@ STRING 2396
 // Units: h00Q (Glaive Tower 4: Enchanted Machine), Hotkey (Hotkey)
 {
 X
+}
+
+STRING 2397
+// Units: h015 (Bash Tower 7: Bloodfiend), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Damage:|r |c0077ff7750000
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff771.67 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Bash; chance to stun and deal extra damage|r
+}
+
+STRING 2398
+// Units: h02B (Uther, Ultimate Research Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Base Damage:|r |c0077ff7733000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Improvements:|r |c0077ff774
+|c0000ff00Efficiency:|r |c0077ff771.65 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Level 1 Multishot, can be improved|r
+|c0000ff00Ability (2):|r |c0077ff77Improvements; research improvements|r
+}
+
+STRING 2399
+// Units: h032 (Bash Tower 6: Siege Golem), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Damage:|r |c0077ff7735000
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff771.56 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Bash; chance to stun and deal extra damage|r
+}
+
+STRING 2400
+// Units: h03V (Research Tower 4: Ancient of Wind), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Base Damage:|r |c0077ff773400
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Improvements:|r |c0077ff772
+|c0000ff00Efficiency:|r |c0077ff771.21 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Level 1 Multishot, can be improved|r
+|c0000ff00Ability (2):|r |c0077ff77Improvements; research improvements|r
+}
+
+STRING 2401
+// Units: h03W (Research Tower 3: Hydra), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Base Damage:|r |c0077ff771800
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Improvements:|r |c0077ff771
+|c0000ff00Efficiency:|r |c0077ff771.16 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Level 1 Multishot, can be improved|r
+|c0000ff00Ability (2):|r |c0077ff77Improvements; research improvements|r
+}
+
+STRING 2402
+// Units: h03X (Research Tower 6: Wildkin), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Base Damage:|r |c0077ff778800
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Improvements:|r |c0077ff772
+|c0000ff00Efficiency:|r |c0077ff771.37 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Level 1 Multishot, can be improved|r
+|c0000ff00Ability (2):|r |c0077ff77Improvements; research improvements|r
+}
+
+STRING 2403
+// Units: h03Y (Research Tower 7: Ancient Sasquatch), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Base Damage:|r |c0077ff7713000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Improvements:|r |c0077ff773
+|c0000ff00Efficiency:|r |c0077ff771.44 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Level 1 Multishot, can be improved|r
+|c0000ff00Ability (2):|r |c0077ff77Improvements; research improvements|r
 }
 
 STRING 2404
@@ -16066,6 +15931,19 @@ STRING 2414
 -- Spell Immunity icon is now hidden
 }
 
+STRING 2415
+// Units: h03Z (Research Tower 9: Albatross), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Base Damage:|r |c0077ff7726000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Improvements:|r |c0077ff773
+|c0000ff00Efficiency:|r |c0077ff771.62 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Level 1 Multishot, can be improved|r
+|c0000ff00Ability (2):|r |c0077ff77Improvements; research improvements|r
+}
+
 STRING 2416
 // Abilities: A023 (Upgrade Trap Ability), Tip (Tooltip - Normal)
 {
@@ -16088,10 +15966,36 @@ STRING 2419
 maps.w3reforged.com
 }
 
+STRING 2420
+// Units: h040 (Research Tower 2: Tinker), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Base Damage:|r |c0077ff77900
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Improvements:|r |c0077ff771
+|c0000ff00Efficiency:|r |c0077ff771.13 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Level 1 Multishot, can be improved|r
+|c0000ff00Ability (2):|r |c0077ff77Improvements; research improvements|r
+}
+
 STRING 2421
 // Abilities: A04E (Multishot), Ubertip (Tooltip - Normal - Extended)
 {
 |c0077ff77The Shard Tower is able to attack 3 Enemies in one Attack.|r
+}
+
+STRING 2422
+// Units: h041 (Research Tower 5: Bandit Lord), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Base Damage:|r |c0077ff775700
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Improvements:|r |c0077ff772
+|c0000ff00Efficiency:|r |c0077ff771.29 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Level 1 Multishot, can be improved|r
+|c0000ff00Ability (2):|r |c0077ff77Improvements; research improvements|r
 }
 
 STRING 2423
@@ -16444,6 +16348,19 @@ STRING 2477
 |c0000ff00Efficiency:|r |c0077ff770.33 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Multishot; can attack up to 6 enemy units.|r
 |c0000ff00Ability (2):|r |c0077ff77Soul Extraction; attacks have a 10% chance to deal 5% of an enemy units current health as chaos damage, the tower gains mana equal to the damage dealt. When above 75% mana tower has a 10% chance to use all mana to summon 5 minions.|r
+}
+
+STRING 2478
+// Units: h042 (Research Tower 8: Naga Myrmidon), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Base Damage:|r |c0077ff7719500
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Improvements:|r |c0077ff773
+|c0000ff00Efficiency:|r |c0077ff771.56 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Level 1 Multishot, can be improved|r
+|c0000ff00Ability (2):|r |c0077ff77Improvements; research improvements|r
 }
 
 STRING 2479
@@ -16804,19 +16721,6 @@ STRING 2531
 [Soul Tower]
 }
 
-STRING 2532
-// Units: h009 (Poison Tower 3: Necromancer), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Can be upgraded into Poison, Venom or Fel Towers.|r
-
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff770.50
-|c0000ff00Damage:|r |c0077ff771100
-|c0000ff00Range:|r |c0077ff771000
-|c0000ff00Efficiency:|r |c0077ff771.10 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Slow Poison; reduces enemy movement by 30%
-}
-
 STRING 2533
 // Units: h020 (Chaos Tower 3: Chaos Golem), Ubertip (Tooltip - Extended)
 {
@@ -17065,6 +16969,24 @@ STRING 2565
 |c0077ff77[X] |c0000ff00Upgrade To War Machine.|r |cAAAAFFAARocket Tower 4.|r
 }
 
+STRING 2566
+// Units: n01J (Trap Blueprint), Ubertip (Tooltip - Extended)
+{
+|c006969FF[Support Tower]|r
+
+|c0077ff77A Tower that can be upgraded into several traps. This tower does not deal damage, it must be upgraded.|r
+
+|c0077ff77Traps are limited to 1 of each type.
+
+|c0000ff00Fire Trap:|r |c0077ff77Immolation|r
+|c0000ff00Frost Trap:|r |c0077ff77Frost Blast|r
+|c0000ff00Poison Trap:|r |c0077ff77Poison Bolt|r
+|c0000ff00Dark Trap:|r |c0077ff77Dark Bomb|r
+|c0000ff00Earth Trap:|r |c0077ff77Slam|r
+|c0000ff00Blood Trap:|r |c0077ff77Bloodstrike|r
+|c0000ff00Iron Trap:|r |c0077ff77Land Mines|r
+}
+
 STRING 2567
 // Units: n00X (Shard Tower 4: Frozen Obelisk), Hotkey (Hotkey)
 {
@@ -17247,6 +17169,23 @@ STRING 2593
 Green TD Evolution uses some imported resources, most of them are existing images that i have
 }
 
+STRING 2594
+// Units: h00G (Aura Tower), Ubertip (Tooltip - Extended)
+{
+|c006969FF[Support Tower]|r
+
+|c0077ff77Tower that allows you to unlock several Auras, some affect your towers whilst others affect creeps.
+
+|c0000ff00Speed Aura: |c0077ff77Increased Speed|r
+|c0000ff00Damage Aura: |c0077ff77Increased Damage|r
+|c0000ff00Critical Aura: |c0077ff77Increased Crit Damage and Chance|r
+|c0000ff00Gold Aura: |c0077ff77Chance for Extra Gold on kill|r
+|c0000ff00Armour Aura: |c00FF0000Decreased Armour|r
+|c0000ff00Crippling Aura: |c00FF0000Decreased Move Speed|r
+
+|c0077ff77This tower does not come with any active auras, you must unlock them with gold.|r
+}
+
 STRING 2595
 {
 |c0096FF96200% from Siege
@@ -17271,6 +17210,17 @@ STRING 2597
 |c0096FF9650% from Chaos
 }
 
+STRING 2598
+// Units: h005 (Flesh Golem, Ultimate Bash Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Damage:|r |c0077ff7770000
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff771.75 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Bash; chance to stun and deal extra damage|r
+}
+
 STRING 2599
 {
 |c0096FF96200% from Siege
@@ -17293,6 +17243,19 @@ STRING 2601
 |c0096FF96100% from Hero
 |c0096FF9675% from Pierce
 |c0096FF9650% from Chaos
+}
+
+STRING 2602
+// Units: h006 (Bash Tower 4: Mountain Smasher), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Damage:|r |c0077ff7714000
+|c0000ff00Range:|r |c0077ff77800
+|c0000ff00Efficiency:|r |c0077ff771.40 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Bash; chance to stun and deal extra damage|r
+
+|c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
 }
 
 STRING 2603
@@ -17404,6 +17367,38 @@ STRING 2616
 |c0096FF9625% to Divine|r
 }
 
+STRING 2617
+// Units: h007 (Uther, Ultimate Research Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00[Upgrade Shortcut]
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Base Damage:|r |c0077ff7733000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Improvements:|r |c0077ff774
+|c0000ff00Efficiency:|r |c0077ff771.65 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Level 1 Multishot, can be improved|r
+|c0000ff00Ability (2):|r |c0077ff77Improvements; research improvements|r
+
+|c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
+}
+
+STRING 2618
+// Units: h00A (Research Tower 5: Bandit Lord), Ubertip (Tooltip - Extended)
+{
+|c0000ff00[Upgrade Shortcut]
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Base Damage:|r |c0077ff775700
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Improvements:|r |c0077ff772
+|c0000ff00Efficiency:|r |c0077ff771.29 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Level 1 Multishot, can be improved|r
+|c0000ff00Ability (2):|r |c0077ff77Improvements; research improvements|r
+
+|c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
+}
+
 STRING 2619
 {
 |c0096FF96200% to Fortified|r
@@ -17426,6 +17421,32 @@ STRING 2621
 |c0096FF96125% to Heavy|r
 |c0096FF9675% to Others|r
 |c0096FF9625% to Divine|r
+}
+
+STRING 2622
+// Units: h00C (Poison Tower 5: Shaman), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff774400
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff771.16 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Slow Poison; 30% reduced move speed
+
+|c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
+}
+
+STRING 2623
+// Units: h00D (Hydralisk, Ultimate Poison Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Pierce
+|c0000ff00Cooldown:|r |c0077ff770.50
+|c0000ff00Damage:|r |c0077ff7730000
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff771.36 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Slow Poison; 30% reduced move speed
+
+|c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
 }
 
 STRING 2624
@@ -17452,49 +17473,40 @@ STRING 2626
 |c0096FF9625% to Divine|r
 }
 
+STRING 2627
+// Units: h00M (Siege Tower 5: Skeletal Grunt), Ubertip (Tooltip - Extended)
+{
+|c0000ff00[Upgrade Shortcut]
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff777000
+|c0000ff00Range:|r |c0077ff77800 (ground only)
+|c0000ff00Efficiency:|r |c0077ff771.32 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (ground only)|r
+
+|c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
+}
+
+STRING 2628
+// Units: n019 (Air Tower 5: Nether Drake), Ubertip (Tooltip - Extended)
+{
+|c0000ff00[Upgrade Shortcut]
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Damage:|r |c0077ff778000
+|c0000ff00Range:|r |c0077ff771200 (air only)
+|c0000ff00Efficiency:|r |c0077ff771.33 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (air only)|r
+
+|c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
+}
+
 STRING 2629
 {
 |c0096FF96200% to Fortified|r
 |c0096FF96125% to Others|r
 |c0096FF9675% to Hero|r
 |c0096FF9625% to Divine|r
-}
-
-STRING 2630
-// Units: h000 (Siege Tower 1: Footman), Ubertip (Tooltip - Extended)
-{
-|c00FF0000[Primary Tower]|r
-
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff77300
-|c0000ff00Range:|r |c0077ff77800 (ground only)
-|c0000ff00Efficiency:|r |c0077ff771 Damage per Gold (Total Gold Value)
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 300 (ground only)|r
-
-
-|c0000ff00200% |c0077ff77vs Fortified Armour.
-|c0000ff00125% |c0077ff77vs Other Armours.
-|c0000ff0075% |c0077ff77vs Hero Armour.
-|c0000ff0025% |c0077ff77vs Divine Armour.
-}
-
-STRING 2631
-// Units: h008 (Poison Tower 1: Elven Archer), Ubertip (Tooltip - Extended)
-{
-|c00FFFF00[Secondary Tower]|r
-
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff770.50
-|c0000ff00Damage:|r |c0077ff77100
-|c0000ff00Range:|r |c0077ff771000
-|c0000ff00Efficiency:|r |c0077ff771 Damage per Gold (Total Gold Value)
-|c0000ff00Ability:|r |c0077ff77Slow Poison; reduces enemy movement by 30%
-
-|c0000ff00200% |c0077ff77vs Light Armour.
-|c0000ff00125% |c0077ff77vs Medium Armour.
-|c0000ff0075% |c0077ff77vs Other Armours.
-|c0000ff0025% |c0077ff77vs Divine Armour.
 }
 
 STRING 2632
@@ -17514,77 +17526,6 @@ STRING 2632
 |c0000ff00125% |c0077ff77vs Light.
 |c0000ff0075% |c0077ff77vs Other.
 |c0000ff00Unable to attack Divine.
-}
-
-STRING 2633
-// Units: n00M (Air Tower 1: Centaur Archer), Ubertip (Tooltip - Extended)
-{
-|c00FF0000[Primary Tower]|r
-
-|c0000ff00Attack:|r |c0077ff77Siege
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Damage:|r |c0077ff77500
-|c0000ff00Range:|r |c0077ff771200 (air only)
-|c0000ff00Efficiency:|r |c0077ff771 Damage per Gold (Total Gold Value)
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (air only)|r
-
-
-|c0000ff00200% |c0077ff77vs Fortified Armour.
-|c0000ff0025% |c0077ff77vs Divine Armour.
-}
-
-STRING 2634
-// Units: h01I (Research Tower 1: Demon Hunter), Ubertip (Tooltip - Extended)
-{
-|c00FFFF00[Secondary Tower]|r
-
-|c0000ff00Attack:|r |c0077ff77Hero
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Base Damage:|r |c0077ff77400
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Improvements:|r |c0077ff771
-|c0000ff00Efficiency:|r |c0077ff771 Damage per Gold (Total Gold Value)
-|c0000ff00Ability:|r |c0077ff77Level 1 Multishot, can be improved via research|r
-|c0000ff00Ability (2):|r |c0077ff77Improvements; can research improvements|r
-
-|c0000ff00200% |c0077ff77vs Hero Armour.
-|c0000ff00100% |c0077ff77vs Other Armours.
-|c0000ff0025% |c0077ff77vs Divine Armours.
-}
-
-STRING 2635
-// Units: h023 (Chaos Tower 1: Chaos Skeleton), Ubertip (Tooltip - Extended)
-{
-|c00FF0000[Primary Tower]|r
-
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Damage:|r |c0077ff77600
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff771 Damage per Gold (Total Gold Value)
-|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 500|r
-
-
-|c0000ff00200% |c0077ff77vs Divine Armour.
-|c0000ff0050% |c0077ff77vs Other Armours.
-}
-
-STRING 2636
-// Units: h021 (Bash Tower 1: Storm Panda), Ubertip (Tooltip - Extended)
-{
-|c00FFFF00[Secondary Tower]|r
-
-|c0000ff00Attack:|r |c0077ff77Pierce
-|c0000ff00Cooldown:|r |c0077ff771.00
-|c0000ff00Damage:|r |c0077ff771000
-|c0000ff00Range:|r |c0077ff77800
-|c0000ff00Efficiency:|r |c0077ff771 Damage per Gold (Total Gold Value)
-|c0000ff00Ability:|r |c0077ff77Bash; 70% chance to stun and deal extra damage|r
-
-|c0000ff00200% |c0077ff77vs Light
-|c0000ff00125% |c0077ff77vs Medium
-|c0000ff0075% |c0077ff77vs Other
-|c0000ff0025% |c0077ff77vs Divine
 }
 
 STRING 2637
@@ -18178,6 +18119,20 @@ STRING 2723
 // Abilities: A04J (Incinerate), Name (Name)
 {
 Incinerate
+}
+
+STRING 2724
+// Units: n01B (Bronze Dragon, Ultimate Air Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00[Upgrade Shortcut]
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Damage:|r |c0077ff7735000
+|c0000ff00Range:|r |c0077ff771200 (air only)
+|c0000ff00Efficiency:|r |c0077ff771.59 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 400 (air only)|r
+
+|c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
 }
 
 STRING 2725
@@ -19634,6 +19589,20 @@ STRING 2935
 Z
 }
 
+STRING 2936
+// Units: h002 (Aspect Of Blood, Ultimate Siege Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00[Upgrade Shortcut]
+|c0000ff00Attack:|r |c0077ff77Siege
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff7743000
+|c0000ff00Range:|r |c0077ff77800 (ground only)
+|c0000ff00Efficiency:|r |c0077ff771.73 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 500 (ground only)|r
+
+|c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
+}
+
 STRING 2937
 // Abilities: A04D (Frost Nova), EditorSuffix (Editor Suffix)
 {
@@ -20055,6 +20024,19 @@ Rocket Tower 6: War Machine
 STRING 3001
 {
 |c0077ff77Siege Damage|r |c0000ff00deals |c0077ff77200% |c0000ff00|c0000ff00to Air Units.
+}
+
+STRING 3002
+// Units: h00E (Chaos Tower 5: Chaos Infernal), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Damage:|r |c0077ff778500
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficency:|r |c0077ff771.13 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 500|r
+
+|c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
 }
 
 STRING 3003
@@ -20547,6 +20529,19 @@ STRING 3072
 Z
 }
 
+STRING 3073
+// Units: h00F (Chaos Orb, Ultimate Chaos Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff771.00
+|c0000ff00Damage:|r |c0077ff7742500
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficency:|r |c0077ff771.31 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 500|r
+
+|c0077ff77The gold cost of this upgrade is the total gold cost of all upgrades up to this tower.|r
+}
+
 STRING 3074
 // Abilities: A04O (Poison Bolt and Poison Cascade), Ubertip (Tooltip - Normal - Extended)
 {
@@ -20569,6 +20564,12 @@ STRING 3076
 // Abilities: A04I (Shrapnel Blast), Tip (Tooltip - Normal)
 {
 |c0000ff00Shrapnel Blast
+}
+
+STRING 3077
+// Units: u003 (Shaman), EditorSuffix (Name - Editor Suffix)
+{
+[Gem TD Easter Egg]
 }
 
 STRING 3084
