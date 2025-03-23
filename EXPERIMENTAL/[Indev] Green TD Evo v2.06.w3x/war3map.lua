@@ -725,6 +725,8 @@ gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
+gg_trg_Weh = nil
+gg_unit_n026_0130 = nil
 function InitGlobals()
 local i = 0
 
@@ -2551,6 +2553,7 @@ gg_unit_z000_0122 = BlzCreateUnitWithSkin(p, FourCC("z000"), -8664.9, -6395.9, 9
 gg_unit_z000_0123 = BlzCreateUnitWithSkin(p, FourCC("z000"), -8380.4, -6325.5, 148.860, FourCC("z000"))
 gg_unit_o00I_0124 = BlzCreateUnitWithSkin(p, FourCC("o00I"), -8064.2, 1974.8, 209.483, FourCC("o00I"))
 u = BlzCreateUnitWithSkin(p, FourCC("u003"), 5452.9, 7164.6, 36.490, FourCC("u003"))
+gg_unit_n026_0130 = BlzCreateUnitWithSkin(p, FourCC("n026"), -1796.7, 2995.3, 148.660, FourCC("n026"))
 end
 
 function CreatePlayerBuildings()
@@ -5756,6 +5759,20 @@ function InitTrig_Smonze()
 gg_trg_Smonze = CreateTrigger()
 TriggerRegisterUnitEvent(gg_trg_Smonze, gg_unit_n01D_0119, EVENT_UNIT_DEATH)
 TriggerAddAction(gg_trg_Smonze, Trig_Smonze_Actions)
+end
+
+function Trig_Weh_Actions()
+CreateTextTagUnitBJ("TRIGSTR_3080", GetTriggerUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
+SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
+SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
+SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
+SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
+end
+
+function InitTrig_Weh()
+gg_trg_Weh = CreateTrigger()
+TriggerRegisterUnitEvent(gg_trg_Weh, gg_unit_n026_0130, EVENT_UNIT_SELECTED)
+TriggerAddAction(gg_trg_Weh, Trig_Weh_Actions)
 end
 
 function Trig_Creep_Boosting_Func009C()
@@ -17376,6 +17393,7 @@ InitTrig_Tabaho()
 InitTrig_Alpharius_Omegon()
 InitTrig_Ork()
 InitTrig_Smonze()
+InitTrig_Weh()
 InitTrig_Creep_Boosting()
 InitTrig_Hero_XP()
 InitTrig_Hero_Level_Up_Point()

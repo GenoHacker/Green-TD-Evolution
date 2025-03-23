@@ -20608,6 +20608,17 @@ Void Blast has a [10% + 1% for each Void Trap built globally] chance to inflict 
 |c0000ff00Ability:|r |c0077ff77Void Contagion
 }
 
+STRING 3080
+{
+Weh!
+}
+
+STRING 3081
+// Units: n026 (Lizard), Name (Name)
+{
+Lizard
+}
+
 STRING 3084
 // Abilities: A04L (Incinerate and Flask of Oil), Ubertip (Tooltip - Normal - Extended)
 {
