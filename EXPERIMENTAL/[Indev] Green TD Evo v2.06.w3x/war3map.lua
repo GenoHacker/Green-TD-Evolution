@@ -565,6 +565,7 @@ gg_trg_Tabaho = nil
 gg_trg_Alpharius_Omegon = nil
 gg_trg_Ork = nil
 gg_trg_Smonze = nil
+gg_trg_Weh = nil
 gg_trg_Creep_Boosting = nil
 gg_trg_Hero_XP = nil
 gg_trg_Hero_Level_Up_Point = nil
@@ -725,7 +726,6 @@ gg_unit_z000_0123 = nil
 gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
-gg_trg_Weh = nil
 gg_unit_n026_0130 = nil
 function InitGlobals()
 local i = 0
