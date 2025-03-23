@@ -18,7 +18,7 @@ Credits
 
 -- BTNMysteryPot2 and DISBTNMysteryPot2, Downloaded from HiveWorkshop, Created by kola. Used for Random Game Modes, Difficulty + Towers icon.
 
--- LUA Damage Engine by Bride
+-- LUA Damage Engine by Bribe
 
 -- Arcing Text Tag by Maker
 
