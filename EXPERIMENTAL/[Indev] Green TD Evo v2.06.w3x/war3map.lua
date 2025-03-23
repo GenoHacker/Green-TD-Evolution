@@ -3218,7 +3218,6 @@ udg_Real_ShrapTowerUnitArm = BlzGetUnitArmor(udg_DamageEventTarget)
 end
 udg_Point_Array_ShrapTower[udg_Integer_ShrapTowerPlyNum] = GetUnitLoc(udg_DamageEventTarget)
 CreateNUnitsAtLoc(1, FourCC("o00H"), ConvertedPlayer(udg_Integer_ShrapTowerPlyNum), udg_Point_Array_ShrapTower[udg_Integer_ShrapTowerPlyNum], bj_UNIT_FACING)
-UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
 UnitDamagePointLoc(GetLastCreatedUnit(), 0, 300.00, udg_Point_Array_ShrapTower[udg_Integer_ShrapTowerPlyNum], (500.00 * (1 + udg_Real_ShrapTowerUnitArm)), ATTACK_TYPE_PIERCE, DAMAGE_TYPE_NORMAL)
 AddSpecialEffectLocBJ(udg_Point_Array_ShrapTower[udg_Integer_ShrapTowerPlyNum], "Abilities\\Spells\\NightElf\\FanOfKnives\\FanOfKnivesCaster.mdl")
         RemoveLocation(udg_Point_Array_ShrapTower[Integer_ShrapTowerPlyNum])
@@ -4813,7 +4812,7 @@ SetPlayerTechMaxAllowedSwap(FourCC("n01I"), 1, GetEnumPlayer())
 SetPlayerTechMaxAllowedSwap(FourCC("n01A"), 1, GetEnumPlayer())
 SetPlayerTechMaxAllowedSwap(FourCC("n01K"), 1, GetEnumPlayer())
 SetPlayerStateBJ(GetEnumPlayer(), PLAYER_STATE_RESOURCE_FOOD_CAP, 10)
-SetPlayerStateBJ(GetEnumPlayer(), PLAYER_STATE_RESOURCE_GOLD, 500)
+SetPlayerStateBJ(GetEnumPlayer(), PLAYER_STATE_RESOURCE_GOLD, 999999)
 SetPlayerStateBJ(GetEnumPlayer(), PLAYER_STATE_RESOURCE_LUMBER, 1)
 end
 
