@@ -427,6 +427,7 @@ udg_UnitGroup_Array_CascadePreG = {}
 udg_Integer_HellfirePlyNum = 0
 udg_Point_Array_HellfireTower = {}
 udg_Integer_Array_HellfireChance = __jarray(0)
+udg_Player_Inactive = nil
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -3216,7 +3217,8 @@ else
 udg_Real_ShrapTowerUnitArm = BlzGetUnitArmor(udg_DamageEventTarget)
 end
 udg_Point_Array_ShrapTower[udg_Integer_ShrapTowerPlyNum] = GetUnitLoc(udg_DamageEventTarget)
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(udg_DamageEventSource), udg_Point_Array_ShrapTower[udg_Integer_ShrapTowerPlyNum], bj_UNIT_FACING)
+CreateNUnitsAtLoc(1, FourCC("o00H"), ConvertedPlayer(udg_Integer_ShrapTowerPlyNum), udg_Point_Array_ShrapTower[udg_Integer_ShrapTowerPlyNum], bj_UNIT_FACING)
+UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
 UnitDamagePointLoc(GetLastCreatedUnit(), 0, 300.00, udg_Point_Array_ShrapTower[udg_Integer_ShrapTowerPlyNum], (500.00 * (1 + udg_Real_ShrapTowerUnitArm)), ATTACK_TYPE_PIERCE, DAMAGE_TYPE_NORMAL)
 AddSpecialEffectLocBJ(udg_Point_Array_ShrapTower[udg_Integer_ShrapTowerPlyNum], "Abilities\\Spells\\NightElf\\FanOfKnives\\FanOfKnivesCaster.mdl")
         RemoveLocation(udg_Point_Array_ShrapTower[Integer_ShrapTowerPlyNum])
@@ -3406,9 +3408,9 @@ if (Trig_Shard_Tower_Abilities_Func003Func004C()) then
 udg_Point_Array_ShardTower[udg_Integer_ShardTowerPlyNum] = GetUnitLoc(udg_DamageEventTarget)
 SetUnitManaBJ(udg_DamageEventSource, (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + (10.00 * I2R(udg_Integer_WaveNumber))))
 CreateNUnitsAtLoc(1, FourCC("o00H"), ConvertedPlayer(udg_Integer_ShardTowerPlyNum), udg_Point_Array_ShardTower[udg_Integer_ShardTowerPlyNum], bj_UNIT_FACING)
+UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
             RemoveLocation(udg_Point_Array_ShardTower[Integer_ShardTowerPlyNum])
 UnitDamageTargetBJ(GetLastCreatedUnit(), udg_DamageEventTarget, (I2R(BlzGetUnitBaseDamage(udg_DamageEventSource, 0)) * 0.25), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
-UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
 UnitAddAbilityBJ(FourCC("A04D"), GetLastCreatedUnit())
 IssueTargetOrderBJ(GetLastCreatedUnit(), "frostnova", udg_DamageEventTarget)
 else
@@ -3473,8 +3475,8 @@ while (true) do
 if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
 udg_Point_Array_SpiritTower[udg_Integer_SpiritTowerPlyNum] = PolarProjectionBJ(GetUnitLoc(udg_DamageEventSource), 450.00, (I2R(GetForLoopIndexA()) * (360.00 / 24.00)))
 CreateNUnitsAtLoc(1, FourCC("u000"), ConvertedPlayer(udg_Integer_SpiritTowerPlyNum), udg_Point_Array_SpiritTower[udg_Integer_SpiritTowerPlyNum], bj_UNIT_FACING)
-                RemoveLocation(udg_Point_Array_SpiritTower[Integer_SpiritTowerPlyNum])
 UnitApplyTimedLifeBJ(15.00, FourCC("BTLF"), GetLastCreatedUnit())
+                RemoveLocation(udg_Point_Array_SpiritTower[Integer_SpiritTowerPlyNum])
 bj_forLoopAIndex = bj_forLoopAIndex + 1
 end
 SetUnitManaBJ(udg_DamageEventSource, 0)
@@ -8948,30 +8950,47 @@ TriggerRegisterPlayerChatEvent(gg_trg_RedAfk_Ready, Player(8), "-rdy", true)
 TriggerAddAction(gg_trg_RedAfk_Ready, Trig_RedAfk_Ready_Actions)
 end
 
-function Trig_Red_Inactive_Func002C()
-if (GetPlayerSlotState(GetOwningPlayer(gg_unit_n00C_0019)) == PLAYER_SLOT_STATE_EMPTY) then
+function Trig_Red_Inactive_Conditions()
+if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("n00C"))) then
+return false
+end
 return true
 end
-if (GetPlayerSlotState(GetOwningPlayer(gg_unit_n00C_0019)) == PLAYER_SLOT_STATE_LEFT) then
+
+function Trig_Red_Inactive_Func010Func002C()
+if (GetPlayerSlotState(udg_Player_Inactive) == PLAYER_SLOT_STATE_EMPTY) then
+return true
+end
+if (GetPlayerSlotState(udg_Player_Inactive) == PLAYER_SLOT_STATE_LEFT) then
 return true
 end
 return false
 end
 
-function Trig_Red_Inactive_Conditions()
-if (not Trig_Red_Inactive_Func002C()) then
+function Trig_Red_Inactive_Func010C()
+if (not Trig_Red_Inactive_Func010Func002C()) then
 return false
 end
 return true
 end
 
 function Trig_Red_Inactive_Actions()
+udg_Player_Inactive = GetOwningPlayer(gg_unit_n00C_0019)
+if (Trig_Red_Inactive_Func010C()) then
 SetUnitOwner(gg_unit_n00C_0019, GetTriggerPlayer(), true)
+else
+end
 end
 
 function InitTrig_Red_Inactive()
 gg_trg_Red_Inactive = CreateTrigger()
-TriggerRegisterUnitEvent(gg_trg_Red_Inactive, gg_unit_n00C_0019, EVENT_UNIT_SELECTED)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Red_Inactive, Player(1), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Red_Inactive, Player(2), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Red_Inactive, Player(3), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Red_Inactive, Player(4), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Red_Inactive, Player(6), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Red_Inactive, Player(7), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Red_Inactive, Player(8), true)
 TriggerAddCondition(gg_trg_Red_Inactive, Condition(Trig_Red_Inactive_Conditions))
 TriggerAddAction(gg_trg_Red_Inactive, Trig_Red_Inactive_Actions)
 end
@@ -14067,7 +14086,7 @@ end
 
 function Trig_Player_Leave_Gold_Split_Func010A()
 if (Trig_Player_Leave_Gold_Split_Func010Func001C()) then
-DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetTriggerPlayer())] .. (GetPlayerName(GetTriggerPlayer()) .. ("|cff00FF00, Has left the game. You have been given|r |cffFDD017" .. (I2S((udg_Integer_PlayerLeaveGold // udg_Integer_Players)) .. " Gold.|r")))))
+DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetTriggerPlayer())] .. ("" .. ("|cff00FF00, Has left the game. You have been given|r |cffFDD017" .. (I2S((udg_Integer_PlayerLeaveGold // udg_Integer_Players)) .. " Gold.|r")))))
 AdjustPlayerStateBJ((udg_Integer_PlayerLeaveGold // udg_Integer_Players), GetEnumPlayer(), PLAYER_STATE_RESOURCE_GOLD)
 else
 end
