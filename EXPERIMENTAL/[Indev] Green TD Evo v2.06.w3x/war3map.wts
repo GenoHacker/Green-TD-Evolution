@@ -2315,99 +2315,99 @@ STRING 338
 }
 
 STRING 339
-// Units: nahy ([Immune] Ancient Hydra), Name (Name)
+// Units: nahy ([Divine] Ancient Hydra), Name (Name)
 {
-[Immune] Ancient Hydra
+[Divine] Ancient Hydra
 }
 
 STRING 340
-// Units: nane ([Immune] Arachnathid Earth-borer ), Name (Name)
+// Units: nane ([Divine] Arachnathid Earth-borer ), Name (Name)
 {
-[Immune] Arachnathid Earth-borer 
+[Divine] Arachnathid Earth-borer 
 }
 
 STRING 341
-// Units: nbld ([Immune] Bandit Lord), Name (Name)
+// Units: nbld ([Divine] Bandit Lord), Name (Name)
 {
-[Immune] Bandit Lord
+[Divine] Bandit Lord
 }
 
 STRING 342
-// Units: nelb ([Immune] Berserk Elemental), Name (Name)
+// Units: nelb ([Divine] Berserk Elemental), Name (Name)
 {
-[Immune] Berserk Elemental
+[Divine] Berserk Elemental
 }
 
 STRING 343
-// Units: nbdw ([Immune] Blue Dragonspawn Warrior), Name (Name)
+// Units: nbdw ([Divine] Blue Dragonspawn Warrior), Name (Name)
 {
-[Immune] Blue Dragonspawn Warrior
+[Divine] Blue Dragonspawn Warrior
 }
 
 STRING 344
-// Units: nskf ([Immune] Burning Archer), Name (Name)
+// Units: nskf ([Divine] Burning Archer), Name (Name)
 {
-[Immune] Burning Archer
+[Divine] Burning Archer
 }
 
 STRING 345
-// Units: ncim ([Immune] Centaur Impaler), Name (Name)
+// Units: ncim ([Divine] Centaur Impaler), Name (Name)
 {
-[Immune] Centaur Impaler
+[Divine] Centaur Impaler
 }
 
 STRING 346
-// Units: ndtp ([Immune] Dark Troll Shadow Priest), Name (Name)
+// Units: ndtp ([Divine] Dark Troll Shadow Priest), Name (Name)
 {
-[Immune] Dark Troll Shadow Priest
+[Divine] Dark Troll Shadow Priest
 }
 
 STRING 347
-// Units: nlrv ([Immune] Deeplord Revenant), Name (Name)
+// Units: nlrv ([Divine] Deeplord Revenant), Name (Name)
 {
-[Immune] Deeplord Revenant
+[Divine] Deeplord Revenant
 }
 
 STRING 348
-// Units: ndrh ([Immune] Draenei Harbinger), Name (Name)
+// Units: ndrh ([Divine] Draenei Harbinger), Name (Name)
 {
-[Immune] Draenei Harbinger
+[Divine] Draenei Harbinger
 }
 
 STRING 349
-// Units: njgb ([Immune] Enraged Jungle Stalker), Name (Name)
+// Units: njgb ([Divine] Enraged Jungle Stalker), Name (Name)
 {
-[Immune] Enraged Jungle Stalker
+[Divine] Enraged Jungle Stalker
 }
 
 STRING 350
-// Units: nfod ([Immune] Faceless One Deathbringer), Name (Name)
+// Units: nfod ([Divine] Faceless One Deathbringer), Name (Name)
 {
-[Immune] Faceless One Deathbringer
+[Divine] Faceless One Deathbringer
 }
 
 STRING 351
-// Units: nfsh ([Immune] Forest Troll High Priest), Name (Name)
+// Units: nfsh ([Divine] Forest Troll High Priest), Name (Name)
 {
-[Immune] Forest Troll High Priest
+[Divine] Forest Troll High Priest
 }
 
 STRING 352
-// Units: ntrg ([Immune] Gargantuan Sea Turtle), Name (Name)
+// Units: ntrg ([Divine] Gargantuan Sea Turtle), Name (Name)
 {
-[Immune] Gargantuan Sea Turtle
+[Divine] Gargantuan Sea Turtle
 }
 
 STRING 353
-// Units: ntrt ([Immune] Giant Sea Turtle), Name (Name)
+// Units: ntrt ([Divine] Giant Sea Turtle), Name (Name)
 {
-[Immune] Giant Sea Turtle
+[Divine] Giant Sea Turtle
 }
 
 STRING 354
-// Units: ngns ([Immune] Gnoll Assassin), Name (Name)
+// Units: ngns ([Divine] Gnoll Assassin), Name (Name)
 {
-[Immune] Gnoll Assassin
+[Divine] Gnoll Assassin
 }
 
 STRING 355
@@ -2417,27 +2417,27 @@ Random Waves
 }
 
 STRING 356
-// Units: nubr ([Immune] Unbroken Rager), Name (Name)
+// Units: nubr ([Divine] Unbroken Rager), Name (Name)
 {
-[Immune] Unbroken Rager
+[Divine] Unbroken Rager
 }
 
 STRING 357
-// Units: ntka ([Immune] Tuskarr Spearman), Name (Name)
+// Units: ntka ([Divine] Tuskarr Spearman), Name (Name)
 {
-[Immune] Tuskarr Spearman
+[Divine] Tuskarr Spearman
 }
 
 STRING 358
-// Units: nwlt ([Immune] Timber Wolf), Name (Name)
+// Units: nwlt ([Divine] Timber Wolf), Name (Name)
 {
-[Immune] Timber Wolf
+[Divine] Timber Wolf
 }
 
 STRING 359
-// Units: nsra ([Immune] Stormreaver Apprentice), Name (Name)
+// Units: nsra ([Divine] Stormreaver Apprentice), Name (Name)
 {
-[Immune] Stormreaver Apprentice
+[Divine] Stormreaver Apprentice
 }
 
 STRING 360
@@ -2447,9 +2447,9 @@ R
 }
 
 STRING 361
-// Units: nska ([Immune] Skeleton Archer), Name (Name)
+// Units: nska ([Divine] Skeleton Archer), Name (Name)
 {
-[Immune] Skeleton Archer
+[Divine] Skeleton Archer
 }
 
 STRING 362
@@ -2459,45 +2459,45 @@ STRING 362
 }
 
 STRING 363
-// Units: nsel ([Immune] Sea Elemental), Name (Name)
+// Units: nsel ([Divine] Sea Elemental), Name (Name)
 {
-[Immune] Sea Elemental
+[Divine] Sea Elemental
 }
 
 STRING 364
-// Units: nsqo ([Immune] Sasquatch Oracle), Name (Name)
+// Units: nsqo ([Divine] Sasquatch Oracle), Name (Name)
 {
-[Immune] Sasquatch Oracle
+[Divine] Sasquatch Oracle
 }
 
 STRING 365
-// Units: nrog ([Immune] Rogue), Name (Name)
+// Units: nrog ([Divine] Rogue), Name (Name)
 {
-[Immune] Rogue
+[Divine] Rogue
 }
 
 STRING 366
-// Units: nrel ([Immune] Reef Elemental), Name (Name)
+// Units: nrel ([Divine] Reef Elemental), Name (Name)
 {
-[Immune] Reef Elemental
+[Divine] Reef Elemental
 }
 
 STRING 367
-// Units: nqbh ([Immune] Quillboar Hunter), Name (Name)
+// Units: nqbh ([Divine] Quillboar Hunter), Name (Name)
 {
-[Immune] Quillboar Hunter
+[Divine] Quillboar Hunter
 }
 
 STRING 368
-// Units: nfpe ([Immune] Polar Furbolg Elder Shaman), Name (Name)
+// Units: nfpe ([Divine] Polar Furbolg Elder Shaman), Name (Name)
 {
-[Immune] Polar Furbolg Elder Shaman
+[Divine] Polar Furbolg Elder Shaman
 }
 
 STRING 369
-// Units: nfrp ([Immune] Pandaren), Name (Name)
+// Units: nfrp ([Divine] Pandaren), Name (Name)
 {
-[Immune] Pandaren
+[Divine] Pandaren
 }
 
 STRING 370
@@ -2512,21 +2512,21 @@ Poison Bolt and Poison Cascade
 }
 
 STRING 372
-// Units: nomg ([Immune] Ogre Magi), Name (Name)
+// Units: nomg ([Divine] Ogre Magi), Name (Name)
 {
-[Immune] Ogre Magi
+[Divine] Ogre Magi
 }
 
 STRING 373
-// Units: nnwq ([Immune] Nerubian Queen), Name (Name)
+// Units: nnwq ([Divine] Nerubian Queen), Name (Name)
 {
-[Immune] Nerubian Queen
+[Divine] Nerubian Queen
 }
 
 STRING 374
-// Units: nmfs ([Immune] Murloc Flesheater), Name (Name)
+// Units: nmfs ([Divine] Murloc Flesheater), Name (Name)
 {
-[Immune] Murloc Flesheater
+[Divine] Murloc Flesheater
 }
 
 STRING 375
@@ -2542,33 +2542,33 @@ S
 }
 
 STRING 377
-// Units: nmcf ([Immune] Mur'gul Cliffrunner), Name (Name)
+// Units: nmcf ([Divine] Mur'gul Cliffrunner), Name (Name)
 {
-[Immune] Mur'gul Cliffrunner
+[Divine] Mur'gul Cliffrunner
 }
 
 STRING 378
-// Units: nlsn ([Immune] Makrura Snapper), Name (Name)
+// Units: nlsn ([Divine] Makrura Snapper), Name (Name)
 {
-[Immune] Makrura Snapper
+[Divine] Makrura Snapper
 }
 
 STRING 379
-// Units: nmgw ([Immune] Magnataur Warrior), Name (Name)
+// Units: nmgw ([Divine] Magnataur Warrior), Name (Name)
 {
-[Immune] Magnataur Warrior
+[Divine] Magnataur Warrior
 }
 
 STRING 380
-// Units: nvdl ([Immune] Lesser Voidwalker), Name (Name)
+// Units: nvdl ([Divine] Lesser Voidwalker), Name (Name)
 {
-[Immune] Lesser Voidwalker
+[Divine] Lesser Voidwalker
 }
 
 STRING 381
-// Units: njg1 ([Immune] Jungle Stalker), Name (Name)
+// Units: njg1 ([Divine] Jungle Stalker), Name (Name)
 {
-[Immune] Jungle Stalker
+[Divine] Jungle Stalker
 }
 
 STRING 382
@@ -2578,39 +2578,39 @@ STRING 382
 }
 
 STRING 383
-// Units: nits ([Immune] Ice Troll Berserker), Name (Name)
+// Units: nits ([Divine] Ice Troll Berserker), Name (Name)
 {
-[Immune] Ice Troll Berserker
+[Divine] Ice Troll Berserker
 }
 
 STRING 384
-// Units: nvdg ([Immune] Greater Voidwalker), Name (Name)
+// Units: nvdg ([Divine] Greater Voidwalker), Name (Name)
 {
-[Immune] Greater Voidwalker
+[Divine] Greater Voidwalker
 }
 
 STRING 385
-// Units: nfrl ([Immune] Furbolg), Name (Name)
+// Units: nfrl ([Divine] Furbolg), Name (Name)
 {
-[Immune] Furbolg
+[Divine] Furbolg
 }
 
 STRING 386
-// Units: nfel ([Immune] Fel Stalker), Name (Name)
+// Units: nfel ([Divine] Fel Stalker), Name (Name)
 {
-[Immune] Fel Stalker
+[Divine] Fel Stalker
 }
 
 STRING 387
-// Units: njga ([Immune] Elder Jungle Stalker), Name (Name)
+// Units: njga ([Divine] Elder Jungle Stalker), Name (Name)
 {
-[Immune] Elder Jungle Stalker
+[Divine] Elder Jungle Stalker
 }
 
 STRING 388
-// Units: nenc ([Immune] Corrupted Treant), Name (Name)
+// Units: nenc ([Divine] Corrupted Treant), Name (Name)
 {
-[Immune] Corrupted Treant
+[Divine] Corrupted Treant
 }
 
 STRING 389
@@ -3742,9 +3742,9 @@ STRING 575
 }
 
 STRING 576
-// Units: nvdw ([Immune] Voidwalker), Name (Name)
+// Units: nvdw ([Divine] Voidwalker), Name (Name)
 {
-[Immune] Voidwalker
+[Divine] Voidwalker
 }
 
 STRING 577
