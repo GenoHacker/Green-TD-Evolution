@@ -6575,6 +6575,1214 @@ TriggerRegisterAnyUnitEventBJ(gg_trg_Instant_Upgrade, EVENT_PLAYER_UNIT_UPGRADE_
 TriggerAddAction(gg_trg_Instant_Upgrade, Trig_Instant_Upgrade_Actions)
 end
 
+function Trig_Tower_Swapping_Conditions()
+if (not (GetSpellAbilityId() == FourCC("A00U"))) then
+return false
+end
+return true
+end
+
+function Trig_Tower_Swapping_Actions()
+ReplaceUnitBJ(GetSpellTargetUnit(), GetUnitTypeId(GetSpellAbilityUnit()), bj_UNIT_STATE_METHOD_RELATIVE)
+SetUnitInvulnerable(GetLastReplacedUnitBJ(), true)
+UnitAddAbilityBJ(FourCC("A00G"), GetLastReplacedUnitBJ())
+SetUnitAbilityLevelSwapped(FourCC("A00G"), GetLastReplacedUnitBJ(), udg_Integer_Difficulty)
+ReplaceUnitBJ(GetSpellAbilityUnit(), GetUnitTypeId(GetSpellTargetUnit()), bj_UNIT_STATE_METHOD_RELATIVE)
+UnitAddAbilityBJ(FourCC("A00G"), GetLastReplacedUnitBJ())
+SetUnitAbilityLevelSwapped(FourCC("A00G"), GetLastReplacedUnitBJ(), udg_Integer_Difficulty)
+SetUnitInvulnerable(GetLastReplacedUnitBJ(), true)
+end
+
+function InitTrig_Tower_Swapping()
+gg_trg_Tower_Swapping = CreateTrigger()
+TriggerRegisterAnyUnitEventBJ(gg_trg_Tower_Swapping, EVENT_PLAYER_UNIT_SPELL_CAST)
+TriggerAddCondition(gg_trg_Tower_Swapping, Condition(Trig_Tower_Swapping_Conditions))
+TriggerAddAction(gg_trg_Tower_Swapping, Trig_Tower_Swapping_Actions)
+end
+
+function Trig_Emergency_Towers_Func001C()
+if (not (GetSpellAbilityId() == FourCC("A01U"))) then
+return false
+end
+return true
+end
+
+function Trig_Emergency_Towers_Func002C()
+if (not (GetSpellAbilityId() == FourCC("A01V"))) then
+return false
+end
+return true
+end
+
+function Trig_Emergency_Towers_Func003C()
+if (not (GetSpellAbilityId() == FourCC("A01W"))) then
+return false
+end
+return true
+end
+
+function Trig_Emergency_Towers_Func004C()
+if (not (GetSpellAbilityId() == FourCC("A01X"))) then
+return false
+end
+return true
+end
+
+function Trig_Emergency_Towers_Func005C()
+if (not (GetSpellAbilityId() == FourCC("A01Y"))) then
+return false
+end
+return true
+end
+
+function Trig_Emergency_Towers_Actions()
+if (Trig_Emergency_Towers_Func001C()) then
+udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] = GetSpellTargetLoc()
+udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())] = GetUnitLoc(GetTriggerUnit())
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetTriggerUnit()), udg_HeroPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], bj_UNIT_FACING)
+UnitAddAbilityBJ(FourCC("A016"), GetLastCreatedUnit())
+SetUnitAbilityLevelSwapped(FourCC("A016"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A01U"), GetTriggerUnit()))
+IssuePointOrderLocBJ(GetLastCreatedUnit(), "summonfactory", udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
+RemoveUnit(GetLastCreatedUnit())
+        RemoveLocation(udg_DummyPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
+        RemoveLocation(udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
+else
+end
+if (Trig_Emergency_Towers_Func002C()) then
+udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] = GetSpellTargetLoc()
+udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())] = GetUnitLoc(GetTriggerUnit())
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetTriggerUnit()), udg_HeroPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], bj_UNIT_FACING)
+UnitAddAbilityBJ(FourCC("A01T"), GetLastCreatedUnit())
+SetUnitAbilityLevelSwapped(FourCC("A01T"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A01V"), GetTriggerUnit()))
+IssuePointOrderLocBJ(GetLastCreatedUnit(), "summonfactory", udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
+RemoveUnit(GetLastCreatedUnit())
+        RemoveLocation(udg_DummyPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
+        RemoveLocation(udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
+else
+end
+if (Trig_Emergency_Towers_Func003C()) then
+udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] = GetSpellTargetLoc()
+udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())] = GetUnitLoc(GetTriggerUnit())
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetTriggerUnit()), udg_HeroPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], bj_UNIT_FACING)
+UnitAddAbilityBJ(FourCC("A00L"), GetLastCreatedUnit())
+SetUnitAbilityLevelSwapped(FourCC("A00L"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A01W"), GetTriggerUnit()))
+IssuePointOrderLocBJ(GetLastCreatedUnit(), "summonfactory", udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
+RemoveUnit(GetLastCreatedUnit())
+        RemoveLocation(udg_DummyPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
+        RemoveLocation(udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
+else
+end
+if (Trig_Emergency_Towers_Func004C()) then
+udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] = GetSpellTargetLoc()
+udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())] = GetUnitLoc(GetTriggerUnit())
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetTriggerUnit()), udg_HeroPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], bj_UNIT_FACING)
+UnitAddAbilityBJ(FourCC("A015"), GetLastCreatedUnit())
+SetUnitAbilityLevelSwapped(FourCC("A015"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A01X"), GetTriggerUnit()))
+IssuePointOrderLocBJ(GetLastCreatedUnit(), "summonfactory", udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
+RemoveUnit(GetLastCreatedUnit())
+        RemoveLocation(udg_DummyPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
+        RemoveLocation(udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
+else
+end
+if (Trig_Emergency_Towers_Func005C()) then
+udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] = GetSpellTargetLoc()
+udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())] = GetUnitLoc(GetTriggerUnit())
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetTriggerUnit()), udg_HeroPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], bj_UNIT_FACING)
+UnitAddAbilityBJ(FourCC("A012"), GetLastCreatedUnit())
+SetUnitAbilityLevelSwapped(FourCC("A012"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A01Y"), GetTriggerUnit()))
+IssuePointOrderLocBJ(GetLastCreatedUnit(), "summonfactory", udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
+RemoveUnit(GetLastCreatedUnit())
+        RemoveLocation(udg_DummyPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
+        RemoveLocation(udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
+else
+end
+end
+
+function InitTrig_Emergency_Towers()
+gg_trg_Emergency_Towers = CreateTrigger()
+TriggerRegisterAnyUnitEventBJ(gg_trg_Emergency_Towers, EVENT_PLAYER_UNIT_SPELL_CAST)
+TriggerAddAction(gg_trg_Emergency_Towers, Trig_Emergency_Towers_Actions)
+end
+
+function Trig_Auto_Blink_Func010C()
+if (not (DistanceBetweenPoints(GetUnitLoc(GetOrderedUnit()), GetOrderPointLoc()) >= 1200.00)) then
+return false
+end
+if (not (GetUnitTypeId(GetOrderedUnit()) == FourCC("U00E"))) then
+return false
+end
+return true
+end
+
+function Trig_Auto_Blink_Conditions()
+if (not Trig_Auto_Blink_Func010C()) then
+return false
+end
+return true
+end
+
+function Trig_Auto_Blink_Actions()
+udg_Point_Array_Blink[1] = GetUnitLoc(GetTriggerUnit())
+AddSpecialEffectLocBJ(udg_Point_Array_Blink[1], "Abilities\\Spells\\Items\\TomeOfRetraining\\TomeOfRetrainingCaster.mdl")
+DestroyEffectBJ(GetLastCreatedEffectBJ())
+    RemoveLocation(udg_Point_Array_Blink[1])
+udg_Point_Array_Blink[2] = GetOrderPointLoc()
+SetUnitPositionLoc(GetOrderedUnit(), udg_Point_Array_Blink[2])
+    RemoveLocation(udg_Point_Array_Blink[2])
+AddSpecialEffectTargetUnitBJ("origin", GetTriggerUnit(), "Abilities\\Spells\\Items\\TomeOfRetraining\\TomeOfRetrainingCaster.mdl")
+DestroyEffectBJ(GetLastCreatedEffectBJ())
+end
+
+function InitTrig_Auto_Blink()
+gg_trg_Auto_Blink = CreateTrigger()
+TriggerRegisterAnyUnitEventBJ(gg_trg_Auto_Blink, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
+TriggerAddCondition(gg_trg_Auto_Blink, Condition(Trig_Auto_Blink_Conditions))
+TriggerAddAction(gg_trg_Auto_Blink, Trig_Auto_Blink_Actions)
+end
+
+function Trig_Gamble_Conditions()
+if (not (GetSpellAbilityId() == FourCC("A011"))) then
+return false
+end
+return true
+end
+
+function Trig_Gamble_Func001Func002Func001Func002Func001Func007C()
+if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] >= 970)) then
+return false
+end
+if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] <= 1000)) then
+return false
+end
+return true
+end
+
+function Trig_Gamble_Func001Func002Func001Func002Func001C()
+if (not Trig_Gamble_Func001Func002Func001Func002Func001Func007C()) then
+return false
+end
+return true
+end
+
+function Trig_Gamble_Func001Func002Func001Func002Func005C()
+if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] >= 900)) then
+return false
+end
+if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] <= 969)) then
+return false
+end
+return true
+end
+
+function Trig_Gamble_Func001Func002Func001Func002C()
+if (not Trig_Gamble_Func001Func002Func001Func002Func005C()) then
+return false
+end
+return true
+end
+
+function Trig_Gamble_Func001Func002Func001Func003C()
+if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] >= 750)) then
+return false
+end
+if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] <= 899)) then
+return false
+end
+return true
+end
+
+function Trig_Gamble_Func001Func002Func001C()
+if (not Trig_Gamble_Func001Func002Func001Func003C()) then
+return false
+end
+return true
+end
+
+function Trig_Gamble_Func001Func002Func006C()
+if (not (udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] <= 1450)) then
+return false
+end
+return true
+end
+
+function Trig_Gamble_Func001Func002C()
+if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] <= 750)) then
+return false
+end
+return true
+end
+
+function Trig_Gamble_Func001C()
+if (not (GetPlayerState(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_GOLD) < udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])) then
+return false
+end
+return true
+end
+
+function Trig_Gamble_Actions()
+if (Trig_Gamble_Func001C()) then
+CreateTextTagUnitBJ(("You need " .. (I2S(udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]) .. " gold to gamble.")), GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
+else
+udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = GetRandomInt(udg_Integer_GambleBonus, 1000)
+if (Trig_Gamble_Func001Func002C()) then
+SetPlayerStateBJ(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD, (GetPlayerState(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD) - udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]))
+DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ("|c0000ff00 just gambled away |cffFDD017" .. (I2S(udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]) .. " Gold|c0000ff00."))))
+udg_Integer_Jackpot = (udg_Integer_Jackpot + udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
+udg_Integer_Array_GoldLostGambling[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = (udg_Integer_Array_GoldLostGambling[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] + udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
+if (Trig_Gamble_Func001Func002Func006C()) then
+udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] = (udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 50)
+else
+end
+else
+if (Trig_Gamble_Func001Func002Func001C()) then
+DisplayTimedTextToForce(GetPlayersAll(), 5.00, (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] .. ("|r|c0000ff00 just gambled |cffFDD017" .. (I2S(udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]) .. " Gold |c0000ff00and got their gold back."))))
+else
+if (Trig_Gamble_Func001Func002Func001Func002C()) then
+AdjustPlayerStateBJ(2000, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_GOLD)
+udg_Integer_Array_GoldWonGambling[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = (udg_Integer_Array_GoldWonGambling[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] + 2000)
+DisplayTimedTextToForce(GetPlayersAll(), 5.00, (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] .. ("|r|c0000ff00 just gambled |cffFDD017" .. (I2S(udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]) .. " Gold |c0000ff00and got |cffFDD0172000 Gold|c0000ff00!"))))
+else
+if (Trig_Gamble_Func001Func002Func001Func002Func001C()) then
+AdjustPlayerStateBJ(udg_Integer_Jackpot, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_GOLD)
+udg_Integer_Array_GoldWonGambling[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = (udg_Integer_Array_GoldWonGambling[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] + udg_Integer_Jackpot)
+udg_Integer_Array_JackpotsWon[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = (udg_Integer_Array_JackpotsWon[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] + 1)
+udg_String_JackpotWinner = udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]
+DisplayTimedTextToForce(GetPlayersAll(), 5.00, (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] .. ((("|r|c0000ff00 just gambled |cffFDD017" .. I2S(udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])) .. " Gold |c0000ff00and hit the |cffFDD017JACKPOT|c0000ff00. ") .. ("|c0000ff00Gaining |cffFDD017" .. (I2S(udg_Integer_Jackpot) .. " Gold|c0000ff00.")))))
+udg_Integer_Jackpot = 3000
+else
+end
+end
+end
+end
+end
+SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
+SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
+SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
+SetTextTagLifespanBJ(GetLastCreatedTextTag(), 3.00)
+ShowTextTagForceBJ(false, GetLastCreatedTextTag(), GetPlayersAll())
+ShowTextTagForceBJ(true, GetLastCreatedTextTag(), GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())))
+end
+
+function InitTrig_Gamble()
+gg_trg_Gamble = CreateTrigger()
+TriggerRegisterAnyUnitEventBJ(gg_trg_Gamble, EVENT_PLAYER_UNIT_SPELL_CAST)
+TriggerAddCondition(gg_trg_Gamble, Condition(Trig_Gamble_Conditions))
+TriggerAddAction(gg_trg_Gamble, Trig_Gamble_Actions)
+end
+
+function Trig_Transmute_Conditions()
+if (not (GetSpellAbilityId() == FourCC("A00M"))) then
+return false
+end
+return true
+end
+
+function Trig_Transmute_Actions()
+AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_GOLD)
+CreateTextTagUnitBJ(("Tower Transmuted Into " .. (I2S(GetUnitPointValue(GetSpellTargetUnit())) .. " Gold.")), GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
+SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
+SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
+SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
+SetTextTagLifespanBJ(GetLastCreatedTextTag(), 3.00)
+ShowTextTagForceBJ(false, GetLastCreatedTextTag(), GetPlayersAll())
+ShowTextTagForceBJ(true, GetLastCreatedTextTag(), GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())))
+end
+
+function InitTrig_Transmute()
+gg_trg_Transmute = CreateTrigger()
+TriggerRegisterAnyUnitEventBJ(gg_trg_Transmute, EVENT_PLAYER_UNIT_SPELL_CAST)
+TriggerAddCondition(gg_trg_Transmute, Condition(Trig_Transmute_Conditions))
+TriggerAddAction(gg_trg_Transmute, Trig_Transmute_Actions)
+end
+
+function Trig_Unit_Debugger_Conditions()
+if (not (GetSpellAbilityId() == FourCC("A000"))) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func004Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func004A()
+if (Trig_Unit_Debugger_Func004Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerOrange[1])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func005Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 2)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func005A()
+if (Trig_Unit_Debugger_Func005Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerOrange[2])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func006Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 3)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func006A()
+if (Trig_Unit_Debugger_Func006Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerOrange[3])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func007Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 4)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func007A()
+if (Trig_Unit_Debugger_Func007Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerOrange[4])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func011Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 5)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func011A()
+if (Trig_Unit_Debugger_Func011Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerGreen[1])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func012Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 6)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func012A()
+if (Trig_Unit_Debugger_Func012Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerGreen[2])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func013Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 7)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func013A()
+if (Trig_Unit_Debugger_Func013Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerGreen[3])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func014Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 8)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func014A()
+if (Trig_Unit_Debugger_Func014Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerGreen[4])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func018Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 9)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func018A()
+if (Trig_Unit_Debugger_Func018Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerPink[1])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func019Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 10)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func019A()
+if (Trig_Unit_Debugger_Func019Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerPink[2])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func020Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 11)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func020A()
+if (Trig_Unit_Debugger_Func020Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerPink[3])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func024Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 12)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func024A()
+if (Trig_Unit_Debugger_Func024Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerGray[1])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func025Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 13)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func025A()
+if (Trig_Unit_Debugger_Func025Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerGray[2])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func026Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 14)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func026A()
+if (Trig_Unit_Debugger_Func026Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerGray[3])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func030Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 15)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func030A()
+if (Trig_Unit_Debugger_Func030Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerRed[1])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func031Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 16)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func031A()
+if (Trig_Unit_Debugger_Func031Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerRed[2])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func032Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 17)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func032A()
+if (Trig_Unit_Debugger_Func032Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerRed[3])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func033Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 18)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func033A()
+if (Trig_Unit_Debugger_Func033Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerRed[4])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func035Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 19)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func035A()
+if (Trig_Unit_Debugger_Func035Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerRed[5])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func036Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 20)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func036A()
+if (Trig_Unit_Debugger_Func036Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerRed[6])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func037Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 21)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func037A()
+if (Trig_Unit_Debugger_Func037Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerRed[7])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func038Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 22)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func038A()
+if (Trig_Unit_Debugger_Func038Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerRed[8])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func042Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 23)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func042A()
+if (Trig_Unit_Debugger_Func042Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerPurple[1])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func043Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 24)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func043A()
+if (Trig_Unit_Debugger_Func043Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerPurple[2])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func044Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 25)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func044A()
+if (Trig_Unit_Debugger_Func044Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerPurple[3])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func045Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 26)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func045A()
+if (Trig_Unit_Debugger_Func045Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerPurple[4])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func049Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 27)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func049A()
+if (Trig_Unit_Debugger_Func049Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerYellow[1])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func050Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 28)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func050A()
+if (Trig_Unit_Debugger_Func050Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerYellow[2])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func051Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 29)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func051A()
+if (Trig_Unit_Debugger_Func051Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerYellow[3])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func052Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 30)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func052A()
+if (Trig_Unit_Debugger_Func052Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerYellow[4])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func056Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 31)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func056A()
+if (Trig_Unit_Debugger_Func056Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerBlue[1])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func057Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 32)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func057A()
+if (Trig_Unit_Debugger_Func057Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerBlue[2])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func058Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 33)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func058A()
+if (Trig_Unit_Debugger_Func058Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerBlue[3])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func059Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 34)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func059A()
+if (Trig_Unit_Debugger_Func059Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerBlue[4])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func063Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 35)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func063A()
+if (Trig_Unit_Debugger_Func063Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerTeal[1])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func064Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 36)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func064A()
+if (Trig_Unit_Debugger_Func064Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerTeal[2])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func065Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 37)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func065A()
+if (Trig_Unit_Debugger_Func065Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerTeal[3])
+else
+end
+end
+
+function Trig_Unit_Debugger_Func066Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 38)) then
+return false
+end
+return true
+end
+
+function Trig_Unit_Debugger_Func066A()
+if (Trig_Unit_Debugger_Func066Func001C()) then
+IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerTeal[4])
+else
+end
+end
+
+function Trig_Unit_Debugger_Actions()
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func004A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func005A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func006A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func007A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func011A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func012A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func013A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func014A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func018A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func019A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func020A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func024A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func025A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func026A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func030A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func031A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func032A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func033A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func035A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func036A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func037A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func038A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func042A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func043A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func044A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func045A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func049A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func050A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func051A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func052A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func056A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func057A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func058A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func059A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func063A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func064A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func065A)
+ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func066A)
+end
+
+function InitTrig_Unit_Debugger()
+gg_trg_Unit_Debugger = CreateTrigger()
+TriggerRegisterAnyUnitEventBJ(gg_trg_Unit_Debugger, EVENT_PLAYER_UNIT_SPELL_CAST)
+TriggerAddCondition(gg_trg_Unit_Debugger, Condition(Trig_Unit_Debugger_Conditions))
+TriggerAddAction(gg_trg_Unit_Debugger, Trig_Unit_Debugger_Actions)
+end
+
+function Trig_Player_1_Func001C()
+if (not (GetSpellAbilityId() == FourCC("A01S"))) then
+return false
+end
+if (not (RectContainsUnit(gg_rct_Red_Area, GetSpellTargetUnit()) == true)) then
+return false
+end
+return true
+end
+
+function Trig_Player_1_Actions()
+if (Trig_Player_1_Func001C()) then
+udg_Point_Array_DestroyTower[1] = GetUnitLoc(GetTriggerUnit())
+AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[1], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
+        RemoveLocation(udg_Point_DestroyTower[1])
+DestroyEffectBJ(GetLastCreatedEffectBJ())
+AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
+DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. " |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
+RemoveUnit(GetSpellTargetUnit())
+else
+end
+end
+
+function InitTrig_Player_1()
+gg_trg_Player_1 = CreateTrigger()
+TriggerRegisterPlayerUnitEventSimple(gg_trg_Player_1, Player(0), EVENT_PLAYER_UNIT_SPELL_CAST)
+TriggerAddAction(gg_trg_Player_1, Trig_Player_1_Actions)
+end
+
+function Trig_Player_2_Func001Func001C()
+if (RectContainsUnit(gg_rct_Blue_Area_1, GetSpellTargetUnit()) == true) then
+return true
+end
+if (RectContainsUnit(gg_rct_Blue_Area_2, GetSpellTargetUnit()) == true) then
+return true
+end
+return false
+end
+
+function Trig_Player_2_Func001C()
+if (not Trig_Player_2_Func001Func001C()) then
+return false
+end
+if (not (GetSpellAbilityId() == FourCC("A01S"))) then
+return false
+end
+return true
+end
+
+function Trig_Player_2_Actions()
+if (Trig_Player_2_Func001C()) then
+udg_Point_Array_DestroyTower[2] = GetUnitLoc(GetTriggerUnit())
+AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[2], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
+        RemoveLocation(udg_Point_DestroyTower[2])
+DestroyEffectBJ(GetLastCreatedEffectBJ())
+AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
+DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s|r |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. "|r |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
+RemoveUnit(GetSpellTargetUnit())
+else
+end
+end
+
+function InitTrig_Player_2()
+gg_trg_Player_2 = CreateTrigger()
+TriggerRegisterPlayerUnitEventSimple(gg_trg_Player_2, Player(1), EVENT_PLAYER_UNIT_SPELL_CAST)
+TriggerAddAction(gg_trg_Player_2, Trig_Player_2_Actions)
+end
+
+function Trig_Player_3_Func001Func001C()
+if (RectContainsUnit(gg_rct_Teal_Area_1, GetSpellTargetUnit()) == true) then
+return true
+end
+if (RectContainsUnit(gg_rct_Teal_Area_2, GetSpellTargetUnit()) == true) then
+return true
+end
+return false
+end
+
+function Trig_Player_3_Func001C()
+if (not Trig_Player_3_Func001Func001C()) then
+return false
+end
+if (not (GetSpellAbilityId() == FourCC("A01S"))) then
+return false
+end
+return true
+end
+
+function Trig_Player_3_Actions()
+if (Trig_Player_3_Func001C()) then
+udg_Point_Array_DestroyTower[3] = GetUnitLoc(GetTriggerUnit())
+AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[3], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
+        RemoveLocation(udg_Point_DestroyTower[3])
+DestroyEffectBJ(GetLastCreatedEffectBJ())
+AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
+DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s|r |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. "|r |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
+RemoveUnit(GetSpellTargetUnit())
+else
+end
+end
+
+function InitTrig_Player_3()
+gg_trg_Player_3 = CreateTrigger()
+TriggerRegisterPlayerUnitEventSimple(gg_trg_Player_3, Player(2), EVENT_PLAYER_UNIT_SPELL_CAST)
+TriggerAddAction(gg_trg_Player_3, Trig_Player_3_Actions)
+end
+
+function Trig_Player_4_Func001Func001C()
+if (RectContainsUnit(gg_rct_Purple_Area_1, GetSpellTargetUnit()) == true) then
+return true
+end
+if (RectContainsUnit(gg_rct_Purple_Area_2, GetSpellTargetUnit()) == true) then
+return true
+end
+return false
+end
+
+function Trig_Player_4_Func001C()
+if (not Trig_Player_4_Func001Func001C()) then
+return false
+end
+if (not (GetSpellAbilityId() == FourCC("A01S"))) then
+return false
+end
+return true
+end
+
+function Trig_Player_4_Actions()
+if (Trig_Player_4_Func001C()) then
+udg_Point_Array_DestroyTower[4] = GetUnitLoc(GetTriggerUnit())
+AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[4], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
+        RemoveLocation(udg_Point_DestroyTower[4])
+DestroyEffectBJ(GetLastCreatedEffectBJ())
+AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
+DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s|r |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. "|r |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
+RemoveUnit(GetSpellTargetUnit())
+else
+end
+end
+
+function InitTrig_Player_4()
+gg_trg_Player_4 = CreateTrigger()
+TriggerRegisterPlayerUnitEventSimple(gg_trg_Player_4, Player(3), EVENT_PLAYER_UNIT_SPELL_CAST)
+TriggerAddAction(gg_trg_Player_4, Trig_Player_4_Actions)
+end
+
+function Trig_Player_5_Func001Func001C()
+if (RectContainsUnit(gg_rct_Yellow_Area_1, GetSpellTargetUnit()) == true) then
+return true
+end
+if (RectContainsUnit(gg_rct_Yellow_Area_2, GetSpellTargetUnit()) == true) then
+return true
+end
+return false
+end
+
+function Trig_Player_5_Func001C()
+if (not Trig_Player_5_Func001Func001C()) then
+return false
+end
+if (not (GetSpellAbilityId() == FourCC("A01S"))) then
+return false
+end
+return true
+end
+
+function Trig_Player_5_Actions()
+if (Trig_Player_5_Func001C()) then
+udg_Point_Array_DestroyTower[5] = GetUnitLoc(GetTriggerUnit())
+AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[5], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
+        RemoveLocation(udg_Point_DestroyTower[5])
+DestroyEffectBJ(GetLastCreatedEffectBJ())
+AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
+DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s|r |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. "|r |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
+RemoveUnit(GetSpellTargetUnit())
+else
+end
+end
+
+function InitTrig_Player_5()
+gg_trg_Player_5 = CreateTrigger()
+TriggerRegisterPlayerUnitEventSimple(gg_trg_Player_5, Player(4), EVENT_PLAYER_UNIT_SPELL_CAST)
+TriggerAddAction(gg_trg_Player_5, Trig_Player_5_Actions)
+end
+
+function Trig_Player_6_Func001C()
+if (not (GetSpellAbilityId() == FourCC("A01S"))) then
+return false
+end
+if (not (RectContainsUnit(gg_rct_Orange_Area, GetSpellTargetUnit()) == true)) then
+return false
+end
+return true
+end
+
+function Trig_Player_6_Actions()
+if (Trig_Player_6_Func001C()) then
+udg_Point_Array_DestroyTower[6] = GetUnitLoc(GetTriggerUnit())
+AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[6], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
+        RemoveLocation(udg_Point_DestroyTower[6])
+DestroyEffectBJ(GetLastCreatedEffectBJ())
+AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
+DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s|r |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. "|r |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
+RemoveUnit(GetSpellTargetUnit())
+else
+end
+end
+
+function InitTrig_Player_6()
+gg_trg_Player_6 = CreateTrigger()
+TriggerRegisterPlayerUnitEventSimple(gg_trg_Player_6, Player(5), EVENT_PLAYER_UNIT_SPELL_CAST)
+TriggerAddAction(gg_trg_Player_6, Trig_Player_6_Actions)
+end
+
+function Trig_Player_7_Func001C()
+if (not (GetSpellAbilityId() == FourCC("A01S"))) then
+return false
+end
+if (not (RectContainsUnit(gg_rct_Green_Area, GetSpellTargetUnit()) == true)) then
+return false
+end
+return true
+end
+
+function Trig_Player_7_Actions()
+if (Trig_Player_7_Func001C()) then
+udg_Point_Array_DestroyTower[7] = GetUnitLoc(GetTriggerUnit())
+AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[7], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
+        RemoveLocation(udg_Point_DestroyTower[7])
+DestroyEffectBJ(GetLastCreatedEffectBJ())
+AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
+DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s|r |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. "|r |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
+RemoveUnit(GetSpellTargetUnit())
+else
+end
+end
+
+function InitTrig_Player_7()
+gg_trg_Player_7 = CreateTrigger()
+TriggerRegisterPlayerUnitEventSimple(gg_trg_Player_7, Player(6), EVENT_PLAYER_UNIT_SPELL_CAST)
+TriggerAddAction(gg_trg_Player_7, Trig_Player_7_Actions)
+end
+
+function Trig_Player_8_Func001C()
+if (not (GetSpellAbilityId() == FourCC("A01S"))) then
+return false
+end
+if (not (RectContainsUnit(gg_rct_Pink_Area, GetSpellTargetUnit()) == true)) then
+return false
+end
+return true
+end
+
+function Trig_Player_8_Actions()
+if (Trig_Player_8_Func001C()) then
+udg_Point_Array_DestroyTower[8] = GetUnitLoc(GetTriggerUnit())
+AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[8], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
+        RemoveLocation(udg_Point_DestroyTower[8])
+DestroyEffectBJ(GetLastCreatedEffectBJ())
+AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
+DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s|r |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. "|r |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
+RemoveUnit(GetSpellTargetUnit())
+else
+end
+end
+
+function InitTrig_Player_8()
+gg_trg_Player_8 = CreateTrigger()
+TriggerRegisterPlayerUnitEventSimple(gg_trg_Player_8, Player(7), EVENT_PLAYER_UNIT_SPELL_CAST)
+TriggerAddAction(gg_trg_Player_8, Trig_Player_8_Actions)
+end
+
+function Trig_Player_9_Func001C()
+if (not (GetSpellAbilityId() == FourCC("A01S"))) then
+return false
+end
+if (not (RectContainsUnit(gg_rct_Gray_Area, GetSpellTargetUnit()) == true)) then
+return false
+end
+return true
+end
+
+function Trig_Player_9_Actions()
+if (Trig_Player_9_Func001C()) then
+udg_Point_Array_DestroyTower[9] = GetUnitLoc(GetTriggerUnit())
+AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[9], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
+        RemoveLocation(udg_Point_DestroyTower[9])
+DestroyEffectBJ(GetLastCreatedEffectBJ())
+AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
+DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s|r |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. "|r |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
+RemoveUnit(GetSpellTargetUnit())
+else
+end
+end
+
+function InitTrig_Player_9()
+gg_trg_Player_9 = CreateTrigger()
+TriggerRegisterPlayerUnitEventSimple(gg_trg_Player_9, Player(8), EVENT_PLAYER_UNIT_SPELL_CAST)
+TriggerAddAction(gg_trg_Player_9, Trig_Player_9_Actions)
+end
+
 function Trig_Start_Messages_Actions()
 DisplayTimedTextToForce(bj_FORCE_PLAYER[0], 120.00, "TRIGSTR_4749")
 SelectUnitAddForPlayer(gg_unit_n00C_0019, Player(0))
@@ -15255,1214 +16463,6 @@ TriggerAddCondition(gg_trg_Clear_Ability, Condition(Trig_Clear_Ability_Condition
 TriggerAddAction(gg_trg_Clear_Ability, Trig_Clear_Ability_Actions)
 end
 
-function Trig_Tower_Swapping_Conditions()
-if (not (GetSpellAbilityId() == FourCC("A00U"))) then
-return false
-end
-return true
-end
-
-function Trig_Tower_Swapping_Actions()
-ReplaceUnitBJ(GetSpellTargetUnit(), GetUnitTypeId(GetSpellAbilityUnit()), bj_UNIT_STATE_METHOD_RELATIVE)
-SetUnitInvulnerable(GetLastReplacedUnitBJ(), true)
-UnitAddAbilityBJ(FourCC("A00G"), GetLastReplacedUnitBJ())
-SetUnitAbilityLevelSwapped(FourCC("A00G"), GetLastReplacedUnitBJ(), udg_Integer_Difficulty)
-ReplaceUnitBJ(GetSpellAbilityUnit(), GetUnitTypeId(GetSpellTargetUnit()), bj_UNIT_STATE_METHOD_RELATIVE)
-UnitAddAbilityBJ(FourCC("A00G"), GetLastReplacedUnitBJ())
-SetUnitAbilityLevelSwapped(FourCC("A00G"), GetLastReplacedUnitBJ(), udg_Integer_Difficulty)
-SetUnitInvulnerable(GetLastReplacedUnitBJ(), true)
-end
-
-function InitTrig_Tower_Swapping()
-gg_trg_Tower_Swapping = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Tower_Swapping, EVENT_PLAYER_UNIT_SPELL_CAST)
-TriggerAddCondition(gg_trg_Tower_Swapping, Condition(Trig_Tower_Swapping_Conditions))
-TriggerAddAction(gg_trg_Tower_Swapping, Trig_Tower_Swapping_Actions)
-end
-
-function Trig_Emergency_Towers_Func001C()
-if (not (GetSpellAbilityId() == FourCC("A01U"))) then
-return false
-end
-return true
-end
-
-function Trig_Emergency_Towers_Func002C()
-if (not (GetSpellAbilityId() == FourCC("A01V"))) then
-return false
-end
-return true
-end
-
-function Trig_Emergency_Towers_Func003C()
-if (not (GetSpellAbilityId() == FourCC("A01W"))) then
-return false
-end
-return true
-end
-
-function Trig_Emergency_Towers_Func004C()
-if (not (GetSpellAbilityId() == FourCC("A01X"))) then
-return false
-end
-return true
-end
-
-function Trig_Emergency_Towers_Func005C()
-if (not (GetSpellAbilityId() == FourCC("A01Y"))) then
-return false
-end
-return true
-end
-
-function Trig_Emergency_Towers_Actions()
-if (Trig_Emergency_Towers_Func001C()) then
-udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] = GetSpellTargetLoc()
-udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())] = GetUnitLoc(GetTriggerUnit())
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetTriggerUnit()), udg_HeroPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], bj_UNIT_FACING)
-UnitAddAbilityBJ(FourCC("A016"), GetLastCreatedUnit())
-SetUnitAbilityLevelSwapped(FourCC("A016"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A01U"), GetTriggerUnit()))
-IssuePointOrderLocBJ(GetLastCreatedUnit(), "summonfactory", udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
-RemoveUnit(GetLastCreatedUnit())
-        RemoveLocation(udg_DummyPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
-        RemoveLocation(udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
-else
-end
-if (Trig_Emergency_Towers_Func002C()) then
-udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] = GetSpellTargetLoc()
-udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())] = GetUnitLoc(GetTriggerUnit())
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetTriggerUnit()), udg_HeroPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], bj_UNIT_FACING)
-UnitAddAbilityBJ(FourCC("A01T"), GetLastCreatedUnit())
-SetUnitAbilityLevelSwapped(FourCC("A01T"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A01V"), GetTriggerUnit()))
-IssuePointOrderLocBJ(GetLastCreatedUnit(), "summonfactory", udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
-RemoveUnit(GetLastCreatedUnit())
-        RemoveLocation(udg_DummyPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
-        RemoveLocation(udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
-else
-end
-if (Trig_Emergency_Towers_Func003C()) then
-udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] = GetSpellTargetLoc()
-udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())] = GetUnitLoc(GetTriggerUnit())
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetTriggerUnit()), udg_HeroPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], bj_UNIT_FACING)
-UnitAddAbilityBJ(FourCC("A00L"), GetLastCreatedUnit())
-SetUnitAbilityLevelSwapped(FourCC("A00L"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A01W"), GetTriggerUnit()))
-IssuePointOrderLocBJ(GetLastCreatedUnit(), "summonfactory", udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
-RemoveUnit(GetLastCreatedUnit())
-        RemoveLocation(udg_DummyPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
-        RemoveLocation(udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
-else
-end
-if (Trig_Emergency_Towers_Func004C()) then
-udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] = GetSpellTargetLoc()
-udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())] = GetUnitLoc(GetTriggerUnit())
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetTriggerUnit()), udg_HeroPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], bj_UNIT_FACING)
-UnitAddAbilityBJ(FourCC("A015"), GetLastCreatedUnit())
-SetUnitAbilityLevelSwapped(FourCC("A015"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A01X"), GetTriggerUnit()))
-IssuePointOrderLocBJ(GetLastCreatedUnit(), "summonfactory", udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
-RemoveUnit(GetLastCreatedUnit())
-        RemoveLocation(udg_DummyPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
-        RemoveLocation(udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
-else
-end
-if (Trig_Emergency_Towers_Func005C()) then
-udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] = GetSpellTargetLoc()
-udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())] = GetUnitLoc(GetTriggerUnit())
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetTriggerUnit()), udg_HeroPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], bj_UNIT_FACING)
-UnitAddAbilityBJ(FourCC("A012"), GetLastCreatedUnit())
-SetUnitAbilityLevelSwapped(FourCC("A012"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A01Y"), GetTriggerUnit()))
-IssuePointOrderLocBJ(GetLastCreatedUnit(), "summonfactory", udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
-RemoveUnit(GetLastCreatedUnit())
-        RemoveLocation(udg_DummyPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
-        RemoveLocation(udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
-else
-end
-end
-
-function InitTrig_Emergency_Towers()
-gg_trg_Emergency_Towers = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Emergency_Towers, EVENT_PLAYER_UNIT_SPELL_CAST)
-TriggerAddAction(gg_trg_Emergency_Towers, Trig_Emergency_Towers_Actions)
-end
-
-function Trig_Auto_Blink_Func010C()
-if (not (DistanceBetweenPoints(GetUnitLoc(GetOrderedUnit()), GetOrderPointLoc()) >= 1200.00)) then
-return false
-end
-if (not (GetUnitTypeId(GetOrderedUnit()) == FourCC("U00E"))) then
-return false
-end
-return true
-end
-
-function Trig_Auto_Blink_Conditions()
-if (not Trig_Auto_Blink_Func010C()) then
-return false
-end
-return true
-end
-
-function Trig_Auto_Blink_Actions()
-udg_Point_Array_Blink[1] = GetUnitLoc(GetTriggerUnit())
-AddSpecialEffectLocBJ(udg_Point_Array_Blink[1], "Abilities\\Spells\\Items\\TomeOfRetraining\\TomeOfRetrainingCaster.mdl")
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-    RemoveLocation(udg_Point_Array_Blink[1])
-udg_Point_Array_Blink[2] = GetOrderPointLoc()
-SetUnitPositionLoc(GetOrderedUnit(), udg_Point_Array_Blink[2])
-    RemoveLocation(udg_Point_Array_Blink[2])
-AddSpecialEffectTargetUnitBJ("origin", GetTriggerUnit(), "Abilities\\Spells\\Items\\TomeOfRetraining\\TomeOfRetrainingCaster.mdl")
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-end
-
-function InitTrig_Auto_Blink()
-gg_trg_Auto_Blink = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Auto_Blink, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
-TriggerAddCondition(gg_trg_Auto_Blink, Condition(Trig_Auto_Blink_Conditions))
-TriggerAddAction(gg_trg_Auto_Blink, Trig_Auto_Blink_Actions)
-end
-
-function Trig_Gamble_Conditions()
-if (not (GetSpellAbilityId() == FourCC("A011"))) then
-return false
-end
-return true
-end
-
-function Trig_Gamble_Func001Func002Func001Func002Func001Func007C()
-if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] >= 970)) then
-return false
-end
-if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] <= 1000)) then
-return false
-end
-return true
-end
-
-function Trig_Gamble_Func001Func002Func001Func002Func001C()
-if (not Trig_Gamble_Func001Func002Func001Func002Func001Func007C()) then
-return false
-end
-return true
-end
-
-function Trig_Gamble_Func001Func002Func001Func002Func005C()
-if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] >= 900)) then
-return false
-end
-if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] <= 969)) then
-return false
-end
-return true
-end
-
-function Trig_Gamble_Func001Func002Func001Func002C()
-if (not Trig_Gamble_Func001Func002Func001Func002Func005C()) then
-return false
-end
-return true
-end
-
-function Trig_Gamble_Func001Func002Func001Func003C()
-if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] >= 750)) then
-return false
-end
-if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] <= 899)) then
-return false
-end
-return true
-end
-
-function Trig_Gamble_Func001Func002Func001C()
-if (not Trig_Gamble_Func001Func002Func001Func003C()) then
-return false
-end
-return true
-end
-
-function Trig_Gamble_Func001Func002Func006C()
-if (not (udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] <= 1450)) then
-return false
-end
-return true
-end
-
-function Trig_Gamble_Func001Func002C()
-if (not (udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] <= 750)) then
-return false
-end
-return true
-end
-
-function Trig_Gamble_Func001C()
-if (not (GetPlayerState(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_GOLD) < udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])) then
-return false
-end
-return true
-end
-
-function Trig_Gamble_Actions()
-if (Trig_Gamble_Func001C()) then
-CreateTextTagUnitBJ(("You need " .. (I2S(udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]) .. " gold to gamble.")), GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
-else
-udg_Integer_Array_Gamble[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = GetRandomInt(udg_Integer_GambleBonus, 1000)
-if (Trig_Gamble_Func001Func002C()) then
-SetPlayerStateBJ(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD, (GetPlayerState(GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD) - udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]))
-DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ("|c0000ff00 just gambled away |cffFDD017" .. (I2S(udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]) .. " Gold|c0000ff00."))))
-udg_Integer_Jackpot = (udg_Integer_Jackpot + udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
-udg_Integer_Array_GoldLostGambling[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = (udg_Integer_Array_GoldLostGambling[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] + udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
-if (Trig_Gamble_Func001Func002Func006C()) then
-udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] = (udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 50)
-else
-end
-else
-if (Trig_Gamble_Func001Func002Func001C()) then
-DisplayTimedTextToForce(GetPlayersAll(), 5.00, (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] .. ("|r|c0000ff00 just gambled |cffFDD017" .. (I2S(udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]) .. " Gold |c0000ff00and got their gold back."))))
-else
-if (Trig_Gamble_Func001Func002Func001Func002C()) then
-AdjustPlayerStateBJ(2000, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_GOLD)
-udg_Integer_Array_GoldWonGambling[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = (udg_Integer_Array_GoldWonGambling[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] + 2000)
-DisplayTimedTextToForce(GetPlayersAll(), 5.00, (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] .. ("|r|c0000ff00 just gambled |cffFDD017" .. (I2S(udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]) .. " Gold |c0000ff00and got |cffFDD0172000 Gold|c0000ff00!"))))
-else
-if (Trig_Gamble_Func001Func002Func001Func002Func001C()) then
-AdjustPlayerStateBJ(udg_Integer_Jackpot, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_GOLD)
-udg_Integer_Array_GoldWonGambling[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = (udg_Integer_Array_GoldWonGambling[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] + udg_Integer_Jackpot)
-udg_Integer_Array_JackpotsWon[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = (udg_Integer_Array_JackpotsWon[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] + 1)
-udg_String_JackpotWinner = udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]
-DisplayTimedTextToForce(GetPlayersAll(), 5.00, (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] .. ((("|r|c0000ff00 just gambled |cffFDD017" .. I2S(udg_Integer_Array_GamUsageAmount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])) .. " Gold |c0000ff00and hit the |cffFDD017JACKPOT|c0000ff00. ") .. ("|c0000ff00Gaining |cffFDD017" .. (I2S(udg_Integer_Jackpot) .. " Gold|c0000ff00.")))))
-udg_Integer_Jackpot = 3000
-else
-end
-end
-end
-end
-end
-SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
-SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
-SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
-SetTextTagLifespanBJ(GetLastCreatedTextTag(), 3.00)
-ShowTextTagForceBJ(false, GetLastCreatedTextTag(), GetPlayersAll())
-ShowTextTagForceBJ(true, GetLastCreatedTextTag(), GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())))
-end
-
-function InitTrig_Gamble()
-gg_trg_Gamble = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Gamble, EVENT_PLAYER_UNIT_SPELL_CAST)
-TriggerAddCondition(gg_trg_Gamble, Condition(Trig_Gamble_Conditions))
-TriggerAddAction(gg_trg_Gamble, Trig_Gamble_Actions)
-end
-
-function Trig_Transmute_Conditions()
-if (not (GetSpellAbilityId() == FourCC("A00M"))) then
-return false
-end
-return true
-end
-
-function Trig_Transmute_Actions()
-AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_GOLD)
-CreateTextTagUnitBJ(("Tower Transmuted Into " .. (I2S(GetUnitPointValue(GetSpellTargetUnit())) .. " Gold.")), GetSpellAbilityUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
-SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
-SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
-SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
-SetTextTagLifespanBJ(GetLastCreatedTextTag(), 3.00)
-ShowTextTagForceBJ(false, GetLastCreatedTextTag(), GetPlayersAll())
-ShowTextTagForceBJ(true, GetLastCreatedTextTag(), GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())))
-end
-
-function InitTrig_Transmute()
-gg_trg_Transmute = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Transmute, EVENT_PLAYER_UNIT_SPELL_CAST)
-TriggerAddCondition(gg_trg_Transmute, Condition(Trig_Transmute_Conditions))
-TriggerAddAction(gg_trg_Transmute, Trig_Transmute_Actions)
-end
-
-function Trig_Unit_Debugger_Conditions()
-if (not (GetSpellAbilityId() == FourCC("A000"))) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func004Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func004A()
-if (Trig_Unit_Debugger_Func004Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerOrange[1])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func005Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 2)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func005A()
-if (Trig_Unit_Debugger_Func005Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerOrange[2])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func006Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 3)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func006A()
-if (Trig_Unit_Debugger_Func006Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerOrange[3])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func007Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 4)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func007A()
-if (Trig_Unit_Debugger_Func007Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerOrange[4])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func011Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 5)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func011A()
-if (Trig_Unit_Debugger_Func011Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerGreen[1])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func012Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 6)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func012A()
-if (Trig_Unit_Debugger_Func012Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerGreen[2])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func013Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 7)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func013A()
-if (Trig_Unit_Debugger_Func013Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerGreen[3])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func014Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 8)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func014A()
-if (Trig_Unit_Debugger_Func014Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerGreen[4])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func018Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 9)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func018A()
-if (Trig_Unit_Debugger_Func018Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerPink[1])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func019Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 10)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func019A()
-if (Trig_Unit_Debugger_Func019Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerPink[2])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func020Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 11)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func020A()
-if (Trig_Unit_Debugger_Func020Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerPink[3])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func024Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 12)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func024A()
-if (Trig_Unit_Debugger_Func024Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerGray[1])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func025Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 13)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func025A()
-if (Trig_Unit_Debugger_Func025Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerGray[2])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func026Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 14)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func026A()
-if (Trig_Unit_Debugger_Func026Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerGray[3])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func030Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 15)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func030A()
-if (Trig_Unit_Debugger_Func030Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerRed[1])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func031Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 16)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func031A()
-if (Trig_Unit_Debugger_Func031Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerRed[2])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func032Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 17)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func032A()
-if (Trig_Unit_Debugger_Func032Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerRed[3])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func033Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 18)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func033A()
-if (Trig_Unit_Debugger_Func033Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerRed[4])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func035Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 19)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func035A()
-if (Trig_Unit_Debugger_Func035Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerRed[5])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func036Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 20)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func036A()
-if (Trig_Unit_Debugger_Func036Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerRed[6])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func037Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 21)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func037A()
-if (Trig_Unit_Debugger_Func037Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerRed[7])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func038Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 22)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func038A()
-if (Trig_Unit_Debugger_Func038Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerRed[8])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func042Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 23)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func042A()
-if (Trig_Unit_Debugger_Func042Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerPurple[1])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func043Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 24)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func043A()
-if (Trig_Unit_Debugger_Func043Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerPurple[2])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func044Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 25)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func044A()
-if (Trig_Unit_Debugger_Func044Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerPurple[3])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func045Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 26)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func045A()
-if (Trig_Unit_Debugger_Func045Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerPurple[4])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func049Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 27)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func049A()
-if (Trig_Unit_Debugger_Func049Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerYellow[1])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func050Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 28)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func050A()
-if (Trig_Unit_Debugger_Func050Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerYellow[2])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func051Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 29)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func051A()
-if (Trig_Unit_Debugger_Func051Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerYellow[3])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func052Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 30)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func052A()
-if (Trig_Unit_Debugger_Func052Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerYellow[4])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func056Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 31)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func056A()
-if (Trig_Unit_Debugger_Func056Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerBlue[1])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func057Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 32)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func057A()
-if (Trig_Unit_Debugger_Func057Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerBlue[2])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func058Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 33)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func058A()
-if (Trig_Unit_Debugger_Func058Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerBlue[3])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func059Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 34)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func059A()
-if (Trig_Unit_Debugger_Func059Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerBlue[4])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func063Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 35)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func063A()
-if (Trig_Unit_Debugger_Func063Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerTeal[1])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func064Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 36)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func064A()
-if (Trig_Unit_Debugger_Func064Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerTeal[2])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func065Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 37)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func065A()
-if (Trig_Unit_Debugger_Func065Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerTeal[3])
-else
-end
-end
-
-function Trig_Unit_Debugger_Func066Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A006"), GetEnumUnit()) == 38)) then
-return false
-end
-return true
-end
-
-function Trig_Unit_Debugger_Func066A()
-if (Trig_Unit_Debugger_Func066Func001C()) then
-IssuePointOrderLocBJ(GetEnumUnit(), "move", udg_Point_Array_DebuggerTeal[4])
-else
-end
-end
-
-function Trig_Unit_Debugger_Actions()
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func004A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func005A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func006A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func007A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func011A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func012A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func013A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func014A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func018A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func019A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func020A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func024A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func025A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func026A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func030A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func031A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func032A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func033A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func035A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func036A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func037A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func038A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func042A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func043A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func044A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func045A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func049A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func050A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func051A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func052A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func056A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func057A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func058A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func059A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func063A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func064A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func065A)
-ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), Trig_Unit_Debugger_Func066A)
-end
-
-function InitTrig_Unit_Debugger()
-gg_trg_Unit_Debugger = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Unit_Debugger, EVENT_PLAYER_UNIT_SPELL_CAST)
-TriggerAddCondition(gg_trg_Unit_Debugger, Condition(Trig_Unit_Debugger_Conditions))
-TriggerAddAction(gg_trg_Unit_Debugger, Trig_Unit_Debugger_Actions)
-end
-
-function Trig_Player_1_Func001C()
-if (not (GetSpellAbilityId() == FourCC("A01S"))) then
-return false
-end
-if (not (RectContainsUnit(gg_rct_Red_Area, GetSpellTargetUnit()) == true)) then
-return false
-end
-return true
-end
-
-function Trig_Player_1_Actions()
-if (Trig_Player_1_Func001C()) then
-udg_Point_Array_DestroyTower[1] = GetUnitLoc(GetTriggerUnit())
-AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[1], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
-        RemoveLocation(udg_Point_DestroyTower[1])
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
-DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. " |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
-RemoveUnit(GetSpellTargetUnit())
-else
-end
-end
-
-function InitTrig_Player_1()
-gg_trg_Player_1 = CreateTrigger()
-TriggerRegisterPlayerUnitEventSimple(gg_trg_Player_1, Player(0), EVENT_PLAYER_UNIT_SPELL_CAST)
-TriggerAddAction(gg_trg_Player_1, Trig_Player_1_Actions)
-end
-
-function Trig_Player_2_Func001Func001C()
-if (RectContainsUnit(gg_rct_Blue_Area_1, GetSpellTargetUnit()) == true) then
-return true
-end
-if (RectContainsUnit(gg_rct_Blue_Area_2, GetSpellTargetUnit()) == true) then
-return true
-end
-return false
-end
-
-function Trig_Player_2_Func001C()
-if (not Trig_Player_2_Func001Func001C()) then
-return false
-end
-if (not (GetSpellAbilityId() == FourCC("A01S"))) then
-return false
-end
-return true
-end
-
-function Trig_Player_2_Actions()
-if (Trig_Player_2_Func001C()) then
-udg_Point_Array_DestroyTower[2] = GetUnitLoc(GetTriggerUnit())
-AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[2], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
-        RemoveLocation(udg_Point_DestroyTower[2])
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
-DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s|r |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. "|r |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
-RemoveUnit(GetSpellTargetUnit())
-else
-end
-end
-
-function InitTrig_Player_2()
-gg_trg_Player_2 = CreateTrigger()
-TriggerRegisterPlayerUnitEventSimple(gg_trg_Player_2, Player(1), EVENT_PLAYER_UNIT_SPELL_CAST)
-TriggerAddAction(gg_trg_Player_2, Trig_Player_2_Actions)
-end
-
-function Trig_Player_3_Func001Func001C()
-if (RectContainsUnit(gg_rct_Teal_Area_1, GetSpellTargetUnit()) == true) then
-return true
-end
-if (RectContainsUnit(gg_rct_Teal_Area_2, GetSpellTargetUnit()) == true) then
-return true
-end
-return false
-end
-
-function Trig_Player_3_Func001C()
-if (not Trig_Player_3_Func001Func001C()) then
-return false
-end
-if (not (GetSpellAbilityId() == FourCC("A01S"))) then
-return false
-end
-return true
-end
-
-function Trig_Player_3_Actions()
-if (Trig_Player_3_Func001C()) then
-udg_Point_Array_DestroyTower[3] = GetUnitLoc(GetTriggerUnit())
-AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[3], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
-        RemoveLocation(udg_Point_DestroyTower[3])
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
-DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s|r |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. "|r |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
-RemoveUnit(GetSpellTargetUnit())
-else
-end
-end
-
-function InitTrig_Player_3()
-gg_trg_Player_3 = CreateTrigger()
-TriggerRegisterPlayerUnitEventSimple(gg_trg_Player_3, Player(2), EVENT_PLAYER_UNIT_SPELL_CAST)
-TriggerAddAction(gg_trg_Player_3, Trig_Player_3_Actions)
-end
-
-function Trig_Player_4_Func001Func001C()
-if (RectContainsUnit(gg_rct_Purple_Area_1, GetSpellTargetUnit()) == true) then
-return true
-end
-if (RectContainsUnit(gg_rct_Purple_Area_2, GetSpellTargetUnit()) == true) then
-return true
-end
-return false
-end
-
-function Trig_Player_4_Func001C()
-if (not Trig_Player_4_Func001Func001C()) then
-return false
-end
-if (not (GetSpellAbilityId() == FourCC("A01S"))) then
-return false
-end
-return true
-end
-
-function Trig_Player_4_Actions()
-if (Trig_Player_4_Func001C()) then
-udg_Point_Array_DestroyTower[4] = GetUnitLoc(GetTriggerUnit())
-AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[4], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
-        RemoveLocation(udg_Point_DestroyTower[4])
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
-DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s|r |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. "|r |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
-RemoveUnit(GetSpellTargetUnit())
-else
-end
-end
-
-function InitTrig_Player_4()
-gg_trg_Player_4 = CreateTrigger()
-TriggerRegisterPlayerUnitEventSimple(gg_trg_Player_4, Player(3), EVENT_PLAYER_UNIT_SPELL_CAST)
-TriggerAddAction(gg_trg_Player_4, Trig_Player_4_Actions)
-end
-
-function Trig_Player_5_Func001Func001C()
-if (RectContainsUnit(gg_rct_Yellow_Area_1, GetSpellTargetUnit()) == true) then
-return true
-end
-if (RectContainsUnit(gg_rct_Yellow_Area_2, GetSpellTargetUnit()) == true) then
-return true
-end
-return false
-end
-
-function Trig_Player_5_Func001C()
-if (not Trig_Player_5_Func001Func001C()) then
-return false
-end
-if (not (GetSpellAbilityId() == FourCC("A01S"))) then
-return false
-end
-return true
-end
-
-function Trig_Player_5_Actions()
-if (Trig_Player_5_Func001C()) then
-udg_Point_Array_DestroyTower[5] = GetUnitLoc(GetTriggerUnit())
-AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[5], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
-        RemoveLocation(udg_Point_DestroyTower[5])
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
-DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s|r |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. "|r |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
-RemoveUnit(GetSpellTargetUnit())
-else
-end
-end
-
-function InitTrig_Player_5()
-gg_trg_Player_5 = CreateTrigger()
-TriggerRegisterPlayerUnitEventSimple(gg_trg_Player_5, Player(4), EVENT_PLAYER_UNIT_SPELL_CAST)
-TriggerAddAction(gg_trg_Player_5, Trig_Player_5_Actions)
-end
-
-function Trig_Player_6_Func001C()
-if (not (GetSpellAbilityId() == FourCC("A01S"))) then
-return false
-end
-if (not (RectContainsUnit(gg_rct_Orange_Area, GetSpellTargetUnit()) == true)) then
-return false
-end
-return true
-end
-
-function Trig_Player_6_Actions()
-if (Trig_Player_6_Func001C()) then
-udg_Point_Array_DestroyTower[6] = GetUnitLoc(GetTriggerUnit())
-AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[6], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
-        RemoveLocation(udg_Point_DestroyTower[6])
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
-DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s|r |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. "|r |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
-RemoveUnit(GetSpellTargetUnit())
-else
-end
-end
-
-function InitTrig_Player_6()
-gg_trg_Player_6 = CreateTrigger()
-TriggerRegisterPlayerUnitEventSimple(gg_trg_Player_6, Player(5), EVENT_PLAYER_UNIT_SPELL_CAST)
-TriggerAddAction(gg_trg_Player_6, Trig_Player_6_Actions)
-end
-
-function Trig_Player_7_Func001C()
-if (not (GetSpellAbilityId() == FourCC("A01S"))) then
-return false
-end
-if (not (RectContainsUnit(gg_rct_Green_Area, GetSpellTargetUnit()) == true)) then
-return false
-end
-return true
-end
-
-function Trig_Player_7_Actions()
-if (Trig_Player_7_Func001C()) then
-udg_Point_Array_DestroyTower[7] = GetUnitLoc(GetTriggerUnit())
-AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[7], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
-        RemoveLocation(udg_Point_DestroyTower[7])
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
-DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s|r |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. "|r |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
-RemoveUnit(GetSpellTargetUnit())
-else
-end
-end
-
-function InitTrig_Player_7()
-gg_trg_Player_7 = CreateTrigger()
-TriggerRegisterPlayerUnitEventSimple(gg_trg_Player_7, Player(6), EVENT_PLAYER_UNIT_SPELL_CAST)
-TriggerAddAction(gg_trg_Player_7, Trig_Player_7_Actions)
-end
-
-function Trig_Player_8_Func001C()
-if (not (GetSpellAbilityId() == FourCC("A01S"))) then
-return false
-end
-if (not (RectContainsUnit(gg_rct_Pink_Area, GetSpellTargetUnit()) == true)) then
-return false
-end
-return true
-end
-
-function Trig_Player_8_Actions()
-if (Trig_Player_8_Func001C()) then
-udg_Point_Array_DestroyTower[8] = GetUnitLoc(GetTriggerUnit())
-AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[8], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
-        RemoveLocation(udg_Point_DestroyTower[8])
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
-DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s|r |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. "|r |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
-RemoveUnit(GetSpellTargetUnit())
-else
-end
-end
-
-function InitTrig_Player_8()
-gg_trg_Player_8 = CreateTrigger()
-TriggerRegisterPlayerUnitEventSimple(gg_trg_Player_8, Player(7), EVENT_PLAYER_UNIT_SPELL_CAST)
-TriggerAddAction(gg_trg_Player_8, Trig_Player_8_Actions)
-end
-
-function Trig_Player_9_Func001C()
-if (not (GetSpellAbilityId() == FourCC("A01S"))) then
-return false
-end
-if (not (RectContainsUnit(gg_rct_Gray_Area, GetSpellTargetUnit()) == true)) then
-return false
-end
-return true
-end
-
-function Trig_Player_9_Actions()
-if (Trig_Player_9_Func001C()) then
-udg_Point_Array_DestroyTower[9] = GetUnitLoc(GetTriggerUnit())
-AddSpecialEffectLocBJ(udg_Point_Array_DestroyTower[9], "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl")
-        RemoveLocation(udg_Point_DestroyTower[9])
-DestroyEffectBJ(GetLastCreatedEffectBJ())
-AdjustPlayerStateBJ(GetUnitPointValue(GetSpellTargetUnit()), GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
-DisplayTextToForce(GetPlayersAll(), ("|cff00FF00A tower owned by|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. ("|r |cff00FF00has been removed from|r " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] .. ((("'s|r |cff00FF00area and " .. (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))] .. "|r |cff00FF00has been refunded|r |cffFDD017")) .. I2S(GetUnitPointValue(GetSpellTargetUnit()))) .. " Gold.|r"))))))
-RemoveUnit(GetSpellTargetUnit())
-else
-end
-end
-
-function InitTrig_Player_9()
-gg_trg_Player_9 = CreateTrigger()
-TriggerRegisterPlayerUnitEventSimple(gg_trg_Player_9, Player(8), EVENT_PLAYER_UNIT_SPELL_CAST)
-TriggerAddAction(gg_trg_Player_9, Trig_Player_9_Actions)
-end
-
 function Trig_Iron_Trap_Autocast_Mine_Conditions()
 if (not (GetUnitTypeId(GetEnteringUnit()) == FourCC("n025"))) then
 return false
@@ -17433,6 +17433,21 @@ InitTrig_Hero_Abilities()
 InitTrig_Finish_Build()
 InitTrig_Finish_Upgrade()
 InitTrig_Instant_Upgrade()
+InitTrig_Tower_Swapping()
+InitTrig_Emergency_Towers()
+InitTrig_Auto_Blink()
+InitTrig_Gamble()
+InitTrig_Transmute()
+InitTrig_Unit_Debugger()
+InitTrig_Player_1()
+InitTrig_Player_2()
+InitTrig_Player_3()
+InitTrig_Player_4()
+InitTrig_Player_5()
+InitTrig_Player_6()
+InitTrig_Player_7()
+InitTrig_Player_8()
+InitTrig_Player_9()
 InitTrig_Start_Messages()
 InitTrig_Choose_Mode_Gamemodes()
 InitTrig_Choose_Mode_Towers()
@@ -17544,21 +17559,6 @@ InitTrig_Autoclear_Command()
 InitTrig_Autoclear_Trigger()
 InitTrig_Clear_Command()
 InitTrig_Clear_Ability()
-InitTrig_Tower_Swapping()
-InitTrig_Emergency_Towers()
-InitTrig_Auto_Blink()
-InitTrig_Gamble()
-InitTrig_Transmute()
-InitTrig_Unit_Debugger()
-InitTrig_Player_1()
-InitTrig_Player_2()
-InitTrig_Player_3()
-InitTrig_Player_4()
-InitTrig_Player_5()
-InitTrig_Player_6()
-InitTrig_Player_7()
-InitTrig_Player_8()
-InitTrig_Player_9()
 InitTrig_Iron_Trap_Autocast_Mine()
 InitTrig_Iron_Trap_Clockwerk_Kaboom()
 InitTrig_Gold_Aura_Extra_Gold()
