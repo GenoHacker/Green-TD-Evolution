@@ -510,7 +510,6 @@ gg_snd_HeroLichPissed8 = nil
 gg_trg_Damage_Engine_Config = nil
 gg_trg_Crit_System = nil
 gg_trg_Crit_System_Add = nil
-gg_trg_Crit_System_Old_Ver_Backup = nil
 gg_trg_Crit_Aura = nil
 gg_trg_Flak_Tower_Armor_Break = nil
 gg_trg_Glaive_Tower_Enchanted_Glaives = nil
@@ -3257,7 +3256,7 @@ return true
 end
 
 function Trig_Soul_Tower_Soul_Extraction_Func003Func004Func001Func002A()
-BlzSetUnitBaseDamage(GetEnumUnit(), (BlzGetUnitBaseDamage(GetEnumUnit(), 0) + R2I((GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + 0.25))), 0)
+BlzSetUnitBaseDamage(GetEnumUnit(), (BlzGetUnitBaseDamage(GetEnumUnit(), 0) + R2I((GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) * 0.10))), 0)
 SetUnitLifeBJ(GetEnumUnit(), (GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) + (GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) / 0.50)))
 end
 
@@ -13302,18 +13301,22 @@ return true
 end
 
 function Trig_Name_Fix_Func001Func001C()
-if (not (GetPlayerName(GetEnumPlayer()) == "GenoHacker#2987")) then
+if (not (GetPlayerName(ConvertedPlayer(GetForLoopIndexA())) == "GenoHacker#2987")) then
 return false
 end
 return true
 end
 
-function Trig_Name_Fix_Func001A()
+function Trig_Name_Fix_Actions()
+bj_forLoopAIndex = 1
+bj_forLoopAIndexEnd = 9
+while (true) do
+if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
 if (Trig_Name_Fix_Func001Func001C()) then
-udg_PlayerName[GetConvertedPlayerId(GetEnumPlayer())] = ("[DEV] " .. "GenoHacker")
+udg_PlayerName[GetForLoopIndexA()] = ("[DEV] " .. "GenoHacker")
 else
-udg_TempPlayer = GetEnumPlayer()
-udg_TempString[0] = GetPlayerName(udg_TempPlayer)
+udg_TempPlayer = ConvertedPlayer(GetForLoopIndexA())
+udg_TempString[0] = GetPlayerName(ConvertedPlayer(GetForLoopIndexA()))
 udg_NameLoop = 1
 while (true) do
 if (udg_NameLoop > StringLength(udg_TempString[0])) then break end
@@ -13321,15 +13324,12 @@ udg_TempString[1] = SubStringBJ(udg_TempString[0], udg_NameLoop, udg_NameLoop)
 if (Trig_Name_Fix_Func001Func001Func003Func002C()) then
 udg_PlayerName[GetConvertedPlayerId(udg_TempPlayer)] = SubStringBJ(udg_TempString[0], 1, (udg_NameLoop - 1))
 else
-udg_PlayerName[GetConvertedPlayerId(udg_TempPlayer)] = udg_TempString[0]
 end
 udg_NameLoop = udg_NameLoop + 1
 end
 end
+bj_forLoopAIndex = bj_forLoopAIndex + 1
 end
-
-function Trig_Name_Fix_Actions()
-ForForce(udg_PlayerGroup_Permanent[1], Trig_Name_Fix_Func001A)
 end
 
 function InitTrig_Name_Fix()

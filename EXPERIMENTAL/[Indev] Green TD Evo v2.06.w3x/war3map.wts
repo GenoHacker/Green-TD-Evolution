@@ -6167,6 +6167,16 @@ STRING 938
 |c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing [250 x Armor] piercing damage to nearby enemy units
 }
 
+STRING 939
+// Abilities: A04C (Soul Extraction), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Attacks have a 10% chance to deal 5% of units current health as chaos damage, the tower gains mana equal to [5 + Damage Dealt].
+
+Whilst above 75% mana this tower has a 10% chance to use all the accumulated mana to summon 5 minions with random attack types whose damage is equal to [500 + 10% of Mana Spent].
+
+If this activates whilst minions are still alive then their damage will be increased and their health will be increased by 50% of their current health.
+}
+
 STRING 946
 // Units: n007 (Frost Tower 4: Tyrande), Ubertip (Tooltip - Extended)
 {
@@ -18795,16 +18805,6 @@ STRING 2815
 // Abilities: A04F (Brainfreeze), EditorSuffix (Editor Suffix)
 {
 [Spirit Tower]
-}
-
-STRING 2816
-// Abilities: A04C (Soul Extraction), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Attacks have a 10% chance to deal 5% of units current health as chaos damage, the tower gains mana equal to [5 + Damage Dealt].
-
-Whilst above 75% mana this tower has a 10% chance to use all the accumulated mana to summon 5 minions with random attack types whose damage is equal to [500 + 25% of Mana Spent].
-
-If this activates whilst minions are still alive then their damage will be increased and their health will be increased by 50% of their current health.
 }
 
 STRING 2817
