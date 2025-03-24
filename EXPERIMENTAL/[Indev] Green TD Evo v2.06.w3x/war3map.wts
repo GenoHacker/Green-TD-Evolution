@@ -220,12 +220,6 @@ STRING 36
 Endless Mode
 }
 
-STRING 37
-// Abilities: A04I (Shrapnel Blast), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Hits on enemies have a [10% + 0.1% per armour of hit unit] chance to trigger a shrapnel blast dealing piercing damage to nearby units equaling to [500 x armor of hit unit].
-}
-
 STRING 38
 // Units: nbzw ([Air] Bronze Dragon Whelp), Name (Name)
 {
@@ -4560,6 +4554,12 @@ STRING 707
 STRING 708
 {
 v2.05 Release Date - 01/07/20
+}
+
+STRING 709
+// Abilities: A04I (Shrapnel Blast), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Hits on enemies have a [10% + 0.1% per armour of hit unit] chance to trigger a shrapnel blast dealing piercing damage to nearby units equaling to [250 x armor of hit unit].
 }
 
 STRING 710
