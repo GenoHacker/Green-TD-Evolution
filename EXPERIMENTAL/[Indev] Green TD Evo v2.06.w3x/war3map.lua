@@ -3194,15 +3194,25 @@ end
 return true
 end
 
-function Trig_Shrapnel_Tower_Shrapnel_Blast_Func003Func001C()
+function Trig_Shrapnel_Tower_Shrapnel_Blast_Func004Func001C()
+if (udg_Real_Array_ShrapBlastChance[udg_Integer_ShrapTowerPlyNum] <= (100.00 + BlzGetUnitArmor(udg_DamageEventTarget))) then
+return true
+end
+if (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) == 50.00) then
+return true
+end
+return false
+end
+
+function Trig_Shrapnel_Tower_Shrapnel_Blast_Func004Func002C()
 if (not (BlzGetUnitArmor(udg_DamageEventTarget) <= 0.00)) then
 return false
 end
 return true
 end
 
-function Trig_Shrapnel_Tower_Shrapnel_Blast_Func003C()
-if (not (udg_Real_Array_ShrapBlastChance[udg_Integer_ShrapTowerPlyNum] <= (100.00 + BlzGetUnitArmor(udg_DamageEventTarget)))) then
+function Trig_Shrapnel_Tower_Shrapnel_Blast_Func004C()
+if (not Trig_Shrapnel_Tower_Shrapnel_Blast_Func004Func001C()) then
 return false
 end
 return true
@@ -3211,11 +3221,14 @@ end
 function Trig_Shrapnel_Tower_Shrapnel_Blast_Actions()
 udg_Integer_ShrapTowerPlyNum = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
 udg_Real_Array_ShrapBlastChance[udg_Integer_ShrapTowerPlyNum] = GetRandomReal(0.00, 1000.00)
-if (Trig_Shrapnel_Tower_Shrapnel_Blast_Func003C()) then
-if (Trig_Shrapnel_Tower_Shrapnel_Blast_Func003Func001C()) then
+SetUnitManaBJ(udg_DamageEventSource, (GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + 1))
+if (Trig_Shrapnel_Tower_Shrapnel_Blast_Func004C()) then
+if (Trig_Shrapnel_Tower_Shrapnel_Blast_Func004Func002C()) then
+udg_Real_ShrapTowerUnitArm = 0.00
 else
 udg_Real_ShrapTowerUnitArm = BlzGetUnitArmor(udg_DamageEventTarget)
 end
+SetUnitManaBJ(udg_DamageEventSource, 0.00)
 udg_Point_Array_ShrapTower[udg_Integer_ShrapTowerPlyNum] = GetUnitLoc(udg_DamageEventTarget)
 CreateNUnitsAtLoc(1, FourCC("o00H"), ConvertedPlayer(udg_Integer_ShrapTowerPlyNum), udg_Point_Array_ShrapTower[udg_Integer_ShrapTowerPlyNum], bj_UNIT_FACING)
 UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())

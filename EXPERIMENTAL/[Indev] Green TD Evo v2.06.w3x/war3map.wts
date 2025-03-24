@@ -220,18 +220,6 @@ STRING 36
 Endless Mode
 }
 
-STRING 37
-// Units: e009 (Shrapnel Tower 4: Goblin Shredder), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Hero
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff772000
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff770.71 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Bouncing Attack; attacks bounce up to 3 times
-|c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing [250 x Armor] piercing damage to nearby enemy units
-}
-
 STRING 38
 // Units: nbzw ([Air] Bronze Dragon Whelp), Name (Name)
 {
@@ -4770,52 +4758,16 @@ STRING 741
 HH Snow Owls Active
 }
 
-STRING 742
-// Units: e00C (Goblin Shredder, Ultimate Shrapnel Tower), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Hero
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff7727000
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff771.24 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Bouncing Attack; attacks bounce up to 3 times
-|c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing [250 x Armour] piercing damage to nearby enemy units
-}
-
 STRING 743
 // Units: h007 (Uther, Ultimate Research Tower), Tip (Tooltip - Basic)
 {
 |c0077ff77[C] |c0000ff00Upgrade To Uther, Ultimate.|r |cAAAAFFAAResearch Tower 10.|r
 }
 
-STRING 744
-// Units: e00D (Shrapnel Tower 9: Goblin Shredder), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Hero
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff7718500
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff771.10 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Bouncing Attack; attacks bounce up to 3 times
-|c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing [250 x Armor] piercing damage to nearby enemy units
-}
-
 STRING 745
 // Units: h041 (Research Tower 5: Bandit Lord), Name (Name)
 {
 Research Tower 5: Bandit Lord
-}
-
-STRING 746
-// Units: e00S (Shrapnel Tower 8: Goblin Shredder), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Hero
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff7713000
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff771.02 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Bouncing Attack; attacks bounce up to 3 times
-|c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing [250 x Armor] piercing damage to nearby enemy units
 }
 
 STRING 747
@@ -6081,42 +6033,6 @@ STRING 921
 
 }
 
-STRING 922
-// Units: e00T (Shrapnel Tower 7: Goblin Shredder), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Hero
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff778700
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff770.94 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Bouncing Attack; attacks bounce up to 3 times
-|c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing [250 x Armor] piercing damage to nearby enemy units
-}
-
-STRING 923
-// Units: e00U (Shrapnel Tower 6: Goblin Shredder), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Hero
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff775500
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff770.87 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Bouncing Attack; attacks bounce up to 3 times
-|c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing [250 x Armor] piercing damage to nearby enemy units
-}
-
-STRING 924
-// Units: e00V (Shrapnel Tower 5: Goblin Shredder), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Hero
-|c0000ff00Cooldown:|r |c0077ff771.25
-|c0000ff00Damage:|r |c0077ff773500
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff770.83 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Bouncing Attack; attacks bounce up to 3 times
-|c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing [250 x Armor] piercing damage to nearby enemy units
-}
-
 STRING 925
 // Units: h00H (Random Boss), Tip (Tooltip - Basic)
 {
@@ -6150,10 +6066,70 @@ STRING 928
 |c0000ff00Duration:|r |c0077ff775 Seconds
 }
 
+STRING 929
+// Units: e009 (Shrapnel Tower 4: Goblin Shredder), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff772000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.71 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Bouncing Attack; attacks bounce up to 5 times
+|c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing [250 x Armor] piercing damage to nearby enemy units
+}
+
+STRING 930
+// Units: e00C (Goblin Shredder, Ultimate Shrapnel Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff7727000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff771.24 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Bouncing Attack; attacks bounce up to 5 times
+|c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing [250 x Armour] piercing damage to nearby enemy units
+}
+
+STRING 931
+// Units: e00D (Shrapnel Tower 9: Goblin Shredder), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff7718500
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff771.10 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Bouncing Attack; attacks bounce up to 5 times
+|c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing [250 x Armor] piercing damage to nearby enemy units
+}
+
 STRING 932
 // Abilities: A01M (Raise Dead), Unhotkey (Hotkey - Turn Off)
 {
 D
+}
+
+STRING 933
+// Units: e00S (Shrapnel Tower 8: Goblin Shredder), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff7713000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff771.02 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Bouncing Attack; attacks bounce up to 5 times
+|c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing [250 x Armor] piercing damage to nearby enemy units
+}
+
+STRING 934
+// Units: e00T (Shrapnel Tower 7: Goblin Shredder), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff778700
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.94 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Bouncing Attack; attacks bounce up to 5 times
+|c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing [250 x Armor] piercing damage to nearby enemy units
 }
 
 STRING 935
@@ -6165,6 +6141,30 @@ STRING 936
 // Buffs/Effects: B001 (), Buffubertip (Tooltip - Extended)
 {
 This unit is under the effects of Crippling Aura; it has a decreased movement speed.
+}
+
+STRING 937
+// Units: e00U (Shrapnel Tower 6: Goblin Shredder), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff775500
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.87 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Bouncing Attack; attacks bounce up to 5 times
+|c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing [250 x Armor] piercing damage to nearby enemy units
+}
+
+STRING 938
+// Units: e00V (Shrapnel Tower 5: Goblin Shredder), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Hero
+|c0000ff00Cooldown:|r |c0077ff771.25
+|c0000ff00Damage:|r |c0077ff773500
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.83 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Bouncing Attack; attacks bounce up to 5 times
+|c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing [250 x Armor] piercing damage to nearby enemy units
 }
 
 STRING 946
