@@ -1,37 +1,25 @@
-udg_Integer_Array_Kills = __jarray(0)
-udg_Integer_Array_CreepHandicap = __jarray(0)
 udg_Integer_EndlessMode = 0
 udg_Integer_WaveNumber = 0
 udg_Integer_Gamemode = 0
 udg_String_Array_MultiBoardColours = __jarray("")
-udg_Integer_Array_Gold = __jarray(0)
 udg_Integer_PlayerLeaveGold = 0
 udg_Integer_ChaosMode = 0
-udg_Integer_Lives = 0
 udg_Integer_LoseLifeEffectNumber = 0
-udg_Integer_GoldAfterWave = 0
-udg_Integer_Players = 0
 udg_Integer_AntiBuild = 0
 udg_Integer_Difficulty = 0
-udg_Integer_DebugWave = 0
 udg_Integer_Array_WaveTimer = __jarray(0)
 udg_Integer_Array_Gamble = __jarray(0)
 udg_Integer_Jackpot = 0
 udg_PlayerGroup_Permanent = {}
-udg_SpawnPoints_PntArray = {}
 udg_Player_Array_AntiBuild = {}
-udg_ChoosePoint_Pnt = nil
 udg_Integer_SpawnCount = 0
 udg_Integer_Player1SpawnDivider = 0
 udg_UnitType_Array_EndWaveArmor = __jarray(0)
-udg_String_EmptyString = ""
 udg_Real_Array_CameraDistance = __jarray(0.0)
-udg_DummyPoint_PntArray = {}
-udg_HeroPoint_PntArray = {}
+udg_Point_Array_DummyPoint = {}
+udg_Point_Array_HeroPoint = {}
 udg_Integer_Array_TrapGoldCost = __jarray(0)
-udg_Integer_Array_AutoCamera = __jarray(0)
 udg_Integer_Array_AuraGoldCost = __jarray(0)
-udg_Integer_RandomNumber = 0
 udg_Image_Array_EasterEggImages = {}
 udg_Real_Array_Handicap = __jarray(0.0)
 udg_Integer_Array_TowerOption = __jarray(0)
@@ -41,7 +29,6 @@ udg_Integer_ChaosModeOn = 0
 udg_Real_Array_ChaosHealthPerLow = __jarray(0.0)
 udg_Real_Array_ChaosHealthPerHigh = __jarray(0.0)
 udg_String_Array_ChaosMultiplier = __jarray("")
-udg_UnitGroup_GoldRushGrp = nil
 udg_Integer_SpawnMax = 0
 udg_Integer_SwarmMode = 0
 udg_Integer_Array_GoldLostGambling = __jarray(0)
@@ -55,68 +42,35 @@ udg_UnitType_Array_RWHero = __jarray(0)
 udg_UnitType_Array_RWLight = __jarray(0)
 udg_UnitType_Array_RWFortified = __jarray(0)
 udg_UnitType_Array_RWMedium = __jarray(0)
-udg_Integer_Array_RWUnitType = __jarray(0)
-udg_UnitType_Array_RWSpawnUnit = __jarray(0)
 udg_Real_Array_RWHealth = __jarray(0.0)
 udg_Real_Array_RWArmour = __jarray(0.0)
-udg_Integer_Array_RWBounty = __jarray(0)
 udg_Integer_RWActivated = 0
 udg_Real_SpawnTime = 0.0
-udg_Real_RWCalcHealth = 0.0
 udg_UnitGroup_LoseLifeNoGoldRW = nil
 udg_Integer_Array_GamUsageAmount = __jarray(0)
 udg_Point_Array_HHSpawnPoint = {}
 udg_Integer_HHUnitType = 0
-udg_UnitType_HHUnit = 0
 udg_Integer_HHActivated = 0
 udg_Integer_HHSpawnedAmount = 0
-udg_String_Array_TowerEnabled = __jarray("")
-udg_Real_RestartRedAfk = 0.0
-udg_Real_DefaultGamemode = 0.0
-udg_Integer_DefeatTimer = 0
-udg_String_Array_PlayerNames = __jarray("")
-udg_Integer_Array_AutoClearOnOff = __jarray(0)
 udg_String_JackpotWinner = ""
 udg_Integer_HHPassives = 0
 udg_Integer_HHActives = 0
 udg_Integer_HHActiveChance = 0
 udg_HHAbility_Point = nil
 udg_Integer_HHCastChance = 0
-udg_Integer_HHCost = 0
 udg_String_Array_WaveType = __jarray("")
-udg_Integer_IncomeGold = 0
 udg_Unit_Array_Heroes = {}
-udg_Integer_Array_IncomeLevel = __jarray(0)
 udg_Integer_SpeedMode = 0
-udg_PointArray_Waypoints = {}
-udg_Integer_AuraTowerSell = __jarray(0)
-udg_Integer_TotalPlayerKills = 0
-udg_Unit_RandomBoss = nil
-udg_Integer_Array_FoodBonus = __jarray(0)
 udg_Real_Array_MessageTime = __jarray(0.0)
-udg_Integer_SellPercent = 0
-udg_Real_CreepHealth = 0.0
-udg_Real_CreepHealthTotal = 0.0
 udg_Real_CreepHealthMultiplier = 0.0
-udg_Real_Array_CreepHealthWaves = __jarray(0.0)
-udg_Real_Array_HPMultiplierWaves = __jarray(0.0)
-udg_Integer_Array_WaveSpawnMax = __jarray(0)
 udg_UnitType_Array_UnitsTypes = __jarray(0)
 udg_Region_Array_RandomWaves = {}
-udg_Unit_Array_NextUnits = {}
 udg_String_Array_ImageFile = __jarray("")
-udg_Real_Array_RandomWaveBounty = __jarray(0.0)
-udg_Integer_WaveAmount = 0
-udg_Real_BlitzWaveTime = 0.0
 udg_Integer_BlitzMode = 0
-udg_Real_Array_RWArmourTotal = __jarray(0.0)
 udg_UnitType_Array_SoulTowerUnits = __jarray(0)
 udg_Integer_RandomDifficulty = 0
 udg_Integer_Array_RandomGameModes = __jarray(0)
 udg_Integer_Array_RandomTowers = __jarray(0)
-udg_Integer_RandomTowerAmount = 0
-udg_Integer_IsRandomModes = 0
-udg_Integer_Array_ActivePlayer = __jarray(0)
 udg_CONVERTED_ATTACK_TYPE = {}
 udg_CONVERTED_DAMAGE_TYPE = {}
 udg_DamageEventArmorPierced = 0.0
@@ -234,14 +188,10 @@ udg_Real_Array_BonusCritChance = __jarray(0.0)
 udg_Real_Array_MeleeCritDamage = __jarray(0.0)
 udg_Real_Array_RangedCritDamage = __jarray(0.0)
 udg_Real_Array_SpellCritDamage = __jarray(0.0)
-udg_Unit_AuraTower = {}
 udg_Real_Array_CritAuraChances = __jarray(0.0)
 udg_Real_Array_CritAuraDamage = __jarray(0.0)
 udg_Real_Array_BonusCritDamage = __jarray(0.0)
 udg_Real_OrkColour = 0.0
-udg_Real_Array_SkillCritChance = __jarray(0.0)
-udg_Real_Array_SkillCritDamage = __jarray(0.0)
-udg_Integer_Array_HeroCritLevel = __jarray(0)
 udg_UnitGroup_VenomRandomUnit = nil
 udg_Real_Array_GlaiveDistance = __jarray(0.0)
 udg_Real_Array_EnchantGlaiveChance = __jarray(0.0)
@@ -250,18 +200,11 @@ udg_Real_Array_SoulTowerDamage = __jarray(0.0)
 udg_UnitGroup_Array_SoulTowerUnits = {}
 udg_Real_Array_ShardTowerChance = __jarray(0.0)
 udg_Real_Array_BrainfreezeChance = __jarray(0.0)
-udg_Real_Array_AqRange = __jarray(0.0)
 udg_String_Array_Alpharius = __jarray("")
-udg_String_Array_MBWaveModifier = __jarray("")
-udg_String_Array_MBStaticWArmIcons = __jarray("")
 udg_Real_OrkSize = 0.0
 udg_String_Array_MBStatWavUniIcons = __jarray("")
-udg_String_Array_MBStatNextArmIcon = __jarray("")
 udg_String_AirWavesText = ""
 udg_String_DivineWavesText = ""
-udg_String_HeroWavesText = ""
-udg_Integer_RWBossChance = 0
-udg_String_RWBossWaveText = ""
 udg_Real_Array_ShrapBlastChance = __jarray(0.0)
 udg_Integer_Array_FireTrapChance = __jarray(0)
 udg_Integer_TotalFireTrapsBuilt = 0
@@ -338,12 +281,9 @@ udg_Integer_Array_EarthTrapChance = __jarray(0)
 udg_Integer_TotalSlamTrapsBuilt = 0
 udg_Integer_Array_BloodTrapChance = __jarray(0)
 udg_Integer_TotalBloodTrapsBuilt = 0
-udg_Integer_DisTowerIncomeBonus = 0
-udg_Integer_GambleBonus = 0
 udg_Integer_Array_VoidContChance = __jarray(0)
 udg_Integer_TotalVoidTrapsBuilt = 0
 udg_Integer_Array_VoidCBlastChance = __jarray(0)
-udg_Integer_GambleBonusLvl = 0
 udg_Point_EasterEgg = nil
 udg_Point_SellTower = nil
 udg_Point_LoseLifeAnim = nil
@@ -365,7 +305,6 @@ udg_Point_Array_IronTrap = {}
 udg_PlyGroup_Array_HeroAbilities = {}
 udg_PlayerGroup_StartMsg = nil
 udg_Integer_Array_GoblinBotChance = __jarray(0)
-udg_Integer_TotalIronTrapsBuilt = 0
 udg_Unit_Array_IronTraps = {}
 udg_Unit_Mine = nil
 udg_Integer_Array_MineDamageLevel = __jarray(0)
@@ -373,7 +312,6 @@ udg_TempPlayer = nil
 udg_TempString = __jarray("")
 udg_NameLoop = 0
 udg_PlayerName = __jarray("")
-udg_Integer_GoldBonus = 0
 udg_Real_HealthToLives = 0.0
 udg_Real_Lives = 0.0
 udg_Integer_Array_GoldAuraChance = __jarray(0)
@@ -428,6 +366,61 @@ udg_Integer_HellfirePlyNum = 0
 udg_Point_Array_HellfireTower = {}
 udg_Integer_Array_HellfireChance = __jarray(0)
 udg_Player_Inactive = nil
+udg_String_Array_TowerEnabled = __jarray("")
+udg_String_Array_PlayerNames = __jarray("")
+udg_String_RWBossWaveText = ""
+udg_Integer_Array_RWUnitType = __jarray(0)
+udg_String_HeroWavesText = ""
+udg_Unit_Array_NextUnits = {}
+udg_Unit_AuraTower = {}
+udg_Unit_RandomBoss = nil
+udg_Integer_Array_HeroCritLevel = __jarray(0)
+udg_Integer_Array_FoodBonus = __jarray(0)
+udg_Integer_Array_WaveSpawnMax = __jarray(0)
+udg_Integer_Array_IncomeLevel = __jarray(0)
+udg_Integer_Array_AutoClearOnOff = __jarray(0)
+udg_Integer_Array_RWBounty = __jarray(0)
+udg_Integer_RandomTowerAmount = 0
+udg_Integer_RWBossChance = 0
+udg_Integer_IsRandomModes = 0
+udg_Integer_WaveAmount = 0
+udg_Integer_SellPercent = 0
+udg_Integer_GambleBonus = 0
+udg_Integer_TotalPlayerKills = 0
+udg_Integer_AuraTowerSell = __jarray(0)
+udg_Integer_GoldBonus = 0
+udg_Integer_GambleBonusLvl = 0
+udg_Integer_IncomeGold = 0
+udg_Integer_HHCost = 0
+udg_Integer_DisTowerIncomeBonus = 0
+udg_Real_Array_SkillCritDamage = __jarray(0.0)
+udg_Real_Array_SkillCritChance = __jarray(0.0)
+udg_Integer_DefeatTimer = 0
+udg_Real_Array_RWArmourTotal = __jarray(0.0)
+udg_Integer_Lives = 0
+udg_Real_Array_RandomWaveBounty = __jarray(0.0)
+udg_Real_Array_HPMultiplierWaves = __jarray(0.0)
+udg_Real_Array_CreepHealthWaves = __jarray(0.0)
+udg_Real_CreepHealthTotal = 0.0
+udg_Real_CreepHealth = 0.0
+udg_Real_DefaultGamemode = 0.0
+udg_Real_RestartRedAfk = 0.0
+udg_PointArray_Waypoints = {}
+udg_String_Array_MBWaveModifier = __jarray("")
+udg_Integer_GoldAfterWave = 0
+udg_Integer_Players = 0
+udg_Integer_DebugWave = 0
+udg_Integer_RandomNumber = 0
+udg_Integer_Array_AutoCamera = __jarray(0)
+udg_Integer_Array_Kills = __jarray(0)
+udg_Integer_Array_Gold = __jarray(0)
+udg_String_EmptyString = ""
+udg_UnitGroup_GoldRushGrp = nil
+udg_UnitType_Array_RWSpawnUnit = __jarray(0)
+udg_UnitType_HHUnit = 0
+udg_ChoosePoint_Pnt = nil
+udg_SpawnPoints_PntArray = {}
+udg_Integer_TotalIronTrapsBuilt = 0
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -573,6 +566,21 @@ gg_trg_Hero_Abilities = nil
 gg_trg_Finish_Build = nil
 gg_trg_Finish_Upgrade = nil
 gg_trg_Instant_Upgrade = nil
+gg_trg_Tower_Swapping = nil
+gg_trg_Emergency_Towers = nil
+gg_trg_Auto_Blink = nil
+gg_trg_Gamble = nil
+gg_trg_Transmute = nil
+gg_trg_Unit_Debugger = nil
+gg_trg_Player_1 = nil
+gg_trg_Player_2 = nil
+gg_trg_Player_3 = nil
+gg_trg_Player_4 = nil
+gg_trg_Player_5 = nil
+gg_trg_Player_6 = nil
+gg_trg_Player_7 = nil
+gg_trg_Player_8 = nil
+gg_trg_Player_9 = nil
 gg_trg_Start_Messages = nil
 gg_trg_Choose_Mode_Gamemodes = nil
 gg_trg_Choose_Mode_Towers = nil
@@ -661,9 +669,9 @@ gg_trg_Camera_Zoom_Command = nil
 gg_trg_Camera_Zoom_Increments = nil
 gg_trg_Camera = nil
 gg_trg_Game_Message_Time = nil
-gg_trg_Damage_Info = nil
-gg_trg_Greed = nil
-gg_trg_Gamemode = nil
+gg_trg_Damage_Info_Command = nil
+gg_trg_Greed_Command = nil
+gg_trg_Gamemode_Command = nil
 gg_trg_Commands = nil
 gg_trg_Income_Command = nil
 gg_trg_Wave_Command = nil
@@ -685,21 +693,6 @@ gg_trg_Autoclear_Command = nil
 gg_trg_Autoclear_Trigger = nil
 gg_trg_Clear_Command = nil
 gg_trg_Clear_Ability = nil
-gg_trg_Tower_Swapping = nil
-gg_trg_Emergency_Towers = nil
-gg_trg_Auto_Blink = nil
-gg_trg_Gamble = nil
-gg_trg_Transmute = nil
-gg_trg_Unit_Debugger = nil
-gg_trg_Player_1 = nil
-gg_trg_Player_2 = nil
-gg_trg_Player_3 = nil
-gg_trg_Player_4 = nil
-gg_trg_Player_5 = nil
-gg_trg_Player_6 = nil
-gg_trg_Player_7 = nil
-gg_trg_Player_8 = nil
-gg_trg_Player_9 = nil
 gg_trg_Iron_Trap_Autocast_Mine = nil
 gg_trg_Iron_Trap_Clockwerk_Kaboom = nil
 gg_trg_Gold_Aura_Extra_Gold = nil
@@ -730,18 +723,6 @@ gg_unit_n026_0130 = nil
 function InitGlobals()
 local i = 0
 
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_Integer_Array_Kills[i] = 0
-i = i + 1
-end
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_Integer_Array_CreepHandicap[i] = 0
-i = i + 1
-end
 udg_Integer_EndlessMode = 0
 udg_Integer_WaveNumber = 0
 udg_Integer_Gamemode = 0
@@ -751,21 +732,11 @@ if ((i > 1)) then break end
 udg_String_Array_MultiBoardColours[i] = ""
 i = i + 1
 end
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_Integer_Array_Gold[i] = 0
-i = i + 1
-end
 udg_Integer_PlayerLeaveGold = 0
 udg_Integer_ChaosMode = 0
-udg_Integer_Lives = 60
 udg_Integer_LoseLifeEffectNumber = 4
-udg_Integer_GoldAfterWave = 200
-udg_Integer_Players = 0
 udg_Integer_AntiBuild = 300
 udg_Integer_Difficulty = 2
-udg_Integer_DebugWave = 0
 i = 0
 while (true) do
 if ((i > 1)) then break end
@@ -787,7 +758,6 @@ i = i + 1
 end
 udg_Integer_SpawnCount = 0
 udg_Integer_Player1SpawnDivider = 0
-udg_String_EmptyString = ""
 i = 0
 while (true) do
 if ((i > 1)) then break end
@@ -803,16 +773,9 @@ end
 i = 0
 while (true) do
 if ((i > 1)) then break end
-udg_Integer_Array_AutoCamera[i] = 0
-i = i + 1
-end
-i = 0
-while (true) do
-if ((i > 1)) then break end
 udg_Integer_Array_AuraGoldCost[i] = 0
 i = i + 1
 end
-udg_Integer_RandomNumber = 0
 i = 0
 while (true) do
 if ((i > 1)) then break end
@@ -846,7 +809,6 @@ if ((i > 1)) then break end
 udg_String_Array_ChaosMultiplier[i] = ""
 i = i + 1
 end
-udg_UnitGroup_GoldRushGrp = CreateGroup()
 udg_Integer_SpawnMax = 31
 udg_Integer_SwarmMode = 0
 i = 0
@@ -876,12 +838,6 @@ end
 i = 0
 while (true) do
 if ((i > 1)) then break end
-udg_Integer_Array_RWUnitType[i] = 0
-i = i + 1
-end
-i = 0
-while (true) do
-if ((i > 1)) then break end
 udg_Real_Array_RWHealth[i] = 0.0
 i = i + 1
 end
@@ -891,15 +847,8 @@ if ((i > 1)) then break end
 udg_Real_Array_RWArmour[i] = 30.00
 i = i + 1
 end
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_Integer_Array_RWBounty[i] = 0
-i = i + 1
-end
 udg_Integer_RWActivated = 0
 udg_Real_SpawnTime = 15.00
-udg_Real_RWCalcHealth = 0.0
 udg_UnitGroup_LoseLifeNoGoldRW = CreateGroup()
 i = 0
 while (true) do
@@ -910,88 +859,25 @@ end
 udg_Integer_HHUnitType = 0
 udg_Integer_HHActivated = 0
 udg_Integer_HHSpawnedAmount = 0
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_String_Array_TowerEnabled[i] = ""
-i = i + 1
-end
-udg_Real_RestartRedAfk = 0.0
-udg_Real_DefaultGamemode = 0.0
-udg_Integer_DefeatTimer = 0
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_String_Array_PlayerNames[i] = ""
-i = i + 1
-end
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_Integer_Array_AutoClearOnOff[i] = 0
-i = i + 1
-end
 udg_String_JackpotWinner = ""
 udg_Integer_HHPassives = 0
 udg_Integer_HHActives = 0
 udg_Integer_HHActiveChance = 0
 udg_Integer_HHCastChance = 0
-udg_Integer_HHCost = 2500
 i = 0
 while (true) do
 if ((i > 1)) then break end
 udg_String_Array_WaveType[i] = ""
 i = i + 1
 end
-udg_Integer_IncomeGold = 0
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_Integer_Array_IncomeLevel[i] = 0
-i = i + 1
-end
 udg_Integer_SpeedMode = 0
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_Integer_AuraTowerSell[i] = 0
-i = i + 1
-end
-udg_Integer_TotalPlayerKills = 0
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_Integer_Array_FoodBonus[i] = 0
-i = i + 1
-end
 i = 0
 while (true) do
 if ((i > 1)) then break end
 udg_Real_Array_MessageTime[i] = 0.0
 i = i + 1
 end
-udg_Integer_SellPercent = 0
-udg_Real_CreepHealth = 100.00
-udg_Real_CreepHealthTotal = 0.0
 udg_Real_CreepHealthMultiplier = 1.00
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_Real_Array_CreepHealthWaves[i] = 0.0
-i = i + 1
-end
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_Real_Array_HPMultiplierWaves[i] = 1.00
-i = i + 1
-end
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_Integer_Array_WaveSpawnMax[i] = 0
-i = i + 1
-end
 i = 0
 while (true) do
 if ((i > 1)) then break end
@@ -1004,21 +890,7 @@ if ((i > 1)) then break end
 udg_String_Array_ImageFile[i] = ""
 i = i + 1
 end
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_Real_Array_RandomWaveBounty[i] = 0.0
-i = i + 1
-end
-udg_Integer_WaveAmount = 60
-udg_Real_BlitzWaveTime = 0.0
 udg_Integer_BlitzMode = 0
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_Real_Array_RWArmourTotal[i] = 0.0
-i = i + 1
-end
 udg_Integer_RandomDifficulty = 0
 i = 0
 while (true) do
@@ -1030,14 +902,6 @@ i = 0
 while (true) do
 if ((i > 1)) then break end
 udg_Integer_Array_RandomTowers[i] = 0
-i = i + 1
-end
-udg_Integer_RandomTowerAmount = 0
-udg_Integer_IsRandomModes = 0
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_Integer_Array_ActivePlayer[i] = 0
 i = i + 1
 end
 udg_DamageEventArmorPierced = 0.0
@@ -1223,24 +1087,6 @@ udg_Real_Array_BonusCritDamage[i] = 0.0
 i = i + 1
 end
 udg_Real_OrkColour = 100.00
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_Real_Array_SkillCritChance[i] = 0.0
-i = i + 1
-end
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_Real_Array_SkillCritDamage[i] = 0.0
-i = i + 1
-end
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_Integer_Array_HeroCritLevel[i] = 0
-i = i + 1
-end
 udg_UnitGroup_VenomRandomUnit = CreateGroup()
 i = 0
 while (true) do
@@ -1287,25 +1133,7 @@ end
 i = 0
 while (true) do
 if ((i > 1)) then break end
-udg_Real_Array_AqRange[i] = 0.0
-i = i + 1
-end
-i = 0
-while (true) do
-if ((i > 1)) then break end
 udg_String_Array_Alpharius[i] = ""
-i = i + 1
-end
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_String_Array_MBWaveModifier[i] = ""
-i = i + 1
-end
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_String_Array_MBStaticWArmIcons[i] = ""
 i = i + 1
 end
 udg_Real_OrkSize = 130.00
@@ -1315,17 +1143,8 @@ if ((i > 1)) then break end
 udg_String_Array_MBStatWavUniIcons[i] = ""
 i = i + 1
 end
-i = 0
-while (true) do
-if ((i > 1)) then break end
-udg_String_Array_MBStatNextArmIcon[i] = ""
-i = i + 1
-end
 udg_String_AirWavesText = ""
 udg_String_DivineWavesText = ""
-udg_String_HeroWavesText = ""
-udg_Integer_RWBossChance = 0
-udg_String_RWBossWaveText = ""
 i = 0
 while (true) do
 if ((i > 1)) then break end
@@ -1437,8 +1256,6 @@ udg_Integer_Array_BloodTrapChance[i] = 0
 i = i + 1
 end
 udg_Integer_TotalBloodTrapsBuilt = 0
-udg_Integer_DisTowerIncomeBonus = 5
-udg_Integer_GambleBonus = 0
 i = 0
 while (true) do
 if ((i > 1)) then break end
@@ -1452,7 +1269,6 @@ if ((i > 1)) then break end
 udg_Integer_Array_VoidCBlastChance[i] = 0
 i = i + 1
 end
-udg_Integer_GambleBonusLvl = 0
 i = 0
 while (true) do
 if ((i > 1)) then break end
@@ -1466,7 +1282,6 @@ if ((i > 0)) then break end
 udg_Integer_Array_GoblinBotChance[i] = 0
 i = i + 1
 end
-udg_Integer_TotalIronTrapsBuilt = 0
 i = 0
 while (true) do
 if ((i > 1)) then break end
@@ -1485,7 +1300,6 @@ if ((i > 1)) then break end
 udg_PlayerName[i] = ""
 i = i + 1
 end
-udg_Integer_GoldBonus = 100
 udg_Real_HealthToLives = 0.0
 udg_Real_Lives = 100.00
 i = 0
@@ -1532,6 +1346,153 @@ if ((i > 0)) then break end
 udg_Integer_Array_HellfireChance[i] = 0
 i = i + 1
 end
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_String_Array_TowerEnabled[i] = ""
+i = i + 1
+end
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_String_Array_PlayerNames[i] = ""
+i = i + 1
+end
+udg_String_RWBossWaveText = ""
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Integer_Array_RWUnitType[i] = 0
+i = i + 1
+end
+udg_String_HeroWavesText = ""
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Integer_Array_HeroCritLevel[i] = 0
+i = i + 1
+end
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Integer_Array_FoodBonus[i] = 0
+i = i + 1
+end
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Integer_Array_WaveSpawnMax[i] = 0
+i = i + 1
+end
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Integer_Array_IncomeLevel[i] = 0
+i = i + 1
+end
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Integer_Array_AutoClearOnOff[i] = 0
+i = i + 1
+end
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Integer_Array_RWBounty[i] = 0
+i = i + 1
+end
+udg_Integer_RandomTowerAmount = 0
+udg_Integer_RWBossChance = 0
+udg_Integer_IsRandomModes = 0
+udg_Integer_WaveAmount = 60
+udg_Integer_SellPercent = 0
+udg_Integer_GambleBonus = 0
+udg_Integer_TotalPlayerKills = 0
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Integer_AuraTowerSell[i] = 0
+i = i + 1
+end
+udg_Integer_GoldBonus = 100
+udg_Integer_GambleBonusLvl = 0
+udg_Integer_IncomeGold = 0
+udg_Integer_HHCost = 2500
+udg_Integer_DisTowerIncomeBonus = 5
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Real_Array_SkillCritDamage[i] = 0.0
+i = i + 1
+end
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Real_Array_SkillCritChance[i] = 0.0
+i = i + 1
+end
+udg_Integer_DefeatTimer = 0
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Real_Array_RWArmourTotal[i] = 0.0
+i = i + 1
+end
+udg_Integer_Lives = 60
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Real_Array_RandomWaveBounty[i] = 0.0
+i = i + 1
+end
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Real_Array_HPMultiplierWaves[i] = 1.00
+i = i + 1
+end
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Real_Array_CreepHealthWaves[i] = 0.0
+i = i + 1
+end
+udg_Real_CreepHealthTotal = 0.0
+udg_Real_CreepHealth = 100.00
+udg_Real_DefaultGamemode = 0.0
+udg_Real_RestartRedAfk = 0.0
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_String_Array_MBWaveModifier[i] = ""
+i = i + 1
+end
+udg_Integer_GoldAfterWave = 200
+udg_Integer_Players = 0
+udg_Integer_DebugWave = 0
+udg_Integer_RandomNumber = 0
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Integer_Array_AutoCamera[i] = 0
+i = i + 1
+end
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Integer_Array_Kills[i] = 0
+i = i + 1
+end
+i = 0
+while (true) do
+if ((i > 1)) then break end
+udg_Integer_Array_Gold[i] = 0
+i = i + 1
+end
+udg_String_EmptyString = ""
+udg_UnitGroup_GoldRushGrp = CreateGroup()
+udg_Integer_TotalIronTrapsBuilt = 0
 end
 
 --Global Initialization 1.1 also hooks the InitCustomTriggers and RunInitializationTriggers functions
@@ -6637,65 +6598,57 @@ end
 
 function Trig_Emergency_Towers_Actions()
 if (Trig_Emergency_Towers_Func001C()) then
-udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] = GetSpellTargetLoc()
-udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())] = GetUnitLoc(GetTriggerUnit())
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetTriggerUnit()), udg_HeroPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], bj_UNIT_FACING)
+udg_Point_Array_DummyPoint[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] = GetSpellTargetLoc()
+udg_Point_Array_HeroPoint[GetConvertedPlayerId(GetTriggerPlayer())] = GetUnitLoc(GetTriggerUnit())
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetTriggerUnit()), udg_Point_Array_HeroPoint[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], bj_UNIT_FACING)
 UnitAddAbilityBJ(FourCC("A016"), GetLastCreatedUnit())
 SetUnitAbilityLevelSwapped(FourCC("A016"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A01U"), GetTriggerUnit()))
-IssuePointOrderLocBJ(GetLastCreatedUnit(), "summonfactory", udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
+IssuePointOrderLocBJ(GetLastCreatedUnit(), "summonfactory", udg_Point_Array_DummyPoint[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
 RemoveUnit(GetLastCreatedUnit())
-        RemoveLocation(udg_DummyPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
-        RemoveLocation(udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
 else
 end
 if (Trig_Emergency_Towers_Func002C()) then
-udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] = GetSpellTargetLoc()
-udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())] = GetUnitLoc(GetTriggerUnit())
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetTriggerUnit()), udg_HeroPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], bj_UNIT_FACING)
+udg_Point_Array_DummyPoint[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] = GetSpellTargetLoc()
+udg_Point_Array_HeroPoint[GetConvertedPlayerId(GetTriggerPlayer())] = GetUnitLoc(GetTriggerUnit())
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetTriggerUnit()), udg_Point_Array_HeroPoint[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], bj_UNIT_FACING)
 UnitAddAbilityBJ(FourCC("A01T"), GetLastCreatedUnit())
 SetUnitAbilityLevelSwapped(FourCC("A01T"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A01V"), GetTriggerUnit()))
-IssuePointOrderLocBJ(GetLastCreatedUnit(), "summonfactory", udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
+IssuePointOrderLocBJ(GetLastCreatedUnit(), "summonfactory", udg_Point_Array_DummyPoint[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
 RemoveUnit(GetLastCreatedUnit())
-        RemoveLocation(udg_DummyPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
-        RemoveLocation(udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
 else
 end
 if (Trig_Emergency_Towers_Func003C()) then
-udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] = GetSpellTargetLoc()
-udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())] = GetUnitLoc(GetTriggerUnit())
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetTriggerUnit()), udg_HeroPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], bj_UNIT_FACING)
+udg_Point_Array_DummyPoint[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] = GetSpellTargetLoc()
+udg_Point_Array_HeroPoint[GetConvertedPlayerId(GetTriggerPlayer())] = GetUnitLoc(GetTriggerUnit())
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetTriggerUnit()), udg_Point_Array_HeroPoint[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], bj_UNIT_FACING)
 UnitAddAbilityBJ(FourCC("A00L"), GetLastCreatedUnit())
 SetUnitAbilityLevelSwapped(FourCC("A00L"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A01W"), GetTriggerUnit()))
-IssuePointOrderLocBJ(GetLastCreatedUnit(), "summonfactory", udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
+IssuePointOrderLocBJ(GetLastCreatedUnit(), "summonfactory", udg_Point_Array_DummyPoint[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
 RemoveUnit(GetLastCreatedUnit())
-        RemoveLocation(udg_DummyPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
-        RemoveLocation(udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
 else
 end
 if (Trig_Emergency_Towers_Func004C()) then
-udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] = GetSpellTargetLoc()
-udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())] = GetUnitLoc(GetTriggerUnit())
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetTriggerUnit()), udg_HeroPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], bj_UNIT_FACING)
+udg_Point_Array_DummyPoint[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] = GetSpellTargetLoc()
+udg_Point_Array_HeroPoint[GetConvertedPlayerId(GetTriggerPlayer())] = GetUnitLoc(GetTriggerUnit())
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetTriggerUnit()), udg_Point_Array_HeroPoint[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], bj_UNIT_FACING)
 UnitAddAbilityBJ(FourCC("A015"), GetLastCreatedUnit())
 SetUnitAbilityLevelSwapped(FourCC("A015"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A01X"), GetTriggerUnit()))
-IssuePointOrderLocBJ(GetLastCreatedUnit(), "summonfactory", udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
+IssuePointOrderLocBJ(GetLastCreatedUnit(), "summonfactory", udg_Point_Array_DummyPoint[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
 RemoveUnit(GetLastCreatedUnit())
-        RemoveLocation(udg_DummyPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
-        RemoveLocation(udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
 else
 end
 if (Trig_Emergency_Towers_Func005C()) then
-udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] = GetSpellTargetLoc()
-udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())] = GetUnitLoc(GetTriggerUnit())
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetTriggerUnit()), udg_HeroPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], bj_UNIT_FACING)
+udg_Point_Array_DummyPoint[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] = GetSpellTargetLoc()
+udg_Point_Array_HeroPoint[GetConvertedPlayerId(GetTriggerPlayer())] = GetUnitLoc(GetTriggerUnit())
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetTriggerUnit()), udg_Point_Array_HeroPoint[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], bj_UNIT_FACING)
 UnitAddAbilityBJ(FourCC("A012"), GetLastCreatedUnit())
 SetUnitAbilityLevelSwapped(FourCC("A012"), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC("A01Y"), GetTriggerUnit()))
-IssuePointOrderLocBJ(GetLastCreatedUnit(), "summonfactory", udg_DummyPoint_PntArray[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
+IssuePointOrderLocBJ(GetLastCreatedUnit(), "summonfactory", udg_Point_Array_DummyPoint[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
 RemoveUnit(GetLastCreatedUnit())
-        RemoveLocation(udg_DummyPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
-        RemoveLocation(udg_HeroPoint_PntArray[GetConvertedPlayerId(GetTriggerPlayer())])
 else
 end
+    RemoveLocation(udg_Point_Array_DummyPoint[GetConvertedPlayerId(GetTriggerPlayer())])
+    RemoveLocation(udg_Point_Array_HeroPoint[GetConvertedPlayerId(GetTriggerPlayer())])
 end
 
 function InitTrig_Emergency_Towers()
@@ -10215,6 +10168,38 @@ TriggerAddCondition(gg_trg_Red_Inactive, Condition(Trig_Red_Inactive_Conditions)
 TriggerAddAction(gg_trg_Red_Inactive, Trig_Red_Inactive_Actions)
 end
 
+function Trig_Turn_On_RedAfk_Ready_Actions()
+EnableTrigger(gg_trg_RedAfk_Ready)
+end
+
+function InitTrig_Turn_On_RedAfk_Ready()
+gg_trg_Turn_On_RedAfk_Ready = CreateTrigger()
+TriggerRegisterTimerEventSingle(gg_trg_Turn_On_RedAfk_Ready, 120.00)
+TriggerAddAction(gg_trg_Turn_On_RedAfk_Ready, Trig_Turn_On_RedAfk_Ready_Actions)
+end
+
+function Trig_Turn_on_RedAfk_Restart_Func002C()
+if (not (udg_Real_RestartRedAfk >= 120.00)) then
+return false
+end
+return true
+end
+
+function Trig_Turn_on_RedAfk_Restart_Actions()
+udg_Real_RestartRedAfk = (udg_Real_RestartRedAfk + 1)
+if (Trig_Turn_on_RedAfk_Restart_Func002C()) then
+EnableTrigger(gg_trg_RedAfk_Ready)
+else
+end
+end
+
+function InitTrig_Turn_on_RedAfk_Restart()
+gg_trg_Turn_on_RedAfk_Restart = CreateTrigger()
+DisableTrigger(gg_trg_Turn_on_RedAfk_Restart)
+TriggerRegisterTimerEventPeriodic(gg_trg_Turn_on_RedAfk_Restart, 1.00)
+TriggerAddAction(gg_trg_Turn_on_RedAfk_Restart, Trig_Turn_on_RedAfk_Restart_Actions)
+end
+
 function Trig_Start_Gamemode_Indicator_Func001Func001C()
 if (not (udg_Integer_ChaosMode == 1)) then
 return false
@@ -10430,38 +10415,6 @@ end
 function InitTrig_Start_Gamemode_Indicator()
 gg_trg_Start_Gamemode_Indicator = CreateTrigger()
 TriggerAddAction(gg_trg_Start_Gamemode_Indicator, Trig_Start_Gamemode_Indicator_Actions)
-end
-
-function Trig_Turn_On_RedAfk_Ready_Actions()
-EnableTrigger(gg_trg_RedAfk_Ready)
-end
-
-function InitTrig_Turn_On_RedAfk_Ready()
-gg_trg_Turn_On_RedAfk_Ready = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Turn_On_RedAfk_Ready, 120.00)
-TriggerAddAction(gg_trg_Turn_On_RedAfk_Ready, Trig_Turn_On_RedAfk_Ready_Actions)
-end
-
-function Trig_Turn_on_RedAfk_Restart_Func002C()
-if (not (udg_Real_RestartRedAfk >= 120.00)) then
-return false
-end
-return true
-end
-
-function Trig_Turn_on_RedAfk_Restart_Actions()
-udg_Real_RestartRedAfk = (udg_Real_RestartRedAfk + 1)
-if (Trig_Turn_on_RedAfk_Restart_Func002C()) then
-EnableTrigger(gg_trg_RedAfk_Ready)
-else
-end
-end
-
-function InitTrig_Turn_on_RedAfk_Restart()
-gg_trg_Turn_on_RedAfk_Restart = CreateTrigger()
-DisableTrigger(gg_trg_Turn_on_RedAfk_Restart)
-TriggerRegisterTimerEventPeriodic(gg_trg_Turn_on_RedAfk_Restart, 1.00)
-TriggerAddAction(gg_trg_Turn_on_RedAfk_Restart, Trig_Turn_on_RedAfk_Restart_Actions)
 end
 
 function Trig_Default_Gamemode_Func001C()
@@ -11178,6 +11131,850 @@ gg_trg_Income = CreateTrigger()
 DisableTrigger(gg_trg_Income)
 TriggerRegisterTimerEventPeriodic(gg_trg_Income, 3.00)
 TriggerAddAction(gg_trg_Income, Trig_Income_Actions)
+end
+
+function Trig_Create_the_Multiboard_Func014C()
+if (not (GetPlayerSlotState(Player(0)) == PLAYER_SLOT_STATE_LEFT)) then
+return false
+end
+return true
+end
+
+function Trig_Create_the_Multiboard_Func015C()
+if (not (GetPlayerSlotState(Player(1)) == PLAYER_SLOT_STATE_LEFT)) then
+return false
+end
+return true
+end
+
+function Trig_Create_the_Multiboard_Func016C()
+if (not (GetPlayerSlotState(Player(2)) == PLAYER_SLOT_STATE_LEFT)) then
+return false
+end
+return true
+end
+
+function Trig_Create_the_Multiboard_Func017C()
+if (not (GetPlayerSlotState(Player(3)) == PLAYER_SLOT_STATE_LEFT)) then
+return false
+end
+return true
+end
+
+function Trig_Create_the_Multiboard_Func018C()
+if (not (GetPlayerSlotState(Player(4)) == PLAYER_SLOT_STATE_LEFT)) then
+return false
+end
+return true
+end
+
+function Trig_Create_the_Multiboard_Func019C()
+if (not (GetPlayerSlotState(Player(5)) == PLAYER_SLOT_STATE_LEFT)) then
+return false
+end
+return true
+end
+
+function Trig_Create_the_Multiboard_Func020C()
+if (not (GetPlayerSlotState(Player(6)) == PLAYER_SLOT_STATE_LEFT)) then
+return false
+end
+return true
+end
+
+function Trig_Create_the_Multiboard_Func021C()
+if (not (GetPlayerSlotState(Player(7)) == PLAYER_SLOT_STATE_LEFT)) then
+return false
+end
+return true
+end
+
+function Trig_Create_the_Multiboard_Func022C()
+if (not (GetPlayerSlotState(Player(7)) == PLAYER_SLOT_STATE_LEFT)) then
+return false
+end
+return true
+end
+
+function Trig_Create_the_Multiboard_Actions()
+CreateMultiboardBJ(3, 14, "TRIGSTR_4409")
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 1, "TRIGSTR_5936")
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 1, "TRIGSTR_5937")
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 3, 1, "TRIGSTR_5938")
+MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 1, 1, true, true)
+MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 2, 1, true, true)
+MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 3, 1, true, true)
+bj_forLoopAIndex = 2
+bj_forLoopAIndexEnd = 10
+while (true) do
+if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
+MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 1, GetForLoopIndexA(), true, false)
+MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 2, GetForLoopIndexA(), true, false)
+MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 3, GetForLoopIndexA(), true, false)
+bj_forLoopAIndex = bj_forLoopAIndex + 1
+end
+bj_forLoopAIndex = 1
+bj_forLoopAIndexEnd = 10
+while (true) do
+if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
+MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 1, GetForLoopIndexA(), 11.00)
+MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 2, GetForLoopIndexA(), 4.00)
+MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 3, GetForLoopIndexA(), 4.50)
+bj_forLoopAIndex = bj_forLoopAIndex + 1
+end
+if (Trig_Create_the_Multiboard_Func014C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 2, (udg_String_Array_MultiBoardColours[1] .. "Left the Game|r"))
+else
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 2, (udg_String_Array_MultiBoardColours[1] .. ("1 " .. (udg_PlayerName[1] .. "|r"))))
+end
+if (Trig_Create_the_Multiboard_Func015C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 3, (udg_String_Array_MultiBoardColours[2] .. "Left the Game|r"))
+else
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 3, (udg_String_Array_MultiBoardColours[2] .. ("2 " .. (udg_PlayerName[2] .. "|r"))))
+end
+if (Trig_Create_the_Multiboard_Func016C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 4, (udg_String_Array_MultiBoardColours[3] .. "Left the Game|r"))
+else
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 4, (udg_String_Array_MultiBoardColours[3] .. ("3 " .. (udg_PlayerName[3] .. "|r"))))
+end
+if (Trig_Create_the_Multiboard_Func017C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 5, (udg_String_Array_MultiBoardColours[4] .. "Left the Game|r"))
+else
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 5, (udg_String_Array_MultiBoardColours[4] .. ("4 " .. (udg_PlayerName[4] .. "|r"))))
+end
+if (Trig_Create_the_Multiboard_Func018C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 6, (udg_String_Array_MultiBoardColours[5] .. "Left the Game|r"))
+else
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 6, (udg_String_Array_MultiBoardColours[5] .. ("5 " .. (udg_PlayerName[5] .. "|r"))))
+end
+if (Trig_Create_the_Multiboard_Func019C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 7, (udg_String_Array_MultiBoardColours[6] .. "Left the Game|r"))
+else
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 7, (udg_String_Array_MultiBoardColours[6] .. ("6 " .. (udg_PlayerName[6] .. "|r"))))
+end
+if (Trig_Create_the_Multiboard_Func020C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 8, (udg_String_Array_MultiBoardColours[7] .. "Left the Game|r"))
+else
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 8, (udg_String_Array_MultiBoardColours[7] .. ("7 " .. (udg_PlayerName[7] .. "|r"))))
+end
+if (Trig_Create_the_Multiboard_Func021C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 9, (udg_String_Array_MultiBoardColours[8] .. "Left the Game|r"))
+else
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 9, (udg_String_Array_MultiBoardColours[8] .. ("8 " .. (udg_PlayerName[8] .. "|r"))))
+end
+if (Trig_Create_the_Multiboard_Func022C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 10, (udg_String_Array_MultiBoardColours[9] .. "Left the Game|r"))
+else
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 10, (udg_String_Array_MultiBoardColours[9] .. ("9 " .. (udg_PlayerName[9] .. "|r"))))
+end
+bj_forLoopAIndex = 2
+bj_forLoopAIndexEnd = 10
+while (true) do
+if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, GetForLoopIndexA(), ("|cff00FF00" .. "0|r"))
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 3, GetForLoopIndexA(), ("|cffFDD017" .. "0|r"))
+bj_forLoopAIndex = bj_forLoopAIndex + 1
+end
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 1, "ReplaceableTextures\\CommandButtons\\BTNVillagerMan.blp")
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 1, "ReplaceableTextures\\CommandButtons\\BTNThoriumMelee.blp")
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 3, 1, "ReplaceableTextures\\CommandButtons\\BTNChestOfGold.blp")
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNFootman.blp")
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNHeavyArmour.blp")
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNRifleman.blp")
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNMediumArmour.blp")
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 14, "ReplaceableTextures\\CommandButtons\\BTNAcorn.blp")
+MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 1, 11, true, false)
+MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 2, 11, false, false)
+MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 3, 11, false, false)
+MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 1, 12, true, true)
+MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 2, 12, true, true)
+MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 1, 13, true, true)
+MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 2, 13, true, true)
+MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 1, 14, true, true)
+MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 2, 14, true, false)
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 11, "TRIGSTR_5931")
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 12, "TRIGSTR_5934")
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_5349")
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 13, "TRIGSTR_5935")
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_5350")
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 14, "TRIGSTR_7723")
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 14, "TRIGSTR_7435")
+MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 1, 11, 23.00)
+MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 1, 12, 9.00)
+MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 1, 13, 9.00)
+MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 1, 14, 10.00)
+MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 2, 12, 12.00)
+MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 2, 13, 12.00)
+MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 2, 14, 9.00)
+MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 3, 12, 0.00)
+MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 3, 13, 0.00)
+MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 3, 14, 0.00)
+MultiboardDisplayBJ(true, GetLastCreatedMultiboard())
+MultiboardMinimizeBJ(false, GetLastCreatedMultiboard())
+end
+
+function InitTrig_Create_the_Multiboard()
+gg_trg_Create_the_Multiboard = CreateTrigger()
+TriggerRegisterTimerEventSingle(gg_trg_Create_the_Multiboard, 1.00)
+TriggerAddAction(gg_trg_Create_the_Multiboard, Trig_Create_the_Multiboard_Actions)
+end
+
+function Trig_Name_Fix_Func001Func001Func003Func002C()
+if (not (udg_TempString[1] == "#")) then
+return false
+end
+return true
+end
+
+function Trig_Name_Fix_Func001Func001C()
+if (not (GetPlayerName(ConvertedPlayer(GetForLoopIndexA())) == "GenoHacker#2987")) then
+return false
+end
+return true
+end
+
+function Trig_Name_Fix_Actions()
+bj_forLoopAIndex = 1
+bj_forLoopAIndexEnd = 9
+while (true) do
+if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
+if (Trig_Name_Fix_Func001Func001C()) then
+udg_PlayerName[GetForLoopIndexA()] = ("[DEV] " .. "GenoHacker")
+else
+udg_TempPlayer = ConvertedPlayer(GetForLoopIndexA())
+udg_TempString[0] = GetPlayerName(ConvertedPlayer(GetForLoopIndexA()))
+udg_NameLoop = 1
+while (true) do
+if (udg_NameLoop > StringLength(udg_TempString[0])) then break end
+udg_TempString[1] = SubStringBJ(udg_TempString[0], udg_NameLoop, udg_NameLoop)
+if (Trig_Name_Fix_Func001Func001Func003Func002C()) then
+udg_PlayerName[GetConvertedPlayerId(udg_TempPlayer)] = SubStringBJ(udg_TempString[0], 1, (udg_NameLoop - 1))
+else
+end
+udg_NameLoop = udg_NameLoop + 1
+end
+end
+bj_forLoopAIndex = bj_forLoopAIndex + 1
+end
+end
+
+function InitTrig_Name_Fix()
+gg_trg_Name_Fix = CreateTrigger()
+TriggerRegisterTimerEventSingle(gg_trg_Name_Fix, 0.10)
+TriggerAddAction(gg_trg_Name_Fix, Trig_Name_Fix_Actions)
+end
+
+function Trig_Timer_Func002C()
+if (not (udg_Integer_Array_WaveTimer[1] >= 2)) then
+return false
+end
+return true
+end
+
+function Trig_Timer_Func003C()
+if (not (udg_Integer_Array_WaveTimer[1] <= 1)) then
+return false
+end
+return true
+end
+
+function Trig_Timer_Func004Func001C()
+if (not (udg_Integer_BlitzMode == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Timer_Func004C()
+if (not (udg_Integer_Array_WaveTimer[1] == 0)) then
+return false
+end
+return true
+end
+
+function Trig_Timer_Actions()
+udg_Integer_Array_WaveTimer[1] = (udg_Integer_Array_WaveTimer[1] - 1)
+if (Trig_Timer_Func002C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 14, (("|cffFDD017" .. I2S(udg_Integer_Array_WaveTimer[1])) .. (" Seconds" .. "|r")))
+else
+end
+if (Trig_Timer_Func003C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 14, (("|cffFDD017" .. I2S(udg_Integer_Array_WaveTimer[1])) .. (" Second" .. "|r")))
+else
+end
+if (Trig_Timer_Func004C()) then
+if (Trig_Timer_Func004Func001C()) then
+udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
+TriggerExecute(gg_trg_Blitz_Spawning)
+else
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 14, "TRIGSTR_761")
+DisableTrigger(GetTriggeringTrigger())
+end
+else
+end
+end
+
+function InitTrig_Timer()
+gg_trg_Timer = CreateTrigger()
+DisableTrigger(gg_trg_Timer)
+TriggerRegisterTimerEventPeriodic(gg_trg_Timer, 1.00)
+TriggerAddAction(gg_trg_Timer, Trig_Timer_Actions)
+end
+
+function Trig_Kill_Update_Func001Func001C()
+if (GetOwningPlayer(GetKillingUnitBJ()) == Player(0)) then
+return true
+end
+if (GetOwningPlayer(GetKillingUnitBJ()) == Player(1)) then
+return true
+end
+if (GetOwningPlayer(GetKillingUnitBJ()) == Player(2)) then
+return true
+end
+if (GetOwningPlayer(GetKillingUnitBJ()) == Player(3)) then
+return true
+end
+if (GetOwningPlayer(GetKillingUnitBJ()) == Player(4)) then
+return true
+end
+if (GetOwningPlayer(GetKillingUnitBJ()) == Player(5)) then
+return true
+end
+if (GetOwningPlayer(GetKillingUnitBJ()) == Player(6)) then
+return true
+end
+if (GetOwningPlayer(GetKillingUnitBJ()) == Player(7)) then
+return true
+end
+if (GetOwningPlayer(GetKillingUnitBJ()) == Player(8)) then
+return true
+end
+return false
+end
+
+function Trig_Kill_Update_Func001Func002C()
+if (GetOwningPlayer(GetDyingUnit()) == Player(10)) then
+return true
+end
+if (GetOwningPlayer(GetDyingUnit()) == Player(11)) then
+return true
+end
+return false
+end
+
+function Trig_Kill_Update_Func001C()
+if (not Trig_Kill_Update_Func001Func001C()) then
+return false
+end
+if (not Trig_Kill_Update_Func001Func002C()) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Update_Conditions()
+if (not Trig_Kill_Update_Func001C()) then
+return false
+end
+return true
+end
+
+function Trig_Kill_Update_Actions()
+udg_Integer_Array_Kills[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))] = (udg_Integer_Array_Kills[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))] + 1)
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, (GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ())) + 1), ("|cff00FF00" .. (I2S(udg_Integer_Array_Kills[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))]) .. "|r")))
+LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetKillingUnitBJ()), GetLastCreatedLeaderboard(), udg_Integer_Array_Kills[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))])
+LeaderboardSortItemsBJ(GetLastCreatedLeaderboard(), bj_SORTTYPE_SORTBYVALUE, false)
+end
+
+function InitTrig_Kill_Update()
+gg_trg_Kill_Update = CreateTrigger()
+TriggerRegisterAnyUnitEventBJ(gg_trg_Kill_Update, EVENT_PLAYER_UNIT_DEATH)
+TriggerAddCondition(gg_trg_Kill_Update, Condition(Trig_Kill_Update_Conditions))
+TriggerAddAction(gg_trg_Kill_Update, Trig_Kill_Update_Actions)
+end
+
+function Trig_Gold_Update_Func001A()
+udg_Integer_Array_Gold[GetConvertedPlayerId(GetEnumPlayer())] = GetPlayerState(GetEnumPlayer(), PLAYER_STATE_RESOURCE_GOLD)
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 3, (GetConvertedPlayerId(GetEnumPlayer()) + 1), ("|cffFDD017" .. (I2S(GetPlayerState(GetEnumPlayer(), PLAYER_STATE_RESOURCE_GOLD)) .. "|r")))
+end
+
+function Trig_Gold_Update_Actions()
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Gold_Update_Func001A)
+end
+
+function InitTrig_Gold_Update()
+gg_trg_Gold_Update = CreateTrigger()
+TriggerRegisterTimerEventPeriodic(gg_trg_Gold_Update, 0.50)
+TriggerAddAction(gg_trg_Gold_Update, Trig_Gold_Update_Actions)
+end
+
+function Trig_Wave_and_Lives_Update_Actions()
+MultiboardSetTitleText(GetLastCreatedMultiboard(), (("[Wave = " .. (I2S(udg_Integer_WaveNumber) .. "] - ")) .. ("[Lives = " .. (R2S(udg_Real_Lives) .. "%]"))))
+end
+
+function InitTrig_Wave_and_Lives_Update()
+gg_trg_Wave_and_Lives_Update = CreateTrigger()
+TriggerRegisterTimerEventPeriodic(gg_trg_Wave_and_Lives_Update, 1.00)
+TriggerAddAction(gg_trg_Wave_and_Lives_Update, Trig_Wave_and_Lives_Update_Actions)
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func006Func001C()
+if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 0)) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func006Func005C()
+if (udg_Integer_WaveNumber == 12) then
+return true
+end
+if (udg_Integer_WaveNumber == 24) then
+return true
+end
+if (udg_Integer_WaveNumber == 36) then
+return true
+end
+if (udg_Integer_WaveNumber == 48) then
+return true
+end
+return false
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func006C()
+if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 0)) then
+return false
+end
+if (not Trig_Next_Wave_and_Current_Wave_Update_Func001Func006Func005C()) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func007Func001C()
+if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 0)) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func007Func003C()
+if (udg_Integer_WaveNumber == 11) then
+return true
+end
+if (udg_Integer_WaveNumber == 23) then
+return true
+end
+if (udg_Integer_WaveNumber == 35) then
+return true
+end
+if (udg_Integer_WaveNumber == 47) then
+return true
+end
+return false
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func007C()
+if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 0)) then
+return false
+end
+if (not Trig_Next_Wave_and_Current_Wave_Update_Func001Func007Func003C()) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func011C()
+if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func012C()
+if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func016C()
+if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 2)) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func017C()
+if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 2)) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func021Func001C()
+if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 3)) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func021Func003C()
+if (udg_Integer_WaveNumber == 7) then
+return true
+end
+if (udg_Integer_WaveNumber == 9) then
+return true
+end
+if (udg_Integer_WaveNumber == 17) then
+return true
+end
+if (udg_Integer_WaveNumber == 21) then
+return true
+end
+if (udg_Integer_WaveNumber == 27) then
+return true
+end
+if (udg_Integer_WaveNumber == 33) then
+return true
+end
+if (udg_Integer_WaveNumber == 38) then
+return true
+end
+if (udg_Integer_WaveNumber == 53) then
+return true
+end
+return false
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func021C()
+if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 3)) then
+return false
+end
+if (not Trig_Next_Wave_and_Current_Wave_Update_Func001Func021Func003C()) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func022Func001C()
+if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 3)) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func022Func003C()
+if (udg_Integer_WaveNumber == 6) then
+return true
+end
+if (udg_Integer_WaveNumber == 8) then
+return true
+end
+if (udg_Integer_WaveNumber == 16) then
+return true
+end
+if (udg_Integer_WaveNumber == 20) then
+return true
+end
+if (udg_Integer_WaveNumber == 26) then
+return true
+end
+if (udg_Integer_WaveNumber == 32) then
+return true
+end
+if (udg_Integer_WaveNumber == 37) then
+return true
+end
+if (udg_Integer_WaveNumber == 52) then
+return true
+end
+return false
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func022C()
+if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 3)) then
+return false
+end
+if (not Trig_Next_Wave_and_Current_Wave_Update_Func001Func022Func003C()) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func026C()
+if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 5)) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func027C()
+if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 5)) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func037C()
+if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 6)) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func038C()
+if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 6)) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func042Func001Func001C()
+if (not (udg_Integer_EndlessMode == 1)) then
+return false
+end
+if (not (udg_Integer_WaveNumber >= 61)) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func042Func001C()
+if (not (udg_Integer_EndlessMode == 1)) then
+return false
+end
+if (not (udg_Integer_WaveNumber == 60)) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Func001Func042C()
+if (not (udg_Integer_EndlessMode == 0)) then
+return false
+end
+if (not (udg_Integer_WaveNumber == 60)) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Func001C()
+if (not (udg_Integer_RWActivated == 0)) then
+return false
+end
+return true
+end
+
+function Trig_Next_Wave_and_Current_Wave_Update_Actions()
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001C()) then
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, udg_String_Array_MBStatWavUniIcons[udg_Integer_WaveNumber])
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, udg_String_Array_MBStatWavUniIcons[(udg_Integer_WaveNumber + 1)])
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func006C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Light" .. "/Boss]"))
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNLightArmour.blp")
+else
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func006Func001C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Light" .. "]"))
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNLightArmour.blp")
+else
+end
+end
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func007C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Light" .. "/Boss]"))
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNLightArmour.blp")
+else
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func007Func001C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Light" .. "]"))
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNLightArmour.blp")
+else
+end
+end
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func011C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Medium" .. "]"))
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNMediumArmour.blp")
+else
+end
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func012C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Medium" .. "]"))
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNMediumArmour.blp")
+else
+end
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func016C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Heavy" .. "]"))
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNHeavyArmour.blp")
+else
+end
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func017C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Heavy" .. "]"))
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNHeavyArmour.blp")
+else
+end
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func021C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Fortified" .. "/Air]"))
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
+else
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func021Func001C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Fortified" .. "]"))
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNArcaniteArchitecture.blp")
+else
+end
+end
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func022C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Fortified" .. "/Air]"))
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
+else
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func022Func001C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Fortified" .. "]"))
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNArcaniteArchitecture.blp")
+else
+end
+end
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func026C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Hero" .. "]"))
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
+else
+end
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func027C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Hero" .. "]"))
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
+else
+end
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func037C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Divine" .. "/Immune]"))
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNDivineArmour.blp")
+else
+end
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func038C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Divine" .. "/Immune]"))
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNDivineArmour.blp")
+else
+end
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func042C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_3156")
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNAcorn.blp")
+else
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func042Func001C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_3158")
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp")
+else
+if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func042Func001Func001C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_1002")
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp")
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_2655")
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp")
+else
+end
+end
+end
+else
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, udg_String_Array_WaveType[udg_Integer_WaveNumber])
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, udg_String_Array_ImageFile[udg_Integer_Array_RWUnitType[udg_Integer_WaveNumber]])
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp")
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, udg_String_Array_WaveType[(udg_Integer_WaveNumber + 1)])
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, udg_String_Array_ImageFile[udg_Integer_Array_RWUnitType[(udg_Integer_WaveNumber + 1)]])
+MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp")
+end
+end
+
+function InitTrig_Next_Wave_and_Current_Wave_Update()
+gg_trg_Next_Wave_and_Current_Wave_Update = CreateTrigger()
+TriggerAddAction(gg_trg_Next_Wave_and_Current_Wave_Update, Trig_Next_Wave_and_Current_Wave_Update_Actions)
+end
+
+function Trig_Player_Update_Game_Start_Func001Func001Func001C()
+if (GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_EMPTY) then
+return true
+end
+if (GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_LEFT) then
+return true
+end
+return false
+end
+
+function Trig_Player_Update_Game_Start_Func001Func001C()
+if (not Trig_Player_Update_Game_Start_Func001Func001Func001C()) then
+return false
+end
+return true
+end
+
+function Trig_Player_Update_Game_Start_Func001A()
+if (Trig_Player_Update_Game_Start_Func001Func001C()) then
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, (GetConvertedPlayerId(GetEnumPlayer()) + 1), (udg_String_Array_MultiBoardColours[GetConvertedPlayerId(GetEnumPlayer())] .. "N/A|r"))
+else
+end
+end
+
+function Trig_Player_Update_Game_Start_Actions()
+ForForce(GetPlayersAll(), Trig_Player_Update_Game_Start_Func001A)
+end
+
+function InitTrig_Player_Update_Game_Start()
+gg_trg_Player_Update_Game_Start = CreateTrigger()
+TriggerAddAction(gg_trg_Player_Update_Game_Start, Trig_Player_Update_Game_Start_Actions)
+end
+
+function Trig_Player_Leave_Gold_Split_Func001C()
+if (not (GetTriggerPlayer() == GetOwningPlayer(gg_unit_n00C_0019))) then
+return false
+end
+return true
+end
+
+function Trig_Player_Leave_Gold_Split_Func004002()
+RemoveUnit(GetEnumUnit())
+end
+
+function Trig_Player_Leave_Gold_Split_Func010Func001C()
+if (not (GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING)) then
+return false
+end
+return true
+end
+
+function Trig_Player_Leave_Gold_Split_Func010A()
+if (Trig_Player_Leave_Gold_Split_Func010Func001C()) then
+DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetTriggerPlayer())] .. ("" .. ("|cff00FF00, Has left the game. You have been given|r |cffFDD017" .. (I2S((udg_Integer_PlayerLeaveGold // udg_Integer_Players)) .. " Gold.|r")))))
+AdjustPlayerStateBJ((udg_Integer_PlayerLeaveGold // udg_Integer_Players), GetEnumPlayer(), PLAYER_STATE_RESOURCE_GOLD)
+else
+end
+end
+
+function Trig_Player_Leave_Gold_Split_Actions()
+if (Trig_Player_Leave_Gold_Split_Func001C()) then
+SetUnitOwner(gg_unit_n00C_0019, Player(PLAYER_NEUTRAL_PASSIVE), true)
+EnableTrigger(gg_trg_Game_Setup_Ownership)
+else
+end
+udg_Integer_PlayerLeaveGold = GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD)
+ForceRemovePlayerSimple(GetTriggerPlayer(), udg_PlayerGroup_Permanent[1])
+ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), GetTriggerPlayer()), Trig_Player_Leave_Gold_Split_Func004002)
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, (GetConvertedPlayerId(GetTriggerPlayer()) + 1), (udg_String_Array_MultiBoardColours[GetConvertedPlayerId(GetTriggerPlayer())] .. "Left the Game|r"))
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, (GetConvertedPlayerId(GetTriggerPlayer()) + 1), ("|cffFDD017" .. "0"))
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 3, (GetConvertedPlayerId(GetTriggerPlayer()) + 1), ("|cffFDD017" .. "0"))
+udg_Integer_Array_Kills[GetConvertedPlayerId(GetTriggerPlayer())] = 0
+udg_Integer_Players = (udg_Integer_Players - 1)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Player_Leave_Gold_Split_Func010A)
+SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD, 0)
+end
+
+function InitTrig_Player_Leave_Gold_Split()
+gg_trg_Player_Leave_Gold_Split = CreateTrigger()
+TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(0))
+TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(1))
+TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(2))
+TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(3))
+TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(4))
+TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(5))
+TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(6))
+TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(7))
+TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(8))
+TriggerAddAction(gg_trg_Player_Leave_Gold_Split, Trig_Player_Leave_Gold_Split_Actions)
 end
 
 function Trig_Start_Static_Waves_Func002C()
@@ -14501,850 +15298,6 @@ TriggerAddCondition(gg_trg_Path_Teal_3, Condition(Trig_Path_Teal_3_Conditions))
 TriggerAddAction(gg_trg_Path_Teal_3, Trig_Path_Teal_3_Actions)
 end
 
-function Trig_Name_Fix_Func001Func001Func003Func002C()
-if (not (udg_TempString[1] == "#")) then
-return false
-end
-return true
-end
-
-function Trig_Name_Fix_Func001Func001C()
-if (not (GetPlayerName(ConvertedPlayer(GetForLoopIndexA())) == "GenoHacker#2987")) then
-return false
-end
-return true
-end
-
-function Trig_Name_Fix_Actions()
-bj_forLoopAIndex = 1
-bj_forLoopAIndexEnd = 9
-while (true) do
-if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
-if (Trig_Name_Fix_Func001Func001C()) then
-udg_PlayerName[GetForLoopIndexA()] = ("[DEV] " .. "GenoHacker")
-else
-udg_TempPlayer = ConvertedPlayer(GetForLoopIndexA())
-udg_TempString[0] = GetPlayerName(ConvertedPlayer(GetForLoopIndexA()))
-udg_NameLoop = 1
-while (true) do
-if (udg_NameLoop > StringLength(udg_TempString[0])) then break end
-udg_TempString[1] = SubStringBJ(udg_TempString[0], udg_NameLoop, udg_NameLoop)
-if (Trig_Name_Fix_Func001Func001Func003Func002C()) then
-udg_PlayerName[GetConvertedPlayerId(udg_TempPlayer)] = SubStringBJ(udg_TempString[0], 1, (udg_NameLoop - 1))
-else
-end
-udg_NameLoop = udg_NameLoop + 1
-end
-end
-bj_forLoopAIndex = bj_forLoopAIndex + 1
-end
-end
-
-function InitTrig_Name_Fix()
-gg_trg_Name_Fix = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Name_Fix, 0.10)
-TriggerAddAction(gg_trg_Name_Fix, Trig_Name_Fix_Actions)
-end
-
-function Trig_Create_the_Multiboard_Func014C()
-if (not (GetPlayerSlotState(Player(0)) == PLAYER_SLOT_STATE_LEFT)) then
-return false
-end
-return true
-end
-
-function Trig_Create_the_Multiboard_Func015C()
-if (not (GetPlayerSlotState(Player(1)) == PLAYER_SLOT_STATE_LEFT)) then
-return false
-end
-return true
-end
-
-function Trig_Create_the_Multiboard_Func016C()
-if (not (GetPlayerSlotState(Player(2)) == PLAYER_SLOT_STATE_LEFT)) then
-return false
-end
-return true
-end
-
-function Trig_Create_the_Multiboard_Func017C()
-if (not (GetPlayerSlotState(Player(3)) == PLAYER_SLOT_STATE_LEFT)) then
-return false
-end
-return true
-end
-
-function Trig_Create_the_Multiboard_Func018C()
-if (not (GetPlayerSlotState(Player(4)) == PLAYER_SLOT_STATE_LEFT)) then
-return false
-end
-return true
-end
-
-function Trig_Create_the_Multiboard_Func019C()
-if (not (GetPlayerSlotState(Player(5)) == PLAYER_SLOT_STATE_LEFT)) then
-return false
-end
-return true
-end
-
-function Trig_Create_the_Multiboard_Func020C()
-if (not (GetPlayerSlotState(Player(6)) == PLAYER_SLOT_STATE_LEFT)) then
-return false
-end
-return true
-end
-
-function Trig_Create_the_Multiboard_Func021C()
-if (not (GetPlayerSlotState(Player(7)) == PLAYER_SLOT_STATE_LEFT)) then
-return false
-end
-return true
-end
-
-function Trig_Create_the_Multiboard_Func022C()
-if (not (GetPlayerSlotState(Player(7)) == PLAYER_SLOT_STATE_LEFT)) then
-return false
-end
-return true
-end
-
-function Trig_Create_the_Multiboard_Actions()
-CreateMultiboardBJ(3, 14, "TRIGSTR_4409")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 1, "TRIGSTR_5936")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 1, "TRIGSTR_5937")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 3, 1, "TRIGSTR_5938")
-MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 1, 1, true, true)
-MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 2, 1, true, true)
-MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 3, 1, true, true)
-bj_forLoopAIndex = 2
-bj_forLoopAIndexEnd = 10
-while (true) do
-if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
-MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 1, GetForLoopIndexA(), true, false)
-MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 2, GetForLoopIndexA(), true, false)
-MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 3, GetForLoopIndexA(), true, false)
-bj_forLoopAIndex = bj_forLoopAIndex + 1
-end
-bj_forLoopAIndex = 1
-bj_forLoopAIndexEnd = 10
-while (true) do
-if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
-MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 1, GetForLoopIndexA(), 11.00)
-MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 2, GetForLoopIndexA(), 4.00)
-MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 3, GetForLoopIndexA(), 4.50)
-bj_forLoopAIndex = bj_forLoopAIndex + 1
-end
-if (Trig_Create_the_Multiboard_Func014C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 2, (udg_String_Array_MultiBoardColours[1] .. "Left the Game|r"))
-else
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 2, (udg_String_Array_MultiBoardColours[1] .. ("1 " .. (udg_PlayerName[1] .. "|r"))))
-end
-if (Trig_Create_the_Multiboard_Func015C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 3, (udg_String_Array_MultiBoardColours[2] .. "Left the Game|r"))
-else
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 3, (udg_String_Array_MultiBoardColours[2] .. ("2 " .. (udg_PlayerName[2] .. "|r"))))
-end
-if (Trig_Create_the_Multiboard_Func016C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 4, (udg_String_Array_MultiBoardColours[3] .. "Left the Game|r"))
-else
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 4, (udg_String_Array_MultiBoardColours[3] .. ("3 " .. (udg_PlayerName[3] .. "|r"))))
-end
-if (Trig_Create_the_Multiboard_Func017C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 5, (udg_String_Array_MultiBoardColours[4] .. "Left the Game|r"))
-else
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 5, (udg_String_Array_MultiBoardColours[4] .. ("4 " .. (udg_PlayerName[4] .. "|r"))))
-end
-if (Trig_Create_the_Multiboard_Func018C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 6, (udg_String_Array_MultiBoardColours[5] .. "Left the Game|r"))
-else
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 6, (udg_String_Array_MultiBoardColours[5] .. ("5 " .. (udg_PlayerName[5] .. "|r"))))
-end
-if (Trig_Create_the_Multiboard_Func019C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 7, (udg_String_Array_MultiBoardColours[6] .. "Left the Game|r"))
-else
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 7, (udg_String_Array_MultiBoardColours[6] .. ("6 " .. (udg_PlayerName[6] .. "|r"))))
-end
-if (Trig_Create_the_Multiboard_Func020C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 8, (udg_String_Array_MultiBoardColours[7] .. "Left the Game|r"))
-else
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 8, (udg_String_Array_MultiBoardColours[7] .. ("7 " .. (udg_PlayerName[7] .. "|r"))))
-end
-if (Trig_Create_the_Multiboard_Func021C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 9, (udg_String_Array_MultiBoardColours[8] .. "Left the Game|r"))
-else
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 9, (udg_String_Array_MultiBoardColours[8] .. ("8 " .. (udg_PlayerName[8] .. "|r"))))
-end
-if (Trig_Create_the_Multiboard_Func022C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 10, (udg_String_Array_MultiBoardColours[9] .. "Left the Game|r"))
-else
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 10, (udg_String_Array_MultiBoardColours[9] .. ("9 " .. (udg_PlayerName[9] .. "|r"))))
-end
-bj_forLoopAIndex = 2
-bj_forLoopAIndexEnd = 10
-while (true) do
-if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, GetForLoopIndexA(), ("|cff00FF00" .. "0|r"))
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 3, GetForLoopIndexA(), ("|cffFDD017" .. "0|r"))
-bj_forLoopAIndex = bj_forLoopAIndex + 1
-end
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 1, "ReplaceableTextures\\CommandButtons\\BTNVillagerMan.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 1, "ReplaceableTextures\\CommandButtons\\BTNThoriumMelee.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 3, 1, "ReplaceableTextures\\CommandButtons\\BTNChestOfGold.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNFootman.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNHeavyArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNRifleman.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNMediumArmour.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 14, "ReplaceableTextures\\CommandButtons\\BTNAcorn.blp")
-MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 1, 11, true, false)
-MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 2, 11, false, false)
-MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 3, 11, false, false)
-MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 1, 12, true, true)
-MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 2, 12, true, true)
-MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 1, 13, true, true)
-MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 2, 13, true, true)
-MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 1, 14, true, true)
-MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 2, 14, true, false)
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 11, "TRIGSTR_5931")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 12, "TRIGSTR_5934")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_5349")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 13, "TRIGSTR_5935")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_5350")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 14, "TRIGSTR_7723")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 14, "TRIGSTR_7435")
-MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 1, 11, 23.00)
-MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 1, 12, 9.00)
-MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 1, 13, 9.00)
-MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 1, 14, 10.00)
-MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 2, 12, 12.00)
-MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 2, 13, 12.00)
-MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 2, 14, 9.00)
-MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 3, 12, 0.00)
-MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 3, 13, 0.00)
-MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 3, 14, 0.00)
-MultiboardDisplayBJ(true, GetLastCreatedMultiboard())
-MultiboardMinimizeBJ(false, GetLastCreatedMultiboard())
-end
-
-function InitTrig_Create_the_Multiboard()
-gg_trg_Create_the_Multiboard = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Create_the_Multiboard, 1.00)
-TriggerAddAction(gg_trg_Create_the_Multiboard, Trig_Create_the_Multiboard_Actions)
-end
-
-function Trig_Timer_Func002C()
-if (not (udg_Integer_Array_WaveTimer[1] >= 2)) then
-return false
-end
-return true
-end
-
-function Trig_Timer_Func003C()
-if (not (udg_Integer_Array_WaveTimer[1] <= 1)) then
-return false
-end
-return true
-end
-
-function Trig_Timer_Func004Func001C()
-if (not (udg_Integer_BlitzMode == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Timer_Func004C()
-if (not (udg_Integer_Array_WaveTimer[1] == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Timer_Actions()
-udg_Integer_Array_WaveTimer[1] = (udg_Integer_Array_WaveTimer[1] - 1)
-if (Trig_Timer_Func002C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 14, (("|cffFDD017" .. I2S(udg_Integer_Array_WaveTimer[1])) .. (" Seconds" .. "|r")))
-else
-end
-if (Trig_Timer_Func003C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 14, (("|cffFDD017" .. I2S(udg_Integer_Array_WaveTimer[1])) .. (" Second" .. "|r")))
-else
-end
-if (Trig_Timer_Func004C()) then
-if (Trig_Timer_Func004Func001C()) then
-udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
-TriggerExecute(gg_trg_Blitz_Spawning)
-else
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 14, "TRIGSTR_761")
-DisableTrigger(GetTriggeringTrigger())
-end
-else
-end
-end
-
-function InitTrig_Timer()
-gg_trg_Timer = CreateTrigger()
-DisableTrigger(gg_trg_Timer)
-TriggerRegisterTimerEventPeriodic(gg_trg_Timer, 1.00)
-TriggerAddAction(gg_trg_Timer, Trig_Timer_Actions)
-end
-
-function Trig_Kill_Update_Func001Func001C()
-if (GetOwningPlayer(GetKillingUnitBJ()) == Player(0)) then
-return true
-end
-if (GetOwningPlayer(GetKillingUnitBJ()) == Player(1)) then
-return true
-end
-if (GetOwningPlayer(GetKillingUnitBJ()) == Player(2)) then
-return true
-end
-if (GetOwningPlayer(GetKillingUnitBJ()) == Player(3)) then
-return true
-end
-if (GetOwningPlayer(GetKillingUnitBJ()) == Player(4)) then
-return true
-end
-if (GetOwningPlayer(GetKillingUnitBJ()) == Player(5)) then
-return true
-end
-if (GetOwningPlayer(GetKillingUnitBJ()) == Player(6)) then
-return true
-end
-if (GetOwningPlayer(GetKillingUnitBJ()) == Player(7)) then
-return true
-end
-if (GetOwningPlayer(GetKillingUnitBJ()) == Player(8)) then
-return true
-end
-return false
-end
-
-function Trig_Kill_Update_Func001Func002C()
-if (GetOwningPlayer(GetDyingUnit()) == Player(10)) then
-return true
-end
-if (GetOwningPlayer(GetDyingUnit()) == Player(11)) then
-return true
-end
-return false
-end
-
-function Trig_Kill_Update_Func001C()
-if (not Trig_Kill_Update_Func001Func001C()) then
-return false
-end
-if (not Trig_Kill_Update_Func001Func002C()) then
-return false
-end
-return true
-end
-
-function Trig_Kill_Update_Conditions()
-if (not Trig_Kill_Update_Func001C()) then
-return false
-end
-return true
-end
-
-function Trig_Kill_Update_Actions()
-udg_Integer_Array_Kills[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))] = (udg_Integer_Array_Kills[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))] + 1)
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, (GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ())) + 1), ("|cff00FF00" .. (I2S(udg_Integer_Array_Kills[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))]) .. "|r")))
-LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetKillingUnitBJ()), GetLastCreatedLeaderboard(), udg_Integer_Array_Kills[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))])
-LeaderboardSortItemsBJ(GetLastCreatedLeaderboard(), bj_SORTTYPE_SORTBYVALUE, false)
-end
-
-function InitTrig_Kill_Update()
-gg_trg_Kill_Update = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Kill_Update, EVENT_PLAYER_UNIT_DEATH)
-TriggerAddCondition(gg_trg_Kill_Update, Condition(Trig_Kill_Update_Conditions))
-TriggerAddAction(gg_trg_Kill_Update, Trig_Kill_Update_Actions)
-end
-
-function Trig_Gold_Update_Func001A()
-udg_Integer_Array_Gold[GetConvertedPlayerId(GetEnumPlayer())] = GetPlayerState(GetEnumPlayer(), PLAYER_STATE_RESOURCE_GOLD)
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 3, (GetConvertedPlayerId(GetEnumPlayer()) + 1), ("|cffFDD017" .. (I2S(GetPlayerState(GetEnumPlayer(), PLAYER_STATE_RESOURCE_GOLD)) .. "|r")))
-end
-
-function Trig_Gold_Update_Actions()
-ForForce(udg_PlayerGroup_Permanent[1], Trig_Gold_Update_Func001A)
-end
-
-function InitTrig_Gold_Update()
-gg_trg_Gold_Update = CreateTrigger()
-TriggerRegisterTimerEventPeriodic(gg_trg_Gold_Update, 0.50)
-TriggerAddAction(gg_trg_Gold_Update, Trig_Gold_Update_Actions)
-end
-
-function Trig_Wave_and_Lives_Update_Actions()
-MultiboardSetTitleText(GetLastCreatedMultiboard(), (("[Wave = " .. (I2S(udg_Integer_WaveNumber) .. "] - ")) .. ("[Lives = " .. (R2S(udg_Real_Lives) .. "%]"))))
-end
-
-function InitTrig_Wave_and_Lives_Update()
-gg_trg_Wave_and_Lives_Update = CreateTrigger()
-TriggerRegisterTimerEventPeriodic(gg_trg_Wave_and_Lives_Update, 1.00)
-TriggerAddAction(gg_trg_Wave_and_Lives_Update, Trig_Wave_and_Lives_Update_Actions)
-end
-
-function Trig_Player_Update_Game_Start_Func001Func001Func001C()
-if (GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_EMPTY) then
-return true
-end
-if (GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_LEFT) then
-return true
-end
-return false
-end
-
-function Trig_Player_Update_Game_Start_Func001Func001C()
-if (not Trig_Player_Update_Game_Start_Func001Func001Func001C()) then
-return false
-end
-return true
-end
-
-function Trig_Player_Update_Game_Start_Func001A()
-if (Trig_Player_Update_Game_Start_Func001Func001C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, (GetConvertedPlayerId(GetEnumPlayer()) + 1), (udg_String_Array_MultiBoardColours[GetConvertedPlayerId(GetEnumPlayer())] .. "N/A|r"))
-else
-end
-end
-
-function Trig_Player_Update_Game_Start_Actions()
-ForForce(GetPlayersAll(), Trig_Player_Update_Game_Start_Func001A)
-end
-
-function InitTrig_Player_Update_Game_Start()
-gg_trg_Player_Update_Game_Start = CreateTrigger()
-TriggerAddAction(gg_trg_Player_Update_Game_Start, Trig_Player_Update_Game_Start_Actions)
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func001Func006Func001C()
-if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func001Func006Func005C()
-if (udg_Integer_WaveNumber == 12) then
-return true
-end
-if (udg_Integer_WaveNumber == 24) then
-return true
-end
-if (udg_Integer_WaveNumber == 36) then
-return true
-end
-if (udg_Integer_WaveNumber == 48) then
-return true
-end
-return false
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func001Func006C()
-if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 0)) then
-return false
-end
-if (not Trig_Next_Wave_and_Current_Wave_Update_Func001Func006Func005C()) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func001Func007Func001C()
-if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func001Func007Func003C()
-if (udg_Integer_WaveNumber == 11) then
-return true
-end
-if (udg_Integer_WaveNumber == 23) then
-return true
-end
-if (udg_Integer_WaveNumber == 35) then
-return true
-end
-if (udg_Integer_WaveNumber == 47) then
-return true
-end
-return false
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func001Func007C()
-if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 0)) then
-return false
-end
-if (not Trig_Next_Wave_and_Current_Wave_Update_Func001Func007Func003C()) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func001Func011C()
-if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func001Func012C()
-if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func001Func016C()
-if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 2)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func001Func017C()
-if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 2)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func001Func021Func001C()
-if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 3)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func001Func021Func003C()
-if (udg_Integer_WaveNumber == 7) then
-return true
-end
-if (udg_Integer_WaveNumber == 9) then
-return true
-end
-if (udg_Integer_WaveNumber == 17) then
-return true
-end
-if (udg_Integer_WaveNumber == 21) then
-return true
-end
-if (udg_Integer_WaveNumber == 27) then
-return true
-end
-if (udg_Integer_WaveNumber == 33) then
-return true
-end
-if (udg_Integer_WaveNumber == 38) then
-return true
-end
-if (udg_Integer_WaveNumber == 53) then
-return true
-end
-return false
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func001Func021C()
-if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 3)) then
-return false
-end
-if (not Trig_Next_Wave_and_Current_Wave_Update_Func001Func021Func003C()) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func001Func022Func001C()
-if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 3)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func001Func022Func003C()
-if (udg_Integer_WaveNumber == 6) then
-return true
-end
-if (udg_Integer_WaveNumber == 8) then
-return true
-end
-if (udg_Integer_WaveNumber == 16) then
-return true
-end
-if (udg_Integer_WaveNumber == 20) then
-return true
-end
-if (udg_Integer_WaveNumber == 26) then
-return true
-end
-if (udg_Integer_WaveNumber == 32) then
-return true
-end
-if (udg_Integer_WaveNumber == 37) then
-return true
-end
-if (udg_Integer_WaveNumber == 52) then
-return true
-end
-return false
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func001Func022C()
-if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 3)) then
-return false
-end
-if (not Trig_Next_Wave_and_Current_Wave_Update_Func001Func022Func003C()) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func001Func026C()
-if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 5)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func001Func027C()
-if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 5)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func001Func037C()
-if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[0], UNIT_IF_DEFENSE_TYPE) == 6)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func001Func038C()
-if (not (BlzGetUnitIntegerField(udg_Unit_Array_NextUnits[1], UNIT_IF_DEFENSE_TYPE) == 6)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func001Func042Func001Func001C()
-if (not (udg_Integer_EndlessMode == 1)) then
-return false
-end
-if (not (udg_Integer_WaveNumber >= 61)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func001Func042Func001C()
-if (not (udg_Integer_EndlessMode == 1)) then
-return false
-end
-if (not (udg_Integer_WaveNumber == 60)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func001Func042C()
-if (not (udg_Integer_EndlessMode == 0)) then
-return false
-end
-if (not (udg_Integer_WaveNumber == 60)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Func001C()
-if (not (udg_Integer_RWActivated == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Next_Wave_and_Current_Wave_Update_Actions()
-if (Trig_Next_Wave_and_Current_Wave_Update_Func001C()) then
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, udg_String_Array_MBStatWavUniIcons[udg_Integer_WaveNumber])
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, udg_String_Array_MBStatWavUniIcons[(udg_Integer_WaveNumber + 1)])
-if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func006C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Light" .. "/Boss]"))
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNLightArmour.blp")
-else
-if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func006Func001C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Light" .. "]"))
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNLightArmour.blp")
-else
-end
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func007C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Light" .. "/Boss]"))
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNLightArmour.blp")
-else
-if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func007Func001C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Light" .. "]"))
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNLightArmour.blp")
-else
-end
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func011C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Medium" .. "]"))
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNMediumArmour.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func012C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Medium" .. "]"))
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNMediumArmour.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func016C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Heavy" .. "]"))
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNHeavyArmour.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func017C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Heavy" .. "]"))
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNHeavyArmour.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func021C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Fortified" .. "/Air]"))
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
-else
-if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func021Func001C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Fortified" .. "]"))
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNArcaniteArchitecture.blp")
-else
-end
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func022C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Fortified" .. "/Air]"))
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNVulture.blp")
-else
-if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func022Func001C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Fortified" .. "]"))
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNArcaniteArchitecture.blp")
-else
-end
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func026C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Hero" .. "]"))
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func027C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Hero" .. "]"))
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func037C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, ("[Divine" .. "/Immune]"))
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "war3mapImported\\BTNDivineArmour.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func038C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, ("[Divine" .. "/Immune]"))
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "war3mapImported\\BTNDivineArmour.blp")
-else
-end
-if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func042C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_3156")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNAcorn.blp")
-else
-if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func042Func001C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_3158")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp")
-else
-if (Trig_Next_Wave_and_Current_Wave_Update_Func001Func042Func001Func001C()) then
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, "TRIGSTR_1002")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, "TRIGSTR_2655")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp")
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNTheCaptain.blp")
-else
-end
-end
-end
-else
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 12, udg_String_Array_WaveType[udg_Integer_WaveNumber])
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 12, udg_String_Array_ImageFile[udg_Integer_Array_RWUnitType[udg_Integer_WaveNumber]])
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 12, "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp")
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 13, udg_String_Array_WaveType[(udg_Integer_WaveNumber + 1)])
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 2, 13, udg_String_Array_ImageFile[udg_Integer_Array_RWUnitType[(udg_Integer_WaveNumber + 1)]])
-MultiboardSetItemIconBJ(GetLastCreatedMultiboard(), 1, 13, "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp")
-end
-end
-
-function InitTrig_Next_Wave_and_Current_Wave_Update()
-gg_trg_Next_Wave_and_Current_Wave_Update = CreateTrigger()
-TriggerAddAction(gg_trg_Next_Wave_and_Current_Wave_Update, Trig_Next_Wave_and_Current_Wave_Update_Actions)
-end
-
-function Trig_Player_Leave_Gold_Split_Func001C()
-if (not (GetTriggerPlayer() == GetOwningPlayer(gg_unit_n00C_0019))) then
-return false
-end
-return true
-end
-
-function Trig_Player_Leave_Gold_Split_Func004002()
-RemoveUnit(GetEnumUnit())
-end
-
-function Trig_Player_Leave_Gold_Split_Func010Func001C()
-if (not (GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING)) then
-return false
-end
-return true
-end
-
-function Trig_Player_Leave_Gold_Split_Func010A()
-if (Trig_Player_Leave_Gold_Split_Func010Func001C()) then
-DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetTriggerPlayer())] .. ("" .. ("|cff00FF00, Has left the game. You have been given|r |cffFDD017" .. (I2S((udg_Integer_PlayerLeaveGold // udg_Integer_Players)) .. " Gold.|r")))))
-AdjustPlayerStateBJ((udg_Integer_PlayerLeaveGold // udg_Integer_Players), GetEnumPlayer(), PLAYER_STATE_RESOURCE_GOLD)
-else
-end
-end
-
-function Trig_Player_Leave_Gold_Split_Actions()
-if (Trig_Player_Leave_Gold_Split_Func001C()) then
-SetUnitOwner(gg_unit_n00C_0019, Player(PLAYER_NEUTRAL_PASSIVE), true)
-EnableTrigger(gg_trg_Game_Setup_Ownership)
-else
-end
-udg_Integer_PlayerLeaveGold = GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD)
-ForceRemovePlayerSimple(GetTriggerPlayer(), udg_PlayerGroup_Permanent[1])
-ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), GetTriggerPlayer()), Trig_Player_Leave_Gold_Split_Func004002)
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, (GetConvertedPlayerId(GetTriggerPlayer()) + 1), (udg_String_Array_MultiBoardColours[GetConvertedPlayerId(GetTriggerPlayer())] .. "Left the Game|r"))
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, (GetConvertedPlayerId(GetTriggerPlayer()) + 1), ("|cffFDD017" .. "0"))
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 3, (GetConvertedPlayerId(GetTriggerPlayer()) + 1), ("|cffFDD017" .. "0"))
-udg_Integer_Array_Kills[GetConvertedPlayerId(GetTriggerPlayer())] = 0
-udg_Integer_Players = (udg_Integer_Players - 1)
-ForForce(udg_PlayerGroup_Permanent[1], Trig_Player_Leave_Gold_Split_Func010A)
-SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD, 0)
-end
-
-function InitTrig_Player_Leave_Gold_Split()
-gg_trg_Player_Leave_Gold_Split = CreateTrigger()
-TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(0))
-TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(1))
-TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(2))
-TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(3))
-TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(4))
-TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(5))
-TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(6))
-TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(7))
-TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(8))
-TriggerAddAction(gg_trg_Player_Leave_Gold_Split, Trig_Player_Leave_Gold_Split_Actions)
-end
-
 function Trig_Restart_Func002C()
 if (not (udg_Integer_IsRandomModes == 1)) then
 return false
@@ -15480,6 +15433,7 @@ EnableTrigger(gg_trg_Ready_Modes)
 EnableTrigger(gg_trg_Start_Gamemode_Indicator)
 EnableTrigger(gg_trg_Turn_on_RedAfk_Restart)
 EnableTrigger(gg_trg_Default_Gamemode_Restart)
+EnableTrigger(gg_trg_Lose_Condition_New)
 MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 14, "TRIGSTR_824")
 BlzSetAbilityTooltip(FourCC("A03E"), ("|c0000ff00Gold Cost: |c0077ff77" .. (I2S(udg_Integer_HHCost) .. (" / " .. ("|c0000ff00Bosses Spawned: |c0077ff77" .. I2S(udg_Integer_HHSpawnedAmount))))), 1)
 ShowUnitShow(gg_unit_n00C_0019)
@@ -15673,296 +15627,6 @@ TriggerRegisterPlayerChatEvent(gg_trg_Game_Message_Time, Player(8), "-gmd ", fal
 TriggerAddAction(gg_trg_Game_Message_Time, Trig_Game_Message_Time_Actions)
 end
 
-function Trig_Damage_Info_Actions()
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_021")
-end
-
-function InitTrig_Damage_Info()
-gg_trg_Damage_Info = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info, Player(0), "-damageinfo", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info, Player(0), "-dinfo", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info, Player(1), "-damageinfo", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info, Player(1), "-dinfo", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info, Player(2), "-damageinfo", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info, Player(2), "-dinfo", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info, Player(3), "-damageinfo", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info, Player(3), "-dinfo", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info, Player(4), "-damageinfo", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info, Player(4), "-dinfo", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info, Player(5), "-damageinfo", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info, Player(5), "-dinfo", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info, Player(6), "-damageinfo", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info, Player(6), "-dinfo", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info, Player(7), "-damageinfo", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info, Player(7), "-dinfo", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info, Player(8), "-damageinfo", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info, Player(8), "-dinfo", true)
-TriggerAddAction(gg_trg_Damage_Info, Trig_Damage_Info_Actions)
-end
-
-function Trig_Greed_Func001C()
-if (not (SubStringBJ(GetEventPlayerChatString(), 7, StringLength(GetEventPlayerChatString())) == udg_String_EmptyString)) then
-return false
-end
-return true
-end
-
-function Trig_Greed_Actions()
-if (Trig_Greed_Func001C()) then
-else
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], (udg_String_Array_PlayerNames[S2I(SubStringBJ(GetEventPlayerChatString(), 7, StringLength(GetEventPlayerChatString())))] .. ("|c0000ff00 - Gold Lost:|r |cffFDD017" .. (I2S(udg_Integer_Array_GoldLostGambling[S2I(SubStringBJ(GetEventPlayerChatString(), 7, StringLength(GetEventPlayerChatString())))]) .. (" |c0000ff00Gold Won: |cffFDD017" .. (I2S(udg_Integer_Array_GoldWonGambling[S2I(SubStringBJ(GetEventPlayerChatString(), 7, StringLength(GetEventPlayerChatString())))]) .. ("|c0000ff00 Jackpots Won: |cffFDD017" .. I2S(udg_Integer_Array_JackpotsWon[S2I(SubStringBJ(GetEventPlayerChatString(), 7, StringLength(GetEventPlayerChatString())))]))))))))
-end
-end
-
-function InitTrig_Greed()
-gg_trg_Greed = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Greed, Player(0), "-greed", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Greed, Player(1), "-greed", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Greed, Player(2), "-greed", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Greed, Player(3), "-greed", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Greed, Player(4), "-greed", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Greed, Player(5), "-greed", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Greed, Player(6), "-greed", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Greed, Player(7), "-greed", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Greed, Player(8), "-greed", false)
-TriggerAddAction(gg_trg_Greed, Trig_Greed_Actions)
-end
-
-function Trig_Gamemode_Func001Func001C()
-if (not (udg_Integer_ChaosMode == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Gamemode_Func001Func002Func001C()
-if (not (udg_Integer_ChaosMode == 2)) then
-return false
-end
-return true
-end
-
-function Trig_Gamemode_Func001Func002Func002Func001C()
-if (not (udg_Integer_ChaosMode == 3)) then
-return false
-end
-return true
-end
-
-function Trig_Gamemode_Func001Func002Func002Func002Func001C()
-if (not (udg_Integer_ChaosMode == 4)) then
-return false
-end
-return true
-end
-
-function Trig_Gamemode_Func001Func002Func002Func002Func002C()
-if (not (udg_Integer_Difficulty == 5)) then
-return false
-end
-return true
-end
-
-function Trig_Gamemode_Func001Func002Func002Func002C()
-if (not (udg_Integer_Difficulty == 4)) then
-return false
-end
-return true
-end
-
-function Trig_Gamemode_Func001Func002Func002C()
-if (not (udg_Integer_Difficulty == 3)) then
-return false
-end
-return true
-end
-
-function Trig_Gamemode_Func001Func002C()
-if (not (udg_Integer_Difficulty == 2)) then
-return false
-end
-return true
-end
-
-function Trig_Gamemode_Func001C()
-if (not (udg_Integer_Difficulty == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Gamemode_Func002Func001C()
-if (not (udg_Integer_TowerLimit >= 1)) then
-return false
-end
-return true
-end
-
-function Trig_Gamemode_Func002C()
-if (not (udg_Integer_TowerLimit == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Gamemode_Func007C()
-if (not (udg_Integer_EndlessMode == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Gamemode_Func008C()
-if (not (udg_Integer_GoldRush == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Gamemode_Func009C()
-if (not (udg_Integer_SwarmMode == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Gamemode_Func010C()
-if (not (udg_Integer_RWActivated == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Gamemode_Func011C()
-if (not (udg_Integer_HHActivated == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Gamemode_Func012C()
-if (not (udg_Integer_SpeedMode == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Gamemode_Func013C()
-if (not (udg_Integer_BlitzMode == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Gamemode_Actions()
-if (Trig_Gamemode_Func001C()) then
-if (Trig_Gamemode_Func001Func001C()) then
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_170")
-else
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_2296")
-end
-else
-if (Trig_Gamemode_Func001Func002C()) then
-if (Trig_Gamemode_Func001Func002Func001C()) then
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_178")
-else
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_176")
-end
-else
-if (Trig_Gamemode_Func001Func002Func002C()) then
-if (Trig_Gamemode_Func001Func002Func002Func001C()) then
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_179")
-else
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_180")
-end
-else
-if (Trig_Gamemode_Func001Func002Func002Func002C()) then
-if (Trig_Gamemode_Func001Func002Func002Func002Func001C()) then
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_2297")
-else
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_2300")
-end
-else
-if (Trig_Gamemode_Func001Func002Func002Func002Func002C()) then
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_184")
-else
-end
-end
-end
-end
-end
-if (Trig_Gamemode_Func002C()) then
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_197")
-else
-if (Trig_Gamemode_Func002Func001C()) then
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_196")
-else
-end
-end
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], ("|c0000ff00Siege:  " .. (udg_String_Array_TowerEnabled[1] .. (" / " .. ("|c0000ff00Air:   " .. (udg_String_Array_TowerEnabled[2] .. (" / " .. ("|c0000ff00Poison:   " .. udg_String_Array_TowerEnabled[3]))))))))
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], ("|c0000ff00Frost:  " .. (udg_String_Array_TowerEnabled[4] .. (" / " .. ("|c0000ff00Bash: " .. (udg_String_Array_TowerEnabled[9] .. (" / " .. ("|c0000ff00Bouncing: " .. udg_String_Array_TowerEnabled[8]))))))))
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], ("|c0000ff00Spell: " .. (udg_String_Array_TowerEnabled[7] .. (" / " .. ("|c0000ff00Aura: " .. (udg_String_Array_TowerEnabled[6] .. (" / " .. ("|c0000ff00Research: " .. udg_String_Array_TowerEnabled[10]))))))))
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], ("|c0000ff00Traps: " .. (udg_String_Array_TowerEnabled[11] .. (" / " .. ("|c0000ff00Chaos: " .. udg_String_Array_TowerEnabled[5])))))
-if (Trig_Gamemode_Func007C()) then
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_199")
-else
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_198")
-end
-if (Trig_Gamemode_Func008C()) then
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_202")
-else
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_200")
-end
-if (Trig_Gamemode_Func009C()) then
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_236")
-else
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_203")
-end
-if (Trig_Gamemode_Func010C()) then
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_265")
-else
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_242")
-end
-if (Trig_Gamemode_Func011C()) then
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_272")
-else
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_271")
-end
-if (Trig_Gamemode_Func012C()) then
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_2256")
-else
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_280")
-end
-if (Trig_Gamemode_Func013C()) then
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_2078")
-else
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_2071")
-end
-end
-
-function InitTrig_Gamemode()
-gg_trg_Gamemode = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Gamemode, Player(0), "-Gamemode", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Gamemode, Player(0), "-gm", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Gamemode, Player(1), "-Gamemode", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Gamemode, Player(1), "-gm", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Gamemode, Player(2), "-Gamemode", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Gamemode, Player(2), "-gm", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Gamemode, Player(3), "-Gamemode", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Gamemode, Player(3), "-gm", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Gamemode, Player(4), "-Gamemode", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Gamemode, Player(4), "-gm", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Gamemode, Player(5), "-Gamemode", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Gamemode, Player(5), "-gm", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Gamemode, Player(6), "-Gamemode", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Gamemode, Player(6), "-gm", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Gamemode, Player(7), "-Gamemode", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Gamemode, Player(7), "-gm", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Gamemode, Player(8), "-Gamemode", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Gamemode, Player(8), "-gm", true)
-TriggerAddAction(gg_trg_Gamemode, Trig_Gamemode_Actions)
-end
-
 function Trig_Commands_Actions()
 DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_6418")
 end
@@ -15979,6 +15643,296 @@ TriggerRegisterPlayerChatEvent(gg_trg_Commands, Player(6), "-commands", true)
 TriggerRegisterPlayerChatEvent(gg_trg_Commands, Player(7), "-commands", true)
 TriggerRegisterPlayerChatEvent(gg_trg_Commands, Player(8), "-commands", true)
 TriggerAddAction(gg_trg_Commands, Trig_Commands_Actions)
+end
+
+function Trig_Greed_Command_Func001C()
+if (not (SubStringBJ(GetEventPlayerChatString(), 7, StringLength(GetEventPlayerChatString())) == udg_String_EmptyString)) then
+return false
+end
+return true
+end
+
+function Trig_Greed_Command_Actions()
+if (Trig_Greed_Command_Func001C()) then
+else
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], (udg_String_Array_PlayerNames[S2I(SubStringBJ(GetEventPlayerChatString(), 7, StringLength(GetEventPlayerChatString())))] .. ("|c0000ff00 - Gold Lost:|r |cffFDD017" .. (I2S(udg_Integer_Array_GoldLostGambling[S2I(SubStringBJ(GetEventPlayerChatString(), 7, StringLength(GetEventPlayerChatString())))]) .. (" |c0000ff00Gold Won: |cffFDD017" .. (I2S(udg_Integer_Array_GoldWonGambling[S2I(SubStringBJ(GetEventPlayerChatString(), 7, StringLength(GetEventPlayerChatString())))]) .. ("|c0000ff00 Jackpots Won: |cffFDD017" .. I2S(udg_Integer_Array_JackpotsWon[S2I(SubStringBJ(GetEventPlayerChatString(), 7, StringLength(GetEventPlayerChatString())))]))))))))
+end
+end
+
+function InitTrig_Greed_Command()
+gg_trg_Greed_Command = CreateTrigger()
+TriggerRegisterPlayerChatEvent(gg_trg_Greed_Command, Player(0), "-greed", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Greed_Command, Player(1), "-greed", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Greed_Command, Player(2), "-greed", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Greed_Command, Player(3), "-greed", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Greed_Command, Player(4), "-greed", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Greed_Command, Player(5), "-greed", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Greed_Command, Player(6), "-greed", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Greed_Command, Player(7), "-greed", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Greed_Command, Player(8), "-greed", false)
+TriggerAddAction(gg_trg_Greed_Command, Trig_Greed_Command_Actions)
+end
+
+function Trig_Damage_Info_Command_Actions()
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_021")
+end
+
+function InitTrig_Damage_Info_Command()
+gg_trg_Damage_Info_Command = CreateTrigger()
+TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info_Command, Player(0), "-damageinfo", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info_Command, Player(0), "-dinfo", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info_Command, Player(1), "-damageinfo", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info_Command, Player(1), "-dinfo", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info_Command, Player(2), "-damageinfo", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info_Command, Player(2), "-dinfo", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info_Command, Player(3), "-damageinfo", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info_Command, Player(3), "-dinfo", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info_Command, Player(4), "-damageinfo", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info_Command, Player(4), "-dinfo", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info_Command, Player(5), "-damageinfo", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info_Command, Player(5), "-dinfo", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info_Command, Player(6), "-damageinfo", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info_Command, Player(6), "-dinfo", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info_Command, Player(7), "-damageinfo", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info_Command, Player(7), "-dinfo", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info_Command, Player(8), "-damageinfo", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Damage_Info_Command, Player(8), "-dinfo", true)
+TriggerAddAction(gg_trg_Damage_Info_Command, Trig_Damage_Info_Command_Actions)
+end
+
+function Trig_Gamemode_Command_Func001Func001C()
+if (not (udg_Integer_ChaosMode == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Gamemode_Command_Func001Func002Func001C()
+if (not (udg_Integer_ChaosMode == 2)) then
+return false
+end
+return true
+end
+
+function Trig_Gamemode_Command_Func001Func002Func002Func001C()
+if (not (udg_Integer_ChaosMode == 3)) then
+return false
+end
+return true
+end
+
+function Trig_Gamemode_Command_Func001Func002Func002Func002Func001C()
+if (not (udg_Integer_ChaosMode == 4)) then
+return false
+end
+return true
+end
+
+function Trig_Gamemode_Command_Func001Func002Func002Func002Func002C()
+if (not (udg_Integer_Difficulty == 5)) then
+return false
+end
+return true
+end
+
+function Trig_Gamemode_Command_Func001Func002Func002Func002C()
+if (not (udg_Integer_Difficulty == 4)) then
+return false
+end
+return true
+end
+
+function Trig_Gamemode_Command_Func001Func002Func002C()
+if (not (udg_Integer_Difficulty == 3)) then
+return false
+end
+return true
+end
+
+function Trig_Gamemode_Command_Func001Func002C()
+if (not (udg_Integer_Difficulty == 2)) then
+return false
+end
+return true
+end
+
+function Trig_Gamemode_Command_Func001C()
+if (not (udg_Integer_Difficulty == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Gamemode_Command_Func002Func001C()
+if (not (udg_Integer_TowerLimit >= 1)) then
+return false
+end
+return true
+end
+
+function Trig_Gamemode_Command_Func002C()
+if (not (udg_Integer_TowerLimit == 0)) then
+return false
+end
+return true
+end
+
+function Trig_Gamemode_Command_Func007C()
+if (not (udg_Integer_EndlessMode == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Gamemode_Command_Func008C()
+if (not (udg_Integer_GoldRush == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Gamemode_Command_Func009C()
+if (not (udg_Integer_SwarmMode == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Gamemode_Command_Func010C()
+if (not (udg_Integer_RWActivated == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Gamemode_Command_Func011C()
+if (not (udg_Integer_HHActivated == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Gamemode_Command_Func012C()
+if (not (udg_Integer_SpeedMode == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Gamemode_Command_Func013C()
+if (not (udg_Integer_BlitzMode == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Gamemode_Command_Actions()
+if (Trig_Gamemode_Command_Func001C()) then
+if (Trig_Gamemode_Command_Func001Func001C()) then
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_170")
+else
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_2296")
+end
+else
+if (Trig_Gamemode_Command_Func001Func002C()) then
+if (Trig_Gamemode_Command_Func001Func002Func001C()) then
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_178")
+else
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_176")
+end
+else
+if (Trig_Gamemode_Command_Func001Func002Func002C()) then
+if (Trig_Gamemode_Command_Func001Func002Func002Func001C()) then
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_179")
+else
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_180")
+end
+else
+if (Trig_Gamemode_Command_Func001Func002Func002Func002C()) then
+if (Trig_Gamemode_Command_Func001Func002Func002Func002Func001C()) then
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_2297")
+else
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_2300")
+end
+else
+if (Trig_Gamemode_Command_Func001Func002Func002Func002Func002C()) then
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_184")
+else
+end
+end
+end
+end
+end
+if (Trig_Gamemode_Command_Func002C()) then
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_197")
+else
+if (Trig_Gamemode_Command_Func002Func001C()) then
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_196")
+else
+end
+end
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], ("|c0000ff00Siege:  " .. (udg_String_Array_TowerEnabled[1] .. (" / " .. ("|c0000ff00Air:   " .. (udg_String_Array_TowerEnabled[2] .. (" / " .. ("|c0000ff00Poison:   " .. udg_String_Array_TowerEnabled[3]))))))))
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], ("|c0000ff00Frost:  " .. (udg_String_Array_TowerEnabled[4] .. (" / " .. ("|c0000ff00Bash: " .. (udg_String_Array_TowerEnabled[9] .. (" / " .. ("|c0000ff00Bouncing: " .. udg_String_Array_TowerEnabled[8]))))))))
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], ("|c0000ff00Spell: " .. (udg_String_Array_TowerEnabled[7] .. (" / " .. ("|c0000ff00Aura: " .. (udg_String_Array_TowerEnabled[6] .. (" / " .. ("|c0000ff00Research: " .. udg_String_Array_TowerEnabled[10]))))))))
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], ("|c0000ff00Traps: " .. (udg_String_Array_TowerEnabled[11] .. (" / " .. ("|c0000ff00Chaos: " .. udg_String_Array_TowerEnabled[5])))))
+if (Trig_Gamemode_Command_Func007C()) then
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_199")
+else
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_198")
+end
+if (Trig_Gamemode_Command_Func008C()) then
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_202")
+else
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_200")
+end
+if (Trig_Gamemode_Command_Func009C()) then
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_236")
+else
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_203")
+end
+if (Trig_Gamemode_Command_Func010C()) then
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_265")
+else
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_242")
+end
+if (Trig_Gamemode_Command_Func011C()) then
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_272")
+else
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_271")
+end
+if (Trig_Gamemode_Command_Func012C()) then
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_2256")
+else
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_280")
+end
+if (Trig_Gamemode_Command_Func013C()) then
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_2078")
+else
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_2071")
+end
+end
+
+function InitTrig_Gamemode_Command()
+gg_trg_Gamemode_Command = CreateTrigger()
+TriggerRegisterPlayerChatEvent(gg_trg_Gamemode_Command, Player(0), "-Gamemode", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Gamemode_Command, Player(0), "-gm", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Gamemode_Command, Player(1), "-Gamemode", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Gamemode_Command, Player(1), "-gm", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Gamemode_Command, Player(2), "-Gamemode", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Gamemode_Command, Player(2), "-gm", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Gamemode_Command, Player(3), "-Gamemode", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Gamemode_Command, Player(3), "-gm", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Gamemode_Command, Player(4), "-Gamemode", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Gamemode_Command, Player(4), "-gm", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Gamemode_Command, Player(5), "-Gamemode", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Gamemode_Command, Player(5), "-gm", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Gamemode_Command, Player(6), "-Gamemode", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Gamemode_Command, Player(6), "-gm", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Gamemode_Command, Player(7), "-Gamemode", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Gamemode_Command, Player(7), "-gm", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Gamemode_Command, Player(8), "-Gamemode", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Gamemode_Command, Player(8), "-gm", true)
+TriggerAddAction(gg_trg_Gamemode_Command, Trig_Gamemode_Command_Actions)
 end
 
 function Trig_Income_Command_Actions()
@@ -17457,9 +17411,9 @@ InitTrig_Random_Game_Modes_Difficulty_and_Towers()
 InitTrig_Ready_Modes()
 InitTrig_RedAfk_Ready()
 InitTrig_Red_Inactive()
-InitTrig_Start_Gamemode_Indicator()
 InitTrig_Turn_On_RedAfk_Ready()
 InitTrig_Turn_on_RedAfk_Restart()
+InitTrig_Start_Gamemode_Indicator()
 InitTrig_Default_Gamemode()
 InitTrig_Default_Gamemode_Restart()
 InitTrig_Blitz_Mode()
@@ -17470,6 +17424,15 @@ InitTrig_Headhunter_Mode()
 InitTrig_Headhunter_Actives()
 InitTrig_Headhunter_Reward()
 InitTrig_Income()
+InitTrig_Create_the_Multiboard()
+InitTrig_Name_Fix()
+InitTrig_Timer()
+InitTrig_Kill_Update()
+InitTrig_Gold_Update()
+InitTrig_Wave_and_Lives_Update()
+InitTrig_Next_Wave_and_Current_Wave_Update()
+InitTrig_Player_Update_Game_Start()
+InitTrig_Player_Leave_Gold_Split()
 InitTrig_Start_Static_Waves()
 InitTrig_Start_Random_Waves()
 InitTrig_Run_Start_Waves()
@@ -17520,25 +17483,16 @@ InitTrig_Path_Teal_Spawn()
 InitTrig_Path_Teal_1()
 InitTrig_Path_Teal_2()
 InitTrig_Path_Teal_3()
-InitTrig_Name_Fix()
-InitTrig_Create_the_Multiboard()
-InitTrig_Timer()
-InitTrig_Kill_Update()
-InitTrig_Gold_Update()
-InitTrig_Wave_and_Lives_Update()
-InitTrig_Player_Update_Game_Start()
-InitTrig_Next_Wave_and_Current_Wave_Update()
-InitTrig_Player_Leave_Gold_Split()
 InitTrig_Restart()
 InitTrig_Game_Setup_Ownership()
 InitTrig_Camera_Zoom_Command()
 InitTrig_Camera_Zoom_Increments()
 InitTrig_Camera()
 InitTrig_Game_Message_Time()
-InitTrig_Damage_Info()
-InitTrig_Greed()
-InitTrig_Gamemode()
 InitTrig_Commands()
+InitTrig_Greed_Command()
+InitTrig_Damage_Info_Command()
+InitTrig_Gamemode_Command()
 InitTrig_Income_Command()
 InitTrig_Wave_Command()
 InitTrig_Autocam_Command()
