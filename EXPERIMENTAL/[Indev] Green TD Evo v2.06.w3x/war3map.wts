@@ -5,7 +5,7 @@ No more Upgrades
 
 STRING 1
 {
-[INDEV] Green TD Evo v2.06
+[TEST] Green TD Evo v2.06
 }
 
 STRING 2
@@ -15,7 +15,7 @@ STRING 2
 
 STRING 3
 {
-|c0000FF00Version Released -|r |cAAAAFFAA04/08/2020|r
+|c0000FF00Version Released -|r |cAAAAFFAA25/03/2025|r
 }
 
 STRING 4
@@ -18235,12 +18235,12 @@ Green TD Evolution
 
 STRING 2727
 {
-v2.06 Indev
+v2.06 TEST
 }
 
 STRING 2728
 {
-This is a indevelopment version, their may be various bug, issues, crashes or desyncs.
+This is a TEST version, their may be various bugs, issues, crashes or desyncs. Join the Discord and tell me if anything needs fixing.
 }
 
 STRING 2729
