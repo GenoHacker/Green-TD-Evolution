@@ -17244,6 +17244,7 @@ STRING 2592
 -- BTNMysteryPot2 and DISBTNMysteryPot2, Downloaded from HiveWorkshop, Created by kola. Used for Random Game Modes, Difficulty + Towers icon.
 -- LUA Damage Engine by Bribe
 -- Arcing Text Tags by Maker
+-- Name Fix trigger by Uncle
 -- Button Manager to create various passive icons
 -- BLP Lab to convert to a usable image format
 }
@@ -18284,7 +18285,7 @@ STRING 2730
 
 STRING 2731
 {
-v2.06 Release Date - XX/XX/XX
+v2.06 TEST Release Date - 25/03/2025
 }
 
 STRING 2732
