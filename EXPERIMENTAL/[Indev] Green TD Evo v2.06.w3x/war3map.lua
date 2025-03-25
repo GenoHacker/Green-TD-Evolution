@@ -547,10 +547,8 @@ gg_trg_Make_Creeps_Vulnerable = nil
 gg_trg_Remove_Hero = nil
 gg_trg_Selling_Towers = nil
 gg_trg_Add_Sell_Ability = nil
-gg_trg_Lose_Condition = nil
 gg_trg_Lose_Condition_New = nil
 gg_trg_Defeat_Timer = nil
-gg_trg_Lose_Life = nil
 gg_trg_Lose_Life_New = nil
 gg_trg_Lose_Life_Animation_Effect = nil
 gg_trg_WinGame = nil
@@ -3991,151 +3989,6 @@ TriggerAddCondition(gg_trg_Bloodtrap, Condition(Trig_Bloodtrap_Conditions))
 TriggerAddAction(gg_trg_Bloodtrap, Trig_Bloodtrap_Actions)
 end
 
-function Trig_Kick_Blue_Func004002()
-KillUnit(GetEnumUnit())
-end
-
-function Trig_Kick_Blue_Actions()
-PlaySoundBJ(gg_snd_HeroLichPissed8)
-CustomDefeatBJ(Player(1), "TRIGSTR_2940")
-    bj_wantDestroyGroup = true
-ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(1)), Trig_Kick_Blue_Func004002)
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 3, (udg_String_Array_MultiBoardColours[2] .. ("-Kicked-" .. "|r")))
-end
-
-function InitTrig_Kick_Blue()
-gg_trg_Kick_Blue = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Kick_Blue, Player(0), "-kick blue", true)
-TriggerAddAction(gg_trg_Kick_Blue, Trig_Kick_Blue_Actions)
-end
-
-function Trig_Kick_Teal_Func004002()
-KillUnit(GetEnumUnit())
-end
-
-function Trig_Kick_Teal_Actions()
-PlaySoundBJ(gg_snd_HeroLichPissed8)
-CustomDefeatBJ(Player(2), "TRIGSTR_2939")
-    bj_wantDestroyGroup = true
-ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(2)), Trig_Kick_Teal_Func004002)
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 4, (udg_String_Array_MultiBoardColours[3] .. ("-Kicked-" .. "|r")))
-end
-
-function InitTrig_Kick_Teal()
-gg_trg_Kick_Teal = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Kick_Teal, Player(0), "-kick teal", true)
-TriggerAddAction(gg_trg_Kick_Teal, Trig_Kick_Teal_Actions)
-end
-
-function Trig_Kick_Purple_Func004002()
-KillUnit(GetEnumUnit())
-end
-
-function Trig_Kick_Purple_Actions()
-PlaySoundBJ(gg_snd_HeroLichPissed8)
-CustomDefeatBJ(Player(3), "TRIGSTR_2938")
-    bj_wantDestroyGroup = true
-ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(3)), Trig_Kick_Purple_Func004002)
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 5, (udg_String_Array_MultiBoardColours[4] .. ("-Kicked-" .. "|r")))
-end
-
-function InitTrig_Kick_Purple()
-gg_trg_Kick_Purple = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Kick_Purple, Player(0), "-kick purple", true)
-TriggerAddAction(gg_trg_Kick_Purple, Trig_Kick_Purple_Actions)
-end
-
-function Trig_Kick_Yellow_Func004002()
-KillUnit(GetEnumUnit())
-end
-
-function Trig_Kick_Yellow_Actions()
-PlaySoundBJ(gg_snd_HeroLichPissed8)
-CustomDefeatBJ(Player(4), "TRIGSTR_2831")
-    bj_wantDestroyGroup = true
-ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(4)), Trig_Kick_Yellow_Func004002)
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 6, (udg_String_Array_MultiBoardColours[5] .. ("-Kicked-" .. "|r")))
-end
-
-function InitTrig_Kick_Yellow()
-gg_trg_Kick_Yellow = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Kick_Yellow, Player(0), "-kick yellow", true)
-TriggerAddAction(gg_trg_Kick_Yellow, Trig_Kick_Yellow_Actions)
-end
-
-function Trig_Kick_Orange_Func005002()
-KillUnit(GetEnumUnit())
-end
-
-function Trig_Kick_Orange_Actions()
-PlaySoundBJ(gg_snd_HeroLichPissed8)
-CustomDefeatBJ(Player(5), "TRIGSTR_2487")
-    bj_wantDestroyGroup = true
-ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(5)), Trig_Kick_Orange_Func005002)
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 7, (udg_String_Array_MultiBoardColours[6] .. ("-Kicked-" .. "|r")))
-end
-
-function InitTrig_Kick_Orange()
-gg_trg_Kick_Orange = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Kick_Orange, Player(0), "-kick orange", true)
-TriggerAddAction(gg_trg_Kick_Orange, Trig_Kick_Orange_Actions)
-end
-
-function Trig_Kick_Green_Func004002()
-KillUnit(GetEnumUnit())
-end
-
-function Trig_Kick_Green_Actions()
-PlaySoundBJ(gg_snd_HeroLichPissed8)
-CustomDefeatBJ(Player(6), "TRIGSTR_2468")
-    bj_wantDestroyGroup = true
-ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(6)), Trig_Kick_Green_Func004002)
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 8, (udg_String_Array_MultiBoardColours[7] .. ("-Kicked-" .. "|r")))
-end
-
-function InitTrig_Kick_Green()
-gg_trg_Kick_Green = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Kick_Green, Player(0), "-kick green", true)
-TriggerAddAction(gg_trg_Kick_Green, Trig_Kick_Green_Actions)
-end
-
-function Trig_Kick_Pink_Func004002()
-KillUnit(GetEnumUnit())
-end
-
-function Trig_Kick_Pink_Actions()
-PlaySoundBJ(gg_snd_HeroLichPissed8)
-CustomDefeatBJ(Player(7), "TRIGSTR_1029")
-    bj_wantDestroyGroup = true
-ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(7)), Trig_Kick_Pink_Func004002)
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 9, (udg_String_Array_MultiBoardColours[8] .. ("-Kicked-" .. "|r")))
-end
-
-function InitTrig_Kick_Pink()
-gg_trg_Kick_Pink = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Kick_Pink, Player(0), "-kick pink", true)
-TriggerAddAction(gg_trg_Kick_Pink, Trig_Kick_Pink_Actions)
-end
-
-function Trig_Kick_Gray_Func004002()
-KillUnit(GetEnumUnit())
-end
-
-function Trig_Kick_Gray_Actions()
-PlaySoundBJ(gg_snd_HeroLichPissed8)
-CustomDefeatBJ(Player(8), "TRIGSTR_1028")
-    bj_wantDestroyGroup = true
-ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(8)), Trig_Kick_Gray_Func004002)
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 10, (udg_String_Array_MultiBoardColours[9] .. ("-Kicked-" .. "|r")))
-end
-
-function InitTrig_Kick_Gray()
-gg_trg_Kick_Gray = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Kick_Gray, Player(0), "-kick gray", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Kick_Gray, Player(0), "-kick grey", true)
-TriggerAddAction(gg_trg_Kick_Gray, Trig_Kick_Gray_Actions)
-end
-
 function Trig_Set_Variables_Func291Func001C()
 if (not (GetPlayerSlotState(ConvertedPlayer(GetForLoopIndexA())) == PLAYER_SLOT_STATE_PLAYING)) then
 return false
@@ -4927,98 +4780,6 @@ TriggerRegisterTimerEventPeriodic(gg_trg_AntiBuild_Timer, 1.00)
 TriggerAddAction(gg_trg_AntiBuild_Timer, Trig_AntiBuild_Timer_Actions)
 end
 
-function Trig_Invun_Towers_Actions()
-SetUnitInvulnerable(GetTriggerUnit(), true)
-end
-
-function InitTrig_Invun_Towers()
-gg_trg_Invun_Towers = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Invun_Towers, EVENT_PLAYER_UNIT_CONSTRUCT_START)
-TriggerAddAction(gg_trg_Invun_Towers, Trig_Invun_Towers_Actions)
-end
-
-function Trig_Make_Creeps_Invulnerable_Func003C()
-if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
-return true
-end
-if (GetOwningPlayer(GetEnteringUnit()) == Player(11)) then
-return true
-end
-if (GetOwningPlayer(GetEnteringUnit()) == Player(12)) then
-return true
-end
-return false
-end
-
-function Trig_Make_Creeps_Invulnerable_Conditions()
-if (not Trig_Make_Creeps_Invulnerable_Func003C()) then
-return false
-end
-return true
-end
-
-function Trig_Make_Creeps_Invulnerable_Func002C()
-if (not (GetUnitTypeId(GetEnteringUnit()) == FourCC("n00E"))) then
-return false
-end
-return true
-end
-
-function Trig_Make_Creeps_Invulnerable_Actions()
-SetUnitInvulnerable(GetEnteringUnit(), true)
-if (Trig_Make_Creeps_Invulnerable_Func002C()) then
-SetUnitInvulnerable(GetEnteringUnit(), false)
-else
-end
-end
-
-function InitTrig_Make_Creeps_Invulnerable()
-gg_trg_Make_Creeps_Invulnerable = CreateTrigger()
-TriggerRegisterEnterRectSimple(gg_trg_Make_Creeps_Invulnerable, GetEntireMapRect())
-TriggerRegisterEnterRectSimple(gg_trg_Make_Creeps_Invulnerable, gg_rct_Invun_Lives)
-TriggerAddCondition(gg_trg_Make_Creeps_Invulnerable, Condition(Trig_Make_Creeps_Invulnerable_Conditions))
-TriggerAddAction(gg_trg_Make_Creeps_Invulnerable, Trig_Make_Creeps_Invulnerable_Actions)
-end
-
-function Trig_Make_Creeps_Vulnerable_Func001C()
-if (GetOwningPlayer(GetLeavingUnit()) == Player(10)) then
-return true
-end
-if (GetOwningPlayer(GetLeavingUnit()) == Player(11)) then
-return true
-end
-if (GetOwningPlayer(GetLeavingUnit()) == Player(12)) then
-return true
-end
-return false
-end
-
-function Trig_Make_Creeps_Vulnerable_Conditions()
-if (not Trig_Make_Creeps_Vulnerable_Func001C()) then
-return false
-end
-return true
-end
-
-function Trig_Make_Creeps_Vulnerable_Actions()
-SetUnitInvulnerable(GetLeavingUnit(), false)
-end
-
-function InitTrig_Make_Creeps_Vulnerable()
-gg_trg_Make_Creeps_Vulnerable = CreateTrigger()
-TriggerRegisterLeaveRectSimple(gg_trg_Make_Creeps_Vulnerable, gg_rct_Invun_Orange)
-TriggerRegisterLeaveRectSimple(gg_trg_Make_Creeps_Vulnerable, gg_rct_Invun_Green)
-TriggerRegisterLeaveRectSimple(gg_trg_Make_Creeps_Vulnerable, gg_rct_Invun_Red)
-TriggerRegisterLeaveRectSimple(gg_trg_Make_Creeps_Vulnerable, gg_rct_Invun_Pink)
-TriggerRegisterLeaveRectSimple(gg_trg_Make_Creeps_Vulnerable, gg_rct_Invun_Purple)
-TriggerRegisterLeaveRectSimple(gg_trg_Make_Creeps_Vulnerable, gg_rct_Invun_Yellow)
-TriggerRegisterLeaveRectSimple(gg_trg_Make_Creeps_Vulnerable, gg_rct_Invun_Gray)
-TriggerRegisterLeaveRectSimple(gg_trg_Make_Creeps_Vulnerable, gg_rct_Invun_Blue)
-TriggerRegisterLeaveRectSimple(gg_trg_Make_Creeps_Vulnerable, gg_rct_Invun_Teal)
-TriggerAddCondition(gg_trg_Make_Creeps_Vulnerable, Condition(Trig_Make_Creeps_Vulnerable_Conditions))
-TriggerAddAction(gg_trg_Make_Creeps_Vulnerable, Trig_Make_Creeps_Vulnerable_Actions)
-end
-
 function Trig_Remove_Hero_Conditions()
 if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
 return false
@@ -5463,293 +5224,6 @@ gg_trg_WinGame = CreateTrigger()
 TriggerAddAction(gg_trg_WinGame, Trig_WinGame_Actions)
 end
 
-function Trig_Tabaho_Conditions()
-if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("nfro"))) then
-return false
-end
-return true
-end
-
-function Trig_Tabaho_Func003Func002Func002Func002Func001Func001Func001C()
-if (not (udg_Integer_RandomNumber == 7)) then
-return false
-end
-return true
-end
-
-function Trig_Tabaho_Func003Func002Func002Func002Func001Func001C()
-if (not (udg_Integer_RandomNumber == 6)) then
-return false
-end
-return true
-end
-
-function Trig_Tabaho_Func003Func002Func002Func002Func001C()
-if (not (udg_Integer_RandomNumber == 5)) then
-return false
-end
-return true
-end
-
-function Trig_Tabaho_Func003Func002Func002Func002C()
-if (not (udg_Integer_RandomNumber == 4)) then
-return false
-end
-return true
-end
-
-function Trig_Tabaho_Func003Func002Func002C()
-if (not (udg_Integer_RandomNumber == 3)) then
-return false
-end
-return true
-end
-
-function Trig_Tabaho_Func003Func002C()
-if (not (udg_Integer_RandomNumber == 2)) then
-return false
-end
-return true
-end
-
-function Trig_Tabaho_Func003C()
-if (not (udg_Integer_RandomNumber == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Tabaho_Actions()
-udg_Integer_RandomNumber = GetRandomInt(1, 7)
-udg_Point_Tabaho = GetRectCenter(gg_rct_Tabaho)
-if (Trig_Tabaho_Func003C()) then
-ShowImageBJ(true, udg_Image_Array_EasterEggImages[1])
-SetImageRenderAlways(udg_Image_Array_EasterEggImages[1], true)
-CreateTextTagLocBJ("TRIGSTR_122", udg_Point_Tabaho, 200.00, 10, 0.00, 100, 0.00, 0)
-SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
-SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
-SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
-SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
-TriggerSleepAction(3.00)
-ShowImageBJ(false, udg_Image_Array_EasterEggImages[1])
-else
-if (Trig_Tabaho_Func003Func002C()) then
-ShowImageBJ(true, udg_Image_Array_EasterEggImages[2])
-SetImageRenderAlways(udg_Image_Array_EasterEggImages[2], true)
-CreateTextTagLocBJ("TRIGSTR_127", udg_Point_Tabaho, 200.00, 10, 0.00, 100, 0.00, 0)
-SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
-SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
-SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
-SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
-TriggerSleepAction(3.00)
-ShowImageBJ(false, udg_Image_Array_EasterEggImages[2])
-else
-if (Trig_Tabaho_Func003Func002Func002C()) then
-ShowImageBJ(true, udg_Image_Array_EasterEggImages[3])
-SetImageRenderAlways(udg_Image_Array_EasterEggImages[3], true)
-SetImageRenderAlways(GetLastCreatedImage(), true)
-CreateTextTagLocBJ("TRIGSTR_128", udg_Point_Tabaho, 200.00, 10, 0.00, 100, 0.00, 0)
-SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
-SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
-SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
-SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
-TriggerSleepAction(3.00)
-ShowImageBJ(false, udg_Image_Array_EasterEggImages[3])
-else
-if (Trig_Tabaho_Func003Func002Func002Func002C()) then
-ShowImageBJ(true, udg_Image_Array_EasterEggImages[4])
-SetImageRenderAlways(udg_Image_Array_EasterEggImages[4], true)
-SetImageRenderAlways(GetLastCreatedImage(), true)
-CreateTextTagLocBJ("TRIGSTR_129", udg_Point_Tabaho, 200.00, 10, 0.00, 100, 0.00, 0)
-SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
-SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
-SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
-SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
-TriggerSleepAction(3.00)
-ShowImageBJ(false, udg_Image_Array_EasterEggImages[4])
-else
-if (Trig_Tabaho_Func003Func002Func002Func002Func001C()) then
-ShowImageBJ(true, udg_Image_Array_EasterEggImages[5])
-SetImageRenderAlways(udg_Image_Array_EasterEggImages[5], true)
-SetImageRenderAlways(GetLastCreatedImage(), true)
-CreateTextTagLocBJ("TRIGSTR_2418", udg_Point_Tabaho, 200.00, 10, 0.00, 100, 0.00, 0)
-SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
-SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
-SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
-SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
-TriggerSleepAction(3.00)
-ShowImageBJ(false, udg_Image_Array_EasterEggImages[5])
-else
-if (Trig_Tabaho_Func003Func002Func002Func002Func001Func001C()) then
-ShowImageBJ(true, udg_Image_Array_EasterEggImages[6])
-SetImageRenderAlways(udg_Image_Array_EasterEggImages[6], true)
-SetImageRenderAlways(GetLastCreatedImage(), true)
-CreateTextTagLocBJ("TRIGSTR_2419", udg_Point_Tabaho, 200.00, 10, 0.00, 100, 0.00, 0)
-SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
-SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
-SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
-SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
-TriggerSleepAction(3.00)
-ShowImageBJ(false, udg_Image_Array_EasterEggImages[6])
-else
-if (Trig_Tabaho_Func003Func002Func002Func002Func001Func001Func001C()) then
-ShowImageBJ(true, udg_Image_Array_EasterEggImages[7])
-SetImageRenderAlways(udg_Image_Array_EasterEggImages[7], true)
-SetImageRenderAlways(GetLastCreatedImage(), true)
-CreateTextTagLocBJ("TRIGSTR_2427", udg_Point_Tabaho, 200.00, 10, 0.00, 100, 0.00, 0)
-SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
-SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
-SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
-SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
-TriggerSleepAction(3.00)
-ShowImageBJ(false, udg_Image_Array_EasterEggImages[7])
-else
-end
-end
-end
-end
-end
-end
-end
-    RemoveLocation(udg_Point_Tabaho)
-end
-
-function InitTrig_Tabaho()
-gg_trg_Tabaho = CreateTrigger()
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Tabaho, Player(0), true)
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Tabaho, Player(1), true)
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Tabaho, Player(2), true)
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Tabaho, Player(3), true)
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Tabaho, Player(4), true)
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Tabaho, Player(5), true)
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Tabaho, Player(6), true)
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Tabaho, Player(7), true)
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Tabaho, Player(8), true)
-TriggerAddCondition(gg_trg_Tabaho, Condition(Trig_Tabaho_Conditions))
-TriggerAddAction(gg_trg_Tabaho, Trig_Tabaho_Actions)
-end
-
-function Trig_Alpharius_Omegon_Func001Func006C()
-if (GetTriggerUnit() == gg_unit_z000_0121) then
-return true
-end
-if (GetTriggerUnit() == gg_unit_z000_0122) then
-return true
-end
-if (GetTriggerUnit() == gg_unit_z000_0123) then
-return true
-end
-return false
-end
-
-function Trig_Alpharius_Omegon_Func001C()
-if (not Trig_Alpharius_Omegon_Func001Func006C()) then
-return false
-end
-return true
-end
-
-function Trig_Alpharius_Omegon_Actions()
-if (Trig_Alpharius_Omegon_Func001C()) then
-CreateTextTagUnitBJ(udg_String_Array_Alpharius[GetRandomInt(1, 10)], GetTriggerUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
-SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
-SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
-SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
-SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
-else
-end
-end
-
-function InitTrig_Alpharius_Omegon()
-gg_trg_Alpharius_Omegon = CreateTrigger()
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(0), true)
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(1), true)
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(2), true)
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(3), true)
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(4), true)
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(5), true)
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(6), true)
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(7), true)
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(8), true)
-TriggerAddAction(gg_trg_Alpharius_Omegon, Trig_Alpharius_Omegon_Actions)
-end
-
-function Trig_Ork_Func001Func006C()
-if (not (GetUnitMoveSpeed(gg_unit_o00I_0124) >= 500.00)) then
-return false
-end
-return true
-end
-
-function Trig_Ork_Func001C()
-if (not (GetTriggerUnit() == gg_unit_o00I_0124)) then
-return false
-end
-return true
-end
-
-function Trig_Ork_Actions()
-if (Trig_Ork_Func001C()) then
-udg_Real_OrkColour = (udg_Real_OrkColour - 5.00)
-udg_Real_OrkSize = (udg_Real_OrkSize + GetRandomReal(1.00, 10.00))
-SetUnitScalePercent(gg_unit_o00I_0124, udg_Real_OrkSize, udg_Real_OrkSize, udg_Real_OrkSize)
-SetUnitMoveSpeed(gg_unit_o00I_0124, (GetUnitMoveSpeed(gg_unit_o00I_0124) + 20.00))
-SetUnitVertexColorBJ(gg_unit_o00I_0124, 100, udg_Real_OrkColour, udg_Real_OrkColour, 0)
-if (Trig_Ork_Func001Func006C()) then
-SetUnitVertexColorBJ(gg_unit_o00I_0124, 100, 100.00, 100.00, 0)
-udg_Real_OrkSize = 100.00
-SetUnitScalePercent(gg_unit_o00I_0124, 100, 100, 100)
-SetUnitMoveSpeed(gg_unit_o00I_0124, 100.00)
-udg_Real_OrkColour = 100.00
-CreateTextTagUnitBJ("TRIGSTR_2205", gg_unit_o00I_0124, 0, 10.00, 0.00, 100, 0.00, 0)
-SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
-SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
-SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
-SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
-else
-end
-else
-end
-end
-
-function InitTrig_Ork()
-gg_trg_Ork = CreateTrigger()
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(0), true)
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(1), true)
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(2), true)
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(3), true)
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(4), true)
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(5), true)
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(6), true)
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(7), true)
-TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(8), true)
-TriggerAddAction(gg_trg_Ork, Trig_Ork_Actions)
-end
-
-function Trig_Smonze_Actions()
-SetUnitOwner(gg_unit_n018_0091, Player(PLAYER_NEUTRAL_AGGRESSIVE), true)
-end
-
-function InitTrig_Smonze()
-gg_trg_Smonze = CreateTrigger()
-TriggerRegisterUnitEvent(gg_trg_Smonze, gg_unit_n01D_0119, EVENT_UNIT_DEATH)
-TriggerAddAction(gg_trg_Smonze, Trig_Smonze_Actions)
-end
-
-function Trig_Weh_Actions()
-CreateTextTagUnitBJ("TRIGSTR_3080", GetTriggerUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
-SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
-SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
-SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
-SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
-end
-
-function InitTrig_Weh()
-gg_trg_Weh = CreateTrigger()
-TriggerRegisterUnitEvent(gg_trg_Weh, gg_unit_n026_0130, EVENT_UNIT_SELECTED)
-TriggerAddAction(gg_trg_Weh, Trig_Weh_Actions)
-end
-
 function Trig_Creep_Boosting_Func009C()
 if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
 return true
@@ -5812,6 +5286,98 @@ TriggerRegisterEnterRectSimple(gg_trg_Creep_Boosting, gg_rct_Purple_3)
 TriggerRegisterEnterRectSimple(gg_trg_Creep_Boosting, gg_rct_Yellow_3)
 TriggerAddCondition(gg_trg_Creep_Boosting, Condition(Trig_Creep_Boosting_Conditions))
 TriggerAddAction(gg_trg_Creep_Boosting, Trig_Creep_Boosting_Actions)
+end
+
+function Trig_Invun_Towers_Actions()
+SetUnitInvulnerable(GetTriggerUnit(), true)
+end
+
+function InitTrig_Invun_Towers()
+gg_trg_Invun_Towers = CreateTrigger()
+TriggerRegisterAnyUnitEventBJ(gg_trg_Invun_Towers, EVENT_PLAYER_UNIT_CONSTRUCT_START)
+TriggerAddAction(gg_trg_Invun_Towers, Trig_Invun_Towers_Actions)
+end
+
+function Trig_Make_Creeps_Invulnerable_Func003C()
+if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
+return true
+end
+if (GetOwningPlayer(GetEnteringUnit()) == Player(11)) then
+return true
+end
+if (GetOwningPlayer(GetEnteringUnit()) == Player(12)) then
+return true
+end
+return false
+end
+
+function Trig_Make_Creeps_Invulnerable_Conditions()
+if (not Trig_Make_Creeps_Invulnerable_Func003C()) then
+return false
+end
+return true
+end
+
+function Trig_Make_Creeps_Invulnerable_Func002C()
+if (not (GetUnitTypeId(GetEnteringUnit()) == FourCC("n00E"))) then
+return false
+end
+return true
+end
+
+function Trig_Make_Creeps_Invulnerable_Actions()
+SetUnitInvulnerable(GetEnteringUnit(), true)
+if (Trig_Make_Creeps_Invulnerable_Func002C()) then
+SetUnitInvulnerable(GetEnteringUnit(), false)
+else
+end
+end
+
+function InitTrig_Make_Creeps_Invulnerable()
+gg_trg_Make_Creeps_Invulnerable = CreateTrigger()
+TriggerRegisterEnterRectSimple(gg_trg_Make_Creeps_Invulnerable, GetEntireMapRect())
+TriggerRegisterEnterRectSimple(gg_trg_Make_Creeps_Invulnerable, gg_rct_Invun_Lives)
+TriggerAddCondition(gg_trg_Make_Creeps_Invulnerable, Condition(Trig_Make_Creeps_Invulnerable_Conditions))
+TriggerAddAction(gg_trg_Make_Creeps_Invulnerable, Trig_Make_Creeps_Invulnerable_Actions)
+end
+
+function Trig_Make_Creeps_Vulnerable_Func001C()
+if (GetOwningPlayer(GetLeavingUnit()) == Player(10)) then
+return true
+end
+if (GetOwningPlayer(GetLeavingUnit()) == Player(11)) then
+return true
+end
+if (GetOwningPlayer(GetLeavingUnit()) == Player(12)) then
+return true
+end
+return false
+end
+
+function Trig_Make_Creeps_Vulnerable_Conditions()
+if (not Trig_Make_Creeps_Vulnerable_Func001C()) then
+return false
+end
+return true
+end
+
+function Trig_Make_Creeps_Vulnerable_Actions()
+SetUnitInvulnerable(GetLeavingUnit(), false)
+end
+
+function InitTrig_Make_Creeps_Vulnerable()
+gg_trg_Make_Creeps_Vulnerable = CreateTrigger()
+TriggerRegisterLeaveRectSimple(gg_trg_Make_Creeps_Vulnerable, gg_rct_Invun_Orange)
+TriggerRegisterLeaveRectSimple(gg_trg_Make_Creeps_Vulnerable, gg_rct_Invun_Green)
+TriggerRegisterLeaveRectSimple(gg_trg_Make_Creeps_Vulnerable, gg_rct_Invun_Red)
+TriggerRegisterLeaveRectSimple(gg_trg_Make_Creeps_Vulnerable, gg_rct_Invun_Pink)
+TriggerRegisterLeaveRectSimple(gg_trg_Make_Creeps_Vulnerable, gg_rct_Invun_Purple)
+TriggerRegisterLeaveRectSimple(gg_trg_Make_Creeps_Vulnerable, gg_rct_Invun_Yellow)
+TriggerRegisterLeaveRectSimple(gg_trg_Make_Creeps_Vulnerable, gg_rct_Invun_Gray)
+TriggerRegisterLeaveRectSimple(gg_trg_Make_Creeps_Vulnerable, gg_rct_Invun_Blue)
+TriggerRegisterLeaveRectSimple(gg_trg_Make_Creeps_Vulnerable, gg_rct_Invun_Teal)
+TriggerAddCondition(gg_trg_Make_Creeps_Vulnerable, Condition(Trig_Make_Creeps_Vulnerable_Conditions))
+TriggerAddAction(gg_trg_Make_Creeps_Vulnerable, Trig_Make_Creeps_Vulnerable_Actions)
 end
 
 function Trig_Hero_XP_Func001Func001C()
@@ -6534,6 +6100,293 @@ function InitTrig_Instant_Upgrade()
 gg_trg_Instant_Upgrade = CreateTrigger()
 TriggerRegisterAnyUnitEventBJ(gg_trg_Instant_Upgrade, EVENT_PLAYER_UNIT_UPGRADE_FINISH)
 TriggerAddAction(gg_trg_Instant_Upgrade, Trig_Instant_Upgrade_Actions)
+end
+
+function Trig_Tabaho_Conditions()
+if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("nfro"))) then
+return false
+end
+return true
+end
+
+function Trig_Tabaho_Func003Func002Func002Func002Func001Func001Func001C()
+if (not (udg_Integer_RandomNumber == 7)) then
+return false
+end
+return true
+end
+
+function Trig_Tabaho_Func003Func002Func002Func002Func001Func001C()
+if (not (udg_Integer_RandomNumber == 6)) then
+return false
+end
+return true
+end
+
+function Trig_Tabaho_Func003Func002Func002Func002Func001C()
+if (not (udg_Integer_RandomNumber == 5)) then
+return false
+end
+return true
+end
+
+function Trig_Tabaho_Func003Func002Func002Func002C()
+if (not (udg_Integer_RandomNumber == 4)) then
+return false
+end
+return true
+end
+
+function Trig_Tabaho_Func003Func002Func002C()
+if (not (udg_Integer_RandomNumber == 3)) then
+return false
+end
+return true
+end
+
+function Trig_Tabaho_Func003Func002C()
+if (not (udg_Integer_RandomNumber == 2)) then
+return false
+end
+return true
+end
+
+function Trig_Tabaho_Func003C()
+if (not (udg_Integer_RandomNumber == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Tabaho_Actions()
+udg_Integer_RandomNumber = GetRandomInt(1, 7)
+udg_Point_Tabaho = GetRectCenter(gg_rct_Tabaho)
+if (Trig_Tabaho_Func003C()) then
+ShowImageBJ(true, udg_Image_Array_EasterEggImages[1])
+SetImageRenderAlways(udg_Image_Array_EasterEggImages[1], true)
+CreateTextTagLocBJ("TRIGSTR_122", udg_Point_Tabaho, 200.00, 10, 0.00, 100, 0.00, 0)
+SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
+SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
+SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
+SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
+TriggerSleepAction(3.00)
+ShowImageBJ(false, udg_Image_Array_EasterEggImages[1])
+else
+if (Trig_Tabaho_Func003Func002C()) then
+ShowImageBJ(true, udg_Image_Array_EasterEggImages[2])
+SetImageRenderAlways(udg_Image_Array_EasterEggImages[2], true)
+CreateTextTagLocBJ("TRIGSTR_127", udg_Point_Tabaho, 200.00, 10, 0.00, 100, 0.00, 0)
+SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
+SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
+SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
+SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
+TriggerSleepAction(3.00)
+ShowImageBJ(false, udg_Image_Array_EasterEggImages[2])
+else
+if (Trig_Tabaho_Func003Func002Func002C()) then
+ShowImageBJ(true, udg_Image_Array_EasterEggImages[3])
+SetImageRenderAlways(udg_Image_Array_EasterEggImages[3], true)
+SetImageRenderAlways(GetLastCreatedImage(), true)
+CreateTextTagLocBJ("TRIGSTR_128", udg_Point_Tabaho, 200.00, 10, 0.00, 100, 0.00, 0)
+SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
+SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
+SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
+SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
+TriggerSleepAction(3.00)
+ShowImageBJ(false, udg_Image_Array_EasterEggImages[3])
+else
+if (Trig_Tabaho_Func003Func002Func002Func002C()) then
+ShowImageBJ(true, udg_Image_Array_EasterEggImages[4])
+SetImageRenderAlways(udg_Image_Array_EasterEggImages[4], true)
+SetImageRenderAlways(GetLastCreatedImage(), true)
+CreateTextTagLocBJ("TRIGSTR_129", udg_Point_Tabaho, 200.00, 10, 0.00, 100, 0.00, 0)
+SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
+SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
+SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
+SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
+TriggerSleepAction(3.00)
+ShowImageBJ(false, udg_Image_Array_EasterEggImages[4])
+else
+if (Trig_Tabaho_Func003Func002Func002Func002Func001C()) then
+ShowImageBJ(true, udg_Image_Array_EasterEggImages[5])
+SetImageRenderAlways(udg_Image_Array_EasterEggImages[5], true)
+SetImageRenderAlways(GetLastCreatedImage(), true)
+CreateTextTagLocBJ("TRIGSTR_2418", udg_Point_Tabaho, 200.00, 10, 0.00, 100, 0.00, 0)
+SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
+SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
+SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
+SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
+TriggerSleepAction(3.00)
+ShowImageBJ(false, udg_Image_Array_EasterEggImages[5])
+else
+if (Trig_Tabaho_Func003Func002Func002Func002Func001Func001C()) then
+ShowImageBJ(true, udg_Image_Array_EasterEggImages[6])
+SetImageRenderAlways(udg_Image_Array_EasterEggImages[6], true)
+SetImageRenderAlways(GetLastCreatedImage(), true)
+CreateTextTagLocBJ("TRIGSTR_2419", udg_Point_Tabaho, 200.00, 10, 0.00, 100, 0.00, 0)
+SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
+SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
+SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
+SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
+TriggerSleepAction(3.00)
+ShowImageBJ(false, udg_Image_Array_EasterEggImages[6])
+else
+if (Trig_Tabaho_Func003Func002Func002Func002Func001Func001Func001C()) then
+ShowImageBJ(true, udg_Image_Array_EasterEggImages[7])
+SetImageRenderAlways(udg_Image_Array_EasterEggImages[7], true)
+SetImageRenderAlways(GetLastCreatedImage(), true)
+CreateTextTagLocBJ("TRIGSTR_2427", udg_Point_Tabaho, 200.00, 10, 0.00, 100, 0.00, 0)
+SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
+SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
+SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
+SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
+TriggerSleepAction(3.00)
+ShowImageBJ(false, udg_Image_Array_EasterEggImages[7])
+else
+end
+end
+end
+end
+end
+end
+end
+    RemoveLocation(udg_Point_Tabaho)
+end
+
+function InitTrig_Tabaho()
+gg_trg_Tabaho = CreateTrigger()
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Tabaho, Player(0), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Tabaho, Player(1), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Tabaho, Player(2), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Tabaho, Player(3), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Tabaho, Player(4), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Tabaho, Player(5), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Tabaho, Player(6), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Tabaho, Player(7), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Tabaho, Player(8), true)
+TriggerAddCondition(gg_trg_Tabaho, Condition(Trig_Tabaho_Conditions))
+TriggerAddAction(gg_trg_Tabaho, Trig_Tabaho_Actions)
+end
+
+function Trig_Alpharius_Omegon_Func001Func006C()
+if (GetTriggerUnit() == gg_unit_z000_0121) then
+return true
+end
+if (GetTriggerUnit() == gg_unit_z000_0122) then
+return true
+end
+if (GetTriggerUnit() == gg_unit_z000_0123) then
+return true
+end
+return false
+end
+
+function Trig_Alpharius_Omegon_Func001C()
+if (not Trig_Alpharius_Omegon_Func001Func006C()) then
+return false
+end
+return true
+end
+
+function Trig_Alpharius_Omegon_Actions()
+if (Trig_Alpharius_Omegon_Func001C()) then
+CreateTextTagUnitBJ(udg_String_Array_Alpharius[GetRandomInt(1, 10)], GetTriggerUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
+SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
+SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
+SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
+SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
+else
+end
+end
+
+function InitTrig_Alpharius_Omegon()
+gg_trg_Alpharius_Omegon = CreateTrigger()
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(0), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(1), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(2), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(3), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(4), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(5), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(6), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(7), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Alpharius_Omegon, Player(8), true)
+TriggerAddAction(gg_trg_Alpharius_Omegon, Trig_Alpharius_Omegon_Actions)
+end
+
+function Trig_Ork_Func001Func006C()
+if (not (GetUnitMoveSpeed(gg_unit_o00I_0124) >= 500.00)) then
+return false
+end
+return true
+end
+
+function Trig_Ork_Func001C()
+if (not (GetTriggerUnit() == gg_unit_o00I_0124)) then
+return false
+end
+return true
+end
+
+function Trig_Ork_Actions()
+if (Trig_Ork_Func001C()) then
+udg_Real_OrkColour = (udg_Real_OrkColour - 5.00)
+udg_Real_OrkSize = (udg_Real_OrkSize + GetRandomReal(1.00, 10.00))
+SetUnitScalePercent(gg_unit_o00I_0124, udg_Real_OrkSize, udg_Real_OrkSize, udg_Real_OrkSize)
+SetUnitMoveSpeed(gg_unit_o00I_0124, (GetUnitMoveSpeed(gg_unit_o00I_0124) + 20.00))
+SetUnitVertexColorBJ(gg_unit_o00I_0124, 100, udg_Real_OrkColour, udg_Real_OrkColour, 0)
+if (Trig_Ork_Func001Func006C()) then
+SetUnitVertexColorBJ(gg_unit_o00I_0124, 100, 100.00, 100.00, 0)
+udg_Real_OrkSize = 100.00
+SetUnitScalePercent(gg_unit_o00I_0124, 100, 100, 100)
+SetUnitMoveSpeed(gg_unit_o00I_0124, 100.00)
+udg_Real_OrkColour = 100.00
+CreateTextTagUnitBJ("TRIGSTR_2205", gg_unit_o00I_0124, 0, 10.00, 0.00, 100, 0.00, 0)
+SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
+SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
+SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
+SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
+else
+end
+else
+end
+end
+
+function InitTrig_Ork()
+gg_trg_Ork = CreateTrigger()
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(0), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(1), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(2), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(3), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(4), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(5), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(6), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(7), true)
+TriggerRegisterPlayerSelectionEventBJ(gg_trg_Ork, Player(8), true)
+TriggerAddAction(gg_trg_Ork, Trig_Ork_Actions)
+end
+
+function Trig_Smonze_Actions()
+SetUnitOwner(gg_unit_n018_0091, Player(PLAYER_NEUTRAL_AGGRESSIVE), true)
+end
+
+function InitTrig_Smonze()
+gg_trg_Smonze = CreateTrigger()
+TriggerRegisterUnitEvent(gg_trg_Smonze, gg_unit_n01D_0119, EVENT_UNIT_DEATH)
+TriggerAddAction(gg_trg_Smonze, Trig_Smonze_Actions)
+end
+
+function Trig_Weh_Actions()
+CreateTextTagUnitBJ("TRIGSTR_3080", GetTriggerUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
+SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
+SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
+SetTextTagLifespanBJ(GetLastCreatedTextTag(), 4.00)
+SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
+end
+
+function InitTrig_Weh()
+gg_trg_Weh = CreateTrigger()
+TriggerRegisterUnitEvent(gg_trg_Weh, gg_unit_n026_0130, EVENT_UNIT_SELECTED)
+TriggerAddAction(gg_trg_Weh, Trig_Weh_Actions)
 end
 
 function Trig_Tower_Swapping_Conditions()
@@ -8641,6 +8494,1198 @@ TriggerAddCondition(gg_trg_Choose_Mode_Towers, Condition(Trig_Choose_Mode_Towers
 TriggerAddAction(gg_trg_Choose_Mode_Towers, Trig_Choose_Mode_Towers_Actions)
 end
 
+function Trig_Ready_Modes_Conditions()
+if (not (GetSpellAbilityId() == FourCC("A02D"))) then
+return false
+end
+return true
+end
+
+function Trig_Ready_Modes_Func006Func004Func005Func005Func005C()
+if (not (udg_Integer_Difficulty == 5)) then
+return false
+end
+return true
+end
+
+function Trig_Ready_Modes_Func006Func004Func005Func005C()
+if (not (udg_Integer_Difficulty == 4)) then
+return false
+end
+return true
+end
+
+function Trig_Ready_Modes_Func006Func004Func005C()
+if (not (udg_Integer_Difficulty == 3)) then
+return false
+end
+return true
+end
+
+function Trig_Ready_Modes_Func006Func004C()
+if (not (udg_Integer_Difficulty == 2)) then
+return false
+end
+return true
+end
+
+function Trig_Ready_Modes_Func006C()
+if (not (udg_Integer_Difficulty == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Ready_Modes_Func010Func002C()
+if (not (GetPlayerController(GetEnumPlayer()) == MAP_CONTROL_COMPUTER)) then
+return false
+end
+return true
+end
+
+function Trig_Ready_Modes_Func010A()
+udg_ChoosePoint_Pnt = GetPlayerStartLocationLoc(GetEnumPlayer())
+if (Trig_Ready_Modes_Func010Func002C()) then
+else
+CreateNUnitsAtLoc(1, FourCC("U00E"), GetEnumPlayer(), udg_ChoosePoint_Pnt, bj_UNIT_FACING)
+end
+udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())] = GetLastCreatedUnit()
+UnitAddItemByIdSwapped(FourCC("I001"), GetLastCreatedUnit())
+UnitAddItemByIdSwapped(FourCC("I003"), GetLastCreatedUnit())
+UnitAddItemByIdSwapped(FourCC("I000"), GetLastCreatedUnit())
+UnitAddItemByIdSwapped(FourCC("I004"), GetLastCreatedUnit())
+UnitAddItemByIdSwapped(FourCC("I005"), GetLastCreatedUnit())
+UnitAddItemByIdSwapped(FourCC("I002"), GetLastCreatedUnit())
+UnitDropItemSlotBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], GetItemOfTypeFromUnitBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], FourCC("I001")), 1)
+UnitDropItemSlotBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], GetItemOfTypeFromUnitBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], FourCC("I002")), 2)
+UnitDropItemSlotBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], GetItemOfTypeFromUnitBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], FourCC("I003")), 3)
+UnitDropItemSlotBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], GetItemOfTypeFromUnitBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], FourCC("I000")), 4)
+UnitDropItemSlotBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], GetItemOfTypeFromUnitBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], FourCC("I004")), 5)
+UnitDropItemSlotBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], GetItemOfTypeFromUnitBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], FourCC("I005")), 6)
+SetItemDroppableBJ(GetItemOfTypeFromUnitBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], FourCC("I001")), false)
+SetItemDroppableBJ(GetItemOfTypeFromUnitBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], FourCC("I002")), false)
+SetItemDroppableBJ(GetItemOfTypeFromUnitBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], FourCC("I003")), false)
+SetItemDroppableBJ(GetItemOfTypeFromUnitBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], FourCC("I000")), false)
+SetItemDroppableBJ(GetItemOfTypeFromUnitBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], FourCC("I004")), false)
+SetItemDroppableBJ(GetItemOfTypeFromUnitBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], FourCC("I005")), false)
+end
+
+function Trig_Ready_Modes_Func017C()
+if (not (udg_Integer_GoldRush == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Ready_Modes_Func021Func001C()
+if (not (udg_Integer_RWActivated == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Ready_Modes_Func021C()
+if (not (udg_Integer_SwarmMode == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Ready_Modes_Func025Func001C()
+if (not (udg_Integer_EndlessMode == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Ready_Modes_Func025C()
+if (not (udg_Integer_RWActivated == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Ready_Modes_Func030C()
+if (not (udg_Integer_ChaosModeOn == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Ready_Modes_Func034C()
+if (not (udg_Integer_HHActivated == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Ready_Modes_Func038C()
+if (not (udg_Integer_SpeedMode == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Ready_Modes_Func042C()
+if (not (udg_Integer_EndlessMode == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Ready_Modes_Func046C()
+if (not (udg_Integer_BlitzMode == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Ready_Modes_Actions()
+if (Trig_Ready_Modes_Func006C()) then
+EnableTrigger(gg_trg_Income)
+udg_Integer_SellPercent = 100
+udg_Real_CreepHealthMultiplier = udg_Real_Array_Handicap[udg_Integer_Difficulty]
+else
+if (Trig_Ready_Modes_Func006Func004C()) then
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
+EnableTrigger(gg_trg_Income)
+udg_Integer_SellPercent = 80
+udg_Real_CreepHealthMultiplier = udg_Real_Array_Handicap[udg_Integer_Difficulty]
+else
+if (Trig_Ready_Modes_Func006Func004Func005C()) then
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 4)
+EnableTrigger(gg_trg_Income)
+udg_Integer_SellPercent = 60
+udg_Real_CreepHealthMultiplier = udg_Real_Array_Handicap[udg_Integer_Difficulty]
+else
+if (Trig_Ready_Modes_Func006Func004Func005Func005C()) then
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 6)
+EnableTrigger(gg_trg_Income)
+udg_Integer_SellPercent = 40
+udg_Real_CreepHealthMultiplier = udg_Real_Array_Handicap[udg_Integer_Difficulty]
+else
+if (Trig_Ready_Modes_Func006Func004Func005Func005Func005C()) then
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 8)
+EnableTrigger(gg_trg_Income)
+udg_Integer_SellPercent = 20
+udg_Real_CreepHealthMultiplier = udg_Real_Array_Handicap[udg_Integer_Difficulty]
+else
+end
+end
+end
+end
+end
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Ready_Modes_Func010A)
+if (Trig_Ready_Modes_Func017C()) then
+EnableTrigger(gg_trg_Gold_Rush_Mode)
+EnableTrigger(gg_trg_Gold_Rush_Bounty)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
+else
+end
+if (Trig_Ready_Modes_Func021C()) then
+if (Trig_Ready_Modes_Func021Func001C()) then
+else
+udg_Integer_SpawnMax = 60
+end
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
+else
+end
+if (Trig_Ready_Modes_Func025C()) then
+if (Trig_Ready_Modes_Func025Func001C()) then
+udg_Integer_WaveAmount = 300
+else
+end
+TriggerExecute(gg_trg_Set_Random_Wave_Variables)
+TriggerExecute(gg_trg_Generate_Random_Waves)
+TriggerExecute(gg_trg_Start_Random_Waves)
+EnableTrigger(gg_trg_Random_Wave_Bounty)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
+else
+TriggerExecute(gg_trg_Start_Static_Waves)
+udg_String_AirWavesText = "7, 9, 17, 21, 27, 33, 38, 53"
+udg_String_HeroWavesText = "39, 40, 41, 42, 43, 44, 46, 47, 49, 50, 51, 52, 54, 56."
+udg_String_RWBossWaveText = "12, 24, 36, 48."
+udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
+end
+if (Trig_Ready_Modes_Func030C()) then
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
+else
+end
+if (Trig_Ready_Modes_Func034C()) then
+ShowUnitShow(gg_unit_n00D_0042)
+TriggerExecute(gg_trg_Set_Random_Wave_Variables)
+EnableTrigger(gg_trg_Headhunter_Mode)
+EnableTrigger(gg_trg_Headhunter_Reward)
+EnableTrigger(gg_trg_Headhunter_Actives)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
+else
+end
+if (Trig_Ready_Modes_Func038C()) then
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
+else
+end
+if (Trig_Ready_Modes_Func042C()) then
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
+else
+end
+if (Trig_Ready_Modes_Func046C()) then
+DisableTrigger(gg_trg_Run_Start_Waves)
+TriggerExecute(gg_trg_Blitz_Mode)
+udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
+udg_Integer_WaveNumber = 0
+else
+EnableTrigger(gg_trg_Run_Start_Waves)
+udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
+end
+udg_Integer_Gamemode = 1
+udg_Real_Array_MessageTime[1] = 5.00
+ShowUnitHide(gg_unit_n00C_0019)
+ClearTextMessagesBJ(GetPlayersAll())
+EnableTrigger(gg_trg_Debug_Wave)
+DisableTrigger(gg_trg_Turn_On_RedAfk_Ready)
+DisableTrigger(GetTriggeringTrigger())
+end
+
+function InitTrig_Ready_Modes()
+gg_trg_Ready_Modes = CreateTrigger()
+TriggerRegisterUnitEvent(gg_trg_Ready_Modes, gg_unit_n00C_0019, EVENT_UNIT_SPELL_CAST)
+TriggerAddCondition(gg_trg_Ready_Modes, Condition(Trig_Ready_Modes_Conditions))
+TriggerAddAction(gg_trg_Ready_Modes, Trig_Ready_Modes_Actions)
+end
+
+function Trig_Start_Gamemode_Indicator_Func001Func001C()
+if (not (udg_Integer_ChaosMode == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Start_Gamemode_Indicator_Func001Func002Func001C()
+if (not (udg_Integer_ChaosMode == 2)) then
+return false
+end
+return true
+end
+
+function Trig_Start_Gamemode_Indicator_Func001Func002Func002Func001C()
+if (not (udg_Integer_ChaosMode == 3)) then
+return false
+end
+return true
+end
+
+function Trig_Start_Gamemode_Indicator_Func001Func002Func002Func002Func001C()
+if (not (udg_Integer_ChaosMode == 4)) then
+return false
+end
+return true
+end
+
+function Trig_Start_Gamemode_Indicator_Func001Func002Func002Func002Func002C()
+if (not (udg_Integer_Difficulty == 5)) then
+return false
+end
+return true
+end
+
+function Trig_Start_Gamemode_Indicator_Func001Func002Func002Func002C()
+if (not (udg_Integer_Difficulty == 4)) then
+return false
+end
+return true
+end
+
+function Trig_Start_Gamemode_Indicator_Func001Func002Func002C()
+if (not (udg_Integer_Difficulty == 3)) then
+return false
+end
+return true
+end
+
+function Trig_Start_Gamemode_Indicator_Func001Func002C()
+if (not (udg_Integer_Difficulty == 2)) then
+return false
+end
+return true
+end
+
+function Trig_Start_Gamemode_Indicator_Func001C()
+if (not (udg_Integer_Difficulty == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Start_Gamemode_Indicator_Func002Func001C()
+if (not (udg_Integer_TowerLimit >= 1)) then
+return false
+end
+return true
+end
+
+function Trig_Start_Gamemode_Indicator_Func002C()
+if (not (udg_Integer_TowerLimit == 0)) then
+return false
+end
+return true
+end
+
+function Trig_Start_Gamemode_Indicator_Func007C()
+if (not (udg_Integer_EndlessMode == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Start_Gamemode_Indicator_Func008C()
+if (not (udg_Integer_GoldRush == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Start_Gamemode_Indicator_Func009C()
+if (not (udg_Integer_SwarmMode == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Start_Gamemode_Indicator_Func010C()
+if (not (udg_Integer_RWActivated == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Start_Gamemode_Indicator_Func011C()
+if (not (udg_Integer_HHActivated == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Start_Gamemode_Indicator_Func012C()
+if (not (udg_Integer_SpeedMode == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Start_Gamemode_Indicator_Func013C()
+if (not (udg_Integer_BlitzMode == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Start_Gamemode_Indicator_Actions()
+if (Trig_Start_Gamemode_Indicator_Func001C()) then
+if (Trig_Start_Gamemode_Indicator_Func001Func001C()) then
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_020")
+else
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_022")
+end
+else
+if (Trig_Start_Gamemode_Indicator_Func001Func002C()) then
+if (Trig_Start_Gamemode_Indicator_Func001Func002Func001C()) then
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_055")
+else
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_096")
+end
+else
+if (Trig_Start_Gamemode_Indicator_Func001Func002Func002C()) then
+if (Trig_Start_Gamemode_Indicator_Func001Func002Func002Func001C()) then
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_137")
+else
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_152")
+end
+else
+if (Trig_Start_Gamemode_Indicator_Func001Func002Func002Func002C()) then
+if (Trig_Start_Gamemode_Indicator_Func001Func002Func002Func002Func001C()) then
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_2301")
+else
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_262")
+end
+else
+if (Trig_Start_Gamemode_Indicator_Func001Func002Func002Func002Func002C()) then
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_263")
+else
+end
+end
+end
+end
+end
+if (Trig_Start_Gamemode_Indicator_Func002C()) then
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_267")
+else
+if (Trig_Start_Gamemode_Indicator_Func002Func001C()) then
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_269")
+else
+end
+end
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], ("|c0000ff00Siege:  " .. (udg_String_Array_TowerEnabled[1] .. (" / " .. ("|c0000ff00Air:   " .. (udg_String_Array_TowerEnabled[2] .. (" / " .. ("|c0000ff00Poison:   " .. udg_String_Array_TowerEnabled[3]))))))))
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], ("|c0000ff00Frost:  " .. (udg_String_Array_TowerEnabled[4] .. (" / " .. ("|c0000ff00Bash: " .. (udg_String_Array_TowerEnabled[9] .. (" / " .. ("|c0000ff00Bouncing: " .. udg_String_Array_TowerEnabled[8]))))))))
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], ("|c0000ff00Spell: " .. (udg_String_Array_TowerEnabled[7] .. (" / " .. ("|c0000ff00Aura: " .. (udg_String_Array_TowerEnabled[6] .. (" / " .. ("|c0000ff00Research: " .. udg_String_Array_TowerEnabled[10]))))))))
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], ("|c0000ff00Traps: " .. (udg_String_Array_TowerEnabled[11] .. (" / " .. ("|c0000ff00Chaos: " .. udg_String_Array_TowerEnabled[5])))))
+if (Trig_Start_Gamemode_Indicator_Func007C()) then
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_281")
+else
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_282")
+end
+if (Trig_Start_Gamemode_Indicator_Func008C()) then
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_283")
+else
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_284")
+end
+if (Trig_Start_Gamemode_Indicator_Func009C()) then
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_2218")
+else
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_2219")
+end
+if (Trig_Start_Gamemode_Indicator_Func010C()) then
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_2220")
+else
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_2221")
+end
+if (Trig_Start_Gamemode_Indicator_Func011C()) then
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_2255")
+else
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_2293")
+end
+if (Trig_Start_Gamemode_Indicator_Func012C()) then
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_2294")
+else
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_2295")
+end
+if (Trig_Start_Gamemode_Indicator_Func013C()) then
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_955")
+else
+DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_935")
+end
+end
+
+function InitTrig_Start_Gamemode_Indicator()
+gg_trg_Start_Gamemode_Indicator = CreateTrigger()
+TriggerAddAction(gg_trg_Start_Gamemode_Indicator, Trig_Start_Gamemode_Indicator_Actions)
+end
+
+function Trig_Income_Func001002()
+AdjustPlayerStateBJ(udg_Integer_IncomeGold, GetEnumPlayer(), PLAYER_STATE_RESOURCE_GOLD)
+end
+
+function Trig_Income_Actions()
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Income_Func001002)
+end
+
+function InitTrig_Income()
+gg_trg_Income = CreateTrigger()
+DisableTrigger(gg_trg_Income)
+TriggerRegisterTimerEventPeriodic(gg_trg_Income, 3.00)
+TriggerAddAction(gg_trg_Income, Trig_Income_Actions)
+end
+
+function Trig_Default_Gamemode_Func001C()
+if (not (udg_Integer_Gamemode == 0)) then
+return false
+end
+return true
+end
+
+function Trig_Default_Gamemode_Actions()
+if (Trig_Default_Gamemode_Func001C()) then
+TriggerExecute(gg_trg_Ready_Modes)
+DisableTrigger(GetTriggeringTrigger())
+else
+end
+end
+
+function InitTrig_Default_Gamemode()
+gg_trg_Default_Gamemode = CreateTrigger()
+TriggerRegisterTimerEventSingle(gg_trg_Default_Gamemode, 122.00)
+TriggerAddAction(gg_trg_Default_Gamemode, Trig_Default_Gamemode_Actions)
+end
+
+function Trig_Default_Gamemode_Restart_Func002C()
+if (not (udg_Real_DefaultGamemode >= 120.00)) then
+return false
+end
+return true
+end
+
+function Trig_Default_Gamemode_Restart_Actions()
+udg_Real_DefaultGamemode = (udg_Real_DefaultGamemode + 1.00)
+if (Trig_Default_Gamemode_Restart_Func002C()) then
+TriggerExecute(gg_trg_Default_Gamemode)
+else
+end
+end
+
+function InitTrig_Default_Gamemode_Restart()
+gg_trg_Default_Gamemode_Restart = CreateTrigger()
+DisableTrigger(gg_trg_Default_Gamemode_Restart)
+TriggerRegisterTimerEventPeriodic(gg_trg_Default_Gamemode_Restart, 1.00)
+TriggerAddAction(gg_trg_Default_Gamemode_Restart, Trig_Default_Gamemode_Restart_Actions)
+end
+
+function Trig_Blitz_Mode_Func001Func001Func001C()
+if (not (udg_Integer_RWActivated == 1)) then
+return false
+end
+if (not (udg_Integer_SpeedMode == 0)) then
+return false
+end
+return true
+end
+
+function Trig_Blitz_Mode_Func001Func001C()
+if (not (udg_Integer_RWActivated == 0)) then
+return false
+end
+if (not (udg_Integer_SpeedMode == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Blitz_Mode_Func001C()
+if (not (udg_Integer_SpeedMode == 1)) then
+return false
+end
+if (not (udg_Integer_RWActivated == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Blitz_Mode_Actions()
+if (Trig_Blitz_Mode_Func001C()) then
+udg_Real_SpawnTime = 15.00
+else
+if (Trig_Blitz_Mode_Func001Func001C()) then
+udg_Real_SpawnTime = 15.00
+else
+if (Trig_Blitz_Mode_Func001Func001Func001C()) then
+udg_Real_SpawnTime = 25.00
+else
+udg_Real_SpawnTime = 20.00
+end
+end
+end
+end
+
+function InitTrig_Blitz_Mode()
+gg_trg_Blitz_Mode = CreateTrigger()
+TriggerAddAction(gg_trg_Blitz_Mode, Trig_Blitz_Mode_Actions)
+end
+
+function Trig_Gold_Rush_Mode_Conditions()
+if (not (GetUnitLifePercent(GetAttackedUnitBJ()) >= 60.00)) then
+return false
+end
+if (not (GetUnitAbilityLevelSwapped(FourCC("Amim"), GetAttackedUnitBJ()) == 0)) then
+return false
+end
+return true
+end
+
+function Trig_Gold_Rush_Mode_Func001Func001C()
+if (UnitHasBuffBJ(GetAttackedUnitBJ(), FourCC("B002")) == true) then
+return true
+end
+if (GetUnitAbilityLevelSwapped(FourCC("A03J"), GetAttackedUnitBJ()) == 1) then
+return true
+end
+return false
+end
+
+function Trig_Gold_Rush_Mode_Func001Func003C()
+if (not (udg_Integer_GoldRush == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Gold_Rush_Mode_Func001C()
+if (not Trig_Gold_Rush_Mode_Func001Func001C()) then
+return false
+end
+return true
+end
+
+function Trig_Gold_Rush_Mode_Actions()
+if (Trig_Gold_Rush_Mode_Func001C()) then
+else
+udg_Integer_GoldRush = GetRandomInt(1, 10)
+if (Trig_Gold_Rush_Mode_Func001Func003C()) then
+GroupAddUnitSimple(GetAttackedUnitBJ(), udg_UnitGroup_GoldRushGrp)
+udg_Point_Goldrush = GetUnitLoc(GetAttackedUnitBJ())
+BlzSetUnitMaxHP(GetAttackedUnitBJ(), (BlzGetUnitMaxHP(GetAttackedUnitBJ()) + (BlzGetUnitMaxHP(GetAttackedUnitBJ()) * 2)))
+CreateNUnitsAtLoc(1, FourCC("o00H"), Player(23), udg_Point_Goldrush, bj_UNIT_FACING)
+            RemoveLocation(udg_Point_Goldrush)
+UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
+UnitAddAbilityBJ(FourCC("A02U"), GetLastCreatedUnit())
+IssueTargetOrderBJ(GetLastCreatedUnit(), "bloodlust", GetAttackedUnitBJ())
+SetUnitLifeBJ(GetAttackedUnitBJ(), ((GetUnitStateSwap(UNIT_STATE_LIFE, GetAttackedUnitBJ()) / 2.00) + GetUnitStateSwap(UNIT_STATE_LIFE, GetAttackedUnitBJ())))
+BlzSetUnitArmor(GetAttackedUnitBJ(), (BlzGetUnitArmor(GetAttackedUnitBJ()) + (BlzGetUnitArmor(GetAttackedUnitBJ()) / 4.00)))
+else
+end
+end
+end
+
+function InitTrig_Gold_Rush_Mode()
+gg_trg_Gold_Rush_Mode = CreateTrigger()
+DisableTrigger(gg_trg_Gold_Rush_Mode)
+TriggerRegisterPlayerUnitEventSimple(gg_trg_Gold_Rush_Mode, Player(10), EVENT_PLAYER_UNIT_ATTACKED)
+TriggerRegisterPlayerUnitEventSimple(gg_trg_Gold_Rush_Mode, Player(11), EVENT_PLAYER_UNIT_ATTACKED)
+TriggerRegisterPlayerUnitEventSimple(gg_trg_Gold_Rush_Mode, Player(12), EVENT_PLAYER_UNIT_ATTACKED)
+TriggerAddCondition(gg_trg_Gold_Rush_Mode, Condition(Trig_Gold_Rush_Mode_Conditions))
+TriggerAddAction(gg_trg_Gold_Rush_Mode, Trig_Gold_Rush_Mode_Actions)
+end
+
+function Trig_Gold_Rush_Bounty_Conditions()
+if (not (IsUnitInGroup(GetDyingUnit(), udg_UnitGroup_GoldRushGrp) == true)) then
+return false
+end
+return true
+end
+
+function Trig_Gold_Rush_Bounty_Actions()
+AdjustPlayerStateBJ(50, GetOwningPlayer(GetKillingUnitBJ()), PLAYER_STATE_RESOURCE_GOLD)
+GroupRemoveUnitSimple(GetDyingUnit(), udg_UnitGroup_GoldRushGrp)
+CreateTextTagUnitBJ("TRIGSTR_302", GetDyingUnit(), 0, 10.00, 100.00, 100, 0.00, 0)
+ShowTextTagForceBJ(false, GetLastCreatedTextTag(), GetPlayersAll())
+ShowTextTagForceBJ(true, GetLastCreatedTextTag(), GetForceOfPlayer(GetOwningPlayer(GetKillingUnitBJ())))
+SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
+SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
+SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
+SetTextTagLifespanBJ(GetLastCreatedTextTag(), 3.00)
+end
+
+function InitTrig_Gold_Rush_Bounty()
+gg_trg_Gold_Rush_Bounty = CreateTrigger()
+DisableTrigger(gg_trg_Gold_Rush_Bounty)
+TriggerRegisterPlayerUnitEventSimple(gg_trg_Gold_Rush_Bounty, Player(10), EVENT_PLAYER_UNIT_DEATH)
+TriggerRegisterPlayerUnitEventSimple(gg_trg_Gold_Rush_Bounty, Player(11), EVENT_PLAYER_UNIT_DEATH)
+TriggerRegisterPlayerUnitEventSimple(gg_trg_Gold_Rush_Bounty, Player(12), EVENT_PLAYER_UNIT_DEATH)
+TriggerAddCondition(gg_trg_Gold_Rush_Bounty, Condition(Trig_Gold_Rush_Bounty_Conditions))
+TriggerAddAction(gg_trg_Gold_Rush_Bounty, Trig_Gold_Rush_Bounty_Actions)
+end
+
+function Trig_Random_Wave_Bounty_Func001Func002C()
+if (not (udg_Integer_RWActivated == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Random_Wave_Bounty_Func001C()
+if (not (IsUnitInGroup(GetDyingUnit(), udg_UnitGroup_LoseLifeNoGoldRW) == true)) then
+return false
+end
+return true
+end
+
+function Trig_Random_Wave_Bounty_Actions()
+if (Trig_Random_Wave_Bounty_Func001C()) then
+else
+if (Trig_Random_Wave_Bounty_Func001Func002C()) then
+AdjustPlayerStateBJ(GetUnitUserData(GetDyingUnit()), GetOwningPlayer(GetKillingUnitBJ()), PLAYER_STATE_RESOURCE_GOLD)
+CreateTextTagUnitBJ(("+" .. I2S(GetUnitUserData(GetDyingUnit()))), GetDyingUnit(), 0, 10, 100, 100, 100, 0)
+else
+end
+end
+SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
+SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
+SetTextTagFadepointBJ(GetLastCreatedTextTag(), 1.00)
+SetTextTagLifespanBJ(GetLastCreatedTextTag(), 2.00)
+ShowTextTagForceBJ(false, GetLastCreatedTextTag(), GetPlayersAll())
+ShowTextTagForceBJ(true, GetLastCreatedTextTag(), GetForceOfPlayer(GetOwningPlayer(GetKillingUnitBJ())))
+end
+
+function InitTrig_Random_Wave_Bounty()
+gg_trg_Random_Wave_Bounty = CreateTrigger()
+DisableTrigger(gg_trg_Random_Wave_Bounty)
+TriggerRegisterPlayerUnitEventSimple(gg_trg_Random_Wave_Bounty, Player(10), EVENT_PLAYER_UNIT_DEATH)
+TriggerRegisterPlayerUnitEventSimple(gg_trg_Random_Wave_Bounty, Player(11), EVENT_PLAYER_UNIT_DEATH)
+TriggerRegisterPlayerUnitEventSimple(gg_trg_Random_Wave_Bounty, Player(12), EVENT_PLAYER_UNIT_DEATH)
+TriggerAddAction(gg_trg_Random_Wave_Bounty, Trig_Random_Wave_Bounty_Actions)
+end
+
+function Trig_Headhunter_Mode_Conditions()
+if (not (GetUnitTypeId(GetSoldUnit()) == FourCC("h00H"))) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func010Func002Func002Func002Func002Func002Func002C()
+if (not (udg_Integer_HHUnitType == 7)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func010Func002Func002Func002Func002Func002C()
+if (not (udg_Integer_HHUnitType == 6)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func010Func002Func002Func002Func002C()
+if (not (udg_Integer_HHUnitType == 5)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func010Func002Func002Func002C()
+if (not (udg_Integer_HHUnitType == 4)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func010Func002Func002C()
+if (not (udg_Integer_HHUnitType == 3)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func010Func002C()
+if (not (udg_Integer_HHUnitType == 2)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func010C()
+if (not (udg_Integer_HHUnitType == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func013C()
+if (not (udg_Integer_SpeedMode == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func021Func003C()
+if (not (udg_Integer_HHSpawnedAmount <= 4)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func021Func005Func003C()
+if (not (udg_Integer_HHSpawnedAmount <= 4)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func021Func005Func005Func003C()
+if (not (udg_Integer_HHSpawnedAmount <= 4)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func021Func005Func005Func005Func003C()
+if (not (udg_Integer_HHSpawnedAmount <= 4)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func021Func005Func005Func005Func005Func003C()
+if (not (udg_Integer_HHSpawnedAmount <= 4)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func021Func005Func005Func005Func005Func005Func003C()
+if (not (udg_Integer_HHSpawnedAmount <= 4)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func021Func005Func005Func005Func005Func005C()
+if (not (udg_Integer_HHPassives == 6)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func021Func005Func005Func005Func005C()
+if (not (udg_Integer_HHPassives == 5)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func021Func005Func005Func005C()
+if (not (udg_Integer_HHPassives == 4)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func021Func005Func005C()
+if (not (udg_Integer_HHPassives == 3)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func021Func005C()
+if (not (udg_Integer_HHPassives == 2)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func021C()
+if (not (udg_Integer_HHPassives == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func023Func002Func003Func003Func003Func003Func003C()
+if (not (udg_Integer_HHActives == 6)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func023Func002Func003Func003Func003Func003C()
+if (not (udg_Integer_HHActives == 5)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func023Func002Func003Func003Func003C()
+if (not (udg_Integer_HHActives == 4)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func023Func002Func003Func003C()
+if (not (udg_Integer_HHActives == 3)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func023Func002Func003C()
+if (not (udg_Integer_HHActives == 2)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func023Func002C()
+if (not (udg_Integer_HHActives == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002Func023C()
+if (not (udg_Integer_HHActiveChance == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Func002C()
+if (not (GetPlayerState(GetOwningPlayer(GetSoldUnit()), PLAYER_STATE_RESOURCE_GOLD) >= udg_Integer_HHCost)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Mode_Actions()
+if (Trig_Headhunter_Mode_Func002C()) then
+SetPlayerStateBJ(GetOwningPlayer(GetSoldUnit()), PLAYER_STATE_RESOURCE_GOLD, (GetPlayerState(GetOwningPlayer(GetSoldUnit()), PLAYER_STATE_RESOURCE_GOLD) - udg_Integer_HHCost))
+udg_Integer_HHCost = (udg_Integer_HHCost + 2500)
+udg_Integer_HHSpawnedAmount = (udg_Integer_HHSpawnedAmount + 1)
+udg_Point_Array_HHSpawnPoint[10] = udg_Point_Array_HHSpawnPoint[GetConvertedPlayerId(GetOwningPlayer(GetSoldUnit()))]
+udg_Integer_HHUnitType = GetRandomInt(1, 7)
+if (Trig_Headhunter_Mode_Func002Func010C()) then
+udg_UnitType_HHUnit = udg_UnitType_Array_RWAir[GetRandomInt(1, 43)]
+else
+if (Trig_Headhunter_Mode_Func002Func010Func002C()) then
+udg_UnitType_HHUnit = udg_UnitType_Array_RWFortified[GetRandomInt(1, 43)]
+else
+if (Trig_Headhunter_Mode_Func002Func010Func002Func002C()) then
+udg_UnitType_HHUnit = udg_UnitType_Array_RWHeavy[GetRandomInt(1, 43)]
+else
+if (Trig_Headhunter_Mode_Func002Func010Func002Func002Func002C()) then
+udg_UnitType_HHUnit = udg_UnitType_Array_RWHero[GetRandomInt(1, 43)]
+else
+if (Trig_Headhunter_Mode_Func002Func010Func002Func002Func002Func002C()) then
+udg_UnitType_HHUnit = udg_UnitType_Array_RWImmune[GetRandomInt(1, 43)]
+else
+if (Trig_Headhunter_Mode_Func002Func010Func002Func002Func002Func002Func002C()) then
+udg_UnitType_HHUnit = udg_UnitType_Array_RWLight[GetRandomInt(1, 43)]
+else
+if (Trig_Headhunter_Mode_Func002Func010Func002Func002Func002Func002Func002Func002C()) then
+udg_UnitType_HHUnit = udg_UnitType_Array_RWMedium[GetRandomInt(1, 43)]
+else
+end
+end
+end
+end
+end
+end
+end
+CreateNUnitsAtLoc(1, udg_UnitType_HHUnit, Player(12), udg_Point_Array_HHSpawnPoint[GetConvertedPlayerId(GetOwningPlayer(GetSoldUnit()))], bj_UNIT_FACING)
+udg_Unit_RandomBoss = GetLastCreatedUnit()
+if (Trig_Headhunter_Mode_Func002Func013C()) then
+SetUnitMoveSpeed(GetLastCreatedUnit(), 500.00)
+else
+end
+SetUnitScalePercent(udg_Unit_RandomBoss, 200.00, 200.00, 200.00)
+RemoveUnit(GetSoldUnit())
+UnitAddAbilityBJ(FourCC("A03J"), udg_Unit_RandomBoss)
+BlzSetUnitMaxHP(udg_Unit_RandomBoss, (30000 * udg_Integer_WaveNumber))
+BlzSetUnitArmor(udg_Unit_RandomBoss, (25.00 * I2R(udg_Integer_WaveNumber)))
+SetUnitLifePercentBJ(udg_Unit_RandomBoss, 100)
+udg_Integer_HHPassives = GetRandomInt(1, 6)
+if (Trig_Headhunter_Mode_Func002Func021C()) then
+UnitAddAbilityBJ(FourCC("A037"), udg_Unit_RandomBoss)
+if (Trig_Headhunter_Mode_Func002Func021Func003C()) then
+SetUnitAbilityLevelSwapped(FourCC("A037"), udg_Unit_RandomBoss, udg_Integer_HHSpawnedAmount)
+else
+SetUnitAbilityLevelSwapped(FourCC("A037"), udg_Unit_RandomBoss, 5)
+end
+DisplayTimedTextToForce(GetPlayersAll(), 10.00, ("|c0000ff00First Ability: |c0077ff77Extra Armor - " .. ("[Level " .. (I2S(GetUnitAbilityLevelSwapped(FourCC("A037"), udg_Unit_RandomBoss)) .. "]"))))
+else
+if (Trig_Headhunter_Mode_Func002Func021Func005C()) then
+UnitAddAbilityBJ(FourCC("A038"), udg_Unit_RandomBoss)
+if (Trig_Headhunter_Mode_Func002Func021Func005Func003C()) then
+SetUnitAbilityLevelSwapped(FourCC("A038"), udg_Unit_RandomBoss, udg_Integer_HHSpawnedAmount)
+else
+SetUnitAbilityLevelSwapped(FourCC("A038"), udg_Unit_RandomBoss, 5)
+end
+DisplayTimedTextToForce(GetPlayersAll(), 10.00, ("|c0000ff00First Ability: |c0077ff77Extra Movespeed - " .. ("[Level " .. (I2S(GetUnitAbilityLevelSwapped(FourCC("A038"), udg_Unit_RandomBoss)) .. "]"))))
+else
+if (Trig_Headhunter_Mode_Func002Func021Func005Func005C()) then
+UnitAddAbilityBJ(FourCC("A039"), udg_Unit_RandomBoss)
+if (Trig_Headhunter_Mode_Func002Func021Func005Func005Func003C()) then
+SetUnitAbilityLevelSwapped(FourCC("A039"), udg_Unit_RandomBoss, udg_Integer_HHSpawnedAmount)
+else
+SetUnitAbilityLevelSwapped(FourCC("A039"), udg_Unit_RandomBoss, 5)
+end
+DisplayTimedTextToForce(GetPlayersAll(), 10.00, ("|c0000ff00First Ability: |c0077ff77Damage Reduction Aura - " .. ("[Level " .. (I2S(GetUnitAbilityLevelSwapped(FourCC("A039"), udg_Unit_RandomBoss)) .. "]"))))
+else
+if (Trig_Headhunter_Mode_Func002Func021Func005Func005Func005C()) then
+UnitAddAbilityBJ(FourCC("S000"), udg_Unit_RandomBoss)
+if (Trig_Headhunter_Mode_Func002Func021Func005Func005Func005Func003C()) then
+SetUnitAbilityLevelSwapped(FourCC("S000"), udg_Unit_RandomBoss, udg_Integer_HHSpawnedAmount)
+else
+SetUnitAbilityLevelSwapped(FourCC("S000"), udg_Unit_RandomBoss, 5)
+end
+DisplayTimedTextToForce(GetPlayersAll(), 10.00, ("|c0000ff00First Ability: |c0077ff77Speed Reduction Aura - " .. ("[Level " .. (I2S(GetUnitAbilityLevelSwapped(FourCC("S000"), udg_Unit_RandomBoss)) .. "]"))))
+else
+if (Trig_Headhunter_Mode_Func002Func021Func005Func005Func005Func005C()) then
+UnitAddAbilityBJ(FourCC("A03A"), udg_Unit_RandomBoss)
+if (Trig_Headhunter_Mode_Func002Func021Func005Func005Func005Func005Func003C()) then
+SetUnitAbilityLevelSwapped(FourCC("A03A"), udg_Unit_RandomBoss, udg_Integer_HHSpawnedAmount)
+else
+SetUnitAbilityLevelSwapped(FourCC("A03A"), udg_Unit_RandomBoss, 5)
+end
+DisplayTimedTextToForce(GetPlayersAll(), 10.00, ("|c0000ff00First Ability: |c0077ff77Mana Degeneration Aura - " .. ("[Level " .. (I2S(GetUnitAbilityLevelSwapped(FourCC("A03A"), udg_Unit_RandomBoss)) .. "]"))))
+else
+if (Trig_Headhunter_Mode_Func002Func021Func005Func005Func005Func005Func005C()) then
+UnitAddAbilityBJ(FourCC("A03B"), udg_Unit_RandomBoss)
+if (Trig_Headhunter_Mode_Func002Func021Func005Func005Func005Func005Func005Func003C()) then
+SetUnitAbilityLevelSwapped(FourCC("A03B"), udg_Unit_RandomBoss, udg_Integer_HHSpawnedAmount)
+else
+SetUnitAbilityLevelSwapped(FourCC("A03B"), udg_Unit_RandomBoss, 5)
+end
+DisplayTimedTextToForce(GetPlayersAll(), 10.00, ("|c0000ff00First Ability: |c0077ff77Evasion - " .. ("[Level " .. (I2S(GetUnitAbilityLevelSwapped(FourCC("A03B"), udg_Unit_RandomBoss)) .. "]"))))
+else
+end
+end
+end
+end
+end
+end
+udg_Integer_HHActiveChance = GetRandomInt(1, 2)
+if (Trig_Headhunter_Mode_Func002Func023C()) then
+udg_Integer_HHActives = GetRandomInt(1, 8)
+if (Trig_Headhunter_Mode_Func002Func023Func002C()) then
+UnitAddAbilityBJ(FourCC("A03D"), GetLastCreatedUnit())
+DisplayTimedTextToForce(GetPlayersAll(), 10.00, "TRIGSTR_063")
+else
+if (Trig_Headhunter_Mode_Func002Func023Func002Func003C()) then
+UnitAddAbilityBJ(FourCC("A03L"), GetLastCreatedUnit())
+DisplayTimedTextToForce(GetPlayersAll(), 10.00, "TRIGSTR_064")
+else
+if (Trig_Headhunter_Mode_Func002Func023Func002Func003Func003C()) then
+UnitAddAbilityBJ(FourCC("A03F"), GetLastCreatedUnit())
+DisplayTimedTextToForce(GetPlayersAll(), 10.00, "TRIGSTR_066")
+else
+if (Trig_Headhunter_Mode_Func002Func023Func002Func003Func003Func003C()) then
+UnitAddAbilityBJ(FourCC("A03G"), GetLastCreatedUnit())
+DisplayTimedTextToForce(GetPlayersAll(), 10.00, "TRIGSTR_067")
+else
+if (Trig_Headhunter_Mode_Func002Func023Func002Func003Func003Func003Func003C()) then
+UnitAddAbilityBJ(FourCC("A03C"), GetLastCreatedUnit())
+DisplayTimedTextToForce(GetPlayersAll(), 10.00, "TRIGSTR_075")
+else
+if (Trig_Headhunter_Mode_Func002Func023Func002Func003Func003Func003Func003Func003C()) then
+UnitAddAbilityBJ(FourCC("A03H"), GetLastCreatedUnit())
+DisplayTimedTextToForce(GetPlayersAll(), 10.00, "TRIGSTR_088")
+else
+end
+end
+end
+end
+end
+end
+else
+end
+BlzSetAbilityTooltip(FourCC("A03E"), ("|c0000ff00Gold Cost: |c0077ff77" .. (I2S(udg_Integer_HHCost) .. (" / " .. ("|c0000ff00Bosses Spawned: |c0077ff77" .. I2S(udg_Integer_HHSpawnedAmount))))), 1)
+else
+CreateTextTagUnitBJ(("You need " .. (I2S(udg_Integer_HHCost) .. " gold.")), GetBuyingUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
+ShowTextTagForceBJ(false, GetLastCreatedTextTag(), GetPlayersAll())
+ShowTextTagForceBJ(true, GetLastCreatedTextTag(), GetForceOfPlayer(GetOwningPlayer(GetBuyingUnit())))
+RemoveUnit(GetSoldUnit())
+end
+end
+
+function InitTrig_Headhunter_Mode()
+gg_trg_Headhunter_Mode = CreateTrigger()
+DisableTrigger(gg_trg_Headhunter_Mode)
+TriggerRegisterAnyUnitEventBJ(gg_trg_Headhunter_Mode, EVENT_PLAYER_UNIT_SELL)
+TriggerAddCondition(gg_trg_Headhunter_Mode, Condition(Trig_Headhunter_Mode_Conditions))
+TriggerAddAction(gg_trg_Headhunter_Mode, Trig_Headhunter_Mode_Actions)
+end
+
+function Trig_Headhunter_Actives_Conditions()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A03J"), GetAttackedUnitBJ()) == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Actives_Func002Func003Func005Func005Func001C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A03H"), GetAttackedUnitBJ()) == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Actives_Func002Func003Func005Func005C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A03C"), GetAttackedUnitBJ()) == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Actives_Func002Func003Func005C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A03G"), GetAttackedUnitBJ()) == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Actives_Func002Func003C()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A03F"), GetAttackedUnitBJ()) == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Actives_Func002C()
+if (not (udg_Integer_HHCastChance <= 5)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Actives_Actions()
+udg_Integer_HHCastChance = GetRandomInt(1, 100)
+if (Trig_Headhunter_Actives_Func002C()) then
+udg_HHAbility_Point = GetUnitLoc(GetAttackedUnitBJ())
+if (Trig_Headhunter_Actives_Func002Func003C()) then
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetAttackedUnitBJ()), udg_HHAbility_Point, bj_UNIT_FACING)
+UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
+UnitAddAbilityBJ(FourCC("A03F"), GetLastCreatedUnit())
+IssueImmediateOrderBJ(GetLastCreatedUnit(), "waterelemental")
+else
+if (Trig_Headhunter_Actives_Func002Func003Func005C()) then
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetAttackedUnitBJ()), udg_HHAbility_Point, bj_UNIT_FACING)
+UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
+UnitAddAbilityBJ(FourCC("A03G"), GetLastCreatedUnit())
+IssueTargetOrderBJ(GetLastCreatedUnit(), "manaburn", GetAttacker())
+else
+if (Trig_Headhunter_Actives_Func002Func003Func005Func005C()) then
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetAttackedUnitBJ()), udg_HHAbility_Point, bj_UNIT_FACING)
+UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
+UnitAddAbilityBJ(FourCC("A03C"), GetLastCreatedUnit())
+IssueTargetOrderBJ(GetLastCreatedUnit(), "dispel", GetAttacker())
+else
+if (Trig_Headhunter_Actives_Func002Func003Func005Func005Func001C()) then
+CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetAttackedUnitBJ()), udg_HHAbility_Point, bj_UNIT_FACING)
+UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
+UnitAddAbilityBJ(FourCC("A03H"), GetLastCreatedUnit())
+IssueTargetOrderBJ(GetLastCreatedUnit(), "cripple", GetAttacker())
+else
+end
+end
+end
+end
+        RemoveLocation(udg_HHAbility_Point)
+else
+end
+end
+
+function InitTrig_Headhunter_Actives()
+gg_trg_Headhunter_Actives = CreateTrigger()
+DisableTrigger(gg_trg_Headhunter_Actives)
+TriggerRegisterAnyUnitEventBJ(gg_trg_Headhunter_Actives, EVENT_PLAYER_UNIT_ATTACKED)
+TriggerAddCondition(gg_trg_Headhunter_Actives, Condition(Trig_Headhunter_Actives_Conditions))
+TriggerAddAction(gg_trg_Headhunter_Actives, Trig_Headhunter_Actives_Actions)
+end
+
+function Trig_Headhunter_Reward_Conditions()
+if (not (GetUnitAbilityLevelSwapped(FourCC("A03J"), GetTriggerUnit()) == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Headhunter_Reward_Func002A()
+AdjustPlayerStateBJ(((50 * udg_Integer_WaveNumber) * udg_Integer_HHSpawnedAmount), GetEnumPlayer(), PLAYER_STATE_RESOURCE_GOLD)
+end
+
+function Trig_Headhunter_Reward_Actions()
+DisplayTimedTextToForce(GetPlayersAll(), 10.00, ("|c0000ff00A random boss has been defeated, you have been given |cffFDD017" .. (I2S(((50 * udg_Integer_WaveNumber) * udg_Integer_HHSpawnedAmount)) .. " Gold")))
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Headhunter_Reward_Func002A)
+end
+
+function InitTrig_Headhunter_Reward()
+gg_trg_Headhunter_Reward = CreateTrigger()
+DisableTrigger(gg_trg_Headhunter_Reward)
+TriggerRegisterAnyUnitEventBJ(gg_trg_Headhunter_Reward, EVENT_PLAYER_UNIT_DEATH)
+TriggerAddCondition(gg_trg_Headhunter_Reward, Condition(Trig_Headhunter_Reward_Conditions))
+TriggerAddAction(gg_trg_Headhunter_Reward, Trig_Headhunter_Reward_Actions)
+end
+
 function Trig_Random_Game_Modes_Conditions()
 if (not (GetSpellAbilityId() ~= FourCC("A02D"))) then
 return false
@@ -9838,265 +10883,6 @@ TriggerAddCondition(gg_trg_Random_Game_Modes_Difficulty_and_Towers, Condition(Tr
 TriggerAddAction(gg_trg_Random_Game_Modes_Difficulty_and_Towers, Trig_Random_Game_Modes_Difficulty_and_Towers_Actions)
 end
 
-function Trig_Ready_Modes_Conditions()
-if (not (GetSpellAbilityId() == FourCC("A02D"))) then
-return false
-end
-return true
-end
-
-function Trig_Ready_Modes_Func006Func004Func005Func005Func005C()
-if (not (udg_Integer_Difficulty == 5)) then
-return false
-end
-return true
-end
-
-function Trig_Ready_Modes_Func006Func004Func005Func005C()
-if (not (udg_Integer_Difficulty == 4)) then
-return false
-end
-return true
-end
-
-function Trig_Ready_Modes_Func006Func004Func005C()
-if (not (udg_Integer_Difficulty == 3)) then
-return false
-end
-return true
-end
-
-function Trig_Ready_Modes_Func006Func004C()
-if (not (udg_Integer_Difficulty == 2)) then
-return false
-end
-return true
-end
-
-function Trig_Ready_Modes_Func006C()
-if (not (udg_Integer_Difficulty == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Ready_Modes_Func010Func002C()
-if (not (GetPlayerController(GetEnumPlayer()) == MAP_CONTROL_COMPUTER)) then
-return false
-end
-return true
-end
-
-function Trig_Ready_Modes_Func010A()
-udg_ChoosePoint_Pnt = GetPlayerStartLocationLoc(GetEnumPlayer())
-if (Trig_Ready_Modes_Func010Func002C()) then
-else
-CreateNUnitsAtLoc(1, FourCC("U00E"), GetEnumPlayer(), udg_ChoosePoint_Pnt, bj_UNIT_FACING)
-end
-udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())] = GetLastCreatedUnit()
-UnitAddItemByIdSwapped(FourCC("I001"), GetLastCreatedUnit())
-UnitAddItemByIdSwapped(FourCC("I003"), GetLastCreatedUnit())
-UnitAddItemByIdSwapped(FourCC("I000"), GetLastCreatedUnit())
-UnitAddItemByIdSwapped(FourCC("I004"), GetLastCreatedUnit())
-UnitAddItemByIdSwapped(FourCC("I005"), GetLastCreatedUnit())
-UnitAddItemByIdSwapped(FourCC("I002"), GetLastCreatedUnit())
-UnitDropItemSlotBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], GetItemOfTypeFromUnitBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], FourCC("I001")), 1)
-UnitDropItemSlotBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], GetItemOfTypeFromUnitBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], FourCC("I002")), 2)
-UnitDropItemSlotBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], GetItemOfTypeFromUnitBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], FourCC("I003")), 3)
-UnitDropItemSlotBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], GetItemOfTypeFromUnitBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], FourCC("I000")), 4)
-UnitDropItemSlotBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], GetItemOfTypeFromUnitBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], FourCC("I004")), 5)
-UnitDropItemSlotBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], GetItemOfTypeFromUnitBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], FourCC("I005")), 6)
-SetItemDroppableBJ(GetItemOfTypeFromUnitBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], FourCC("I001")), false)
-SetItemDroppableBJ(GetItemOfTypeFromUnitBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], FourCC("I002")), false)
-SetItemDroppableBJ(GetItemOfTypeFromUnitBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], FourCC("I003")), false)
-SetItemDroppableBJ(GetItemOfTypeFromUnitBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], FourCC("I000")), false)
-SetItemDroppableBJ(GetItemOfTypeFromUnitBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], FourCC("I004")), false)
-SetItemDroppableBJ(GetItemOfTypeFromUnitBJ(udg_Unit_Array_Heroes[GetConvertedPlayerId(GetEnumPlayer())], FourCC("I005")), false)
-end
-
-function Trig_Ready_Modes_Func017C()
-if (not (udg_Integer_GoldRush == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Ready_Modes_Func021Func001C()
-if (not (udg_Integer_RWActivated == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Ready_Modes_Func021C()
-if (not (udg_Integer_SwarmMode == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Ready_Modes_Func025Func001C()
-if (not (udg_Integer_EndlessMode == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Ready_Modes_Func025C()
-if (not (udg_Integer_RWActivated == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Ready_Modes_Func030C()
-if (not (udg_Integer_ChaosModeOn == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Ready_Modes_Func034C()
-if (not (udg_Integer_HHActivated == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Ready_Modes_Func038C()
-if (not (udg_Integer_SpeedMode == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Ready_Modes_Func042C()
-if (not (udg_Integer_EndlessMode == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Ready_Modes_Func046C()
-if (not (udg_Integer_BlitzMode == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Ready_Modes_Actions()
-if (Trig_Ready_Modes_Func006C()) then
-EnableTrigger(gg_trg_Income)
-udg_Integer_SellPercent = 100
-udg_Real_CreepHealthMultiplier = udg_Real_Array_Handicap[udg_Integer_Difficulty]
-else
-if (Trig_Ready_Modes_Func006Func004C()) then
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
-EnableTrigger(gg_trg_Income)
-udg_Integer_SellPercent = 80
-udg_Real_CreepHealthMultiplier = udg_Real_Array_Handicap[udg_Integer_Difficulty]
-else
-if (Trig_Ready_Modes_Func006Func004Func005C()) then
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 4)
-EnableTrigger(gg_trg_Income)
-udg_Integer_SellPercent = 60
-udg_Real_CreepHealthMultiplier = udg_Real_Array_Handicap[udg_Integer_Difficulty]
-else
-if (Trig_Ready_Modes_Func006Func004Func005Func005C()) then
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 6)
-EnableTrigger(gg_trg_Income)
-udg_Integer_SellPercent = 40
-udg_Real_CreepHealthMultiplier = udg_Real_Array_Handicap[udg_Integer_Difficulty]
-else
-if (Trig_Ready_Modes_Func006Func004Func005Func005Func005C()) then
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 8)
-EnableTrigger(gg_trg_Income)
-udg_Integer_SellPercent = 20
-udg_Real_CreepHealthMultiplier = udg_Real_Array_Handicap[udg_Integer_Difficulty]
-else
-end
-end
-end
-end
-end
-ForForce(udg_PlayerGroup_Permanent[1], Trig_Ready_Modes_Func010A)
-if (Trig_Ready_Modes_Func017C()) then
-EnableTrigger(gg_trg_Gold_Rush_Mode)
-EnableTrigger(gg_trg_Gold_Rush_Bounty)
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
-else
-end
-if (Trig_Ready_Modes_Func021C()) then
-if (Trig_Ready_Modes_Func021Func001C()) then
-else
-udg_Integer_SpawnMax = 60
-end
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
-else
-end
-if (Trig_Ready_Modes_Func025C()) then
-if (Trig_Ready_Modes_Func025Func001C()) then
-udg_Integer_WaveAmount = 300
-else
-end
-TriggerExecute(gg_trg_Set_Random_Wave_Variables)
-TriggerExecute(gg_trg_Generate_Random_Waves)
-TriggerExecute(gg_trg_Start_Random_Waves)
-EnableTrigger(gg_trg_Random_Wave_Bounty)
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
-else
-TriggerExecute(gg_trg_Start_Static_Waves)
-udg_String_AirWavesText = "7, 9, 17, 21, 27, 33, 38, 53"
-udg_String_HeroWavesText = "39, 40, 41, 42, 43, 44, 46, 47, 49, 50, 51, 52, 54, 56."
-udg_String_RWBossWaveText = "12, 24, 36, 48."
-udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
-end
-if (Trig_Ready_Modes_Func030C()) then
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
-else
-end
-if (Trig_Ready_Modes_Func034C()) then
-ShowUnitShow(gg_unit_n00D_0042)
-TriggerExecute(gg_trg_Set_Random_Wave_Variables)
-EnableTrigger(gg_trg_Headhunter_Mode)
-EnableTrigger(gg_trg_Headhunter_Reward)
-EnableTrigger(gg_trg_Headhunter_Actives)
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
-else
-end
-if (Trig_Ready_Modes_Func038C()) then
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
-else
-end
-if (Trig_Ready_Modes_Func042C()) then
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
-else
-end
-if (Trig_Ready_Modes_Func046C()) then
-DisableTrigger(gg_trg_Run_Start_Waves)
-TriggerExecute(gg_trg_Blitz_Mode)
-udg_Integer_IncomeGold = (udg_Integer_IncomeGold + 2)
-udg_Integer_WaveNumber = 0
-else
-EnableTrigger(gg_trg_Run_Start_Waves)
-udg_Integer_Array_WaveTimer[1] = R2I(udg_Real_SpawnTime)
-end
-udg_Integer_Gamemode = 1
-udg_Real_Array_MessageTime[1] = 5.00
-ShowUnitHide(gg_unit_n00C_0019)
-ClearTextMessagesBJ(GetPlayersAll())
-EnableTrigger(gg_trg_Debug_Wave)
-DisableTrigger(gg_trg_Turn_On_RedAfk_Ready)
-DisableTrigger(GetTriggeringTrigger())
-end
-
-function InitTrig_Ready_Modes()
-gg_trg_Ready_Modes = CreateTrigger()
-TriggerRegisterUnitEvent(gg_trg_Ready_Modes, gg_unit_n00C_0019, EVENT_UNIT_SPELL_CAST)
-TriggerAddCondition(gg_trg_Ready_Modes, Condition(Trig_Ready_Modes_Conditions))
-TriggerAddAction(gg_trg_Ready_Modes, Trig_Ready_Modes_Actions)
-end
-
 function Trig_RedAfk_Ready_Actions()
 TriggerExecute(gg_trg_Ready_Modes)
 end
@@ -10168,16 +10954,6 @@ TriggerAddCondition(gg_trg_Red_Inactive, Condition(Trig_Red_Inactive_Conditions)
 TriggerAddAction(gg_trg_Red_Inactive, Trig_Red_Inactive_Actions)
 end
 
-function Trig_Turn_On_RedAfk_Ready_Actions()
-EnableTrigger(gg_trg_RedAfk_Ready)
-end
-
-function InitTrig_Turn_On_RedAfk_Ready()
-gg_trg_Turn_On_RedAfk_Ready = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Turn_On_RedAfk_Ready, 120.00)
-TriggerAddAction(gg_trg_Turn_On_RedAfk_Ready, Trig_Turn_On_RedAfk_Ready_Actions)
-end
-
 function Trig_Turn_on_RedAfk_Restart_Func002C()
 if (not (udg_Real_RestartRedAfk >= 120.00)) then
 return false
@@ -10200,937 +10976,14 @@ TriggerRegisterTimerEventPeriodic(gg_trg_Turn_on_RedAfk_Restart, 1.00)
 TriggerAddAction(gg_trg_Turn_on_RedAfk_Restart, Trig_Turn_on_RedAfk_Restart_Actions)
 end
 
-function Trig_Start_Gamemode_Indicator_Func001Func001C()
-if (not (udg_Integer_ChaosMode == 1)) then
-return false
+function Trig_Turn_On_RedAfk_Ready_Actions()
+EnableTrigger(gg_trg_RedAfk_Ready)
 end
-return true
-end
-
-function Trig_Start_Gamemode_Indicator_Func001Func002Func001C()
-if (not (udg_Integer_ChaosMode == 2)) then
-return false
-end
-return true
-end
-
-function Trig_Start_Gamemode_Indicator_Func001Func002Func002Func001C()
-if (not (udg_Integer_ChaosMode == 3)) then
-return false
-end
-return true
-end
-
-function Trig_Start_Gamemode_Indicator_Func001Func002Func002Func002Func001C()
-if (not (udg_Integer_ChaosMode == 4)) then
-return false
-end
-return true
-end
-
-function Trig_Start_Gamemode_Indicator_Func001Func002Func002Func002Func002C()
-if (not (udg_Integer_Difficulty == 5)) then
-return false
-end
-return true
-end
-
-function Trig_Start_Gamemode_Indicator_Func001Func002Func002Func002C()
-if (not (udg_Integer_Difficulty == 4)) then
-return false
-end
-return true
-end
-
-function Trig_Start_Gamemode_Indicator_Func001Func002Func002C()
-if (not (udg_Integer_Difficulty == 3)) then
-return false
-end
-return true
-end
-
-function Trig_Start_Gamemode_Indicator_Func001Func002C()
-if (not (udg_Integer_Difficulty == 2)) then
-return false
-end
-return true
-end
-
-function Trig_Start_Gamemode_Indicator_Func001C()
-if (not (udg_Integer_Difficulty == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Start_Gamemode_Indicator_Func002Func001C()
-if (not (udg_Integer_TowerLimit >= 1)) then
-return false
-end
-return true
-end
-
-function Trig_Start_Gamemode_Indicator_Func002C()
-if (not (udg_Integer_TowerLimit == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Start_Gamemode_Indicator_Func007C()
-if (not (udg_Integer_EndlessMode == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Start_Gamemode_Indicator_Func008C()
-if (not (udg_Integer_GoldRush == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Start_Gamemode_Indicator_Func009C()
-if (not (udg_Integer_SwarmMode == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Start_Gamemode_Indicator_Func010C()
-if (not (udg_Integer_RWActivated == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Start_Gamemode_Indicator_Func011C()
-if (not (udg_Integer_HHActivated == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Start_Gamemode_Indicator_Func012C()
-if (not (udg_Integer_SpeedMode == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Start_Gamemode_Indicator_Func013C()
-if (not (udg_Integer_BlitzMode == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Start_Gamemode_Indicator_Actions()
-if (Trig_Start_Gamemode_Indicator_Func001C()) then
-if (Trig_Start_Gamemode_Indicator_Func001Func001C()) then
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_020")
-else
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_022")
-end
-else
-if (Trig_Start_Gamemode_Indicator_Func001Func002C()) then
-if (Trig_Start_Gamemode_Indicator_Func001Func002Func001C()) then
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_055")
-else
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_096")
-end
-else
-if (Trig_Start_Gamemode_Indicator_Func001Func002Func002C()) then
-if (Trig_Start_Gamemode_Indicator_Func001Func002Func002Func001C()) then
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_137")
-else
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_152")
-end
-else
-if (Trig_Start_Gamemode_Indicator_Func001Func002Func002Func002C()) then
-if (Trig_Start_Gamemode_Indicator_Func001Func002Func002Func002Func001C()) then
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_2301")
-else
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_262")
-end
-else
-if (Trig_Start_Gamemode_Indicator_Func001Func002Func002Func002Func002C()) then
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_263")
-else
-end
-end
-end
-end
-end
-if (Trig_Start_Gamemode_Indicator_Func002C()) then
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_267")
-else
-if (Trig_Start_Gamemode_Indicator_Func002Func001C()) then
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_269")
-else
-end
-end
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], ("|c0000ff00Siege:  " .. (udg_String_Array_TowerEnabled[1] .. (" / " .. ("|c0000ff00Air:   " .. (udg_String_Array_TowerEnabled[2] .. (" / " .. ("|c0000ff00Poison:   " .. udg_String_Array_TowerEnabled[3]))))))))
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], ("|c0000ff00Frost:  " .. (udg_String_Array_TowerEnabled[4] .. (" / " .. ("|c0000ff00Bash: " .. (udg_String_Array_TowerEnabled[9] .. (" / " .. ("|c0000ff00Bouncing: " .. udg_String_Array_TowerEnabled[8]))))))))
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], ("|c0000ff00Spell: " .. (udg_String_Array_TowerEnabled[7] .. (" / " .. ("|c0000ff00Aura: " .. (udg_String_Array_TowerEnabled[6] .. (" / " .. ("|c0000ff00Research: " .. udg_String_Array_TowerEnabled[10]))))))))
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], ("|c0000ff00Traps: " .. (udg_String_Array_TowerEnabled[11] .. (" / " .. ("|c0000ff00Chaos: " .. udg_String_Array_TowerEnabled[5])))))
-if (Trig_Start_Gamemode_Indicator_Func007C()) then
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_281")
-else
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_282")
-end
-if (Trig_Start_Gamemode_Indicator_Func008C()) then
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_283")
-else
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_284")
-end
-if (Trig_Start_Gamemode_Indicator_Func009C()) then
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_2218")
-else
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_2219")
-end
-if (Trig_Start_Gamemode_Indicator_Func010C()) then
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_2220")
-else
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_2221")
-end
-if (Trig_Start_Gamemode_Indicator_Func011C()) then
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_2255")
-else
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_2293")
-end
-if (Trig_Start_Gamemode_Indicator_Func012C()) then
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_2294")
-else
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_2295")
-end
-if (Trig_Start_Gamemode_Indicator_Func013C()) then
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_955")
-else
-DisplayTimedTextToForce(GetPlayersAll(), udg_Real_Array_MessageTime[1], "TRIGSTR_935")
-end
-end
-
-function InitTrig_Start_Gamemode_Indicator()
-gg_trg_Start_Gamemode_Indicator = CreateTrigger()
-TriggerAddAction(gg_trg_Start_Gamemode_Indicator, Trig_Start_Gamemode_Indicator_Actions)
-end
-
-function Trig_Default_Gamemode_Func001C()
-if (not (udg_Integer_Gamemode == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Default_Gamemode_Actions()
-if (Trig_Default_Gamemode_Func001C()) then
-TriggerExecute(gg_trg_Ready_Modes)
-DisableTrigger(GetTriggeringTrigger())
-else
-end
-end
-
-function InitTrig_Default_Gamemode()
-gg_trg_Default_Gamemode = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Default_Gamemode, 122.00)
-TriggerAddAction(gg_trg_Default_Gamemode, Trig_Default_Gamemode_Actions)
-end
-
-function Trig_Default_Gamemode_Restart_Func002C()
-if (not (udg_Real_DefaultGamemode >= 120.00)) then
-return false
-end
-return true
-end
-
-function Trig_Default_Gamemode_Restart_Actions()
-udg_Real_DefaultGamemode = (udg_Real_DefaultGamemode + 1.00)
-if (Trig_Default_Gamemode_Restart_Func002C()) then
-TriggerExecute(gg_trg_Default_Gamemode)
-else
-end
-end
-
-function InitTrig_Default_Gamemode_Restart()
-gg_trg_Default_Gamemode_Restart = CreateTrigger()
-DisableTrigger(gg_trg_Default_Gamemode_Restart)
-TriggerRegisterTimerEventPeriodic(gg_trg_Default_Gamemode_Restart, 1.00)
-TriggerAddAction(gg_trg_Default_Gamemode_Restart, Trig_Default_Gamemode_Restart_Actions)
-end
-
-function Trig_Blitz_Mode_Func001Func001Func001C()
-if (not (udg_Integer_RWActivated == 1)) then
-return false
-end
-if (not (udg_Integer_SpeedMode == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Blitz_Mode_Func001Func001C()
-if (not (udg_Integer_RWActivated == 0)) then
-return false
-end
-if (not (udg_Integer_SpeedMode == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Blitz_Mode_Func001C()
-if (not (udg_Integer_SpeedMode == 1)) then
-return false
-end
-if (not (udg_Integer_RWActivated == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Blitz_Mode_Actions()
-if (Trig_Blitz_Mode_Func001C()) then
-udg_Real_SpawnTime = 15.00
-else
-if (Trig_Blitz_Mode_Func001Func001C()) then
-udg_Real_SpawnTime = 15.00
-else
-if (Trig_Blitz_Mode_Func001Func001Func001C()) then
-udg_Real_SpawnTime = 25.00
-else
-udg_Real_SpawnTime = 20.00
-end
-end
-end
-end
-
-function InitTrig_Blitz_Mode()
-gg_trg_Blitz_Mode = CreateTrigger()
-TriggerAddAction(gg_trg_Blitz_Mode, Trig_Blitz_Mode_Actions)
-end
-
-function Trig_Gold_Rush_Mode_Conditions()
-if (not (GetUnitLifePercent(GetAttackedUnitBJ()) >= 60.00)) then
-return false
-end
-if (not (GetUnitAbilityLevelSwapped(FourCC("Amim"), GetAttackedUnitBJ()) == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Gold_Rush_Mode_Func001Func001C()
-if (UnitHasBuffBJ(GetAttackedUnitBJ(), FourCC("B002")) == true) then
-return true
-end
-if (GetUnitAbilityLevelSwapped(FourCC("A03J"), GetAttackedUnitBJ()) == 1) then
-return true
-end
-return false
-end
-
-function Trig_Gold_Rush_Mode_Func001Func003C()
-if (not (udg_Integer_GoldRush == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Gold_Rush_Mode_Func001C()
-if (not Trig_Gold_Rush_Mode_Func001Func001C()) then
-return false
-end
-return true
-end
-
-function Trig_Gold_Rush_Mode_Actions()
-if (Trig_Gold_Rush_Mode_Func001C()) then
-else
-udg_Integer_GoldRush = GetRandomInt(1, 10)
-if (Trig_Gold_Rush_Mode_Func001Func003C()) then
-GroupAddUnitSimple(GetAttackedUnitBJ(), udg_UnitGroup_GoldRushGrp)
-udg_Point_Goldrush = GetUnitLoc(GetAttackedUnitBJ())
-BlzSetUnitMaxHP(GetAttackedUnitBJ(), (BlzGetUnitMaxHP(GetAttackedUnitBJ()) + (BlzGetUnitMaxHP(GetAttackedUnitBJ()) * 2)))
-CreateNUnitsAtLoc(1, FourCC("o00H"), Player(23), udg_Point_Goldrush, bj_UNIT_FACING)
-            RemoveLocation(udg_Point_Goldrush)
-UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
-UnitAddAbilityBJ(FourCC("A02U"), GetLastCreatedUnit())
-IssueTargetOrderBJ(GetLastCreatedUnit(), "bloodlust", GetAttackedUnitBJ())
-SetUnitLifeBJ(GetAttackedUnitBJ(), ((GetUnitStateSwap(UNIT_STATE_LIFE, GetAttackedUnitBJ()) / 2.00) + GetUnitStateSwap(UNIT_STATE_LIFE, GetAttackedUnitBJ())))
-BlzSetUnitArmor(GetAttackedUnitBJ(), (BlzGetUnitArmor(GetAttackedUnitBJ()) + (BlzGetUnitArmor(GetAttackedUnitBJ()) / 4.00)))
-else
-end
-end
-end
-
-function InitTrig_Gold_Rush_Mode()
-gg_trg_Gold_Rush_Mode = CreateTrigger()
-DisableTrigger(gg_trg_Gold_Rush_Mode)
-TriggerRegisterPlayerUnitEventSimple(gg_trg_Gold_Rush_Mode, Player(10), EVENT_PLAYER_UNIT_ATTACKED)
-TriggerRegisterPlayerUnitEventSimple(gg_trg_Gold_Rush_Mode, Player(11), EVENT_PLAYER_UNIT_ATTACKED)
-TriggerRegisterPlayerUnitEventSimple(gg_trg_Gold_Rush_Mode, Player(12), EVENT_PLAYER_UNIT_ATTACKED)
-TriggerAddCondition(gg_trg_Gold_Rush_Mode, Condition(Trig_Gold_Rush_Mode_Conditions))
-TriggerAddAction(gg_trg_Gold_Rush_Mode, Trig_Gold_Rush_Mode_Actions)
-end
-
-function Trig_Gold_Rush_Bounty_Conditions()
-if (not (IsUnitInGroup(GetDyingUnit(), udg_UnitGroup_GoldRushGrp) == true)) then
-return false
-end
-return true
-end
-
-function Trig_Gold_Rush_Bounty_Actions()
-AdjustPlayerStateBJ(50, GetOwningPlayer(GetKillingUnitBJ()), PLAYER_STATE_RESOURCE_GOLD)
-GroupRemoveUnitSimple(GetDyingUnit(), udg_UnitGroup_GoldRushGrp)
-CreateTextTagUnitBJ("TRIGSTR_302", GetDyingUnit(), 0, 10.00, 100.00, 100, 0.00, 0)
-ShowTextTagForceBJ(false, GetLastCreatedTextTag(), GetPlayersAll())
-ShowTextTagForceBJ(true, GetLastCreatedTextTag(), GetForceOfPlayer(GetOwningPlayer(GetKillingUnitBJ())))
-SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
-SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
-SetTextTagFadepointBJ(GetLastCreatedTextTag(), 2.00)
-SetTextTagLifespanBJ(GetLastCreatedTextTag(), 3.00)
-end
-
-function InitTrig_Gold_Rush_Bounty()
-gg_trg_Gold_Rush_Bounty = CreateTrigger()
-DisableTrigger(gg_trg_Gold_Rush_Bounty)
-TriggerRegisterPlayerUnitEventSimple(gg_trg_Gold_Rush_Bounty, Player(10), EVENT_PLAYER_UNIT_DEATH)
-TriggerRegisterPlayerUnitEventSimple(gg_trg_Gold_Rush_Bounty, Player(11), EVENT_PLAYER_UNIT_DEATH)
-TriggerRegisterPlayerUnitEventSimple(gg_trg_Gold_Rush_Bounty, Player(12), EVENT_PLAYER_UNIT_DEATH)
-TriggerAddCondition(gg_trg_Gold_Rush_Bounty, Condition(Trig_Gold_Rush_Bounty_Conditions))
-TriggerAddAction(gg_trg_Gold_Rush_Bounty, Trig_Gold_Rush_Bounty_Actions)
-end
-
-function Trig_Random_Wave_Bounty_Func001Func002C()
-if (not (udg_Integer_RWActivated == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Random_Wave_Bounty_Func001C()
-if (not (IsUnitInGroup(GetDyingUnit(), udg_UnitGroup_LoseLifeNoGoldRW) == true)) then
-return false
-end
-return true
-end
-
-function Trig_Random_Wave_Bounty_Actions()
-if (Trig_Random_Wave_Bounty_Func001C()) then
-else
-if (Trig_Random_Wave_Bounty_Func001Func002C()) then
-AdjustPlayerStateBJ(GetUnitUserData(GetDyingUnit()), GetOwningPlayer(GetKillingUnitBJ()), PLAYER_STATE_RESOURCE_GOLD)
-CreateTextTagUnitBJ(("+" .. I2S(GetUnitUserData(GetDyingUnit()))), GetDyingUnit(), 0, 10, 100, 100, 100, 0)
-else
-end
-end
-SetTextTagVelocityBJ(GetLastCreatedTextTag(), 40.00, 90)
-SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
-SetTextTagFadepointBJ(GetLastCreatedTextTag(), 1.00)
-SetTextTagLifespanBJ(GetLastCreatedTextTag(), 2.00)
-ShowTextTagForceBJ(false, GetLastCreatedTextTag(), GetPlayersAll())
-ShowTextTagForceBJ(true, GetLastCreatedTextTag(), GetForceOfPlayer(GetOwningPlayer(GetKillingUnitBJ())))
-end
-
-function InitTrig_Random_Wave_Bounty()
-gg_trg_Random_Wave_Bounty = CreateTrigger()
-DisableTrigger(gg_trg_Random_Wave_Bounty)
-TriggerRegisterPlayerUnitEventSimple(gg_trg_Random_Wave_Bounty, Player(10), EVENT_PLAYER_UNIT_DEATH)
-TriggerRegisterPlayerUnitEventSimple(gg_trg_Random_Wave_Bounty, Player(11), EVENT_PLAYER_UNIT_DEATH)
-TriggerRegisterPlayerUnitEventSimple(gg_trg_Random_Wave_Bounty, Player(12), EVENT_PLAYER_UNIT_DEATH)
-TriggerAddAction(gg_trg_Random_Wave_Bounty, Trig_Random_Wave_Bounty_Actions)
-end
-
-function Trig_Headhunter_Mode_Conditions()
-if (not (GetUnitTypeId(GetSoldUnit()) == FourCC("h00H"))) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func010Func002Func002Func002Func002Func002Func002C()
-if (not (udg_Integer_HHUnitType == 7)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func010Func002Func002Func002Func002Func002C()
-if (not (udg_Integer_HHUnitType == 6)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func010Func002Func002Func002Func002C()
-if (not (udg_Integer_HHUnitType == 5)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func010Func002Func002Func002C()
-if (not (udg_Integer_HHUnitType == 4)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func010Func002Func002C()
-if (not (udg_Integer_HHUnitType == 3)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func010Func002C()
-if (not (udg_Integer_HHUnitType == 2)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func010C()
-if (not (udg_Integer_HHUnitType == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func013C()
-if (not (udg_Integer_SpeedMode == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func021Func003C()
-if (not (udg_Integer_HHSpawnedAmount <= 4)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func021Func005Func003C()
-if (not (udg_Integer_HHSpawnedAmount <= 4)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func021Func005Func005Func003C()
-if (not (udg_Integer_HHSpawnedAmount <= 4)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func021Func005Func005Func005Func003C()
-if (not (udg_Integer_HHSpawnedAmount <= 4)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func021Func005Func005Func005Func005Func003C()
-if (not (udg_Integer_HHSpawnedAmount <= 4)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func021Func005Func005Func005Func005Func005Func003C()
-if (not (udg_Integer_HHSpawnedAmount <= 4)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func021Func005Func005Func005Func005Func005C()
-if (not (udg_Integer_HHPassives == 6)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func021Func005Func005Func005Func005C()
-if (not (udg_Integer_HHPassives == 5)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func021Func005Func005Func005C()
-if (not (udg_Integer_HHPassives == 4)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func021Func005Func005C()
-if (not (udg_Integer_HHPassives == 3)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func021Func005C()
-if (not (udg_Integer_HHPassives == 2)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func021C()
-if (not (udg_Integer_HHPassives == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func023Func002Func003Func003Func003Func003Func003C()
-if (not (udg_Integer_HHActives == 6)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func023Func002Func003Func003Func003Func003C()
-if (not (udg_Integer_HHActives == 5)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func023Func002Func003Func003Func003C()
-if (not (udg_Integer_HHActives == 4)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func023Func002Func003Func003C()
-if (not (udg_Integer_HHActives == 3)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func023Func002Func003C()
-if (not (udg_Integer_HHActives == 2)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func023Func002C()
-if (not (udg_Integer_HHActives == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002Func023C()
-if (not (udg_Integer_HHActiveChance == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Func002C()
-if (not (GetPlayerState(GetOwningPlayer(GetSoldUnit()), PLAYER_STATE_RESOURCE_GOLD) >= udg_Integer_HHCost)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Mode_Actions()
-if (Trig_Headhunter_Mode_Func002C()) then
-SetPlayerStateBJ(GetOwningPlayer(GetSoldUnit()), PLAYER_STATE_RESOURCE_GOLD, (GetPlayerState(GetOwningPlayer(GetSoldUnit()), PLAYER_STATE_RESOURCE_GOLD) - udg_Integer_HHCost))
-udg_Integer_HHCost = (udg_Integer_HHCost + 2500)
-udg_Integer_HHSpawnedAmount = (udg_Integer_HHSpawnedAmount + 1)
-udg_Point_Array_HHSpawnPoint[10] = udg_Point_Array_HHSpawnPoint[GetConvertedPlayerId(GetOwningPlayer(GetSoldUnit()))]
-udg_Integer_HHUnitType = GetRandomInt(1, 7)
-if (Trig_Headhunter_Mode_Func002Func010C()) then
-udg_UnitType_HHUnit = udg_UnitType_Array_RWAir[GetRandomInt(1, 43)]
-else
-if (Trig_Headhunter_Mode_Func002Func010Func002C()) then
-udg_UnitType_HHUnit = udg_UnitType_Array_RWFortified[GetRandomInt(1, 43)]
-else
-if (Trig_Headhunter_Mode_Func002Func010Func002Func002C()) then
-udg_UnitType_HHUnit = udg_UnitType_Array_RWHeavy[GetRandomInt(1, 43)]
-else
-if (Trig_Headhunter_Mode_Func002Func010Func002Func002Func002C()) then
-udg_UnitType_HHUnit = udg_UnitType_Array_RWHero[GetRandomInt(1, 43)]
-else
-if (Trig_Headhunter_Mode_Func002Func010Func002Func002Func002Func002C()) then
-udg_UnitType_HHUnit = udg_UnitType_Array_RWImmune[GetRandomInt(1, 43)]
-else
-if (Trig_Headhunter_Mode_Func002Func010Func002Func002Func002Func002Func002C()) then
-udg_UnitType_HHUnit = udg_UnitType_Array_RWLight[GetRandomInt(1, 43)]
-else
-if (Trig_Headhunter_Mode_Func002Func010Func002Func002Func002Func002Func002Func002C()) then
-udg_UnitType_HHUnit = udg_UnitType_Array_RWMedium[GetRandomInt(1, 43)]
-else
-end
-end
-end
-end
-end
-end
-end
-CreateNUnitsAtLoc(1, udg_UnitType_HHUnit, Player(12), udg_Point_Array_HHSpawnPoint[GetConvertedPlayerId(GetOwningPlayer(GetSoldUnit()))], bj_UNIT_FACING)
-udg_Unit_RandomBoss = GetLastCreatedUnit()
-if (Trig_Headhunter_Mode_Func002Func013C()) then
-SetUnitMoveSpeed(GetLastCreatedUnit(), 500.00)
-else
-end
-SetUnitScalePercent(udg_Unit_RandomBoss, 200.00, 200.00, 200.00)
-RemoveUnit(GetSoldUnit())
-UnitAddAbilityBJ(FourCC("A03J"), udg_Unit_RandomBoss)
-BlzSetUnitMaxHP(udg_Unit_RandomBoss, (30000 * udg_Integer_WaveNumber))
-BlzSetUnitArmor(udg_Unit_RandomBoss, (25.00 * I2R(udg_Integer_WaveNumber)))
-SetUnitLifePercentBJ(udg_Unit_RandomBoss, 100)
-udg_Integer_HHPassives = GetRandomInt(1, 6)
-if (Trig_Headhunter_Mode_Func002Func021C()) then
-UnitAddAbilityBJ(FourCC("A037"), udg_Unit_RandomBoss)
-if (Trig_Headhunter_Mode_Func002Func021Func003C()) then
-SetUnitAbilityLevelSwapped(FourCC("A037"), udg_Unit_RandomBoss, udg_Integer_HHSpawnedAmount)
-else
-SetUnitAbilityLevelSwapped(FourCC("A037"), udg_Unit_RandomBoss, 5)
-end
-DisplayTimedTextToForce(GetPlayersAll(), 10.00, ("|c0000ff00First Ability: |c0077ff77Extra Armor - " .. ("[Level " .. (I2S(GetUnitAbilityLevelSwapped(FourCC("A037"), udg_Unit_RandomBoss)) .. "]"))))
-else
-if (Trig_Headhunter_Mode_Func002Func021Func005C()) then
-UnitAddAbilityBJ(FourCC("A038"), udg_Unit_RandomBoss)
-if (Trig_Headhunter_Mode_Func002Func021Func005Func003C()) then
-SetUnitAbilityLevelSwapped(FourCC("A038"), udg_Unit_RandomBoss, udg_Integer_HHSpawnedAmount)
-else
-SetUnitAbilityLevelSwapped(FourCC("A038"), udg_Unit_RandomBoss, 5)
-end
-DisplayTimedTextToForce(GetPlayersAll(), 10.00, ("|c0000ff00First Ability: |c0077ff77Extra Movespeed - " .. ("[Level " .. (I2S(GetUnitAbilityLevelSwapped(FourCC("A038"), udg_Unit_RandomBoss)) .. "]"))))
-else
-if (Trig_Headhunter_Mode_Func002Func021Func005Func005C()) then
-UnitAddAbilityBJ(FourCC("A039"), udg_Unit_RandomBoss)
-if (Trig_Headhunter_Mode_Func002Func021Func005Func005Func003C()) then
-SetUnitAbilityLevelSwapped(FourCC("A039"), udg_Unit_RandomBoss, udg_Integer_HHSpawnedAmount)
-else
-SetUnitAbilityLevelSwapped(FourCC("A039"), udg_Unit_RandomBoss, 5)
-end
-DisplayTimedTextToForce(GetPlayersAll(), 10.00, ("|c0000ff00First Ability: |c0077ff77Damage Reduction Aura - " .. ("[Level " .. (I2S(GetUnitAbilityLevelSwapped(FourCC("A039"), udg_Unit_RandomBoss)) .. "]"))))
-else
-if (Trig_Headhunter_Mode_Func002Func021Func005Func005Func005C()) then
-UnitAddAbilityBJ(FourCC("S000"), udg_Unit_RandomBoss)
-if (Trig_Headhunter_Mode_Func002Func021Func005Func005Func005Func003C()) then
-SetUnitAbilityLevelSwapped(FourCC("S000"), udg_Unit_RandomBoss, udg_Integer_HHSpawnedAmount)
-else
-SetUnitAbilityLevelSwapped(FourCC("S000"), udg_Unit_RandomBoss, 5)
-end
-DisplayTimedTextToForce(GetPlayersAll(), 10.00, ("|c0000ff00First Ability: |c0077ff77Speed Reduction Aura - " .. ("[Level " .. (I2S(GetUnitAbilityLevelSwapped(FourCC("S000"), udg_Unit_RandomBoss)) .. "]"))))
-else
-if (Trig_Headhunter_Mode_Func002Func021Func005Func005Func005Func005C()) then
-UnitAddAbilityBJ(FourCC("A03A"), udg_Unit_RandomBoss)
-if (Trig_Headhunter_Mode_Func002Func021Func005Func005Func005Func005Func003C()) then
-SetUnitAbilityLevelSwapped(FourCC("A03A"), udg_Unit_RandomBoss, udg_Integer_HHSpawnedAmount)
-else
-SetUnitAbilityLevelSwapped(FourCC("A03A"), udg_Unit_RandomBoss, 5)
-end
-DisplayTimedTextToForce(GetPlayersAll(), 10.00, ("|c0000ff00First Ability: |c0077ff77Mana Degeneration Aura - " .. ("[Level " .. (I2S(GetUnitAbilityLevelSwapped(FourCC("A03A"), udg_Unit_RandomBoss)) .. "]"))))
-else
-if (Trig_Headhunter_Mode_Func002Func021Func005Func005Func005Func005Func005C()) then
-UnitAddAbilityBJ(FourCC("A03B"), udg_Unit_RandomBoss)
-if (Trig_Headhunter_Mode_Func002Func021Func005Func005Func005Func005Func005Func003C()) then
-SetUnitAbilityLevelSwapped(FourCC("A03B"), udg_Unit_RandomBoss, udg_Integer_HHSpawnedAmount)
-else
-SetUnitAbilityLevelSwapped(FourCC("A03B"), udg_Unit_RandomBoss, 5)
-end
-DisplayTimedTextToForce(GetPlayersAll(), 10.00, ("|c0000ff00First Ability: |c0077ff77Evasion - " .. ("[Level " .. (I2S(GetUnitAbilityLevelSwapped(FourCC("A03B"), udg_Unit_RandomBoss)) .. "]"))))
-else
-end
-end
-end
-end
-end
-end
-udg_Integer_HHActiveChance = GetRandomInt(1, 2)
-if (Trig_Headhunter_Mode_Func002Func023C()) then
-udg_Integer_HHActives = GetRandomInt(1, 8)
-if (Trig_Headhunter_Mode_Func002Func023Func002C()) then
-UnitAddAbilityBJ(FourCC("A03D"), GetLastCreatedUnit())
-DisplayTimedTextToForce(GetPlayersAll(), 10.00, "TRIGSTR_063")
-else
-if (Trig_Headhunter_Mode_Func002Func023Func002Func003C()) then
-UnitAddAbilityBJ(FourCC("A03L"), GetLastCreatedUnit())
-DisplayTimedTextToForce(GetPlayersAll(), 10.00, "TRIGSTR_064")
-else
-if (Trig_Headhunter_Mode_Func002Func023Func002Func003Func003C()) then
-UnitAddAbilityBJ(FourCC("A03F"), GetLastCreatedUnit())
-DisplayTimedTextToForce(GetPlayersAll(), 10.00, "TRIGSTR_066")
-else
-if (Trig_Headhunter_Mode_Func002Func023Func002Func003Func003Func003C()) then
-UnitAddAbilityBJ(FourCC("A03G"), GetLastCreatedUnit())
-DisplayTimedTextToForce(GetPlayersAll(), 10.00, "TRIGSTR_067")
-else
-if (Trig_Headhunter_Mode_Func002Func023Func002Func003Func003Func003Func003C()) then
-UnitAddAbilityBJ(FourCC("A03C"), GetLastCreatedUnit())
-DisplayTimedTextToForce(GetPlayersAll(), 10.00, "TRIGSTR_075")
-else
-if (Trig_Headhunter_Mode_Func002Func023Func002Func003Func003Func003Func003Func003C()) then
-UnitAddAbilityBJ(FourCC("A03H"), GetLastCreatedUnit())
-DisplayTimedTextToForce(GetPlayersAll(), 10.00, "TRIGSTR_088")
-else
-end
-end
-end
-end
-end
-end
-else
-end
-BlzSetAbilityTooltip(FourCC("A03E"), ("|c0000ff00Gold Cost: |c0077ff77" .. (I2S(udg_Integer_HHCost) .. (" / " .. ("|c0000ff00Bosses Spawned: |c0077ff77" .. I2S(udg_Integer_HHSpawnedAmount))))), 1)
-else
-CreateTextTagUnitBJ(("You need " .. (I2S(udg_Integer_HHCost) .. " gold.")), GetBuyingUnit(), 0, 10.00, 0.00, 100, 0.00, 0)
-ShowTextTagForceBJ(false, GetLastCreatedTextTag(), GetPlayersAll())
-ShowTextTagForceBJ(true, GetLastCreatedTextTag(), GetForceOfPlayer(GetOwningPlayer(GetBuyingUnit())))
-RemoveUnit(GetSoldUnit())
-end
-end
-
-function InitTrig_Headhunter_Mode()
-gg_trg_Headhunter_Mode = CreateTrigger()
-DisableTrigger(gg_trg_Headhunter_Mode)
-TriggerRegisterAnyUnitEventBJ(gg_trg_Headhunter_Mode, EVENT_PLAYER_UNIT_SELL)
-TriggerAddCondition(gg_trg_Headhunter_Mode, Condition(Trig_Headhunter_Mode_Conditions))
-TriggerAddAction(gg_trg_Headhunter_Mode, Trig_Headhunter_Mode_Actions)
-end
-
-function Trig_Headhunter_Actives_Conditions()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A03J"), GetAttackedUnitBJ()) == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Actives_Func002Func003Func005Func005Func001C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A03H"), GetAttackedUnitBJ()) == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Actives_Func002Func003Func005Func005C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A03C"), GetAttackedUnitBJ()) == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Actives_Func002Func003Func005C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A03G"), GetAttackedUnitBJ()) == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Actives_Func002Func003C()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A03F"), GetAttackedUnitBJ()) == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Actives_Func002C()
-if (not (udg_Integer_HHCastChance <= 5)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Actives_Actions()
-udg_Integer_HHCastChance = GetRandomInt(1, 100)
-if (Trig_Headhunter_Actives_Func002C()) then
-udg_HHAbility_Point = GetUnitLoc(GetAttackedUnitBJ())
-if (Trig_Headhunter_Actives_Func002Func003C()) then
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetAttackedUnitBJ()), udg_HHAbility_Point, bj_UNIT_FACING)
-UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
-UnitAddAbilityBJ(FourCC("A03F"), GetLastCreatedUnit())
-IssueImmediateOrderBJ(GetLastCreatedUnit(), "waterelemental")
-else
-if (Trig_Headhunter_Actives_Func002Func003Func005C()) then
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetAttackedUnitBJ()), udg_HHAbility_Point, bj_UNIT_FACING)
-UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
-UnitAddAbilityBJ(FourCC("A03G"), GetLastCreatedUnit())
-IssueTargetOrderBJ(GetLastCreatedUnit(), "manaburn", GetAttacker())
-else
-if (Trig_Headhunter_Actives_Func002Func003Func005Func005C()) then
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetAttackedUnitBJ()), udg_HHAbility_Point, bj_UNIT_FACING)
-UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
-UnitAddAbilityBJ(FourCC("A03C"), GetLastCreatedUnit())
-IssueTargetOrderBJ(GetLastCreatedUnit(), "dispel", GetAttacker())
-else
-if (Trig_Headhunter_Actives_Func002Func003Func005Func005Func001C()) then
-CreateNUnitsAtLoc(1, FourCC("o00H"), GetOwningPlayer(GetAttackedUnitBJ()), udg_HHAbility_Point, bj_UNIT_FACING)
-UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), GetLastCreatedUnit())
-UnitAddAbilityBJ(FourCC("A03H"), GetLastCreatedUnit())
-IssueTargetOrderBJ(GetLastCreatedUnit(), "cripple", GetAttacker())
-else
-end
-end
-end
-end
-        RemoveLocation(udg_HHAbility_Point)
-else
-end
-end
-
-function InitTrig_Headhunter_Actives()
-gg_trg_Headhunter_Actives = CreateTrigger()
-DisableTrigger(gg_trg_Headhunter_Actives)
-TriggerRegisterAnyUnitEventBJ(gg_trg_Headhunter_Actives, EVENT_PLAYER_UNIT_ATTACKED)
-TriggerAddCondition(gg_trg_Headhunter_Actives, Condition(Trig_Headhunter_Actives_Conditions))
-TriggerAddAction(gg_trg_Headhunter_Actives, Trig_Headhunter_Actives_Actions)
-end
-
-function Trig_Headhunter_Reward_Conditions()
-if (not (GetUnitAbilityLevelSwapped(FourCC("A03J"), GetTriggerUnit()) == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Headhunter_Reward_Func002A()
-AdjustPlayerStateBJ(((50 * udg_Integer_WaveNumber) * udg_Integer_HHSpawnedAmount), GetEnumPlayer(), PLAYER_STATE_RESOURCE_GOLD)
-end
-
-function Trig_Headhunter_Reward_Actions()
-DisplayTimedTextToForce(GetPlayersAll(), 10.00, ("|c0000ff00A random boss has been defeated, you have been given |cffFDD017" .. (I2S(((50 * udg_Integer_WaveNumber) * udg_Integer_HHSpawnedAmount)) .. " Gold")))
-ForForce(udg_PlayerGroup_Permanent[1], Trig_Headhunter_Reward_Func002A)
-end
-
-function InitTrig_Headhunter_Reward()
-gg_trg_Headhunter_Reward = CreateTrigger()
-DisableTrigger(gg_trg_Headhunter_Reward)
-TriggerRegisterAnyUnitEventBJ(gg_trg_Headhunter_Reward, EVENT_PLAYER_UNIT_DEATH)
-TriggerAddCondition(gg_trg_Headhunter_Reward, Condition(Trig_Headhunter_Reward_Conditions))
-TriggerAddAction(gg_trg_Headhunter_Reward, Trig_Headhunter_Reward_Actions)
-end
-
-function Trig_Income_Func001002()
-AdjustPlayerStateBJ(udg_Integer_IncomeGold, GetEnumPlayer(), PLAYER_STATE_RESOURCE_GOLD)
-end
-
-function Trig_Income_Actions()
-ForForce(udg_PlayerGroup_Permanent[1], Trig_Income_Func001002)
-end
 
-function InitTrig_Income()
-gg_trg_Income = CreateTrigger()
-DisableTrigger(gg_trg_Income)
-TriggerRegisterTimerEventPeriodic(gg_trg_Income, 3.00)
-TriggerAddAction(gg_trg_Income, Trig_Income_Actions)
+function InitTrig_Turn_On_RedAfk_Ready()
+gg_trg_Turn_On_RedAfk_Ready = CreateTrigger()
+TriggerRegisterTimerEventSingle(gg_trg_Turn_On_RedAfk_Ready, 120.00)
+TriggerAddAction(gg_trg_Turn_On_RedAfk_Ready, Trig_Turn_On_RedAfk_Ready_Actions)
 end
 
 function Trig_Create_the_Multiboard_Func014C()
@@ -11419,6 +11272,64 @@ gg_trg_Timer = CreateTrigger()
 DisableTrigger(gg_trg_Timer)
 TriggerRegisterTimerEventPeriodic(gg_trg_Timer, 1.00)
 TriggerAddAction(gg_trg_Timer, Trig_Timer_Actions)
+end
+
+function Trig_Player_Leave_Gold_Split_Func001C()
+if (not (GetTriggerPlayer() == GetOwningPlayer(gg_unit_n00C_0019))) then
+return false
+end
+return true
+end
+
+function Trig_Player_Leave_Gold_Split_Func004002()
+RemoveUnit(GetEnumUnit())
+end
+
+function Trig_Player_Leave_Gold_Split_Func010Func001C()
+if (not (GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING)) then
+return false
+end
+return true
+end
+
+function Trig_Player_Leave_Gold_Split_Func010A()
+if (Trig_Player_Leave_Gold_Split_Func010Func001C()) then
+DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetTriggerPlayer())] .. ("" .. ("|cff00FF00, Has left the game. You have been given|r |cffFDD017" .. (I2S((udg_Integer_PlayerLeaveGold // udg_Integer_Players)) .. " Gold.|r")))))
+AdjustPlayerStateBJ((udg_Integer_PlayerLeaveGold // udg_Integer_Players), GetEnumPlayer(), PLAYER_STATE_RESOURCE_GOLD)
+else
+end
+end
+
+function Trig_Player_Leave_Gold_Split_Actions()
+if (Trig_Player_Leave_Gold_Split_Func001C()) then
+SetUnitOwner(gg_unit_n00C_0019, Player(PLAYER_NEUTRAL_PASSIVE), true)
+EnableTrigger(gg_trg_Game_Setup_Ownership)
+else
+end
+udg_Integer_PlayerLeaveGold = GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD)
+ForceRemovePlayerSimple(GetTriggerPlayer(), udg_PlayerGroup_Permanent[1])
+ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), GetTriggerPlayer()), Trig_Player_Leave_Gold_Split_Func004002)
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, (GetConvertedPlayerId(GetTriggerPlayer()) + 1), (udg_String_Array_MultiBoardColours[GetConvertedPlayerId(GetTriggerPlayer())] .. "Left the Game|r"))
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, (GetConvertedPlayerId(GetTriggerPlayer()) + 1), ("|cffFDD017" .. "0"))
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 3, (GetConvertedPlayerId(GetTriggerPlayer()) + 1), ("|cffFDD017" .. "0"))
+udg_Integer_Array_Kills[GetConvertedPlayerId(GetTriggerPlayer())] = 0
+udg_Integer_Players = (udg_Integer_Players - 1)
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Player_Leave_Gold_Split_Func010A)
+SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD, 0)
+end
+
+function InitTrig_Player_Leave_Gold_Split()
+gg_trg_Player_Leave_Gold_Split = CreateTrigger()
+TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(0))
+TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(1))
+TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(2))
+TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(3))
+TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(4))
+TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(5))
+TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(6))
+TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(7))
+TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(8))
+TriggerAddAction(gg_trg_Player_Leave_Gold_Split, Trig_Player_Leave_Gold_Split_Actions)
 end
 
 function Trig_Kill_Update_Func001Func001C()
@@ -11917,64 +11828,6 @@ end
 function InitTrig_Player_Update_Game_Start()
 gg_trg_Player_Update_Game_Start = CreateTrigger()
 TriggerAddAction(gg_trg_Player_Update_Game_Start, Trig_Player_Update_Game_Start_Actions)
-end
-
-function Trig_Player_Leave_Gold_Split_Func001C()
-if (not (GetTriggerPlayer() == GetOwningPlayer(gg_unit_n00C_0019))) then
-return false
-end
-return true
-end
-
-function Trig_Player_Leave_Gold_Split_Func004002()
-RemoveUnit(GetEnumUnit())
-end
-
-function Trig_Player_Leave_Gold_Split_Func010Func001C()
-if (not (GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING)) then
-return false
-end
-return true
-end
-
-function Trig_Player_Leave_Gold_Split_Func010A()
-if (Trig_Player_Leave_Gold_Split_Func010Func001C()) then
-DisplayTimedTextToForce(GetForceOfPlayer(GetEnumPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetEnumPlayer())], (udg_String_Array_PlayerNames[GetConvertedPlayerId(GetTriggerPlayer())] .. ("" .. ("|cff00FF00, Has left the game. You have been given|r |cffFDD017" .. (I2S((udg_Integer_PlayerLeaveGold // udg_Integer_Players)) .. " Gold.|r")))))
-AdjustPlayerStateBJ((udg_Integer_PlayerLeaveGold // udg_Integer_Players), GetEnumPlayer(), PLAYER_STATE_RESOURCE_GOLD)
-else
-end
-end
-
-function Trig_Player_Leave_Gold_Split_Actions()
-if (Trig_Player_Leave_Gold_Split_Func001C()) then
-SetUnitOwner(gg_unit_n00C_0019, Player(PLAYER_NEUTRAL_PASSIVE), true)
-EnableTrigger(gg_trg_Game_Setup_Ownership)
-else
-end
-udg_Integer_PlayerLeaveGold = GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD)
-ForceRemovePlayerSimple(GetTriggerPlayer(), udg_PlayerGroup_Permanent[1])
-ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), GetTriggerPlayer()), Trig_Player_Leave_Gold_Split_Func004002)
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, (GetConvertedPlayerId(GetTriggerPlayer()) + 1), (udg_String_Array_MultiBoardColours[GetConvertedPlayerId(GetTriggerPlayer())] .. "Left the Game|r"))
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, (GetConvertedPlayerId(GetTriggerPlayer()) + 1), ("|cffFDD017" .. "0"))
-MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 3, (GetConvertedPlayerId(GetTriggerPlayer()) + 1), ("|cffFDD017" .. "0"))
-udg_Integer_Array_Kills[GetConvertedPlayerId(GetTriggerPlayer())] = 0
-udg_Integer_Players = (udg_Integer_Players - 1)
-ForForce(udg_PlayerGroup_Permanent[1], Trig_Player_Leave_Gold_Split_Func010A)
-SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD, 0)
-end
-
-function InitTrig_Player_Leave_Gold_Split()
-gg_trg_Player_Leave_Gold_Split = CreateTrigger()
-TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(0))
-TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(1))
-TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(2))
-TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(3))
-TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(4))
-TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(5))
-TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(6))
-TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(7))
-TriggerRegisterPlayerEventLeave(gg_trg_Player_Leave_Gold_Split, Player(8))
-TriggerAddAction(gg_trg_Player_Leave_Gold_Split, Trig_Player_Leave_Gold_Split_Actions)
 end
 
 function Trig_Start_Static_Waves_Func002C()
@@ -14363,199 +14216,6 @@ TriggerAddCondition(gg_trg_Path_Gray_2, Condition(Trig_Path_Gray_2_Conditions))
 TriggerAddAction(gg_trg_Path_Gray_2, Trig_Path_Gray_2_Actions)
 end
 
-function Trig_Path_Red_Spawn_A_Func007C()
-if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
-return true
-end
-if (GetOwningPlayer(GetEnteringUnit()) == Player(11)) then
-return true
-end
-if (GetOwningPlayer(GetEnteringUnit()) == Player(12)) then
-return true
-end
-return false
-end
-
-function Trig_Path_Red_Spawn_A_Conditions()
-if (not Trig_Path_Red_Spawn_A_Func007C()) then
-return false
-end
-return true
-end
-
-function Trig_Path_Red_Spawn_A_Actions()
-UnitAddAbilityBJ(FourCC("A006"), GetEnteringUnit())
-SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 15)
-udg_PointArray_Waypoints[5] = GetRectCenter(gg_rct_Red_1_A)
-IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[5])
-    RemoveLocation(udg_PointArray_Waypoints[5])
-end
-
-function InitTrig_Path_Red_Spawn_A()
-gg_trg_Path_Red_Spawn_A = CreateTrigger()
-TriggerRegisterEnterRectSimple(gg_trg_Path_Red_Spawn_A, gg_rct_Red_Spawn_A)
-TriggerAddCondition(gg_trg_Path_Red_Spawn_A, Condition(Trig_Path_Red_Spawn_A_Conditions))
-TriggerAddAction(gg_trg_Path_Red_Spawn_A, Trig_Path_Red_Spawn_A_Actions)
-end
-
-function Trig_Path_Red_1_A_Func006C()
-if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
-return true
-end
-if (GetOwningPlayer(GetEnteringUnit()) == Player(11)) then
-return true
-end
-if (GetOwningPlayer(GetEnteringUnit()) == Player(12)) then
-return true
-end
-return false
-end
-
-function Trig_Path_Red_1_A_Conditions()
-if (not Trig_Path_Red_1_A_Func006C()) then
-return false
-end
-return true
-end
-
-function Trig_Path_Red_1_A_Actions()
-SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 16)
-udg_PointArray_Waypoints[5] = GetRectCenter(gg_rct_Red_2_A)
-IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[5])
-    RemoveLocation(udg_PointArray_Waypoints[5])
-end
-
-function InitTrig_Path_Red_1_A()
-gg_trg_Path_Red_1_A = CreateTrigger()
-TriggerRegisterEnterRectSimple(gg_trg_Path_Red_1_A, gg_rct_Red_1_A)
-TriggerAddCondition(gg_trg_Path_Red_1_A, Condition(Trig_Path_Red_1_A_Conditions))
-TriggerAddAction(gg_trg_Path_Red_1_A, Trig_Path_Red_1_A_Actions)
-end
-
-function Trig_Path_Red_2_A_Func006C()
-if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
-return true
-end
-if (GetOwningPlayer(GetEnteringUnit()) == Player(11)) then
-return true
-end
-if (GetOwningPlayer(GetEnteringUnit()) == Player(12)) then
-return true
-end
-return false
-end
-
-function Trig_Path_Red_2_A_Conditions()
-if (not Trig_Path_Red_2_A_Func006C()) then
-return false
-end
-return true
-end
-
-function Trig_Path_Red_2_A_Actions()
-SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 17)
-udg_PointArray_Waypoints[5] = GetRectCenter(gg_rct_Red_3_A)
-IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[5])
-    RemoveLocation(udg_PointArray_Waypoints[5])
-end
-
-function InitTrig_Path_Red_2_A()
-gg_trg_Path_Red_2_A = CreateTrigger()
-TriggerRegisterEnterRectSimple(gg_trg_Path_Red_2_A, gg_rct_Red_2_A)
-TriggerAddCondition(gg_trg_Path_Red_2_A, Condition(Trig_Path_Red_2_A_Conditions))
-TriggerAddAction(gg_trg_Path_Red_2_A, Trig_Path_Red_2_A_Actions)
-end
-
-function Trig_Path_Red_3_A_Func005C()
-if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
-return true
-end
-if (GetOwningPlayer(GetEnteringUnit()) == Player(11)) then
-return true
-end
-if (GetOwningPlayer(GetEnteringUnit()) == Player(12)) then
-return true
-end
-return false
-end
-
-function Trig_Path_Red_3_A_Conditions()
-if (not Trig_Path_Red_3_A_Func005C()) then
-return false
-end
-return true
-end
-
-function Trig_Path_Red_3_A_Actions()
-udg_PointArray_Waypoints[5] = GetRectCenter(gg_rct_Red_4_A)
-IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[5])
-    RemoveLocation(udg_PointArray_Waypoints[5])
-end
-
-function InitTrig_Path_Red_3_A()
-gg_trg_Path_Red_3_A = CreateTrigger()
-TriggerRegisterEnterRectSimple(gg_trg_Path_Red_3_A, gg_rct_Red_3_A)
-TriggerAddCondition(gg_trg_Path_Red_3_A, Condition(Trig_Path_Red_3_A_Conditions))
-TriggerAddAction(gg_trg_Path_Red_3_A, Trig_Path_Red_3_A_Actions)
-end
-
-function Trig_Path_Red_4_A_Func003C()
-if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
-return true
-end
-if (GetOwningPlayer(GetEnteringUnit()) == Player(11)) then
-return true
-end
-if (GetOwningPlayer(GetEnteringUnit()) == Player(12)) then
-return true
-end
-return false
-end
-
-function Trig_Path_Red_4_A_Conditions()
-if (not Trig_Path_Red_4_A_Func003C()) then
-return false
-end
-return true
-end
-
-function Trig_Path_Red_4_A_Func001Func008C()
-if (GetPlayerSlotState(Player(3)) == PLAYER_SLOT_STATE_LEFT) then
-return true
-end
-if (GetPlayerSlotState(Player(3)) == PLAYER_SLOT_STATE_EMPTY) then
-return true
-end
-return false
-end
-
-function Trig_Path_Red_4_A_Func001C()
-if (not Trig_Path_Red_4_A_Func001Func008C()) then
-return false
-end
-return true
-end
-
-function Trig_Path_Red_4_A_Actions()
-if (Trig_Path_Red_4_A_Func001C()) then
-udg_PointArray_Waypoints[5] = GetRectCenter(gg_rct_Purple_3)
-SetUnitPositionLocFacingBJ(GetEnteringUnit(), udg_PointArray_Waypoints[5], 0.00)
-        RemoveLocation(udg_PointArray_Waypoints[5])
-else
-SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 18)
-udg_PointArray_Waypoints[5] = GetRectCenter(gg_rct_Purple_1)
-IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[5])
-        RemoveLocation(udg_PointArray_Waypoints[5])
-end
-end
-
-function InitTrig_Path_Red_4_A()
-gg_trg_Path_Red_4_A = CreateTrigger()
-TriggerRegisterEnterRectSimple(gg_trg_Path_Red_4_A, gg_rct_Red_4_A)
-TriggerAddCondition(gg_trg_Path_Red_4_A, Condition(Trig_Path_Red_4_A_Conditions))
-TriggerAddAction(gg_trg_Path_Red_4_A, Trig_Path_Red_4_A_Actions)
-end
-
 function Trig_Path_Red_Spawn_B_Func007C()
 if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
 return true
@@ -14748,6 +14408,199 @@ gg_trg_Path_Red_4_B = CreateTrigger()
 TriggerRegisterEnterRectSimple(gg_trg_Path_Red_4_B, gg_rct_Red_4_B)
 TriggerAddCondition(gg_trg_Path_Red_4_B, Condition(Trig_Path_Red_4_B_Conditions))
 TriggerAddAction(gg_trg_Path_Red_4_B, Trig_Path_Red_4_B_Actions)
+end
+
+function Trig_Path_Red_Spawn_A_Func007C()
+if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
+return true
+end
+if (GetOwningPlayer(GetEnteringUnit()) == Player(11)) then
+return true
+end
+if (GetOwningPlayer(GetEnteringUnit()) == Player(12)) then
+return true
+end
+return false
+end
+
+function Trig_Path_Red_Spawn_A_Conditions()
+if (not Trig_Path_Red_Spawn_A_Func007C()) then
+return false
+end
+return true
+end
+
+function Trig_Path_Red_Spawn_A_Actions()
+UnitAddAbilityBJ(FourCC("A006"), GetEnteringUnit())
+SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 15)
+udg_PointArray_Waypoints[5] = GetRectCenter(gg_rct_Red_1_A)
+IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[5])
+    RemoveLocation(udg_PointArray_Waypoints[5])
+end
+
+function InitTrig_Path_Red_Spawn_A()
+gg_trg_Path_Red_Spawn_A = CreateTrigger()
+TriggerRegisterEnterRectSimple(gg_trg_Path_Red_Spawn_A, gg_rct_Red_Spawn_A)
+TriggerAddCondition(gg_trg_Path_Red_Spawn_A, Condition(Trig_Path_Red_Spawn_A_Conditions))
+TriggerAddAction(gg_trg_Path_Red_Spawn_A, Trig_Path_Red_Spawn_A_Actions)
+end
+
+function Trig_Path_Red_1_A_Func006C()
+if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
+return true
+end
+if (GetOwningPlayer(GetEnteringUnit()) == Player(11)) then
+return true
+end
+if (GetOwningPlayer(GetEnteringUnit()) == Player(12)) then
+return true
+end
+return false
+end
+
+function Trig_Path_Red_1_A_Conditions()
+if (not Trig_Path_Red_1_A_Func006C()) then
+return false
+end
+return true
+end
+
+function Trig_Path_Red_1_A_Actions()
+SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 16)
+udg_PointArray_Waypoints[5] = GetRectCenter(gg_rct_Red_2_A)
+IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[5])
+    RemoveLocation(udg_PointArray_Waypoints[5])
+end
+
+function InitTrig_Path_Red_1_A()
+gg_trg_Path_Red_1_A = CreateTrigger()
+TriggerRegisterEnterRectSimple(gg_trg_Path_Red_1_A, gg_rct_Red_1_A)
+TriggerAddCondition(gg_trg_Path_Red_1_A, Condition(Trig_Path_Red_1_A_Conditions))
+TriggerAddAction(gg_trg_Path_Red_1_A, Trig_Path_Red_1_A_Actions)
+end
+
+function Trig_Path_Red_2_A_Func006C()
+if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
+return true
+end
+if (GetOwningPlayer(GetEnteringUnit()) == Player(11)) then
+return true
+end
+if (GetOwningPlayer(GetEnteringUnit()) == Player(12)) then
+return true
+end
+return false
+end
+
+function Trig_Path_Red_2_A_Conditions()
+if (not Trig_Path_Red_2_A_Func006C()) then
+return false
+end
+return true
+end
+
+function Trig_Path_Red_2_A_Actions()
+SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 17)
+udg_PointArray_Waypoints[5] = GetRectCenter(gg_rct_Red_3_A)
+IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[5])
+    RemoveLocation(udg_PointArray_Waypoints[5])
+end
+
+function InitTrig_Path_Red_2_A()
+gg_trg_Path_Red_2_A = CreateTrigger()
+TriggerRegisterEnterRectSimple(gg_trg_Path_Red_2_A, gg_rct_Red_2_A)
+TriggerAddCondition(gg_trg_Path_Red_2_A, Condition(Trig_Path_Red_2_A_Conditions))
+TriggerAddAction(gg_trg_Path_Red_2_A, Trig_Path_Red_2_A_Actions)
+end
+
+function Trig_Path_Red_3_A_Func005C()
+if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
+return true
+end
+if (GetOwningPlayer(GetEnteringUnit()) == Player(11)) then
+return true
+end
+if (GetOwningPlayer(GetEnteringUnit()) == Player(12)) then
+return true
+end
+return false
+end
+
+function Trig_Path_Red_3_A_Conditions()
+if (not Trig_Path_Red_3_A_Func005C()) then
+return false
+end
+return true
+end
+
+function Trig_Path_Red_3_A_Actions()
+udg_PointArray_Waypoints[5] = GetRectCenter(gg_rct_Red_4_A)
+IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[5])
+    RemoveLocation(udg_PointArray_Waypoints[5])
+end
+
+function InitTrig_Path_Red_3_A()
+gg_trg_Path_Red_3_A = CreateTrigger()
+TriggerRegisterEnterRectSimple(gg_trg_Path_Red_3_A, gg_rct_Red_3_A)
+TriggerAddCondition(gg_trg_Path_Red_3_A, Condition(Trig_Path_Red_3_A_Conditions))
+TriggerAddAction(gg_trg_Path_Red_3_A, Trig_Path_Red_3_A_Actions)
+end
+
+function Trig_Path_Red_4_A_Func003C()
+if (GetOwningPlayer(GetEnteringUnit()) == Player(10)) then
+return true
+end
+if (GetOwningPlayer(GetEnteringUnit()) == Player(11)) then
+return true
+end
+if (GetOwningPlayer(GetEnteringUnit()) == Player(12)) then
+return true
+end
+return false
+end
+
+function Trig_Path_Red_4_A_Conditions()
+if (not Trig_Path_Red_4_A_Func003C()) then
+return false
+end
+return true
+end
+
+function Trig_Path_Red_4_A_Func001Func008C()
+if (GetPlayerSlotState(Player(3)) == PLAYER_SLOT_STATE_LEFT) then
+return true
+end
+if (GetPlayerSlotState(Player(3)) == PLAYER_SLOT_STATE_EMPTY) then
+return true
+end
+return false
+end
+
+function Trig_Path_Red_4_A_Func001C()
+if (not Trig_Path_Red_4_A_Func001Func008C()) then
+return false
+end
+return true
+end
+
+function Trig_Path_Red_4_A_Actions()
+if (Trig_Path_Red_4_A_Func001C()) then
+udg_PointArray_Waypoints[5] = GetRectCenter(gg_rct_Purple_3)
+SetUnitPositionLocFacingBJ(GetEnteringUnit(), udg_PointArray_Waypoints[5], 0.00)
+        RemoveLocation(udg_PointArray_Waypoints[5])
+else
+SetUnitAbilityLevelSwapped(FourCC("A006"), GetEnteringUnit(), 18)
+udg_PointArray_Waypoints[5] = GetRectCenter(gg_rct_Purple_1)
+IssuePointOrderLocBJ(GetEnteringUnit(), "move", udg_PointArray_Waypoints[5])
+        RemoveLocation(udg_PointArray_Waypoints[5])
+end
+end
+
+function InitTrig_Path_Red_4_A()
+gg_trg_Path_Red_4_A = CreateTrigger()
+TriggerRegisterEnterRectSimple(gg_trg_Path_Red_4_A, gg_rct_Red_4_A)
+TriggerAddCondition(gg_trg_Path_Red_4_A, Condition(Trig_Path_Red_4_A_Conditions))
+TriggerAddAction(gg_trg_Path_Red_4_A, Trig_Path_Red_4_A_Actions)
 end
 
 function Trig_Path_Purple_Spawn_Func007C()
@@ -15953,41 +15806,6 @@ TriggerRegisterPlayerChatEvent(gg_trg_Income_Command, Player(8), "-income", true
 TriggerAddAction(gg_trg_Income_Command, Trig_Income_Command_Actions)
 end
 
-function Trig_Wave_Command_Func001C()
-if (not (udg_Integer_RWActivated == 1)) then
-return false
-end
-return true
-end
-
-function Trig_Wave_Command_Actions()
-if (Trig_Wave_Command_Func001C()) then
-bj_forLoopAIndex = 0
-bj_forLoopAIndexEnd = 4
-while (true) do
-if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], ("|c0000ff00Wave: |c0077ff77" .. (I2S((udg_Integer_WaveNumber + GetForLoopIndexA())) .. (" - |c0000ff00Wave Type: |c0077ff77" .. (udg_String_Array_WaveType[(udg_Integer_WaveNumber + GetForLoopIndexA())] .. (" - |c0000ff00Spawn Count: |c0077ff77" .. (I2S(udg_Integer_Array_WaveSpawnMax[(udg_Integer_WaveNumber + GetForLoopIndexA())]) .. (" - |c0000ff00Bounty: |c0077ff77" .. I2S(udg_Integer_Array_RWBounty[(udg_Integer_WaveNumber + GetForLoopIndexA())])))))))))
-bj_forLoopAIndex = bj_forLoopAIndex + 1
-end
-else
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_174")
-end
-end
-
-function InitTrig_Wave_Command()
-gg_trg_Wave_Command = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(0), "-waves", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(1), "-waves", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(2), "-waves", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(3), "-waves", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(4), "-waves", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(5), "-waves", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(6), "-waves", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(7), "-waves", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(8), "-waves", true)
-TriggerAddAction(gg_trg_Wave_Command, Trig_Wave_Command_Actions)
-end
-
 function Trig_Autocam_Command_Conditions()
 if (not (GetSpellAbilityId() == FourCC("A010"))) then
 return false
@@ -16054,42 +15872,168 @@ TriggerAddCondition(gg_trg_Autocam_Ability, Condition(Trig_Autocam_Ability_Condi
 TriggerAddAction(gg_trg_Autocam_Ability, Trig_Autocam_Ability_Actions)
 end
 
-function Trig_Air_Command_Actions()
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], ("|c0000ff00Air Waves -|r|c0077ff77" .. (udg_String_AirWavesText .. "|r")))
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_2998")
+function Trig_Jackpot_Command_Actions()
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], ("|c0000ff00The Jackpot is currently at |cffFDD017 " .. (I2S(udg_Integer_Jackpot) .. "|c0000ff00 Gold.")))
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], ("|c0000ff00Previous Jackpot Winner: " .. udg_String_JackpotWinner))
 end
 
-function InitTrig_Air_Command()
-gg_trg_Air_Command = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Air_Command, Player(0), "-air", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Air_Command, Player(1), "-air", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Air_Command, Player(2), "-air", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Air_Command, Player(3), "-air", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Air_Command, Player(4), "-air", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Air_Command, Player(5), "-air", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Air_Command, Player(6), "-air", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Air_Command, Player(7), "-air", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Air_Command, Player(8), "-air", false)
-TriggerAddAction(gg_trg_Air_Command, Trig_Air_Command_Actions)
+function InitTrig_Jackpot_Command()
+gg_trg_Jackpot_Command = CreateTrigger()
+TriggerRegisterPlayerChatEvent(gg_trg_Jackpot_Command, Player(0), "-jackpot", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Jackpot_Command, Player(1), "-jackpot", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Jackpot_Command, Player(2), "-jackpot", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Jackpot_Command, Player(3), "-jackpot", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Jackpot_Command, Player(4), "-jackpot", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Jackpot_Command, Player(5), "-jackpot", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Jackpot_Command, Player(6), "-jackpot", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Jackpot_Command, Player(7), "-jackpot", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Jackpot_Command, Player(8), "-jackpot", false)
+TriggerAddAction(gg_trg_Jackpot_Command, Trig_Jackpot_Command_Actions)
 end
 
-function Trig_Air_Ability_Conditions()
-if (not (GetSpellAbilityId() == FourCC("A022"))) then
+function Trig_Jackpot_Ability_Conditions()
+if (not (GetSpellAbilityId() == FourCC("A027"))) then
 return false
 end
 return true
 end
 
-function Trig_Air_Ability_Actions()
-DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], ("|c0000ff00Air Waves -|r|c0077ff77" .. (udg_String_AirWavesText .. "|r")))
-DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], "TRIGSTR_3001")
+function Trig_Jackpot_Ability_Actions()
+DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], ("|c0000ff00The Jackpot is currently at |cffFDD017 " .. (I2S(udg_Integer_Jackpot) .. "|c0000ff00 Gold.")))
+DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], ("|c0000ff00Previous Jackpot Winner: " .. udg_String_JackpotWinner))
 end
 
-function InitTrig_Air_Ability()
-gg_trg_Air_Ability = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Air_Ability, EVENT_PLAYER_UNIT_SPELL_CAST)
-TriggerAddCondition(gg_trg_Air_Ability, Condition(Trig_Air_Ability_Conditions))
-TriggerAddAction(gg_trg_Air_Ability, Trig_Air_Ability_Actions)
+function InitTrig_Jackpot_Ability()
+gg_trg_Jackpot_Ability = CreateTrigger()
+TriggerRegisterAnyUnitEventBJ(gg_trg_Jackpot_Ability, EVENT_PLAYER_UNIT_SPELL_CAST)
+TriggerAddCondition(gg_trg_Jackpot_Ability, Condition(Trig_Jackpot_Ability_Conditions))
+TriggerAddAction(gg_trg_Jackpot_Ability, Trig_Jackpot_Ability_Actions)
+end
+
+function Trig_Autoclear_Command_Func002C()
+if (not (udg_Integer_Array_AutoClearOnOff[GetConvertedPlayerId(GetTriggerPlayer())] == 0)) then
+return false
+end
+return true
+end
+
+function Trig_Autoclear_Command_Actions()
+EnableTrigger(gg_trg_Autoclear_Trigger)
+if (Trig_Autoclear_Command_Func002C()) then
+udg_Integer_Array_AutoClearOnOff[GetConvertedPlayerId(GetTriggerPlayer())] = 1
+else
+udg_Integer_Array_AutoClearOnOff[GetConvertedPlayerId(GetTriggerPlayer())] = 0
+end
+end
+
+function InitTrig_Autoclear_Command()
+gg_trg_Autoclear_Command = CreateTrigger()
+TriggerRegisterPlayerChatEvent(gg_trg_Autoclear_Command, Player(0), "-autoclear", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Autoclear_Command, Player(1), "-autoclear", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Autoclear_Command, Player(2), "-autoclear", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Autoclear_Command, Player(3), "-autoclear", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Autoclear_Command, Player(4), "-autoclear", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Autoclear_Command, Player(5), "-autoclear", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Autoclear_Command, Player(6), "-autoclear", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Autoclear_Command, Player(7), "-autoclear", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Autoclear_Command, Player(8), "-autoclear", false)
+TriggerAddAction(gg_trg_Autoclear_Command, Trig_Autoclear_Command_Actions)
+end
+
+function Trig_Autoclear_Trigger_Func001Func001C()
+if (not (udg_Integer_Array_AutoClearOnOff[GetConvertedPlayerId(GetEnumPlayer())] == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Autoclear_Trigger_Func001A()
+if (Trig_Autoclear_Trigger_Func001Func001C()) then
+ClearTextMessagesBJ(GetForceOfPlayer(GetEnumPlayer()))
+else
+end
+end
+
+function Trig_Autoclear_Trigger_Actions()
+ForForce(udg_PlayerGroup_Permanent[1], Trig_Autoclear_Trigger_Func001A)
+end
+
+function InitTrig_Autoclear_Trigger()
+gg_trg_Autoclear_Trigger = CreateTrigger()
+DisableTrigger(gg_trg_Autoclear_Trigger)
+TriggerRegisterTimerEventPeriodic(gg_trg_Autoclear_Trigger, 0.50)
+TriggerAddAction(gg_trg_Autoclear_Trigger, Trig_Autoclear_Trigger_Actions)
+end
+
+function Trig_Clear_Command_Actions()
+ClearTextMessagesBJ(GetForceOfPlayer(GetTriggerPlayer()))
+end
+
+function InitTrig_Clear_Command()
+gg_trg_Clear_Command = CreateTrigger()
+TriggerRegisterPlayerChatEvent(gg_trg_Clear_Command, Player(0), "-clear", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Clear_Command, Player(1), "-clear", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Clear_Command, Player(2), "-clear", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Clear_Command, Player(3), "-clear", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Clear_Command, Player(4), "-clear", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Clear_Command, Player(5), "-clear", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Clear_Command, Player(6), "-clear", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Clear_Command, Player(7), "-clear", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Clear_Command, Player(8), "-clear", true)
+TriggerAddAction(gg_trg_Clear_Command, Trig_Clear_Command_Actions)
+end
+
+function Trig_Clear_Ability_Conditions()
+if (not (GetSpellAbilityId() == FourCC("A025"))) then
+return false
+end
+return true
+end
+
+function Trig_Clear_Ability_Actions()
+ClearTextMessagesBJ(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())))
+end
+
+function InitTrig_Clear_Ability()
+gg_trg_Clear_Ability = CreateTrigger()
+TriggerRegisterAnyUnitEventBJ(gg_trg_Clear_Ability, EVENT_PLAYER_UNIT_SPELL_CAST)
+TriggerAddCondition(gg_trg_Clear_Ability, Condition(Trig_Clear_Ability_Conditions))
+TriggerAddAction(gg_trg_Clear_Ability, Trig_Clear_Ability_Actions)
+end
+
+function Trig_Wave_Command_Func001C()
+if (not (udg_Integer_RWActivated == 1)) then
+return false
+end
+return true
+end
+
+function Trig_Wave_Command_Actions()
+if (Trig_Wave_Command_Func001C()) then
+bj_forLoopAIndex = 0
+bj_forLoopAIndexEnd = 4
+while (true) do
+if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], ("|c0000ff00Wave: |c0077ff77" .. (I2S((udg_Integer_WaveNumber + GetForLoopIndexA())) .. (" - |c0000ff00Wave Type: |c0077ff77" .. (udg_String_Array_WaveType[(udg_Integer_WaveNumber + GetForLoopIndexA())] .. (" - |c0000ff00Spawn Count: |c0077ff77" .. (I2S(udg_Integer_Array_WaveSpawnMax[(udg_Integer_WaveNumber + GetForLoopIndexA())]) .. (" - |c0000ff00Bounty: |c0077ff77" .. I2S(udg_Integer_Array_RWBounty[(udg_Integer_WaveNumber + GetForLoopIndexA())])))))))))
+bj_forLoopAIndex = bj_forLoopAIndex + 1
+end
+else
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_174")
+end
+end
+
+function InitTrig_Wave_Command()
+gg_trg_Wave_Command = CreateTrigger()
+TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(0), "-waves", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(1), "-waves", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(2), "-waves", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(3), "-waves", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(4), "-waves", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(5), "-waves", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(6), "-waves", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(7), "-waves", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Wave_Command, Player(8), "-waves", true)
+TriggerAddAction(gg_trg_Wave_Command, Trig_Wave_Command_Actions)
 end
 
 function Trig_Debug_Command_Func001C()
@@ -16152,6 +16096,44 @@ gg_trg_Debug_Ability = CreateTrigger()
 TriggerRegisterAnyUnitEventBJ(gg_trg_Debug_Ability, EVENT_PLAYER_UNIT_SPELL_CAST)
 TriggerAddCondition(gg_trg_Debug_Ability, Condition(Trig_Debug_Ability_Conditions))
 TriggerAddAction(gg_trg_Debug_Ability, Trig_Debug_Ability_Actions)
+end
+
+function Trig_Air_Command_Actions()
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], ("|c0000ff00Air Waves -|r|c0077ff77" .. (udg_String_AirWavesText .. "|r")))
+DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], "TRIGSTR_2998")
+end
+
+function InitTrig_Air_Command()
+gg_trg_Air_Command = CreateTrigger()
+TriggerRegisterPlayerChatEvent(gg_trg_Air_Command, Player(0), "-air", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Air_Command, Player(1), "-air", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Air_Command, Player(2), "-air", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Air_Command, Player(3), "-air", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Air_Command, Player(4), "-air", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Air_Command, Player(5), "-air", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Air_Command, Player(6), "-air", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Air_Command, Player(7), "-air", false)
+TriggerRegisterPlayerChatEvent(gg_trg_Air_Command, Player(8), "-air", false)
+TriggerAddAction(gg_trg_Air_Command, Trig_Air_Command_Actions)
+end
+
+function Trig_Air_Ability_Conditions()
+if (not (GetSpellAbilityId() == FourCC("A022"))) then
+return false
+end
+return true
+end
+
+function Trig_Air_Ability_Actions()
+DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], ("|c0000ff00Air Waves -|r|c0077ff77" .. (udg_String_AirWavesText .. "|r")))
+DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], "TRIGSTR_3001")
+end
+
+function InitTrig_Air_Ability()
+gg_trg_Air_Ability = CreateTrigger()
+TriggerRegisterAnyUnitEventBJ(gg_trg_Air_Ability, EVENT_PLAYER_UNIT_SPELL_CAST)
+TriggerAddCondition(gg_trg_Air_Ability, Condition(Trig_Air_Ability_Conditions))
+TriggerAddAction(gg_trg_Air_Ability, Trig_Air_Ability_Actions)
 end
 
 function Trig_Immune_Command_Func001C()
@@ -16288,133 +16270,149 @@ TriggerAddCondition(gg_trg_Boss_Ability, Condition(Trig_Boss_Ability_Conditions)
 TriggerAddAction(gg_trg_Boss_Ability, Trig_Boss_Ability_Actions)
 end
 
-function Trig_Jackpot_Command_Actions()
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], ("|c0000ff00The Jackpot is currently at |cffFDD017 " .. (I2S(udg_Integer_Jackpot) .. "|c0000ff00 Gold.")))
-DisplayTimedTextToForce(GetForceOfPlayer(GetTriggerPlayer()), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetTriggerPlayer())], ("|c0000ff00Previous Jackpot Winner: " .. udg_String_JackpotWinner))
+function Trig_Kick_Blue_Func004002()
+KillUnit(GetEnumUnit())
 end
 
-function InitTrig_Jackpot_Command()
-gg_trg_Jackpot_Command = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Jackpot_Command, Player(0), "-jackpot", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Jackpot_Command, Player(1), "-jackpot", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Jackpot_Command, Player(2), "-jackpot", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Jackpot_Command, Player(3), "-jackpot", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Jackpot_Command, Player(4), "-jackpot", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Jackpot_Command, Player(5), "-jackpot", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Jackpot_Command, Player(6), "-jackpot", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Jackpot_Command, Player(7), "-jackpot", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Jackpot_Command, Player(8), "-jackpot", false)
-TriggerAddAction(gg_trg_Jackpot_Command, Trig_Jackpot_Command_Actions)
+function Trig_Kick_Blue_Actions()
+PlaySoundBJ(gg_snd_HeroLichPissed8)
+CustomDefeatBJ(Player(1), "TRIGSTR_2940")
+    bj_wantDestroyGroup = true
+ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(1)), Trig_Kick_Blue_Func004002)
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 3, (udg_String_Array_MultiBoardColours[2] .. ("-Kicked-" .. "|r")))
 end
 
-function Trig_Jackpot_Ability_Conditions()
-if (not (GetSpellAbilityId() == FourCC("A027"))) then
-return false
-end
-return true
-end
-
-function Trig_Jackpot_Ability_Actions()
-DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], ("|c0000ff00The Jackpot is currently at |cffFDD017 " .. (I2S(udg_Integer_Jackpot) .. "|c0000ff00 Gold.")))
-DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], ("|c0000ff00Previous Jackpot Winner: " .. udg_String_JackpotWinner))
+function InitTrig_Kick_Blue()
+gg_trg_Kick_Blue = CreateTrigger()
+TriggerRegisterPlayerChatEvent(gg_trg_Kick_Blue, Player(0), "-kick blue", true)
+TriggerAddAction(gg_trg_Kick_Blue, Trig_Kick_Blue_Actions)
 end
 
-function InitTrig_Jackpot_Ability()
-gg_trg_Jackpot_Ability = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Jackpot_Ability, EVENT_PLAYER_UNIT_SPELL_CAST)
-TriggerAddCondition(gg_trg_Jackpot_Ability, Condition(Trig_Jackpot_Ability_Conditions))
-TriggerAddAction(gg_trg_Jackpot_Ability, Trig_Jackpot_Ability_Actions)
+function Trig_Kick_Teal_Func004002()
+KillUnit(GetEnumUnit())
 end
 
-function Trig_Autoclear_Command_Func002C()
-if (not (udg_Integer_Array_AutoClearOnOff[GetConvertedPlayerId(GetTriggerPlayer())] == 0)) then
-return false
-end
-return true
-end
-
-function Trig_Autoclear_Command_Actions()
-EnableTrigger(gg_trg_Autoclear_Trigger)
-if (Trig_Autoclear_Command_Func002C()) then
-udg_Integer_Array_AutoClearOnOff[GetConvertedPlayerId(GetTriggerPlayer())] = 1
-else
-udg_Integer_Array_AutoClearOnOff[GetConvertedPlayerId(GetTriggerPlayer())] = 0
-end
+function Trig_Kick_Teal_Actions()
+PlaySoundBJ(gg_snd_HeroLichPissed8)
+CustomDefeatBJ(Player(2), "TRIGSTR_2939")
+    bj_wantDestroyGroup = true
+ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(2)), Trig_Kick_Teal_Func004002)
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 4, (udg_String_Array_MultiBoardColours[3] .. ("-Kicked-" .. "|r")))
 end
 
-function InitTrig_Autoclear_Command()
-gg_trg_Autoclear_Command = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Autoclear_Command, Player(0), "-autoclear", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Autoclear_Command, Player(1), "-autoclear", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Autoclear_Command, Player(2), "-autoclear", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Autoclear_Command, Player(3), "-autoclear", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Autoclear_Command, Player(4), "-autoclear", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Autoclear_Command, Player(5), "-autoclear", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Autoclear_Command, Player(6), "-autoclear", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Autoclear_Command, Player(7), "-autoclear", false)
-TriggerRegisterPlayerChatEvent(gg_trg_Autoclear_Command, Player(8), "-autoclear", false)
-TriggerAddAction(gg_trg_Autoclear_Command, Trig_Autoclear_Command_Actions)
+function InitTrig_Kick_Teal()
+gg_trg_Kick_Teal = CreateTrigger()
+TriggerRegisterPlayerChatEvent(gg_trg_Kick_Teal, Player(0), "-kick teal", true)
+TriggerAddAction(gg_trg_Kick_Teal, Trig_Kick_Teal_Actions)
 end
 
-function Trig_Autoclear_Trigger_Func001Func001C()
-if (not (udg_Integer_Array_AutoClearOnOff[GetConvertedPlayerId(GetEnumPlayer())] == 1)) then
-return false
-end
-return true
+function Trig_Kick_Purple_Func004002()
+KillUnit(GetEnumUnit())
 end
 
-function Trig_Autoclear_Trigger_Func001A()
-if (Trig_Autoclear_Trigger_Func001Func001C()) then
-ClearTextMessagesBJ(GetForceOfPlayer(GetEnumPlayer()))
-else
-end
-end
-
-function Trig_Autoclear_Trigger_Actions()
-ForForce(udg_PlayerGroup_Permanent[1], Trig_Autoclear_Trigger_Func001A)
+function Trig_Kick_Purple_Actions()
+PlaySoundBJ(gg_snd_HeroLichPissed8)
+CustomDefeatBJ(Player(3), "TRIGSTR_2938")
+    bj_wantDestroyGroup = true
+ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(3)), Trig_Kick_Purple_Func004002)
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 5, (udg_String_Array_MultiBoardColours[4] .. ("-Kicked-" .. "|r")))
 end
 
-function InitTrig_Autoclear_Trigger()
-gg_trg_Autoclear_Trigger = CreateTrigger()
-DisableTrigger(gg_trg_Autoclear_Trigger)
-TriggerRegisterTimerEventPeriodic(gg_trg_Autoclear_Trigger, 0.50)
-TriggerAddAction(gg_trg_Autoclear_Trigger, Trig_Autoclear_Trigger_Actions)
+function InitTrig_Kick_Purple()
+gg_trg_Kick_Purple = CreateTrigger()
+TriggerRegisterPlayerChatEvent(gg_trg_Kick_Purple, Player(0), "-kick purple", true)
+TriggerAddAction(gg_trg_Kick_Purple, Trig_Kick_Purple_Actions)
 end
 
-function Trig_Clear_Command_Actions()
-ClearTextMessagesBJ(GetForceOfPlayer(GetTriggerPlayer()))
+function Trig_Kick_Yellow_Func004002()
+KillUnit(GetEnumUnit())
 end
 
-function InitTrig_Clear_Command()
-gg_trg_Clear_Command = CreateTrigger()
-TriggerRegisterPlayerChatEvent(gg_trg_Clear_Command, Player(0), "-clear", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Clear_Command, Player(1), "-clear", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Clear_Command, Player(2), "-clear", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Clear_Command, Player(3), "-clear", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Clear_Command, Player(4), "-clear", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Clear_Command, Player(5), "-clear", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Clear_Command, Player(6), "-clear", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Clear_Command, Player(7), "-clear", true)
-TriggerRegisterPlayerChatEvent(gg_trg_Clear_Command, Player(8), "-clear", true)
-TriggerAddAction(gg_trg_Clear_Command, Trig_Clear_Command_Actions)
+function Trig_Kick_Yellow_Actions()
+PlaySoundBJ(gg_snd_HeroLichPissed8)
+CustomDefeatBJ(Player(4), "TRIGSTR_2831")
+    bj_wantDestroyGroup = true
+ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(4)), Trig_Kick_Yellow_Func004002)
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 6, (udg_String_Array_MultiBoardColours[5] .. ("-Kicked-" .. "|r")))
 end
 
-function Trig_Clear_Ability_Conditions()
-if (not (GetSpellAbilityId() == FourCC("A025"))) then
-return false
-end
-return true
-end
-
-function Trig_Clear_Ability_Actions()
-ClearTextMessagesBJ(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())))
+function InitTrig_Kick_Yellow()
+gg_trg_Kick_Yellow = CreateTrigger()
+TriggerRegisterPlayerChatEvent(gg_trg_Kick_Yellow, Player(0), "-kick yellow", true)
+TriggerAddAction(gg_trg_Kick_Yellow, Trig_Kick_Yellow_Actions)
 end
 
-function InitTrig_Clear_Ability()
-gg_trg_Clear_Ability = CreateTrigger()
-TriggerRegisterAnyUnitEventBJ(gg_trg_Clear_Ability, EVENT_PLAYER_UNIT_SPELL_CAST)
-TriggerAddCondition(gg_trg_Clear_Ability, Condition(Trig_Clear_Ability_Conditions))
-TriggerAddAction(gg_trg_Clear_Ability, Trig_Clear_Ability_Actions)
+function Trig_Kick_Orange_Func005002()
+KillUnit(GetEnumUnit())
+end
+
+function Trig_Kick_Orange_Actions()
+PlaySoundBJ(gg_snd_HeroLichPissed8)
+CustomDefeatBJ(Player(5), "TRIGSTR_2487")
+    bj_wantDestroyGroup = true
+ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(5)), Trig_Kick_Orange_Func005002)
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 7, (udg_String_Array_MultiBoardColours[6] .. ("-Kicked-" .. "|r")))
+end
+
+function InitTrig_Kick_Orange()
+gg_trg_Kick_Orange = CreateTrigger()
+TriggerRegisterPlayerChatEvent(gg_trg_Kick_Orange, Player(0), "-kick orange", true)
+TriggerAddAction(gg_trg_Kick_Orange, Trig_Kick_Orange_Actions)
+end
+
+function Trig_Kick_Green_Func004002()
+KillUnit(GetEnumUnit())
+end
+
+function Trig_Kick_Green_Actions()
+PlaySoundBJ(gg_snd_HeroLichPissed8)
+CustomDefeatBJ(Player(6), "TRIGSTR_2468")
+    bj_wantDestroyGroup = true
+ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(6)), Trig_Kick_Green_Func004002)
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 8, (udg_String_Array_MultiBoardColours[7] .. ("-Kicked-" .. "|r")))
+end
+
+function InitTrig_Kick_Green()
+gg_trg_Kick_Green = CreateTrigger()
+TriggerRegisterPlayerChatEvent(gg_trg_Kick_Green, Player(0), "-kick green", true)
+TriggerAddAction(gg_trg_Kick_Green, Trig_Kick_Green_Actions)
+end
+
+function Trig_Kick_Pink_Func004002()
+KillUnit(GetEnumUnit())
+end
+
+function Trig_Kick_Pink_Actions()
+PlaySoundBJ(gg_snd_HeroLichPissed8)
+CustomDefeatBJ(Player(7), "TRIGSTR_1029")
+    bj_wantDestroyGroup = true
+ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(7)), Trig_Kick_Pink_Func004002)
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 9, (udg_String_Array_MultiBoardColours[8] .. ("-Kicked-" .. "|r")))
+end
+
+function InitTrig_Kick_Pink()
+gg_trg_Kick_Pink = CreateTrigger()
+TriggerRegisterPlayerChatEvent(gg_trg_Kick_Pink, Player(0), "-kick pink", true)
+TriggerAddAction(gg_trg_Kick_Pink, Trig_Kick_Pink_Actions)
+end
+
+function Trig_Kick_Gray_Func004002()
+KillUnit(GetEnumUnit())
+end
+
+function Trig_Kick_Gray_Actions()
+PlaySoundBJ(gg_snd_HeroLichPissed8)
+CustomDefeatBJ(Player(8), "TRIGSTR_1028")
+    bj_wantDestroyGroup = true
+ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(8)), Trig_Kick_Gray_Func004002)
+MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 10, (udg_String_Array_MultiBoardColours[9] .. ("-Kicked-" .. "|r")))
+end
+
+function InitTrig_Kick_Gray()
+gg_trg_Kick_Gray = CreateTrigger()
+TriggerRegisterPlayerChatEvent(gg_trg_Kick_Gray, Player(0), "-kick gray", true)
+TriggerRegisterPlayerChatEvent(gg_trg_Kick_Gray, Player(0), "-kick grey", true)
+TriggerAddAction(gg_trg_Kick_Gray, Trig_Kick_Gray_Actions)
 end
 
 function Trig_Iron_Trap_Autocast_Mine_Conditions()
@@ -17350,23 +17348,12 @@ InitTrig_Void_Trap_Autocast()
 InitTrig_Void_Contagion()
 InitTrig_Void_Contagion_Blast()
 InitTrig_Bloodtrap()
-InitTrig_Kick_Blue()
-InitTrig_Kick_Teal()
-InitTrig_Kick_Purple()
-InitTrig_Kick_Yellow()
-InitTrig_Kick_Orange()
-InitTrig_Kick_Green()
-InitTrig_Kick_Pink()
-InitTrig_Kick_Gray()
 InitTrig_Set_Variables()
 InitTrig_Set_Random_Wave_Variables()
 InitTrig_Map_Start()
 InitTrig_Quest()
 InitTrig_AntiBuild()
 InitTrig_AntiBuild_Timer()
-InitTrig_Invun_Towers()
-InitTrig_Make_Creeps_Invulnerable()
-InitTrig_Make_Creeps_Vulnerable()
 InitTrig_Remove_Hero()
 InitTrig_Selling_Towers()
 InitTrig_Add_Sell_Ability()
@@ -17375,18 +17362,21 @@ InitTrig_Defeat_Timer()
 InitTrig_Lose_Life_New()
 InitTrig_Lose_Life_Animation_Effect()
 InitTrig_WinGame()
-InitTrig_Tabaho()
-InitTrig_Alpharius_Omegon()
-InitTrig_Ork()
-InitTrig_Smonze()
-InitTrig_Weh()
 InitTrig_Creep_Boosting()
+InitTrig_Invun_Towers()
+InitTrig_Make_Creeps_Invulnerable()
+InitTrig_Make_Creeps_Vulnerable()
 InitTrig_Hero_XP()
 InitTrig_Hero_Level_Up_Point()
 InitTrig_Hero_Abilities()
 InitTrig_Finish_Build()
 InitTrig_Finish_Upgrade()
 InitTrig_Instant_Upgrade()
+InitTrig_Tabaho()
+InitTrig_Alpharius_Omegon()
+InitTrig_Ork()
+InitTrig_Smonze()
+InitTrig_Weh()
 InitTrig_Tower_Swapping()
 InitTrig_Emergency_Towers()
 InitTrig_Auto_Blink()
@@ -17405,15 +17395,9 @@ InitTrig_Player_9()
 InitTrig_Start_Messages()
 InitTrig_Choose_Mode_Gamemodes()
 InitTrig_Choose_Mode_Towers()
-InitTrig_Random_Game_Modes()
-InitTrig_Random_Game_Modes_and_Difficulty()
-InitTrig_Random_Game_Modes_Difficulty_and_Towers()
 InitTrig_Ready_Modes()
-InitTrig_RedAfk_Ready()
-InitTrig_Red_Inactive()
-InitTrig_Turn_On_RedAfk_Ready()
-InitTrig_Turn_on_RedAfk_Restart()
 InitTrig_Start_Gamemode_Indicator()
+InitTrig_Income()
 InitTrig_Default_Gamemode()
 InitTrig_Default_Gamemode_Restart()
 InitTrig_Blitz_Mode()
@@ -17423,16 +17407,22 @@ InitTrig_Random_Wave_Bounty()
 InitTrig_Headhunter_Mode()
 InitTrig_Headhunter_Actives()
 InitTrig_Headhunter_Reward()
-InitTrig_Income()
+InitTrig_Random_Game_Modes()
+InitTrig_Random_Game_Modes_and_Difficulty()
+InitTrig_Random_Game_Modes_Difficulty_and_Towers()
+InitTrig_RedAfk_Ready()
+InitTrig_Red_Inactive()
+InitTrig_Turn_on_RedAfk_Restart()
+InitTrig_Turn_On_RedAfk_Ready()
 InitTrig_Create_the_Multiboard()
 InitTrig_Name_Fix()
 InitTrig_Timer()
+InitTrig_Player_Leave_Gold_Split()
 InitTrig_Kill_Update()
 InitTrig_Gold_Update()
 InitTrig_Wave_and_Lives_Update()
 InitTrig_Next_Wave_and_Current_Wave_Update()
 InitTrig_Player_Update_Game_Start()
-InitTrig_Player_Leave_Gold_Split()
 InitTrig_Start_Static_Waves()
 InitTrig_Start_Random_Waves()
 InitTrig_Run_Start_Waves()
@@ -17457,16 +17447,16 @@ InitTrig_Path_Pink_2()
 InitTrig_Path_Gray_Spawn()
 InitTrig_Path_Gray_1()
 InitTrig_Path_Gray_2()
-InitTrig_Path_Red_Spawn_A()
-InitTrig_Path_Red_1_A()
-InitTrig_Path_Red_2_A()
-InitTrig_Path_Red_3_A()
-InitTrig_Path_Red_4_A()
 InitTrig_Path_Red_Spawn_B()
 InitTrig_Path_Red_1_B()
 InitTrig_Path_Red_2_B()
 InitTrig_Path_Red_3_B()
 InitTrig_Path_Red_4_B()
+InitTrig_Path_Red_Spawn_A()
+InitTrig_Path_Red_1_A()
+InitTrig_Path_Red_2_A()
+InitTrig_Path_Red_3_A()
+InitTrig_Path_Red_4_A()
 InitTrig_Path_Purple_Spawn()
 InitTrig_Path_Purple_1()
 InitTrig_Path_Purple_2()
@@ -17494,25 +17484,33 @@ InitTrig_Greed_Command()
 InitTrig_Damage_Info_Command()
 InitTrig_Gamemode_Command()
 InitTrig_Income_Command()
-InitTrig_Wave_Command()
 InitTrig_Autocam_Command()
 InitTrig_Autocam_Ability()
-InitTrig_Air_Command()
-InitTrig_Air_Ability()
-InitTrig_Debug_Command()
-InitTrig_Debug_Ability()
-InitTrig_Immune_Command()
-InitTrig_Immune_Ability()
-InitTrig_Hero_Command()
-InitTrig_Hero_Ability()
-InitTrig_Boss_Command()
-InitTrig_Boss_Ability()
 InitTrig_Jackpot_Command()
 InitTrig_Jackpot_Ability()
 InitTrig_Autoclear_Command()
 InitTrig_Autoclear_Trigger()
 InitTrig_Clear_Command()
 InitTrig_Clear_Ability()
+InitTrig_Wave_Command()
+InitTrig_Debug_Command()
+InitTrig_Debug_Ability()
+InitTrig_Air_Command()
+InitTrig_Air_Ability()
+InitTrig_Immune_Command()
+InitTrig_Immune_Ability()
+InitTrig_Hero_Command()
+InitTrig_Hero_Ability()
+InitTrig_Boss_Command()
+InitTrig_Boss_Ability()
+InitTrig_Kick_Blue()
+InitTrig_Kick_Teal()
+InitTrig_Kick_Purple()
+InitTrig_Kick_Yellow()
+InitTrig_Kick_Orange()
+InitTrig_Kick_Green()
+InitTrig_Kick_Pink()
+InitTrig_Kick_Gray()
 InitTrig_Iron_Trap_Autocast_Mine()
 InitTrig_Iron_Trap_Clockwerk_Kaboom()
 InitTrig_Gold_Aura_Extra_Gold()

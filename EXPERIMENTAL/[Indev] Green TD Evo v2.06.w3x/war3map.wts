@@ -5329,16 +5329,6 @@ STRING 826
 |c0000ff00You Have |c00FF0000Lost!|r |c0000ff00Game will end in 60 seconds, you may also type |c0077ff77-restart|r |c0000ff00to restart the game.|r
 }
 
-STRING 827
-{
-|cff0080FFGame Ends In: |r
-}
-
-STRING 828
-{
-|c0000ff00You Have |c00FF0000Lost!|r |c0000ff00Game will end in 60 seconds, you may also type |c0077ff77-restart|r |c0000ff00to restart the game.|r
-}
-
 STRING 829
 {
 No more Upgrades
