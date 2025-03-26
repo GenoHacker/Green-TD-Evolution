@@ -5,7 +5,7 @@ No more Upgrades
 
 STRING 1
 {
-[TEST] Green TD Evo v2.06
+[TEST2] Green TD Evo v2.06
 }
 
 STRING 2
@@ -15,7 +15,7 @@ STRING 2
 
 STRING 3
 {
-|c0000FF00Version Released -|r |cAAAAFFAA25/03/2025|r
+|c0000FF00Version Released -|r |cAAAAFFAA26/03/2025|r
 }
 
 STRING 4
@@ -18387,7 +18387,7 @@ Green TD Evolution
 
 STRING 2727
 {
-v2.06 TEST
+v2.06 TEST2
 }
 
 STRING 2728
@@ -18436,7 +18436,7 @@ STRING 2730
 
 STRING 2731
 {
-v2.06 TEST Release Date - 25/03/2025
+v2.06 TEST2 Release Date - 26/03/2025
 }
 
 STRING 2733

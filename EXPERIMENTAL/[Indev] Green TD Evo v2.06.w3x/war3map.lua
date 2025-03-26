@@ -2344,29 +2344,6 @@ local life
 gg_unit_n00C_0019 = BlzCreateUnitWithSkin(p, FourCC("n00C"), -1792.0, 3392.0, 270.000, FourCC("n00C"))
 end
 
-function CreateBuildingsForPlayer1()
-local p = Player(1)
-local u
-local unitID
-local t
-local life
-
-u = BlzCreateUnitWithSkin(p, FourCC("h01X"), -2112.0, 2304.0, 270.000, FourCC("h01X"))
-end
-
-function CreateUnitsForPlayer10()
-local p = Player(10)
-local u
-local unitID
-local t
-local life
-
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1840.6, 2520.6, 270.459, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1834.0, 2388.6, 60.580, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1829.7, 2262.6, 166.228, FourCC("h01H"))
-u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1821.9, 2127.8, 63.580, FourCC("h01H"))
-end
-
 function CreateNeutralPassiveBuildings()
 local p = Player(PLAYER_NEUTRAL_PASSIVE)
 local u
@@ -2540,11 +2517,9 @@ end
 
 function CreatePlayerBuildings()
 CreateBuildingsForPlayer0()
-CreateBuildingsForPlayer1()
 end
 
 function CreatePlayerUnits()
-CreateUnitsForPlayer10()
 end
 
 function CreateAllUnits()
