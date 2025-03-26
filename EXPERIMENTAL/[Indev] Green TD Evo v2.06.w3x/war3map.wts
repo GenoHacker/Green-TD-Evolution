@@ -220,6 +220,18 @@ STRING 36
 Endless Mode
 }
 
+STRING 37
+// Units: h01X (Soul Tower 4: Runic Crystal), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff770.25
+|c0000ff00Damage:|r |c0077ff771100
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.24 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Multishot; can attack up to 6 enemy units.|r
+|c0000ff00Ability (2):|r |c0077ff77Soul Extraction; attacks have a 10% chance to deal 1% of an enemy units current health as chaos damage, the tower gains mana equal to the damage dealt. When above 90% mana tower will use all mana to summon a minion.|r
+}
+
 STRING 38
 // Units: nbzw ([Air] Bronze Dragon Whelp), Name (Name)
 {
@@ -4556,6 +4568,18 @@ STRING 708
 v2.05 Release Date - 01/07/20
 }
 
+STRING 709
+// Units: h02M (Soul Tower 7: Runic Crystal), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff770.25
+|c0000ff00Damage:|r |c0077ff773600
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.33 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Multishot; can attack up to 6 enemy units.|r
+|c0000ff00Ability (2):|r |c0077ff77Soul Extraction; attacks have a 10% chance to deal 1% of an enemy units current health as chaos damage, the tower gains mana equal to the damage dealt. When above 90% mana tower will use all mana to summon a minion.|r
+}
+
 STRING 710
 // Units: h01B (Siege Tower 7: Admiral Proudmoore), Ubertip (Tooltip - Extended)
 {
@@ -4758,16 +4782,52 @@ STRING 741
 HH Snow Owls Active
 }
 
+STRING 742
+// Units: h043 (Soul Tower 6: Runic Crystal), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff770.25
+|c0000ff00Damage:|r |c0077ff772400
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.28 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Multishot; can attack up to 6 enemy units.|r
+|c0000ff00Ability (2):|r |c0077ff77Soul Extraction; attacks have a 10% chance to deal 1% of an enemy units current health as chaos damage, the tower gains mana equal to the damage dealt. When above 90% mana tower will use all mana to summon a minion.|r
+}
+
 STRING 743
 // Units: h007 (Uther, Ultimate Research Tower), Tip (Tooltip - Basic)
 {
 |c0077ff77[C] |c0000ff00Upgrade To Uther, Ultimate.|r |cAAAAFFAAResearch Tower 10.|r
 }
 
+STRING 744
+// Units: h044 (Soul Tower 5: Runic Crystal), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff770.25
+|c0000ff00Damage:|r |c0077ff771700
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.26 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Multishot; can attack up to 6 enemy units.|r
+|c0000ff00Ability (2):|r |c0077ff77Soul Extraction; attacks have a 10% chance to deal 1% of an enemy units current health as chaos damage, the tower gains mana equal to the damage dealt. When above 90% mana tower will use all mana to summon a minion.|r
+}
+
 STRING 745
 // Units: h041 (Research Tower 5: Bandit Lord), Name (Name)
 {
 Research Tower 5: Bandit Lord
+}
+
+STRING 746
+// Units: h045 (Soul Tower 8: Runic Crystal), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff770.25
+|c0000ff00Damage:|r |c0077ff775000
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.36 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Multishot; can attack up to 6 enemy units.|r
+|c0000ff00Ability (2):|r |c0077ff77Soul Extraction; attacks have a 10% chance to deal 1% of an enemy units current health as chaos damage, the tower gains mana equal to the damage dealt. When above 90% mana tower will use all mana to summon a minion.|r
 }
 
 STRING 747
@@ -5327,6 +5387,30 @@ STRING 825
 STRING 826
 {
 |c0000ff00You Have |c00FF0000Lost!|r |c0000ff00Game will end in 60 seconds, you may also type |c0077ff77-restart|r |c0000ff00to restart the game.|r
+}
+
+STRING 827
+// Units: h046 (Soul Tower 9: Runic Crystal), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff770.25
+|c0000ff00Damage:|r |c0077ff776600
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.37 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Multishot; can attack up to 6 enemy units.|r
+|c0000ff00Ability (2):|r |c0077ff77Soul Extraction; attacks have a 10% chance to deal 1% of an enemy units current health as chaos damage, the tower gains mana equal to the damage dealt. When above 90% mana tower will use all mana to summon a minion.|r
+}
+
+STRING 828
+// Units: h047 (Runic Crystal, Ultimate Soul Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Chaos
+|c0000ff00Cooldown:|r |c0077ff770.25
+|c0000ff00Damage:|r |c0077ff778500
+|c0000ff00Range:|r |c0077ff77600
+|c0000ff00Efficiency:|r |c0077ff770.37 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Multishot; can attack up to 6 enemy units.|r
+|c0000ff00Ability (2):|r |c0077ff77Soul Extraction; attacks have a 10% chance to deal 1% of an enemy units current health as chaos damage, the tower gains mana equal to the damage dealt. When above 90% mana tower will use all mana to summon a minion.|r
 }
 
 STRING 829
@@ -6023,6 +6107,16 @@ STRING 921
 
 }
 
+STRING 922
+// Abilities: A04C (Soul Extraction), Ubertip (Tooltip - Normal - Extended)
+{
+|c0077ff77Attacks have a 10% chance to deal 1% of units current health as chaos damage, the tower gains mana equal to [1 + Damage Dealt].
+
+Whilst above 90% mana this tower will use all the accumulated mana to summon a miniob with a random attack type whose damage is equal to [500 + 10% of Mana Spent].
+
+If this activates whilst minions are still alive then their damage will be increase, and health will be increased by 25% of their current health.
+}
+
 STRING 925
 // Units: h00H (Random Boss), Tip (Tooltip - Basic)
 {
@@ -6155,16 +6249,6 @@ STRING 938
 |c0000ff00Efficiency:|r |c0077ff770.83 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Bouncing Attack; attacks bounce up to 5 times
 |c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing [250 x Armor] piercing damage to nearby enemy units
-}
-
-STRING 939
-// Abilities: A04C (Soul Extraction), Ubertip (Tooltip - Normal - Extended)
-{
-|c0077ff77Attacks have a 10% chance to deal 5% of units current health as chaos damage, the tower gains mana equal to [5 + Damage Dealt].
-
-Whilst above 75% mana this tower has a 10% chance to use all the accumulated mana to summon 5 minions with random attack types whose damage is equal to [500 + 10% of Mana Spent].
-
-If this activates whilst minions are still alive then their damage will be increased and their health will be increased by 50% of their current health.
 }
 
 STRING 946
@@ -16398,18 +16482,6 @@ STRING 2473
 |c0000ff00Multishot - |c0077ff77[Level 4]|r
 }
 
-STRING 2474
-// Units: h01X (Soul Tower 4: Runic Crystal), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff770.25
-|c0000ff00Damage:|r |c0077ff771100
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff770.24 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Multishot; can attack up to 6 enemy units.|r
-|c0000ff00Ability (2):|r |c0077ff77Soul Extraction; attacks have a 10% chance to deal 5% of an enemy units current health as chaos damage, the tower gains mana equal to the damage dealt. When above 75% mana tower has a 10% chance to use all mana to summon 5 minions.|r
-}
-
 STRING 2475
 // Units: h046 (Soul Tower 9: Runic Crystal), Name (Name)
 {
@@ -16420,18 +16492,6 @@ STRING 2476
 // Abilities: A046 (Multishot), Tip (Tooltip - Normal)
 {
 |c0000ff00Multishot - |c0077ff77[Level 5]|r
-}
-
-STRING 2477
-// Units: h02M (Soul Tower 7: Runic Crystal), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff770.25
-|c0000ff00Damage:|r |c0077ff773600
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff770.33 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Multishot; can attack up to 6 enemy units.|r
-|c0000ff00Ability (2):|r |c0077ff77Soul Extraction; attacks have a 10% chance to deal 5% of an enemy units current health as chaos damage, the tower gains mana equal to the damage dealt. When above 75% mana tower has a 10% chance to use all mana to summon 5 minions.|r
 }
 
 STRING 2478
@@ -18288,18 +18348,6 @@ STRING 2731
 v2.06 TEST Release Date - 25/03/2025
 }
 
-STRING 2732
-// Units: h047 (Runic Crystal, Ultimate Soul Tower), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff770.25
-|c0000ff00Damage:|r |c0077ff778500
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff770.37 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Multishot; can attack up to 6 enemy units.|r
-|c0000ff00Ability (2):|r |c0077ff77Soul Extraction; attacks have a 10% chance to deal 5% of an enemy units current health as chaos damage, the tower gains mana equal to the damage dealt. When above 75% mana tower has a 10% chance to use all mana to summon 5 minions.|r
-}
-
 STRING 2733
 // Abilities: A00T (Chaos Energies), EditorSuffix (Editor Suffix)
 {
@@ -18862,54 +18910,6 @@ STRING 2826
 |c0000ff00Spell: |c0077ff77Crit Chance = |cffff00005%|r|c0077ff77, Crit Damage = |cffff0000300%|r
 
 |c0000ff00Crit Chance|r |c0077ff77and |c0000ff00Crit Damage|r |c0077ff77are not static, both values can be increased by temporary or permanent effects.
-}
-
-STRING 2827
-// Units: h043 (Soul Tower 6: Runic Crystal), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff770.25
-|c0000ff00Damage:|r |c0077ff772400
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff770.28 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Multishot; can attack up to 6 enemy units.|r
-|c0000ff00Ability (2):|r |c0077ff77Soul Extraction; attacks have a 10% chance to deal 5% of an enemy units current health as chaos damage, the tower gains mana equal to the damage dealt. When above 75% mana tower has a 10% chance to use all mana to summon 5 minions.|r
-}
-
-STRING 2828
-// Units: h044 (Soul Tower 5: Runic Crystal), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff770.25
-|c0000ff00Damage:|r |c0077ff771700
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff770.26 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Multishot; can attack up to 6 enemy units.|r
-|c0000ff00Ability (2):|r |c0077ff77Soul Extraction; attacks have a 10% chance to deal 5% of an enemy units current health as chaos damage, the tower gains mana equal to the damage dealt. When above 75% mana tower has a 10% chance to use all mana to summon 5 minions.|r
-}
-
-STRING 2829
-// Units: h045 (Soul Tower 8: Runic Crystal), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff770.25
-|c0000ff00Damage:|r |c0077ff775000
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff770.36 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Multishot; can attack up to 6 enemy units.|r
-|c0000ff00Ability (2):|r |c0077ff77Soul Extraction; attacks have a 10% chance to deal 5% of an enemy units current health as chaos damage, the tower gains mana equal to the damage dealt. When above 75% mana tower has a 10% chance to use all mana to summon 5 minions.|r
-}
-
-STRING 2830
-// Units: h046 (Soul Tower 9: Runic Crystal), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Chaos
-|c0000ff00Cooldown:|r |c0077ff770.25
-|c0000ff00Damage:|r |c0077ff776600
-|c0000ff00Range:|r |c0077ff77600
-|c0000ff00Efficiency:|r |c0077ff770.37 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Multishot; can attack up to 6 enemy units.|r
-|c0000ff00Ability (2):|r |c0077ff77Soul Extraction; attacks have a 10% chance to deal 5% of an enemy units current health as chaos damage, the tower gains mana equal to the damage dealt. When above 75% mana tower has a 10% chance to use all mana to summon 5 minions.|r
 }
 
 STRING 2831

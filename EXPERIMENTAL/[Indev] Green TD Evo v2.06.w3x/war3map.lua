@@ -527,23 +527,12 @@ gg_trg_Void_Trap_Autocast = nil
 gg_trg_Void_Contagion = nil
 gg_trg_Void_Contagion_Blast = nil
 gg_trg_Bloodtrap = nil
-gg_trg_Kick_Blue = nil
-gg_trg_Kick_Teal = nil
-gg_trg_Kick_Purple = nil
-gg_trg_Kick_Yellow = nil
-gg_trg_Kick_Orange = nil
-gg_trg_Kick_Green = nil
-gg_trg_Kick_Pink = nil
-gg_trg_Kick_Gray = nil
 gg_trg_Set_Variables = nil
 gg_trg_Set_Random_Wave_Variables = nil
 gg_trg_Map_Start = nil
 gg_trg_Quest = nil
 gg_trg_AntiBuild = nil
 gg_trg_AntiBuild_Timer = nil
-gg_trg_Invun_Towers = nil
-gg_trg_Make_Creeps_Invulnerable = nil
-gg_trg_Make_Creeps_Vulnerable = nil
 gg_trg_Remove_Hero = nil
 gg_trg_Selling_Towers = nil
 gg_trg_Add_Sell_Ability = nil
@@ -552,18 +541,21 @@ gg_trg_Defeat_Timer = nil
 gg_trg_Lose_Life_New = nil
 gg_trg_Lose_Life_Animation_Effect = nil
 gg_trg_WinGame = nil
-gg_trg_Tabaho = nil
-gg_trg_Alpharius_Omegon = nil
-gg_trg_Ork = nil
-gg_trg_Smonze = nil
-gg_trg_Weh = nil
 gg_trg_Creep_Boosting = nil
+gg_trg_Invun_Towers = nil
+gg_trg_Make_Creeps_Invulnerable = nil
+gg_trg_Make_Creeps_Vulnerable = nil
 gg_trg_Hero_XP = nil
 gg_trg_Hero_Level_Up_Point = nil
 gg_trg_Hero_Abilities = nil
 gg_trg_Finish_Build = nil
 gg_trg_Finish_Upgrade = nil
 gg_trg_Instant_Upgrade = nil
+gg_trg_Tabaho = nil
+gg_trg_Alpharius_Omegon = nil
+gg_trg_Ork = nil
+gg_trg_Smonze = nil
+gg_trg_Weh = nil
 gg_trg_Tower_Swapping = nil
 gg_trg_Emergency_Towers = nil
 gg_trg_Auto_Blink = nil
@@ -582,15 +574,9 @@ gg_trg_Player_9 = nil
 gg_trg_Start_Messages = nil
 gg_trg_Choose_Mode_Gamemodes = nil
 gg_trg_Choose_Mode_Towers = nil
-gg_trg_Random_Game_Modes = nil
-gg_trg_Random_Game_Modes_and_Difficulty = nil
-gg_trg_Random_Game_Modes_Difficulty_and_Towers = nil
 gg_trg_Ready_Modes = nil
-gg_trg_RedAfk_Ready = nil
-gg_trg_Red_Inactive = nil
 gg_trg_Start_Gamemode_Indicator = nil
-gg_trg_Turn_On_RedAfk_Ready = nil
-gg_trg_Turn_on_RedAfk_Restart = nil
+gg_trg_Income = nil
 gg_trg_Default_Gamemode = nil
 gg_trg_Default_Gamemode_Restart = nil
 gg_trg_Blitz_Mode = nil
@@ -600,7 +586,22 @@ gg_trg_Random_Wave_Bounty = nil
 gg_trg_Headhunter_Mode = nil
 gg_trg_Headhunter_Actives = nil
 gg_trg_Headhunter_Reward = nil
-gg_trg_Income = nil
+gg_trg_Random_Game_Modes = nil
+gg_trg_Random_Game_Modes_and_Difficulty = nil
+gg_trg_Random_Game_Modes_Difficulty_and_Towers = nil
+gg_trg_RedAfk_Ready = nil
+gg_trg_Red_Inactive = nil
+gg_trg_Turn_on_RedAfk_Restart = nil
+gg_trg_Turn_On_RedAfk_Ready = nil
+gg_trg_Create_the_Multiboard = nil
+gg_trg_Name_Fix = nil
+gg_trg_Timer = nil
+gg_trg_Player_Leave_Gold_Split = nil
+gg_trg_Kill_Update = nil
+gg_trg_Gold_Update = nil
+gg_trg_Wave_and_Lives_Update = nil
+gg_trg_Next_Wave_and_Current_Wave_Update = nil
+gg_trg_Player_Update_Game_Start = nil
 gg_trg_Start_Static_Waves = nil
 gg_trg_Start_Random_Waves = nil
 gg_trg_Run_Start_Waves = nil
@@ -625,16 +626,16 @@ gg_trg_Path_Pink_2 = nil
 gg_trg_Path_Gray_Spawn = nil
 gg_trg_Path_Gray_1 = nil
 gg_trg_Path_Gray_2 = nil
-gg_trg_Path_Red_Spawn_A = nil
-gg_trg_Path_Red_1_A = nil
-gg_trg_Path_Red_2_A = nil
-gg_trg_Path_Red_3_A = nil
-gg_trg_Path_Red_4_A = nil
 gg_trg_Path_Red_Spawn_B = nil
 gg_trg_Path_Red_1_B = nil
 gg_trg_Path_Red_2_B = nil
 gg_trg_Path_Red_3_B = nil
 gg_trg_Path_Red_4_B = nil
+gg_trg_Path_Red_Spawn_A = nil
+gg_trg_Path_Red_1_A = nil
+gg_trg_Path_Red_2_A = nil
+gg_trg_Path_Red_3_A = nil
+gg_trg_Path_Red_4_A = nil
 gg_trg_Path_Purple_Spawn = nil
 gg_trg_Path_Purple_1 = nil
 gg_trg_Path_Purple_2 = nil
@@ -651,15 +652,6 @@ gg_trg_Path_Teal_Spawn = nil
 gg_trg_Path_Teal_1 = nil
 gg_trg_Path_Teal_2 = nil
 gg_trg_Path_Teal_3 = nil
-gg_trg_Name_Fix = nil
-gg_trg_Create_the_Multiboard = nil
-gg_trg_Timer = nil
-gg_trg_Kill_Update = nil
-gg_trg_Gold_Update = nil
-gg_trg_Wave_and_Lives_Update = nil
-gg_trg_Player_Update_Game_Start = nil
-gg_trg_Next_Wave_and_Current_Wave_Update = nil
-gg_trg_Player_Leave_Gold_Split = nil
 gg_trg_Test_Trigger = nil
 gg_trg_Restart = nil
 gg_trg_Game_Setup_Ownership = nil
@@ -667,30 +659,38 @@ gg_trg_Camera_Zoom_Command = nil
 gg_trg_Camera_Zoom_Increments = nil
 gg_trg_Camera = nil
 gg_trg_Game_Message_Time = nil
-gg_trg_Damage_Info_Command = nil
-gg_trg_Greed_Command = nil
-gg_trg_Gamemode_Command = nil
 gg_trg_Commands = nil
+gg_trg_Greed_Command = nil
+gg_trg_Damage_Info_Command = nil
+gg_trg_Gamemode_Command = nil
 gg_trg_Income_Command = nil
-gg_trg_Wave_Command = nil
 gg_trg_Autocam_Command = nil
 gg_trg_Autocam_Ability = nil
-gg_trg_Air_Command = nil
-gg_trg_Air_Ability = nil
-gg_trg_Debug_Command = nil
-gg_trg_Debug_Ability = nil
-gg_trg_Immune_Command = nil
-gg_trg_Immune_Ability = nil
-gg_trg_Hero_Command = nil
-gg_trg_Hero_Ability = nil
-gg_trg_Boss_Command = nil
-gg_trg_Boss_Ability = nil
 gg_trg_Jackpot_Command = nil
 gg_trg_Jackpot_Ability = nil
 gg_trg_Autoclear_Command = nil
 gg_trg_Autoclear_Trigger = nil
 gg_trg_Clear_Command = nil
 gg_trg_Clear_Ability = nil
+gg_trg_Wave_Command = nil
+gg_trg_Debug_Command = nil
+gg_trg_Debug_Ability = nil
+gg_trg_Air_Command = nil
+gg_trg_Air_Ability = nil
+gg_trg_Immune_Command = nil
+gg_trg_Immune_Ability = nil
+gg_trg_Hero_Command = nil
+gg_trg_Hero_Ability = nil
+gg_trg_Boss_Command = nil
+gg_trg_Boss_Ability = nil
+gg_trg_Kick_Blue = nil
+gg_trg_Kick_Teal = nil
+gg_trg_Kick_Purple = nil
+gg_trg_Kick_Yellow = nil
+gg_trg_Kick_Orange = nil
+gg_trg_Kick_Green = nil
+gg_trg_Kick_Pink = nil
+gg_trg_Kick_Gray = nil
 gg_trg_Iron_Trap_Autocast_Mine = nil
 gg_trg_Iron_Trap_Clockwerk_Kaboom = nil
 gg_trg_Gold_Aura_Extra_Gold = nil
@@ -1112,7 +1112,7 @@ i = i + 1
 end
 i = 0
 while (true) do
-if ((i > 1)) then break end
+if ((i > 9)) then break end
 udg_UnitGroup_Array_SoulTowerUnits[i] = CreateGroup()
 i = i + 1
 end
@@ -1178,7 +1178,7 @@ end
 udg_Integer_TotalPoisonTrapsBuilt = 0
 i = 0
 while (true) do
-if ((i > 1)) then break end
+if ((i > 9)) then break end
 udg_UnitGroup_Array_PoisCasGroup[i] = CreateGroup()
 i = i + 1
 end
@@ -1333,7 +1333,7 @@ udg_Integer_VoidTrapConBPlyNum = 0
 udg_Integer_BloodTrapPlyNum = 0
 i = 0
 while (true) do
-if ((i > 1)) then break end
+if ((i > 9)) then break end
 udg_UnitGroup_Array_CascadePreG[i] = CreateGroup()
 i = i + 1
 end
@@ -2344,6 +2344,29 @@ local life
 gg_unit_n00C_0019 = BlzCreateUnitWithSkin(p, FourCC("n00C"), -1792.0, 3392.0, 270.000, FourCC("n00C"))
 end
 
+function CreateBuildingsForPlayer1()
+local p = Player(1)
+local u
+local unitID
+local t
+local life
+
+u = BlzCreateUnitWithSkin(p, FourCC("h01X"), -2112.0, 2304.0, 270.000, FourCC("h01X"))
+end
+
+function CreateUnitsForPlayer10()
+local p = Player(10)
+local u
+local unitID
+local t
+local life
+
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1840.6, 2520.6, 270.459, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1834.0, 2388.6, 60.580, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1829.7, 2262.6, 166.228, FourCC("h01H"))
+u = BlzCreateUnitWithSkin(p, FourCC("h01H"), -1821.9, 2127.8, 63.580, FourCC("h01H"))
+end
+
 function CreateNeutralPassiveBuildings()
 local p = Player(PLAYER_NEUTRAL_PASSIVE)
 local u
@@ -2517,9 +2540,11 @@ end
 
 function CreatePlayerBuildings()
 CreateBuildingsForPlayer0()
+CreateBuildingsForPlayer1()
 end
 
 function CreatePlayerUnits()
+CreateUnitsForPlayer10()
 end
 
 function CreateAllUnits()
@@ -3214,27 +3239,27 @@ end
 return true
 end
 
-function Trig_Soul_Tower_Soul_Extraction_Func003Func004Func001Func002A()
+function Trig_Soul_Tower_Soul_Extraction_Func003Func004Func001Func001A()
 BlzSetUnitBaseDamage(GetEnumUnit(), (BlzGetUnitBaseDamage(GetEnumUnit(), 0) + R2I((GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) * 0.10))), 0)
-SetUnitLifeBJ(GetEnumUnit(), (GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) + (GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) / 0.50)))
+SetUnitLifeBJ(GetEnumUnit(), (GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) + (GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) / 0.25)))
 end
 
 function Trig_Soul_Tower_Soul_Extraction_Func003Func004Func001C()
-if (not (CountUnitsInGroup(udg_UnitGroup_Array_SoulTowerUnits[udg_Integer_SoulTowerPlyNum]) == 5)) then
+if (not (CountUnitsInGroup(udg_UnitGroup_Array_SoulTowerUnits[udg_Integer_SoulTowerPlyNum]) <= 4)) then
 return false
 end
 return true
 end
 
 function Trig_Soul_Tower_Soul_Extraction_Func003Func004C()
-if (not (GetUnitManaPercent(udg_DamageEventSource) >= 75.00)) then
+if (not (GetUnitManaPercent(udg_DamageEventSource) >= 90.00)) then
 return false
 end
 return true
 end
 
 function Trig_Soul_Tower_Soul_Extraction_Func003C()
-if (not (udg_Real_Array_SoulTowerChance[udg_Integer_SoulTowerPlyNum] <= 10)) then
+if (not (udg_Real_Array_SoulTowerChance[udg_Integer_SoulTowerPlyNum] <= 10.00)) then
 return false
 end
 return true
@@ -3244,24 +3269,18 @@ function Trig_Soul_Tower_Soul_Extraction_Actions()
 udg_Integer_SoulTowerPlyNum = GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))
 udg_Real_Array_SoulTowerChance[GetConvertedPlayerId(GetOwningPlayer(udg_DamageEventSource))] = GetRandomReal(0, 100.00)
 if (Trig_Soul_Tower_Soul_Extraction_Func003C()) then
-udg_Real_Array_SoulTowerDamage[udg_Integer_SoulTowerPlyNum] = (GetUnitStateSwap(UNIT_STATE_LIFE, udg_DamageEventTarget) * 0.05)
+udg_Real_Array_SoulTowerDamage[udg_Integer_SoulTowerPlyNum] = (GetUnitStateSwap(UNIT_STATE_LIFE, udg_DamageEventTarget) * 0.01)
 UnitDamageTargetBJ(udg_DamageEventSource, udg_DamageEventTarget, udg_Real_Array_SoulTowerDamage[udg_Integer_SoulTowerPlyNum], ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL)
-SetUnitManaBJ(udg_DamageEventSource, ((GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + 5.00) + udg_Real_Array_SoulTowerDamage[udg_Integer_SoulTowerPlyNum]))
+SetUnitManaBJ(udg_DamageEventSource, ((GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource) + 1.00) + udg_Real_Array_SoulTowerDamage[udg_Integer_SoulTowerPlyNum]))
 if (Trig_Soul_Tower_Soul_Extraction_Func003Func004C()) then
 if (Trig_Soul_Tower_Soul_Extraction_Func003Func004Func001C()) then
-ForGroupBJ(udg_UnitGroup_Array_SoulTowerUnits[udg_Integer_SoulTowerPlyNum], Trig_Soul_Tower_Soul_Extraction_Func003Func004Func001Func002A)
-else
-bj_forLoopAIndex = 1
-bj_forLoopAIndexEnd = 5
-while (true) do
-if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
 udg_Point_Array_SoulTower[GetForLoopIndexA()] = OffsetLocation(GetUnitLoc(udg_DamageEventSource), GetRandomReal(-300.00, 300.00), GetRandomReal(-300.00, 300.00))
 CreateNUnitsAtLoc(1, udg_UnitType_Array_SoulTowerUnits[GetRandomInt(1, 6)], GetOwningPlayer(udg_DamageEventSource), udg_Point_Array_SoulTower[GetForLoopIndexA()], bj_UNIT_FACING)
 GroupAddUnitSimple(GetLastCreatedUnit(), udg_UnitGroup_Array_SoulTowerUnits[udg_Integer_SoulTowerPlyNum])
 BlzSetUnitBaseDamage(GetLastCreatedUnit(), (BlzGetUnitBaseDamage(GetLastCreatedUnit(), 0) + R2I(GetUnitStateSwap(UNIT_STATE_MANA, udg_DamageEventSource))), 0)
-                    RemoveLocation(udg_Point_Array_SoulTower[GetForLoopIndexA()])
-bj_forLoopAIndex = bj_forLoopAIndex + 1
-end
+                RemoveLocation(udg_Point_Array_SoulTower[GetForLoopIndexA()])
+else
+ForGroupBJ(udg_UnitGroup_Array_SoulTowerUnits[udg_Integer_SoulTowerPlyNum], Trig_Soul_Tower_Soul_Extraction_Func003Func004Func001Func001A)
 end
 SetUnitManaBJ(udg_DamageEventSource, 0.00)
 else
@@ -3278,22 +3297,22 @@ TriggerAddAction(gg_trg_Soul_Tower_Soul_Extraction, Trig_Soul_Tower_Soul_Extract
 end
 
 function Trig_Soul_Tower_Minion_Remove_From_Group_Func003C()
-if (GetUnitTypeId(GetEnumUnit()) == FourCC("n00G")) then
+if (GetUnitTypeId(GetDyingUnit()) == FourCC("n00G")) then
 return true
 end
-if (GetUnitTypeId(GetEnumUnit()) == FourCC("n016")) then
+if (GetUnitTypeId(GetDyingUnit()) == FourCC("n016")) then
 return true
 end
-if (GetUnitTypeId(GetEnumUnit()) == FourCC("n00F")) then
+if (GetUnitTypeId(GetDyingUnit()) == FourCC("n00F")) then
 return true
 end
-if (GetUnitTypeId(GetEnumUnit()) == FourCC("n00T")) then
+if (GetUnitTypeId(GetDyingUnit()) == FourCC("n00T")) then
 return true
 end
-if (GetUnitTypeId(GetEnumUnit()) == FourCC("n00W")) then
+if (GetUnitTypeId(GetDyingUnit()) == FourCC("n00W")) then
 return true
 end
-if (GetUnitTypeId(GetEnumUnit()) == FourCC("n00H")) then
+if (GetUnitTypeId(GetDyingUnit()) == FourCC("n00H")) then
 return true
 end
 return false
@@ -4639,7 +4658,7 @@ SetPlayerTechMaxAllowedSwap(FourCC("n01I"), 1, GetEnumPlayer())
 SetPlayerTechMaxAllowedSwap(FourCC("n01A"), 1, GetEnumPlayer())
 SetPlayerTechMaxAllowedSwap(FourCC("n01K"), 1, GetEnumPlayer())
 SetPlayerStateBJ(GetEnumPlayer(), PLAYER_STATE_RESOURCE_FOOD_CAP, 10)
-SetPlayerStateBJ(GetEnumPlayer(), PLAYER_STATE_RESOURCE_GOLD, 999999)
+SetPlayerStateBJ(GetEnumPlayer(), PLAYER_STATE_RESOURCE_GOLD, 500)
 SetPlayerStateBJ(GetEnumPlayer(), PLAYER_STATE_RESOURCE_LUMBER, 1)
 end
 
