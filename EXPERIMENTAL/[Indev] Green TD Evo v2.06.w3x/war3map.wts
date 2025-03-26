@@ -1192,7 +1192,7 @@ No more Upgrades
 
 STRING 160
 {
-|c0000ff00Crit Chance Increased by 2% and Crit Damage Increase by 20%.
+|c0000ff00Crit Chance |c0077ff77Increased by 2% and |c0000ff00Crit Damage |c0077ff77Increased by 20%.
 }
 
 STRING 161
@@ -6117,6 +6117,32 @@ Whilst above 90% mana this tower will use all the accumulated mana to summon a m
 If this activates whilst minions are still alive then their damage will be increase, and health will be increased by 25% of their current health.
 }
 
+STRING 923
+// Units: n01P (Spirit Tower 4: Winter Beacon), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Magic
+|c0000ff00Cooldown:|r |c0077ff773.00
+|c0000ff00Damage:|r |c0077ff773000
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff771.00 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 600|r
+|c0000ff00Ability (2):|r |c0077ff77Winter Spirits: Gains mana for each enemy hit, at full mana summons a ring of spirits that deal spell damage and slow enemys.|r
+|c0000ff00Ability (3):|r |c0077ff77Brainfreeze: Enemies hit by this tower are affected by Brainfreeze, this causes all towers to have a 10% chance to deal additional magic damage equaling 20% of their damage.
+}
+
+STRING 924
+// Units: n01Q (Spirit Tower 5: Winter Beacon), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Magic
+|c0000ff00Cooldown:|r |c0077ff773.00
+|c0000ff00Damage:|r |c0077ff776000
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff771.20 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 600|r
+|c0000ff00Ability (2):|r |c0077ff77Winter Spirits: Gains mana for each enemy hit, at full mana summons a ring of spirits that deal spell damage and slow enemys.|r
+|c0000ff00Ability (3):|r |c0077ff77Brainfreeze: Enemies hit by this tower are affected by Brainfreeze, this causes all towers to have a 10% chance to deal additional magic damage equaling 20% of their damage.
+}
+
 STRING 925
 // Units: h00H (Random Boss), Tip (Tooltip - Basic)
 {
@@ -6249,6 +6275,71 @@ STRING 938
 |c0000ff00Efficiency:|r |c0077ff770.83 Damage per Gold
 |c0000ff00Ability:|r |c0077ff77Bouncing Attack; attacks bounce up to 5 times
 |c0000ff00Ability (2):|r |c0077ff77Shrapnel Blast; hits have a 10% + 0.1% per armour to trigger a burst of shrapnel, dealing [250 x Armor] piercing damage to nearby enemy units
+}
+
+STRING 940
+// Units: n01R (Spirit Tower 6: Winter Beacon), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Magic
+|c0000ff00Cooldown:|r |c0077ff773.00
+|c0000ff00Damage:|r |c0077ff7711000
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff771.37 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 600|r
+|c0000ff00Ability (2):|r |c0077ff77Winter Spirits: Gains mana for each enemy hit, at full mana summons a ring of spirits that deal spell damage and slow enemys.|r
+|c0000ff00Ability (3):|r |c0077ff77Brainfreeze: Enemies hit by this tower are affected by Brainfreeze, this causes all towers to have a 10% chance to deal additional magic damage equaling 20% of their damage.
+}
+
+STRING 941
+// Units: n01S (Spirit Tower 7: Winter Beacon), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Magic
+|c0000ff00Cooldown:|r |c0077ff773.00
+|c0000ff00Damage:|r |c0077ff7716500
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff771.50 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 600|r
+|c0000ff00Ability (2):|r |c0077ff77Winter Spirits: Gains mana for each enemy hit, at full mana summons a ring of spirits that deal spell damage and slow enemys.|r
+|c0000ff00Ability (3):|r |c0077ff77Brainfreeze: Enemies hit by this tower are affected by Brainfreeze, this causes all towers to have a 10% chance to deal additional magic damage equaling 20% of their damage.
+}
+
+STRING 942
+// Units: n01T (Spirit Tower 8: Winter Beacon), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Magic
+|c0000ff00Cooldown:|r |c0077ff773.00
+|c0000ff00Damage:|r |c0077ff7725000
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff771.67 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 600|r
+|c0000ff00Ability (2):|r |c0077ff77Winter Spirits: Gains mana for each enemy hit, at full mana summons a ring of spirits that deal spell damage and slow enemys.|r
+|c0000ff00Ability (3):|r |c0077ff77Brainfreeze: Enemies hit by this tower are affected by Brainfreeze, this causes all towers to have a 10% chance to deal additional magic damage equaling 20% of their damage.
+}
+
+STRING 943
+// Units: n01U (Spirit Tower 9: Winter Beacon), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Magic
+|c0000ff00Cooldown:|r |c0077ff773.00
+|c0000ff00Damage:|r |c0077ff7736000
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff771.80 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 600|r
+|c0000ff00Ability (2):|r |c0077ff77Winter Spirits: Gains mana for each enemy hit, at full mana summons a ring of spirits that deal spell damage and slow enemys.|r
+|c0000ff00Ability (3):|r |c0077ff77Brainfreeze: Enemies hit by this tower are affected by Brainfreeze, this causes all towers to have a 10% chance to deal additional magic damage equaling 20% of their damage.
+}
+
+STRING 944
+// Units: n01V (Winter Beacon, Ultimate Spirit Tower), Ubertip (Tooltip - Extended)
+{
+|c0000ff00Attack:|r |c0077ff77Magic
+|c0000ff00Cooldown:|r |c0077ff773.00
+|c0000ff00Damage:|r |c0077ff7750000
+|c0000ff00Range:|r |c0077ff771000
+|c0000ff00Efficiency:|r |c0077ff772.00 Damage per Gold
+|c0000ff00Ability:|r |c0077ff77Splash; the area of effect is 600|r
+|c0000ff00Ability (2):|r |c0077ff77Winter Spirits: Gains mana for each enemy hit, at full mana summons a ring of spirits that deal spell damage and slow enemys.|r
+|c0000ff00Ability (3):|r |c0077ff77Brainfreeze: Enemies hit by this tower are affected by Brainfreeze, this causes all towers to have a 10% chance to deal additional magic damage equaling 20% of their damage.
 }
 
 STRING 946
@@ -19995,90 +20086,6 @@ STRING 2990
 |c0077ff77Enemies hit by this tower cause it to be affected by Brainfreeze, all towers that attack a unit affected by this have a 10% chance to deal 20% of their attack damage as magic damage to their target.
 }
 
-STRING 2991
-// Units: n01P (Spirit Tower 4: Winter Beacon), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Magic
-|c0000ff00Cooldown:|r |c0077ff773.00
-|c0000ff00Damage:|r |c0077ff773000
-|c0000ff00Range:|r |c0077ff771000
-|c0000ff00Efficiency:|r |c0077ff771.00 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Winter Spirits: Gains mana for each enemy hit, at full mana summons a ring of spirits that deal spell damage and slow enemys.|r
-|c0000ff00Ability (2):|r |c0077ff77Brainfreeze: Enemies hit by this tower are affected by Brainfreeze, this causes all towers to have a 10% chance to deal additional magic damage equaling 20% of their damage.
-}
-
-STRING 2992
-// Units: n01Q (Spirit Tower 5: Winter Beacon), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Magic
-|c0000ff00Cooldown:|r |c0077ff773.00
-|c0000ff00Damage:|r |c0077ff776000
-|c0000ff00Range:|r |c0077ff771000
-|c0000ff00Efficiency:|r |c0077ff771.20 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Winter Spirits: Gains mana for each enemy hit, at full mana summons a ring of spirits that deal spell damage and slow enemys.|r
-|c0000ff00Ability (2):|r |c0077ff77Brainfreeze: Enemies hit by this tower are affected by Brainfreeze, this causes all towers to have a 10% chance to deal additional magic damage equaling 20% of their damage.
-}
-
-STRING 2993
-// Units: n01R (Spirit Tower 6: Winter Beacon), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Magic
-|c0000ff00Cooldown:|r |c0077ff773.00
-|c0000ff00Damage:|r |c0077ff7711000
-|c0000ff00Range:|r |c0077ff771000
-|c0000ff00Efficiency:|r |c0077ff771.37 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Winter Spirits: Gains mana for each enemy hit, at full mana summons a ring of spirits that deal spell damage and slow enemys.|r
-|c0000ff00Ability (2):|r |c0077ff77Brainfreeze: Enemies hit by this tower are affected by Brainfreeze, this causes all towers to have a 10% chance to deal additional magic damage equaling 20% of their damage.
-}
-
-STRING 2994
-// Units: n01S (Spirit Tower 7: Winter Beacon), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Magic
-|c0000ff00Cooldown:|r |c0077ff773.00
-|c0000ff00Damage:|r |c0077ff7716500
-|c0000ff00Range:|r |c0077ff771000
-|c0000ff00Efficiency:|r |c0077ff771.50 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Winter Spirits: Gains mana for each enemy hit, at full mana summons a ring of spirits that deal spell damage and slow enemys.|r
-|c0000ff00Ability (2):|r |c0077ff77Brainfreeze: Enemies hit by this tower are affected by Brainfreeze, this causes all towers to have a 10% chance to deal additional magic damage equaling 20% of their damage.
-}
-
-STRING 2995
-// Units: n01T (Spirit Tower 8: Winter Beacon), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Magic
-|c0000ff00Cooldown:|r |c0077ff773.00
-|c0000ff00Damage:|r |c0077ff7725000
-|c0000ff00Range:|r |c0077ff771000
-|c0000ff00Efficiency:|r |c0077ff771.67 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Winter Spirits: Gains mana for each enemy hit, at full mana summons a ring of spirits that deal spell damage and slow enemys.|r
-|c0000ff00Ability (2):|r |c0077ff77Brainfreeze: Enemies hit by this tower are affected by Brainfreeze, this causes all towers to have a 10% chance to deal additional magic damage equaling 20% of their damage.
-}
-
-STRING 2996
-// Units: n01U (Spirit Tower 9: Winter Beacon), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Magic
-|c0000ff00Cooldown:|r |c0077ff773.00
-|c0000ff00Damage:|r |c0077ff7736000
-|c0000ff00Range:|r |c0077ff771000
-|c0000ff00Efficiency:|r |c0077ff771.80 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Winter Spirits: Gains mana for each enemy hit, at full mana summons a ring of spirits that deal spell damage and slow enemys.|r
-|c0000ff00Ability (2):|r |c0077ff77Brainfreeze: Enemies hit by this tower are affected by Brainfreeze, this causes all towers to have a 10% chance to deal additional magic damage equaling 20% of their damage.
-}
-
-STRING 2997
-// Units: n01V (Winter Beacon, Ultimate Spirit Tower), Ubertip (Tooltip - Extended)
-{
-|c0000ff00Attack:|r |c0077ff77Magic
-|c0000ff00Cooldown:|r |c0077ff773.00
-|c0000ff00Damage:|r |c0077ff7750000
-|c0000ff00Range:|r |c0077ff771000
-|c0000ff00Efficiency:|r |c0077ff772.00 Damage per Gold
-|c0000ff00Ability:|r |c0077ff77Winter Spirits: Gains mana for each enemy hit, at full mana summons a ring of spirits that deal spell damage and slow enemys.|r
-|c0000ff00Ability (2):|r |c0077ff77Brainfreeze: Enemies hit by this tower are affected by Brainfreeze, this causes all towers to have a 10% chance to deal additional magic damage equaling 20% of their damage.
-}
-
 STRING 2998
 {
 |c0077ff77Siege Damage|r |c0000ff00deals |c0077ff77200% |c0000ff00|c0000ff00to Air Units.
@@ -23539,11 +23546,12 @@ STRING 5268
 {
 Each Difficulty has a different base income, chaos varients of them give a bonus to income.
 
-Easy, Creeps have 50% Health.
+Easy, Creeps have 75% Health.
 Normal, Creeps Have 100% Health.
-Hard, Creeps Have 150% Health.
-Very Hard, Creeps Have 200% Health.
+Hard, Creeps Have 125% Health.
+Very Hard, Creeps Have 150% Health.
 Chaos Mode, Creeps have between 200% and 400% Health, this will change every wave.
+
 Their are also additional Chaos Mode difficultys that can be activated in the Game Setup unit.
 }
 
