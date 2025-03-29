@@ -4740,9 +4740,10 @@ return true
 end
 
 function Trig_AntiBuild_Actions()
-DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetConstructingStructure()))], ("|c0000ff00You must build next to the path. You will be able to build here in|r " .. ("|cAAAAFFAA" .. (I2S(udg_Integer_AntiBuild) .. " Seconds.|r"))))
 AdjustPlayerStateBJ(GetUnitPointValue(GetConstructingStructure()), GetOwningPlayer(GetConstructingStructure()), PLAYER_STATE_RESOURCE_GOLD)
 RemoveUnit(GetConstructingStructure())
+DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), udg_Real_Array_MessageTime[GetConvertedPlayerId(GetOwningPlayer(GetConstructingStructure()))], ("|c0000ff00You must build next to the path. You will be able to build here in|r " .. ("|cAAAAFFAA" .. (I2S(udg_Integer_AntiBuild) .. " Seconds.|r"))))
+PanCameraToTimedLocForPlayer(GetOwningPlayer(GetTriggerUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetTriggerUnit())), 0)
 end
 
 function InitTrig_AntiBuild()
