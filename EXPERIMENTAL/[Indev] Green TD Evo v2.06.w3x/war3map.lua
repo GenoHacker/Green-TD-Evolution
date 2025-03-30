@@ -15199,7 +15199,7 @@ SetPlayerUnitAvailableBJ(FourCC("n01J"), true, GetEnumPlayer())
 ForGroupBJ(GetUnitsInRectOfPlayer(GetPlayableMapRect(), GetEnumPlayer()), Trig_Restart_Func021Func020A)
 end
 
-function Trig_Restart_Func056C()
+function Trig_Restart_Func055C()
 if (not (GetPlayerSlotState(Player(0)) == PLAYER_SLOT_STATE_LEFT)) then
 return false
 end
@@ -15220,6 +15220,7 @@ udg_Integer_SwarmMode = 0
 udg_Integer_SpeedMode = 0
 udg_Integer_GoldRush = 0
 udg_Integer_EndlessMode = 0
+udg_Integer_BlitzMode = 0
 else
 end
 bj_forLoopAIndex = 1
@@ -15286,7 +15287,7 @@ MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 14, "TRIGSTR_824")
 BlzSetAbilityTooltip(FourCC("A03E"), ("|c0000ff00Gold Cost: |c0077ff77" .. (I2S(udg_Integer_HHCost) .. (" / " .. ("|c0000ff00Bosses Spawned: |c0077ff77" .. I2S(udg_Integer_HHSpawnedAmount))))), 1)
 ShowUnitShow(gg_unit_n00C_0019)
 PauseAllUnitsBJ(false)
-if (Trig_Restart_Func056C()) then
+if (Trig_Restart_Func055C()) then
 EnableTrigger(gg_trg_Game_Setup_Ownership)
 SetUnitOwner(gg_unit_n00C_0019, Player(PLAYER_NEUTRAL_PASSIVE), true)
 DisplayTimedTextToForce(GetPlayersAll(), 60.00, (udg_String_Array_PlayerNames[1] .. " |c0000ff00has left the game, any player may select the game setup unit to choose gamemodes."))
