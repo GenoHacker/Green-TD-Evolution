@@ -9061,9 +9061,9 @@ if (Trig_Blitz_Mode_Func001Func001C()) then
 udg_Real_SpawnTime = 15.00
 else
 if (Trig_Blitz_Mode_Func001Func001Func001C()) then
-udg_Real_SpawnTime = 25.00
-else
 udg_Real_SpawnTime = 20.00
+else
+udg_Real_SpawnTime = 15.00
 end
 end
 end
@@ -12642,14 +12642,14 @@ end
 return true
 end
 
-function Trig_Blitz_Spawning_Func002Func001C()
+function Trig_Blitz_Spawning_Func003Func001C()
 if (not (udg_Integer_RWActivated == 0)) then
 return false
 end
 return true
 end
 
-function Trig_Blitz_Spawning_Func002C()
+function Trig_Blitz_Spawning_Func003C()
 if (not (udg_Integer_RWActivated == 1)) then
 return false
 end
@@ -12658,15 +12658,15 @@ end
 
 function Trig_Blitz_Spawning_Actions()
 GroupRemoveGroup(udg_UnitGroup_LoseLifeNoGoldRW, udg_UnitGroup_LoseLifeNoGoldRW)
-if (Trig_Blitz_Spawning_Func002C()) then
+TriggerExecute(gg_trg_Gold_After_Wave)
+if (Trig_Blitz_Spawning_Func003C()) then
 TriggerExecute(gg_trg_Start_Random_Waves)
 else
-if (Trig_Blitz_Spawning_Func002Func001C()) then
+if (Trig_Blitz_Spawning_Func003Func001C()) then
 TriggerExecute(gg_trg_Start_Static_Waves)
 else
 end
 end
-TriggerExecute(gg_trg_Gold_After_Wave)
 end
 
 function InitTrig_Blitz_Spawning()
@@ -13031,7 +13031,7 @@ end
 function InitTrig_Static_Wave_Spawning_System()
 gg_trg_Static_Wave_Spawning_System = CreateTrigger()
 DisableTrigger(gg_trg_Static_Wave_Spawning_System)
-TriggerRegisterTimerEventPeriodic(gg_trg_Static_Wave_Spawning_System, 0.25)
+TriggerRegisterTimerEventPeriodic(gg_trg_Static_Wave_Spawning_System, 0.20)
 TriggerAddAction(gg_trg_Static_Wave_Spawning_System, Trig_Static_Wave_Spawning_System_Actions)
 end
 
@@ -13350,7 +13350,7 @@ end
 function InitTrig_Random_Wave_Spawning_Sys()
 gg_trg_Random_Wave_Spawning_Sys = CreateTrigger()
 DisableTrigger(gg_trg_Random_Wave_Spawning_Sys)
-TriggerRegisterTimerEventPeriodic(gg_trg_Random_Wave_Spawning_Sys, 0.25)
+TriggerRegisterTimerEventPeriodic(gg_trg_Random_Wave_Spawning_Sys, 0.20)
 TriggerAddAction(gg_trg_Random_Wave_Spawning_Sys, Trig_Random_Wave_Spawning_Sys_Actions)
 end
 
@@ -13465,7 +13465,7 @@ udg_Real_CreepHealthTotal = (udg_Real_CreepHealthTotal * udg_Real_Array_HPMultip
 else
 udg_Real_CreepHealthTotal = (udg_Real_CreepHealthTotal * udg_Real_CreepHealthMultiplier)
 end
-udg_Real_Array_RWArmour[GetForLoopIndexA()] = (udg_Real_Array_RWArmour[(GetForLoopIndexA() - 1)] + I2R((GetForLoopIndexA() // 3)))
+udg_Real_Array_RWArmour[GetForLoopIndexA()] = (udg_Real_Array_RWArmour[(GetForLoopIndexA() - 1)] + I2R((GetForLoopIndexA() // 2)))
 udg_Real_Array_RWArmourTotal[GetForLoopIndexA()] = (udg_Real_Array_RWArmour[GetForLoopIndexA()] / I2R(udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()]))
 udg_Real_Array_CreepHealthWaves[GetForLoopIndexA()] = (udg_Real_CreepHealthTotal / I2R(udg_Integer_Array_WaveSpawnMax[GetForLoopIndexA()]))
 udg_Integer_Array_RWUnitType[GetForLoopIndexA()] = GetRandomInt(1, 7)
