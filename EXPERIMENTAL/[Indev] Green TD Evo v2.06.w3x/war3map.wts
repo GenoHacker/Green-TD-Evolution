@@ -5,7 +5,7 @@ No more Upgrades
 
 STRING 1
 {
-[TEST2] Green TD Evo v2.06
+Green TD Evo v2.06
 }
 
 STRING 2
@@ -15,7 +15,7 @@ STRING 2
 
 STRING 3
 {
-|c0000FF00Version Released -|r |cAAAAFFAA26/03/2025|r
+|c0000FF00Version Released -|r |cAAAAFFAA30/03/2025|r
 }
 
 STRING 4
@@ -18380,21 +18380,6 @@ STRING 2725
 When at full mana the towers multishot is improved and the tower deals 200% damage to units affected by a frost slow. If the tower falls below 10% mana multishot returns to normal.
 }
 
-STRING 2726
-{
-Green TD Evolution
-}
-
-STRING 2727
-{
-v2.06 TEST2
-}
-
-STRING 2728
-{
-This is a TEST version, their may be various bugs, issues, crashes or desyncs. Join the Discord and tell me if anything needs fixing.
-}
-
 STRING 2729
 {
 Changelog -- v2.06
@@ -18436,7 +18421,7 @@ STRING 2730
 
 STRING 2731
 {
-v2.06 TEST2 Release Date - 26/03/2025
+v2.06 Release Date - 30/03/2025
 }
 
 STRING 2733
