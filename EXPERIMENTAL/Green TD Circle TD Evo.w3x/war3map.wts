@@ -14745,6 +14745,18 @@ STRING 2191
 Unlocked on Wave 15
 }
 
+STRING 2192
+// Doodads: D00V (Furbolg Hut 1), Name (Name)
+{
+Furbolg Hut 1
+}
+
+STRING 2193
+// Doodads: D00W (Furbolg Hut 2), Name (Name)
+{
+Furbolg Hut 2
+}
+
 STRING 2197
 // Units: n00H (Skeletal Archer), Name (Name)
 {
