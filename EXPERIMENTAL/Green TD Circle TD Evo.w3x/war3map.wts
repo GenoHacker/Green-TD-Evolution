@@ -14757,6 +14757,12 @@ STRING 2193
 Furbolg Hut 2
 }
 
+STRING 2194
+// Destructibles: B001 (Magical Pen), EditorSuffix (Editor Suffix)
+{
+(Custom)
+}
+
 STRING 2197
 // Units: n00H (Skeletal Archer), Name (Name)
 {
