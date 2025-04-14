@@ -14763,6 +14763,12 @@ STRING 2194
 (Custom)
 }
 
+STRING 2195
+// Units: n027 (Miners Tavern), Name (Name)
+{
+Miners Tavern
+}
+
 STRING 2197
 // Units: n00H (Skeletal Archer), Name (Name)
 {
@@ -16645,6 +16651,11 @@ STRING 2473
 |c0000ff00Multishot - |c0077ff77[Level 4]|r
 }
 
+STRING 2474
+{
+Vote
+}
+
 STRING 2475
 // Units: h046 (Soul Tower 9: Runic Crystal), Name (Name)
 {
@@ -16655,6 +16666,11 @@ STRING 2476
 // Abilities: A046 (Multishot), Tip (Tooltip - Normal)
 {
 |c0000ff00Multishot - |c0077ff77[Level 5]|r
+}
+
+STRING 2477
+{
+Increase Difficulty?
 }
 
 STRING 2478
@@ -17026,6 +17042,11 @@ STRING 2531
 // Abilities: A046 (Multishot), EditorSuffix (Editor Suffix)
 {
 [Soul Tower]
+}
+
+STRING 2532
+{
+Yes / Difficulty++
 }
 
 STRING 2533
@@ -17817,6 +17838,16 @@ STRING 2629
 |c0096FF9625% to Divine|r
 }
 
+STRING 2630
+{
+Yes / Difficulty+
+}
+
+STRING 2631
+{
+No
+}
+
 STRING 2632
 // Units: n006 (Frost Tower 1: Wendigo), Ubertip (Tooltip - Extended)
 {
@@ -17834,6 +17865,16 @@ STRING 2632
 |c0000ff00125% |c0077ff77vs Light.
 |c0000ff0075% |c0077ff77vs Other.
 |c0000ff00Unable to attack Divine.
+}
+
+STRING 2633
+{
+Normal TD
+}
+
+STRING 2634
+{
+Circle TD
 }
 
 STRING 2637

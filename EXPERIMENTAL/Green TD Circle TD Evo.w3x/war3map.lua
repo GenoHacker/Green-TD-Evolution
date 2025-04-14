@@ -421,6 +421,9 @@ udg_UnitType_HHUnit = 0
 udg_ChoosePoint_Pnt = nil
 udg_SpawnPoints_PntArray = {}
 udg_Integer_TotalIronTrapsBuilt = 0
+udg_Dialog_GameType = nil
+udg_Integer_GameType = 0
+udg_DialogButton_Array_GameType = {}
 gg_rct_Pink_Spawn = nil
 gg_rct_Pink_1 = nil
 gg_rct_Gray_Spawn = nil
@@ -616,6 +619,7 @@ gg_trg_Bloodtrap = nil
 gg_trg_Set_Variables = nil
 gg_trg_Set_Random_Wave_Variables = nil
 gg_trg_Map_Start = nil
+gg_trg_Game_Type = nil
 gg_trg_Quest = nil
 gg_trg_AntiBuild = nil
 gg_trg_AntiBuild_Timer = nil
@@ -804,6 +808,7 @@ gg_unit_z000_0121 = nil
 gg_unit_o00I_0124 = nil
 gg_unit_z000_0122 = nil
 gg_unit_n026_0130 = nil
+gg_trg_Difficulty_Dialog_Start = nil
 function InitGlobals()
 local i = 0
 
@@ -1577,6 +1582,8 @@ end
 udg_String_EmptyString = ""
 udg_UnitGroup_GoldRushGrp = CreateGroup()
 udg_Integer_TotalIronTrapsBuilt = 0
+udg_Dialog_GameType = DialogCreate()
+udg_Integer_GameType = 0
 end
 
 --Global Initialization 1.1 also hooks the InitCustomTriggers and RunInitializationTriggers functions
@@ -2450,6 +2457,7 @@ u = BlzCreateUnitWithSkin(p, FourCC("h048"), 5632.0, 7232.0, 270.000, FourCC("h0
 u = BlzCreateUnitWithSkin(p, FourCC("h048"), 5632.0, 7104.0, 270.000, FourCC("h048"))
 u = BlzCreateUnitWithSkin(p, FourCC("nfh0"), 8000.0, 8448.0, 270.000, FourCC("nfh0"))
 u = BlzCreateUnitWithSkin(p, FourCC("nfh1"), 7392.0, 8352.0, 270.000, FourCC("nfh1"))
+u = BlzCreateUnitWithSkin(p, FourCC("n027"), 19200.0, 4032.0, 270.000, FourCC("n027"))
 end
 
 function CreateNeutralPassive()
@@ -2601,20 +2609,20 @@ gg_unit_z000_0123 = BlzCreateUnitWithSkin(p, FourCC("z000"), -8380.4, -6325.5, 1
 gg_unit_o00I_0124 = BlzCreateUnitWithSkin(p, FourCC("o00I"), -8064.2, 1974.8, 209.483, FourCC("o00I"))
 u = BlzCreateUnitWithSkin(p, FourCC("u003"), 5452.9, 7164.6, 36.490, FourCC("u003"))
 gg_unit_n026_0130 = BlzCreateUnitWithSkin(p, FourCC("n026"), -1796.7, 2995.3, 148.660, FourCC("n026"))
-u = BlzCreateUnitWithSkin(p, FourCC("nchp"), 6507.8, -6134.4, -66.696, FourCC("nchp"))
+u = BlzCreateUnitWithSkin(p, FourCC("nchp"), 6507.8, -6134.4, 293.304, FourCC("nchp"))
 u = BlzCreateUnitWithSkin(p, FourCC("nchp"), 6666.1, -6646.2, 38.397, FourCC("nchp"))
 u = BlzCreateUnitWithSkin(p, FourCC("nchp"), 7164.0, -6846.6, 129.237, FourCC("nchp"))
-u = BlzCreateUnitWithSkin(p, FourCC("hhes"), 12998.3, -6207.9, -56.409, FourCC("hhes"))
+u = BlzCreateUnitWithSkin(p, FourCC("hhes"), 12998.3, -6207.9, 303.591, FourCC("hhes"))
 u = BlzCreateUnitWithSkin(p, FourCC("hhes"), 15679.5, -6207.9, 229.299, FourCC("hhes"))
 u = BlzCreateUnitWithSkin(p, FourCC("hhes"), 14783.0, -6843.3, 124.060, FourCC("hhes"))
 u = BlzCreateUnitWithSkin(p, FourCC("hhes"), 13889.9, -6846.5, 39.986, FourCC("hhes"))
 u = BlzCreateUnitWithSkin(p, FourCC("hhes"), 12736.4, -6716.1, 225.939, FourCC("hhes"))
 u = BlzCreateUnitWithSkin(p, FourCC("hhes"), 15935.4, -6719.0, 303.591, FourCC("hhes"))
-u = BlzCreateUnitWithSkin(p, FourCC("nchp"), 10193.8, -6587.6, -65.211, FourCC("nchp"))
+u = BlzCreateUnitWithSkin(p, FourCC("nchp"), 10193.8, -6587.6, 294.789, FourCC("nchp"))
 u = BlzCreateUnitWithSkin(p, FourCC("nchp"), 10286.0, -6584.9, 250.013, FourCC("nchp"))
 u = BlzCreateUnitWithSkin(p, FourCC("nchp"), 11724.1, -6719.4, 245.666, FourCC("nchp"))
 u = BlzCreateUnitWithSkin(p, FourCC("nchp"), 11755.1, -6810.4, 194.509, FourCC("nchp"))
-u = BlzCreateUnitWithSkin(p, FourCC("nchp"), 16975.9, -6567.9, -61.365, FourCC("nchp"))
+u = BlzCreateUnitWithSkin(p, FourCC("nchp"), 16975.9, -6567.9, 298.635, FourCC("nchp"))
 u = BlzCreateUnitWithSkin(p, FourCC("nchp"), 17075.7, -6577.3, 251.262, FourCC("nchp"))
 u = BlzCreateUnitWithSkin(p, FourCC("nchp"), 18778.0, -6627.6, 244.016, FourCC("nchp"))
 u = BlzCreateUnitWithSkin(p, FourCC("nchp"), 18822.4, -6711.5, 211.305, FourCC("nchp"))
@@ -2628,18 +2636,18 @@ u = BlzCreateUnitWithSkin(p, FourCC("nhea"), 16070.1, -6206.4, 110.913, FourCC("
 u = BlzCreateUnitWithSkin(p, FourCC("nhea"), 18880.5, -6218.0, 58.969, FourCC("nhea"))
 u = BlzCreateUnitWithSkin(p, FourCC("nhea"), 17401.0, -6192.9, 86.586, FourCC("nhea"))
 u = BlzCreateUnitWithSkin(p, FourCC("nhea"), 11269.6, -6201.1, 87.345, FourCC("nhea"))
-u = BlzCreateUnitWithSkin(p, FourCC("nban"), 7043.6, -1028.5, -39.956, FourCC("nban"))
+u = BlzCreateUnitWithSkin(p, FourCC("nban"), 7043.6, -1028.5, 320.044, FourCC("nban"))
 u = BlzCreateUnitWithSkin(p, FourCC("nass"), 6963.9, -1183.8, 0.122, FourCC("nass"))
 u = BlzCreateUnitWithSkin(p, FourCC("nrog"), 7116.4, -1320.1, 47.175, FourCC("nrog"))
-u = BlzCreateUnitWithSkin(p, FourCC("ncer"), 6791.0, 1669.2, -85.867, FourCC("ncer"))
-u = BlzCreateUnitWithSkin(p, FourCC("ncks"), 6653.3, 1510.6, -3.418, FourCC("ncks"))
+u = BlzCreateUnitWithSkin(p, FourCC("ncer"), 6791.0, 1669.2, 274.133, FourCC("ncer"))
+u = BlzCreateUnitWithSkin(p, FourCC("ncks"), 6653.3, 1510.6, 356.582, FourCC("ncks"))
 u = BlzCreateUnitWithSkin(p, FourCC("ncen"), 6805.2, 1267.8, 78.752, FourCC("ncen"))
-u = BlzCreateUnitWithSkin(p, FourCC("nmpg"), 6847.2, 4442.7, -6.656, FourCC("nmpg"))
+u = BlzCreateUnitWithSkin(p, FourCC("nmpg"), 6847.2, 4442.7, 353.344, FourCC("nmpg"))
 u = BlzCreateUnitWithSkin(p, FourCC("nmbg"), 6985.2, 5033.9, 257.162, FourCC("nmbg"))
 u = BlzCreateUnitWithSkin(p, FourCC("nmrm"), 6937.3, 4334.3, 57.770, FourCC("nmrm"))
 u = BlzCreateUnitWithSkin(p, FourCC("nele"), 14415.7, 8751.2, 254.101, FourCC("nele"))
-u = BlzCreateUnitWithSkin(p, FourCC("nrel"), 14025.3, 8638.4, -62.526, FourCC("nrel"))
-u = BlzCreateUnitWithSkin(p, FourCC("nelb"), 14232.9, 8751.1, -87.089, FourCC("nelb"))
+u = BlzCreateUnitWithSkin(p, FourCC("nrel"), 14025.3, 8638.4, 297.474, FourCC("nrel"))
+u = BlzCreateUnitWithSkin(p, FourCC("nelb"), 14232.9, 8751.1, 272.911, FourCC("nelb"))
 u = BlzCreateUnitWithSkin(p, FourCC("nhrq"), 21565.8, 4026.2, 222.384, FourCC("nhrq"))
 u = BlzCreateUnitWithSkin(p, FourCC("nhrr"), 21624.2, 3582.2, 175.094, FourCC("nhrr"))
 u = BlzCreateUnitWithSkin(p, FourCC("nhrw"), 21604.8, 5434.8, 212.449, FourCC("nhrw"))
@@ -2651,18 +2659,23 @@ u = BlzCreateUnitWithSkin(p, FourCC("emtg"), 6793.4, -3028.1, 352.320, FourCC("e
 u = BlzCreateUnitWithSkin(p, FourCC("nsc2"), 6492.5, 3746.1, 318.437, FourCC("nsc2"))
 u = BlzCreateUnitWithSkin(p, FourCC("nscb"), 6407.1, 3856.0, 355.649, FourCC("nscb"))
 u = BlzCreateUnitWithSkin(p, FourCC("nsbm"), 6393.7, -4176.7, 6.922, FourCC("nsbm"))
-u = BlzCreateUnitWithSkin(p, FourCC("nspg"), 6632.7, -3981.7, -47.716, FourCC("nspg"))
-u = BlzCreateUnitWithSkin(p, FourCC("nspg"), 6823.1, -3780.9, -43.325, FourCC("nspg"))
-u = BlzCreateUnitWithSkin(p, FourCC("nftk"), 7667.7, 8359.0, -77.662, FourCC("nftk"))
+u = BlzCreateUnitWithSkin(p, FourCC("nspg"), 6632.7, -3981.7, 312.284, FourCC("nspg"))
+u = BlzCreateUnitWithSkin(p, FourCC("nspg"), 6823.1, -3780.9, 316.675, FourCC("nspg"))
+u = BlzCreateUnitWithSkin(p, FourCC("nftk"), 7667.7, 8359.0, 282.338, FourCC("nftk"))
 u = BlzCreateUnitWithSkin(p, FourCC("nfsp"), 7931.2, 8304.6, 286.609, FourCC("nfsp"))
 u = BlzCreateUnitWithSkin(p, FourCC("nftt"), 7490.1, 8315.4, 338.928, FourCC("nftt"))
 u = BlzCreateUnitWithSkin(p, FourCC("nsgh"), 22178.2, 4911.4, 230.918, FourCC("nsgh"))
 u = BlzCreateUnitWithSkin(p, FourCC("nsgb"), 21842.3, 4714.1, 22.002, FourCC("nsgb"))
 u = BlzCreateUnitWithSkin(p, FourCC("nsgn"), 22194.6, 4606.2, 130.051, FourCC("nsgn"))
-u = BlzCreateUnitWithSkin(p, FourCC("ntrh"), 20677.2, -6457.1, -72.640, FourCC("ntrh"))
+u = BlzCreateUnitWithSkin(p, FourCC("ntrh"), 20677.2, -6457.1, 287.360, FourCC("ntrh"))
 u = BlzCreateUnitWithSkin(p, FourCC("ntrh"), 19697.6, -6620.2, 307.791, FourCC("ntrh"))
 u = BlzCreateUnitWithSkin(p, FourCC("ntrh"), 21834.3, -2772.8, 336.840, FourCC("ntrh"))
 u = BlzCreateUnitWithSkin(p, FourCC("ntrg"), 19966.1, -6661.3, 342.817, FourCC("ntrg"))
+u = BlzCreateUnitWithSkin(p, FourCC("hhes"), 6871.2, -5809.2, 355.652, FourCC("hhes"))
+u = BlzCreateUnitWithSkin(p, FourCC("hhes"), 6940.8, -5879.6, 72.307, FourCC("hhes"))
+u = BlzCreateUnitWithSkin(p, FourCC("hhes"), 7480.9, -6459.5, 87.842, FourCC("hhes"))
+u = BlzCreateUnitWithSkin(p, FourCC("hhes"), 8242.8, -6472.1, 333.939, FourCC("hhes"))
+u = BlzCreateUnitWithSkin(p, FourCC("hhes"), 9138.6, -6473.5, 221.838, FourCC("hhes"))
 end
 
 function CreatePlayerBuildings()
@@ -4916,6 +4929,20 @@ TriggerRegisterTimerEventSingle(gg_trg_Map_Start, 0.05)
 TriggerAddAction(gg_trg_Map_Start, Trig_Map_Start_Actions)
 end
 
+function Trig_Game_Type_Actions()
+DialogSetMessageBJ(udg_Dialog_GameType, "TRIGSTR_2474")
+DialogAddButtonBJ(udg_Dialog_GameType, "TRIGSTR_2633")
+udg_DialogButton_Array_GameType[1] = GetLastCreatedButtonBJ()
+DialogAddButtonBJ(udg_Dialog_GameType, "TRIGSTR_2634")
+udg_DialogButton_Array_GameType[2] = GetLastCreatedButtonBJ()
+end
+
+function InitTrig_Game_Type()
+gg_trg_Game_Type = CreateTrigger()
+TriggerRegisterTimerEventSingle(gg_trg_Game_Type, 1.00)
+TriggerAddAction(gg_trg_Game_Type, Trig_Game_Type_Actions)
+end
+
 function Trig_Quest_Actions()
 CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_5267", "TRIGSTR_5268", "ReplaceableTextures\\CommandButtons\\BTNScrollUber.blp")
 CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_7371")
@@ -6341,56 +6368,34 @@ return true
 end
 
 function Trig_Tabaho_Func003Func002Func002Func002Func001Func001Func001C()
-if (not (udg_Integer_RandomNumber == 7)) then
-return false
-end
 return true
 end
 
 function Trig_Tabaho_Func003Func002Func002Func002Func001Func001C()
-if (not (udg_Integer_RandomNumber == 6)) then
-return false
-end
 return true
 end
 
 function Trig_Tabaho_Func003Func002Func002Func002Func001C()
-if (not (udg_Integer_RandomNumber == 5)) then
-return false
-end
 return true
 end
 
 function Trig_Tabaho_Func003Func002Func002Func002C()
-if (not (udg_Integer_RandomNumber == 4)) then
-return false
-end
 return true
 end
 
 function Trig_Tabaho_Func003Func002Func002C()
-if (not (udg_Integer_RandomNumber == 3)) then
-return false
-end
 return true
 end
 
 function Trig_Tabaho_Func003Func002C()
-if (not (udg_Integer_RandomNumber == 2)) then
-return false
-end
 return true
 end
 
 function Trig_Tabaho_Func003C()
-if (not (udg_Integer_RandomNumber == 1)) then
-return false
-end
 return true
 end
 
 function Trig_Tabaho_Actions()
-udg_Integer_RandomNumber = GetRandomInt(1, 7)
 udg_Point_Tabaho = GetRectCenter(gg_rct_Tabaho)
 if (Trig_Tabaho_Func003C()) then
 ShowImageBJ(true, udg_Image_Array_EasterEggImages[1])
@@ -17583,6 +17588,7 @@ InitTrig_Bloodtrap()
 InitTrig_Set_Variables()
 InitTrig_Set_Random_Wave_Variables()
 InitTrig_Map_Start()
+InitTrig_Game_Type()
 InitTrig_Quest()
 InitTrig_AntiBuild()
 InitTrig_AntiBuild_Timer()
